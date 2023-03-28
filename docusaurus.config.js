@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Jupiter Hub',
+  tagline: 'Swap Aggregator in Solana',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -50,12 +50,24 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            blogSidebarTitle: 'All posts',
-            blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      }),
+    ],
+  ],
+  plugins: [
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'ecosystem',
+        path: 'ecosystem',
+        routeBasePath: 'ecosystem',
+        sidebarPath: require.resolve('./sidebarsEcosystem.js'),
       }),
     ],
   ],
@@ -66,17 +78,27 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Jupiter | Hub',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Jup Logo',
+          src: 'img/jupiter-logo.svg',
         },
         items: [
+          {
+            to: '/ecosystem',
+            label: 'Ecosystem',
+            position: 'left',
+          },
+          {
+            to: 'https://jup.ag/stats',
+            label: 'Stats',
+            position: 'left',
+          },
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -93,7 +115,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Documentation',
                 to: '/docs/intro',
               },
             ],
