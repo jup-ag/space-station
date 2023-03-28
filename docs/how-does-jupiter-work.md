@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # How does Jupiter Work? 
 
 ## Under the Hood
