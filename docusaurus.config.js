@@ -60,16 +60,17 @@ const config = {
     ],
   ],
   plugins: [
-    [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: 'ecosystem',
-        path: 'ecosystem',
-        routeBasePath: 'ecosystem',
-        sidebarPath: require.resolve('./sidebarsEcosystem.js'),
-      }),
-    ],
+    async function myPlugin() {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
   ],
 
   themeConfig:
