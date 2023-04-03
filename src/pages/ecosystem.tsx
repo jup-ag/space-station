@@ -2,78 +2,78 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import phantom from '/static/img/wallet/phantom.png';
-import solflare from '/static/img/wallet/solflare.svg';
+import solflare from '/static/img/wallet/solflare.png';
 import ultimate from '/static/img/wallet/ultimate.png';
 import brave from '/static/img/wallet/brave.png';
 import coinbase from '/static/img/wallet/coinbase.png';
-import glow from '/static/img/wallet/glow.svg';
+import glow from '/static/img/wallet/glow.png';
 import heywallet from '/static/img/wallet/heywallet.png';
-import backpack from '/static/img/wallet/backpack.svg';
-import frontier from '/static/img/wallet/frontier.svg';
+import backpack from '/static/img/wallet/backpack.png';
+import frontier from '/static/img/wallet/frontier.png';
 import ottr from '/static/img/wallet/ottr.png';
-import nightly from '/static/img/wallet/nightly.svg';
+import nightly from '/static/img/wallet/nightly.png';
 
 import birdeye from '/static/img/defi/birdeye.png';
-import bonfida from '/static/img/defi/bonfida.svg';
+import bonfida from '/static/img/defi/bonfida.png';
 import francium from '/static/img/defi/francium.png';
-import sonar from '/static/img/defi/sonar.svg';
-import hellomoon from '/static/img/defi/hellomoon.svg';
+import sonar from '/static/img/defi/sonar.png';
+import hellomoon from '/static/img/defi/hellomoon.png';
 import kamino from '/static/img/defi/kamino.png';
 import meandao from '/static/img/defi/meandao.png';
-import portfinance from '/static/img/defi/portfinance.svg';
+import portfinance from '/static/img/defi/portfinance.png';
 import tulip from '/static/img/defi/tulip.png';
 
 import aldrin from '/static/img/dex_amm/aldrin.png';
-import balansol from '/static/img/dex_amm/balansol.svg';
-import crema from '/static/img/dex_amm/crema.svg';
-import raydium from '/static/img/dex_amm/raydium.svg';
-import cropper from '/static/img/dex_amm/cropper.svg';
-import cykura from '/static/img/dex_amm/cykura.svg';
+import balansol from '/static/img/dex_amm/balansol.png';
+import crema from '/static/img/dex_amm/crema.png';
+import raydium from '/static/img/dex_amm/raydium.png';
+import cropper from '/static/img/dex_amm/cropper.png';
+import cykura from '/static/img/dex_amm/cykura.png';
 import dradex from '/static/img/dex_amm/dradex.png';
 import goosefx from '/static/img/dex_amm/goosefx.png';
-import dexlab from '/static/img/dex_amm/dexlab.svg';
-import ellipsis from '/static/img/dex_amm/ellipsis.svg';
-import invariant from '/static/img/dex_amm/invariant.svg';
-import lifinity from '/static/img/dex_amm/lifinity.svg';
-import mango from '/static/img/dex_amm/mango.svg';
-import marcopolo from '/static/img/dex_amm/marcopolo.svg';
+import dexlab from '/static/img/dex_amm/dexlab.png';
+import ellipsis from '/static/img/dex_amm/ellipsis.png';
+import invariant from '/static/img/dex_amm/invariant.png';
+import lifinity from '/static/img/dex_amm/lifinity.png';
+import mango from '/static/img/dex_amm/mango.png';
+import marcopolo from '/static/img/dex_amm/marcopolo.png';
 import marinade from '/static/img/dex_amm/marinade.png';
 import meteora from '/static/img/dex_amm/meteora.png';
 import openbook from '/static/img/dex_amm/openbook.png';
-import orca from '/static/img/dex_amm/orca.svg';
-import penguin from '/static/img/dex_amm/penguin.svg';
-import saber from '/static/img/dex_amm/saber.svg';
-import saros from '/static/img/dex_amm/saros.svg';
-import stepfinance from '/static/img/dex_amm/stepfinance.svg';
-import stepn from '/static/img/dex_amm/stepn.svg';
+import orca from '/static/img/dex_amm/orca.png';
+import penguin from '/static/img/dex_amm/penguin.png';
+import saber from '/static/img/dex_amm/saber.png';
+import saros from '/static/img/dex_amm/saros.png';
+import stepfinance from '/static/img/dex_amm/stepfinance.png';
+import stepn from '/static/img/dex_amm/stepn.png';
 
 
 import rango from '/static/img/bridge/rango.png';
-import allbridge from '/static/img/bridge/allbridge.svg';
-import atlasdex from '/static/img/bridge/atlasdex.svg';
+import allbridge from '/static/img/bridge/allbridge.png';
+import atlasdex from '/static/img/bridge/atlasdex.png';
 import wormhole from '/static/img/bridge/wormhole.png';
 import mayan from '/static/img/bridge/mayan.png';
 
-import aurory from '/static/img/game/aurory.jpg';
-import defiland from '/static/img/game/defiland.svg';
-import genopets from '/static/img/game/genopets.svg';
+import aurory from '/static/img/game/aurory.png';
+import defiland from '/static/img/game/defiland.png';
+import genopets from '/static/img/game/genopets.png';
 import staratlas from '/static/img/game/staratlas.png';
 
-import candypay from '/static/img/payment/candypay.svg';
-import helio from '/static/img/payment/helio.svg';
+import candypay from '/static/img/payment/candypay.png';
+import helio from '/static/img/payment/helio.png';
 
-import famousfoxfederation from '/static/img/nft/famousfoxfederation.svg';
-import hadeswap from '/static/img/nft/hadeswap.svg';
-import hyperspace from '/static/img/nft/hyperspace.svg';
+import famousfoxfederation from '/static/img/nft/fff.png';
+import hadeswap from '/static/img/nft/hadeswap.png';
+import hyperspace from '/static/img/nft/hyperspace.png';
 import liquifynft from '/static/img/nft/liquifynft.png';
-import solsea from '/static/img/nft/solsea.svg';
+import solsea from '/static/img/nft/solsea.png';
 
 
 const sections = [
   {
     id: 1,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Wallets description`,
+    description: `DeFi wallets are a crucial tool for interacting with DeFi protocols in the Web3 ecosystem. They store and manage cryptocurrency assets and allow access to decentralized exchanges, lending platforms, and liquidity pools. Wallet partners have an in-wallet swap feature, like Jupiter, available on iOS, Android, and Web Widget platforms. This allow users to easily exchange cryptocurrencies within their wallet for the optimum price with seamless experience.`,
     cards: [
       {
         id: 1,
@@ -135,7 +135,7 @@ const sections = [
   {
     id: 2,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `DeFi description`,
+    description: `DeFi, or Decentralized Finance, is a financial system built on blockchain technology that uses cryptocurrencies and smart contracts for activities like lending, borrowing, and trading in a transparent and secure way. DeFi aims to provide more financial inclusion, transparency, and accessibility while reducing costs and eliminating central points of failure. It's an ever-changing space with new developments and applications being created constantly.`,
     cards: [
       {
         id: 1,
@@ -177,12 +177,19 @@ const sections = [
         title: 'Bonfida',
         logo: bonfida,
       },
+      {
+        id: 11,
+        title: 'Kamino',
+        logo: kamino,
+      },
     ],
   },
   {
     id: 3,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `DEXs & AMMs description`,
+    description: `A decentralized exchange (DEX) is a cryptocurrency exchange where users trade directly with each other using smart contracts and blockchain technology, without intermediaries. DEXs provide users with greater control over their funds.
+      
+    Automated market makers (AMMs) are decentralized exchanges (DEXs) that use mathematical algorithms to automatically set prices and execute trades. Unlike traditional order-book exchanges, which rely on central limit order matching, AMMs use liquidity pools where users can deposit funds to facilitate trades. The algorithm automatically adjusts the price based on the supply and demand of assets in the pool.DEXs & AMMs description`,
     cards: [
       {
         id: 1,
@@ -294,7 +301,7 @@ const sections = [
   {
     id: 4,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Bridges description`,
+    description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
       {
         id: 1,
@@ -326,7 +333,7 @@ const sections = [
   {
     id: 5,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Games description`,
+    description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
       {
         id: 1,
@@ -353,7 +360,7 @@ const sections = [
   {
     id: 6,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Payments description`,
+    description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
     cards: [
       {
         id: 1,
@@ -375,7 +382,7 @@ const sections = [
   {
     id: 7,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `NFTs description`,
+    description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
       {
         id: 1,
