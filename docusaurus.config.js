@@ -91,6 +91,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/composability',
+            label: 'Composability',
+            position: 'left',
+          },
+          {
             to: 'https://jup.ag/stats',
             label: 'Stats',
             position: 'left',
