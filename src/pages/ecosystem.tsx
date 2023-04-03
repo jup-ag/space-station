@@ -73,7 +73,7 @@ const sections = [
   {
     id: 1,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Wallets description`,
+    description: `DeFi wallets are a crucial tool for interacting with DeFi protocols in the Web3 ecosystem. They store and manage cryptocurrency assets and allow access to decentralized exchanges, lending platforms, and liquidity pools. Wallet partners have an in-wallet swap feature, like Jupiter, available on iOS, Android, and Web Widget platforms. This allow users to easily exchange cryptocurrencies within their wallet for the optimum price with seamless experience.`,
     cards: [
       {
         id: 1,
@@ -135,7 +135,7 @@ const sections = [
   {
     id: 2,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `DeFi description`,
+    description: `DeFi, or Decentralized Finance, is a financial system built on blockchain technology that uses cryptocurrencies and smart contracts for activities like lending, borrowing, and trading in a transparent and secure way. DeFi aims to provide more financial inclusion, transparency, and accessibility while reducing costs and eliminating central points of failure. It's an ever-changing space with new developments and applications being created constantly.`,
     cards: [
       {
         id: 1,
@@ -187,7 +187,9 @@ const sections = [
   {
     id: 3,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `DEXs & AMMs description`,
+    description: `A decentralized exchange (DEX) is a cryptocurrency exchange where users trade directly with each other using smart contracts and blockchain technology, without intermediaries. DEXs provide users with greater control over their funds.
+      
+    Automated market makers (AMMs) are decentralized exchanges (DEXs) that use mathematical algorithms to automatically set prices and execute trades. Unlike traditional order-book exchanges, which rely on central limit order matching, AMMs use liquidity pools where users can deposit funds to facilitate trades. The algorithm automatically adjusts the price based on the supply and demand of assets in the pool.DEXs & AMMs description`,
     cards: [
       {
         id: 1,
@@ -299,7 +301,7 @@ const sections = [
   {
     id: 4,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Bridges description`,
+    description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
       {
         id: 1,
@@ -331,7 +333,7 @@ const sections = [
   {
     id: 5,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Games description`,
+    description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
       {
         id: 1,
@@ -358,7 +360,7 @@ const sections = [
   {
     id: 6,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `Payments description`,
+    description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
     cards: [
       {
         id: 1,
@@ -380,7 +382,7 @@ const sections = [
   {
     id: 7,
     logo: 'https://reactnative.dev/img/meta_positive_primary.svg',
-    description: `NFTs description`,
+    description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
       {
         id: 1,
