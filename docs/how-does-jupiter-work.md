@@ -28,7 +28,7 @@ Trade Split image
 
 ### Automatically lists new tokens
 
-The number of new tokens being added is increasing at an ever faster pace. Jupiter automatically lists any tokens as long as their have [reached enough liquidity](/getting-your-token-on-jupiter). This means you can be assured that you'll be able to trade new tokens as they launch on Solana.
+The number of new tokens being added is increasing at an ever faster pace. Jupiter automatically lists any tokens as long as their have [reached enough liquidity](./notes/getting-tokens-on-jup). This means you can be assured that you'll be able to trade new tokens as they launch on Solana.
 
 ### Automatically lists new markets 
 

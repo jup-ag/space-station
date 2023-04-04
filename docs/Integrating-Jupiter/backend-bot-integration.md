@@ -4,7 +4,7 @@ Integrate Jupiter on your backend or build your arbitrage bot.
 
 ## Integrating Jupiter with API
 
-[Jupiter API](/start-with-the-jupiter-api)
+[Jupiter API](./start-with-the-jupiter-api)
 
 ## Integrating Jupiter with SDK
 
@@ -346,7 +346,7 @@ message.instructions.push(instruction);
 // compile the message and update the swapTransaction
 swapTransaction.message = message.compileToV0Message(addressLookupTableAccounts);
 ```
-Read more details on [composing versioned transactions](/composing-with-versioned-transactions).
+Read more details on [composing versioned transactions](./additional-guides/composing-with-versioned-transaction).
 :::
 
 **2. Sign and execute the transactions**

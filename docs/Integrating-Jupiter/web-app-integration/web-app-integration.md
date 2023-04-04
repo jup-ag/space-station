@@ -13,7 +13,7 @@ Integrate Jupiter into your Dapp's UI
 
 ## Integrating Jupiter with API
 
-You can refer here on how to use [Jupiter API](/start-with-the-jupiter-api).
+You can refer here on how to use [Jupiter API](../start-with-the-jupiter-api).
 
 ## Jupiter Terminal
 
