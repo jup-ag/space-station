@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Jupiter Aggregator 
+# Overview
 
 
 Jupiter is the key liquidity aggregator for Solana, offering the widest range of tokens and best route discovery between any token pair. 
