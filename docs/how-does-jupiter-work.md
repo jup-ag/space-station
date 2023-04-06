@@ -14,7 +14,7 @@ Jupiter directly connects all DEX markets and AMM pools together no matter the p
 
 ### Multi-hop Routes
 
-Multi hop Image
+![Multi-hop Routes](../static/img/docs/multi-hop-routes.png)
 
 Not only does Jupiter compare the prices between markets on different DEXes but often the best priced routes are not direct markets. Instead, Jupiter may find the best price by routing through an intermediary token, e.g. *USDC-mSOL-SOL* instead of *USDC-SOL*. This may be due to price inefficiencies and/or volatility in the various markets that Jupiter routes through. 
 
@@ -22,7 +22,7 @@ Not only does Jupiter compare the prices between markets on different DEXes but 
 
 Jupiter will split your trade into smaller trade sizes. For example, if you want to make a 100 USDC-SOL trade, it may distribute your trade into a 30 USDC-SOL trade on Raydium and a 70 USDC-SOL trade on Orca. The % distribution of the trades is dynamically determined to give you the best price. Trade splitting helps get better prices for large size trades and trades with tokens where there is shallow liquidity spread out across a number of DEXes.
 
-Trade Split image
+![Split Trade](../static/img/docs/split-trade.png)
 
 ## Other Key Features of Jupiter
 
