@@ -6,18 +6,23 @@ import { useLocation } from '@docusaurus/router';
 import clsx from 'clsx';
 
 const navLinks = [
-  {
-    label: 'Home',
-    url: '/',
-  },
-  {
-    label: 'Docs',
-    url: '/docs/overview',
-  },
+  // {
+  //   label: 'Home',
+  //   url: '/',
+  // },
   {
     label: 'Ecosystem',
     url: '/ecosystem',
   },
+  {
+    label: 'Stats',
+    url: 'https://jup.ag/stats',
+  },
+  {
+    label: 'Documentation',
+    url: '/docs/overview',
+  },
+  
   {
     label: 'Blog',
     url: '/blog',
@@ -58,7 +63,7 @@ const linkSections = [
     ),
   },
   {
-    label: 'Walkthrough',
+    label: 'Featured Use Case',
     url: '/ecosystem',
     icon: (
       <svg
@@ -164,10 +169,10 @@ const linkSections = [
 const jupSection = [
   {
     title: 'Jup Promise',
-    description: `Hendrerit eu integer integer tempor amet. Eget augue vel aliquet
-    pellentesque duis nisi fermentum venenatis. Dui lacinia
-    adipiscing leo quam quisque nunc mattis odio. In eget at at odio
-    euismod senectus ut in ultricies.`,
+    description: `The JUP Promise to anchor us to the value we want to deliver - 
+    Best price, Best token selection, and Best UX for users and developers. 
+    Sticking to this promise, along with the relentless feedback and debugging help provided by our community of users and developers, 
+    has been crucial in helping us improve the platform and make significant progress on key objectives.`,
     items: [
       {
         label: 'Best Price',
@@ -255,10 +260,9 @@ const jupSection = [
   },
   {
     title: 'Jup Spirit',
-    description: `Hendrerit eu integer integer tempor amet. Eget augue vel aliquet
-    pellentesque duis nisi fermentum venenatis. Dui lacinia
-    adipiscing leo quam quisque nunc mattis odio. In eget at at odio
-    euismod senectus ut in ultricies.`,
+    description: `The JUP Spirit of Most Vocal, Most Critical and Most Long-Term is a rallying cry to create one of the most active and helpful communities around!
+    The JUP Spirit may be simple but it covers so much of what we care about. It captures the essence of being there for Jupiter in the most helpful and genuine way.`,
+    
     items: [
       {
         label: (
@@ -485,7 +489,7 @@ export default function Home(): JSX.Element {
           ))}
         </nav>
         <Link
-          to="/"
+          to="https://jup.ag/"
           style={{
             background:
               ' linear-gradient(0deg, #121D28, #121D28), linear-gradient(96.8deg, rgba(252, 192, 10, 0.05) 4.71%, rgba(78, 186, 233, 0.05) 87.84%), rgba(0, 0, 0, 0.4)',
@@ -557,15 +561,7 @@ export default function Home(): JSX.Element {
               Single Liquidity Endpoint For Solana
             </h2>
             <p className="text-lg text-white/50 mt-2 lg:mt-10 ">
-              Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
-              suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
-              quis montes, sit sit. Tellus aliquam enim urna, etiam.
-              <br />
-              <br />
-              Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum,
-              nulla odio nisl vitae. In aliquet pellentesque aenean hac
-              vestibulum turpis mi bibendum diam. Tempor integer aliquam in
-              vitae malesuada.
+            Jupiter simplifies the exponentially growing number of tokens and liquidity sources on Solana into a single endpoint, allowing users and projects to fully access the value within Solana, seamlessly.
             </p>
           </div>
         </section>
