@@ -6,17 +6,13 @@ import { useLocation } from '@docusaurus/router';
 import clsx from 'clsx';
 
 const navLinks = [
-  // {
-  //   label: 'Home',
-  //   url: '/',
-  // },
-  {
-    label: 'Ecosystem',
-    url: '/ecosystem',
-  },
   {
     label: 'Stats',
     url: 'https://jup.ag/stats',
+  },
+  {
+    label: 'Ecosystem',
+    url: '/ecosystem',
   },
   {
     label: 'Documentation',
@@ -30,8 +26,8 @@ const navLinks = [
 ];
 const linkSections = [
   {
-    label: 'Ecosystem',
-    url: '/ecosystem',
+    label: 'Statistic',
+    url: 'https://jup.ag/stats',
     icon: (
       <svg
         width="60"
@@ -63,7 +59,7 @@ const linkSections = [
     ),
   },
   {
-    label: 'Featured Use Case',
+    label: 'Ecosystem',
     url: '/ecosystem',
     icon: (
       <svg
@@ -375,7 +371,7 @@ export default function Home(): JSX.Element {
       }}
       className="min-h-screen overflow-hidden relative isolate text-white/75 pb-[112px] md:pb-[163px] px-6 home"
     >
-      <img
+      {/* <img
         src="/img/home/header-bg.png"
         alt=""
         className="hidden md:block z-[-1] absolute w-[70%] top-0 right-0"
@@ -385,7 +381,7 @@ export default function Home(): JSX.Element {
         src="/img/home/header-bg-mobile.png"
         alt=""
         className="md:hidden z-[-1] absolute w-[100%] top-0 right-0"
-      />
+      /> */}
 
       <header className="flex items-center py-2">
         <div className="flex items-center space-x-2">
@@ -500,16 +496,17 @@ export default function Home(): JSX.Element {
         </Link>
       </header>
       <div className="mt-[247px] md:mt-[170px] max-w-content mx-auto">
-        <section className="max-w-[562px] text-center md:text-left">
-          <h1 className="font-bold text-[40px] md:text-[80px] leading-[1.1125] text-white">
-            The Liquidity Infrastructure for Solana
-          </h1>
-          <p className="text-white/75 mt-8 font-medium">
-            Jupiter brings together all the liquidity sources across Solana into
-            a single endpoint, providing crucial swap aggregation, pricing data
-            and payment features for all users and developers alike.
-          </p>
-        </section>
+        <section className="max-w-[562px] mx-auto text-center md:text-left">
+  <h1 className="font-bold text-[40px] md:text-[70px] leading-[1.1125] text-white">
+    The Liquidity Infrastructure for Solana
+  </h1>
+  <p className="text-white/75 mt-8 font-medium">
+    Jupiter brings together all the liquidity sources across Solana into
+    a single endpoint, providing crucial swap aggregation, pricing data
+    and payment features for all users and developers alike.
+  </p>
+</section>
+
         <section className="mt-[84px] md:mt-[100px] grid grid-cols-2 md:grid-cols-4 gap-3">
           {linkSections.map((item, idx) => (
             <Link
@@ -524,7 +521,7 @@ export default function Home(): JSX.Element {
             </Link>
           ))}
         </section>
-        <section className="text-center mt-20 md:mt-[128px] grid grid-cols-1 md:grid-cols-2 gap-[76px]">
+        {/* <section className="text-center mt-20 md:mt-[128px] grid grid-cols-1 md:grid-cols-2 gap-[76px]">
           {jupSection?.map((section) => (
             <div key={section.title} className="flex flex-col items-center">
               <h2 className="text-2xl font-bold text-white">{section.title}</h2>
@@ -546,8 +543,8 @@ export default function Home(): JSX.Element {
               </div>
             </div>
           ))}
-        </section>
-        <section className="mt-20 lg:mt-[156px] grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-[64px] justify-items-center items-center">
+        </section> */}
+        {/* <section className="mt-20 lg:mt-[156px] grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-[64px] justify-items-center items-center">
           <div className="max-w-full w-[551px]">
             <SolanaDiagram />
           </div>
@@ -564,7 +561,7 @@ export default function Home(): JSX.Element {
             Jupiter simplifies the exponentially growing number of tokens and liquidity sources on Solana into a single endpoint, allowing users and projects to fully access the value within Solana, seamlessly.
             </p>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
