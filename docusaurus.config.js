@@ -103,13 +103,13 @@ const config = {
         },
         items: [
           {
-            to: '/ecosystem',
-            label: 'Ecosystem',
+            to: 'https://jup.ag/stats',
+            label: 'Stats',
             position: 'left',
           },
           {
-            to: 'https://jup.ag/stats',
-            label: 'Stats',
+            to: '/ecosystem',
+            label: 'Ecosystem',
             position: 'left',
           },
           {
