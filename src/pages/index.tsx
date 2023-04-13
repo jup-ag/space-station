@@ -487,7 +487,7 @@ export default function Home(): JSX.Element {
           <GradientText>Launch App</GradientText>
         </Link>
       </header>
-      <div className="mt-[247px] md:mt-[170px] max-w-content mx-auto">
+      <div className="mt-[200px] md:mt-[120px] max-w-content mx-auto">
         <section className="max-w-[800px] mr-auto text-center md:text-left">
           <h1 className="font-bold text-[40px] md:text-[70px] leading-[1.1125] text-white">
             The Liquidity Infrastructure for Solana
