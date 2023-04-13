@@ -56,7 +56,6 @@ import saros from '/static/img/dex_amm/saros.png';
 import stepfinance from '/static/img/dex_amm/stepfinance.png';
 import stepn from '/static/img/dex_amm/stepn.png';
 
-
 import rango from '/static/img/bridge/rango.png';
 import allbridge from '/static/img/bridge/allbridge.png';
 import atlasdex from '/static/img/bridge/atlasdex.png';
@@ -77,7 +76,6 @@ import hyperspace from '/static/img/nft/hyperspace.png';
 import liquifynft from '/static/img/nft/liquifynft.png';
 import solsea from '/static/img/nft/solsea.png';
 
-
 const sections = [
   {
     id: 1,
@@ -88,6 +86,7 @@ const sections = [
         id: 1,
         title: 'Phantom',
         logo: phantom,
+        link: '#',
       },
       {
         id: 2,
@@ -196,7 +195,7 @@ const sections = [
   {
     id: 3,
     logo: dex_amm,
-    description: `A decentralized exchange (DEX) is a cryptocurrency exchange where users trade directly with each other using smart contracts and blockchain technology, without intermediaries. DEXs provide users with greater control over their funds.      
+    description: `A decentralized exchange (DEX) is a cryptocurrency exchange where users trade directly with each other using smart contracts and blockchain technology, without intermediaries. DEXs provide users with greater control over their funds.
     Automated market makers (AMMs) are decentralized exchanges (DEXs) that use mathematical algorithms to automatically set prices and execute trades. Unlike traditional order-book exchanges, which rely on central limit order matching, AMMs use liquidity pools where users can deposit funds to facilitate trades. The algorithm automatically adjusts the price based on the supply and demand of assets in the pool.DEXs & AMMs description`,
     cards: [
       {
@@ -437,9 +436,11 @@ export default function Home(): JSX.Element {
             <p className="mt-4">{section.description}</p>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {section.cards.map((card) => (
-                <div
+                <a
+                  href={card.link}
                   key={card.id}
-                  className="rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-6 flex items-center flex-col"
+                  className="!no-underline rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-6 flex items-center flex-col"
+                  rel="noreferrer"
                 >
                   <div className="flex rounded-lg overflow-hidden shadow-lg  hover:scale-105 transition duration-300">
                     <img
@@ -459,7 +460,7 @@ export default function Home(): JSX.Element {
                       </a>
                     ))}
                   </div> */}
-                </div>
+                </a>
               ))}
             </div>
           </div>
