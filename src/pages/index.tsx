@@ -18,7 +18,7 @@ const navLinks = [
     label: 'Documentation',
     url: '/docs/overview',
   },
-  
+
   {
     label: 'Blog',
     url: '/blog',
@@ -258,7 +258,7 @@ const jupSection = [
     title: 'Jup Spirit',
     description: `The JUP Spirit of Most Vocal, Most Critical and Most Long-Term is a rallying cry to create one of the most active and helpful communities around!
     The JUP Spirit may be simple but it covers so much of what we care about. It captures the essence of being there for Jupiter in the most helpful and genuine way.`,
-    
+
     items: [
       {
         label: (
@@ -496,16 +496,16 @@ export default function Home(): JSX.Element {
         </Link>
       </header>
       <div className="mt-[247px] md:mt-[170px] max-w-content mx-auto">
-        <section className="max-w-[562px] mx-auto text-center md:text-left">
-  <h1 className="font-bold text-[40px] md:text-[70px] leading-[1.1125] text-white">
-    The Liquidity Infrastructure for Solana
-  </h1>
-  <p className="text-white/75 mt-8 font-medium">
-    Jupiter brings together all the liquidity sources across Solana into
-    a single endpoint, providing crucial swap aggregation, pricing data
-    and payment features for all users and developers alike.
-  </p>
-</section>
+        <section className="max-w-[1200px] mr-auto text-center md:text-left">
+          <h1 className="font-bold text-[40px] md:text-[70px] leading-[1.1125] text-white">
+            The Liquidity Infrastructure for Solana
+          </h1>
+          <p className="text-white/75 mt-8 font-medium">
+            Jupiter brings together all the liquidity sources across Solana into
+            a single endpoint, providing crucial swap aggregation, pricing data
+            and payment features for all users and developers alike.
+          </p>
+        </section>
 
         <section className="mt-[84px] md:mt-[100px] grid grid-cols-2 md:grid-cols-4 gap-3">
           {linkSections.map((item, idx) => (
