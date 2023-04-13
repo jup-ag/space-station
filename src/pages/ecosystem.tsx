@@ -86,7 +86,7 @@ const sections = [
         id: 1,
         title: 'Phantom',
         logo: phantom,
-        link: '#',
+        link: 'https://phantom.app',
       },
       {
         id: 2,
@@ -437,6 +437,7 @@ export default function Home(): JSX.Element {
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {section.cards.map((card) => (
                 <a
+                  target='_blank'
                   href={card.link}
                   key={card.id}
                   className="!no-underline rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-6 flex items-center flex-col"
