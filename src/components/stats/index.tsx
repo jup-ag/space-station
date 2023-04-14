@@ -43,7 +43,7 @@ const StatsContent: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   return (
     <div className="stats dark">
-      <div className="w-full px-2 lg:px-4 mt-16 lg:p-0 lg:mt-20 mb-[133px] max-w-desktop !mx-auto">
+      <div className="w-full px-2 lg:px-4 mt-16 lg:p-0 lg:mt-12 mb-[133px] max-w-desktop !mx-auto">
         <JupOverview mode={mode} />
         <div className="mt-8 md:mt-10" />
         <TopTradingPair mode={mode} />
