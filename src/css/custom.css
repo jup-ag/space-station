@@ -36,8 +36,16 @@
 }
 
 @layer base {
-  .home :where(*) {
+  .stats :where(*) {
     margin: 0;
     padding: 0;
+  }
+
+  .stats a {
+    text-decoration: none;
+  }
+
+  .stats .recharts-tooltip-wrapper {
+    outline: none;
   }
 }

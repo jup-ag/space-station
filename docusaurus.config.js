@@ -3,13 +3,16 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jupiter Hub',
   tagline: 'Swap Aggregator in Solana',
   favicon: 'img/favicon.ico',
-
+  customFields: {
+    // Put your custom environment here
+  },
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -89,7 +92,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+      metadata: [
+        {
+          property: 'description',
+          content:
+            'Jupiter Hub is the central hub for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with jupiter and read our latest blog posts.',
+        },
+      ],
       colorMode: {
         defaultMode: 'light',
         respectPrefersColorScheme: false,
@@ -102,7 +111,7 @@ const config = {
         },
         items: [
           {
-            to: 'https://jup.ag/stats',
+            to: '/stats',
             label: 'Stats',
             position: 'right',
           },
