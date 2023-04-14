@@ -14,7 +14,7 @@ const config = {
     // Put your custom environment here
   },
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://hub.jup.ag',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
