@@ -92,7 +92,6 @@ const config = {
       // Replace with your project's social card
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
@@ -105,64 +104,64 @@ const config = {
           {
             to: 'https://jup.ag/stats',
             label: 'Stats',
-            position: 'left',
+            position: 'right',
           },
           {
             to: '/ecosystem',
             label: 'Ecosystem',
-            position: 'left',
+            position: 'right',
           },
           {
             type: 'doc',
             docId: 'overview',
-            position: 'left',
+            position: 'right',
             label: 'Documentation',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
+          { to: '/blog', label: 'Blog', position: 'right' },
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Documentation',
-                to: '/docs/overview',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/jup',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/JupiterExchange',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-            ],
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
-        copyright: `Jupiter: The Key Liquidity Aggregator and Swap Infrastructure for Solana`,
       },
+      // footer: {
+      //   style: 'dark',
+      //   links: [
+      //     {
+      //       title: 'Docs',
+      //       items: [
+      //         {
+      //           label: 'Documentation',
+      //           to: '/docs/overview',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Community',
+      //       items: [
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discord.gg/jup',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/JupiterExchange',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'More',
+      //       items: [
+      //         {
+      //           label: 'Blog',
+      //           to: '/blog',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `Jupiter: The Key Liquidity Aggregator and Swap Infrastructure for Solana`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
