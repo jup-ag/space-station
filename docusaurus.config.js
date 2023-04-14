@@ -95,7 +95,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Jupiter | Hub',
+        title: 'Jupiter Hub',
         logo: {
           alt: 'Jup Logo',
           src: 'img/jupiter-logo.svg',
@@ -115,7 +115,12 @@ const config = {
             type: 'doc',
             docId: 'overview',
             position: 'right',
-            label: 'Documentation',
+            label: 'Docs',
+          },
+          {
+            to: '/user-guide',
+            label: 'User Guide',
+            position: 'right',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
           {
