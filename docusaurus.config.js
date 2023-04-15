@@ -76,6 +76,26 @@ const config = {
     ],
   ],
   plugins: [
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'ecosystem',
+        path: 'ecosystem',
+        routeBasePath: 'ecosystem',
+        sidebarPath: require.resolve('./sidebarsEcosystem.js'),
+      }),
+    ],
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'user-guide',
+        path: 'user-guide',
+        routeBasePath: 'user-guide',
+        sidebarPath: require.resolve('./sidebarsUserguide.js'),
+      }),
+    ],
     async function myPlugin() {
       return {
         name: 'docusaurus-tailwindcss',
@@ -127,7 +147,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/user-guide',
+            to: '/user-guide/how-to-use',
             label: 'User Guide',
             position: 'right',
           },

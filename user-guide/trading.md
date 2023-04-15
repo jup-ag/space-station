@@ -1,21 +1,7 @@
 ---
-title: User Guide
+title: Trading
+sidebar_position: 3
 ---
-
-# User Guide
----
-
-## How to use Jupiter
-
-*A community guide to swapping on Jupiter's dApp.*
-
-This guide was created through contributions from the following community members:  [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)
-
-:::info [Why do I need Jupiter?](https://oneel.notion.site/Jupiter-Aggregation-0ef3149cd3bb485b8e118432e6cf8472)
-Click the link to read why you need Jupiter written by community member @oneel_d
-:::
-
-## Trading
 
 **1. First make sure your URL is correct: https://jup.ag**
 
@@ -63,6 +49,3 @@ This is because between the time you get a quote and the time you execute the tr
 **7. A notification will appear in the lower-left corner that will once the transaction has been sent and will let you know when it has been completed.**
 
 **8. You can view your transaction history by clicking the arrow on the right of the screen.**
-
-## Stats
-The stats page shows the total amount of transactions done and the top trading pairs with a link to swap them directly. It also shows the top tokens overall, the top buys, sells, and top pool providers in Solana by their daily, weekly, and monthly trade volume.
