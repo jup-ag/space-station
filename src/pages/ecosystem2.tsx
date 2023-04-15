@@ -2,13 +2,13 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
-import wallet from '/static/img/wallet.png';
-import defi from '/static/img/defi.png';
-import dex_amm from '/static/img/dex_amm.png';
-import bridge from '/static/img/bridge.png';
-import payment from '/static/img/payment.png';
-import nft from '/static/img/nft.png';
-import game from '/static/img/game.png';
+// import wallet from '/static/img/wallet.png';
+// import defi from '/static/img/defi.png';
+// import dex_amm from '/static/img/dex_amm.png';
+// import bridge from '/static/img/bridge.png';
+// import payment from '/static/img/payment.png';
+// import nft from '/static/img/nft.png';
+// import game from '/static/img/game.png';
 
 import phantom from '/static/img/wallet/phantom.png';
 import solflare from '/static/img/wallet/solflare.png';
