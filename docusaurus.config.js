@@ -147,7 +147,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/user-guide/how-to-use',
+            to: '/user-guide',
             label: 'User Guide',
             position: 'right',
           },
