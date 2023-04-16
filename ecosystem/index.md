@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 - [Wallets](/ecosystem/wallets)
 - [DeFi](/ecosystem/defi)
-- [DEXs & AMMs](/ecosystem/dexes-amm)
+- [DEXs & AMMs](/ecosystem/DEXsAMMs)
 - [Bridge](/ecosystem/bridge)
 - [Games](/ecosystem/games)
 - [Payment](/ecosystem/payment)

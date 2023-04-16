@@ -1,4 +1,5 @@
 ---
+title: DEXs & AMMs
 sidebar_position: 4
 ---
 - [Orca](https://www.orca.so/)

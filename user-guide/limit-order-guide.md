@@ -49,7 +49,7 @@ Open Order section is where users keep track of submitted order/ transaction tha
 1. **Order Info:** Order info specifies user's order from TokenA *(Selling)* to TokenB *(Buying)* and the amount for the order.
 2. **Price:** Price is the rate that is being submitted for the order - When the on-chain price of the purchase token hits, order will be executed.
 3. **Expiry:** Expiry period set by user when submitting the order - in this example it's `Never`, hence order will be on-chain until the price hits and be executed.
-4. **Filled Size:** Filled size is the section to monitor the fulfillment size of the order. If it is an large order, and there is insufficient liquidity on-chain, Jupiter's keeper will try to execute partially, and continue monitoring on-chain price to fulfill the rest of the order.
+4. **Filled Size:** Filled size is the section to monitor the fulfillment size of the order. If it is an large order, and there is insufficient liquidity on-chain, Jupiter's keeper will try to execute partially, and continue monitoring on-chain price to fulfill the rest of the order. If order is fully executed, user will get the token directly in his wallet. 
 5. **Action:** Action is where user will be able to cancel and close their order/ position. 
 
 ### Order History
@@ -60,7 +60,7 @@ Order History section is where users keep track of orders that have been complet
 1. **Price:** Price is the rate that is being submitted for the order - When the on-chain price of the purchase token hits, order will be executed.
 2. **Limit Price:** Limit Price is the single unit price for the order - X amount of TokenA per TokenB
 3. **Expiry:** Expiry period set by user when submitting the order - in this example it's `Never`, hence order will be on-chain until the price hits and be executed.
-4. **Filled Size:** Filled size is the section to monitor the fulfillment size of the order. If it is an large order, and there is insufficient liquidity on-chain, Jupiter's keeper will try to execute partially, and continue monitoring on-chain price to fulfill the rest of the order.
+4. **Filled Size:** Filled size is the section to monitor the fulfillment size of the order. If it is an large order, and there is insufficient liquidity on-chain, Jupiter's keeper will try to execute partially, and continue monitoring on-chain price to fulfill the rest of the order. If order is fully executed, user will get the token directly in his wallet. 
 5. **Status:** Status indicates the order state - Completed / Cancelled
 6. **Action - Create:** This is the first transaction that is being submitted, creating the order of trade to submit on-chain.
 7. **Action - Trade:** This is the actual trade transaction being executed when the on-chain price hits the specified price submitted by user.

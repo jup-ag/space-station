@@ -4,5 +4,5 @@ sidebar_position: 1
 ---
 
 - [How to use Jupiter](/how-to-use.md)
-- [How to use Jupiter Limit Order](/limit-order-guide)
-- [Stats](/stats.md)
+- [How to use Jupiter Limit Order](/limit-order-guide.md)
+- [Jupiter Statistics](/stats.md)
