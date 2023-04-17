@@ -2,6 +2,10 @@
 title: DEXs & AMMs
 sidebar_position: 4
 ---
+Jupiter integrates Solana's major DEX/AMMs to provide the best quotes available on-chain.
+
+## Some partners
+
 - [Orca](https://www.orca.so/)
 - [Raydium](https://raydium.io/)
 - [Meteora](https://meteora.ag/)
