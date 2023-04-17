@@ -5,7 +5,7 @@ sidebar_position: 3
 
 Jupiter Limit Order (Beta) provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
 
-![Limit Order](//img/limit-order.jpg)
+![Limit Order](/img/limit-order/limit-order.jpg)
 
 ## Key Benefits
 
@@ -19,7 +19,7 @@ Jupiter will execute your limit order based on the available liquidity on-chain.
 
 ## How to place a Limit Order
 
-![Limit Order 2](/img/limit-order2.png)
+![Limit Order 2](/img/limit-order/limit-order2.png)
 
 1. **Input:** Pick a token from the token selector and specify the amount of token that you're selling.
 2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `User Market` for the current market price)
@@ -42,7 +42,7 @@ Jupiter will execute your limit order based on the available liquidity on-chain.
 
 
 ### Open Order
-![Limit Order 4](/img/limit-order4.png)
+![Limit Order 4](/img/limit-order/limit-order4.png)
 
 Open Order section is where users keep track of submitted order/ transaction that has yet to be fulfilled.
 
@@ -53,7 +53,7 @@ Open Order section is where users keep track of submitted order/ transaction tha
 5. **Action:** Action is where user will be able to cancel and close their order/ position. 
 
 ### Order History
-![Limit Order 3](/img/limit-order3.png)
+![Limit Order 3](/img/limit-order/limit-order3.png)
 
 Order History section is where users keep track of orders that have been completed or have been cancelled.
 
