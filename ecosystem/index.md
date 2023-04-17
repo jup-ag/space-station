@@ -20,7 +20,7 @@ Jupiter is in constant evolution (new DEX integration, added functionality, opti
 
 - [Wallets](/ecosystem/wallets)
 - [DeFi](/ecosystem/defi)
-- [DEXs & AMMs](/ecosystem/dexes-amm)
+- [DEXs & AMMs](/ecosystem/DEXsAMMs)
 - [Bridge](/ecosystem/bridge)
 - [Games](/ecosystem/games)
 - [Payment](/ecosystem/payment)
