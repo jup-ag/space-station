@@ -3,8 +3,6 @@ title: How to use Jupiter Swap
 sidebar_position: 2
 ---
 
-## How to use Jupiter Swap
-
 *A community guide to swapping on Jupiter's dApp.*
 
 This guide was created through contributions from the following community members:  [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)
