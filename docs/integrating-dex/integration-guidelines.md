@@ -6,10 +6,6 @@ sidebar_position: 1
 
 ## Overview
 
-:::info 
-Jupiter is undergoing a few major upgrades at the moment, for example with Solana's transaction v2 and a new routing engine. Please have patience!
-:::
-
 Jupiter is one of the most widely integrated protocols, so a lot of work is involved in minimizing issues on new integrations and making each integration valuable to our users and partners. 
 
 Our top priority is securing best prices, best token selection for our users, so we will focus on DEXes that will bring the most benefits to our users. 
