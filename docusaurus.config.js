@@ -118,6 +118,10 @@ const config = {
           content:
             'Jupiter Hub is the central hub for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with jupiter and read our latest blog posts.',
         },
+        {
+          property: 'og:image',
+          content: 'https://hub.jup.ag/img/twitter-card.png',
+        },
       ],
       colorMode: {
         defaultMode: 'light',
