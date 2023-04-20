@@ -151,12 +151,16 @@ const config = {
             label: 'User Guide',
             position: 'right',
           },
-          { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+          { 
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'right' 
           },
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       // footer: {

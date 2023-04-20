@@ -23,9 +23,17 @@ Because of Solana's transaction size limits, sometimes we need to break up the t
 
 We expect this problem to be resolved with the upcoming transaction size increase in the next Solana upgrade. In the meantime, we have a new feature that allows users to trade directly in wSOL. 
 
+![wSOL](wsol.png)
+
+> 1. The Wrap and unwrap tool bar 
+2. The swap setting to turn on/off of using wSOL
+3. Once wSOL is toggled on, user will see wSOL as the default for SOL in the token selector
+
 ### Enabling Jupiter wSOL Feature
 
 - To enable this feature, go to "Swap Settings" and turn on "Use wSOL".
+
+![wSOL2](wsol3.png)
 
 - Once enabled, "wSOL" will show up on your Jupiter swap where you can turn on or turn off for your swaps.
 
@@ -49,6 +57,8 @@ The wSOL mode is for advanced users who are familiar dealing with the wSOL token
 Jupiter’s Smart Routing which involves Multi-hop Routes and Trade Splitting connects all DEX markets and AMM pools together no matter the provider, and will find all direct and 2-hop routes between any two tokens on Solana. This will sometimes trigger multiple transactions just for a single swap. Using the wSOL setting saves/reduces the number of transactions involved (Wrapping and unwrapping SOL), which will increase the success rate of the swap significantly.
 
 *To read more about multiple transactions, please click [here](../Integrating-jupiter/additional-guides/jupiter-legacy-transaction#multiple-transactions).*
+
+![wSOL2](wsol2.png)
 
 ## Wrap SOL - wSOL feature
 
