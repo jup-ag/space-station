@@ -9,7 +9,7 @@ The main goal of Jupiter is to connect on the one hand users, dApp and program a
 
 Whatever you go through the website, the API or by calling directly the Jupiter on-chain program: you have access directly to all the AMM/DEX that we integrate. We can think of Jupiter as a public good for liquidity on Solana.
 
-![Multi-hop Routes](../static/img/layer-diagram.webp)
+![Multi-hop Routes](../static/img/single-liquidity-endpoint.png)
 
 There are many ecosystem partners that are using Jupiter as their swap. For example:
 
