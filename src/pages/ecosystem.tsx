@@ -1,5 +1,4 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import wallet from '/static/img/wallet.png';
@@ -80,6 +79,13 @@ const sections = [
   {
     id: 1,
     logo: wallet,
+    title: 'Wallets',
+    header: (
+      <div className='relative mb-4'>
+        <img src={wallet} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>Wallets</h2>
+      </div>
+    ),
     description: `DeFi wallets are a crucial tool for interacting with DeFi protocols in the Web3 ecosystem. They store and manage cryptocurrency assets and allow access to decentralized exchanges, lending platforms, and liquidity pools. Wallet partners have an in-wallet swap feature, like Jupiter, available on iOS, Android, and Web Widget platforms. This allow users to easily exchange cryptocurrencies within their wallet for the optimum price with seamless experience.`,
     cards: [
       {
@@ -153,6 +159,12 @@ const sections = [
   {
     id: 2,
     logo: defi,
+    header: (
+      <div className='relative mb-4'>
+        <img src={defi} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>DeFi</h2>
+      </div>
+    ),
     description: `DeFi, or Decentralized Finance, is a financial system built on blockchain technology that uses cryptocurrencies and smart contracts for activities like lending, borrowing, and trading in a transparent and secure way. DeFi aims to provide more financial inclusion, transparency, and accessibility while reducing costs and eliminating central points of failure. It's an ever-changing space with new developments and applications being created constantly.`,
     cards: [
       {
@@ -214,6 +226,12 @@ const sections = [
   {
     id: 3,
     logo: dex_amm,
+    header: (
+      <div className='relative mb-4'>
+        <img src={dex_amm} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>DEXes</h2>
+      </div>
+    ),
     description: `A decentralized exchange (DEX) is a cryptocurrency exchange where users trade directly with each other using smart contracts and blockchain technology, without intermediaries. DEXs provide users with greater control over their funds.
     Automated market makers (AMMs) are decentralized exchanges (DEXs) that use mathematical algorithms to automatically set prices and execute trades. Unlike traditional order-book exchanges, which rely on central limit order matching, AMMs use liquidity pools where users can deposit funds to facilitate trades. The algorithm automatically adjusts the price based on the supply and demand of assets in the pool.DEXs & AMMs description`,
     cards: [
@@ -348,6 +366,12 @@ const sections = [
   {
     id: 4,
     logo: bridge,
+    header: (
+      <div className='relative mb-4'>
+        <img src={bridge} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>Bridges</h2>
+      </div>
+    ),
     description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
       {
@@ -385,6 +409,12 @@ const sections = [
   {
     id: 5,
     logo: game,
+    header: (
+      <div className='relative mb-4'>
+        <img src={game} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>Games</h2>
+      </div>
+    ),
     description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
       {
@@ -416,6 +446,12 @@ const sections = [
   {
     id: 6,
     logo: payment,
+    header: (
+      <div className='relative mb-4'>
+        <img src={payment} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>Payment</h2>
+      </div>
+    ),
     description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
     cards: [
       {
@@ -440,6 +476,12 @@ const sections = [
   {
     id: 7,
     logo: nft,
+    header: (
+      <div className='relative mb-4'>
+        <img src={nft} height={37}/>
+        <h2 className='absolute top-[4px] left-[40px]'>NFTs</h2>
+      </div>
+    ),
     description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
       {
@@ -488,8 +530,8 @@ export default function Home(): JSX.Element {
             key={section.id}
             className="rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-9"
           >
-            <img src={section.logo} width={140} />
-            <p className="mt-4">{section.description}</p>
+            {section.header}
+            {/* <p className="mt-4">{section.description}</p> */}
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {section.cards.map((card) => (
                 <a
