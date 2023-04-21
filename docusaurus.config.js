@@ -80,16 +80,6 @@ const config = {
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: 'ecosystem',
-        path: 'ecosystem',
-        routeBasePath: 'ecosystem',
-        sidebarPath: require.resolve('./sidebarsEcosystem.js'),
-      }),
-    ],
-    [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
         id: 'user-guide',
         path: 'user-guide',
         routeBasePath: 'user-guide',
@@ -121,46 +111,55 @@ const config = {
       ],
       colorMode: {
         defaultMode: 'light',
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Jupiter Hub',
+        title: 'Jupiter | Hub',
         logo: {
           alt: 'Jup Logo',
           src: 'img/jupiter-logo.svg',
+          width: 33,
+          height: 33,
         },
         items: [
           {
             to: '/stats',
             label: 'Stats',
-            position: 'right',
+            position: 'left',
           },
           {
             to: '/ecosystem',
             label: 'Ecosystem',
-            position: 'right',
+            position: 'left',
           },
           {
             type: 'doc',
             docId: 'overview',
-            position: 'right',
+            position: 'left',
             label: 'Docs',
           },
           {
-            to: '/user-guide',
-            label: 'User Guide',
-            position: 'right',
-          },
-          { 
-            to: '/blog', 
-            label: 'Blog', 
-            position: 'right' 
+            to: '/blog',
+            label: 'Blog',
+            position: 'left',
           },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
           //   position: 'right',
           // },
+          {
+            type: 'html',
+            position: 'right',
+            value: `
+            <a href="https://jup.ag/" target="_blank" class="launch-app">
+              <span>
+                Launch App
+              </span>
+            </a>
+            `,
+          },
         ],
       },
       // footer: {
