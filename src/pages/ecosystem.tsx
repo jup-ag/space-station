@@ -94,54 +94,54 @@ const sections = [
         logo: phantom,
         link: 'https://phantom.app',
       },
-      {
-        id: 2,
-        title: 'Solflare',
-        logo: solflare,
-        link: 'https://solflare.com/',
-      },
-      {
-        id: 3,
-        title: 'Glow Wallet',
-        logo: glow,
-        link: 'https://glow.app/',
-      },
-      {
-        id: 4,
-        title: 'Coinbase Wallet',
-        logo: coinbase,
-        link: 'https://www.coinbase.com/wallet',
-      },
-      {
-        id: 5,
-        title: 'Brave Wallet',
-        logo: brave,
-        link: 'https://brave.com/wallet/',
-      },
+      // {
+      //   id: 2,
+      //   title: 'Solflare',
+      //   logo: solflare,
+      //   link: 'https://solflare.com/',
+      // },
+      // {
+      //   id: 3,
+      //   title: 'Glow Wallet',
+      //   logo: glow,
+      //   link: 'https://glow.app/',
+      // },
+      // {
+      //   id: 4,
+      //   title: 'Coinbase Wallet',
+      //   logo: coinbase,
+      //   link: 'https://www.coinbase.com/wallet',
+      // },
+      // {
+      //   id: 5,
+      //   title: 'Brave Wallet',
+      //   logo: brave,
+      //   link: 'https://brave.com/wallet/',
+      // },
       {
         id: 6,
         title: 'Hey Wallet',
         logo: heywallet,
         link: 'https://heywallet.com/',
       },
-      {
-        id: 7,
-        title: 'Backpack',
-        logo: backpack,
-        link: 'https://www.backpack.app/',
-      },
-      {
-        id: 8,
-        title: 'Frontier Wallet',
-        logo: frontier,
-        link: 'https://www.frontier.xyz/',
-      },
-      {
-        id: 9,
-        title: 'Nightly',
-        logo: nightly,
-        link: 'https://wallet.nightly.app/',
-      },
+      // {
+      //   id: 7,
+      //   title: 'Backpack',
+      //   logo: backpack,
+      //   link: 'https://www.backpack.app/',
+      // },
+      // {
+      //   id: 8,
+      //   title: 'Frontier Wallet',
+      //   logo: frontier,
+      //   link: 'https://www.frontier.xyz/',
+      // },
+      // {
+      //   id: 9,
+      //   title: 'Nightly',
+      //   logo: nightly,
+      //   link: 'https://wallet.nightly.app/',
+      // },
       {
         id: 10,
         title: 'Ultimate Wallet',
@@ -179,12 +179,12 @@ const sections = [
         logo: sonar,
         link: 'https://sonar.watch/',
       },
-      {
-        id: 3,
-        title: 'Port Finance',
-        logo: portfinance,
-        link: 'https://www.port.finance/',
-      },
+      // {
+      //   id: 3,
+      //   title: 'Port Finance',
+      //   logo: portfinance,
+      //   link: 'https://www.port.finance/',
+      // },
       {
         id: 4,
         title: 'Francium',
@@ -197,18 +197,18 @@ const sections = [
         logo: birdeye,
         link: 'https://birdeye.so/',
       },
-      {
-        id: 6,
-        title: 'HelloMoon',
-        logo: hellomoon,
-        link: 'https://www.hellomoon.io/',
-      },
-      {
-        id: 7,
-        title: 'Mean Finance',
-        logo: meandao,
-        link: 'https://meanfi.com/',
-      },
+      // {
+      //   id: 6,
+      //   title: 'HelloMoon',
+      //   logo: hellomoon,
+      //   link: 'https://www.hellomoon.io/',
+      // },
+      // {
+      //   id: 7,
+      //   title: 'Mean Finance',
+      //   logo: meandao,
+      //   link: 'https://meanfi.com/',
+      // },
       {
         id: 10,
         title: 'Bonfida',
@@ -271,18 +271,18 @@ const sections = [
         logo: meteora,
         link: 'https://meteora.ag/',
       },
-      {
-        id: 7,
-        title: 'Crema',
-        logo: crema,
-        link: 'https://www.crema.finance/',
-      },
-      {
-        id: 8,
-        title: 'Marinade',
-        logo: marinade,
-        link: 'https://marinade.finance/',
-      },
+      // {
+      //   id: 7,
+      //   title: 'Crema',
+      //   logo: crema,
+      //   link: 'https://www.crema.finance/',
+      // },
+      // {
+      //   id: 8,
+      //   title: 'Marinade',
+      //   logo: marinade,
+      //   link: 'https://marinade.finance/',
+      // },
       {
         id: 9,
         title: 'Saber',
@@ -319,18 +319,18 @@ const sections = [
         logo: saros,
         link: 'https://saros.finance/',
       },
-      {
-        id: 15,
-        title: 'Sentre - Balansol',
-        logo: balansol,
-        link: 'https://sentre.io/',
-      },
-      {
-        id: 16,
-        title: 'Invariant',
-        logo: invariant,
-        link: 'https://invariant.app/',
-      },
+      // {
+      //   id: 15,
+      //   title: 'Sentre - Balansol',
+      //   logo: balansol,
+      //   link: 'https://sentre.io/',
+      // },
+      // {
+      //   id: 16,
+      //   title: 'Invariant',
+      //   logo: invariant,
+      //   link: 'https://invariant.app/',
+      // },
       {
         id: 17,
         title: 'Penguin Finance',
@@ -355,12 +355,12 @@ const sections = [
         logo: stepn,
         link: 'https://stepn.com/',
       },
-      {
-        id: 21,
-        title: 'Phoenix by Ellipsis',
-        logo: ellipsis,
-        link: 'https://ellipsislabs.xyz/',
-      },
+      // {
+      //   id: 21,
+      //   title: 'Phoenix by Ellipsis',
+      //   logo: ellipsis,
+      //   link: 'https://ellipsislabs.xyz/',
+      // },
     ],
   },
   {
@@ -374,36 +374,36 @@ const sections = [
     ),
     description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
-      {
-        id: 1,
-        title: 'Wormhole',
-        logo: wormhole,
-        link: 'https://wormhole.com/',
-      },
-      {
-        id: 2,
-        title: 'Allbridge',
-        logo: allbridge,
-        link: 'https://allbridge.io/',
-      },
-      {
-        id: 3,
-        title: 'AtlasDEX',
-        logo: atlasdex,
-        link: 'https://atlasdex.finance/',
-      },
+      // {
+      //   id: 1,
+      //   title: 'Wormhole',
+      //   logo: wormhole,
+      //   link: 'https://wormhole.com/',
+      // },
+      // {
+      //   id: 2,
+      //   title: 'Allbridge',
+      //   logo: allbridge,
+      //   link: 'https://allbridge.io/',
+      // },
+      // {
+      //   id: 3,
+      //   title: 'AtlasDEX',
+      //   logo: atlasdex,
+      //   link: 'https://atlasdex.finance/',
+      // },
       {
         id: 4,
         title: 'Rango Exchange',
         logo: rango,
         link: 'https://rango.exchange/',
       },
-      {
-        id: 5,
-        title: 'Mayan Finance',
-        logo: mayan,
-        link: 'https://mayan.finance/',
-      },
+      // {
+      //   id: 5,
+      //   title: 'Mayan Finance',
+      //   logo: mayan,
+      //   link: 'https://mayan.finance/',
+      // },
     ],
   },
   {
@@ -417,24 +417,24 @@ const sections = [
     ),
     description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
-      {
-        id: 1,
-        title: 'Star Atlas',
-        logo: staratlas,
-        link: 'https://staratlas.com/',
-      },
+      // {
+      //   id: 1,
+      //   title: 'Star Atlas',
+      //   logo: staratlas,
+      //   link: 'https://staratlas.com/',
+      // },
       {
         id: 2,
         title: 'Genopets',
         logo: genopets,
         link: 'https://www.genopets.me/',
       },
-      {
-        id: 3,
-        title: 'Aurory',
-        logo: aurory,
-        link: 'https://aurory.io/',
-      },
+      // {
+      //   id: 3,
+      //   title: 'Aurory',
+      //   logo: aurory,
+      //   link: 'https://aurory.io/',
+      // },
       {
         id: 4,
         title: 'Defi Land',
@@ -443,36 +443,36 @@ const sections = [
       },
     ],
   },
-  {
-    id: 6,
-    logo: payment,
-    header: (
-      <div className='relative mb-4'>
-        <img src={payment} height={37} />
-        <h2 className='absolute top-[4px] left-[40px]'>Payment</h2>
-      </div>
-    ),
-    description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
-    cards: [
-      {
-        id: 1,
-        title: 'Helio',
-        logo: helio,
-        link: 'https://helio.co/',
-      },
-      {
-        id: 2,
-        title: 'CandyPay',
-        logo: candypay,
-        link: 'https://candypay.fun/',
-      },
-      // {
-      //   id: 3,
-      //   title: 'Sphere?',
-      //   logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
-      // },
-    ],
-  },
+  // {
+  //   id: 6,
+  //   logo: payment,
+  //   header: (
+  //     <div className='relative mb-4'>
+  //       <img src={payment} height={37} />
+  //       <h2 className='absolute top-[4px] left-[40px]'>Payment</h2>
+  //     </div>
+  //   ),
+  //   description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
+  //   cards: [
+  //     {
+  //       id: 1,
+  //       title: 'Helio',
+  //       logo: helio,
+  //       link: 'https://helio.co/',
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'CandyPay',
+  //       logo: candypay,
+  //       link: 'https://candypay.fun/',
+  //     },
+  //     {
+  //       id: 3,
+  //       title: 'Sphere?',
+  //       logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
+  //     },
+  //   ],
+  // },
   {
     id: 7,
     logo: nft,
@@ -484,30 +484,30 @@ const sections = [
     ),
     description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
-      {
-        id: 1,
-        title: 'Hyperspace',
-        logo: hyperspace,
-        link: 'https://hyperspace.xyz/',
-      },
+      // {
+      //   id: 1,
+      //   title: 'Hyperspace',
+      //   logo: hyperspace,
+      //   link: 'https://hyperspace.xyz/',
+      // },
       {
         id: 2,
         title: 'Hadeswap',
         logo: hadeswap,
         link: 'https://www.hadeswap.com/',
       },
-      {
-        id: 3,
-        title: 'Solsea',
-        logo: solsea,
-        link: 'https://solsea.io/',
-      },
-      {
-        id: 4,
-        title: 'LiquifyNFT',
-        logo: liquifynft,
-        link: 'https://liquifynft.com/',
-      },
+      // {
+      //   id: 3,
+      //   title: 'Solsea',
+      //   logo: solsea,
+      //   link: 'https://solsea.io/',
+      // },
+      // {
+      //   id: 4,
+      //   title: 'LiquifyNFT',
+      //   logo: liquifynft,
+      //   link: 'https://liquifynft.com/',
+      // },
       {
         id: 5,
         title: 'Famous Fox Federation',
