@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 
 import wallet from '/static/img/wallet.png';
@@ -159,6 +159,7 @@ const sections = [
   {
     id: 2,
     logo: defi,
+    title: 'DeFi',
     header: (
       <div className='relative mb-4'>
         <img src={defi} height={37} />
@@ -226,6 +227,7 @@ const sections = [
   {
     id: 3,
     logo: dex_amm,
+    title: 'DEXes',
     header: (
       <div className='relative mb-4'>
         <img src={dex_amm} height={37} />
@@ -366,6 +368,7 @@ const sections = [
   {
     id: 4,
     logo: bridge,
+    title: 'Bridges',
     header: (
       <div className='relative mb-4'>
         <img src={bridge} height={37} />
@@ -409,6 +412,7 @@ const sections = [
   {
     id: 5,
     logo: game,
+    title: 'Games',
     header: (
       <div className='relative mb-4'>
         <img src={game} height={37} />
@@ -443,42 +447,44 @@ const sections = [
       },
     ],
   },
-  // {
-  //   id: 6,
-  //   logo: payment,
-  //   header: (
-  //     <div className='relative mb-4'>
-  //       <img src={payment} height={37} />
-  //       <h2 className='absolute top-[4px] left-[40px]'>Payment</h2>
-  //     </div>
-  //   ),
-  //   description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
-  //   cards: [
-  //     {
-  //       id: 1,
-  //       title: 'Helio',
-  //       logo: helio,
-  //       link: 'https://helio.co/',
-  //     },
-  //     {
-  //       id: 2,
-  //       title: 'CandyPay',
-  //       logo: candypay,
-  //       link: 'https://candypay.fun/',
-  //     },
-  //     {
-  //       id: 3,
-  //       title: 'Sphere?',
-  //       logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
-  //     },
-  //   ],
-  // },
+  {
+    id: 6,
+    logo: payment,
+    title: 'Payment',
+    header: (
+      <div className='relative mb-4'>
+        <img src={payment} height={37} />
+        <h2 className='absolute top-[4px] left-[40px]'>Payment</h2>
+      </div>
+    ),
+    description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
+    cards: [
+      {
+        id: 1,
+        title: 'Helio',
+        logo: helio,
+        link: 'https://helio.co/',
+      },
+      {
+        id: 2,
+        title: 'CandyPay',
+        logo: candypay,
+        link: 'https://candypay.fun/',
+      },
+      {
+        id: 3,
+        title: 'Sphere?',
+        logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
+      },
+    ],
+  },
   {
     id: 7,
     logo: nft,
+    title: 'NFTs',
     header: (
       <div className='relative mb-4'>
-        <img src={nft} height={37}/>
+        <img src={nft} height={37} />
         <h2 className='absolute top-[4px] left-[40px]'>NFTs</h2>
       </div>
     ),
@@ -518,53 +524,101 @@ const sections = [
   },
 ];
 
+const ButtonFilter = ({ children, active }) => (
+  <button className={`
+  flex
+  cursor-pointer
+  rounded-[30px]
+  text-black/50
+  font-light
+  text-sm text-black px-4 py-2 border-solid
+  border-gray-200 ml-2 ${active ? 'bg-black/5!' : 'bg-transparent'}`}>
+    {children}
+  </button>
+);
+
 export default function Home(): JSX.Element {
+  const [selectedCat, setSelectedCat] = useState('all');
+  const onSelectCat = (id: string) => {
+    setSelectedCat(id);
+  }
+
   return (
     <Layout
       title={`Show case`}
       description="Description will go into a meta tag in <head />"
     >
-      <div className="my-10 container space-y-10">
-        {sections.map((section) => (
+      <div className="my-10 container mt-32 mb-28">
+        <div className="mb-24"><div><h1 className='font-extrabold text-6xl text-center' >Jupiter Ecosystem</h1></div>
+          <div className="font-light text-base max-w-[570px] m-auto">
+            <div className='text-center'>Browse and search projects built on the Jupiter protocol. Are you building something cool? <a href="https://grants.osmosis.zone/" target="_blank" className="underline text-black font-bold">Getting Started</a></div>
+          </div>
+        </div>
+        <div className="container pl-0 mb-14">
+          <h2 className='text-2xl font-bold text-black'>Explore projects</h2>
+          <div>
+            <div role="list" className="powered-categoryes-wrap w-dyn-items">
+              <div role="listitem" className="inline-block" onClick={() => onSelectCat('all')}>
+              <ButtonFilter active={selectedCat === 'all'}>All
+              </ButtonFilter>
+              </div>
+              {sections.map((section) => (
+                <div role="listitem" className="inline-block" onClick={() => onSelectCat(section.title)}>
+                  <ButtonFilter active={selectedCat === section.title}>{section.title}
+                  </ButtonFilter>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </div>
+        <div className='space-y-6'>
           <div
-            key={section.id}
-            className="rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-9"
+            className="rounded-lg border min-h-[400px]"
           >
-            {section.header}
-            {/* <p className="mt-4">{section.description}</p> */}
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {section.cards.map((card) => (
-                <a
-                  target="_blank"
-                  href={card.link}
-                  key={card.id}
-                  className="!no-underline rounded-lg border border-solid border-gray-200 dark:border-gray-700 p-6 flex items-center flex-col"
-                  rel="noreferrer"
-                >
-                  <div className="flex rounded-lg overflow-hidden shadow-lg  hover:scale-105 transition duration-300">
-                    <img
-                      src={card.logo}
-                      width={80}
-                      height={80}
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center mt-4 mb-0 text-lg opacity-80">
-                    {card.title}
-                  </h3>
-                  {/* <div className="mt-4 space-x-2 flex items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" >
+              {sections.filter(f => selectedCat == 'all' || f.title === selectedCat).map((section) => (
+                section.cards.flatMap((card) => (
+                  <a
+                    target="_blank"
+                    id={`${card.id}`}
+                    href={card.link}
+                    key={card.id}
+                    className="relative !no-underline rounded-lg border border-solid border-gray-200 dark:border-gray-700 flex items-center flex-col text-black"
+                    rel="noreferrer"
+                  >
+                    <div style={{ background: 'linear-gradient(rgba(0,0,0,.015),transparent)', width: '100%', padding: '20px 20px 8px' }} className="flex justify-center rounded-lg overflow-hidden transition duration-300">
+                      <img
+                        src={card.logo}
+                        className="absolute scale-[1.38] opacity-[0.16] blur-[28px] rounded-[20px] h-[80px]"
+                      />
+                      <img
+                        src={card.logo}
+                        style={{
+                          // boxShadow: '0 8px 16px hsla(0,0%,8%,.07)',
+                          transition: 'transform .2s ease-in-out',
+                          zIndex: 1
+                        }}
+                        className="relative h-[80px] rounded-[20px] img-scale"
+                      />
+                    </div>
+                    <h3 className="text-center mt-2 mb-4 text-lg font-bold opacity-80">
+                      {card.title}
+                    </h3>
+                    {/* <div className="mt-4 space-x-2 flex items-center">
                     {card.links.map((link) => (
                       <a className="underline" href={link.url}>
                         {link.label}
                       </a>
                     ))}
                   </div> */}
-                </a>
+                  </a>
+                ))
               ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    </Layout>
+    </Layout >
   );
 }
