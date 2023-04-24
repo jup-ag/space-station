@@ -122,3 +122,8 @@
 .navbar-sidebar .launch-app {
   display: none;
 }
+
+
+.img-scale:hover {
+  transform: scale3d(1.03,1.03,1);
+}
