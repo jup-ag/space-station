@@ -551,7 +551,7 @@ export default function Home(): JSX.Element {
       <div className="my-10 container mt-32 mb-28">
         <div className="mb-24"><div><h1 className='font-extrabold text-6xl text-center' >Jupiter Ecosystem</h1></div>
           <div className="font-light text-base max-w-[570px] m-auto">
-            <div className='text-center'>Browse and search projects built on the Jupiter protocol. Are you building something cool? <a href="/docs" className="underline text-black font-bold">Getting Started</a></div>
+            <div className='text-center'>Browse and search projects built on the Jupiter protocol. Are you building something cool? <a href="/docs/overview" className="underline text-black font-bold">Getting Started</a></div>
           </div>
         </div>
         <div className="container pl-0 mb-14">

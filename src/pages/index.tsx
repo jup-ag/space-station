@@ -29,7 +29,7 @@ const navLinks = [
 const linkSections = [
   {
     label: 'Statistic',
-    url: 'https://jup.ag/stats',
+    url: '/stats',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
