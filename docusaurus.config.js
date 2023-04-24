@@ -134,6 +134,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/user-guide',
+            label: 'User Guide',
+            position: 'left',
+          },
+          {
             type: 'doc',
             docId: 'overview',
             position: 'left',
