@@ -31,6 +31,7 @@ const kamino = '/img/defi/kamino.png';
 const mean = '/img/defi/mean.svg';
 const portfinance = '/img/defi/portfinance.svg';
 const tulip = '/img/defi/tulip.png';
+const marginfi = '/img/defi/marginfi.svg'
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -46,7 +47,7 @@ const invariant = '/img/dex_amm/invariant.svg';
 const lifinity = '/img/dex_amm/lifinity.png';
 const mango = '/img/dex_amm/mango.png';
 const oasis = '/img/dex_amm/oasis.svg';
-const marinade = '/img/dex_amm/marinade.svg';
+const marinade = '/img/dex_amm/marinade.png';
 const meteora = '/img/dex_amm/meteora.png';
 const openbook = '/img/dex_amm/openbook.png';
 const orca = '/img/dex_amm/orca.png';
@@ -59,7 +60,7 @@ const bonkswap = '/img/dex_amm/bonkswap.png';
 const symmetry = '/img/dex_amm/symmetry.svg';
 
 const rango = '/img/bridge/rango.png';
-const allbridge = '/img/bridge/allbridge.svg';
+const allbridge = '/img/bridge/allbridge.png';
 const atlasdex = '/img/bridge/atlasdex.svg';
 const wormhole = '/img/bridge/wormhole.svg';
 const mayan = '/img/bridge/mayan.svg';
@@ -67,7 +68,7 @@ const mayan = '/img/bridge/mayan.svg';
 const aurory = '/img/game/aurory.jpg';
 const defiland = '/img/game/defiland.png';
 const genopets = '/img/game/genopets.png';
-const staratlas = '/img/game/staratlas.svg';
+const staratlas = '/img/game/staratlas.png';
 
 const candypay = '/img/payment/candypay.svg';
 const helio = '/img/payment/helio.svg';
@@ -240,7 +241,7 @@ const sections = [
       {
         id: 13,
         title: 'Margin Fi',
-        logo: kamino,
+        logo: marginfi,
         link: 'https://www.marginfi.com/',
       },
       {
@@ -599,13 +600,14 @@ export default function Home(): JSX.Element {
         <div className="mb-24">
           <div>
             <h1 className="font-extrabold text-6xl text-center">
-              Jupiter Ecosystem
+              Jupiter Partner Ecosystem
             </h1>
           </div>
           <div className="font-light text-base max-w-[570px] m-auto">
             <div className="text-center">
-              Browse and search projects built on the Jupiter protocol. Are you
-              building something cool?{' '}
+              Browse and search projects/ protocols that are working with Jupiter. 
+              <br></br>
+              Are you building something cool? Let us know or checkout our docs on how to get started.{' '}
               <a
                 href="/docs/overview"
                 className="underline text-black font-bold"
