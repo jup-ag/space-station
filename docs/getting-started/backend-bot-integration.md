@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Backend/Bot Integration
 
 Integrate Jupiter on your backend or build your arbitrage bot.

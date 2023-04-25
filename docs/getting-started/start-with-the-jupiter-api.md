@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Start with Jupiter API
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits: 

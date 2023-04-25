@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Payments Integration
 
 Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. The main feature is being able to specify an exact output token amount.
