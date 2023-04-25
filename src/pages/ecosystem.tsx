@@ -10,41 +10,42 @@ import nft from '/static/img/nft.png';
 import game from '/static/img/game.png';
 
 import phantom from '/static/img/wallet/phantom.png';
-import solflare from '/static/img/wallet/solflare.png';
+import solflare from '/static/img/wallet/solflare.svg';
 import ultimate from '/static/img/wallet/ultimate.png';
 import brave from '/static/img/wallet/brave.png';
 import coinbase from '/static/img/wallet/coinbase.png';
 import glow from '/static/img/wallet/glow.png';
 import heywallet from '/static/img/wallet/heywallet.png';
-import backpack from '/static/img/wallet/backpack.png';
-import frontier from '/static/img/wallet/frontier.png';
+import backpack from '/static/img/wallet/backpack.svg';
+import frontier from '/static/img/wallet/frontier.svg';
 import ottr from '/static/img/wallet/ottr.png';
-import nightly from '/static/img/wallet/nightly.png';
+import nightly from '/static/img/wallet/nightly.svg';
+import keyapp from '/static/img/wallet/key.svg';
 
 import birdeye from '/static/img/defi/birdeye.png';
 import bonfida from '/static/img/defi/bonfida.png';
 import francium from '/static/img/defi/francium.png';
 import sonar from '/static/img/defi/sonar.png';
-import hellomoon from '/static/img/defi/hellomoon.png';
+import hellomoon from '/static/img/defi/hellomoon.svg';
 import kamino from '/static/img/defi/kamino.png';
-import meandao from '/static/img/defi/meandao.png';
-import portfinance from '/static/img/defi/portfinance.png';
+import mean from '/static/img/defi/mean.svg';
+import portfinance from '/static/img/defi/portfinance.svg';
 import tulip from '/static/img/defi/tulip.png';
 
 import aldrin from '/static/img/dex_amm/aldrin.png';
-import balansol from '/static/img/dex_amm/balansol.png';
+import balansol from '/static/img/dex_amm/balansol.svg';
 import crema from '/static/img/dex_amm/crema.png';
 import raydium from '/static/img/dex_amm/raydium.png';
 import cropper from '/static/img/dex_amm/cropper.png';
 import cykura from '/static/img/dex_amm/cykura.png';
 import dradex from '/static/img/dex_amm/dradex.png';
-import goosefx from '/static/img/dex_amm/goosefx.png';
+import goosefx from '/static/img/dex_amm/goosefx.svg';
 import dexlab from '/static/img/dex_amm/dexlab.png';
-import ellipsis from '/static/img/dex_amm/ellipsis.png';
-import invariant from '/static/img/dex_amm/invariant.png';
+import ellipsis from '/static/img/dex_amm/ellipsislab.svg';
+import invariant from '/static/img/dex_amm/invariant.svg';
 import lifinity from '/static/img/dex_amm/lifinity.png';
 import mango from '/static/img/dex_amm/mango.png';
-import marcopolo from '/static/img/dex_amm/marcopolo.png';
+import oasis from '/static/img/dex_amm/oasis.svg';
 import marinade from '/static/img/dex_amm/marinade.png';
 import meteora from '/static/img/dex_amm/meteora.png';
 import openbook from '/static/img/dex_amm/openbook.png';
@@ -53,27 +54,29 @@ import penguin from '/static/img/dex_amm/penguin.png';
 import saber from '/static/img/dex_amm/saber.png';
 import saros from '/static/img/dex_amm/saros.png';
 import stepfinance from '/static/img/dex_amm/stepfinance.png';
-import stepn from '/static/img/dex_amm/stepn.png';
+import stepn from '/static/img/dex_amm/stepn.svg';
+import bonkswap from '/static/img/dex_amm/bonkswap.png';
+import symmetry from '/static/img/dex_amm/symmetry.svg';
 
 import rango from '/static/img/bridge/rango.png';
-import allbridge from '/static/img/bridge/allbridge.png';
-import atlasdex from '/static/img/bridge/atlasdex.png';
-import wormhole from '/static/img/bridge/wormhole.png';
-import mayan from '/static/img/bridge/mayan.png';
+import allbridge from '/static/img/bridge/allbridge.svg';
+import atlasdex from '/static/img/bridge/atlasdex.svg';
+import wormhole from '/static/img/bridge/wormhole.svg';
+import mayan from '/static/img/bridge/mayan.svg';
 
-import aurory from '/static/img/game/aurory.png';
+import aurory from '/static/img/game/aurory.jpg';
 import defiland from '/static/img/game/defiland.png';
 import genopets from '/static/img/game/genopets.png';
-import staratlas from '/static/img/game/staratlas.png';
+import staratlas from '/static/img/game/staratlas.svg';
 
-import candypay from '/static/img/payment/candypay.png';
-import helio from '/static/img/payment/helio.png';
+import candypay from '/static/img/payment/candypay.svg';
+import helio from '/static/img/payment/helio.svg';
 
 import famousfoxfederation from '/static/img/nft/fff.png';
 import hadeswap from '/static/img/nft/hadeswap.png';
-import hyperspace from '/static/img/nft/hyperspace.png';
-import liquifynft from '/static/img/nft/liquifynft.png';
-import solsea from '/static/img/nft/solsea.png';
+import hyperspace from '/static/img/nft/hyperspace.svg';
+import liquifynft from '/static/img/nft/liquifynft.svg';
+import solsea from '/static/img/nft/solsea.svg';
 
 const sections = [
   {
@@ -94,54 +97,54 @@ const sections = [
         logo: phantom,
         link: 'https://phantom.app',
       },
-      // {
-      //   id: 2,
-      //   title: 'Solflare',
-      //   logo: solflare,
-      //   link: 'https://solflare.com/',
-      // },
-      // {
-      //   id: 3,
-      //   title: 'Glow Wallet',
-      //   logo: glow,
-      //   link: 'https://glow.app/',
-      // },
-      // {
-      //   id: 4,
-      //   title: 'Coinbase Wallet',
-      //   logo: coinbase,
-      //   link: 'https://www.coinbase.com/wallet',
-      // },
-      // {
-      //   id: 5,
-      //   title: 'Brave Wallet',
-      //   logo: brave,
-      //   link: 'https://brave.com/wallet/',
-      // },
+      {
+        id: 2,
+        title: 'Solflare',
+        logo: solflare,
+        link: 'https://solflare.com/',
+      },
+      {
+        id: 3,
+        title: 'Glow Wallet',
+        logo: glow,
+        link: 'https://glow.app/',
+      },
+      {
+        id: 4,
+        title: 'Coinbase Wallet',
+        logo: coinbase,
+        link: 'https://www.coinbase.com/wallet',
+      },
+      {
+        id: 5,
+        title: 'Brave Wallet',
+        logo: brave,
+        link: 'https://brave.com/wallet/',
+      },
       {
         id: 6,
         title: 'Hey Wallet',
         logo: heywallet,
         link: 'https://heywallet.com/',
       },
-      // {
-      //   id: 7,
-      //   title: 'Backpack',
-      //   logo: backpack,
-      //   link: 'https://www.backpack.app/',
-      // },
-      // {
-      //   id: 8,
-      //   title: 'Frontier Wallet',
-      //   logo: frontier,
-      //   link: 'https://www.frontier.xyz/',
-      // },
-      // {
-      //   id: 9,
-      //   title: 'Nightly',
-      //   logo: nightly,
-      //   link: 'https://wallet.nightly.app/',
-      // },
+      {
+        id: 7,
+        title: 'Backpack',
+        logo: backpack,
+        link: 'https://www.backpack.app/',
+      },
+      {
+        id: 8,
+        title: 'Frontier Wallet',
+        logo: frontier,
+        link: 'https://www.frontier.xyz/',
+      },
+      {
+        id: 9,
+        title: 'Nightly',
+        logo: nightly,
+        link: 'https://wallet.nightly.app/',
+      },
       {
         id: 10,
         title: 'Ultimate Wallet',
@@ -153,6 +156,12 @@ const sections = [
         title: 'Ottr Finance',
         logo: ottr,
         link: 'https://ottr.finance/',
+      },
+      {
+        id: 12,
+        title: 'Key App',
+        logo: keyapp,
+        link: 'https://key.app/',
       },
     ],
   },
@@ -180,12 +189,12 @@ const sections = [
         logo: sonar,
         link: 'https://sonar.watch/',
       },
-      // {
-      //   id: 3,
-      //   title: 'Port Finance',
-      //   logo: portfinance,
-      //   link: 'https://www.port.finance/',
-      // },
+      {
+        id: 3,
+        title: 'Port Finance',
+        logo: portfinance,
+        link: 'https://www.port.finance/',
+      },
       {
         id: 4,
         title: 'Francium',
@@ -198,18 +207,18 @@ const sections = [
         logo: birdeye,
         link: 'https://birdeye.so/',
       },
-      // {
-      //   id: 6,
-      //   title: 'HelloMoon',
-      //   logo: hellomoon,
-      //   link: 'https://www.hellomoon.io/',
-      // },
-      // {
-      //   id: 7,
-      //   title: 'Mean Finance',
-      //   logo: meandao,
-      //   link: 'https://meanfi.com/',
-      // },
+      {
+        id: 6,
+        title: 'HelloMoon',
+        logo: hellomoon,
+        link: 'https://www.hellomoon.io/',
+      },
+      {
+        id: 7,
+        title: 'Mean Finance',
+        logo: mean,
+        link: 'https://meanfi.com/',
+      },
       {
         id: 10,
         title: 'Bonfida',
@@ -221,6 +230,24 @@ const sections = [
         title: 'Kamino',
         logo: kamino,
         link: 'https://kamino.finance/',
+      },
+      {
+        id: 12,
+        title: 'Marinade Finance',
+        logo: marinade,
+        link: 'https://marinade.finance/',
+      },
+      {
+        id: 13,
+        title: 'Margin Fi',
+        logo: kamino,
+        link: 'https://www.marginfi.com/',
+      },
+      {
+        id: 14,
+        title: 'Step Finance',
+        logo: stepfinance,
+        link: 'https://www.step.finance/',
       },
     ],
   },
@@ -273,18 +300,18 @@ const sections = [
         logo: meteora,
         link: 'https://meteora.ag/',
       },
-      // {
-      //   id: 7,
-      //   title: 'Crema',
-      //   logo: crema,
-      //   link: 'https://www.crema.finance/',
-      // },
-      // {
-      //   id: 8,
-      //   title: 'Marinade',
-      //   logo: marinade,
-      //   link: 'https://marinade.finance/',
-      // },
+      {
+        id: 7,
+        title: 'Crema',
+        logo: crema,
+        link: 'https://www.crema.finance/',
+      },
+      {
+        id: 8,
+        title: 'Marinade',
+        logo: marinade,
+        link: 'https://marinade.finance/',
+      },
       {
         id: 9,
         title: 'Saber',
@@ -321,18 +348,18 @@ const sections = [
         logo: saros,
         link: 'https://saros.finance/',
       },
-      // {
-      //   id: 15,
-      //   title: 'Sentre - Balansol',
-      //   logo: balansol,
-      //   link: 'https://sentre.io/',
-      // },
-      // {
-      //   id: 16,
-      //   title: 'Invariant',
-      //   logo: invariant,
-      //   link: 'https://invariant.app/',
-      // },
+      {
+        id: 15,
+        title: 'Sentre - Balansol',
+        logo: balansol,
+        link: 'https://sentre.io/',
+      },
+      {
+        id: 16,
+        title: 'Invariant',
+        logo: invariant,
+        link: 'https://invariant.app/',
+      },
       {
         id: 17,
         title: 'Penguin Finance',
@@ -341,9 +368,9 @@ const sections = [
       },
       {
         id: 18,
-        title: 'Marco Polo',
-        logo: marcopolo,
-        link: 'https://marcopolo.so/',
+        title: 'Oasis',
+        logo: oasis,
+        link: 'https://oasis.gobi.so/',
       },
       {
         id: 19,
@@ -357,12 +384,30 @@ const sections = [
         logo: stepn,
         link: 'https://stepn.com/',
       },
-      // {
-      //   id: 21,
-      //   title: 'Phoenix by Ellipsis',
-      //   logo: ellipsis,
-      //   link: 'https://ellipsislabs.xyz/',
-      // },
+      {
+        id: 21,
+        title: 'Phoenix by Ellipsis',
+        logo: ellipsis,
+        link: 'https://ellipsislabs.xyz/',
+      },
+      {
+        id: 22,
+        title: 'Symmetry',
+        logo: symmetry,
+        link: 'https://www.symmetry.fi/',
+      },
+      {
+        id: 23,
+        title: 'Bonkswap',
+        logo: bonkswap,
+        link: 'https://www.bonkswap.io/',
+      },
+      {
+        id: 23,
+        title: 'Step Finance',
+        logo: stepfinance,
+        link: 'https://www.step.finance/',
+      },
     ],
   },
   {
@@ -377,36 +422,36 @@ const sections = [
     ),
     description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
-      // {
-      //   id: 1,
-      //   title: 'Wormhole',
-      //   logo: wormhole,
-      //   link: 'https://wormhole.com/',
-      // },
-      // {
-      //   id: 2,
-      //   title: 'Allbridge',
-      //   logo: allbridge,
-      //   link: 'https://allbridge.io/',
-      // },
-      // {
-      //   id: 3,
-      //   title: 'AtlasDEX',
-      //   logo: atlasdex,
-      //   link: 'https://atlasdex.finance/',
-      // },
+      {
+        id: 1,
+        title: 'Wormhole',
+        logo: wormhole,
+        link: 'https://wormhole.com/',
+      },
+      {
+        id: 2,
+        title: 'Allbridge',
+        logo: allbridge,
+        link: 'https://allbridge.io/',
+      },
+      {
+        id: 3,
+        title: 'AtlasDEX',
+        logo: atlasdex,
+        link: 'https://atlasdex.finance/',
+      },
       {
         id: 4,
         title: 'Rango Exchange',
         logo: rango,
         link: 'https://rango.exchange/',
       },
-      // {
-      //   id: 5,
-      //   title: 'Mayan Finance',
-      //   logo: mayan,
-      //   link: 'https://mayan.finance/',
-      // },
+      {
+        id: 5,
+        title: 'Mayan Finance',
+        logo: mayan,
+        link: 'https://mayan.finance/',
+      },
     ],
   },
   {
@@ -421,24 +466,24 @@ const sections = [
     ),
     description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
-      // {
-      //   id: 1,
-      //   title: 'Star Atlas',
-      //   logo: staratlas,
-      //   link: 'https://staratlas.com/',
-      // },
+      {
+        id: 1,
+        title: 'Star Atlas',
+        logo: staratlas,
+        link: 'https://staratlas.com/',
+      },
       {
         id: 2,
         title: 'Genopets',
         logo: genopets,
         link: 'https://www.genopets.me/',
       },
-      // {
-      //   id: 3,
-      //   title: 'Aurory',
-      //   logo: aurory,
-      //   link: 'https://aurory.io/',
-      // },
+      {
+        id: 3,
+        title: 'Aurory',
+        logo: aurory,
+        link: 'https://aurory.io/',
+      },
       {
         id: 4,
         title: 'Defi Land',
@@ -471,11 +516,11 @@ const sections = [
         logo: candypay,
         link: 'https://candypay.fun/',
       },
-      {
-        id: 3,
-        title: 'Sphere?',
-        logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
-      },
+      // {
+      //   id: 3,
+      //   title: 'Sphere?',
+      //   logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
+      // },
     ],
   },
   {
@@ -490,30 +535,30 @@ const sections = [
     ),
     description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
-      // {
-      //   id: 1,
-      //   title: 'Hyperspace',
-      //   logo: hyperspace,
-      //   link: 'https://hyperspace.xyz/',
-      // },
+      {
+        id: 1,
+        title: 'Hyperspace',
+        logo: hyperspace,
+        link: 'https://hyperspace.xyz/',
+      },
       {
         id: 2,
         title: 'Hadeswap',
         logo: hadeswap,
         link: 'https://www.hadeswap.com/',
       },
-      // {
-      //   id: 3,
-      //   title: 'Solsea',
-      //   logo: solsea,
-      //   link: 'https://solsea.io/',
-      // },
-      // {
-      //   id: 4,
-      //   title: 'LiquifyNFT',
-      //   logo: liquifynft,
-      //   link: 'https://liquifynft.com/',
-      // },
+      {
+        id: 3,
+        title: 'Solsea',
+        logo: solsea,
+        link: 'https://solsea.io/',
+      },
+      {
+        id: 4,
+        title: 'LiquifyNFT',
+        logo: liquifynft,
+        link: 'https://liquifynft.com/',
+      },
       {
         id: 5,
         title: 'Famous Fox Federation',
