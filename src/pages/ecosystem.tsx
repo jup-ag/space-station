@@ -46,7 +46,7 @@ const invariant = '/img/dex_amm/invariant.svg';
 const lifinity = '/img/dex_amm/lifinity.png';
 const mango = '/img/dex_amm/mango.png';
 const oasis = '/img/dex_amm/oasis.svg';
-const marinade = '/img/dex_amm/marinade.png';
+const marinade = '/img/dex_amm/marinade.svg';
 const meteora = '/img/dex_amm/meteora.png';
 const openbook = '/img/dex_amm/openbook.png';
 const orca = '/img/dex_amm/orca.png';
@@ -666,7 +666,7 @@ export default function Home(): JSX.Element {
                       >
                         <img
                           src={card.logo}
-                          className="absolute scale-[1.38] opacity-[0.16] blur-[28px] rounded-[20px] h-[80px]"
+                          className="absolute scale-[1.38] opacity-[0.16] blur-[28px] rounded-[20px] h-[60px]"
                         />
                         <img
                           src={card.logo}
@@ -675,10 +675,10 @@ export default function Home(): JSX.Element {
                             transition: 'transform .2s ease-in-out',
                             zIndex: 1,
                           }}
-                          className="relative h-[80px] rounded-[20px] img-scale"
+                          className="relative h-[60px] rounded-[20px] img-scale"
                         />
                       </div>
-                      <h3 className="text-center mt-2 mb-4 text-lg font-bold opacity-80">
+                      <h3 className="text-center mt-2 mb-4 text-base font-bold opacity-80">
                         {card.title}
                       </h3>
                       {/* <div className="mt-4 space-x-2 flex items-center">
