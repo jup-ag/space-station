@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # CPI/Smart Contract Integration
 
 Cross Program Invocation Integration with Jupiter.
