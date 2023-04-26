@@ -16,7 +16,7 @@ Bob is selling a delicious latte for 5 USDC, Alice only holds mSOL but Bob can u
 
 First, we need to show Alice how much mSOL will he have to spend for the latte.
 
-```js
+```shell
 curl -s 'https://quote-api.jup.ag/v4/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=5000000&swapMode=ExactOut&slippageBps=1' | jq '.data | .[0] | .inAmount, .otherAmountThreshold'
 ```
 
