@@ -124,18 +124,8 @@ const config = {
         },
         items: [
           {
-            to: '/stats',
-            label: 'Stats',
-            position: 'left',
-          },
-          {
-            to: '/ecosystem',
-            label: 'Ecosystem',
-            position: 'left',
-          },
-          {
             to: '/user-guide',
-            label: 'User Guide',
+            label: 'Guides',
             position: 'left',
           },
           {
@@ -143,6 +133,16 @@ const config = {
             docId: 'overview',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            to: '/ecosystem',
+            label: 'Partners',
+            position: 'left',
+          },
+          {
+            to: '/stats',
+            label: 'Stats',
+            position: 'left',
           },
           {
             to: '/blog',
