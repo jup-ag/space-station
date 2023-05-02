@@ -1,6 +1,6 @@
 ---
-title: How to use Jupiter Limit Order
-sidebar_position: 3
+title: Limit Order
+sidebar_position: 2
 ---
 
 Jupiter Limit Order (Beta) provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
