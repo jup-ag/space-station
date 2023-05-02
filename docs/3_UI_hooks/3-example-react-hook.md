@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Using the React-Hook
+# Example: React-Hook
 
 Use the React-Hook if you'd like to embed Jupiter into your own React UI.
 
