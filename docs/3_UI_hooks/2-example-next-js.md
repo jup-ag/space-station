@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Exmaple: NextJS
+# Example: NextJS
 
 Use the API in your own NextJS UI.
 
