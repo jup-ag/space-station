@@ -600,7 +600,7 @@ export default function Home(): JSX.Element {
         <div className="mb-24">
           <div>
             <h1 className="font-extrabold text-6xl text-center">
-              Jupiter Partner Ecosystem
+              Jupiter Partners
             </h1>
           </div>
           <div className="font-light text-base max-w-[570px] m-auto">

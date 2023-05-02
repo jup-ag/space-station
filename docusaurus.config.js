@@ -7,7 +7,7 @@ require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Jupiter Hub',
+  title: 'Jupiter Station',
   tagline: 'Swap Aggregator in Solana',
   favicon: 'img/favicon.ico',
   customFields: {
@@ -22,7 +22,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Raccoons', // Usually your GitHub org/user name.
-  projectName: 'Jupiter Hub', // Usually your repo name.
+  projectName: 'Jupiter Space Station', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -57,6 +57,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          sidebarCollapsed: false,
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -80,10 +81,11 @@ const config = {
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: 'user-guide',
-        path: 'user-guide',
-        routeBasePath: 'user-guide',
-        sidebarPath: require.resolve('./sidebarsUserguide.js'),
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: require.resolve('./sidebarsGuides.js'),
+        sidebarCollapsed: false
       }),
     ],
     async function myPlugin() {
@@ -106,7 +108,7 @@ const config = {
         {
           property: 'description',
           content:
-            'Jupiter Hub is the central hub for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with jupiter and read our latest blog posts.',
+            'Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with jupiter and read our latest blog posts.',
         },
       ],
       colorMode: {
@@ -115,7 +117,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Jupiter Hub',
+        title: 'Jupiter Station (BETA)',
         logo: {
           alt: 'Jup Logo',
           src: 'img/jupiter-logo.svg',
@@ -124,18 +126,8 @@ const config = {
         },
         items: [
           {
-            to: '/stats',
-            label: 'Stats',
-            position: 'left',
-          },
-          {
-            to: '/ecosystem',
-            label: 'Ecosystem',
-            position: 'left',
-          },
-          {
-            to: '/user-guide',
-            label: 'User Guide',
+            to: '/guides',
+            label: 'Guides',
             position: 'left',
           },
           {
@@ -143,6 +135,16 @@ const config = {
             docId: 'overview',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            to: '/partners',
+            label: 'Partners',
+            position: 'left',
+          },
+          {
+            to: '/stats',
+            label: 'Stats',
+            position: 'left',
           },
           {
             to: '/blog',

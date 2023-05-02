@@ -8,24 +8,6 @@ import ComposabilityDiagram from '../components/ComposabilityDiagram';
 import Logo from '../components/Logo';
 import Layout from '@theme/Layout';
 
-const navLinks = [
-  {
-    label: 'Stats',
-    url: '/stats',
-  },
-  {
-    label: 'Ecosystem',
-    url: '/ecosystem',
-  },
-  {
-    label: 'Documentation',
-    url: '/docs/overview',
-  },
-  {
-    label: 'Blog',
-    url: '/blog',
-  },
-];
 const linkSections = [
   {
     label: 'Statistic',
@@ -59,8 +41,8 @@ const linkSections = [
     ),
   },
   {
-    label: 'Ecosystem',
-    url: '/ecosystem',
+    label: 'Partners',
+    url: '/partners',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
