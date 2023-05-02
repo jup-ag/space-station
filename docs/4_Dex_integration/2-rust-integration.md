@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# DEX Rust Integration
+# Rust Integration
 
 To facilitate integration of your DEX with [@jup-ag/core](https://www.npmjs.com/package/@jup-ag/core) you need to provide a DEX SDK that allow us to implement the following interface:
 

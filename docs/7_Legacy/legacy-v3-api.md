@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Using the Legacy V3 API
+# Legacy V3 API
 
 Instant access to all liquidity sources in Solana with a single API endpoint.
 

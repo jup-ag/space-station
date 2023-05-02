@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Integrating with Limit Orders with SDK
+# Limit Orders with SDK
 
 ## Program Address
 

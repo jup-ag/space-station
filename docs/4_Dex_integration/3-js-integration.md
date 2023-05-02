@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# DEX JS Integration
+# JS Integration (Deprecated)
 
 :::caution We are deprecating our JS Integration, please check out our Rust Integration.
 :::
