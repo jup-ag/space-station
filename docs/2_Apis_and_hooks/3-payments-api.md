@@ -1,12 +1,12 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 ---
 
-# Payments Integration
+# Payments API (Alpha)
 
-Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. The main feature is being able to specify an exact output token amount.
+Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount.
 
-## Using the API For Payments (Alpha)
+## Use Case
 
 Payments or interaction with a protocol can require an exact amount of token B. Users might not have token A or prefer to hold other tokens long term. The Jupiter Swap SDK and API allow building a swap transaction to receive an exact amount of token A for a maximum in amount of token B.
 
@@ -116,5 +116,5 @@ transaction.message = message.compileToV0Message(addressLookupTableAccounts);
 // ...Send to Alice to sign then send the transaction
 ```
 
-:::tip If you want to add your own fees, check out: [Adding Your Own Fees](/docs/Integrating-jupiter/additional-guides/adding-your-own-fees)
+:::tip If you want to add your own fees, check out: [Adding Your Own Fees](/docs/Dexes_and_projects/adding-your-own-fees)
 :::

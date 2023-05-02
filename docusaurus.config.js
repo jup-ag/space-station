@@ -132,7 +132,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'overview',
+            docId: 'Overview', //.md file name of starting page
             position: 'left',
             label: 'Docs',
           },

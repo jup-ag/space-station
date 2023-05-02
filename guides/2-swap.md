@@ -1,6 +1,6 @@
 ---
 title: Swap
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 *A community guide to swapping on Jupiter's dApp.*

@@ -1,6 +1,6 @@
 {
-    "label": "Additional Guides",
-    "position": 4,
+    "label": "APIs and UI Hooks",
+    "position": 2,
     "link": {
       "type": "generated-index"
     }

@@ -1,18 +1,18 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 # Jupiter Terminal
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code.
 
-:::tip Jupiter Terminal Demo/ Playground
-https://terminal.jup.ag/
+:::tip Jupiter Terminal Links
+- Demo: https://terminal.jup.ag/
+- Repo: https://github.com/jup-ag/terminal
 :::
 
-https://github.com/jup-ag/terminal
-
-:::cautious [Mode (Deprecated in v1)](./jupiter-terminal.md#), Updated to [formProps (Available on v1)](./jupiter-terminal.md#)
+:::caution Mode is Deprecated in v1. Use formProps instead.
+:::
 
 ## Core Features
 

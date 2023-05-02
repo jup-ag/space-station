@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Start with Jupiter API
+# Swap API (Recommended)
 
 <style jsx>{`
   .api-method-box {
@@ -271,3 +271,23 @@ const txid = await connection.sendRawTransaction(rawTransaction, {
 await connection.confirmTransaction(txid);
 console.log(`https://solscan.io/tx/${txid}`);
 ```
+
+## Arbitrage Bot Using the API
+
+Use the API to build your own arbitrage bot.
+
+
+Jupiter API Arbitrage Example checks whether there is an opportunity for USDC => SOL and SOL => USDC, it submits two transactions that do not always promise profit and might incur losses, use it at your own risk.
+
+[API Arbs Example](https://github.com/jup-ag/api-arbs-example)
+
+**Clone, Build and Run**
+
+First, fetch the latest version of the example code:
+
+```
+$ git clone https://github.com/jup-ag/api-arbs-example.git
+$ cd api-arbs-example
+```
+
+Next, follow the steps in the git repository's [README](https://github.com/jup-ag/api-arbs-example/blob/main/README.md).

@@ -8,3 +8,4 @@ The best way to get started as a user is to try out swap and limit orders direct
 
 - [Swap](/guides/swap)
 - [Limit Order](/guides/limit-order)
+- [Wrapped SOL](/guides/wrapped-sol)

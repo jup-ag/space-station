@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 4
 ---
 
-# Price API for Solana
+# Price API
 
 The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible, with options for customising the comparison token and liquidity depth.
 

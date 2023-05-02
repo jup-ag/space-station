@@ -1,16 +1,12 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 ---
 
-# Backend/Bot Integration
-
-Integrate Jupiter on your backend or build your arbitrage bot.
-
-## Integrating Jupiter with API
-
-[Jupiter API](./start-with-the-jupiter-api)
+# Swap SDK 
 
 ## Integrating Jupiter with SDK
+
+We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits -- see the API page for details.
 
 A more structured code example for this guide can be found [here](https://github.com/jup-ag/jupiter-core-example).
 
@@ -367,23 +363,3 @@ const txid = await sendAndConfirmRawTransaction(connection, rawTransaction, {
 });
 console.log(`https://solscan.io/tx/${txid}`);
 ```
-
-## Arbitrage Bot Using the API
-
-Use the API to build your own arbitrage bot.
-
-
-Jupiter API Arbitrage Example checks whether there is an opportunity for USDC => SOL and SOL => USDC, it submits two transactions that do not always promise profit and might incur losses, use it at your own risk.
-
-[API Arbs Example](https://github.com/jup-ag/api-arbs-example)
-
-**Clone, Build and Run**
-
-First, fetch the latest version of the example code:
-
-```
-$ git clone https://github.com/jup-ag/api-arbs-example.git
-$ cd api-arbs-example
-```
-
-Next, follow the steps in the git repository's [README](https://github.com/jup-ag/api-arbs-example/blob/main/README.md).

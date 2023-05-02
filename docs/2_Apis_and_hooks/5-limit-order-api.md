@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Using Limit Order API
+# Limit Order API
 
 ## Create Limit Order
 
