@@ -3,7 +3,7 @@ sidebar_position: 5
 ---
 
 # Limit Order API
-
+![limit](jup_limit.jpeg)
 ## Create Limit Order
 
 **1. Install the libraries**
