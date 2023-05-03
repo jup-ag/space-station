@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Jupiter Terminal
 
+![jup_terminal](jup_terminal.jpeg)
+
 Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code.
 
 :::tip Jupiter Terminal Links

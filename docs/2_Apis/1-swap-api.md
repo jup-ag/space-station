@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
 ---
-
 # Swap API (Recommended)
 
-<style jsx>{`
+<style jsx>
+{`
   .api-method-box {
     border-radius: 8px;
     margin: 16px 0;

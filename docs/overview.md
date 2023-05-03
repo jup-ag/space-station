@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Overview
-
+![jup_v2.jpeg](../static/img/jup_v2.jpeg)
 ## Integration Tips
 
 - **Quote given is not the true price:** The quote given on a route is based on the current liquidity in the pools. Pool liquidity can go up or down at any time and in some cases, pools may close. An example would be oracle-based Lifinity which may stop accepting swaps after a price movement.

@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Things You Should Know
+# Builder Tips
 
 **New to building on Solana?**
 
