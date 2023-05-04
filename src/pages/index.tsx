@@ -89,7 +89,7 @@ export default function Home(): JSX.Element {
                 Jupiter <br /> Space Station
               </h1>
               <p className="mt-5 opacity-75 text-lg font-medium">
-                Welcome, Join our space cats to explore all of Jupiter and
+                Welcome, join our space cats to explore all of Jupiter and
                 beyond.
               </p>
             </section>
@@ -119,7 +119,7 @@ export default function Home(): JSX.Element {
                   allowing users and projects to fully access the value in
                   Solana seamlessly.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[14px] mt-9">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweets.map((tweet, index) => (
                     <div key={index}>
                       <BrowserOnly>
