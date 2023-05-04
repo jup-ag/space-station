@@ -117,7 +117,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Jupiter Hub',
+        title: 'Jupiter Station',
         logo: {
           alt: 'Jup Logo',
           src: 'img/jupiter-logo.svg',
