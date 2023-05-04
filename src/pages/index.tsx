@@ -114,10 +114,7 @@ export default function Home(): JSX.Element {
                   Best Price, Best UX, Best Tokens
                 </h2>
                 <p className="mt-6 text-lg">
-                  Jupiter simplifies the exponentially growing number of tokens
-                  and liquidity sources on Solana into a single endpoint,
-                  allowing users and projects to fully access the value in
-                  Solana seamlessly.
+                  Don't take our word for it. Hear it from the community:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweets.map((tweet, index) => (
