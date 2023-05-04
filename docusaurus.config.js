@@ -85,7 +85,7 @@ const config = {
         path: 'guides',
         routeBasePath: 'guides',
         sidebarPath: require.resolve('./sidebarsGuides.js'),
-        sidebarCollapsed: false
+        sidebarCollapsed: false,
       }),
     ],
     async function myPlugin() {
@@ -117,7 +117,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Jupiter Station (BETA)',
+        title: 'Jupiter Hub',
         logo: {
           alt: 'Jup Logo',
           src: 'img/jupiter-logo.svg',

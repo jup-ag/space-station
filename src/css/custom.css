@@ -87,6 +87,8 @@
 @media (min-width: 996px) {
   .navbar {
     padding-inline: 24px;
+    padding-block: 20px;
+    height: auto;
   }
   .navbar__brand {
     margin-right: 32px;
@@ -119,11 +121,58 @@
   background-color: transparent;
 }
 
+.home .navbar__toggle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home .navbar__title {
+  color: white !important;
+}
+
+.home .navbar__link {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.home .navbar__link:hover {
+  color: rgba(255, 255, 255);
+}
+
 .navbar-sidebar .launch-app {
   display: none;
 }
 
-
 .img-scale:hover {
-  transform: scale3d(1.03,1.03,1);
+  transform: scale3d(1.03, 1.03, 1);
+}
+
+.home .cat {
+  animation: 10s ease infinite float-y;
+}
+
+.home .navbar-sidebar {
+  background: #111726;
+  color: white;
+}
+
+.home .navbar-sidebar .menu__link {
+  color: white;
+}
+
+.home .navbar-sidebar .menu__link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.home .navbar-sidebar .navbar-sidebar__close g {
+  stroke: white;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
