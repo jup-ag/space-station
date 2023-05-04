@@ -6904,6 +6904,11 @@ react-transition-group@2.9.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
+react-tweet-card@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/react-tweet-card/-/react-tweet-card-0.2.5.tgz#a6b6e5c8fc06d76bf309a588c9d3268c507b4394"
+  integrity sha512-feXJ8sptl1surtw5JM2rwxN00MLiIFljmHfPoKXVQu+VJBaIuevy5DHX8GRY9cwrpYgSc6Vsk7Ki2RkYPWRbng==
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
