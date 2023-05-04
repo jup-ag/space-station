@@ -2,9 +2,11 @@
 sidebar_position: 1
 ---
 
-# Welcome!
+# Welcome
 
-
+:::info
+This section contains user guides. For developer docs, see [docs.](/docs) 
+:::
 The best way to get started as a user is to try out swap and limit orders directly on our site: https://jup.ag. 
 You can also engage in the community by learning about the JUP Spirit and joining our discusssions on twitter and discord. 
 
@@ -17,6 +19,6 @@ You can also engage in the community by learning about the JUP Spirit and joinin
 
 ## Get Involved in the Community
  ![welcome](30MM_cat.jpeg)
-- [Read about JUP Spirit](/blog/2022-09-14-unveil-jup-spirit/)
+- [Show us the JUP Spirit](/blog/unveiling-the-jup-spirit/)
 - [Discord](https://discord.gg/jup)
 - [Twitter](https://twitter.com/JupiterExchange)

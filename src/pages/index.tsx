@@ -83,17 +83,18 @@ export default function Home(): JSX.Element {
             </div>
           </div>
           <div className="mt-[276px] sm:mt-[226px] max-w-content ml-auto mr-auto">
-            <section className="max-w-[574px] mr-auto text-center sm:text-left text-white">
+          <section className="mr-auto text-center sm:text-left text-white">
+              <span className='max-w-[574px]'>
               <h1 className="font-bold text-[40px] sm:text-[80px] leading-[1.1125]">
                 Jupiter <br /> Space Station
               </h1>
               <p className="mt-5 opacity-75 text-lg font-medium">
                 Welcome to the space station — home of curious cats.
               </p>
+              </span>
               <p className="mt-5 opacity-75 text-lg font-medium">
               This is where you find crucial information about our products to prepare for your next mission, or curl up in a cozy spot to learn about our community. Just don't get up to too much mischief!
               </p>
-
             </section>
 
             <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
