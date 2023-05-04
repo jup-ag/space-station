@@ -146,7 +146,7 @@
 }
 
 .home .cat {
-  animation: 10s ease infinite float-y;
+  animation: float-y 3s ease infinite;
 }
 
 .home .navbar-sidebar {

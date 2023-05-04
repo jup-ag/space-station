@@ -4,7 +4,6 @@ import GradientText from '../components/GradientText';
 import Layout from '@theme/Layout';
 import { TweetCardProps } from 'react-tweet-card';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
 const tweets: TweetCardProps[] = [
   {
     author: {
@@ -45,7 +44,7 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
     time: new Date(2023, 3, 15, 10, 22),
     permalink:
       'https://twitter.com/LPFinance_/status/1647077905380278280?ref_src=twsrc%5Etfw',
-  },
+  }
 ];
 export default function Home(): JSX.Element {
   return (
@@ -89,21 +88,24 @@ export default function Home(): JSX.Element {
                 Jupiter <br /> Space Station
               </h1>
               <p className="mt-5 opacity-75 text-lg font-medium">
-                Welcome, join our space cats to explore all of Jupiter and
-                beyond.
+                Welcome to the space station — home of curious cats.
               </p>
+              <p className="mt-5 opacity-75 text-lg font-medium">
+              This is where you find crucial information about our products to prepare for your next mission, or curl up in a cozy spot to learn about our community. Just don't get up to too much mischief!
+              </p>
+
             </section>
 
-            <section className="mt-[138px] sm:mt-[175px] text-center sm:text-left">
+            <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
               <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
                 Take-Off with a{' '}
                 <GradientText>Single Liquidity Endpoint</GradientText> 🚀
               </h2>
               <p className="mt-6 text-lg">
-                Jupiter simplifies the exponentially growing number of tokens
+                Want the best prices without shopping multiple sites? Our flagship product on <a href="https://jup.ag">Jupiter</a> powers effective swap experiences by aggregating all tokens
                 and liquidity sources on Solana into a single endpoint, allowing
-                users and projects to fully access the value in Solana
-                seamlessly.
+                users and projects to access the value in Solana
+                seamlessly. On top of that, we provide a growing number of services to supercharge your trades, such as limit orders and price APIs. 
               </p>
             </section>
           </div>
@@ -111,10 +113,10 @@ export default function Home(): JSX.Element {
             <div className="max-w-content mx-auto">
               <section className="mt-[144px] sm:mt-[180px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  Best Price, Best UX, Best Tokens
+                Best Price, Best UX, Best Tokens
                 </h2>
                 <p className="mt-6 text-lg">
-                  Don't take our word for it. Hear it from the community:
+                That's what the JUP Promise is about — relentlessly executing and delivering on the basics. But don't take our word for it. Hear it from the community:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweets.map((tweet, index) => (
@@ -132,14 +134,13 @@ export default function Home(): JSX.Element {
               <section className="mt-[144px] sm:mt-[180px] text-center sm:text-left flex flex-col md:flex-row items-center gap-[50px]">
                 <div className="w-full">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    <GradientText>Build Your Ride</GradientText> Fully
+                    <GradientText>Build Your Ride: </GradientText> Fully
                     Composable 🛸
                   </h2>
                   <p className="mt-4 text-lg font-medium">
-                    We help you get to space with our range of products : Swaps,
-                    Limit Orders and APIs like the Price API and Token List API.
-                    There are also a myriad of ways to build your ride with
-                    integrations for web, mobile, bots and smart contracts.
+                    We help you get to space with our range of products. <a href="https://jup.ag">Our main site</a> has swaps and limit orders ready for you. 
+                    If you're a developer, check out our APIs and Web Hooks, which can help you compose experiences with swap and pricing data, in various integration formats.
+
                   </p>
                   <Link
                     href="/docs/overview"
@@ -148,7 +149,7 @@ export default function Home(): JSX.Element {
                     }}
                     className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
                   >
-                    <span>Take a look</span>
+                    <span>Go to Docs</span>
                     <svg
                       width="20"
                       height="21"
