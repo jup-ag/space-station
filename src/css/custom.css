@@ -87,6 +87,8 @@
 @media (min-width: 996px) {
   .navbar {
     padding-inline: 24px;
+    padding-block: 20px;
+    height: auto;
   }
   .navbar__brand {
     margin-right: 32px;
@@ -119,11 +121,99 @@
   background-color: transparent;
 }
 
+.home .navbar__toggle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home .navbar__title {
+  color: white !important;
+}
+
+.home .navbar__link {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.home .navbar__link:hover {
+  color: rgba(255, 255, 255) !important;
+}
+
 .navbar-sidebar .launch-app {
   display: none;
 }
 
-
 .img-scale:hover {
-  transform: scale3d(1.03,1.03,1);
+  transform: scale3d(1.03, 1.03, 1);
+}
+
+.home .cat {
+  animation: 10s ease infinite float-y;
+}
+
+.home .navbar-sidebar {
+  background: #111726;
+  color: white;
+}
+
+.home .navbar-sidebar .menu__link {
+  color: white;
+}
+
+.home .navbar-sidebar .menu__link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.home .navbar-sidebar .navbar-sidebar__close g {
+  stroke: white;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.home .react-tweet-card__tweet {
+  font-size: 16.7222px;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  color: #d9d9d9;
+}
+
+.home .react-tweet-card__time {
+  font-weight: 500;
+  font-size: 10.3519px;
+  line-height: 13px;
+  letter-spacing: -0.03em;
+
+  color: #70757c;
+}
+
+.react-tweet-card__source {
+  font-size: 10.3519px;
+  line-height: 13px;
+  letter-spacing: -0.03em;
+
+  color: #4d9eea;
+}
+
+.home .react-tweet-card__container {
+  padding: 32px;
+  background: #17202a;
+  border: 0.398148px solid rgba(232, 249, 255, 0.2);
+  border-radius: 3.98148px;
+  row-gap: 10px;
+}
+
+.home .react-tweet-card__author-name {
+  font-weight: 600;
+  font-size: 12.7407px;
+  line-height: 15px;
+  letter-spacing: -0.03em;
+
+  color: #d9d9d9;
 }
