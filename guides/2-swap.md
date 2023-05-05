@@ -21,7 +21,7 @@ Click the link to read why you need Jupiter written by community member @oneel_d
 
 3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector and enter the amount of tokens that you want to swap. 
 
-4. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana, checkout the full supported list [here](/ecosystem/DEXsAMMs).
+4. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana, checkout the full supported list [here](/partners).
 
 :::tip Jupiter charges no fees.
 There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees.  If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts or Serum Open Orders account. 
@@ -81,13 +81,13 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 4](//img/jup-swap/jup-swap4.png)
 
-7. **Slippage Setting:** [Slippage setting](/docs/notes/price-impact-slippage-price-warning#slippage) is to prevent users from receiving fewer tokens than expected. 
+7. **Slippage Setting:** [Slippage setting](/guides/price-impact-slippage-price-warning) is to prevent users from receiving fewer tokens than expected. 
 
 ![Jup Swap 3](//img/jup-swap/jup-swap3.png)
 8. **Swap Setting:** 
    1. **Direct Route Only:** Using Direct Route Only, ensure that it will be a single transaction submitted to a single pool, which will limit a lot of intermediate token which filtered out a lot of other viable routes.
-   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](/docs/notes/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
-   3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/Integrating-jupiter/additional-guides/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
+   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](/guides/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
+   3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/developer-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
 
 ![Jup Swap 2](//img/jup-swap/jup-swap2.png)
 
@@ -102,7 +102,7 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 8](//img/jup-swap/jup-swap8.png)
 
-:::tip [Token List](/docs/api/token-list-api#our-ui-on-jupag)
+:::tip [Token List](/docs/apis/token-list-api)
 By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that is available to trade.
 :::
 
@@ -111,7 +111,7 @@ By default, `Strict` token list will be enabled, without unknown or banned token
 7. **Output Token Wallet balance:** Jupiter detects the output token balance in your wallet.
 8. **Output Token / Token to buy:** Token selector to select token to buy or swap to.
 9. **Output Token / Token to buy amount:** Jupiter will computes from the input amount with the current on-chain price rate show user the quoted amount *(Including swap fees from various DEXs and AMMs)* of tokens that user will be receiving or buying.
-10. **Order Routing:** Order routing shows the order being routed through which AMM, which sometimes involve [Multi-hop](/docs/how-does-jupiter-work#multi-hop-routes) and [Split trade](/docs/how-does-jupiter-work#trade-splitting).
+10. **Order Routing:** Order routing shows the order being routed through which AMM, which sometimes involve [Multi-hop](/docs/legacy/how-does-jupiter-work#multi-hop-routes) and [Split trade](/docs/legacy/how-does-jupiter-work#trade-splitting).
 
 ![Jup Swap 9](//img/jup-swap/jup-swap9.png)
 
@@ -123,6 +123,6 @@ By default, `Strict` token list will be enabled, without unknown or banned token
 ![Jup Swap 10](//img/jup-swap/jup-swap10.png)
 
 1. **Rate for the input and output token selected:** This is the current on-chain price rate for the selected input and output tokens, along with a comparison against Coingecko Price API.
-2. **Price Impact:** [Price Impact](/docs/notes/price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact.
+2. **Price Impact:** [Price Impact](/guides/price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact.
 3. **Minimum Received:** Minimum received takes into account of slippage that have set and computes the minimum that user will receive even with price fluctuates.
 

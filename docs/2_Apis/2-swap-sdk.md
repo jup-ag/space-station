@@ -346,7 +346,7 @@ message.instructions.push(instruction);
 // compile the message and update the swapTransaction
 swapTransaction.message = message.compileToV0Message(addressLookupTableAccounts);
 ```
-Read more details on [composing versioned transactions](./additional-guides/composing-with-versioned-transaction).
+Read more details on [composing versioned transactions](/docs/developer-topics/composing-with-versioned-transaction).
 :::
 
 **2. Sign and execute the transactions**
