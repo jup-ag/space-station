@@ -2,6 +2,7 @@
 sidebar_position: 5
 ---
 
+
 # Limit Order API
 
 Jupiter Limit Order provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
