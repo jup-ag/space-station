@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Wrapped SOL (wSOL)
 
 Wrapped SOL is native SOL that is wrapped using the Solana Token Program, which allows it to be treated like any other Token program token type.
@@ -13,7 +9,7 @@ This makes Jupiter even faster and more convenient for traders who trade frequen
 
 ## Why the need to wrap SOL
 
-Currently, Jupiter has to wrap and unwrap SOL when trading in SOL due to the fact that native SOL itself is not an SPL token. 
+Currently, Jupiter has to wrap and unwrap SOL when trading in SOL due to the fact that native SOL itself is not an SPL token.
 
 *To read more about wrapping SOL, please click [here](https://spl.solana.com/token#wrapping-sol).*
 
@@ -21,15 +17,15 @@ Currently, Jupiter has to wrap and unwrap SOL when trading in SOL due to the fac
 
 Because of Solana's transaction size limits, sometimes we need to break up the transaction into multiple ones when wrapping is involved. This can be a source of friction for power traders who transact a lot.
 
-We expect this problem to be resolved with the upcoming transaction size increase in the next Solana upgrade. In the meantime, we have a new feature that allows users to trade directly in wSOL. 
+We expect this problem to be resolved with the upcoming transaction size increase in the next Solana upgrade. In the meantime, we have a new feature that allows users to trade directly in wSOL.
 
 ![wSOL](wsol.png)
 
-> 1. The Wrap and unwrap tool bar 
+> 1. The Wrap and unwrap tool bar
 2. The swap setting to turn on/off of using wSOL
 3. Once wSOL is toggled on, user will see wSOL as the default for SOL in the token selector
 
-### Enabling Jupiter wSOL Feature
+### Enabling Jupiter wSOL feature
 
 - To enable this feature, go to "Swap Settings" and turn on "Use wSOL".
 
@@ -52,7 +48,7 @@ The wSOL mode is for advanced users who are familiar dealing with the wSOL token
 - With wSOL switched on, all trades will transact in wSOL instead of SOL by default. This means that so long you have sufficient wSOL, you can immediately execute your swaps. The wSOL received will also not be automatically unwrapped to native SOL.
 - You will be able to manually wrap SOL and unwrap wSOL.
 
-### Benefits of Jupiter's wSOL Feature
+### Benefits of Jupiter's wSOL feature
 
 Jupiter’s Smart Routing which involves Multi-hop Routes and Trade Splitting connects all DEX markets and AMM pools together no matter the provider, and will find all direct and 2-hop routes between any two tokens on Solana. This will sometimes trigger multiple transactions just for a single swap. Using the wSOL setting saves/reduces the number of transactions involved (Wrapping and unwrapping SOL), which will increase the success rate of the swap significantly.
 
@@ -66,6 +62,6 @@ Jupiter’s Smart Routing which involves Multi-hop Routes and Trade Splitting co
 
 ## Unwrap wSOL feature
 
-- Our unwrap wSOL feature currently only processes unwrapping of all existing wSOL in your wallet to SOL, we do not support partial unwrapping. 
+- Our unwrap wSOL feature currently only processes unwrapping of all existing wSOL in your wallet to SOL, we do not support partial unwrapping.
 
 *To read more about closing SOL accounts, click [here](https://spl.solana.com/token#closing-accounts).*

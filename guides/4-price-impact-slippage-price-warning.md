@@ -1,8 +1,4 @@
----
-sidebar_position: 4
----
-
-# Price Impact, Slippage And Price Warnings
+# Price Impact, Slippage and Price Warnings
 
 Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. On this page, we will explain the difference between price impact, slippage, and price warning
 
