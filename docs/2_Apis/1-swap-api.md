@@ -1,36 +1,10 @@
 ---
 sidebar_position: 1
 ---
+
 # Swap API (Recommended)
 
-<style jsx>
-{`
-  .api-method-box {
-    border-radius: 8px;
-    margin: 16px 0;
-    display: inline;
-    padding: 4px;
-    font-weight: 700;
-    margin-right: 8px;
-    font-size: 12px;
-    color: white
-  }
 
-  .get {
-    border: 1px solid #1976F2;
-    background-color: #1976F2 !important;
-  }
-
-  .post {
-    border: 1px solid #018847;
-    background-color: #018847 !important;
-  }
-
-  .api-method-path {
-    font-size: 14px;
-    display: inline;
-  }
-`}</style>
 
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:
@@ -138,6 +112,35 @@ const swappableOutputForSol = generatedRouteMap['So11111111111111111111111111111
  See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
   </details>
 
+
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+  .get {
+    border: 1px solid #1976F2;
+    background-color: #1976F2 !important;
+  }
+
+  .post {
+    border: 1px solid #018847;
+    background-color: #018847 !important;
+  }
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
 
 **5. Get the routes for a swap**
 
