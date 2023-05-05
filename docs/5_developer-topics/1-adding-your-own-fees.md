@@ -13,9 +13,10 @@ There are no protocol fees on Jupiter, but integrators can introduce a platform 
 
 **Jupiter API**
 
-With the Jupiter API, you can just add in the feeBps paramter to the Quote API: 
+With the Jupiter API, you can just add in the `feeBps` paramter to the Quote API: 
 
-[# 5. Get the routes for a swap](/docs/Integrating-jupiter/start-with-the-jupiter-api#guide)
+[# 5. Get the routes for a swap](/docs/apis/swap-api#guide)
+
 
 **Jupiter SDK**
 

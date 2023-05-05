@@ -116,5 +116,5 @@ transaction.message = message.compileToV0Message(addressLookupTableAccounts);
 // ...Send to Alice to sign then send the transaction
 ```
 
-:::tip If you want to add your own fees, check out: [Adding Your Own Fees](/docs/Dexes_and_projects/adding-your-own-fees)
+:::tip If you want to add your own fees, check out: [Adding Your Own Fees](/docs/developer-topics/adding-your-own-fees)
 :::

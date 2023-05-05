@@ -25,8 +25,8 @@ Our published package can be found here [NPM](https://www.npmjs.com/package/@jup
 
 **1. Import the needed libraries**
 
-If building this example from scratch, install the libraries first: **"yarn add bs58"**
-```
+If building this example from scratch, install the libraries first: ```yarn add bs58```
+``` js
 import bs58 from 'bs58';
 import fetch from 'node-fetch';
 import JSBI from 'jsbi';
@@ -36,7 +36,7 @@ import { Jupiter, RouteInfo, TOKEN_LIST_URL } from '@jup-ag/core';
 
 **2. Start off with a simple root level function**
 
-```
+```js
 // index.js
 const main = async () => {};
 main();
@@ -46,7 +46,7 @@ main();
 
 The token list is fetched from Jupiter and contains the token metadata.
 
-```
+```js
 // It is recommended that you use your own RPC endpoint.
 // This RPC endpoint is only for demonstration purposes so that this example will run.
 const SOLANA_RPC_ENDPOINT = "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
@@ -73,7 +73,7 @@ Always make sure that you are using your own RPC endpoint. The RPC endpoint used
 
 In this example, you can paste in your private key for testing purposes but this is not recommended for production applications.
 
-```
+```js
 import { Jupiter, TOKEN_LIST_URL } from "@jup-ag/core";
 
 export const WALLET_PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY || "PASTE YOUR WALLET PRIVATE KEY";
@@ -120,7 +120,7 @@ usePreloadedAddressLookupTableCache - Use a preloaded address lookup table cache
 
 The route map identifies what tokens you can swap to given an input token. The route map only contains token mint addresses and no metadata.
 
-```
+```js
 const main = async () => {
     // ...
     
@@ -134,7 +134,7 @@ const main = async () => {
 
 (a) Declare the token interface.
 
-```
+```js
 export interface Token {
     chainId: number; // 101,
     address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
@@ -148,7 +148,7 @@ export interface Token {
 
 (b) Add a helper function that returns the possible tokens you can swap to given an input token.
 
-```
+```js
 // A helper function to help us find which output pair is possible
 const getPossiblePairsTokenInfo = ({
   tokens,
@@ -177,7 +177,7 @@ const getPossiblePairsTokenInfo = ({
 
 (c) Finally, determine which pair you would like to swap, in our case, we will be swapping from USDC to USDT.
 
-```
+```js
 const INPUT_MINT_ADDRESS = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 const OUTPUT_MINT_ADDRESS = "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
 
@@ -200,7 +200,7 @@ const main = async () => {
 
 You can then display a dropdown in the UI, that allows user to select whatever pairs the user would like to swap by performing a loop based on `possiblePairsTokenInfo`.
 
-```
+```js
 const possiblePairsTokenInfo = await getPossiblePairsTokenInfo({
   tokens,
   routeMap,
@@ -212,18 +212,18 @@ const possiblePairsTokenInfo = await getPossiblePairsTokenInfo({
 
 **7. Get the routes**
 
-```
+```js
 const routes = await jupiter.computeRoutes({
-    inputMint: new PublicKey(inputToken.address), 
-    outputMint: new PublicKey(outputToken.address), 
-    amount: JSBI.BigInt(1000000), // 1000000 => 1 USDC if inputToken.address is USDC mint.
-    slippageBps  // 1 bps = 0.01%.
-    // forceFetch (optional) => to force fetching routes and not use the cache.
-    // intermediateTokens => if provided will only find routes that use the intermediate tokens.
-    // feeBps => the extra fee in BPS you want to charge on top of this swap.
-    // onlyDirectRoutes =>  Only show single hop routes.
-    // swapMode => "ExactIn" | "ExactOut" Defaults to "ExactIn"  "ExactOut" is to support use cases like payments when you want an exact output amount.
-    // enforceSingleTx =>  Only show routes where only one single transaction is used to perform the Jupiter swap. 
+  inputMint: new PublicKey(inputToken.address), 
+  outputMint: new PublicKey(outputToken.address), 
+  amount: JSBI.BigInt(1000000), // 1000000 => 1 USDC if inputToken.address is USDC mint.
+  slippageBps  // 1 bps = 0.01%.
+  // forceFetch (optional) => to force fetching routes and not use the cache.
+  // intermediateTokens => if provided will only find routes that use the intermediate tokens.
+  // feeBps => the extra fee in BPS you want to charge on top of this swap.
+  // onlyDirectRoutes =>  Only show single hop routes.
+  // swapMode => "ExactIn" | "ExactOut" Defaults to "ExactIn"  "ExactOut" is to support use cases like payments when you want an exact output amount.
+  // enforceSingleTx =>  Only show routes where only one single transaction is used to perform the Jupiter swap. 
 });
 ```
 
@@ -256,7 +256,7 @@ Every token defines their own tick size or decimals, in our example, both USDC a
 
 Assuming in the UI, user entered a value of **1 USDC**, we can derive the amount to pass into Jupiter to be **1** multiplied by (**10** exponent of **6**)
 
-```
+```js
 const inputAmount = 1; // UI input
 const inputTokenInfo = tokens.find(item => item.address === "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"); // Token info
 const amount = inputAmount * (10 ** inputTokenInfo.decimals); // Amount to send to Jupiter
@@ -265,7 +265,7 @@ const amount = inputAmount * (10 ** inputTokenInfo.decimals); // Amount to send 
 
 **8. Execute the swap**
 
-```
+```js
 const main = async () => {
     // ...
     
@@ -313,13 +313,13 @@ If transaction objects are preferred, you can use the following:
 
 **1. Get the transaction**
 
-```
+```js
 import { Wallet } from '@project-serum/anchor';
 import { sendAndConfirmRawTransaction } from '@solana/web3.js';
 const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
 ```
 
-```
+```js
 // get the transaction
 const { swapTransaction } = await jupiter.exchange({
   routeInfo:routes.routesInfos[0],
@@ -327,7 +327,7 @@ const { swapTransaction } = await jupiter.exchange({
 ```
 
 :::note Adding your own instructions
-```
+```js
 import { TransactionMessage, VersionedTransaction, SystemProgram, AddressLookupTableAccount } from '@solana/web3.js';
 // get the transaction and address lookup table accounts
 const { swapTransaction, addressLookupTableAccounts } = await jupiter.exchange({
@@ -351,7 +351,7 @@ Read more details on [composing versioned transactions](./additional-guides/comp
 
 **2. Sign and execute the transactions**
 
-```
+```js
 // sign the transaction
 swapTransaction.sign([wallet.payer]);
 // Execute the transaction
