@@ -1,12 +1,12 @@
-import React from 'react';
-import useTradingInfo, { TradingData } from './useTradingInfo';
-import TokenIcon from './TokenIcon';
-import useTokenMapByMint from './useTokenMapByMint';
-import { RowSkeleton, Skeleton } from './Skeleton';
-import StaticNumberFormat from './StaticNumberFormat';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import { Mode } from './types';
+import React from "react";
+import useTradingInfo, { TradingData } from "./useTradingInfo";
+import TokenIcon from "./TokenIcon";
+import useTokenMapByMint from "./useTokenMapByMint";
+import { RowSkeleton, Skeleton } from "./Skeleton";
+import StaticNumberFormat from "./StaticNumberFormat";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import { Mode } from "./types";
 import {
   Bar,
   BarChart,
@@ -15,23 +15,23 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
-import { add, format, getWeek } from 'date-fns';
-import { formatAmount, formatNumber } from '@site/src/utils';
-import ENTimeLocale from 'date-fns/locale/en-GB';
-import AccountBalance from './AccountBalance';
-import SwapIcon from './SwapIcon';
-import TopPoolProviders from './TopPoolProviders';
-import { useColorMode } from '@docusaurus/theme-common';
+} from "recharts";
+import { add, format, getWeek } from "date-fns";
+import { formatAmount, formatNumber } from "@site/src/utils";
+import ENTimeLocale from "date-fns/locale/en-GB";
+import AccountBalance from "./AccountBalance";
+import SwapIcon from "./SwapIcon";
+import TopPoolProviders from "./TopPoolProviders";
+import { useColorMode } from "@docusaurus/theme-common";
 
 export const validSlugs: Array<{ mode: Mode; text: string }> = [
-  { mode: 'day', text: `D` },
-  { mode: 'week', text: `W` },
-  { mode: 'month', text: `M` },
+  { mode: "day", text: `D` },
+  { mode: "week", text: `W` },
+  { mode: "month", text: `M` },
 ];
 
 const getFrequencyText = (mode: Mode) =>
-  mode === 'day' ? `24H` : mode === 'week' ? `Weekly` : `Monthly`;
+  mode === "day" ? `24H` : mode === "week" ? `Weekly` : `Monthly`;
 
 const StatsContent: React.FC<{ mode: Mode }> = ({ mode }) => {
   const { data } = useTradingInfo(mode);
@@ -78,7 +78,7 @@ const CustomTooltip = ({
   mode,
 }: {
   [k: string]: any;
-  mode: 'day' | 'week' | 'month';
+  mode: "day" | "week" | "month";
 }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
@@ -87,18 +87,18 @@ const CustomTooltip = ({
     }
 
     const date = new Date(data.groupTimestamp);
-    const dateLabel = format(date, 'dd MMM', { locale: ENTimeLocale });
+    const dateLabel = format(date, "dd MMM", { locale: ENTimeLocale });
     const next7Day = Math.min(+add(date, { days: 7 }), +new Date());
 
     const label = (() => {
-      if (mode === 'day') return dateLabel;
-      if (mode === 'week')
-        return `${dateLabel} - ${format(next7Day, 'dd MMM', {
+      if (mode === "day") return dateLabel;
+      if (mode === "week")
+        return `${dateLabel} - ${format(next7Day, "dd MMM", {
           locale: ENTimeLocale,
         })}`;
-      if (mode === 'month')
-        return format(date, 'MMM yyyy', { locale: ENTimeLocale });
-      return '';
+      if (mode === "month")
+        return format(date, "MMM yyyy", { locale: ENTimeLocale });
+      return "";
     })();
 
     return (
@@ -121,7 +121,7 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
   const { data, isLoading } = useTradingInfo(mode);
   const { colorMode } = useColorMode();
 
-  let volumeInUSD: TradingData['volumeInUSD'] = [];
+  let volumeInUSD: TradingData["volumeInUSD"] = [];
 
   if (data?.volumeInUSD) {
     volumeInUSD = [...data.volumeInUSD];
@@ -140,8 +140,8 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
       <div className="bg-white dark:bg-[#32323A] rounded-xl mt-5 py-6 dark:text-[rgba(255,255,255,0.5)] shadow-row dark:shadow-none">
         <div className="flex items-center justify-between px-6">
           <p className=" text-[14px] leading-[16px] font-semibold">
-            Trading Volume{' '}
-            {mode === 'day' ? '24H' : mode === 'week' ? 'Week' : 'Month'}
+            Trading Volume{" "}
+            {mode === "day" ? "24H" : mode === "week" ? "Week" : "Month"}
           </p>
           <div
             className="grid items-center grid-flow-col gap-1 ml-4"
@@ -152,9 +152,9 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
                 to={`/stats/${item.mode}`}
                 key={item.mode}
                 className={clsx(
-                  'border border-solid border-transparent bg-[#F2F2F2] text-[rgba(0,0,0,0.15)] px-2 py-[2px] rounded-full text-[11px] leading-[16px] dark:bg-[#282830] dark:text-[rgba(255,255,255,0.25)]',
+                  "border border-solid border-transparent bg-[#F2F2F2] text-[rgba(0,0,0,0.15)] px-2 py-[2px] rounded-full text-[11px] leading-[16px] dark:bg-[#282830] dark:text-[rgba(255,255,255,0.25)]",
                   {
-                    '!bg-white !text-[rgba(0,0,0,0.5)] dark:!text-[rgba(255,255,255,0.5)] dark:!bg-[rgba(255,255,255,0.08)] !border-[#EBEBEB] dark:!border-transparent':
+                    "!bg-white !text-[rgba(0,0,0,0.5)] dark:!text-[rgba(255,255,255,0.5)] dark:!bg-[rgba(255,255,255,0.08)] !border-[#EBEBEB] dark:!border-transparent":
                       mode === item.mode,
                   }
                 )}
@@ -182,7 +182,7 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
           )}
         </div>
 
-        <div className="w-full h-[360px] mt-12 pl-0 md:pl-6 [--cursor-color:red]">
+        <div className="w-full h-[360px] mt-12 pl-2 md:pl-6 [--cursor-color:red]">
           {volumeInUSD.length ? (
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
@@ -198,31 +198,31 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
                   tickLine={false}
                   axisLine={false}
                   stroke={
-                    colorMode === 'light'
-                      ? 'rgba(0, 0, 0, 0.35)'
-                      : 'rgba(255, 255, 255, 0.35)'
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.35)"
+                      : "rgba(255, 255, 255, 0.35)"
                   }
                   dy={9}
                   fontSize={11}
-                  interval={mode === 'month' ? 0 : 1} // Make sure all X label are shown
+                  interval={mode === "month" ? 0 : 1} // Make sure all X label are shown
                   tickFormatter={(label: string) => {
-                    if (mode === 'day')
-                      return format(new Date(label), 'dd', {
+                    if (mode === "day")
+                      return format(new Date(label), "dd", {
                         locale: ENTimeLocale,
                       });
-                    if (mode === 'week')
+                    if (mode === "week")
                       return (
                         `Week` +
-                        ' ' +
+                        " " +
                         getWeek(new Date(label), {
                           locale: ENTimeLocale,
                         }).toString()
                       );
-                    if (mode === 'month')
-                      return format(new Date(label), 'MMM', {
+                    if (mode === "month")
+                      return format(new Date(label), "MMM", {
                         locale: ENTimeLocale,
                       });
-                    return '';
+                    return "";
                   }}
                   angle={-45}
                   textAnchor="end"
@@ -232,9 +232,9 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
                   axisLine={false}
                   tickLine={false}
                   stroke={
-                    colorMode === 'light'
-                      ? 'rgba(0, 0, 0, 0.35)'
-                      : 'rgba(255, 255, 255, 0.35)'
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.35)"
+                      : "rgba(255, 255, 255, 0.35)"
                   }
                   fontSize={11}
                   dx={-10}
@@ -245,18 +245,18 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
                   content={(props) => <CustomTooltip {...props} mode={mode} />}
                   cursor={{
                     fill:
-                      colorMode === 'light'
-                        ? 'rgba(241, 241, 241, 1)'
-                        : 'rgba(60, 60, 70, 1)',
+                      colorMode === "light"
+                        ? "rgba(241, 241, 241, 1)"
+                        : "rgba(60, 60, 70, 1)",
                   }}
                 />
                 <CartesianGrid
                   horizontal
                   vertical={false}
                   stroke={
-                    colorMode === 'light'
-                      ? 'rgba(0, 0, 0, 0.05)'
-                      : 'rgba(255, 255, 255, 0.05)'
+                    colorMode === "light"
+                      ? "rgba(0, 0, 0, 0.05)"
+                      : "rgba(255, 255, 255, 0.05)"
                   }
                 />
                 <Bar
@@ -347,9 +347,9 @@ const TopTradingPair = ({ mode }: { mode: Mode }) => {
               to={`/stats/${item.mode}`}
               key={item.mode}
               className={clsx(
-                'bg-[#EFEFEF] text-[#B6B6B9] border border-solid border-transparent px-2 py-[2px] rounded-full text-[11px] leading-[16px] dark:bg-[#212128] dark:text-[rgba(255,255,255,0.25)]',
+                "bg-[#EFEFEF] text-[#B6B6B9] border border-solid border-transparent px-2 py-[2px] rounded-full text-[11px] leading-[16px] dark:bg-[#212128] dark:text-[rgba(255,255,255,0.25)]",
                 {
-                  '!border-[#EBEBEB] !bg-white !text-[rgba(0,0,0,0.5)] dark:!border-transparent dark:!text-[rgba(255,255,255,0.5)] dark:!bg-[rgba(255,255,255,0.08)]':
+                  "!border-[#EBEBEB] !bg-white !text-[rgba(0,0,0,0.5)] dark:!border-transparent dark:!text-[rgba(255,255,255,0.5)] dark:!bg-[rgba(255,255,255,0.08)]":
                     mode === item.mode,
                 }
               )}
@@ -371,7 +371,7 @@ const TopTradingPair = ({ mode }: { mode: Mode }) => {
                 .fill(null)
                 .map((_, idx) => <RowSkeleton key={idx} />)
             : topPairs.map((item, idx) => {
-                const tokens = item.pair.split('/');
+                const tokens = item.pair.split("/");
                 const tokenA = tokenMapByMint[tokens[0]];
                 const tokenB = tokenMapByMint[tokens[1]];
 
@@ -409,7 +409,7 @@ const TopTradingPair = ({ mode }: { mode: Mode }) => {
                       <Link
                         to={`https://jup.ag/swap/${tokenA.symbol}-${tokenB.symbol}`}
                         style={{
-                          backgroundClip: 'padding-box, border-box',
+                          backgroundClip: "padding-box, border-box",
                         }}
                         className="dark:group-hover:text-white dark:group-hover:bg-trending-item-btn-img-dark group-hover:bg-trending-item-btn-img bg-origin-border border-solid border border-solid dark:border-transparent hover:border-transparent text-[11px] py-1 leading-[16px] px-2 bg-white border-[rgba(0,0,0,0.2)] dark:bg-[rgba(0,0,0,0.15)] dark:text-[rgba(255,255,255,0.5)] rounded text-[rgba(0,0,0,0.6)] group-hover:text-black font-medium"
                       >
@@ -427,7 +427,7 @@ const TopTradingPair = ({ mode }: { mode: Mode }) => {
 
 const TopTokens = (props: {
   title?: string;
-  data: TradingData['lastXTopBuy'];
+  data: TradingData["lastXTopBuy"];
   frequencyText: string;
 }) => {
   const tokenMapByMint = useTokenMapByMint();

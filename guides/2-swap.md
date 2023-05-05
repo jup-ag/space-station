@@ -1,6 +1,5 @@
 ---
 title: Swap
-sidebar_position: 2
 ---
 
 *A community guide to swapping on Jupiter's dApp.*
@@ -19,12 +18,12 @@ Click the link to read why you need Jupiter written by community member @oneel_d
 
 *Jupiter supports majority of the wallets in Solana and some Multi-chain wallets, checkout the site for the full wallet list*
 
-3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector and enter the amount of tokens that you want to swap. 
+3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector and enter the amount of tokens that you want to swap.
 
 4. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana, checkout the full supported list [here](/partners).
 
 :::tip Jupiter charges no fees.
-There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees.  If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts or Serum Open Orders account. 
+There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees.  If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts or Serum Open Orders account.
 
 Fees are already factored into the # of tokens you will receive when choosing a route.
 See What is price info below for more details on fees and deposits.
@@ -48,7 +47,7 @@ See What is price info below for more details on fees and deposits.
 5. Before swapping, you can configure a few parameters before proceeding to help with your trade.
 - Transaction Priority Fees
 - Slippage Setting
-- Swap Setting 
+- Swap Setting
     - Direct Route Only
     - Use wSOL
     - Versioned Transaction
@@ -61,30 +60,30 @@ This is because between the time you get a quote and the time you execute the tr
 
 7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
 
-8. You can view your transaction history by clicking the wallet section on the upper right of the site. 
+8. You can view your transaction history by clicking the wallet section on the upper right of the site.
 
 ## Jupiter Setting
 
 ![Jup Swap](//img/jup-swap/jup-swap.png)
 
-1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where user can instant spot token swap / buy any SPL token. 
-2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where user can place limit orders with a specific price / rate and receive tokens directly in your wallet when order is filled. 
+1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where user can instant spot token swap / buy any SPL token.
+2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where user can place limit orders with a specific price / rate and receive tokens directly in your wallet when order is filled.
 3. **Global Setting:** Jupiter Global Setting, for default settings like language, explorer and RPC endpoint.
 
 ![Jup Swap 5](//img/jup-swap/jup-swap5.png)
    1. **Language:** Pick your preferred language from English, Chinese, Vietnamese, French, Japanese, Indonesian, and Russian.
    2. **Preferred Explorer:** Pick your preferred explorer from Solscan, SolanaFM, Solana Beach, Solana Explorer, and XRAY.
-   3. **RPC Endpoint:** Pick your preferred public RPC endpoint from Triton RPC Pool and Hello Moon RPC or use your own custom RPC endpoint. 
+   3. **RPC Endpoint:** Pick your preferred public RPC endpoint from Triton RPC Pool and Hello Moon RPC or use your own custom RPC endpoint.
 4. **Connect Wallet:** Connect to your preferred wallet to interact with Jupiter.
 5. **Refresh quote:** Refresh quote button to quickly update the latest quote.
 6. **Transaction Priority Fees:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is part of Solana features to bid for priority for their transactions in the leader's queue.
 
 ![Jup Swap 4](//img/jup-swap/jup-swap4.png)
 
-7. **Slippage Setting:** [Slippage setting](/guides/price-impact-slippage-price-warning) is to prevent users from receiving fewer tokens than expected. 
+7. **Slippage Setting:** [Slippage setting](/guides/price-impact-slippage-price-warning) is to prevent users from receiving fewer tokens than expected.
 
 ![Jup Swap 3](//img/jup-swap/jup-swap3.png)
-8. **Swap Setting:** 
+8. **Swap Setting:**
    1. **Direct Route Only:** Using Direct Route Only, ensure that it will be a single transaction submitted to a single pool, which will limit a lot of intermediate token which filtered out a lot of other viable routes.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](/guides/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/developer-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.

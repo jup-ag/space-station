@@ -1,31 +1,33 @@
-import React from 'react';
-import { Mode } from './types';
-import useTradingInfo from './useTradingInfo';
-import { RowSkeleton } from './Skeleton';
-import StaticNumberFormat from './StaticNumberFormat';
+import React from "react";
+import { Mode } from "./types";
+import useTradingInfo from "./useTradingInfo";
+import { RowSkeleton } from "./Skeleton";
+import StaticNumberFormat from "./StaticNumberFormat";
 
-const OrcaSVG = '/svg/orca.svg';
-const RaydiumSVG = '/svg/raydium.svg';
-const SerumSVG = '/svg/serum.svg';
-const SaberSVG = '/svg/saber.svg';
-const StepSvg = '/svg/step.svg';
-const PngFiSVG = '/svg/pngfi.svg';
-const AldrinSVG = '/svg/aldrin.svg';
-const CropperSVG = '/svg/cropper.svg';
-const CremaSVG = '/svg/crema.svg';
-const SarosSVG = '/svg/saros.svg';
-const LifinitySVG = '/svg/lifinity.svg';
-const SenchaPNG = '/img/sencha.png';
-const CykuraSVG = '/svg/cykura.svg';
-const MarinadeSVG = '/svg/marinade.svg';
-const StepnSVG = '/svg/stepn.svg';
-const InvariantSVG = '/svg/invariant.svg';
-const MeteoraSVG = '/svg/meteora.svg';
-const GooseFXSVG = '/svg/goosefx.svg';
-const BalansolSVG = '/svg/balansol.svg';
-const DradexSVG = '/svg/dradex.svg';
-const OpenbookSVG = '/svg/openbook.svg';
-const MarcoPoloSVG = '/svg/marcopolo.svg';
+const OrcaSVG = "/svg/orca.svg";
+const RaydiumSVG = "/svg/raydium.svg";
+const SerumSVG = "/svg/serum.svg";
+const SaberSVG = "/svg/saber.svg";
+const StepSvg = "/svg/step.svg";
+const PngFiSVG = "/svg/pngfi.svg";
+const AldrinSVG = "/svg/aldrin.svg";
+const CropperSVG = "/svg/cropper.svg";
+const CremaSVG = "/svg/crema.svg";
+const SarosSVG = "/svg/saros.svg";
+const LifinitySVG = "/svg/lifinity.svg";
+const SenchaPNG = "/img/sencha.png";
+const CykuraSVG = "/svg/cykura.svg";
+const MarinadeSVG = "/svg/marinade.svg";
+const StepnSVG = "/svg/stepn.svg";
+const InvariantSVG = "/svg/invariant.svg";
+const MeteoraSVG = "/svg/meteora.svg";
+const GooseFXSVG = "/svg/goosefx.svg";
+const BalansolSVG = "/svg/balansol.svg";
+const DradexSVG = "/svg/dradex.svg";
+const OpenbookSVG = "/svg/openbook.svg";
+const OasisSVG = "/svg/oasis.svg";
+const BonkSwapPNG = "/svg/bonkswap.png";
+const SymmetrySVG = "/svg/symmetry.svg";
 
 const PoolProviderLogoMap: Record<string, any> = {
   Orca: OrcaSVG,
@@ -49,14 +51,21 @@ const PoolProviderLogoMap: Record<string, any> = {
   Balansol: BalansolSVG,
   Dradex: DradexSVG,
   Openbook: OpenbookSVG,
-  'Marco Polo': MarcoPoloSVG,
+  "Marco Polo": OasisSVG,
+  BonkSwap: BonkSwapPNG,
+  Symmetry: SymmetrySVG,
+};
+
+// Rename the AMMs that have rebranded
+const REBRAND_NAMES: Record<string, string> = {
+  "Marco Polo": "Oasis",
 };
 
 // Use this to hide the AMMs that are not ready to be shown
-const HIDE_AMMS: string[] = [];
+const HIDE_AMMS: string[] = ["Phoenix"];
 
 const getFrequencyText = (mode: Mode) =>
-  mode === 'day' ? `24H` : mode === 'week' ? `Weekly` : `Monthly`;
+  mode === "day" ? `24H` : mode === "week" ? `Weekly` : `Monthly`;
 
 const TopPoolProviders = ({ mode }: { mode: Mode }) => {
   const { data, isLoading } = useTradingInfo(mode);
@@ -72,6 +81,9 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
     return (
       data?.lastXVolumeByAMMs.find(({ amm }) => amm === ammName)?.amount || 0
     );
+  };
+  const getName = (ammName: string) => {
+    return REBRAND_NAMES[ammName] || ammName;
   };
 
   return (
@@ -103,13 +115,13 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
                     {PoolProviderLogoMap[name] && (
                       <img
                         alt={name}
-                        src={PoolProviderLogoMap[name] || ''}
+                        src={PoolProviderLogoMap[name] || ""}
                         height={28}
                         width={28}
                       />
                     )}
                     <span className="ml-3 text-[rgba(0,0,0,0.75)] dark:text-white">
-                      {name}
+                      {getName(name)}
                     </span>
                   </p>
                   <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">
@@ -134,14 +146,14 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
               >
                 {PoolProviderLogoMap[name] && (
                   <img
-                    alt={name}
-                    src={PoolProviderLogoMap[name] || ''}
+                    alt={getName(name)}
+                    src={PoolProviderLogoMap[name] || ""}
                     height={28}
                     width={28}
                   />
                 )}
                 <span className="ml-3 text-[rgba(0,0,0,0.75)] dark:text-white">
-                  {name}
+                  {getName(name)}
                 </span>
               </p>
               <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">

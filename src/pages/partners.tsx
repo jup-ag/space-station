@@ -1,89 +1,89 @@
-import React, { useState } from 'react';
-import Layout from '@theme/Layout';
+import React, { useState } from "react";
+import Layout from "@theme/Layout";
 
-const wallet = '/img/wallet.png';
-const defi = '/img/defi.png';
-const dex_amm = '/img/dex_amm.png';
-const bridge = '/img/bridge.png';
-const payment = '/img/payment.png';
-const nft = '/img/nft.png';
-const game = '/img/game.png';
+const wallet = "/img/wallet.png";
+const defi = "/img/defi.png";
+const dex_amm = "/img/dex_amm.png";
+const bridge = "/img/bridge.png";
+const payment = "/img/payment.png";
+const nft = "/img/nft.png";
+const game = "/img/game.png";
 
-const phantom = '/img/wallet/phantom.png';
-const solflare = '/img/wallet/solflare.svg';
-const ultimate = '/img/wallet/ultimate.png';
-const brave = '/img/wallet/brave.png';
-const coinbase = '/img/wallet/coinbase.png';
-const glow = '/img/wallet/glow.png';
-const heywallet = '/img/wallet/heywallet.png';
-const backpack = '/img/wallet/backpack.svg';
-const frontier = '/img/wallet/frontier.svg';
-const ottr = '/img/wallet/ottr.png';
-const nightly = '/img/wallet/nightly.svg';
-const keyapp = '/img/wallet/key.svg';
+const phantom = "/img/wallet/phantom.png";
+const solflare = "/img/wallet/solflare.svg";
+const ultimate = "/img/wallet/ultimate.png";
+const brave = "/img/wallet/brave.png";
+const coinbase = "/img/wallet/coinbase.png";
+const glow = "/img/wallet/glow.png";
+const heywallet = "/img/wallet/heywallet.png";
+const backpack = "/img/wallet/backpack.svg";
+const frontier = "/img/wallet/frontier.svg";
+const ottr = "/img/wallet/ottr.png";
+const nightly = "/img/wallet/nightly.svg";
+const keyapp = "/img/wallet/key.svg";
 
-const birdeye = '/img/defi/birdeye.png';
-const bonfida = '/img/defi/bonfida.png';
-const francium = '/img/defi/francium.png';
-const sonar = '/img/defi/sonar.png';
-const hellomoon = '/img/defi/hellomoon.svg';
-const kamino = '/img/defi/kamino.png';
-const mean = '/img/defi/mean.svg';
-const portfinance = '/img/defi/portfinance.svg';
-const tulip = '/img/defi/tulip.png';
-const marginfi = '/img/defi/marginfi.svg'
+const birdeye = "/img/defi/birdeye.png";
+const bonfida = "/img/defi/bonfida.png";
+const francium = "/img/defi/francium.png";
+const sonar = "/img/defi/sonar.png";
+const hellomoon = "/img/defi/hellomoon.svg";
+const kamino = "/img/defi/kamino.png";
+const mean = "/img/defi/mean.svg";
+const portfinance = "/img/defi/portfinance.svg";
+const tulip = "/img/defi/tulip.png";
+const marginfi = "/img/defi/marginfi.svg";
 
-const aldrin = '/img/dex_amm/aldrin.png';
-const balansol = '/img/dex_amm/balansol.svg';
-const crema = '/img/dex_amm/crema.png';
-const raydium = '/img/dex_amm/raydium.png';
-const cropper = '/img/dex_amm/cropper.png';
-const cykura = '/img/dex_amm/cykura.png';
-const dradex = '/img/dex_amm/dradex.png';
-const goosefx = '/img/dex_amm/goosefx.svg';
-const dexlab = '/img/dex_amm/dexlab.png';
-const ellipsis = '/img/dex_amm/ellipsislab.svg';
-const invariant = '/img/dex_amm/invariant.svg';
-const lifinity = '/img/dex_amm/lifinity.png';
-const mango = '/img/dex_amm/mango.png';
-const oasis = '/img/dex_amm/oasis.svg';
-const marinade = '/img/dex_amm/marinade.png';
-const meteora = '/img/dex_amm/meteora.png';
-const openbook = '/img/dex_amm/openbook.png';
-const orca = '/img/dex_amm/orca.png';
-const penguin = '/img/dex_amm/penguin.png';
-const saber = '/img/dex_amm/saber.png';
-const saros = '/img/dex_amm/saros.png';
-const stepfinance = '/img/dex_amm/stepfinance.png';
-const stepn = '/img/dex_amm/stepn.svg';
-const bonkswap = '/img/dex_amm/bonkswap.png';
-const symmetry = '/img/dex_amm/symmetry.svg';
+const aldrin = "/img/dex_amm/aldrin.png";
+const balansol = "/img/dex_amm/balansol.svg";
+const crema = "/img/dex_amm/crema.png";
+const raydium = "/img/dex_amm/raydium.png";
+const cropper = "/img/dex_amm/cropper.png";
+const cykura = "/img/dex_amm/cykura.png";
+const dradex = "/img/dex_amm/dradex.png";
+const goosefx = "/img/dex_amm/goosefx.svg";
+const dexlab = "/img/dex_amm/dexlab.png";
+const ellipsis = "/img/dex_amm/ellipsislab.svg";
+const invariant = "/img/dex_amm/invariant.svg";
+const lifinity = "/img/dex_amm/lifinity.png";
+const mango = "/img/dex_amm/mango.png";
+const oasis = "/img/dex_amm/oasis.svg";
+const marinade = "/img/dex_amm/marinade.png";
+const meteora = "/img/dex_amm/meteora.png";
+const openbook = "/img/dex_amm/openbook.png";
+const orca = "/img/dex_amm/orca.png";
+const penguin = "/img/dex_amm/penguin.png";
+const saber = "/img/dex_amm/saber.png";
+const saros = "/img/dex_amm/saros.png";
+const stepfinance = "/img/dex_amm/stepfinance.png";
+const stepn = "/img/dex_amm/stepn.svg";
+const bonkswap = "/img/dex_amm/bonkswap.png";
+const symmetry = "/img/dex_amm/symmetry.svg";
 
-const rango = '/img/bridge/rango.png';
-const allbridge = '/img/bridge/allbridge.png';
-const atlasdex = '/img/bridge/atlasdex.svg';
-const wormhole = '/img/bridge/wormhole.svg';
-const mayan = '/img/bridge/mayan.svg';
+const rango = "/img/bridge/rango.png";
+const allbridge = "/img/bridge/allbridge.png";
+const atlasdex = "/img/bridge/atlasdex.svg";
+const wormhole = "/img/bridge/wormhole.svg";
+const mayan = "/img/bridge/mayan.svg";
 
-const aurory = '/img/game/aurory.jpg';
-const defiland = '/img/game/defiland.png';
-const genopets = '/img/game/genopets.png';
-const staratlas = '/img/game/staratlas.png';
+const aurory = "/img/game/aurory.jpg";
+const defiland = "/img/game/defiland.png";
+const genopets = "/img/game/genopets.png";
+const staratlas = "/img/game/staratlas.png";
 
-const candypay = '/img/payment/candypay.svg';
-const helio = '/img/payment/helio.svg';
+const candypay = "/img/payment/candypay.svg";
+const helio = "/img/payment/helio.svg";
 
-const famousfoxfederation = '/img/nft/fff.png';
-const hadeswap = '/img/nft/hadeswap.png';
-const hyperspace = '/img/nft/hyperspace.svg';
-const liquifynft = '/img/nft/liquifynft.svg';
-const solsea = '/img/nft/solsea.svg';
+const famousfoxfederation = "/img/nft/fff.png";
+const hadeswap = "/img/nft/hadeswap.png";
+const hyperspace = "/img/nft/hyperspace.svg";
+const liquifynft = "/img/nft/liquifynft.svg";
+const solsea = "/img/nft/solsea.svg";
 
 const sections = [
   {
     id: 1,
     logo: wallet,
-    title: 'Wallets',
+    title: "Wallets",
     header: (
       <div className="relative mb-4">
         <img src={wallet} height={37} />
@@ -94,82 +94,82 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Phantom',
+        title: "Phantom",
         logo: phantom,
-        link: 'https://phantom.app',
+        link: "https://phantom.app",
       },
       {
         id: 2,
-        title: 'Solflare',
+        title: "Solflare",
         logo: solflare,
-        link: 'https://solflare.com/',
+        link: "https://solflare.com/",
       },
       {
         id: 3,
-        title: 'Glow Wallet',
+        title: "Glow Wallet",
         logo: glow,
-        link: 'https://glow.app/',
+        link: "https://glow.app/",
       },
       {
         id: 4,
-        title: 'Coinbase Wallet',
+        title: "Coinbase Wallet",
         logo: coinbase,
-        link: 'https://www.coinbase.com/wallet',
+        link: "https://www.coinbase.com/wallet",
       },
       {
         id: 5,
-        title: 'Brave Wallet',
+        title: "Brave Wallet",
         logo: brave,
-        link: 'https://brave.com/wallet/',
+        link: "https://brave.com/wallet/",
       },
       {
         id: 6,
-        title: 'Hey Wallet',
+        title: "Hey Wallet",
         logo: heywallet,
-        link: 'https://heywallet.com/',
+        link: "https://heywallet.com/",
       },
       {
         id: 7,
-        title: 'Backpack',
+        title: "Backpack",
         logo: backpack,
-        link: 'https://www.backpack.app/',
+        link: "https://www.backpack.app/",
       },
       {
         id: 8,
-        title: 'Frontier Wallet',
+        title: "Frontier Wallet",
         logo: frontier,
-        link: 'https://www.frontier.xyz/',
+        link: "https://www.frontier.xyz/",
       },
       {
         id: 9,
-        title: 'Nightly',
+        title: "Nightly",
         logo: nightly,
-        link: 'https://wallet.nightly.app/',
+        link: "https://wallet.nightly.app/",
       },
       {
         id: 10,
-        title: 'Ultimate Wallet',
+        title: "Ultimate Wallet",
         logo: ultimate,
-        link: 'https://ultimate.app/',
+        link: "https://ultimate.app/",
       },
       {
         id: 11,
-        title: 'Ottr Finance',
+        title: "Ottr Finance",
         logo: ottr,
-        link: 'https://ottr.finance/',
+        link: "https://ottr.finance/",
       },
       {
         id: 12,
-        title: 'Key App',
+        title: "Key App",
         logo: keyapp,
-        link: 'https://key.app/',
+        link: "https://key.app/",
       },
     ],
   },
   {
     id: 2,
     logo: defi,
-    title: 'DeFi',
+    title: "DeFi",
     header: (
       <div className="relative mb-4">
         <img src={defi} height={37} />
@@ -180,82 +180,82 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Tulip',
+        title: "Tulip",
         logo: tulip,
-        link: 'https://tulip.garden/',
+        link: "https://tulip.garden/",
       },
       {
         id: 2,
-        title: 'Sonar Watch',
+        title: "Sonar Watch",
         logo: sonar,
-        link: 'https://sonar.watch/',
+        link: "https://sonar.watch/",
       },
       {
         id: 3,
-        title: 'Port Finance',
+        title: "Port Finance",
         logo: portfinance,
-        link: 'https://www.port.finance/',
+        link: "https://www.port.finance/",
       },
       {
         id: 4,
-        title: 'Francium',
+        title: "Francium",
         logo: francium,
-        link: 'https://francium.io/',
+        link: "https://francium.io/",
       },
       {
         id: 5,
-        title: 'Birdeye',
+        title: "Birdeye",
         logo: birdeye,
-        link: 'https://birdeye.so/',
+        link: "https://birdeye.so/",
       },
       {
         id: 6,
-        title: 'HelloMoon',
+        title: "HelloMoon",
         logo: hellomoon,
-        link: 'https://www.hellomoon.io/',
+        link: "https://www.hellomoon.io/",
       },
       {
         id: 7,
-        title: 'Mean Finance',
+        title: "Mean Finance",
         logo: mean,
-        link: 'https://meanfi.com/',
+        link: "https://meanfi.com/",
       },
       {
         id: 10,
-        title: 'Bonfida',
+        title: "Bonfida",
         logo: bonfida,
-        link: 'https://bonfida.org/',
+        link: "https://bonfida.org/",
       },
       {
         id: 11,
-        title: 'Kamino',
+        title: "Kamino",
         logo: kamino,
-        link: 'https://kamino.finance/',
+        link: "https://kamino.finance/",
       },
       {
         id: 12,
-        title: 'Marinade Finance',
+        title: "Marinade Finance",
         logo: marinade,
-        link: 'https://marinade.finance/',
+        link: "https://marinade.finance/",
       },
       {
         id: 13,
-        title: 'Margin Fi',
+        title: "Margin Fi",
         logo: marginfi,
-        link: 'https://www.marginfi.com/',
+        link: "https://www.marginfi.com/",
       },
       {
         id: 14,
-        title: 'Step Finance',
+        title: "Step Finance",
         logo: stepfinance,
-        link: 'https://www.step.finance/',
+        link: "https://www.step.finance/",
       },
     ],
   },
   {
     id: 3,
     logo: dex_amm,
-    title: 'DEXes',
+    title: "DEXes",
     header: (
       <div className="relative mb-4">
         <img src={dex_amm} height={37} />
@@ -267,154 +267,154 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Orca',
+        title: "Orca",
         logo: orca,
-        link: 'https://www.orca.so/',
+        link: "https://www.orca.so/",
       },
       {
         id: 2,
-        title: 'Raydium',
+        title: "Raydium",
         logo: raydium,
-        link: 'https://raydium.io/',
+        link: "https://raydium.io/",
       },
       {
         id: 3,
-        title: 'GooseFX',
+        title: "GooseFX",
         logo: goosefx,
-        link: 'https://goosefx.io/',
+        link: "https://goosefx.io/",
       },
       {
         id: 4,
-        title: 'Aldrin',
+        title: "Aldrin",
         logo: aldrin,
-        link: 'https://aldrin.com/',
+        link: "https://aldrin.com/",
       },
       {
         id: 5,
-        title: 'Openbook',
+        title: "Openbook",
         logo: openbook,
-        link: 'https://www.openbook-solana.com/',
+        link: "https://www.openbook-solana.com/",
       },
       {
         id: 6,
-        title: 'Meteora',
+        title: "Meteora",
         logo: meteora,
-        link: 'https://meteora.ag/',
+        link: "https://meteora.ag/",
       },
       {
         id: 7,
-        title: 'Crema',
+        title: "Crema",
         logo: crema,
-        link: 'https://www.crema.finance/',
+        link: "https://www.crema.finance/",
       },
       {
         id: 8,
-        title: 'Marinade',
+        title: "Marinade",
         logo: marinade,
-        link: 'https://marinade.finance/',
+        link: "https://marinade.finance/",
       },
       {
         id: 9,
-        title: 'Saber',
+        title: "Saber",
         logo: saber,
-        link: 'https://app.saber.so/',
+        link: "https://app.saber.so/",
       },
       {
         id: 10,
-        title: 'Cykura',
+        title: "Cykura",
         logo: cykura,
-        link: 'https://cykura.io/',
+        link: "https://cykura.io/",
       },
       {
         id: 11,
-        title: 'Dradex',
+        title: "Dradex",
         logo: dradex,
-        link: 'https://www.dradex.io/',
+        link: "https://www.dradex.io/",
       },
       {
         id: 12,
-        title: 'Lifinity',
+        title: "Lifinity",
         logo: lifinity,
-        link: 'https://lifinity.io/',
+        link: "https://lifinity.io/",
       },
       {
         id: 13,
-        title: 'Dexlab',
+        title: "Dexlab",
         logo: dexlab,
-        link: 'https://www.dexlab.space/',
+        link: "https://www.dexlab.space/",
       },
       {
         id: 14,
-        title: 'Saros',
+        title: "Saros",
         logo: saros,
-        link: 'https://saros.finance/',
+        link: "https://saros.finance/",
       },
       {
         id: 15,
-        title: 'Sentre - Balansol',
+        title: "Sentre - Balansol",
         logo: balansol,
-        link: 'https://sentre.io/',
+        link: "https://sentre.io/",
       },
       {
         id: 16,
-        title: 'Invariant',
+        title: "Invariant",
         logo: invariant,
-        link: 'https://invariant.app/',
+        link: "https://invariant.app/",
       },
       {
         id: 17,
-        title: 'Penguin Finance',
+        title: "Penguin Finance",
         logo: penguin,
-        link: 'https://png.fi/',
+        link: "https://png.fi/",
       },
       {
         id: 18,
-        title: 'Oasis',
+        title: "Oasis",
         logo: oasis,
-        link: 'https://oasis.gobi.so/',
+        link: "https://oasis.gobi.so/",
       },
       {
         id: 19,
-        title: 'Cropper',
+        title: "Cropper",
         logo: cropper,
-        link: 'https://cropper.finance/',
+        link: "https://cropper.finance/",
       },
       {
         id: 20,
-        title: 'StepN DOOAR',
+        title: "StepN DOOAR",
         logo: stepn,
-        link: 'https://stepn.com/',
+        link: "https://stepn.com/",
       },
       {
         id: 21,
-        title: 'Phoenix by Ellipsis',
+        title: "Phoenix by Ellipsis",
         logo: ellipsis,
-        link: 'https://ellipsislabs.xyz/',
+        link: "https://ellipsislabs.xyz/",
       },
       {
         id: 22,
-        title: 'Symmetry',
+        title: "Symmetry",
         logo: symmetry,
-        link: 'https://www.symmetry.fi/',
+        link: "https://www.symmetry.fi/",
       },
       {
         id: 23,
-        title: 'Bonkswap',
+        title: "Bonkswap",
         logo: bonkswap,
-        link: 'https://www.bonkswap.io/',
+        link: "https://www.bonkswap.io/",
       },
       {
         id: 23,
-        title: 'Step Finance',
+        title: "Step Finance",
         logo: stepfinance,
-        link: 'https://www.step.finance/',
+        link: "https://www.step.finance/",
       },
     ],
   },
   {
     id: 4,
     logo: bridge,
-    title: 'Bridges',
+    title: "Bridges",
     header: (
       <div className="relative mb-4">
         <img src={bridge} height={37} />
@@ -425,40 +425,40 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Wormhole',
+        title: "Wormhole",
         logo: wormhole,
-        link: 'https://wormhole.com/',
+        link: "https://wormhole.com/",
       },
       {
         id: 2,
-        title: 'Allbridge',
+        title: "Allbridge",
         logo: allbridge,
-        link: 'https://allbridge.io/',
+        link: "https://allbridge.io/",
       },
       {
         id: 3,
-        title: 'AtlasDEX',
+        title: "AtlasDEX",
         logo: atlasdex,
-        link: 'https://atlasdex.finance/',
+        link: "https://atlasdex.finance/",
       },
       {
         id: 4,
-        title: 'Rango Exchange',
+        title: "Rango Exchange",
         logo: rango,
-        link: 'https://rango.exchange/',
+        link: "https://rango.exchange/",
       },
       {
         id: 5,
-        title: 'Mayan Finance',
+        title: "Mayan Finance",
         logo: mayan,
-        link: 'https://mayan.finance/',
+        link: "https://mayan.finance/",
       },
     ],
   },
   {
     id: 5,
     logo: game,
-    title: 'Games',
+    title: "Games",
     header: (
       <div className="relative mb-4">
         <img src={game} height={37} />
@@ -469,34 +469,34 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Star Atlas',
+        title: "Star Atlas",
         logo: staratlas,
-        link: 'https://staratlas.com/',
+        link: "https://staratlas.com/",
       },
       {
         id: 2,
-        title: 'Genopets',
+        title: "Genopets",
         logo: genopets,
-        link: 'https://www.genopets.me/',
+        link: "https://www.genopets.me/",
       },
       {
         id: 3,
-        title: 'Aurory',
+        title: "Aurory",
         logo: aurory,
-        link: 'https://aurory.io/',
+        link: "https://aurory.io/",
       },
       {
         id: 4,
-        title: 'Defi Land',
+        title: "Defi Land",
         logo: defiland,
-        link: 'https://defiland.app/',
+        link: "https://defiland.app/",
       },
     ],
   },
   {
     id: 6,
     logo: payment,
-    title: 'Payment',
+    title: "Payment",
     header: (
       <div className="relative mb-4">
         <img src={payment} height={37} />
@@ -507,15 +507,15 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Helio',
+        title: "Helio",
         logo: helio,
-        link: 'https://helio.co/',
+        link: "https://helio.co/",
       },
       {
         id: 2,
-        title: 'CandyPay',
+        title: "CandyPay",
         logo: candypay,
-        link: 'https://candypay.fun/',
+        link: "https://candypay.fun/",
       },
       // {
       //   id: 3,
@@ -527,7 +527,7 @@ const sections = [
   {
     id: 7,
     logo: nft,
-    title: 'NFTs',
+    title: "NFTs",
     header: (
       <div className="relative mb-4">
         <img src={nft} height={37} />
@@ -538,33 +538,33 @@ const sections = [
     cards: [
       {
         id: 1,
-        title: 'Hyperspace',
+        title: "Hyperspace",
         logo: hyperspace,
-        link: 'https://hyperspace.xyz/',
+        link: "https://hyperspace.xyz/",
       },
       {
         id: 2,
-        title: 'Hadeswap',
+        title: "Hadeswap",
         logo: hadeswap,
-        link: 'https://www.hadeswap.com/',
+        link: "https://www.hadeswap.com/",
       },
       {
         id: 3,
-        title: 'Solsea',
+        title: "Solsea",
         logo: solsea,
-        link: 'https://solsea.io/',
+        link: "https://solsea.io/",
       },
       {
         id: 4,
-        title: 'LiquifyNFT',
+        title: "LiquifyNFT",
         logo: liquifynft,
-        link: 'https://liquifynft.com/',
+        link: "https://liquifynft.com/",
       },
       {
         id: 5,
-        title: 'Famous Fox Federation',
+        title: "Famous Fox Federation",
         logo: famousfoxfederation,
-        link: 'https://famousfoxes.com/',
+        link: "https://famousfoxes.com/",
       },
     ],
   },
@@ -579,14 +579,14 @@ const ButtonFilter = ({ children, active }) => (
   text-black/50
   font-light
   text-sm text-black px-4 py-2 border-solid
-  border-gray-200 ml-2 ${active ? 'bg-black/5!' : 'bg-transparent'}`}
+  border-gray-200 ml-2 ${active ? "bg-black/5!" : "bg-transparent"}`}
   >
     {children}
   </button>
 );
 
 export default function Home(): JSX.Element {
-  const [selectedCat, setSelectedCat] = useState('all');
+  const [selectedCat, setSelectedCat] = useState("all");
   const onSelectCat = (id: string) => {
     setSelectedCat(id);
   };
@@ -605,14 +605,17 @@ export default function Home(): JSX.Element {
           </div>
           <div className="font-light text-base max-w-[570px] m-auto">
             <div className="text-center">
-              Browse and search projects/ protocols that are working with Jupiter. 
+              Browse and search projects/protocols that are working with
+              Jupiter.
               <br></br>
-              Are you building something cool? Let us know or checkout our docs on how to get started.{' '}
+              Are you building something cool?
+              <br></br>
+              Let us know or checkout our docs on{" "}
               <a
                 href="/docs/overview"
                 className="underline text-black font-bold"
               >
-                Getting Started
+                how to get started.
               </a>
             </div>
           </div>
@@ -624,9 +627,9 @@ export default function Home(): JSX.Element {
               <div
                 role="listitem"
                 className="inline-block"
-                onClick={() => onSelectCat('all')}
+                onClick={() => onSelectCat("all")}
               >
-                <ButtonFilter active={selectedCat === 'all'}>All</ButtonFilter>
+                <ButtonFilter active={selectedCat === "all"}>All</ButtonFilter>
               </div>
               {sections.map((section) => (
                 <div
@@ -646,7 +649,7 @@ export default function Home(): JSX.Element {
           <div className="rounded-lg border min-h-[400px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {sections
-                .filter((f) => selectedCat == 'all' || f.title === selectedCat)
+                .filter((f) => selectedCat == "all" || f.title === selectedCat)
                 .map((section) =>
                   section.cards.flatMap((card) => (
                     <a
@@ -660,9 +663,9 @@ export default function Home(): JSX.Element {
                       <div
                         style={{
                           background:
-                            'linear-gradient(rgba(0,0,0,.015),transparent)',
-                          width: '100%',
-                          padding: '20px 20px 8px',
+                            "linear-gradient(rgba(0,0,0,.015),transparent)",
+                          width: "100%",
+                          padding: "20px 20px 8px",
                         }}
                         className="flex justify-center rounded-lg overflow-hidden transition duration-300"
                       >
@@ -674,7 +677,7 @@ export default function Home(): JSX.Element {
                           src={card.logo}
                           style={{
                             // boxShadow: '0 8px 16px hsla(0,0%,8%,.07)',
-                            transition: 'transform .2s ease-in-out',
+                            transition: "transform .2s ease-in-out",
                             zIndex: 1,
                           }}
                           className="relative h-[60px] rounded-[20px] img-scale"
