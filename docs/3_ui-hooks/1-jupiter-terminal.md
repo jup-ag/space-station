@@ -97,6 +97,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="Modal Mode" label="Modal Mode" default>
 
     By default, Jupiter renders as a modal and takes up the whole screen.
+    
   </TabItem>
   <TabItem value="Integrated Mode" label="Integrated Mode">
     Integrated Mode renders Jupiter Terminal as a part of your dApp.

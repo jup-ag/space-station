@@ -17,11 +17,11 @@ Our top priority is securing best prices, best token selection for our users, so
 
 - **Minimum DEX TVL of $500k**
     - Given the amount of integration work involved, a DEX must have enough liquidity to be useful for trading and to attract volume.
-    - Each market/pool must have a minimum liquidity of $500 to show up on Jupiter. You can keep up to date on how we list tokens here: https://docs.jup.ag/notes/getting-your-token-on-jupiter.
+    - Each market/pool must have a minimum liquidity of $500 to show up on Jupiter. You can keep up to date on how we list tokens [here](/docs/developer-topics/getting-tokens-on-jup)
 - **An API for listing/delisting pools on the DEX**
     - This will allow us to automatically track new markets as you add them to your DEX. 
 - **Provide a Rust SDK**
-    - Your SDK should implement this interface: https://docs.jup.ag/jupiter-core/jupiter-sdk/dex-integration.
+    - Your SDK should implement this interface: [DEX Integration](/docs/dex-integration/rust-integration).
     - We are soon migrating to a Rust SDK and so are asking all integrated DEXes to create a Rust SDK version or give access to the code for us to include.  
 - **Security Audit**
     - If you're not using Solana's audited SPL token swap (https://github.com/solana-labs/solana-program-library/tree/master/token-swap), we ask that you get your code audited.

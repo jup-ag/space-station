@@ -156,4 +156,4 @@ interface CustomWallet {
 
 If you need more help, pay a visit to [Example (React, Next.js)](https://github.com/jup-ag/jupiter-nextjs-example) or, just fork and start there.
 
-More issues? Head to [FAQs and Troubleshooting](/docs/Integrating-jupiter/additional-guides/troubleshooting-issues) section.
+More issues? Head to [FAQs and Troubleshooting](/docs/developer-topics/troubleshooting) section.

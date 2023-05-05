@@ -285,7 +285,7 @@ Jupiter API Arbitrage Example checks whether there is an opportunity for USDC =>
 
 First, fetch the latest version of the example code:
 
-```
+```shell
 $ git clone https://github.com/jup-ag/api-arbs-example.git
 $ cd api-arbs-example
 ```

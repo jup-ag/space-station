@@ -2,6 +2,7 @@
 sidebar_position: 5
 ---
 
+
 # Limit Order API
 ![limit](jup_limit.jpeg)
 ## Create Limit Order
@@ -109,9 +110,13 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 Open API /GET
 
+https://docs.jup.ag/limit-orders/using-limit-orders-api#query-user-open-order-order-history-and-trade-history
+
 ## Cancel order
 
 Open API /POST
+
+https://docs.jup.ag/limit-orders/using-limit-orders-api#cancel-order
 
 Deserialize, sign and execute the transaction from the response like here.
 
@@ -127,6 +132,8 @@ Referrers are entitled to a share of 0.1% of referral fees, while the platform c
 
 Open API /POST
 
+https://docs.jup.ag/limit-orders/using-limit-orders-api#1.-create-a-referral-account
+
 Deserialize, sign and execute the transaction from the response like here.
 
 **2.  Create referral token accounts**
@@ -134,6 +141,8 @@ Deserialize, sign and execute the transaction from the response like here.
 For every token you would like to collect referral fees in, you need to generate a token account for that. Referral fees are given in the output mint token.
 
 Open API /POST
+
+https://docs.jup.ag/limit-orders/using-limit-orders-api#2.-create-referral-token-accounts
 
 Deserialize, sign and execute the transaction from the response like here.
 
@@ -144,5 +153,7 @@ Once you include your referralPubKey in LimitOrderProvider initialization and ou
 **4.  Claim fees**
 
 Open API /POST
+
+https://docs.jup.ag/limit-orders/using-limit-orders-api#4.-claim-fees
 
 Deserialize, sign and execute the transaction from the response like here.
