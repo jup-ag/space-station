@@ -96,14 +96,29 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="Modal Mode" label="Modal Mode" default>
 
+    [image]
+    ```
+    window.Jupiter.init({ displayMode: 'modal' });
+    ```
+
     By default, Jupiter renders as a modal and takes up the whole screen.
     
   </TabItem>
   <TabItem value="Integrated Mode" label="Integrated Mode">
+
+    [image]
+
+    ```
+    window.Jupiter.init({ displayMode: 'integrated' });
+    ```
+
     Integrated Mode renders Jupiter Terminal as a part of your dApp.
+  
   </TabItem>
   <TabItem value="Widget Mode" label="Widget Mode">
+  
     Widget mode renders Jupiter Terminal as a widget that can be placed in different positions.
+  
   </TabItem>
 </Tabs>
 

@@ -7,11 +7,11 @@ sidebar_position: 1
 ## Integration Tips
 
 - **Quote given is not the true price:** The quote given on a route is based on the current liquidity in the pools. Pool liquidity can go up or down at any time and in some cases, pools may close. An example would be oracle-based Lifinity which may stop accepting swaps after a price movement.
-- **Set a Slippage amount to protect yourself:** SlippageBps is your swap protection if the price diverges from the quoted price.
+- **Set a Slippage amount to protect yourself:** [slippageBps](/docs/apis/swap-api#guide) is your swap protection if the price diverges from the quoted price.
 - **Jupiter cannot guess the true spot price or know what is a reasonable price impact for you**. We encourage checking before the swap is made in multiple ways:
   - Get the user to confirm
-  - Check the price impact
-  - Check aginst a price feed like Coingecko, Pyth, or some CEX pricing
+  - Check the [Price Impact](/guides/price-impact-slippage-price-warning) *(Price impact defers from one AMM to another, when Jupiter routing through different AMMs and DEXs, price impact might occur to one or another)*
+  - Check aginst a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or some CEX pricing
 
 
 ## Developer Support
