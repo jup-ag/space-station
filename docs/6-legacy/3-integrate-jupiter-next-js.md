@@ -1,7 +1,7 @@
 ---
 description: Integrate Jupiter into your NextJS App.
 ---
-# Example: NextJS
+# Integrate Jupiter with NextJS
 
 Use the API in your own NextJS UI.
 

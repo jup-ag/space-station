@@ -1,7 +1,7 @@
 ---
 description: Integrate Jupiter into your React App.
 ---
-# Example: React-Hook
+# Integrate Jupiter into your React App
 
 Use the React-Hook if you'd like to embed Jupiter into your own React UI.
 

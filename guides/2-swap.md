@@ -1,5 +1,5 @@
 ---
-title: Swap
+title: How to Swap
 ---
 
 *A community guide to swapping on Jupiter's dApp.*
