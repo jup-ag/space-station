@@ -1,3 +1,6 @@
+---
+description: Jupiter Stats API
+---
 # Display Jupiter Stats
 
 - Get all tickers (*cached for every 2-5 mins*):  https://stats.jup.ag/coingecko/tickers

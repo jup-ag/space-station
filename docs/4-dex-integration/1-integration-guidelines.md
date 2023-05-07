@@ -1,3 +1,6 @@
+---
+description: Guidelines on getting your DEX / AMM into Jupiter
+---
 # Integration Guidelines
 
 ## Overview
@@ -6,7 +9,7 @@ Jupiter is one of the most widely integrated protocols, so a lot of work is invo
 
 Our top priority is securing best prices, best token selection for our users, so we will focus on DEXes that will bring the most benefits to our users.
 
-:::tip We do not charge fees for integration.
+:::tipWe do not charge fees for integration.
 :::
 
 ## Guidelines

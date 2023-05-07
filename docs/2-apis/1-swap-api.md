@@ -1,3 +1,6 @@
+---
+description: Recommended way to interact with Jupiter
+---
 # Swap API (Recommended)
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:

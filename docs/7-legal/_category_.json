@@ -1,6 +1,7 @@
 {
   "label": "Legal",
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "legal"
   }
 }

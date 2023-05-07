@@ -1,8 +1,11 @@
+---
+description: Interact with Jupiter with Javascript
+---
 # Swap SDK
 
 ## Integrating Jupiter with SDK
 
-We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits -- see the API page for details.
+We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits -- see the [API page](/docs/apis/swap-api) for details.
 
 A more structured code example for this guide can be found [here](https://github.com/jup-ag/jupiter-core-example).
 
@@ -77,19 +80,19 @@ export const USER_PRIVATE_KEY = bs58.decode(WALLET_PRIVATE_KEY);
 export const USER_KEYPAIR = Keypair.fromSecretKey(USER_PRIVATE_KEY);
 
 const main = async () => {
-    // ...
+  // ...
 
-    //  Load Jupiter
-    const jupiter = await Jupiter.load({
-      connection,
-      cluster: ENV,
-      user: USER_KEYPAIR, // or public key
-      // platformFeeAndAccounts:  NO_PLATFORM_FEE,
-      // routeCacheDuration: CACHE_DURATION_MS
-      // wrapUnwrapSOL: true (default) | false
-    });
+  //  Load Jupiter
+  const jupiter = await Jupiter.load({
+    connection,
+    cluster: ENV,
+    user: USER_KEYPAIR, // or public key
+    // platformFeeAndAccounts:  NO_PLATFORM_FEE,
+    // routeCacheDuration: CACHE_DURATION_MS
+    // wrapUnwrapSOL: true (default) | false
+  });
 
-    // ...
+  // ...
 }
 ```
 
@@ -118,11 +121,11 @@ The route map identifies what tokens you can swap to given an input token. The r
 
 ```js
 const main = async () => {
-    // ...
+  // ...
 
-    const routeMap: Map<string, string[]> = jupiter.getRouteMap()
+  const routeMap: Map<string, string[]> = jupiter.getRouteMap()
 
-    // ...
+  // ...
 };
 ```
 
@@ -132,13 +135,13 @@ const main = async () => {
 
 ```js
 export interface Token {
-    chainId: number; // 101,
-    address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
-    symbol: string; // 'USDC',
-    name: string; // 'Wrapped USDC',
-    decimals: number; // 6,
-    logoURI: string; // 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW/logo.png',
-    tags: string[]; // [ 'stablecoin' ]
+  chainId: number; // 101,
+  address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  symbol: string; // 'USDC',
+  name: string; // 'Wrapped USDC',
+  decimals: number; // 6,
+  logoURI: string; // 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW/logo.png',
+  tags: string[]; // [ 'stablecoin' ]
 }
 ```
 
@@ -178,17 +181,17 @@ const INPUT_MINT_ADDRESS = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 const OUTPUT_MINT_ADDRESS = "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
 
 const main = async () => {
-    // ...
+  // ...
 
-    // Get routeMap, which maps each tokenMint and their respective tokenMints that are swappable
-    const routeMap = jupiter.getRouteMap();
+  // Get routeMap, which maps each tokenMint and their respective tokenMints that are swappable
+  const routeMap = jupiter.getRouteMap();
 
-    // If you know which input/output pair you want
-    const inputToken = tokens.find((t) => t.address == INPUT_MINT_ADDRESS);
-    const outputToken = tokens.find((t) => t.address == OUTPUT_MINT_ADDRESS);
-    // Alternatively, check step 4
+  // If you know which input/output pair you want
+  const inputToken = tokens.find((t) => t.address == INPUT_MINT_ADDRESS);
+  const outputToken = tokens.find((t) => t.address == OUTPUT_MINT_ADDRESS);
+  // Alternatively, check step 4
 
-    // ...
+  // ...
 }
 ```
 
@@ -263,26 +266,26 @@ const amount = inputAmount * (10 ** inputTokenInfo.decimals); // Amount to send 
 
 ```js
 const main = async () => {
-    // ...
+  // ...
 
-    // Routes are sorted based on outputAmount, so ideally the first route is the best.
-    bestRoute = routes.routesInfos[0]
-    const { execute } = await jupiter.exchange({
-      routeInfo: bestRoute
-    });
+  // Routes are sorted based on outputAmount, so ideally the first route is the best.
+  bestRoute = routes.routesInfos[0]
+  const { execute } = await jupiter.exchange({
+    routeInfo: bestRoute
+  });
 
-    // Execute swap
-    const swapResult: any = await execute(); // Force any to ignore TS misidentifying SwapResult type
+  // Execute swap
+  const swapResult: any = await execute(); // Force any to ignore TS misidentifying SwapResult type
 
-    if (swapResult.error) {
-      console.log(swapResult.error);
-    } else {
-      console.log(`https://explorer.solana.com/tx/${swapResult.txid}`);
-      console.log(`inputAddress=${swapResult.inputAddress.toString()} outputAddress=${swapResult.outputAddress.toString()}`);
-      console.log(`inputAmount=${swapResult.inputAmount} outputAmount=${swapResult.outputAmount}`);
-    }
+  if (swapResult.error) {
+    console.log(swapResult.error);
+  } else {
+    console.log(`https://explorer.solana.com/tx/${swapResult.txid}`);
+    console.log(`inputAddress=${swapResult.inputAddress.toString()} outputAddress=${swapResult.outputAddress.toString()}`);
+    console.log(`inputAmount=${swapResult.inputAmount} outputAmount=${swapResult.outputAmount}`);
+  }
 
-    // ...
+  // ...
 }
 ```
 
