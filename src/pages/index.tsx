@@ -150,7 +150,7 @@ export default function Home(): JSX.Element {
                     We help you get to space with our range of products.{" "}
                     <a href="https://jup.ag">Our main site</a> has swaps and
                     limit orders ready for you. If you're a developer, check out
-                    our APIs and Web Hooks, which can help you compose
+                    our APIs and React Hooks, which can help you compose
                     experiences with swap and pricing data, in various
                     integration formats.
                   </p>

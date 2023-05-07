@@ -28,6 +28,7 @@ const OpenbookSVG = "/svg/openbook.svg";
 const OasisSVG = "/svg/oasis.svg";
 const BonkSwapPNG = "/svg/bonkswap.png";
 const SymmetrySVG = "/svg/symmetry.svg";
+const PhoenixSVG = "/svg/phoenix.svg";
 
 const PoolProviderLogoMap: Record<string, any> = {
   Orca: OrcaSVG,
@@ -54,6 +55,7 @@ const PoolProviderLogoMap: Record<string, any> = {
   "Marco Polo": OasisSVG,
   BonkSwap: BonkSwapPNG,
   Symmetry: SymmetrySVG,
+  Phoenix: PhoenixSVG,
 };
 
 // Rename the AMMs that have rebranded
@@ -62,7 +64,7 @@ const REBRAND_NAMES: Record<string, string> = {
 };
 
 // Use this to hide the AMMs that are not ready to be shown
-const HIDE_AMMS: string[] = ["Phoenix"];
+const HIDE_AMMS: string[] = [];
 
 const getFrequencyText = (mode: Mode) =>
   mode === "day" ? `24H` : mode === "week" ? `Weekly` : `Monthly`;
