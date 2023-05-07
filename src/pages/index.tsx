@@ -133,7 +133,7 @@ export default function Home(): JSX.Element {
             <section className="mt-[84px] sm:mt-[120px] text-center sm:text-left flex flex-col md:flex-row items-center gap-[50px]">
                 <div className="w-full">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    <GradientText>All about </GradientText> Jupiter 🛸
+                    All about <GradientText> Jupiter </GradientText>🛸
                   </h2>
                   <p className="mt-4 text-lg font-medium">
                     You can find user guides, developer docs and learn more about our community on this site. 
@@ -226,7 +226,7 @@ export default function Home(): JSX.Element {
             <div className="max-w-content mx-auto">
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  The JUP Promise: Best Price, Best UX, Best Tokens
+                <GradientText>The JUP Promise:</GradientText> Best Price, Best UX, Best Tokens
                 </h2>
                 <p className="mt-6 text-lg">
                   The JUP Promise is about relentlessly executing
