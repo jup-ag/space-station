@@ -1,7 +1,6 @@
 ---
-sidebar_position: 2
+description: Integrate Jupiter into your React App.
 ---
-
 # Example: React-Hook
 
 Use the React-Hook if you'd like to embed Jupiter into your own React UI.
@@ -29,7 +28,53 @@ import { JupiterProvider, useJupiter } from "@jup-ag/react-hook";
 
 ### Create a React component
 
-Tab
+#### React
+
+```js
+import React, { useEffect, useState } from "react";
+
+const JupiterApp = () => {
+  return (
+    <>
+      <div style={{ fontWeight: '600', fontSize: 16, marginTop: 24 }}>
+        Hook example
+      </div>
+      <div>Number of tokens:</Text>
+      <div>Number of input tokens</Text>
+      <div>Possible number of routes:</Text>
+      <div>
+        Best quote:
+      </div>
+    </>
+  )
+}
+
+export default JupiterApp;
+```
+
+#### React Native
+
+```js
+import React, { useEffect, useState } from "react";
+import { Text } from "react-native";
+
+const JupiterApp = () => {
+  return (
+    <>
+      <Text style={{ fontWeight: '600', fontSize: 16, marginTop: 24 }}>
+        Hook example
+      </Text>
+      <Text>Number of tokens:</Text>
+      <Text>Number of input tokens</Text>
+      <Text>Possible number of routes:</Text>
+      <Text>
+        Best quote:
+      </Text>
+    </>
+  )
+}
+export default JupiterApp;
+```
 
 ### Fetch the list of tokens
 
@@ -37,13 +82,13 @@ Tab
 
 ```js
 export interface Token {
-    chainId: number; // 101,
-    address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
-    symbol: string; // 'USDC',
-    name: string; // 'Wrapped USDC',
-    decimals: number; // 6,
-    logoURI: string; // 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW/logo.png',
-    tags: string[]; // [ 'stablecoin' ]
+  chainId: number; // 101,
+  address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  symbol: string; // 'USDC',
+  name: string; // 'Wrapped USDC',
+  decimals: number; // 6,
+  logoURI: string; // 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW/logo.png',
+  tags: string[]; // [ 'stablecoin' ]
 }
 ```
 
@@ -53,13 +98,13 @@ export interface Token {
 import { TOKEN_LIST_URL } from "@jup-ag/core";
 
 const JupiterApp = () => {
-    const [tokens, setTokens] = useState<Token[]>([])
-    useEffect(() => {
-        // Fetch token list from Jupiter API
-        fetch(TOKEN_LIST_URL[ENV])
-          .then(response => response.json())
-          .then(result => setTokens(result))
-      }, [])
+  const [tokens, setTokens] = useState<Token[]>([])
+  useEffect(() => {
+    // Fetch token list from Jupiter API
+    fetch(TOKEN_LIST_URL[ENV])
+      .then(response => response.json())
+      .then(result => setTokens(result))
+  }, [])
   // ...
 }
 
@@ -74,7 +119,7 @@ import { TOKEN_LIST_URL } from "@jup-ag/core";
 const JupiterApp = () => {
   const [tokens, setTokens] = useState<Token[]>([])
   console.log(tokens) // Look for tokens
-  
+
   const [inputMint] = useState<PublicKey>(new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"))
   const [outputMint] = useState<PublicKey>(new PublicKey("Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"))
   // ...
@@ -97,7 +142,7 @@ const JupiterApp = () => {
         .then(response => response.json())
         .then(result => setTokens(result))
     }, [])
-    
+
   // Attach Jupiter hook
   const jupiter = useJupiter({
     amount: JSBI.BigInt(1 * (10 ** 6)), // raw input amount of tokens
@@ -106,7 +151,7 @@ const JupiterApp = () => {
     slippage: 1, // 1% slippage
     debounceTime: 250, // debounce ms time before refresh
   })
-  
+
   // ...
 }
 
@@ -116,6 +161,7 @@ export default JupiterApp;
 :::info How do you calculate the amount to pass in?
 Every token have their own decimals place, in our example, both USDC and USDT pairs have their decimals place at **6**.
 Assuming in the UI, user entered a value of **1 USDC**, we can derive the amount to pass into Jupiter to be **1** multiplied by (**10** exponent of **6**)
+
 ```js
 const inputAmount = 1; // UI input
 const inputTokenInfo = tokens.find(item => item.address === "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v") // Token info
@@ -129,9 +175,9 @@ Tab
 
 ### Performing a swap
 
-Once you have acquired all the meaningful information from the Jupiter instance, it is time we perform a swap with the exchange() function. 
+Once you have acquired all the meaningful information from the Jupiter instance, it is time we perform a swap with the exchange() function.
 
-:::caution 
+:::caution
 You would need a `wallet` and `connection` instance to perform a swap, the easiest way to interface with your wallet (Phantom, Sollet, Solflare...) would be the use of [@solana/wallet-adapter-react library](https://github.com/solana-labs/wallet-adapter), visit the [documentation](https://github.com/solana-labs/wallet-adapter/blob/master/APP.md) for more info.
 :::
 

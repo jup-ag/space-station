@@ -1,3 +1,6 @@
+---
+description: How to get your token on Jupiter for swap
+---
 # Getting Your Token on Jupiter
 
 **To get your token listed**

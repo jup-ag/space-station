@@ -155,7 +155,7 @@ export default function Home(): JSX.Element {
                     integration formats.
                   </p>
                   <Link
-                    href="/docs/overview"
+                    href="/docs"
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}

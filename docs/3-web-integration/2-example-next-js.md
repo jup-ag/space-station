@@ -1,7 +1,6 @@
 ---
-sidebar_position: 2
+description: Integrate Jupiter into your NextJS App.
 ---
-
 # Example: NextJS
 
 Use the API in your own NextJS UI.

@@ -1,3 +1,6 @@
+---
+description: Convert any token to USDC
+---
 # Payments API (Alpha)
 
 Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount.
@@ -112,5 +115,6 @@ transaction.message = message.compileToV0Message(addressLookupTableAccounts);
 // ...Send to Alice to sign then send the transaction
 ```
 
-:::tip If you want to add your own fees, check out: [Adding Your Own Fees](/docs/developer-topics/adding-your-own-fees)
+:::tip
+If you want to add your own fees, check out: [Adding Your Own Fees](/docs/developer-topics/adding-your-own-fees)
 :::

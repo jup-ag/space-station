@@ -1,3 +1,6 @@
+---
+description: Cross Program Invocation Integration with Jupiter
+---
 # CPI/Smart Contract Integration
 
 Cross Program Invocation Integration with Jupiter.

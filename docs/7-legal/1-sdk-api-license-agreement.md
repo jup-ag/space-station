@@ -1,6 +1,6 @@
 # SDK & API License Agreement
 
-*Updated as of Feb 24, 2022*
+*Last updated: Feb 24, 2022*
 
 **IMPORTANT**: This Jupiter SDK & API License Agreement ("Agreement") is a legally binding contract between you, as Licensee ("You" or "Licensee") and Jupiter exchanges and applies to your use of the Jupiter SDK or API, as defined herein, available through https://docs.jup.ag (collectively the "Service"). The Service includes an Application Programming Interface ("API" or "Program") and a Software Development Kit (“SDK”), which is further discussed and defined below. If you do not agree to be bound by the terms and conditions of this Agreement, please do not proceed with the use of Service, the API, or the SDK.
 

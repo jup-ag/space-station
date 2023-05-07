@@ -131,8 +131,7 @@ const config = {
             position: "left",
           },
           {
-            type: "doc",
-            docId: "overview", //.md file name of starting page
+            to: "/docs",
             position: "left",
             label: "Docs",
           },
@@ -151,11 +150,6 @@ const config = {
             label: "Blog",
             position: "left",
           },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
           {
             type: "html",
             position: "right",
@@ -169,43 +163,6 @@ const config = {
           },
         ],
       },
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-      //     {
-      //       title: 'Docs',
-      //       items: [
-      //         {
-      //           label: 'Documentation',
-      //           to: '/docs/overview',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'Community',
-      //       items: [
-      //         {
-      //           label: 'Discord',
-      //           href: 'https://discord.gg/jup',
-      //         },
-      //         {
-      //           label: 'Twitter',
-      //           href: 'https://twitter.com/JupiterExchange',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'More',
-      //       items: [
-      //         {
-      //           label: 'Blog',
-      //           to: '/blog',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `Jupiter: The Key Liquidity Aggregator and Swap Infrastructure for Solana`,
-      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

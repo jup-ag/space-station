@@ -1,3 +1,6 @@
+---
+description: List only verified tokens on your DApp.
+---
 # Token List API
 
 The Jupiter Token List API is an **open, collaborative, and dynamic** token list to make trading on Solana more transparent and safer for users and developers.
@@ -28,18 +31,18 @@ For your convenience, we packed it into 2 endpoints for you to choose from.
 
 Each token can have 1 or more of the following:
 
-- [`Tags`] Old-registry: From the archived [Solana Labs token list repo](https://github.com/solana-labs/token-list). These tokens were added to the repo before July 2022. As this is the original token list in Solana, the tokens here are generally more recognised.
-- [`Tags`] Community: Attested by Jupiter's communities. This includes newer and widely traded tokens created after the old-registry was archived like Bonk and Hades.
-- [`Tags`] [Wormhole](https://github.com/wormhole-foundation/wormhole-token-list/blob/main/content/dest_solana.md): Bridged assets to Solana via wormhole
-- [`Tags`] [Solana-fm](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list
-- [`Tags`] No tags / Unknown ("tags:[ ]"): Assets that were [picked up automatically by Jupiter](/docs/developer-topics/getting-tokens-on-jup).
-- [`Extensions`] isBanned: Generally fake tokens trying to impersonate another project (E.g. fake wSOL), flagged by our community.
+- `tags` Old-registry: From the archived [Solana Labs token list repo](https://github.com/solana-labs/token-list). These tokens were added to the repo before July 2022. As this is the original token list in Solana, the tokens here are generally more recognised.
+- `tags` Community: Attested by Jupiter's communities. This includes newer and widely traded tokens created after the old-registry was archived like Bonk and Hades.
+- `tags` [Wormhole](https://github.com/wormhole-foundation/wormhole-token-list/blob/main/content/dest_solana.md): Bridged assets to Solana via wormhole
+- `tags` [SolanaFM](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list
+- `tags` No tags / Unknown ("tags:[ ]"): Assets that were [picked up automatically by Jupiter](/docs/developer-topics/getting-tokens-on-jup).
+- `extensions` isBanned: Generally fake tokens trying to impersonate another project (E.g. fake wSOL), flagged by our community.
 
 ## Our UI on Jup.ag
 
 On our UI, we have 2 modes. The default that all users land on is the "strict" mode, without unknown and banned tokens. Users can choose to toggle on the full list with the "all" mode at the bottom of the token selection modal.
 
-Image
+![token list](token-list.jpg)
 
 ## Community Validation for Strict Mode (BETA)
 
