@@ -611,10 +611,7 @@ export default function Home(): JSX.Element {
               Are you building something cool?
               <br></br>
               Let us know or checkout our docs on{" "}
-              <a
-                href="/docs/overview"
-                className="underline text-black font-bold"
-              >
+              <a href="/docs" className="underline text-black font-bold">
                 how to get started.
               </a>
             </div>

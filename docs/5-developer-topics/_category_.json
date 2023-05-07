@@ -1,6 +1,7 @@
 {
   "label": "Developer Topics",
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "/developer-topics"
   }
 }

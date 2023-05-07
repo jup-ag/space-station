@@ -1,6 +1,7 @@
 {
   "label": "DEXes & AMM Integration",
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "dex-integration"
   }
 }

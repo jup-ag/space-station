@@ -1,6 +1,7 @@
 {
   "label": "APIs",
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "/apis"
   }
 }

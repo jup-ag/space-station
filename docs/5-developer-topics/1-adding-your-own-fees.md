@@ -1,8 +1,12 @@
+---
+description: Adding your own platfrom fee to Jupiter swap
+---
 # Adding Your Own Fees
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
 
-:::info Jupiter takes zero fees.
+:::info Zero Fees
+Jupiter doesn't take any fees.
 :::
 
 ## Usage

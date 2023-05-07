@@ -1,21 +1,24 @@
+---
+description: How to get your DEX / AMM into Jupiter via Rust
+---
 # Rust Integration
 
 To facilitate integration of your DEX with [@jup-ag/core](https://www.npmjs.com/package/@jup-ag/core) you need to provide a DEX SDK that allow us to implement the following interface:
 
-```js
+```rust
 pub trait Amm {
-    // Label of your Amm
-    fn label(&self) -> String;
-    // Identifier for your amm, should be your pool id
-    fn key(&self) -> Pubkey;
-    // The token mints that the pool support for swapping
-    fn get_reserve_mints(&self) -> Vec<Pubkey>;
-    // Related accounts to get the quote for swapping and creating ix
-    fn get_accounts_to_update(&self) -> Vec<Pubkey>;
-    // Picks data necessary to update it's internal state
-    fn update(&mut self, accounts_map: &HashMap<Pubkey, Vec<u8>>) -> Result<()>;
-    // Compute the quote from internal state
-    fn quote(&self, quote_params: &QuoteParams) -> Result<Quote>;
+  // Label of your Amm
+  fn label(&self) -> String;
+  // Identifier for your amm, should be your pool id
+  fn key(&self) -> Pubkey;
+  // The token mints that the pool support for swapping
+  fn get_reserve_mints(&self) -> Vec<Pubkey>;
+  // Related accounts to get the quote for swapping and creating ix
+  fn get_accounts_to_update(&self) -> Vec<Pubkey>;
+  // Picks data necessary to update it's internal state
+  fn update(&mut self, accounts_map: &HashMap<Pubkey, Vec<u8>>) -> Result<()>;
+  // Compute the quote from internal state
+  fn quote(&self, quote_params: &QuoteParams) -> Result<Quote>;
 }
 ```
 

@@ -1,10 +1,9 @@
 ---
-sidebar_position: 1
+description: Easiest way to add Jupiter to your DApp.
 ---
-
 # Jupiter Terminal
 
-![jup_terminal](jup_terminal.jpeg)
+![Jupiter Terminal](terminal.jpeg)
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code.
 
@@ -13,7 +12,8 @@ Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-t
 - Repo: https://github.com/jup-ag/terminal
 :::
 
-:::caution Mode is Deprecated in v1. Use formProps instead.
+:::caution
+Mode is Deprecated in v1. Use formProps instead.
 :::
 
 ## Core Features
@@ -47,7 +47,7 @@ Assign the attribute data-preload to the script tag, the full application will b
 <script src="https://terminal.jup.ag/main-v1.js" data-preload />
 ```
 
-Then, 
+Then,
 
 ```js
 // It is recommended that you use your own RPC endpoint.
@@ -56,7 +56,7 @@ const SOLANA_RPC_ENDPOINT = "https://neat-hidden-sanctuary.solana-mainnet.discov
 window.Jupiter.init({ endpoint: 'https://api.mainnet-beta.solana.com' });
 ```
 
-:::info 
+:::info
 Always make sure that you are using your own RPC endpoint. The SOLANA_RPC_ENDPOINT above example may not work anymore.
 :::
 
@@ -87,29 +87,11 @@ If your user is not connected, Jupiter Terminal has several built-in wallets tha
 
 ## Jupiter Terminal Multi-mode
 
-There are currently 3 modes to integrate Jupiter Terminal into your dApp. 
+There are currently 3 modes to integrate Jupiter Terminal into your dApp.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-
-<Tabs>
-  <TabItem value="Modal Mode" label="Modal Mode" default>
-
-
-
-    By default, Jupiter renders as a modal and takes up the whole screen.
-    
-  </TabItem>
-  <TabItem value="Integrated Mode" label="Integrated Mode">
-
-    Integrated Mode renders Jupiter Terminal as a part of your dApp.
-  </TabItem>
-  <TabItem value="Widget Mode" label="Widget Mode">
-    Widget mode renders Jupiter Terminal as a widget that can be placed in different positions.
-
-  </TabItem>
-</Tabs>
+* `Modal`: By default, Jupiter renders as a modal and takes up the whole screen.
+* `Integrated`: Renders Jupiter Terminal as a part of your dApp.
+* `Widget`: renders Jupiter Terminal as a widget that can be placed in different positions.
 
 ### formProps (Available on v1)
 
