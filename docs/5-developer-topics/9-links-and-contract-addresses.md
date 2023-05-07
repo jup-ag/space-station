@@ -1,7 +1,7 @@
 ---
-description: Helpful links and contract addresses
+title: Helpful links and contract addresses
 ---
-# Links and Contract Addresses
+# Helpful links and contract addresses
 
 ## SDKs & APIs
 

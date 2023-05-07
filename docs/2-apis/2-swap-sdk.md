@@ -1,9 +1,8 @@
 ---
-description: Interact with Jupiter with Javascript
+title: Swap SDK — Interact with Jupiter with Javascript
 ---
-# Swap SDK
 
-## Integrating Jupiter with SDK
+## Swap SDK: Integrating Jupiter with Javascript
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits -- see the [API page](/docs/apis/swap-api) for details.
 

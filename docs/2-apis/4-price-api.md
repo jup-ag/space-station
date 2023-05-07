@@ -1,7 +1,7 @@
 ---
-description: On-chain price for any token.
+title: Price API — Get on-chain price for any token.
 ---
-# Price API
+# Price API: Get on-chain price for any token
 
 The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible, with options for customising the comparison token and liquidity depth.
 

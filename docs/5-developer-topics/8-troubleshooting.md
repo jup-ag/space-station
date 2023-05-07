@@ -1,7 +1,7 @@
 ---
-description: Many common questions about using the Jupiter SDK / API
+description: Common questions about using the Jupiter SDK / API
 ---
-# Troubleshooting
+# Common questions about using the Jupiter SDK / API
 
 ## Frontend
 

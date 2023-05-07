@@ -1,7 +1,7 @@
 ---
-description: Compose Limit Order with the SDK
+title: Compose Limit Order with the SDK
 ---
-# Limit Orders with SDK
+# Compose Limit Order with the SDK
 
 ## Program Address
 

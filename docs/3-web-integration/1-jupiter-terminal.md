@@ -1,7 +1,7 @@
 ---
 description: Easiest way to add Jupiter to your DApp.
 ---
-# Jupiter Terminal
+# Jupiter Terminal: Easiest way to add Jupiter to your DApp
 
 ![Jupiter Terminal](terminal.jpeg)
 

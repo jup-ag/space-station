@@ -1,7 +1,7 @@
 ---
-description: How to get your token on Jupiter for swap
+title: How to get your token on Jupiter for Swap
 ---
-# Getting Your Token on Jupiter
+# How to get your token on Jupiter for Swap
 
 **To get your token listed**
 

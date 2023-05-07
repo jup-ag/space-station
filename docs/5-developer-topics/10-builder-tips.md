@@ -1,7 +1,7 @@
 ---
-description: General builder tips on Solana
+title: General builder tips on Solana
 ---
-# Builder Tips
+# General builder tips on Solana
 
 **New to building on Solana?**
 
