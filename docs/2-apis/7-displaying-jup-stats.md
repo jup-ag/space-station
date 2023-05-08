@@ -1,5 +1,5 @@
 ---
-sidebar_label: Display Jupiter Stats
+sidebar_label: Jupiter Stats
 description: Display Jupiter Stats
 ---
 # Display Jupiter Stats

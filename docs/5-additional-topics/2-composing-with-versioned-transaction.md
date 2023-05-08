@@ -35,7 +35,7 @@ We automatically construct the transactions to use the correct Jupiter lookup ta
 
 ## Example:  Add your own fixed referral fee to Jupiter transactions
 
-:::tip You can easily add a custom referral fee with `feeBps`, check out [Adding Your Own Fees](./).
+:::tip You can easily add a custom referral fee with `feeBps`, check out [Adding Your Own Fees](./adding-your-own-fees).
 :::
 
 **1. Get the Jupiter swap transaction from the API.**

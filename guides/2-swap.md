@@ -73,7 +73,7 @@ This is because between the time you get a quote and the time you execute the tr
 8. **Swap Settings:**
    1. **Direct Route Only:** Using Direct Route Only, ensure that it will be a single transaction submitted to a single pool, which will limit a lot of intermediate tokens which filtered out a lot of other viable routes.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](/guides/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
-   3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/developer-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
+   3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
 
 ![Jup Swap 2](//img/jup-swap/jup-swap2.png)
 
@@ -88,7 +88,7 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 8](//img/jup-swap/jup-swap8.png)
 
-:::tip [Token List](/docs/apis/token-list-api)
+:::tip [Token List](/docs/apis/token-list/token-list-api)
 By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that is available to trade.
 :::
 

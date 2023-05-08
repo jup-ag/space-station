@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Price impact, slippage, warnings"
+sidebar_label: "Price Impact, Slippage, Warnings"
 description: "Understand Price Impact, Slippage and Price Warnings"
 ---
 
