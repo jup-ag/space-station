@@ -216,7 +216,7 @@ export default function Home(): JSX.Element {
                     <GradientText>Ultimate CEX Replacement</GradientText> 🚀
                   </h2>
                   <p className="mt-6 text-lg">
-                    We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's commitment tp product excellence, you'll never have to go back to CEXes again.
+                    We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's commitment to product excellence, you'll never have to go back to CEXes again.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                     {tweetsCexReplacement.map((tweet, index) => (
