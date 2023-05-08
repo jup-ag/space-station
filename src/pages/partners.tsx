@@ -593,7 +593,7 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title={`Show case`}
+      title={`Partners`}
       description="Description will go into a meta tag in <head />"
     >
       <div className="my-10 container mt-32 mb-28">
