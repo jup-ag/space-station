@@ -177,43 +177,18 @@ export default function Home(): JSX.Element {
                       />
                     </svg>
                   </Link>
-                  {/* <Link
-  href="/community"
-  style={{
-    boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
-  }}
-  className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
->
-  <span>Community</span>
-  <svg
-    width="20"
-    height="41"
-    viewBox="0 0 20 21"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="group-hover:translate-x-1 duration-300"
-  >
-    <path
-      d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
-      stroke="#19232D"
-      strokeWidth="1.66667"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-</Link> */}
                 </div>
               </span>
               <p className="mt-5 opacity-75 text-lg font-medium">
 
               </p>
-            </section>
+            </section>       
             <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    Building the{" "}
-                    <GradientText>Ultimate CEX Replacement</GradientText> 🚀
+                    The{" "}
+                    <GradientText>Ultimate CEX Replacement</GradientText> 🚀 on Solana
                   </h2>
                   <p className="mt-6 text-lg">
                     We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's commitment to product excellence, you'll never have to go back to CEXes again.
