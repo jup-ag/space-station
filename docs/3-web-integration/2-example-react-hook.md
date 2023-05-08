@@ -1,4 +1,5 @@
 ---
+sidebar_label: "Example: React Hook"
 description: Integrate Jupiter into your React App.
 ---
 # Integrate Jupiter into your React App

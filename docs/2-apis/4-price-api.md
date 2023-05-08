@@ -1,5 +1,6 @@
 ---
-title: Price API — Get on-chain price for any token.
+sidebar_label: Price API
+description: Get on-chain price for any token
 ---
 # Price API: Get on-chain price for any token
 

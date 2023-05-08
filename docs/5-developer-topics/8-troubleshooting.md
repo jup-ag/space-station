@@ -1,7 +1,8 @@
 ---
+sidebar_label: "Troubleshooting"
 description: Common questions about using the Jupiter SDK / API
 ---
-# Common questions about using the Jupiter SDK / API
+# Troubleshooting: Common Questions About Using the Jupiter SDK / API
 
 ## Frontend
 

@@ -1,5 +1,6 @@
 ---
-title: Token List API — List only verified tokens on your DApp.
+sidebar_label: Token List API
+description: List only verified tokens on your DApp
 ---
 # Token List API: Get validated tokens on your DApp
 

@@ -1,7 +1,8 @@
 ---
-title: Swap API — Recommended way to interact with Jupiter
+sidebar_label: "Swap API (Recommended)"
+description: "Recommended way to interact with Jupiter"
+title: "Swap API (Recommended)"
 ---
-# Swap API: Recommended way to interact with Jupiter
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:
 

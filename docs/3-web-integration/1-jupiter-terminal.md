@@ -1,4 +1,5 @@
 ---
+sidebar_label: "Jupiter Terminal (Recommended)"
 description: Easiest way to add Jupiter to your DApp.
 ---
 # Jupiter Terminal: Easiest way to add Jupiter to your DApp

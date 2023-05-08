@@ -1,7 +1,8 @@
 ---
-title: Use Versioned Transaction with Jupiter
+sidebar_label: "Composing with Versioned Txns"
+description: Use Versioned Transaction with Jupiter
 ---
-# Use Versioned Transaction with Jupiter
+# Composing with Versioned Transaction with Jupiter
 
 ![versioned_txn](jup_vt.jpeg)
 
