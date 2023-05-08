@@ -1,3 +1,9 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ModalModeImgUrl from './modal-mode.jpg';
+import IntegratedModeImgUrl from './integrated-mode.jpg';
+import WidgetModeImgUrl from './widget-mode.jpg';
+
 ---
 description: Easiest way to add Jupiter to your DApp.
 ---
@@ -92,6 +98,54 @@ There are currently 3 modes to integrate Jupiter Terminal into your dApp.
 * `Modal`: By default, Jupiter renders as a modal and takes up the whole screen.
 * `Integrated`: Renders Jupiter Terminal as a part of your dApp.
 * `Widget`: renders Jupiter Terminal as a widget that can be placed in different positions.
+
+<div className="section">
+<Tabs>
+  <TabItem value="modal" label="Modal Mode" default>
+    <img
+      src={ModalModeImgUrl}
+      alt="modalModeImg"
+    />
+    <p style={{textAlign: "center", fontSize: "12px"}}>Jupiter Terminal: Modal Mode</p>
+    <p>By default, Jupiter renders as a modal and takes up the whole screen.</p>
+
+  ```js
+  window.Jupiter.init({ displayMode: 'modal' });
+  ```
+  </TabItem>
+  <TabItem value="integrated" label="Integrated Mode">
+    <img
+      src={IntegratedModeImgUrl}
+      alt="integratedModeImg"
+    />
+    <p style={{textAlign: "center", fontSize: "12px"}}>Jupiter Terminal: Integrated Mode</p>
+    <p>Integrated Mode renders Jupiter Terminal as a part of your dApp.</p>
+
+  ```js
+  window.Jupiter.init({ displayMode: 'integrated' });
+  ```
+  </TabItem>
+  <TabItem value="widget" label="Widget Mode">
+    <img
+      src={WidgetModeImgUrl}
+      alt="widgetModeImg"
+    />
+    <p style={{textAlign: "center", fontSize: "12px"}}>Jupiter Terminal: Widget Mode</p>
+    <p>Widget mode renders Jupiter Terminal as a widget that can be placed in different positions.</p>
+
+  ```js
+  window.Jupiter.init({
+    displayMode: 'widget',
+    widgetStyle: {
+      position: 'bottom-right', // 'bottom-left', 'top-left', 'top-right'
+      size: 'default', // 'sm'
+      },
+  });
+  ```
+  </TabItem>
+</Tabs>
+</div>
+
 
 ### formProps (Available on v1)
 
