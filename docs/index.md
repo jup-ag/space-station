@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Overview
+title: Docs Overview
 ---
 
 # Developer Documentation

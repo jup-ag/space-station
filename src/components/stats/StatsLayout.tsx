@@ -16,7 +16,7 @@ export default function StatsLayout({ children }) {
   return (
     <ReactQueryClientProvider>
       <div className="bg-jupiter-light dark:bg-inherit">
-        <Layout>{children}</Layout>
+        <Layout title={`Stats`}>{children}</Layout>
       </div>
     </ReactQueryClientProvider>
   );
