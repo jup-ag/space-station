@@ -20,5 +20,5 @@ https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZf
 :::
 
 :::tip Strict List
-For the safety and convenience of users, we provide a "strict" list API, which shows a smaller set of validated tokens and is the default on our UI. See [Token List API](../apis/token-list-api) for more details. If you want to get your token on the Strict list, refer to the segment on community validation.
+For the safety and convenience of users, we provide a "strict" list API, which shows a smaller set of validated tokens and is the default on our UI. See [Token List API](./token-list-api) for more details. If you want to get your token on the Strict list, refer to the segment on community validation.
 :::

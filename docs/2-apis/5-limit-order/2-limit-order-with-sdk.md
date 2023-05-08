@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Limit Orders with SDK"
+sidebar_label: "Limit Order with SDK"
 description: Compose Limit Order with the SDK
 ---
 # Compose Limit Order with the SDK
