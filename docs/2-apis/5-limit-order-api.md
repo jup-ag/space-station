@@ -110,15 +110,262 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ## Query user open order, order history and trade history
 
-Open API /GET
 
-https://docs.jup.ag/limit-orders/using-limit-orders-api#query-user-open-order-order-history-and-trade-history
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>openOrders</b></p>
+    </div>
+  </summary>
+
+### Parameters
+
+| Query   | Type     | Required |
+|-------------|----------|----------|
+| `wallet`    | string   | Yes      |
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  [​
+    {​
+      "publicKey": "string",​
+      "account": {​
+        "maker": "string",​
+        "inputMint": "string",​
+        "outputMint": "string",​
+        "oriInAmount": 0,​
+        "oriOutAmount": 0,​
+        "inAmount": 0,​
+        "outAmount": 0,​
+        "expiredAt": 0,​
+        "base": "string"​
+      }​
+    }​
+  ​]
+  ```
+
+  </details>
+
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>orderHistory</b></p>
+    </div>
+  </summary>
+
+### Parameters
+
+| Query   | Type     | Required |
+|-------------|----------|----------|
+| `wallet`    | string   | Yes      |
+| `cursor`    | number   | No      |
+| `skip`    | number   | No      |
+| `take`    | number   | No      |
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  [​
+    {​
+      "id": 0,​
+      "orderKey": "string",​
+      "maker": "string",​
+      "inputMint": "string",​
+      "outputMint": "string",​
+      "inAmount": 0,​
+      "oriInAmount": 0,​
+      "outAmount": 0,​
+      "oriOutAmount": 0,​
+      "expiredAt": 0,​
+      "state": "Waiting",​
+      "createTxid": "string",​
+      "cancelTxid": "string",​
+      "updatedAt": "2023-05-05T07:48:36.390Z",​
+      "createdAt": "2023-05-05T07:48:36.390Z"​
+    }​
+​  ]
+  ```
+
+  </details>
+
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
+
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>tradeHistory</b></p>
+    </div>
+  </summary>
+
+### Parameters
+
+| Query   | Type     | Required |
+|-------------|----------|----------|
+| `wallet`    | string   | Yes      |
+| `cursor`    | number   | No      |
+| `skip`    | number   | No      |
+| `take`    | number   | No      |
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  [​
+  {​
+    "id": 0,​
+    "outAmount": 0,​
+    "txid": "string",​
+    "updatedAt": "2023-05-05T07:48:36.390Z",​
+    "createdAt": "2023-05-05T07:48:36.390Z",​
+    "order": {​
+      "id": 0,​
+      "orderKey": "string",​
+      "inputMint": "string",​
+      "outputMint": "string"​
+    }​
+  }​
+​]
+  ```
+
+  </details>
+
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
 
 ## Cancel order
 
-Open API /POST
 
-https://docs.jup.ag/limit-orders/using-limit-orders-api#cancel-order
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>cancelOrders</b></p>
+    </div>
+  </summary>
+
+### Body
+
+```json
+{​
+  "owner": "string",​
+  "feePayer": "string",​
+  "orders": [​
+    "string"​
+  ]​
+​}
+```
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  { "tx": "string"​ }
+  ```
+
+  </details>
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
 
 Deserialize, sign and execute the transaction from the response like here.
 
@@ -132,9 +379,61 @@ Referrers are entitled to a share of 0.1% of referral fees, while the platform c
 
 **1. Create a referral account**
 
-Open API /POST
 
-https://docs.jup.ag/limit-orders/using-limit-orders-api#1.-create-a-referral-account
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>createReferralAccount</b></p>
+    </div>
+  </summary>
+
+### Body
+
+```json
+{​
+  "referral": "string",​
+  "feePayer": "string"​
+​}
+
+```
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+{
+    "tx": "string",
+    "referralAccountPubKey": "string"
+}
+  ```
+
+  </details>
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
 
 Deserialize, sign and execute the transaction from the response like here.
 
@@ -142,9 +441,62 @@ Deserialize, sign and execute the transaction from the response like here.
 
 For every token you would like to collect referral fees in, you need to generate a token account for that. Referral fees are given in the output mint token.
 
-Open API /POST
 
-https://docs.jup.ag/limit-orders/using-limit-orders-api#2.-create-referral-token-accounts
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>createReferralTokenAccount</b></p>
+    </div>
+  </summary>
+
+### Body
+
+```json
+{​
+  "referral": "string",​
+  "mint": "string",​
+  "feePayer": "string"​
+​}
+```
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  {​
+    "tx": "string",​
+    "referralTokenAccountPubKey": "string"​
+  ​}
+
+  ```
+
+  </details>
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
 
 Deserialize, sign and execute the transaction from the response like here.
 
@@ -154,8 +506,59 @@ Once you include your referralPubKey in LimitOrderProvider initialization and ou
 
 **4.  Claim fees**
 
-Open API /POST
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://jup.ag/api/limit/v1/<b>claimReferral</b></p>
+    </div>
+  </summary>
 
-https://docs.jup.ag/limit-orders/using-limit-orders-api#4.-claim-fees
+### Body
+
+```json
+{​
+  "referral": "string",​
+  "mint": "string",​
+  "feePayer": "string"​
+​}
+
+```
+
+### Response
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+  ```json
+  {​
+    "tx": "string"​
+  ​}
+  ```
+
+  </details>
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{​
+  "message": "string",​
+  "code": "string",​
+  "issues": [​
+    {​
+      "message": "string"​
+    }​
+  ]​
+​}
+```
+
+</details>
+</details>
 
 Deserialize, sign and execute the transaction from the response like here.
