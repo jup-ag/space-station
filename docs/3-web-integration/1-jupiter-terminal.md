@@ -1,13 +1,13 @@
+---
+sidebar_label: "Jupiter Terminal (Recommended)"
+description: Easiest way to add Jupiter to your DApp.
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ModalModeImgUrl from './modal-mode.jpg';
 import IntegratedModeImgUrl from './integrated-mode.jpg';
 import WidgetModeImgUrl from './widget-mode.jpg';
 
----
-sidebar_label: "Jupiter Terminal (Recommended)"
-description: Easiest way to add Jupiter to your DApp.
----
 # Jupiter Terminal: Easiest way to add Jupiter to your DApp
 
 ![Jupiter Terminal](terminal.jpeg)
