@@ -125,27 +125,14 @@ export default function Home(): JSX.Element {
                 <p className="mt-5 opacity-75 text-lg font-medium">
                   Welcome to the space station — home for cats curious about Jupiter.
                 </p>
-              </span>
-              <p className="mt-5 opacity-75 text-lg font-medium">
-
-              </p>
-            </section>
-            <section className="mt-[84px] sm:mt-[120px] text-center sm:text-left flex flex-col md:flex-row items-center gap-[50px]">
-                <div className="w-full">
-                  <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    All about <GradientText> Jupiter </GradientText>🛸
-                  </h2>
-                  <p className="mt-4 text-lg font-medium">
-                    You can find user guides, developer docs and learn more about our community on this site. 
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px]">
+                <div className="space-x-4">
 
                   <Link
                     href="/guides"
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
+                    className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4"
                   >
                     <span>User Guides</span>
                     <svg
@@ -170,7 +157,7 @@ export default function Home(): JSX.Element {
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
+                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4"
                   >
                     <span>Developer Docs</span>
                     <svg
@@ -191,50 +178,86 @@ export default function Home(): JSX.Element {
                     </svg>
                   </Link>
                   {/* <Link
-                    href="/community"
-                    style={{
-                      boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
-                    }}
-                    className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
-                  >
-                    <span>Community</span>
-                    <svg
-                      width="20"
-                      height="41"
-                      viewBox="0 0 20 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="group-hover:translate-x-1 duration-300"
-                    >
-                      <path
-                        d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
-                        stroke="#19232D"
-                        strokeWidth="1.66667"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link> */}
+  href="/community"
+  style={{
+    boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
+  }}
+  className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-sm px-[14px] py-2 space-x-2 mt-4"
+>
+  <span>Community</span>
+  <svg
+    width="20"
+    height="41"
+    viewBox="0 0 20 21"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="group-hover:translate-x-1 duration-300"
+  >
+    <path
+      d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
+      stroke="#19232D"
+      strokeWidth="1.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+</Link> */}
                 </div>
-                </div>
-                <img
-                  src="/img/home/ufo.png"
-                  className="flex-shrink-0 w-[200px] sm:w-[288px]"
-                />
-              </section>
-              <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
-            <div className="max-w-content mx-auto">
+              </span>
+              <p className="mt-5 opacity-75 text-lg font-medium">
+
+              </p>
+            </section>
+            {/* <section className="mt-[84px] sm:mt-[120px] text-center sm:text-left flex flex-col md:flex-row items-center gap-[50px]">
+              <div className="w-full">
+                <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
+                  All about <GradientText> Jupiter </GradientText>🛸
+                </h2>
+                <p className="mt-4 text-lg font-medium">
+                  You can find user guides, developer docs and learn more about our community on this site.
+                </p>
+
+              </div>
+              <img
+                src="/img/home/ufo.png"
+                className="flex-shrink-0 w-[200px] sm:w-[288px]"
+              />
+            </section> */}
+            <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
+              <div className="max-w-content mx-auto">
+                <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
+                  <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
+                    <GradientText>The JUP Promise:</GradientText> Best Price, Best UX, Best Tokens
+                  </h2>
+                  <p className="mt-6 text-lg">
+                    The JUP Promise is about relentlessly executing
+                    and delivering on the basics. But don't take our word for it.
+                    Hear it from the community:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
+                    {tweetsJupPromise.map((tweet, index) => (
+                      <div key={index}>
+                        <BrowserOnly>
+                          {() => {
+                            const TweetCard = require("react-tweet-card").default;
+                            return <TweetCard {...tweet} theme="dim" />;
+                          }}
+                        </BrowserOnly>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                <GradientText>The JUP Promise:</GradientText> Best Price, Best UX, Best Tokens
+                  Building the{" "}
+                  <GradientText>Ultimate CEX Replacement</GradientText> 🚀
                 </h2>
                 <p className="mt-6 text-lg">
-                  The JUP Promise is about relentlessly executing
-                  and delivering on the basics. But don't take our word for it.
-                  Hear it from the community:
+                  We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's relentless focus on product, you'll never have to go back to CEXes again.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
-                  {tweetsJupPromise.map((tweet, index) => (
+                  {tweetsCexReplacement.map((tweet, index) => (
                     <div key={index}>
                       <BrowserOnly>
                         {() => {
@@ -247,29 +270,7 @@ export default function Home(): JSX.Element {
                 </div>
               </section>
             </div>
-            <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
-              <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                Building the{" "}
-                <GradientText>Ultimate CEX Replacement</GradientText> 🚀
-              </h2>
-              <p className="mt-6 text-lg">
-                  We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's relentless focus on product, you'll never have to go back to CEXes again.
-                </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
-                  {tweetsCexReplacement.map((tweet, index) => (
-                    <div key={index}>
-                      <BrowserOnly>
-                        {() => {
-                          const TweetCard = require("react-tweet-card").default;
-                          return <TweetCard {...tweet} theme="dim" />;
-                        }}
-                      </BrowserOnly>
-                    </div>
-                  ))}
-                </div>
-            </section>
-          </div>
-     
+
           </div>
         </div>
       </Layout>
