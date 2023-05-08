@@ -243,3 +243,8 @@
   font-size: 14px;
   display: inline;
 }
+
+.section {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
