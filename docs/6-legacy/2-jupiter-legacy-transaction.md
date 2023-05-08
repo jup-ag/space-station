@@ -1,5 +1,9 @@
-# About Jupiter Legacy Transactions
+---
+sidebar_label: "Legacy Txns"
+description: "About Jupiter Legacy Transactions"
+---
 
+# About Jupiter Legacy Transactions
 ## Multiple Transactions
 
 Due to transaction size limits, some swap routes cannot fit into a single transaction.  In this case Jupiter will return up to 3 transactions while preserving all swap instructions in a single swap transaction.
