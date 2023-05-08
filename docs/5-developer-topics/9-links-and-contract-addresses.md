@@ -1,7 +1,8 @@
 ---
-title: Helpful links and contract addresses
+sidebar_label: "Links and Contract Addresses"
+description: Helpful links and contract addresses
 ---
-# Helpful links and contract addresses
+# Helpful Links and Contract Addresses
 
 ## SDKs & APIs
 

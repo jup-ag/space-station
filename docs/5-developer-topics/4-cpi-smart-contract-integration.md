@@ -1,5 +1,6 @@
 ---
-title: Cross Program Invocation Integration with Jupiter
+sidebar_label: "CPI / Smart Contract Integration"
+description: Cross Program Invocation Integration with Jupiter
 ---
 # Cross Program Invocation Integration with Jupiter
 

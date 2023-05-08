@@ -1,6 +1,9 @@
 ---
-title: How to Swap
+sidebar_label: "How to Swap"
+description: A community guide to swapping on Jupiter.
 ---
+
+# How to Swap
 
 *A community guide to swapping on Jupiter's dApp.*
 

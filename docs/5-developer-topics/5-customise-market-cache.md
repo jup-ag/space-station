@@ -1,7 +1,8 @@
 ---
-title: Adding your own custom markets to Jupiter
+sidebar_label: "Custom Markets Cache"
+description: Adding your own custom markets to Jupiter
 ---
-# Adding your own custom markets to Jupiter
+# Adding Your Own Custom Markets to Jupiter
 
 Jupiter is periodically caching active and liquid markets at https://cache.jup.ag/markets?v=3.  Markets must have a minimum amount of liquidity. If your market does not meet the requirements for automatic listing you can still amend your own markets cache and use the SDK.
 

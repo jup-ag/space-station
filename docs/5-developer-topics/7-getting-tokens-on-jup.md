@@ -1,7 +1,8 @@
 ---
-title: How to get your token on Jupiter for Swap
+sidebar_label: "Getting your Token on Jupiter"
+description: How to get your token on Jupiter for Swap
 ---
-# How to get your token on Jupiter for Swap
+# How to Get Your Token on Jupiter for Swap
 
 **To get your token listed**
 

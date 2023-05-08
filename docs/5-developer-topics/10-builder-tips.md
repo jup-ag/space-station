@@ -1,7 +1,8 @@
 ---
-title: General builder tips on Solana
+sidebar_label: "General Builder Tips"
+description: General builder tips on Solana
 ---
-# General builder tips on Solana
+# General Builder Tips on Solana
 
 **New to building on Solana?**
 

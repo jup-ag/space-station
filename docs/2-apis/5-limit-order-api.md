@@ -1,5 +1,6 @@
 ---
-title: Limit Order API — Run a limit order bot with Javascript
+sidebar_label: Limit Order API
+description: Run a limit order bot with Javascript
 ---
 # Run a limit order bot with Javascript
 

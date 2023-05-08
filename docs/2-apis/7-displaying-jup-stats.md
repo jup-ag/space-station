@@ -1,5 +1,6 @@
 ---
-description: Jupiter Stats API
+sidebar_label: Display Jupiter Stats
+description: Display Jupiter Stats
 ---
 # Display Jupiter Stats
 
