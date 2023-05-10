@@ -112,7 +112,7 @@ const config = {
         },
         {
           property: 'og:image',
-          content: 'https://og.jup.ag/api/jupiter',
+          content: 'https://og.jup.ag/api/jupiter-station',
         },
       ],
       colorMode: {
