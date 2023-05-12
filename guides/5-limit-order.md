@@ -21,7 +21,7 @@ Jupiter will execute your limit order based on the available liquidity on-chain.
 ![Limit Order 2](/img/limit-order/limit-order2.png)
 
 1. **Input:** Pick a token from the token selector and specify the amount of token that you're selling.
-2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `User Market` for the current market price)
+2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `Use Market` for the current market price)
 3. **Expiry:** Set an expiry period for your order, from 10 minutes to Custom and even Never.
 4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting.
 5. **Place Order:** Once you've reviewed the summary of your order, you will be able to place order and submit the transaction over to Jupiter Limit Order.
