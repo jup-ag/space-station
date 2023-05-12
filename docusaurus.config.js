@@ -88,6 +88,17 @@ const config = {
         sidebarCollapsed: false,
       }),
     ],
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars-community.js'),
+        sidebarCollapsed: false,
+      }),
+    ],
     async function myPlugin() {
       return {
         name: 'docusaurus-tailwindcss',
@@ -152,6 +163,11 @@ const config = {
           {
             to: '/blog',
             label: 'Blog',
+            position: 'left',
+          },
+          {
+            to: '/community',
+            label: 'Community',
             position: 'left',
           },
           {
