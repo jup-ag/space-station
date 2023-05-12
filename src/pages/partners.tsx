@@ -93,73 +93,61 @@ const sections = [
     description: `DeFi wallets are a crucial tool for interacting with DeFi protocols in the Web3 ecosystem. They store and manage cryptocurrency assets and allow access to decentralized exchanges, lending platforms, and liquidity pools. Wallet partners have an in-wallet swap feature, like Jupiter, available on iOS, Android, and Web Widget platforms. This allow users to easily exchange cryptocurrencies within their wallet for the optimum price with seamless experience.`,
     cards: [
       {
-        id: 1,
         title: "Phantom",
         logo: phantom,
         link: "https://phantom.app",
       },
       {
-        id: 2,
         title: "Solflare",
         logo: solflare,
         link: "https://solflare.com/",
       },
       {
-        id: 3,
         title: "Glow Wallet",
         logo: glow,
         link: "https://glow.app/",
       },
       {
-        id: 4,
         title: "Coinbase Wallet",
         logo: coinbase,
         link: "https://www.coinbase.com/wallet",
       },
       {
-        id: 5,
         title: "Brave Wallet",
         logo: brave,
         link: "https://brave.com/wallet/",
       },
       {
-        id: 6,
         title: "Hey Wallet",
         logo: heywallet,
         link: "https://heywallet.com/",
       },
       {
-        id: 7,
         title: "Backpack",
         logo: backpack,
         link: "https://www.backpack.app/",
       },
       {
-        id: 8,
         title: "Frontier Wallet",
         logo: frontier,
         link: "https://www.frontier.xyz/",
       },
       {
-        id: 9,
         title: "Nightly",
         logo: nightly,
         link: "https://wallet.nightly.app/",
       },
       {
-        id: 10,
         title: "Ultimate Wallet",
         logo: ultimate,
         link: "https://ultimate.app/",
       },
       {
-        id: 11,
         title: "Ottr Finance",
         logo: ottr,
         link: "https://ottr.finance/",
       },
       {
-        id: 12,
         title: "Key App",
         logo: keyapp,
         link: "https://key.app/",
@@ -179,73 +167,61 @@ const sections = [
     description: `DeFi, or Decentralized Finance, is a financial system built on blockchain technology that uses cryptocurrencies and smart contracts for activities like lending, borrowing, and trading in a transparent and secure way. DeFi aims to provide more financial inclusion, transparency, and accessibility while reducing costs and eliminating central points of failure. It's an ever-changing space with new developments and applications being created constantly.`,
     cards: [
       {
-        id: 1,
         title: "Tulip",
         logo: tulip,
         link: "https://tulip.garden/",
       },
       {
-        id: 2,
         title: "Sonar Watch",
         logo: sonar,
         link: "https://sonar.watch/",
       },
       {
-        id: 3,
         title: "Port Finance",
         logo: portfinance,
         link: "https://www.port.finance/",
       },
       {
-        id: 4,
         title: "Francium",
         logo: francium,
         link: "https://francium.io/",
       },
       {
-        id: 5,
         title: "Birdeye",
         logo: birdeye,
         link: "https://birdeye.so/",
       },
       {
-        id: 6,
         title: "HelloMoon",
         logo: hellomoon,
         link: "https://www.hellomoon.io/",
       },
       {
-        id: 7,
         title: "Mean Finance",
         logo: mean,
         link: "https://meanfi.com/",
       },
       {
-        id: 10,
         title: "Bonfida",
         logo: bonfida,
         link: "https://bonfida.org/",
       },
       {
-        id: 11,
         title: "Kamino",
         logo: kamino,
         link: "https://kamino.finance/",
       },
       {
-        id: 12,
         title: "Marinade Finance",
         logo: marinade,
         link: "https://marinade.finance/",
       },
       {
-        id: 13,
         title: "Margin Fi",
         logo: marginfi,
         link: "https://www.marginfi.com/",
       },
       {
-        id: 14,
         title: "Step Finance",
         logo: stepfinance,
         link: "https://www.step.finance/",
@@ -266,145 +242,121 @@ const sections = [
     Automated market makers (AMMs) are decentralized exchanges (DEXs) that use mathematical algorithms to automatically set prices and execute trades. Unlike traditional order-book exchanges, which rely on central limit order matching, AMMs use liquidity pools where users can deposit funds to facilitate trades. The algorithm automatically adjusts the price based on the supply and demand of assets in the pool.DEXs & AMMs description`,
     cards: [
       {
-        id: 1,
         title: "Orca",
         logo: orca,
         link: "https://www.orca.so/",
       },
       {
-        id: 2,
         title: "Raydium",
         logo: raydium,
         link: "https://raydium.io/",
       },
       {
-        id: 3,
         title: "GooseFX",
         logo: goosefx,
         link: "https://goosefx.io/",
       },
       {
-        id: 4,
         title: "Aldrin",
         logo: aldrin,
         link: "https://aldrin.com/",
       },
       {
-        id: 5,
         title: "Openbook",
         logo: openbook,
         link: "https://www.openbook-solana.com/",
       },
       {
-        id: 6,
         title: "Meteora",
         logo: meteora,
         link: "https://meteora.ag/",
       },
       {
-        id: 7,
         title: "Crema",
         logo: crema,
         link: "https://www.crema.finance/",
       },
       {
-        id: 8,
         title: "Marinade",
         logo: marinade,
         link: "https://marinade.finance/",
       },
       {
-        id: 9,
         title: "Saber",
         logo: saber,
         link: "https://app.saber.so/",
       },
       {
-        id: 10,
         title: "Cykura",
         logo: cykura,
         link: "https://cykura.io/",
       },
       {
-        id: 11,
         title: "Dradex",
         logo: dradex,
         link: "https://www.dradex.io/",
       },
       {
-        id: 12,
         title: "Lifinity",
         logo: lifinity,
         link: "https://lifinity.io/",
       },
       {
-        id: 13,
         title: "Dexlab",
         logo: dexlab,
         link: "https://www.dexlab.space/",
       },
       {
-        id: 14,
         title: "Saros",
         logo: saros,
         link: "https://saros.finance/",
       },
       {
-        id: 15,
         title: "Sentre - Balansol",
         logo: balansol,
         link: "https://sentre.io/",
       },
       {
-        id: 16,
         title: "Invariant",
         logo: invariant,
         link: "https://invariant.app/",
       },
       {
-        id: 17,
         title: "Penguin Finance",
         logo: penguin,
         link: "https://png.fi/",
       },
       {
-        id: 18,
         title: "Oasis",
         logo: oasis,
         link: "https://oasis.gobi.so/",
       },
       {
-        id: 19,
         title: "Cropper",
         logo: cropper,
         link: "https://cropper.finance/",
       },
       {
-        id: 20,
         title: "StepN DOOAR",
         logo: stepn,
         link: "https://stepn.com/",
       },
       {
-        id: 21,
         title: "Phoenix by Ellipsis",
         logo: ellipsis,
         link: "https://ellipsislabs.xyz/",
       },
       {
-        id: 22,
         title: "Symmetry",
         logo: symmetry,
         link: "https://www.symmetry.fi/",
       },
       {
-        id: 23,
         title: "Bonkswap",
         logo: bonkswap,
         link: "https://www.bonkswap.io/",
       },
       {
-        id: 23,
         title: "Step Finance",
         logo: stepfinance,
         link: "https://www.step.finance/",
@@ -424,31 +376,26 @@ const sections = [
     description: `Crypto bridges are platforms that allow users to exchange different cryptocurrencies across different blockchain networks. They enable seamless transfer of tokens or assets between ecosystems like Solana and Ethereum. Additionally, they promote liquidity and cross-chain communication between blockchains, creating an interconnected and efficient crypto ecosystem.`,
     cards: [
       {
-        id: 1,
         title: "Wormhole",
         logo: wormhole,
         link: "https://wormhole.com/",
       },
       {
-        id: 2,
         title: "Allbridge",
         logo: allbridge,
         link: "https://allbridge.io/",
       },
       {
-        id: 3,
         title: "AtlasDEX",
         logo: atlasdex,
         link: "https://atlasdex.finance/",
       },
       {
-        id: 4,
         title: "Rango Exchange",
         logo: rango,
         link: "https://rango.exchange/",
       },
       {
-        id: 5,
         title: "Mayan Finance",
         logo: mayan,
         link: "https://mayan.finance/",
@@ -468,25 +415,21 @@ const sections = [
     description: `Web3 games is the use of cryptocurrencies or blockchain technology in online gaming. This allows for transparent, secure gameplay and ownership of in-game assets. Players can trade or sell these assets on decentralized marketplaces, and some platforms even offer opportunities to earn cryptocurrency while playing.`,
     cards: [
       {
-        id: 1,
         title: "Star Atlas",
         logo: staratlas,
         link: "https://staratlas.com/",
       },
       {
-        id: 2,
         title: "Genopets",
         logo: genopets,
         link: "https://www.genopets.me/",
       },
       {
-        id: 3,
         title: "Aurory",
         logo: aurory,
         link: "https://aurory.io/",
       },
       {
-        id: 4,
         title: "Defi Land",
         logo: defiland,
         link: "https://defiland.app/",
@@ -506,13 +449,11 @@ const sections = [
     description: `Crypto payments involve using cryptocurrencies, like stablecoins (e.g., USDC, USDT) or established tokens like Bitcoin and Ethereum, to pay for goods or services. Solana's fast, secure, and low-cost infrastructure has contributed to the rise in popularity of crypto payments on the platform. Jupiter is being integrated into crypto payments protocols to allow for the instant conversion of SPL tokens to fiat stablecoins, which can then be used to pay merchants directly.`,
     cards: [
       {
-        id: 1,
         title: "Helio",
         logo: helio,
         link: "https://helio.co/",
       },
       {
-        id: 2,
         title: "CandyPay",
         logo: candypay,
         link: "https://candypay.fun/",
@@ -537,31 +478,26 @@ const sections = [
     description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
       {
-        id: 1,
         title: "Hyperspace",
         logo: hyperspace,
         link: "https://hyperspace.xyz/",
       },
       {
-        id: 2,
         title: "Hadeswap",
         logo: hadeswap,
         link: "https://www.hadeswap.com/",
       },
       {
-        id: 3,
         title: "Solsea",
         logo: solsea,
         link: "https://solsea.io/",
       },
       {
-        id: 4,
         title: "LiquifyNFT",
         logo: liquifynft,
         link: "https://liquifynft.com/",
       },
       {
-        id: 5,
         title: "Famous Fox Federation",
         logo: famousfoxfederation,
         link: "https://famousfoxes.com/",
@@ -651,9 +587,8 @@ export default function Home(): JSX.Element {
                   section.cards.flatMap((card) => (
                     <a
                       target="_blank"
-                      id={`${card.id}`}
                       href={card.link}
-                      key={card.id}
+                      key={card.title}
                       className="relative !no-underline rounded-lg border border-solid border-gray-200 dark:border-gray-700 flex items-center flex-col text-black"
                       rel="noreferrer"
                     >
