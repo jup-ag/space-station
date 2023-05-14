@@ -43,6 +43,7 @@ const dradex = "/img/dex_amm/dradex.png";
 const goosefx = "/img/dex_amm/goosefx.svg";
 const dexlab = "/img/dex_amm/dexlab.png";
 const ellipsis = "/img/dex_amm/ellipsislab.svg";
+const phoenix = "/img/dex_amm/phoenix.svg";
 const invariant = "/img/dex_amm/invariant.svg";
 const lifinity = "/img/dex_amm/lifinity.png";
 const mango = "/img/dex_amm/mango.png";
@@ -342,8 +343,8 @@ const sections = [
         link: "https://stepn.com/",
       },
       {
-        title: "Phoenix by Ellipsis",
-        logo: ellipsis,
+        title: "Phoenix",
+        logo: phoenix,
         link: "https://ellipsislabs.xyz/",
       },
       {
