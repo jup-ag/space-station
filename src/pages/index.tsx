@@ -157,7 +157,7 @@ export default function Home(): JSX.Element {
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="  text-white border-white hover:text-black hover:bg-white transition duration-250 ease-linear !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-[15px] space-x-2 mt-4 uppercase border-[1px] border-solid"
+                    className="text-white border-white hover:text-black hover:bg-white transition duration-250 ease-linear !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-[15px] space-x-2 mt-4 uppercase border-[1px] border-solid"
                   >
                     <span>Developer Docs</span>
                     <svg
@@ -166,11 +166,10 @@ export default function Home(): JSX.Element {
                       viewBox="0 0 20 21"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="group-hover:translate-x-1 duration-300"
+                      className="group-hover:translate-x-1 duration-300 stroke-white group-hover:stroke-black"
                     >
                       <path
                         d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
-                        stroke="white"
                         strokeWidth="1.66667"
                         strokeLinecap="round"
                         strokeLinejoin="round"
