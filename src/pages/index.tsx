@@ -123,21 +123,21 @@ export default function Home(): JSX.Element {
                   Jupiter <br /> Space Station
                 </h1>
                 <p className="mt-5 opacity-75 text-lg font-medium">
-                  Welcome to the space station — home for cats curious about Jupiter.
+                  Welcome to the space station — home for cats curious about
+                  Jupiter.
                 </p>
-                <div className="space-x-4">
-
+                <div className="md:space-x-4">
                   <Link
                     href="/guides"
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-[#19232D] !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-base px-8 py-4 space-x-2 mt-4 uppercase"
+                    className="!text-[#19232D] hover:text-black hover:bg-white transition duration-250 ease-linear !no-underline group inline-flex items-center bg-[#C7F284] rounded-lg font-semibold text-base px-8 py-4 space-x-2 mt-4 uppercase"
                   >
                     <span>User Guides</span>
                     <svg
                       width="20"
-                      height="41"
+                      height="21"
                       viewBox="0 0 20 21"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -157,12 +157,12 @@ export default function Home(): JSX.Element {
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4 uppercase border-solid border-b"
+                    className="  text-white border-white hover:text-black hover:bg-white transition duration-250 ease-linear !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-[15px] space-x-2 mt-4 uppercase border-[1px] border-solid"
                   >
                     <span>Developer Docs</span>
                     <svg
                       width="20"
-                      height="41"
+                      height="21"
                       viewBox="0 0 20 21"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@ export default function Home(): JSX.Element {
                     >
                       <path
                         d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
-                        stroke="#19232D"
+                        stroke="white"
                         strokeWidth="1.66667"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -179,26 +179,28 @@ export default function Home(): JSX.Element {
                   </Link>
                 </div>
               </span>
-              <p className="mt-5 opacity-75 text-lg font-medium">
-
-              </p>
-            </section>       
+              <p className="mt-5 opacity-75 text-lg font-medium"></p>
+            </section>
             <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    The{" "}
-                    <GradientText>Ultimate CEX Replacement</GradientText> 🚀 on Solana
+                    The <GradientText>Ultimate CEX Replacement</GradientText> 🚀
+                    on Solana
                   </h2>
                   <p className="mt-6 text-lg">
-                    We're building the ultimate CEX replacement, and we believe Solana is the perfect home for it. Marrying low transaction fees with Jupiter's commitment to product excellence, you'll never have to go back to CEXes again.
+                    We're building the ultimate CEX replacement, and we believe
+                    Solana is the perfect home for it. Marrying low transaction
+                    fees with Jupiter's commitment to product excellence, you'll
+                    never have to go back to CEXes again.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                     {tweetsCexReplacement.map((tweet, index) => (
                       <div key={index}>
                         <BrowserOnly>
                           {() => {
-                            const TweetCard = require("react-tweet-card").default;
+                            const TweetCard =
+                              require("react-tweet-card").default;
                             return <TweetCard {...tweet} theme="dim" />;
                           }}
                         </BrowserOnly>
@@ -209,12 +211,13 @@ export default function Home(): JSX.Element {
               </div>
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  <GradientText>The JUP Promise:</GradientText> Best Price, Best UX, Best Tokens
+                  <GradientText>The JUP Promise:</GradientText> Best Price, Best
+                  UX, Best Tokens
                 </h2>
                 <p className="mt-6 text-lg">
-                  The JUP Promise is about relentlessly executing
-                  and delivering on the basics. But don't take our word for it.
-                  Hear it from the community:
+                  The JUP Promise is about relentlessly executing and delivering
+                  on the basics. But don't take our word for it. Hear it from
+                  the community:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweetsJupPromise.map((tweet, index) => (
