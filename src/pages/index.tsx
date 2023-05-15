@@ -154,7 +154,7 @@ export default function Home(): JSX.Element {
                   <Link
                     href="/docs"
                     style={{
-                      boxShadow: `0px 1px 1px rgba(16, 24, 40, 0.05)`,
+                      boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
                     className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4 uppercase border-solid"
                   >
