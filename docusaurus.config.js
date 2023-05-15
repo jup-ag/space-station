@@ -114,6 +114,10 @@ const config = {
           property: 'og:image',
           content: 'https://og.jup.ag/api/jupiter-station',
         },
+        {
+          property: 'theme-color',
+          content: '#000000',
+        }
       ],
       colorMode: {
         defaultMode: 'light',
