@@ -59,7 +59,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           sidebarCollapsed: false,
           editUrl:
-            "https://github.com/jup-ag/space-station/tree/main/docs/",
+            "https://github.com/jup-ag/space-station/",
         },
         blog: {
           showReadingTime: true,
