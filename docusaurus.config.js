@@ -115,7 +115,7 @@ const config = {
           content: 'https://og.jup.ag/api/jupiter-station',
         },
         {
-          name: 'theme-color',
+          property: 'theme-color',
           content: '#000000',
         }
       ],
