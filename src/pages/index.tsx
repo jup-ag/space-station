@@ -125,8 +125,7 @@ export default function Home(): JSX.Element {
                 <p className="mt-5 opacity-75 text-lg font-medium">
                   Welcome to the space station — home for cats curious about Jupiter.
                 </p>
-                <div className="space-x-4">
-
+                <div className="md:space-x-4">
                   <Link
                     href="/guides"
                     style={{
@@ -155,9 +154,9 @@ export default function Home(): JSX.Element {
                   <Link
                     href="/docs"
                     style={{
-                      boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
+                      boxShadow: `0px 1px 1px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4 uppercase border-solid border-b"
+                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4 uppercase border-solid"
                   >
                     <span>Developer Docs</span>
                     <svg
@@ -182,7 +181,7 @@ export default function Home(): JSX.Element {
               <p className="mt-5 opacity-75 text-lg font-medium">
 
               </p>
-            </section>       
+            </section>
             <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
