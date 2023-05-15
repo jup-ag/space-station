@@ -155,7 +155,7 @@ export default function Home(): JSX.Element {
                   <Link
                     href="/docs"
                     style={{
-                      boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
+                      boxShadow: `0px 1px 1px rgba(16, 24, 40, 0.05)`,
                     }}
                     className="  text-white border-white hover:text-black hover:bg-white transition duration-250 ease-linear !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-[15px] space-x-2 mt-4 uppercase border-[1px] border-solid"
                   >
@@ -179,7 +179,6 @@ export default function Home(): JSX.Element {
                   </Link>
                 </div>
               </span>
-              <p className="mt-5 opacity-75 text-lg font-medium"></p>
             </section>
             <div className="sm:bg-[url('/img/home/stars.png')] bg-cover">
               <div className="max-w-content mx-auto">
