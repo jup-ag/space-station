@@ -59,7 +59,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           sidebarCollapsed: false,
           editUrl:
-            "https://github.com/jup-ag/space-station/",
+            "https://github.com/jup-ag/space-station/tree/main/",
         },
         blog: {
           showReadingTime: true,
@@ -86,6 +86,8 @@ const config = {
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: false,
+        editUrl:
+        "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
     async function myPlugin() {
