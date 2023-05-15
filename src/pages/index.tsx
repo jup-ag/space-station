@@ -136,7 +136,7 @@ export default function Home(): JSX.Element {
                     <span>User Guides</span>
                     <svg
                       width="20"
-                      height="41"
+                      height="21"
                       viewBox="0 0 20 21"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -156,12 +156,12 @@ export default function Home(): JSX.Element {
                     style={{
                       boxShadow: `0px 1px 2px rgba(16, 24, 40, 0.05)`,
                     }}
-                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-2 space-x-2 mt-4 uppercase border-solid"
+                    className="!text-white !no-underline group inline-flex items-center bg-transparent rounded-lg font-semibold text-base px-[14px] py-[15px] space-x-2 mt-4 uppercase border-[1px] border-solid"
                   >
                     <span>Developer Docs</span>
                     <svg
                       width="20"
-                      height="41"
+                      height="21"
                       viewBox="0 0 20 21"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@ export default function Home(): JSX.Element {
                     >
                       <path
                         d="M4.16602 10.5911H15.8327M15.8327 10.5911L9.99935 4.75781M15.8327 10.5911L9.99935 16.4245"
-                        stroke="#19232D"
+                        stroke="white"
                         strokeWidth="1.66667"
                         strokeLinecap="round"
                         strokeLinejoin="round"
