@@ -14,6 +14,6 @@ description: Display Jupiter Stats
 
 - Last 24 hrs: https://stats.jup.ag/info/day
 
-- Last week : https://stats.jup.ag/info/week
+- Last week: https://stats.jup.ag/info/week
 
 - Last month: https://stats.jup.ag/info/month
