@@ -113,7 +113,7 @@ const config = {
             "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
         },
         {
-          name: 'theme-color',
+          name: "theme-color",
           content: '#000000',
         }
       ],
