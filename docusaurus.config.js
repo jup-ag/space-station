@@ -49,17 +49,46 @@ const config = {
   ],
 
   presets: [
+    // [
+    //   "classic",
+    //   /** @type {import('@docusaurus/preset-classic').Options} */
+    //   ({
+    //     docs: {
+    //       sidebarPath: require.resolve("./sidebars.js"),
+    //       // Please change this to your repo.
+    //       // Remove this to remove the "edit this page" links.
+    //       sidebarCollapsed: false,
+    //       editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+    //     },
+
+    //     blog: {
+    //       showReadingTime: true,
+    //       // Please change this to your repo.
+    //       // Remove this to remove the "edit this page" links.
+    //       // editUrl:
+    //       //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+    //       blogSidebarTitle: "All posts",
+    //       blogSidebarCount: "ALL",
+    //     },
+    //     theme: {
+    //       customCss: require.resolve("./src/css/custom.css"),
+    //     },
+    //   }),
+    // ],
     [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      "docusaurus-preset-openapi",
+      /** @type {import('docusaurus-preset-openapi').Options} */
       ({
+        api: {
+          path: "openapi/quoteV5.yaml",
+          routeBasePath: "quote-v5",
+        },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           sidebarCollapsed: false,
-          editUrl:
-            "https://github.com/jup-ag/space-station/tree/main/",
+          editUrl: "https://github.com/jup-ag/space-station/tree/main/",
         },
         blog: {
           showReadingTime: true,
@@ -72,6 +101,12 @@ const config = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        proxy: {
+          "/proxy": {
+            target: "http://localhost:8091",
+            pathRewrite: { "^/proxy": "" },
+          },
         },
       }),
     ],
@@ -86,8 +121,7 @@ const config = {
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: false,
-        editUrl:
-        "https://github.com/jup-ag/space-station/tree/main/",
+        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
     [
@@ -124,13 +158,13 @@ const config = {
             "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
         },
         {
-           property: "og:image",
-           content: "https://og.jup.ag/api/jupiter-station",
+          property: "og:image",
+          content: "https://og.jup.ag/api/jupiter-station",
         },
         {
           name: "theme-color",
-          content: '#000000',
-        }
+          content: "#000000",
+        },
       ],
       colorMode: {
         defaultMode: "light",

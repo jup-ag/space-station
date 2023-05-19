@@ -1,0 +1,172 @@
+openapi: 3.0.0
+info:
+  title: Jupiter Api v5
+  version: 5.0.0
+  description: Jupiter quote and swap API
+
+servers:
+  - url: https://quote-api.jup.ag/v5
+
+components:
+  schemas:
+    QuoteResponseV2:
+      type: object
+      properties:
+        inputMint:
+          type: string
+        inAmount:
+          type: integer
+          format: int64
+        outputMint:
+          type: string
+        outAmount:
+          type: integer
+          format: int64
+        otherAmountThreshold:
+          type: integer
+          format: int64
+        swapMode:
+          $ref: '#/components/schemas/SwapMode'
+        slippageBps:
+          type: integer
+          format: int32
+        platformFee:
+          $ref: '#/components/schemas/PlatformFee'
+        priceImpactPct:
+          type: number
+        routePlan:
+          type: array
+          items:
+            $ref: '#/components/schemas/RoutePlanStep'
+        mintPath:
+          type: string
+        ammPath:
+          type: string
+        timeTaken:
+          type: number
+
+    SwapMode:
+      type: string
+      enum:
+        - ExactIn
+        - ExactOut
+
+    PlatformFee:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: int64
+        feeBps:
+          type: integer
+          format: int32
+
+    RoutePlanStep:
+      type: object
+      properties:
+        swapInfo:
+          $ref: '#/components/schemas/SwapInfo'
+        percent:
+          type: integer
+          format: int32
+
+    SwapInfo:
+      type: object
+      properties:
+        ammKey:
+          type: string
+        label:
+          type: string
+        inputMint:
+          type: string
+        outputMint:
+          type: string
+        inAmount:
+          type: integer
+          format: int64
+        outAmount:
+          type: integer
+          format: int64
+        feeAmount:
+          type: integer
+          format: int64
+        feeMint:
+          type: string
+
+  parameters:
+    DexesParameter:
+      name: dexes
+      in: query
+      description: DEXes to include (comma-separated)
+      schema:
+        type: array
+        items:
+          $ref: '#/components/schemas/DexValue'
+        style: form
+        explode: true
+
+    ExcludeDexesParameter:
+      name: excludeDexes
+      in: query
+      description: DEXes to exclude (comma-separated)
+      schema:
+        type: array
+        items:
+          $ref: '#/components/schemas/DexValue'
+        style: form
+        explode: true
+
+    InputMintParameter:
+      name: inputMint
+      in: query
+      description: Input mint
+      schema:
+        type: string
+      default: So11111111111111111111111111111111111111112
+      required: true
+
+    OutputMintParameter:
+      name: outputMint
+      in: query
+      description: Output mint
+      schema:
+        type: string
+      default: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+      required: true
+
+    AmountParameter:
+      name: amount
+      in: query
+      description: Amount
+      schema:
+        type: integer
+        format: int64
+      default: 100000000
+      required: true
+
+    SlippageParameter:
+      name: slippage
+      in: query
+      description: Allowed slippage in basis points
+      schema:
+        type: number
+      default: 0.5
+
+paths:
+  /quote:
+    get:
+      summary: Get a quote
+      parameters:
+        - $ref: '#/components/parameters/OutputMintParameter'
+        - $ref: '#/components/parameters/InputMintParameter'
+        - $ref: '#/components/parameters/AmountParameter'
+        - $ref: '#/components/parameters/SlippageParameter'
+        - $ref: '#/components/parameters/DexesParameter'
+        - $ref: '#/components/parameters/ExcludeDexesParameter'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteResponseV2'
