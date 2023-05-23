@@ -52,16 +52,14 @@ const PoolProviderLogoMap: Record<string, any> = {
   Balansol: BalansolSVG,
   Dradex: DradexSVG,
   Openbook: OpenbookSVG,
-  "Marco Polo": OasisSVG,
+  Oasis: OasisSVG,
   BonkSwap: BonkSwapPNG,
   Symmetry: SymmetrySVG,
   Phoenix: PhoenixSVG,
 };
 
-// Rename the AMMs that have rebranded
-const REBRAND_NAMES: Record<string, string> = {
-  "Marco Polo": "Oasis",
-};
+// Don't have to use this, the API endpoint can rename the provider.
+const REBRAND_NAMES: Record<string, string> = {};
 
 // Use this to hide the AMMs that are not ready to be shown
 const HIDE_AMMS: string[] = [];
