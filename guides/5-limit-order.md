@@ -6,16 +6,6 @@ Jupiter Limit Order provides users with the simplest way to place limit orders o
 
 ![Limit Order](/img/limit-order/limit-order.jpg)
 
-## Key Benefits
-
-1. Users can place an order with an expiration time. At the end of the period, the crank will cancel any unfilled orders and refund the token to the user's wallet.
-2. Limit orders ensure you'll get what you quote with no slippage, which is especially useful during volatile periods.
-3. Transactions will not fail because of slippage errors.
-
-:::info Order execution
-Jupiter will execute your limit order based on the available liquidity on-chain. Therefore, if there is insufficient on-chain liquidity when the market price reaches your limit price, it is possible that your order may not be filled precisely.
-:::
-
 ## How to place a Limit Order
 
 ![Limit Order 2](/img/limit-order/limit-order2.png)
@@ -26,17 +16,6 @@ Jupiter will execute your limit order based on the available liquidity on-chain.
 4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting.
 5. **Place Order:** Once you've reviewed the summary of your order, you will be able to place order and submit the transaction over to Jupiter Limit Order.
 
-## How Limit Order Works
-
-:::info Not an Order Book
-This is not an order book system. The limit order system utilizes a keeper to help monitor the token prices on-chain and trigger the fulfillment of orders.
-:::
-
-- For instance, if a Limit Order is placed to buy 0.714 SOL with 10 USDC at a rate of 14 USDC per SOL.
-- The keeper will monitor the price on-chain using Jupiter.
-- If the keeper detects that the on-chain price of SOL hits 14 USDC per SOL, it will proceed to get execute and fulfill the order.
-- Keepers are recommended to execute using Jupiter in 1 transaction, to make sure the order executes when there is profit. But keepers are free to execute it off-chain or using other on-chain DEX.
-- After the order is executed, the user will get exactly what he quoted for → 0.71428 SOL minus the platform fee (0.2%).
 
 ## Open Order & Order History
 
