@@ -3,6 +3,8 @@ description: Guidelines on getting your DEX / AMM into Jupiter
 ---
 # Integration Guidelines
 
+![thinking cat](./thinking_cat.png)
+
 ## Overview
 
 Jupiter is one of the most widely integrated protocols, so a lot of work is involved in minimizing issues on new integrations and making each integration valuable to our users and partners.

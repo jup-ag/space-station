@@ -4,6 +4,7 @@ description: Getting your token onto Jupiter
 slug: "/get-your-token-onto-jup"
 ---
 # How to Get Your Token onto Jupiter
+![cat_list2](./cat_list2.png)
 
 ### Tokens with Sufficient Liquidity and On-Chain Metadata are automatically listed
 
