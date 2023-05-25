@@ -60,7 +60,7 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
       name: "Noah 🔥💃 🎈",
       username: "redacted_noah",
       image:
-        "https://pbs.twimg.com/profile_images/1649750976964722695/umjPqOpi_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1658481984820375554/eezCUMQ2_400x400.png",
     },
     tweet: `Fr. I prefer Jupiter to trading on CEX. And not even because of ideology it’s literally a better UX`,
     time: new Date(2023, 3, 15, 11, 16),
