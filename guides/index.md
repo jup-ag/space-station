@@ -17,7 +17,3 @@ This section is user-oriented. If you're looking for technical documentation, pl
 - Tell us what you want to see in our product in feedback and ideas channels on Discord! 
 
 Happy trading and see you in our community chats!
-
-![Jupv2](../static/img/jup_v2.jpeg)
- 
-
