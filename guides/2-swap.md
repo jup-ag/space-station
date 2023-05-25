@@ -5,6 +5,8 @@ description: A community guide to swapping on Jupiter.
 
 # How to Swap
 
+![money_cat](./money_cat.png)
+
 *A community guide to swapping on Jupiter's dApp.*
 
 This guide was created through contributions from the following community members:  [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)
@@ -88,7 +90,7 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 8](//img/jup-swap/jup-swap8.png)
 
-:::tip [Token List](/docs/apis/token-list/token-list-api)
+:::tip [Token List](/docs/apis/token-list-api)
 By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that is available to trade.
 :::
 
