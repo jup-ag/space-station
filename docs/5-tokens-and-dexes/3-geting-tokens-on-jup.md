@@ -3,16 +3,23 @@ sidebar_label: "Getting your Token onto Jupiter"
 description: Getting your token onto Jupiter
 slug: "/get-your-token-onto-jup"
 ---
-# How to Get Your Token onto Jupiter
+# Getting Your Token onto Jupiter
 ![cat_list2](./cat_list2.png)
 
-### Tokens with Sufficient Liquidity and On-Chain Metadata are automatically listed
+:::info 'All' List Vs Strict List
+We list tokens with sufficient liquidity automatically. These new tokens are marked with the 'unknown' label on the 'All' list, to encourage users to double-check that the mint addresses are the right ones that they wish to interact with before proceeding. The default mode on our UI shows the 'Strict' list, which projects can request to be on.
+
+We felt that this is a good balance to allow users to trade newer tokens – which includes many legitimate projects – while encouraging them to be careful. More details are shared in this tweet: https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZfuS6tQpvEQ7Pg
+:::
+
+### Tokens with Sufficient Liquidity and On-Chain Metadata are Automatically Listed
 
 - Your token must exist on-chain and have token metadata conforming to the [Metaplex Token Metadata](https://docs.metaplex.com/programs/token-metadata/token-standard).
 - Your token must have a minimum amountå of liquidity of **$500** in any of the DEXes that Jupiter aggregates.
 - If your liquidity is on Openbook it must have $250 on both the buy and sell side.
 
 Once you've met the requirements above, Jupiter will automatically list your token within a few minutes.
+
 
 ### Getting on the Strict List
 
