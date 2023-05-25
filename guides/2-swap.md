@@ -88,7 +88,7 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 8](//img/jup-swap/jup-swap8.png)
 
-:::tip [Token List](/docs/apis/token-list/token-list-api)
+:::tip [Token List](/docs/apis/token-list-api)
 By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that is available to trade.
 :::
 

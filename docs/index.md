@@ -1,29 +1,36 @@
 ---
 sidebar_position: 1
-title: Docs Overview
+title: Welcome
 description: ' '
 ---
 
-# Developer Documentation
+# Welcome to Jupiter Docs!
 
-![jup_v2.jpeg](../static/img/jup_v2.jpeg)
+![cat_at_computer.png](../static/img/cat_at_computer.png)
 
-:::info
-This section contains developer documentation for Jupiter. For user guides, see [guides.](/guides)
-:::
 
-## Making it easy for developers
+## Building a Good Product with You 
 
-We aim to make developing a good swap interface or program as seamless as possible. We do this by:
+We aim to make developing a good swap interface or program as seamless as possible to help you build world class experiences for your users.
 
-- Removing key barriers to providing a good UX, including having clear instructions for issues like ATAs and Open Orders accounts.
-- Providing various methods of accessing the swap, so all apps, dapps, and programs can use it seamlessly.
-- Providing updated liquidity sources, token lists, and UX improvements as soon as possible.
 
-If you have questions or need support, you can ask in the #developer-support channel in our discord: https://discord.gg/jup.
+// TODOTODOTODO
+We offer a wide range of tools to make it possible, including:
 
-### Quick Links
+- Our core Swap API 
+- Payments API to specific an exact output token amount
+- Limit Order API
 
-- [Swap API: The recommended way to interact with Jupiter](/docs/apis/swap-api)
-- [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/web-integration/jupiter-terminal)
-- [Swap tips for users: What your users should know](/guides/swap-tips)
+If you are a DEX looking to integrate Jupiter, check out:
+- Plug and play options for your UI with [Jupiter Terminal](/docs/web-integration/jupiter-terminal)
+
+If you are a project who wants to make your token visible on the strict list, see:
+
+If you want to learn how to use Jupiter from the perspective of the user, see [User guides.](/guides)
+
+
+If you have technical questions or partnership requests, please reach out to us in our discord: https://discord.gg/jup. 
+
+This section contains developer docs. 
+
+

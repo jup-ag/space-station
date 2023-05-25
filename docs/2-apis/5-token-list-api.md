@@ -26,7 +26,7 @@ For your convenience, we packed it into 2 endpoints for you to choose from.
 - **All:** https://token.jup.ag/all
     - Everything including unknown/untagged tokens that are picked up automatically.
     - It does not include banned tokens by default. To bring up banned tokens, append this flag to the endpoint. (?includeBanned=true).
-    - Our lists are designed for trading and so only lists tokens that satisfy our minimum liquidity requirements and are available for trading on Solana [Getting Your Token on Jupiter](./getting-tokens-on-jup)
+    - Our lists are designed for trading and so only lists tokens that satisfy our minimum liquidity requirements and are available for trading on Solana [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup)
 
 ## Tags & Extensions:
 
@@ -36,7 +36,7 @@ Each token can have 1 or more of the following:
 - `tags` Community: Attested by Jupiter's communities. This includes newer and widely traded tokens created after the old-registry was archived like Bonk and Hades.
 - `tags` [Wormhole](https://github.com/wormhole-foundation/wormhole-token-list/blob/main/content/dest_solana.md): Bridged assets to Solana via wormhole
 - `tags` [SolanaFM](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list
-- `tags` No tags / Unknown ("tags:[ ]"): Assets that were [picked up automatically by Jupiter](./getting-tokens-on-jup).
+- `tags` No tags / Unknown ("tags:[ ]"): Assets that were [picked up automatically by Jupiter](/docs/get-your-token-onto-jup).
 - `extensions` isBanned: Generally fake tokens trying to impersonate another project (E.g. fake wSOL), flagged by our community.
 
 ## Our UI on Jup.ag
