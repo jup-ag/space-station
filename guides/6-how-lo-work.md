@@ -2,7 +2,7 @@
 
 ## Jupiter Limit Order
 
-Jupiter Limit Order provides the easiest way to place limit orders in Solana, offering a wide selection of token pairs. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
+Jupiter Limit Order provides the easiest way to place limit orders in Solana, offering the widest selection of token pairs and leveraging all the available liquidity across the whole Solana. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
 
 -----
 
@@ -27,11 +27,12 @@ Once the order is placed, keepers will constantly monitor the liquidity landscap
 ## Key Benefits
 
 1. Users able to create limit order like CEX experience on Solana.
-2. Users can place an order with an expiration time. At the end of the period, the crank will cancel any unfilled orders and refund the token to the user's wallet automatically. 
-3. Limit orders ensure you'll get what you quote with no slippage, which is especially useful during volatile periods.
-4. Transactions will not fail because of slippage errors.
-5. Jupiter Limit Order have a wider range of token selections, as long as there is sufficient liquidity in the market, the token pair will be available to trade *(Execution will be based on available liquidity on-chain)*
-6. Never get front run by MEV, no slippage, and you will get what you quote. Very useful in highly volatile markets, transactions won’t fail because of slippage error.
+2. Liquidity from anywhere on Solana is utilized to fulfil the trade
+3. Users can place an order with an expiration time. At the end of the period, the crank will cancel any unfilled orders and refund the token to the user's wallet automatically. 
+4. Limit orders ensure you'll get what you quote with no slippage, which is especially useful during volatile periods.
+5. Transactions will not fail because of slippage errors.
+6. Jupiter Limit Order have a wider range of token selections, as long as there is sufficient liquidity in the market, the token pair will be available to trade *(Execution will be based on available liquidity on-chain)*
+7. Never get front run by MEV, no slippage, and you will get what you quote. Very useful in highly volatile markets, transactions won’t fail because of slippage error.
 
 -----
 
