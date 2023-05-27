@@ -14,6 +14,6 @@ Here are some things you can help with:
 
  If your protocol has integrated Jupiter and is not featured here, please submit a PR to us with the following:
 
-1. Add your logo into `/src/static/img/(category)` depending on the category of your product.
-2. Link that image in `src/pages/partners.tsx` following the rest of the examples in there.
+1. Add your logo into `/static/img/(category)` depending on the category of your product.
+2. Link that image in `/src/pages/partners.tsx` following the rest of the examples in there.
 3. Add `title`, `logo`, and `link` for your protocol.
