@@ -459,11 +459,6 @@ const sections = [
         logo: candypay,
         link: 'https://candypay.fun/',
       },
-      // {
-      //   id: 3,
-      //   title: 'Sphere?',
-      //   logo: 'https://d33wubrfki0l68.cloudfront.net/0cbb34b472a04fd1fff9a6f071d0a0bc928940ce/456cd/img/showcase/oculus.png',
-      // },
     ],
   },
   {

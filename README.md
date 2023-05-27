@@ -1,41 +1,19 @@
 # Jupiter Space Station
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Welcome to the space station — home for cats curious about Jupiter.
 
-### Installation
+## Send us a PR to improve our documentation!
 
-```
-$ yarn
-```
+Here are some things you can help with:
+- Write a user guide about a product feature or something you think people should know.
+- Update developer docs if you noticed something that's missing or that could help other folks. 
 
-### Local Development
+## Jupiter Space Station Partner Page
 
-```
-$ yarn start
-```
+![station-partner](/static/img/station-partner.jpg)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+ If your protocol has integrated Jupiter and is not featured here, please submit a PR to us with the following:
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Add your logo into `/src/static/img/(category)` depending on the category of your product.
+2. Link that image in `src/pages/partners.tsx` following the rest of the examples in there.
+3. Add `title`, `logo`, and `link` for your protocol.
