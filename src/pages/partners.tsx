@@ -32,6 +32,7 @@ const mean = '/img/defi/mean.svg';
 const portfinance = '/img/defi/portfinance.svg';
 const tulip = '/img/defi/tulip.png';
 const marginfi = '/img/defi/marginfi.svg';
+const samoyed = '/img/defi/samoyed.svg';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
