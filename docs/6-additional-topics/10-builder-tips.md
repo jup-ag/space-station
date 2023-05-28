@@ -6,7 +6,7 @@ description: General builder tips on Solana
 
 **New to building on Solana?**
 
-This is a good resource: https://solanacookbook.co
+This is a good resource: https://solanacookbook.com
 
 **Private Key, beware of compromising your wallet.**
 
