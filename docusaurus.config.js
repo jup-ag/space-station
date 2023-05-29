@@ -162,6 +162,11 @@ const config = {
             position: "left",
           },
           {
+            to: '/community',
+            label: 'Community',
+            position: 'left',
+          },
+          {
             to: "/stats",
             label: "Stats",
             position: "left",
@@ -170,11 +175,6 @@ const config = {
             to: "/blog",
             label: "Blog",
             position: "left",
-          },
-          {
-            to: '/community',
-            label: 'Community',
-            position: 'left',
           },
           {
             type: 'html',
