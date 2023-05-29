@@ -1,7 +1,7 @@
 {
-    "label": "Token List",
+    "label": "Limit Order",
     "link": {
       "type": "generated-index",
-      "slug": "/apis/token-list"
+      "slug": "/limit-order"
     },
   }  

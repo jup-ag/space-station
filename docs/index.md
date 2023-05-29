@@ -1,27 +1,29 @@
 ---
 sidebar_position: 1
-title: Docs Overview
+title: Welcome
+description: ' '
 ---
 
-# Developer Documentation
-![jup_v2.jpeg](../static/img/jup_v2.jpeg)
+# Welcome Catdet!
 
-:::info
-This section contains developer documentation for Jupiter. For user guides, see [guides.](/guides)
-:::
+![cat_at_computer.png](../static/img/cat_at_computer.png)
 
-## Making it easy for developers
+## Building a Good Product with You 
 
-We aim to make developing a good swap interface or program as seamless as possible. We do this by:
+We aim to make developing a good swap interface or program as seamless as possible to help you build world class experiences for your users.
 
-- Removing key barriers to providing a good UX, including having clear instructions for issues like ATAs and Open Orders accounts.
-- Providing various methods of accessing the swap, so all apps, dapps, and programs can use it seamlessly.
-- Providing updated liquidity sources, token lists, and UX improvements as soon as possible.
+We offer a wide range of tools to make it possible, including:
 
-If you have questions or need support, you can ask in the #developer-support channel in our discord:  https://discord.gg/jup.
+- [Swaps](/docs/apis/swap-api)
+- [Payments API](/docs/apis/payments-api) to specific an exact output token amount 
+- [Limit Orders](/docs/limit-order/)
 
+For DEXes looking to integrate Jupiter, check out:
+- [Jupiter Terminal](/docs/web-integration/jupiter-terminal) for the easiest way to integrate with your UI
+  
+For projects who wants to make your token visible on the Strict list, see:
+- [Get your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
-### Quick Links
-- [Swap API: The recommended way to interact with Jupiter](/docs/apis/swap-api)
-- [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/web-integration/jupiter-terminal)
-- [Swap tips for users: What your users should know](/guides/swap-tips)
+To learn how to use Jupiter from the perspective of the user, see [User guides.](/guides)
+
+For technical questions or partnership requests, please reach out to us in our discord: https://discord.gg/jup. 
