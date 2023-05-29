@@ -90,6 +90,17 @@ const config = {
         "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars-community.js'),
+        sidebarCollapsed: false,
+      }),
+    ],
     async function myPlugin() {
       return {
         name: "docusaurus-tailwindcss",
@@ -151,6 +162,11 @@ const config = {
             position: "left",
           },
           {
+            to: '/community',
+            label: 'Community',
+            position: 'left',
+          },
+          {
             to: "/stats",
             label: "Stats",
             position: "left",
@@ -161,8 +177,8 @@ const config = {
             position: "left",
           },
           {
-            type: "html",
-            position: "right",
+            type: 'html',
+            position: 'right',
             value: `
             <a href="https://jup.ag/" target="_blank" class="launch-app">
               <span>
