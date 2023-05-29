@@ -279,7 +279,7 @@ Use the API to build your own arbitrage bot.
 
 Jupiter API Arbitrage Example checks whether there is an opportunity for USDC => SOL and SOL => USDC, it submits two transactions that do not always promise profit and might incur losses, use it at your own risk.
 
-[API Arbs Example (v1 api)](https://github.com/jup-ag/api-arbs-example)
+[API Arbs Example (Using V1 API)](https://github.com/jup-ag/api-arbs-example)
 
 **Clone, Build and Run**
 
