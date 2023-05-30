@@ -228,6 +228,11 @@ const sections = [
         logo: stepfinance,
         link: 'https://www.step.finance/',
       },
+      {
+        title: 'Samoyed',
+        logo: samoyed,
+        link: 'https://dogcoincomparison.com/'
+      },
     ],
   },
   {
@@ -498,11 +503,6 @@ const sections = [
         title: 'Famous Fox Federation',
         logo: famousfoxfederation,
         link: 'https://famousfoxes.com/',
-      },
-      {
-        title: 'Samoyed',
-        logo: samoyed,
-        link: 'https://dogcoincomparison.com/'
       },
     ],
   },
