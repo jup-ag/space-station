@@ -29,11 +29,11 @@ After which, Jupiter will be able to pick up your market automatically.
 
 **Permissionless Pools**
 
-#### [Meteora](https://app.meteora.ag/)
+#### [Meteora](https://app.meteora.ag/pools/create)
 
 ![Meteora](./img/meteora1.jpg)
 
-#### [Orca](https://www.orca.so/) 
+#### [Orca](https://www.orca.so/liquidity/create) 
 
 ![Orca](./img/orca1.jpg)
 
