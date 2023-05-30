@@ -9,25 +9,29 @@ Jupiter offers several information signals to help users make informed trading d
 
 ## Price Impact
 
-Price Impact refers to the difference between the total value of the entry tokens swapped and the destination tokens obtained. It is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact. Users can check the price impact and the minimum amount of destination tokens received on the Jupiter interface.
+Price impact refers to the change in an asset's price due to the execution of a trade. This is especially relevant in decentralized exchanges (DEXs) or automated market makers (AMMs) due to their liquidity model.
+
+Price Impact is influenced by the available liquidity to settle the trade, and the size of the trade. For example, if you want to swap a large amount of one token for another in a liquidity pool, the larger your trade compared to the pool's size, the more significant the price impact will be. This is because the execution of your trade will shift the balance between the tokens in the pool, and this shift will directly affect the price according to the AMM's formula. 
+
+Price impact numbers vary across AMMs and the figure shown on Jupiter is an aggregate based on your particular route. 
 
 To reduce price impact, users can split trades into several smaller trades over time. Jupiter's smart routing system checks all available liquidity pools to find the optimal route that maximizes output tokens.
 
-It's important to note that decentralized exchanges allow users to retain full custody of their tokens, and prices offered by different DEXs can vary. The spread, which is the price difference for a token at which it can be traded in one direction or the other of a given pair, is another factor to consider, especially in illiquid pairs where the spread can be significant.
+Be sure to check the minimum amount of destination tokens quoted on the Jupiter interface, and set a Slippage amount to protect yourself.
 
 ![Price Impact](./price-impact.png)
-
-## Price Warning
-
-Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
-
-![Price Warning](./price-warning.png)
 
 ## Slippage
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
 ![Slippage](./slippage-setting.png)
+
+## Price Warning
+
+Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
+
+![Price Warning](./price-warning.png)
 
 ## Addition Safety Confirmation
 
