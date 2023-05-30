@@ -37,7 +37,7 @@ After which, Jupiter will be able to pick up your market automatically.
 
 ![Orca](./img/orca1.jpg)
 
-#### [Raydium](https://raydium.io/)
+#### [Raydium](https://raydium.io/clmm/create-pool/)
 
 ![Raydium](./img/raydium1.jpg)
 
