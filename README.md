@@ -34,6 +34,8 @@ Here are some things you can help with:
 
 Here's an example of PR to add a new protocol into the partners page: [Samoyed](https://github.com/jup-ag/space-station/pull/98)
 
+![example-PR](/static/img/example1.jpg)
+
 # Partners: [{Name}](link)
 
 ## Validation (Please check off boxes):
