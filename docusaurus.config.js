@@ -89,6 +89,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           sidebarCollapsed: false,
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+          // docLayoutComponent: "@theme/DocPage",
+          // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         blog: {
           showReadingTime: true,
@@ -125,13 +127,13 @@ const config = {
       }),
     ],
     [
-      'content-docs',
+      "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: 'community',
-        path: 'community',
-        routeBasePath: 'community',
-        sidebarPath: require.resolve('./sidebars-community.js'),
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        sidebarPath: require.resolve("./sidebars-community.js"),
         sidebarCollapsed: false,
       }),
     ],
@@ -196,9 +198,9 @@ const config = {
             position: "left",
           },
           {
-            to: '/community',
-            label: 'Community',
-            position: 'left',
+            to: "/community",
+            label: "Community",
+            position: "left",
           },
           {
             to: "/stats",
@@ -211,8 +213,8 @@ const config = {
             position: "left",
           },
           {
-            type: 'html',
-            position: 'right',
+            type: "html",
+            position: "right",
             value: `
             <a href="https://jup.ag/" target="_blank" class="launch-app">
               <span>
