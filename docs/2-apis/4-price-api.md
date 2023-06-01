@@ -4,7 +4,7 @@ description: Get on-chain price for any token
 ---
 # Price API: Get on-chain price for any token
 
-The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible, with options for customising the comparison token and liquidity depth.
+The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible, and option to compare against other token.
 
 :::info
 We support fetching the prices for up to 100 tokens in one call right now to manage performance. If you have a use case that is not supported yet, let us know in #developer-support in our discord: [discord.gg/jup](https://discord.gg/jup)
