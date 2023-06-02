@@ -30,7 +30,8 @@ For your convenience, we packed it into 2 endpoints for you to choose from.
     - No unknown and banned tokens.
 - **All:** https://token.jup.ag/all
     - Everything including unknown/untagged tokens that are picked up automatically.
-    - It does not include banned tokens by default. To bring up banned tokens, append this flag to the endpoint. (?includeBanned=true). Banned tokens that no longer meet our minimum liquidity requirements will not appear in this response. If you require all historical banned tokens -- please refer to [this banned tokens file in our Github repo.](https://github.com/jup-ag/token-list/blob/main/banned-tokens.csv)
+    - It does not include banned tokens by default. 
+    - To bring up banned tokens, append this flag to the endpoint. (?includeBanned=true). Often, projects notice that the token got banned and withdraw liquidity. As our lists are designed for trading, banned tokens that used to, but no longer meet our minimum liquidity requirements will not appear in this response. If you require the entire list of banned tokens -- please refer to [this banned tokens file in our Github repo.](https://github.com/jup-ag/token-list/blob/main/banned-tokens.csv)
 
 
 ## Tags & Extensions:
