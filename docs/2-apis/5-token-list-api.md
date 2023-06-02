@@ -20,7 +20,7 @@ Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-
 ## 'Strict' and 'All' Lists
 
 :::info Our lists only show tokens that satisfy our minimum liquidity requirements
-Our lists are designed for trading -- Tokens in the "All" list only show tokens that satisfy our minimum liquidity requirements. Tokens will automatically be picked up once they are above the threshold, and will fall off when they are below. See [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup) for more details on liqudity requirements.
+Our lists are designed for trading -- The "All" list only shows tokens that satisfy our minimum liquidity requirements. Tokens will automatically be picked up once they are above the threshold, and will fall off when they are below. See [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup) for more details on liqudity requirements.
 :::
 
 For your convenience, we packed it into 2 endpoints for you to choose from.
