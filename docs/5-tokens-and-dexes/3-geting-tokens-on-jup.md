@@ -15,7 +15,7 @@ We felt that this is a good balance to allow users to trade newer tokens – whi
 ### Tokens with Sufficient Liquidity and On-Chain Metadata are Automatically Listed
 
 - Your token must exist on-chain and have token metadata conforming to the [Metaplex Token Metadata](https://docs.metaplex.com/programs/token-metadata/token-standard).
-- Your token must have a minimum amountå of liquidity of **$500** in any of the DEXes that Jupiter aggregates.
+- Your token must have a minimum amount of liquidity of **$500** in any of the DEXes that Jupiter aggregates.
 - If your liquidity is on Openbook it must have $250 on both the buy and sell side.
 
 Once you've met the requirements above, Jupiter will automatically list your token within a few minutes.
