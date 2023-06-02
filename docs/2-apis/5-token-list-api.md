@@ -11,13 +11,17 @@ Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-
 
 ## Core Principles
 
-1. **Safety:** Only validated token addresses are shown by default on the 'Strict List'. We will continue to build up more security measures & notifications for new tokens entering the strict list over time.
+1. **Safety:** Only validated token addresses are shown by default on the 'Strict List'.
 2. **Open:** Automatically adds new tokens with sufficient liquidity into the ‘Full’ list. The full list will always contain all tokens available for trade to give open access to all projects.
 3. **Un-opinionated:** All data (market, partner, community) is included and you can pick the tokens you need.
 4. **Collaborative:** We engage ecosystem partners to build a robust and comprehensive list with us by including their data.
 5. **Community Driven:** Our community drives the validation process.
 
-## Endpoints
+## 'Strict' and 'All' Lists
+
+:::info Our lists only show tokens that satisfy our minimum liquidity requirements
+Our lists are designed for trading -- they only show tokens that satisfy our minimum liquidity requirements and are available for trading on Solana. See [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup) for details.
+:::
 
 For your convenience, we packed it into 2 endpoints for you to choose from.
 
@@ -26,8 +30,8 @@ For your convenience, we packed it into 2 endpoints for you to choose from.
     - No unknown and banned tokens.
 - **All:** https://token.jup.ag/all
     - Everything including unknown/untagged tokens that are picked up automatically.
-    - It does not include banned tokens by default. To bring up banned tokens, append this flag to the endpoint. (?includeBanned=true).
-    - Our lists are designed for trading and so only lists tokens that satisfy our minimum liquidity requirements and are available for trading on Solana [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup)
+    - It does not include banned tokens by default. To bring up banned tokens, append this flag to the endpoint. (?includeBanned=true). Banned tokens that no longer meet our minimum liquidity requirements will not appear in this response. If you require all historical banned tokens -- please refer to [this banned tokens file in our Github repo.](https://github.com/jup-ag/token-list/blob/main/banned-tokens.csv)
+
 
 ## Tags & Extensions:
 
