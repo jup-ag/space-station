@@ -29,6 +29,7 @@ const OasisSVG = "/svg/oasis.svg";
 const BonkSwapPNG = "/svg/bonkswap.png";
 const SymmetrySVG = "/svg/symmetry.svg";
 const PhoenixSVG = "/svg/phoenix.svg";
+const FluxBeamPNG = "/svg/fluxbeam.png";
 
 const PoolProviderLogoMap: Record<string, any> = {
   Orca: OrcaSVG,
@@ -56,6 +57,7 @@ const PoolProviderLogoMap: Record<string, any> = {
   BonkSwap: BonkSwapPNG,
   Symmetry: SymmetrySVG,
   Phoenix: PhoenixSVG,
+  FluxBeam: FluxBeamPNG,
 };
 
 // Don't have to use this, the API endpoint can rename the provider.
