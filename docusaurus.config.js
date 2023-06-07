@@ -58,8 +58,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           sidebarCollapsed: false,
-          editUrl:
-            "https://github.com/jup-ag/space-station/tree/main/",
+          editUrl: "https://github.com/jup-ag/space-station/tree/main/",
         },
         blog: {
           showReadingTime: true,
@@ -86,18 +85,17 @@ const config = {
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: false,
-        editUrl:
-        "https://github.com/jup-ag/space-station/tree/main/",
+        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
     [
-      'content-docs',
+      "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: 'community',
-        path: 'community',
-        routeBasePath: 'community',
-        sidebarPath: require.resolve('./sidebars-community.js'),
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        sidebarPath: require.resolve("./sidebars-community.js"),
         sidebarCollapsed: false,
       }),
     ],
@@ -124,13 +122,13 @@ const config = {
             "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
         },
         {
-           property: "og:image",
-           content: "https://og.jup.ag/api/jupiter-station",
+          property: "og:image",
+          content: "https://og.jup.ag/api/jupiter-station",
         },
         {
           name: "theme-color",
-          content: '#000000',
-        }
+          content: "#000000",
+        },
       ],
       colorMode: {
         defaultMode: "light",
@@ -162,9 +160,9 @@ const config = {
             position: "left",
           },
           {
-            to: '/community',
-            label: 'Community',
-            position: 'left',
+            to: "/community",
+            label: "Community",
+            position: "left",
           },
           {
             to: "/stats",
@@ -177,8 +175,13 @@ const config = {
             position: "left",
           },
           {
-            type: 'html',
-            position: 'right',
+            type: "search",
+            position: "right",
+            className: "search",
+          },
+          {
+            type: "html",
+            position: "right",
             value: `
             <a href="https://jup.ag/" target="_blank" class="launch-app">
               <span>
@@ -188,6 +191,15 @@ const config = {
             `,
           },
         ],
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "JMCIA1QG7Y",
+        // Public API key: it is safe to commit it
+        apiKey: "74d6232a420d282f4dd042bdfe519930",
+        indexName: "station-jup",
+        contextualSearch: true,
+        searchPagePath: false,
       },
       prism: {
         theme: lightCodeTheme,
