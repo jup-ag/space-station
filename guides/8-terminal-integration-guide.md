@@ -1,29 +1,39 @@
 ---
-title: How to Integrate Jupiter Terminal
-sidebar_label: "How to integrate Jupiter Terminal"
+title: Jupiter Terminal Walkthrough
+sidebar_label: "Jupiter Terminal Walkthrough"
 description: "Jupiter Terminal Integration walk-through"
 ---
+## A detailed guide to integrating Jupiter Terminal
 
-## Jupiter Terminal
+Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code. 
 
-Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML.
+:::tip Jupiter Terminal Links
+- [Demo](https://terminal.jup.ag/): See all available modes
+- [Developer Docs](/docs/web-integration/jupiter-terminal): Jupiter Terminal in detail
+- [Repo](https://github.com/jup-ag/terminal)
+:::
 
-Visit our **Demo / Playground** over at https://terminal.jup.ag
+Here's a quick preview of the modes available. To see more, go to [our Demo page](https://terminal.jup.ag/)
 
-With several templates to get you started, and auto generated code snippets.
+![Demo](/img/guide/terminal-demo.gif)
 
-**Github Repo**: https://github.com/jup-ag/terminal 
 
-## Quick tutorial with Solana Dapp Scaffold
 
+## Example: Jupiter Terminal integration on a Solana Dapp scaffold
+
+Integrating Jupiter onto your website should be straight-forward. We provide a step-by-step guide here so anyone can do it.
+
+Here's what you can expect from this tutorial: You'll get Jupiter Terminal launching from Solana Dapp in "Modal" mode.
+
+![Demo 2](/img/guide/terminal-demo2.gif)
+
+This walkthrough is also available on Youtube: 
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/T-3KN3k1e5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 [Watch tutorial on YouTube](https://youtu.be/T-3KN3k1e5Y)
 
-:::info 
-A quick example with Solana Dapp scaffold as the base and integrate Jupiter Terminal on top of it.
-:::
+## Step-by-step Walkthrough
 
 Solana Labs Dapp scaffold Repo: https://github.com/solana-labs/dapp-scaffold
 
@@ -74,10 +84,6 @@ This RPC_ENDPOINT is only for demonstration purposes so that this example will r
 
 ![Example 7](/img/guide/example7.jpg)
 
-In this example, we're using `Modal Mode` hence we're adding a button (Launch Jupiter Terminal) to trigger Jupiter Terminal in the scaffold dapp.
-
-![Demo 2](/img/guide/terminal-demo2.gif)
-
-:::success You're all up and ready to roll!
-Do reach out if you're integrating Jupiter Terminal to your project, we're happy to support.
+:::success Please reach out in discord if you need help
+Feel free to reach out to us in discord if you experience difficulties, we can help you there.
 :::
