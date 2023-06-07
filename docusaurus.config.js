@@ -175,6 +175,11 @@ const config = {
             position: "left",
           },
           {
+            type: "search",
+            position: "right",
+            className: "search",
+          },
+          {
             type: "html",
             position: "right",
             value: `
@@ -184,11 +189,6 @@ const config = {
               </span>
             </a>
             `,
-          },
-          {
-            type: "search",
-            position: "right",
-            className: "search",
           },
         ],
       },
