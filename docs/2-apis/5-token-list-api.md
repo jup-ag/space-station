@@ -41,8 +41,9 @@ Each token can have 1 or more of the following:
 - `tags` Old-registry: From the archived [Solana Labs token list repo](https://github.com/solana-labs/token-list). These tokens were added to the repo before July 2022. As this is the original token list in Solana, the tokens here are generally more recognised.
 - `tags` Community: Attested by Jupiter's communities. This includes newer and widely traded tokens created after the old-registry was archived like Bonk and Hades.
 - `tags` [Wormhole](https://github.com/wormhole-foundation/wormhole-token-list/blob/main/content/dest_solana.md): Bridged assets to Solana via wormhole
-- `tags` [SolanaFM](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list
-- `tags` No tags / Unknown ("tags:[ ]"): Assets that were [picked up automatically by Jupiter](/docs/get-your-token-onto-jup).
+- `tags` [SolanaFM](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list.
+- `tags` Unknown: Assets that were [picked up automatically by Jupiter](/docs/get-your-token-onto-jup).
+- `tags` Token2022: Tokens on the [Token-2022 Program](https://spl.solana.com/token-2022).
 - `extensions` isBanned: Generally fake tokens trying to impersonate another project (E.g. fake wSOL), flagged by our community.
 
 ## Our UI on Jup.ag
