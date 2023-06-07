@@ -180,6 +180,22 @@
   stroke: white;
 }
 
+.home .search .DocSearch-Button {
+  background-color: #111d28;
+}
+
+.home .search .DocSearch-Search-Icon {
+  color: white
+}
+
+.search .DocSearch-Button-Placeholder {
+  display: none;
+}
+
+.search .DocSearch-Button-Keys {
+  display: none;
+}
+
 @keyframes float-y {
   0%,
   100% {
