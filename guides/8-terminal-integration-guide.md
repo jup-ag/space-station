@@ -18,7 +18,6 @@ Here's a quick preview of the modes available. To see more, go to [our Demo page
 ![Demo](/img/guide/terminal-demo.gif)
 
 
-
 ## Example: Jupiter Terminal integration on a Solana Dapp scaffold
 
 Integrating Jupiter onto your website should be straight-forward. We provide a step-by-step guide here so anyone can do it.
