@@ -33,7 +33,7 @@ Here are some things you can help with:
 3. Add `title`, `logo`, and `link` for your protocol.
 
 Here's an example of PR to add a new protocol into the partners page: [Samoyed](https://github.com/jup-ag/space-station/pull/98)
-
+Please fill up the PR description in the same way. 
 ![example-PR](/static/img/example1.jpg)
 
 # Partners: [{Name}](link)
