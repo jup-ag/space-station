@@ -1,13 +1,13 @@
 # Verifying Swap Transactions
 
-![solanafm_banner](./SolanaFM_banner.png)
+![solanafm_banner](./img/SolanaFM_banner.png)
 
 *A community guide to verifying Jupiter swaps on a Block Explorer.*
 
 This guide was created through contributions from [@0xmiir](https://twitter.com/0xmiir), Marketing Lead at SolanaFM.
 
 :::tip Pro-tip: Set SolanaFM as your Default Explorer.
-![solanafm_banner](./solanafm_default.png)
+![solanafm_banner](./img/solanafm_default.png)
 To set SolanaFM as the Default Explorer, click on the **'settings'** icon in the Jupiter app and set your 'Preferred Explorer' to SolanaFM.
 :::
 
