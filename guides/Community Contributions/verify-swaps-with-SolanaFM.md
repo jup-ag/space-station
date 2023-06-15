@@ -1,22 +1,26 @@
-# Verifying Swap Transactions
+---
+sidebar_label: 'Verifying Swaps Transactions'
+description: Verifying Swaps on a Block Explorer.
+---
 
-![solanafm_banner](./img/SolanaFM_banner.png)
+# Verifying Swaps on a Block Explorer
 
-*A community guide to verifying Jupiter swaps on a Block Explorer.*
+:::tip This is a community contributed guide
+This is a community guide to verifying Jupiter swaps on a Block Explorer, created by [@0xmiir](https://twitter.com/0xmiir), Marketing Lead at SolanaFM.
 
-This guide was created through contributions from [@0xmiir](https://twitter.com/0xmiir), Marketing Lead at SolanaFM.
-
-:::tip Pro-tip: Set SolanaFM as your Default Explorer.
-![solanafm_banner](./img/solanafm_default.png)
-To set SolanaFM as the Default Explorer, click on the **'settings'** icon in the Jupiter app and set your 'Preferred Explorer' to SolanaFM.
+Anyone can contribute a guide to Jupiter Station! Simply send us a PR.
 :::
 
 When swapping tokens on Solana, you might come across occasional hiccups — sometimes transactions might not go through, a different amount of tokens appear in your wallet, or the token doesn’t appear at all. How do you figure out what’s going on?
 
 This guide will walk you through how to verify your swaps on Jupiter.
 
+:::tip Pro-tip: You can set your Default Explorer
+To set a Default Explorer, click on the **'settings'** icon in the Jupiter app and set your 'Preferred Explorer'.
+:::
+
 ## Viewing Your Swap Transaction
-![sfm_swap1](./img/sfm_swap1.png)
+![sfm_swap1](../img/sfm_swap1.png)
 
 In this scenario, I’ve swapped **0.5SOL** for an estimated **10.08USDC** via **Saber** and **Orca**.
 
@@ -33,7 +37,7 @@ On SolanaFM, you can verify:
 Let’s go through these in more detail.
 
 ## Transaction Failure/Success
-![sfm_swap2](./img/sfm_swap2.png)
+![sfm_swap2](../img/sfm_swap2.png)
 
 At the top of the transaction interface, you can easily verify the status of the transaction.
 
@@ -42,7 +46,7 @@ A successful transaction shows “Success”, “Finalized” and “Maximum Con
 ## Instructions Executed
 Instructions within a transaction refer to the operations that have taken place for this transaction to happen successfully. 
 
-![sfm_swap3](./img/sfm_swap3.png)
+![sfm_swap3](../img/sfm_swap3.png)
 
 Here, we can see that the **Jupiter Program** had interacted with the **Saber Stable Swap Program** and the **Orca Whirlpool Program** for the swap to take place.
 
@@ -56,7 +60,7 @@ Swap 3: 0.25 **SOL** → 5.04 **USDC**
 
 The Transaction Flow helps us understand which tokens moved, and how much tokens moved in and out of your wallet accounts.
 
-![sfm_swap4](./img/sfm_swap4.png)
+![sfm_swap4](../img/sfm_swap4.png)
 
 We’ve seen from the Instructions that 50% of the SOL amount was swapped into stSOL before being converted into USDC (via Saber), while the other 50% was converted directly into USDC (via Orca).
 
