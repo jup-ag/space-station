@@ -20,7 +20,7 @@ yarn build && yarn start
 
 Here are some things you can help with:
 - Write a user guide about a product feature or something you think people should know.
-- Update developer docs if you noticed something that's missing or that could help other folks. 
+- Update developer docs if you noticed something that's missing or that could help other folks.
 
 ## Jupiter Space Station Partner Page
 
@@ -34,5 +34,5 @@ Here are some things you can help with:
 
 Here's an example of PR to add a new protocol into the partners page: [Samoyed](https://github.com/jup-ag/space-station/pull/98)
 
-Please fill up your PR description with the same format as shown in the example PR. 
+Please fill up your PR description with the same format as shown in the example PR.
 ![example-PR](/static/img/example1.jpg)
