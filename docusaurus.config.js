@@ -8,6 +8,7 @@ require("dotenv").config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Jupiter Station",
+  staticDirectories: ['static'],
   tagline: "The Key Liquidity Aggregator and Swap Infrastructure for Solana",
   favicon: "img/favicon.ico",
   customFields: {
