@@ -30,6 +30,7 @@ const BonkSwapPNG = "/svg/bonkswap.png";
 const SymmetrySVG = "/svg/symmetry.svg";
 const PhoenixSVG = "/svg/phoenix.svg";
 const FluxBeamPNG = "/svg/fluxbeam.png";
+const HeliumSVG = "/svg/helium.svg";
 
 const PoolProviderLogoMap: Record<string, any> = {
   Orca: OrcaSVG,
@@ -58,10 +59,8 @@ const PoolProviderLogoMap: Record<string, any> = {
   Symmetry: SymmetrySVG,
   Phoenix: PhoenixSVG,
   FluxBeam: FluxBeamPNG,
+  "Helium Network": HeliumSVG,
 };
-
-// Don't have to use this, the API endpoint can rename the provider.
-const REBRAND_NAMES: Record<string, string> = {};
 
 // Use this to hide the AMMs that are not ready to be shown
 const HIDE_AMMS: string[] = [];
@@ -83,9 +82,6 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
     return (
       data?.lastXVolumeByAMMs.find(({ amm }) => amm === ammName)?.amount || 0
     );
-  };
-  const getName = (ammName: string) => {
-    return REBRAND_NAMES[ammName] || ammName;
   };
 
   return (
@@ -123,7 +119,7 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
                       />
                     )}
                     <span className="ml-3 text-[rgba(0,0,0,0.75)] dark:text-white">
-                      {getName(name)}
+                      {name}
                     </span>
                   </p>
                   <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">
@@ -148,14 +144,14 @@ const TopPoolProviders = ({ mode }: { mode: Mode }) => {
               >
                 {PoolProviderLogoMap[name] && (
                   <img
-                    alt={getName(name)}
+                    alt={name}
                     src={PoolProviderLogoMap[name] || ""}
                     height={28}
                     width={28}
                   />
                 )}
                 <span className="ml-3 text-[rgba(0,0,0,0.75)] dark:text-white">
-                  {getName(name)}
+                  {name}
                 </span>
               </p>
               <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">
