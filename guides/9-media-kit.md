@@ -1,19 +1,25 @@
 ---
-title: Media kit
-sidebar_label: "Media kit"
-description: ""
+title: Jupiter Media Kit
+sidebar_label: "Media Kit"
+description: "Download Jupiter Media Kit"
 ---
 
 import DownloadBox from '../src/components/DownloadBox';
 
-### Jupiter logo
+Please find official Jupiter information, imagery, inforgraphics and contacts below for your own use. 
 
-<DownloadBox fileName="tokens.zip" />
+For additional info or media inquieries, please contact feedback@jup.ag
 
-### Token logos
+Or contact Jupiter through [Twitter](https://twitter.com/JupiterExchange) or [Discord](https://discord.gg/jup)
 
-<DownloadBox fileName="tokens.zip" />
+### Jupiter Logo
 
-### Download our kit
+<DownloadBox fileName="jupiter-logo.zip" />
 
-<DownloadBox fileName="tokens.zip" />
+### Jupiter Integration
+
+<DownloadBox fileName="powered-by-jupiter.zip" />
+
+### Download Jupiter Brand Materials
+
+<DownloadBox fileName="jupiter-brand-materials.zip" />
