@@ -274,6 +274,11 @@ const sections = [
         link: 'https://www.openbook-solana.com/',
       },
       {
+        title: 'Mango',
+        logo: mango,
+        link: 'https://mango.markets/'
+      },
+      {
         title: 'Meteora',
         logo: meteora,
         link: 'https://meteora.ag/',
