@@ -28,6 +28,7 @@ const francium = '/img/defi/francium.png';
 const sonar = '/img/defi/sonar.png';
 const hellomoon = '/img/defi/hellomoon.svg';
 const kamino = '/img/defi/kamino.png';
+const mango = '/img/defi/mango.png';
 const mean = '/img/defi/mean.svg';
 const portfinance = '/img/defi/portfinance.svg';
 const tulip = '/img/defi/tulip.png';
@@ -47,7 +48,6 @@ const ellipsis = '/img/dex_amm/ellipsislab.svg';
 const phoenix = '/img/dex_amm/phoenix.svg';
 const invariant = '/img/dex_amm/invariant.svg';
 const lifinity = '/img/dex_amm/lifinity.png';
-const mango = '/img/dex_amm/mango.png';
 const oasis = '/img/dex_amm/oasis.svg';
 const marinade = '/img/dex_amm/marinade.png';
 const meteora = '/img/dex_amm/meteora.png';
@@ -214,6 +214,11 @@ const sections = [
         link: 'https://kamino.finance/',
       },
       {
+        title: 'Mango',
+        logo: mango,
+        link: 'https://mango.markets/'
+      },
+      {
         title: 'Marinade Finance',
         logo: marinade,
         link: 'https://marinade.finance/',
@@ -272,11 +277,6 @@ const sections = [
         title: 'Openbook',
         logo: openbook,
         link: 'https://www.openbook-solana.com/',
-      },
-      {
-        title: 'Mango',
-        logo: mango,
-        link: 'https://mango.markets/'
       },
       {
         title: 'Meteora',
