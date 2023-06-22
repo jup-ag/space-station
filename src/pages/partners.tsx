@@ -21,6 +21,7 @@ const frontier = '/img/wallet/frontier.svg';
 const ottr = '/img/wallet/ottr.png';
 const nightly = '/img/wallet/nightly.svg';
 const keyapp = '/img/wallet/key.svg';
+const tiplink = '/img/wallet/tiplink.svg';
 
 const birdeye = '/img/defi/birdeye.png';
 const bonfida = '/img/defi/bonfida.png';
@@ -153,6 +154,11 @@ const sections = [
         title: 'Key App',
         logo: keyapp,
         link: 'https://key.app/',
+      },
+      {
+        title: 'TipLink',
+        logo: tiplink,
+        link: 'https://tiplink.io/',
       },
     ],
   },
