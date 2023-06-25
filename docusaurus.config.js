@@ -176,6 +176,11 @@ const config = {
             position: "left",
           },
           {
+            to: "/feedback",
+            label: "Feedback",
+            position: "left",
+          },
+          {
             type: "search",
             position: "right",
             className: "search",
