@@ -30,7 +30,7 @@ import bs58 from 'bs58';
 import fetch from 'node-fetch';
 import JSBI from 'jsbi';
 import { Connection, PublicKey, Keypair } from '@solana/web3.js';
-import { Jupiter, RouteInfo, TOKEN_LIST_URL } from '@jup-ag/core';
+import { Jupiter, RouteInfo, TOKEN_LIST_URL, SwapResult } from '@jup-ag/core';
 ```
 
 **2. Start off with a simple root level function**
@@ -275,7 +275,7 @@ const main = async () => {
   });
 
   // Execute swap
-  const swapResult: any = await execute(); // Force any to ignore TS misidentifying SwapResult type
+  const swapResult: SwapResult = await execute();
 
   if (swapResult.error) {
     console.log(swapResult.error);
