@@ -20,7 +20,7 @@ Jupiter does not charge any fees at the moment, the transaction fees that you se
 - Slippage occurs because of changing market conditions between the moment the transaction is submitted and its verification.
 - Your slippage rate is an important setting, it works as a protection. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
-- Learn more about [slippage and price impact](./4-price-impact-slippage-price-warning)
+- Learn more about [slippage and price impact](./price-impact-slippage-price-warning)
 
 ### What does it mean when I get the 'some routes failed to load...'
 
@@ -29,7 +29,7 @@ Jupiter does not charge any fees at the moment, the transaction fees that you se
 
 ### How do I integrate Jupiter swap into my protocol / dApp? 
 
-Protocols / Projects are free to integrate Jupiter swap with either the [Swap API](/docs/2-apis/1-swap-api) or [Swap SDK](/docs/2-apis/2-swap-sdk), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
+Protocols / Projects are free to integrate Jupiter swap with either the [Swap API](/docs/apis/swap-api) or [Swap SDK](/docs/apis/swap-sdk), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
 
 ## Jupiter Limit Order
 
@@ -45,7 +45,7 @@ Protocols / Projects are free to integrate Jupiter swap with either the [Swap AP
 A few scenarios or cases where the order is not being fulfill
 - If the order size is too large *(and there is insufficient liquidity on-chain)* - in this case, Jupiter keeper will attempt to execute your order in a smaller chunk to partially fill your orders and will continue to do so until order is fully executed
 - The price wick happen for a very short period of time, and the liquidity have all been taken up at that price.
-- For more information on how Jupiter Limit Order works - [How Limit Order Works](./6-how-lo-work)
+- For more information on how Jupiter Limit Order works - [How Limit Order Works](./how-lo-work)
 
 ### What happened if I close my order that has partially filled? Do I get the balance of my original input token and also filled output token?
 
@@ -77,8 +77,8 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new project token to be available to trade on Jupiter? 
 
-- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](./8-new-token-guide)
-- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of $500 to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/5-tokens-and-dexes/3-geting-tokens-on-jup)
+- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](./new-token-guide)
+- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of $500 to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 
@@ -108,7 +108,7 @@ A few scenarios or cases where the order is not being fulfill
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
 - When markets are very active, many transactions take place on the same DEX accounts. To allow your transaction to be included in priority against others, you can adjust your transaction fees.
 - You can adjust your Transaction Priority fees. By default, transaction priority is set to Auto.
-- Learn more about [slippage and price impact](./4-price-impact-slippage-price-warning)
+- Learn more about [slippage and price impact](./price-impact-slippage-price-warning)
 
 ## What does it mean when I get the 'some routes failed to load...'
 
@@ -135,7 +135,7 @@ A few scenarios or cases where the order is not being fulfill
 ## My swap fails, reporting that the account does not have enough SOL. Why?
 
 - On Solana, you use SOL to pay transactions (around 0.000005 sol) but also to pay rent fees for token accounts. It's around 0.002 SOL and they are refundable when you close the account.
-- Read: [What does rent for accounts mean?](./11-what-does-rent-for-accounts-mean)
+- Read: [What does rent for accounts mean?](https://docs.solana.com/developing/intro/rent)
 
 ## What does rent for accounts mean?
 =======
