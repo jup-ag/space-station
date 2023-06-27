@@ -177,7 +177,7 @@ const config = {
           },
           {
             to: "/feedback",
-            label: "Feedback",
+            label: "Discuss",
             position: "left",
           },
           {
