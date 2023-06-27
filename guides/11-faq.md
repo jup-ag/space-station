@@ -1,6 +1,6 @@
 ---
 title: Jupiter Frequently Ask Question
-sidebar_label: "Jup FAQ"
+sidebar_label: "Jupiter FAQ"
 description: "Frequently ask question can be found here"
 ---
 
