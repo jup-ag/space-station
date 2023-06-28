@@ -5,7 +5,7 @@ title: "Jupiter Token 2022 Support"
 
 After rigorous testing over the past few weeks, **Token2022 is now officially supported on Jupiter**, [Fluxbeam](https://fluxbeam.xyz/) has been integrated into our routing, and tokens like [$BERN](https://birdeye.so/token/CKfatsPMUf8SkiURsDXs7eK6GWb4Jsd6UDbs7twMCWxo?chain=solana) and [$MOON](https://birdeye.so/token/2kMpEJCZL8vEDZe7YPLMCS9Y3WKSAMedXBn7xHPvsWvi?chain=solana) can now be seamlessly traded with all the other tokens in the Solana universe. 
 
-Token2022 is a new token standard developed by Solana Foundation that presents a superset of functionality provided by the standard [SPL Token Library](https://spl.solana.com/token), including transfer fees, interest bearing tokens, non-transferability, and immutability. 
+Token2022 is a new token standard developed by Solana Labs that presents a superset of functionality provided by the standard [SPL Token Library](https://spl.solana.com/token), including transfer fees, interest bearing tokens, non-transferability, and immutability. 
 
 This enables new types of tokenomics to be developed - for example, $BERN leverages the transfer fee extension, taking a 6.9% fee, which is then used to reward holders of $BERN and $BONK, while Solarmoon is leveraging transfer fees to create a deflationary tokenomics for $MOON through reducing supply.
 
