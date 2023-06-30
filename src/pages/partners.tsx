@@ -75,6 +75,7 @@ const staratlas = '/img/game/staratlas.png';
 
 const candypay = '/img/payment/candypay.svg';
 const helio = '/img/payment/helio.svg';
+const sphere = '/img/payment/sphere.svg';
 
 const famousfoxfederation = '/img/nft/fff.png';
 const hadeswap = '/img/nft/hadeswap.png';
@@ -475,6 +476,11 @@ const sections = [
         title: 'CandyPay',
         logo: candypay,
         link: 'https://candypay.fun/',
+      },
+      {
+        title: 'Sphere',
+        logo: sphere,
+        link: 'https://spherepay.co/',
       },
     ],
   },
