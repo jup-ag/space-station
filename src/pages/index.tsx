@@ -79,6 +79,18 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
     permalink:
       "https://twitter.com/SolCS95/status/1647734143525228544?s=20",
   },
+  {
+    author: {
+      name: "Netrunner - Portfolio Tools",
+      username: "NetrunnerNFT",
+      image:
+        "https://pbs.twimg.com/profile_images/1616532703108796416/9zuxs0RG_400x400.jpg",
+    },
+    tweet: "@JupiterExchange is the reason our 'swap' feature can exist. \n\nbuilding together on the ecosystem, what more could we ask for?",
+    time: new Date(2023, 5, 20, 18, 25),
+    permalink:
+      "https://twitter.com/netrunnernft/status/1671101933023821824"
+  },
 ];
 export default function Home(): JSX.Element {
   return (
