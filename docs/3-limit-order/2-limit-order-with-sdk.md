@@ -34,7 +34,11 @@ const connection = new Connection($SOLANA_RPC_ENDPOINT);
 
 const limitOrder = new LimitOrderProvider(
     connection,
-    referralPubKey //optional, more details in the section below
+    // referralPubKey and name are both optional
+    // provide both to get referral fees
+    // more details in the section below
+    referralPubKey,
+    referralName
 );
 ```
 
@@ -50,7 +54,7 @@ const {tx, orderPubKey} = await limitOrder.createOrder({
   outAmount: new BN(100000),
   inputMint: new PublicKey(inputToken.address),
   outputMint: new PublicKey(outputToken.address),
-  expiredAt: null // new BN(new Date().valueOf() / 1000),
+  expiredAt: null, // new BN(new Date().valueOf() / 1000)
   base: base.publicKey
 });
 
@@ -117,7 +121,9 @@ Referrers are entitled to a share of 0.1% of referral fees, while the platform c
 **1.  Create a referral account**
 
 ```js
-const { tx, referralAccountPubKey } = await limitOrder.createReferralAccount();
+const { tx, referralAccountPubKey } = await limitOrder.createReferralAccount(
+  KEYPAIR.publicKey // payer
+);
 
 await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
 ```
@@ -130,7 +136,7 @@ For every token you would like to collect referral fees in, you need to generate
 const { tx, referralTokenAccountPubKey } =
   await limitOrder.createReferralTokenAccount(
     mint,
-    KEYPAIR.publicKey
+    KEYPAIR.publicKey // payer
   );
 
 await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
@@ -143,7 +149,10 @@ Once you include your referralPubKey in LimitOrderProvider initialization and ou
 **4.  Claim fees**
 
 ```js
-const tx = await limitOrder.claimReferral(mint);
+const tx = await limitOrder.claimReferral(
+  mint,
+  KEYPAIR.publicKey // payer
+);
 
 await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
 ```
