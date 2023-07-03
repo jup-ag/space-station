@@ -70,7 +70,11 @@ const transactions = await (
       outputMint: outputMint.toString(),
       expiredAt: null // new Date().valueOf() / 1000,
       base: base.publicKey.toString(),
-      referral: referral.publicKey.toString() //optional, more details in the section below
+      // referralAccount and name are both optional
+      // provide both to get referral fees
+      // more details in the section below
+      referralAccount: referral.publicKey.toString(),
+      referralName: "Referral Name"
     })
   })
 ).json();
@@ -80,15 +84,17 @@ const { tx } = transactions;
 
 **expiredAt** - It can be either null or Unix timestamp in seconds.
 
+### Execute transaction
+
 **5. Deserialize and sign the transaction**
 
 ```js
 // deserialize the transaction
 const transactionBuf = Buffer.from(tx, 'base64');
 var transaction = VersionedTransaction.deserialize(transactionBuf);
-console.log(transaction);
 
-// sign the transaction
+// sign the transaction using the required key
+// for create order, wallet and base key are required.
 transaction.sign([wallet.payer, base]);
 ```
 
@@ -368,7 +374,7 @@ console.log(`https://solscan.io/tx/${txid}`);
 </details>
 </details>
 
-Deserialize, sign and execute the transaction from the response like here.
+Deserialize, sign and execute the transaction from the response like [here](#execute-transaction).
 
 :::info
 Due to the transaction size limit, the maximum cancellation order in a batch is 10.
@@ -393,7 +399,8 @@ Referrers are entitled to a share of 0.1% of referral fees, while the platform c
 
 ```json
 {​
-  "referral": "string",​
+  "referralAccount": "string",​
+  "referralName": "string",​
   "feePayer": "string"​
 ​}
 
@@ -436,7 +443,7 @@ Referrers are entitled to a share of 0.1% of referral fees, while the platform c
 </details>
 </details>
 
-Deserialize, sign and execute the transaction from the response like here.
+Deserialize, sign and execute the transaction from the response like [here](#execute-transaction).
 
 **2.  Create referral token accounts**
 
@@ -455,7 +462,8 @@ For every token you would like to collect referral fees in, you need to generate
 
 ```json
 {​
-  "referral": "string",​
+  "referralAccount": "string",​
+  "referralName": "string",​
   "mint": "string",​
   "feePayer": "string"​
 ​}
@@ -499,7 +507,7 @@ For every token you would like to collect referral fees in, you need to generate
 </details>
 </details>
 
-Deserialize, sign and execute the transaction from the response like here.
+Deserialize, sign and execute the transaction from the response like [here](#execute-transaction).
 
 **3.  Collect fees**
 
@@ -519,7 +527,8 @@ Once you include your referralPubKey in LimitOrderProvider initialization and ou
 
 ```json
 {​
-  "referral": "string",​
+  "referralAccount": "string",​
+  "referralName": "string",​
   "mint": "string",​
   "feePayer": "string"​
 ​}
@@ -562,4 +571,4 @@ Once you include your referralPubKey in LimitOrderProvider initialization and ou
 </details>
 </details>
 
-Deserialize, sign and execute the transaction from the response like here.
+Deserialize, sign and execute the transaction from the response like [here](#execute-transaction).
