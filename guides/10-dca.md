@@ -152,3 +152,15 @@ This allows the program to transfer the remaining purchased tokens to you. As su
 :::warning 
 Do not close your ATA without first withdrawing the tokens or swapping them for other tokens. Doing so can result in the lost of tokens. This is not unique to Jupiter or Jupiter’s DCA. This has to do with how Solana wallets and accounts work.
 :::
+
+---
+
+### MEV frontrun mitigation
+
+- Orders are not placed exactly when it is due. 
+- Orders have a +2 ~ 30 seconds variability, which introduces uncertainty and exposure risk to exploiters and eliminates any sort of risk-free return, rendering front-running a highly risky endeavour.
+- Before a transaction is sent to a node, prices are checked and an estimated out-token *(desired token)* amount is pre-calculated. 
+- In addition to slippage settings, these parameters are included in the transaction and should the out-token amount be less than the expected minimum out-token amount, the transaction would fail. 
+    - While this does not prevent MEV front-running, similar to a regular AMM swap, users are guaranteed to receive a minimum amount of out-token
+    - Transactions can be reverted if an adequate amount of out-token is received, prices would may not slip to a level where it is sufficiently profitable or at-all for potential front-running bots. 
+- The very nature of DCA is to split an order into multiple orders over a period of time naturally reduces price impact from front-running activities. 
