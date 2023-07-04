@@ -129,7 +129,7 @@ As an example, say user opt to DCA into SOL with $900 USDC over 3 days, with SOL
 In the event your desired purchased token is not SOL, auto withdrawal for each order will only work if user have the correct associated token account (ATA) open and ready.
 :::
 
-- By default, Jupiter DCA open the necessary ATA for your wallet when you create a Jupiter DCA account. However, if you close your purchased token's ATA manually via wallet interface or any other 3rd-party tool, tokens will not transferred to you automatically on every order but only at the end of your DCA cycles as a single lumpsum amount. **This only applicable to SPL tokens and not SOL.**
+- By default, Jupiter DCA open the necessary ATA for your wallet when you create a Jupiter DCA account. However, if you close your purchased token's ATA manually via wallet interface or any other 3rd-party tool, tokens will not transferred to you automatically on every order but only at the end of your DCA cycles as a single lumpsum amount. **This only applicable to SPL tokens. For SOL: Jupiter takes care to open/close your wrapped account.**
 
 - An example, if you have a DCA order into BONK with $300 USDC over 3 days, but if you choose to close your wallet's BONK token account before the 2nd trade/ transaction, the last trade/ transaction of $100 USDC worth of BONK will remain in the program account. You can choose to withdraw BONK from the program account at anytime through our UI.
 
