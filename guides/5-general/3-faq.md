@@ -20,7 +20,7 @@ description: "Frequently ask question can be found here"
 - Slippage occurs because of changing market conditions between the moment the transaction is submitted and its verification.
 - Your slippage rate is an important setting, it works as a protection. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
-- Learn more about [slippage and price impact](./price-impact-slippage-price-warning)
+- Learn more about [slippage and price impact](../jupiter-swap/price-impact-slippage-price-warning)
 
 ### What does it mean when I get the 'some routes failed to load...'
 
@@ -47,7 +47,7 @@ Protocols / Projects are free to integrate Jupiter swap with either the [Swap AP
 A few scenarios or cases where the order is not being fulfill
 - If the order size is too large *(and there is insufficient liquidity on-chain)* - in this case, Jupiter keeper will attempt to execute your order in a smaller chunk to partially fill your orders and will continue to do so until order is fully executed
 - The price wick happen for a very short period of time, and the liquidity have all been taken up at that price.
-- For more information on how Jupiter Limit Order works - [How Limit Order Works](./how-lo-work)
+- For more information on how Jupiter Limit Order works - [How Limit Order Works](../limit-order/how-lo-work)
 
 <!-- ### What happened if I close my order that has partially filled? Do I get the balance of my original input token and also filled output token? -->
 ### In the Wallet transaction history, of using the Limit order, I see many failed transactions, did I pay for that transaction fees?
@@ -67,7 +67,7 @@ A few scenarios or cases where the order is not being fulfill
 ### Will there be any risk of my order getting frontrun?
 
 - Jupiter DCA added some randomness in executing order to prevent potential frontrunning .
-- For more information on how Jupiter DCA works - [How DCA Works](/)
+- For more information on how Jupiter DCA works - [How DCA Works](../dca/dca)
 
 ----
 
@@ -89,7 +89,7 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new project token to be available to trade on Jupiter? 
 
-- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](./new-token-guide)
+- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](../general/new-token-guide)
 - Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
 ### How do I get my new token to the strict list / remove the unknown tag?

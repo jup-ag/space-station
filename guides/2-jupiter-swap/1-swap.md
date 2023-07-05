@@ -69,12 +69,12 @@ This is because between the time you get a quote and the time you execute the tr
 
 ![Jup Swap 4](../img/jup-swap/jup-swap4.png)
 
-7. **Slippage Settings:** [Slippage settings](/guides/price-impact-slippage-price-warning) is to prevent users from receiving fewer tokens than expected.
+7. **Slippage Settings:** [Slippage settings](./price-impact-slippage-price-warning) is to prevent users from receiving fewer tokens than expected.
 
 ![Jup Swap 3](../img/jup-swap/jup-swap3.png)
 8. **Swap Settings:**
    1. **Direct Route Only:** Using Direct Route Only, ensure that it will be a single transaction submitted to a single pool, which will limit a lot of intermediate tokens which filtered out a lot of other viable routes.
-   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](/guides/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
+   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
 
 ![Jup Swap 2](../img/jup-swap/jup-swap2.png)
@@ -110,6 +110,6 @@ By default, `Strict` token list will be enabled, without unknown or banned token
 ![Jup Swap 10](../img/jup-swap/jup-swap10.png)
 
 1. **Rate for the input and output token selected:** This is the current on-chain price rate for the selected input and output tokens, along with a comparison against Coingecko Price API.
-2. **Price Impact:** [Price Impact](/guides/price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact.
+2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact.
 3. **Minimum Received:** Minimum received takes into account of slippage that have set and computes the minimum that user will receive even with price fluctuates.
 
