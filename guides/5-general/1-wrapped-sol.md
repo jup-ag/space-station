@@ -19,7 +19,7 @@ Because of Solana's transaction size limits, sometimes we need to break up the t
 
 We expect this problem to be resolved with the upcoming transaction size increase in the next Solana upgrade. In the meantime, we have a new feature that allows users to trade directly in wSOL.
 
-![wSOL](wsol.png)
+![wSOL](../img/wsol.png)
 
 > 1. The Wrap and unwrap tool bar
 2. The swap setting to turn on/off of using wSOL
@@ -29,7 +29,7 @@ We expect this problem to be resolved with the upcoming transaction size increas
 
 - To enable this feature, go to "Swap Settings" and turn on "Use wSOL".
 
-![wSOL2](wsol3.png)
+![wSOL2](../img/wsol3.png)
 
 - Once enabled, "wSOL" will show up on your Jupiter swap where you can turn on or turn off for your swaps.
 
@@ -48,7 +48,7 @@ The wSOL mode is for advanced users who are familiar dealing with the wSOL token
 - With wSOL switched on, all trades will transact in wSOL instead of SOL by default. This means that so long you have sufficient wSOL, you can immediately execute your swaps. The wSOL received will also not be automatically unwrapped to native SOL.
 - You will be able to manually wrap SOL and unwrap wSOL.
 
-![wSOL2](wsol2.png)
+![wSOL2](../img/wsol2.png)
 
 ## Wrap SOL - wSOL feature
 

@@ -19,22 +19,22 @@ To reduce price impact, users can split trades into several smaller trades over 
 
 Be sure to check the minimum amount of destination tokens quoted on the Jupiter interface, and set a Slippage amount to protect yourself.
 
-![Price Impact](./price-impact.png)
+![Price Impact](../img/price-impact.png)
 
 ## Slippage
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
-![Slippage](./slippage-setting.png)
+![Slippage](../img/slippage-setting.png)
 
 ## Price Warning
 
 Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
 
-![Price Warning](./price-warning.png)
+![Price Warning](../img/price-warning.png)
 
 ## Addition Safety Confirmation
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
-![Safety Modal](./safety-modal.png)
+![Safety Modal](../img/safety-modal.png)

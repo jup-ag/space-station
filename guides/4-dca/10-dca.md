@@ -10,7 +10,7 @@ description: "Jupiter DCA user guide"
 **For Beta phase**, there is a minimum requirement of USD $1 and a maximum of USD $5,000 in deposit value regardless of what token you use to create a DCA order, we use Jupiter [Price API](/docs/apis/price-api) to determine the dollar value.
 :::
 
-![DCA1](./img/dca1.jpg)
+![DCA1](../img/dca/dca1.jpg)
 
 1. **DCA (Beta)** tab along with Jupiter suite of products.
 2. **Input Token Selector** for token that you are looking to spend/ sell/ swap from.
@@ -26,7 +26,7 @@ description: "Jupiter DCA user guide"
     - End Date - The last cycle/ iteration the order will be executing to finish the DCA order
 8. Place order to submit the transaction.
 
-![DCA2](./img/dca2.jpg)
+![DCA2](../img/dca/dca2.jpg)
 
 1. **Active Orders** tab shows the current on-going DCA orders
 2. **Current on-going DCA order**, it shows the token you're swapping from and into (In this screenshot example - SOL -> USDC), with 1 SOL along with the progress bar of the DCA order.
@@ -43,12 +43,12 @@ description: "Jupiter DCA user guide"
 6. **Withdraw Balance** allow user to withdraw the executed or the amount traded directly into user's wallet.
 7. **Close and Withdraw** cancel and close the DCA order, to also retrieve all current input and output balance tokens directly into user's wallet.
 
-![DCA3](./img/dca3.jpg)
+![DCA3](../img/dca/dca3.jpg)
 
 1. **Trades Tab** is where all the transaction/ trade for the current on-going DCA order house in.
 2. **Trade Summary** shows each iteration/ cycle amount and the filled amount with respective date and transaction id.
 
-![DCA4](./img/dca4.jpg)
+![DCA4](../img/dca/dca4.jpg)
 
 1. **Orders History** is the tab where you can find all your past/ completed DCA orders.
 2. **Order Overview** is the tab for the summary view for your DCA order when you click expand into one of the your past/ completed DCA order.
@@ -62,7 +62,7 @@ description: "Jupiter DCA user guide"
     - Buying - The output token that user is buying or swapping into.
     - Frequency - The frequency that user selected for the DCA order.
 
-![DCA5](./img/dca5.jpg)
+![DCA5](../img/dca/dca5.jpg)
 
 1. **Trades Tab** is where all the transaction/ trade for the DCA order house in.
 2. **Trade Summary** shows each iteration/ cycle amount and the filled amount with respective date and transaction id.

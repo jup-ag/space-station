@@ -5,7 +5,7 @@ description: Key concepts for your swap.
 
 # Swap Tips for Users
 
-![cat_coins_banner](./cat_coins_banner.png)
+![cat_coins_banner](../img/cat_coins_banner.png)
 
 - **Always double check the token mint address:** Token metadata such as name, symbol and icon can be faked. The true identity of a token is its mint address. 
   - [Tweet: A gentle reminder to check the mint address of the token you're trading](https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZfuS6tQpvEQ7Pg)

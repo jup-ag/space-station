@@ -18,7 +18,7 @@ Here are some of the available tools to minting new tokens.
 - Dexlab: https://www.dexlab.space/mintinglab/spl-token 
 
 
-![Dexlab Token Mint](./img/dexlab-mint1.jpg)
+![Dexlab Token Mint](../img/dexlab-mint1.jpg)
 
 <!-- ![Dexlab Token Mint 2](./img/dexlab-mint2.jpg) -->
 
@@ -31,15 +31,15 @@ After which, Jupiter will be able to pick up your market automatically.
 
 #### [Meteora](https://app.meteora.ag/pools/create)
 
-![Meteora](./img/meteora1.jpg)
+![Meteora](../img/meteora1.jpg)
 
 #### [Orca](https://www.orca.so/liquidity/create) 
 
-![Orca](./img/orca1.jpg)
+![Orca](../img/orca1.jpg)
 
 #### [Raydium](https://raydium.io/clmm/create-pool/)
 
-![Raydium](./img/raydium1.jpg)
+![Raydium](../img/raydium1.jpg)
 
 
 :::info 
@@ -57,7 +57,7 @@ Another good way of integrating Jupiter is through Jupiter Terminal. Where you c
 
 Here's a more detailed developers docs for more information [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/web-integration/jupiter-terminal)
 
-![Terminal](./img/terminal1.jpg)
+![Terminal](../img/terminal1.jpg)
 
 Try it out in our [Jupiter Terminal playground](https://terminal.jup.ag/)
 
@@ -66,11 +66,8 @@ Try it out in our [Jupiter Terminal playground](https://terminal.jup.ag/)
 *Some examples of integrations by some of our ecosystem partners.*
 
 #### [MarginFi](https://app.marginfi.com/swap)
-![MarginFi](./img/marginfi.jpg)
+![MarginFi](../img/marginfi.jpg)
 
 #### [Famous Fox Federation Raffles](https://rafffle.famousfoxes.com/)
-![Famous Fox Federation](./img/fff.jpg)
+![Famous Fox Federation](../img/fff.jpg)
 
-<!-- ## Integrating Jupiter Limit Order
-
-![Dexlab Limit Order](./img/dexlab-limitorder.jpg) -->
