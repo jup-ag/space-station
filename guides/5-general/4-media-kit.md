@@ -4,7 +4,7 @@ sidebar_label: "Media Kit"
 description: "Download Jupiter Media Kit"
 ---
 
-import DownloadBox from '../src/components/DownloadBox';
+import DownloadBox from '/src/components/DownloadBox';
 
 Please find official Jupiter information, imagery, inforgraphics and contacts below for your own use. 
 

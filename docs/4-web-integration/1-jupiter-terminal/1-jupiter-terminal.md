@@ -4,20 +4,20 @@ description: Easiest way to add Jupiter to your DApp.
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ModalModeImgUrl from './modal-mode.jpg';
-import IntegratedModeImgUrl from './integrated-mode.jpg';
-import WidgetModeImgUrl from './widget-mode.jpg';
+import ModalModeImgUrl from '../modal-mode.jpg';
+import IntegratedModeImgUrl from '../integrated-mode.jpg';
+import WidgetModeImgUrl from '../widget-mode.jpg';
 
 # Jupiter Terminal: Easiest way to add Jupiter to your DApp
 
-![Jupiter Terminal](terminal.jpeg)
+![Jupiter Terminal](../terminal.jpeg)
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code.
 
 :::tip Jupiter Terminal Links
 - Demo: https://terminal.jup.ag/
 - Repo: https://github.com/jup-ag/terminal
-- Detailed implementation guide: [Get a step-by-step walkthrough](/guides/terminal-integration-guide)
+- Detailed implementation guide: [Get a step-by-step walkthrough](./terminal-integration-guide)
 :::
 
 :::caution
