@@ -55,7 +55,7 @@ Jupiter validated token list is built up together with partners and our communit
 
 Another good way of integrating Jupiter is through Jupiter Terminal. Where you can have all the functionalities and features of Jupiter with just a few lines of code. 
 
-Here's a more detailed developers docs for more information [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/web-integration/jupiter-terminal)
+Here's a more detailed developers docs for more information [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/jupiter-terminal/jupiter-terminal)
 
 ![Terminal](../img/terminal1.jpg)
 

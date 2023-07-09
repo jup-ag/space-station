@@ -19,7 +19,7 @@ We offer a wide range of tools to make it possible, including:
 - [Limit Orders](/docs/limit-order/)
 
 For DEXes looking to integrate Jupiter, check out:
-- [Jupiter Terminal](/docs/web-integration/jupiter-terminal) for the easiest way to integrate with your UI
+- [Jupiter Terminal](/docs/jupiter-terminal/jupiter-terminal) for the easiest way to integrate with your UI
   
 For projects who wants to make your token visible on the Strict list, see:
 - [Get your Token onto Jupiter](/docs/get-your-token-onto-jup)
