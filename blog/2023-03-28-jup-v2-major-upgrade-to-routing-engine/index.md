@@ -15,7 +15,7 @@ In addition, there are a few other significant improvements, including:
 
 ## 1. Dynamic Priority Fees
 
-Where the program determines the added txn priority fee needed for a successful trade. The feature, when turned on, will run in the background, reducing the chances of failed transactions.
+Where the program determines the added transaction priority fee needed for a successful trade. The feature, when turned on, will run in the background, reducing the chances of failed transactions.
 
 ![DynamicFees](dynamic.png)
 
