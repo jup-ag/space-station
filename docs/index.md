@@ -8,9 +8,9 @@ description: ' '
 
 ![cat_at_computer.png](../static/img/cat_at_computer.png)
 
-## Building a Good Product with You 
+## Building World Class Swap Experinences Together
 
-We aim to make developing a good swap interface or program as seamless as possible to help you build world class experiences for your users.
+Our goal is simple: Help you give world class experiences for your users with as little work as possible, regardless of your use case or neeeds.
 
 We offer a wide range of tools to make it possible, including:
 
