@@ -8,7 +8,7 @@ description: ' '
 
 ![cat_at_computer.png](../static/img/cat_at_computer.png)
 
-## Building World Class Swap Experinences Together
+## Building World Class Swap Experiences Together
 
 Our goal is simple: Help you give world class experiences for your users with as little work as possible, regardless of your use case or neeeds.
 
