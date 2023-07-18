@@ -154,6 +154,26 @@ pub struct InitiateFlashFill<'info> {
 A sample client code:
 
 ```typescript
+async function getAddressLookupTableAccounts(
+  conn: Connection,
+  keys: string[],
+): Promise<AddressLookupTableAccount[]> {
+  const addressLookupTableAccountInfos = await conn.getMultipleAccountsInfo(keys.map((key) => new PublicKey(key)));
+
+  return addressLookupTableAccountInfos.reduce((acc, accountInfo, index) => {
+    const addressLookupTableAddress = keys[index];
+    if (accountInfo) {
+      const addressLookupTableAccount = new AddressLookupTableAccount({
+        key: new PublicKey(addressLookupTableAddress),
+        state: AddressLookupTableAccount.deserialize(accountInfo.data),
+      });
+      acc.push(addressLookupTableAccount);
+    }
+
+    return acc;
+  }, new Array<AddressLookupTableAccount>());
+};
+
 async function getQuote(fromMint: PublicKey, toMint: PublicKey, amount: bigint | string, slippage_bps: number) {
   // { "inputMint": "So11111111111111111111111111111111111111112", "inAmount": "1000000000000", "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "outAmount": "20863297827", "otherAmountThreshold": "20758981338", "swapMode": "ExactIn", "slippageBps": 50, "platformFee": null, "priceImpactPct": "0.0014608420901521676715475165", "routePath": { "chain": { "routePaths": [{ "swap": { "info": { "ammKey": "4DoNfFBfF7UokCC2FQzriy7yHK6DY6NVdYpuekQ5pRgg", "label": "Phoenix", "inputMint": "So11111111111111111111111111111111111111112", "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "inAmount": "1000000000000", "outAmount": "20863297827", "feeAmount": "4173495", "feeMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" } } }] } }, "mintPath": "So11111111111111111111111111111111111111112", "ammPath": "Phoenix", "timeTaken": 0.007179685 }
   return fetch(
@@ -236,7 +256,7 @@ function flashSwap() {
 
   const blockhash = (await connection.getLatestBlockhash()).blockhash;
 
-  const addressLookupTableAccounts = await getAdressLookupTableAccounts(connection, lookupTableAddresses);
+  const addressLookupTableAccounts = await getAddressLookupTableAccounts(connection, lookupTableAddresses);
 
   const txInstructions: TransactionInstruction[] = [
     ComputeBudgetProgram.setComputeUnitLimit({
