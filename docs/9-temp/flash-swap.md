@@ -221,7 +221,7 @@ function flashSwap() {
     data: Buffer.from(swapInstructionPayload.data, 'base64'),
   });
 
-  const initiateFlashFillIX = await <program>.methods
+  const initiateFlashFillIX = await <anchor.Program>.methods
     .initiateFlashFill()
     .accounts({
       borrower: <BORROWER_PUBLIC_KEY>,
@@ -254,6 +254,7 @@ function flashSwap() {
 
   const tx = new VersionedTransaction(messageV0);
 
+  const provider = <anchor.Program>.provider as AnchorProvider;
   const txid = await provider.sendAndConfirm(tx, [SIGNER_KEYPAIR], {
     skipPreflight: false,
   });
