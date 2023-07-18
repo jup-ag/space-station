@@ -1,12 +1,12 @@
 # CPI /Flash Swap
 
-This section pertains to Dapps and Protocols that has a need to perform swaps programmatically with access to the best prices and liquidity for program owned accounts.
+This section pertains to Dapps and Protocols that has a need to perform swaps programmatically with access to the best prices and liquidity for program-owned accounts.
 
-While it has always been possible to perform swaps for program owned accounts using Jupiter swap via CPI calls, there has always been some limitations such as the large transaction size and the hassle of initialising intermediary token accounts. This obstacles has prevented the CPI approach from using the best routes on Jupiter to obtain the best prices with lowest possible slippage.
+While it has always been possible to perform swaps for program-owned accounts using Jupiter swap via CPI calls, there has always been some limitations such as the large transaction size and the hassle of initialising intermediary token accounts. These obstacles has prevented the CPI approach from being able to use the best routes on Jupiter with the best prices and lowest possible slippage.
 
 With the advent of Jupiter V5 / V6, you are no longer required to initialise intermediary accounts prior to performing the swap instruction / transaction and in combination with address lookup tables, it is now 10x simpler to access the best prices and liquidity when performing swaps.
 
-Rather than taking a CPI approach, we recommend performing a “flash-swap” to bypass the limitations of CPI ie transaction size limit. Unlike a typical flash loan, the token used to repay is different from the token taken for the loan. As such, various on-chain validations would need to be performed (we'll get to this later)
+Rather than taking a CPI approach, we recommend performing a “flash-swap” to bypass the limitations of CPI ie transaction size limit. Unlike a typical flash loan, the token used to repay is different from the token taken for the loan. As such, various on-chain validations would need to be performed (we'll get to this later).
 
 ## Here’s how “flash-swap” works conceptually:
 
@@ -22,6 +22,7 @@ Let’s jump into some code with a practical example:
 **Scenario:** Your program is a TWAPP program. Users use your protocol to split up their large order of USDC -> SOL to multiple large orders. Hence, the users' USDC is likely stored in a program account which will then be used to swap to SOL periodically.
 
 Here's a minimal program instruction example:
+_(you will need to tweak the code according to your program for this example to work)_
 
 ```rust
 pub fn initiate_flash_swap(ctx: Context<InitiateFlashSwap>, borrow_amount: u64) -> Result<()> {
@@ -148,4 +149,113 @@ pub struct InitiateFlashFill<'info> {
     associated_token_program: Program<'info, AssociatedToken>,
 }
 
+```
+
+A sample client code:
+
+```typescript
+async function getQuote(fromMint: PublicKey, toMint: PublicKey, amount: bigint | string, slippage_bps: number) {
+  // { "inputMint": "So11111111111111111111111111111111111111112", "inAmount": "1000000000000", "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "outAmount": "20863297827", "otherAmountThreshold": "20758981338", "swapMode": "ExactIn", "slippageBps": 50, "platformFee": null, "priceImpactPct": "0.0014608420901521676715475165", "routePath": { "chain": { "routePaths": [{ "swap": { "info": { "ammKey": "4DoNfFBfF7UokCC2FQzriy7yHK6DY6NVdYpuekQ5pRgg", "label": "Phoenix", "inputMint": "So11111111111111111111111111111111111111112", "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "inAmount": "1000000000000", "outAmount": "20863297827", "feeAmount": "4173495", "feeMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" } } }] } }, "mintPath": "So11111111111111111111111111111111111111112", "ammPath": "Phoenix", "timeTaken": 0.007179685 }
+  return fetch(
+    `${JUP_API_ENDPOINT}/quote?outputMint=${toMint.toBase58()}&inputMint=${fromMint.toBase58()}&amount=${amount.toString()}&slippage=${(
+      slippage_bps / 100
+    ).toString()}&quoteType=bellman-ford`,
+  ).then((response) => response.json());
+}
+
+async function getSwapIx(
+  user: PublicKey,
+  inputAccount: PublicKey,
+  outputAccount: PublicKey,
+  quote: any,
+): Promise<{
+  swapInstruction: {
+    accounts: {
+      pubkey: string;
+      isSigner: boolean;
+      isWritable: boolean;
+    }[];
+    programId: string;
+    data: string;
+  };
+  lookupTableAddresses: string[];
+}> {
+  const data = {
+    quoteResponse: quote,
+    userPublicKey: user.toBase58(),
+    sourceTokenAccount: inputAccount.toBase58(),
+    destinationTokenAccount: outputAccount.toBase58(),
+  };
+
+  const resp = await fetch(`${API_ENDPOINT}/swap-ix`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = resp.json();
+
+  if ('error' in result) {
+    console.log({ result });
+    throw new Error(JSON.stringify(result));
+  }
+
+  return result;
+}
+
+function flashSwap() {
+  const quote = await getQuote(<INPUT_MINT>, <OUTPUT_MINT>, <FILL_AMOUNT>, <SLIPPAGE_BPS>);
+  const result = await getSwapIx(<BORROWER_PUBLIC_KEY>, <BORROWER_TOKEN_ACCOUNT>, <PROGRAM_ACCOUNT_OUT_TOKEN_ACCOUNT>, quote);
+
+  const { swapInstruction: swapInstructionPayload, lookupTableAddresses } = result;
+  const swapIx = new TransactionInstruction({
+    programId: new PublicKey(swapInstructionPayload.programId),
+    keys: swapInstructionPayload.accounts.map((key) => ({
+      pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+    data: Buffer.from(swapInstructionPayload.data, 'base64'),
+  });
+
+  const initiateFlashFillIX = await <program>.methods
+    .initiateFlashFill()
+    .accounts({
+      borrower: <BORROWER_PUBLIC_KEY>,
+      twapp: <TWAPP_PUBLIC_KEY>,
+      inputMint: <INPUT_MINT>,
+      borrowerInAccount: <BORROWER_TOKEN_ACCOUNT>,
+      inAccount: <PROGRAM_ACCOUNT_IN_TOKEN_ACCOUNT>,
+      outAccount: <PROGRAM_ACCOUNT_OUT_TOKEN_ACCOUNT>,
+      instructionsSysvar: web3.SYSVAR_INSTRUCTIONS_PUBKEY,
+    })
+    .instruction();
+
+  const blockhash = (await connection.getLatestBlockhash()).blockhash;
+
+  const addressLookupTableAccounts = await getAdressLookupTableAccounts(connection, lookupTableAddresses);
+
+  const txInstructions: TransactionInstruction[] = [
+    ComputeBudgetProgram.setComputeUnitLimit({
+      units: 1_400_000,
+    }),
+    initiateFlashFillIX,
+    swapIx,
+  ];
+
+  const messageV0 = new TransactionMessage({
+    payerKey: KEEPER.publicKey,
+    recentBlockhash: blockhash,
+    instructions: txInstructions,
+  }).compileToV0Message(addressLookupTableAccounts);
+
+  const tx = new VersionedTransaction(messageV0);
+
+  const txid = await provider.sendAndConfirm(tx, [SIGNER_KEYPAIR], {
+    skipPreflight: false,
+  });
+}
 ```
