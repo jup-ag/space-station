@@ -85,7 +85,7 @@ pub fn initiate_flash_swap(ctx: Context<InitiateFlashSwap>, borrow_amount: u64) 
 
     // transfer from pool to keeper
     let idx_bytes = ctx.accounts.twapp.idx.to_le_bytes();
-    let signer_seeds: &[&[&[u8]]] = &[twapp_seeds!(ctx.accounts.dca, idx_bytes)];
+    let signer_seeds: &[&[&[u8]]] = &[twapp_seeds!(ctx.accounts.twapp, idx_bytes)];
 
     anchor_spl::token::transfer(
         CpiContext::new_with_signer(
@@ -267,7 +267,7 @@ function flashSwap() {
   ];
 
   const messageV0 = new TransactionMessage({
-    payerKey: KEEPER.publicKey,
+    payerKey: BORROWER.publicKey,
     recentBlockhash: blockhash,
     instructions: txInstructions,
   }).compileToV0Message(addressLookupTableAccounts);
@@ -275,7 +275,7 @@ function flashSwap() {
   const tx = new VersionedTransaction(messageV0);
 
   const provider = <anchor.Program>.provider as AnchorProvider;
-  const txid = await provider.sendAndConfirm(tx, [SIGNER_KEYPAIR], {
+  const txid = await provider.sendAndConfirm(tx, [BORROWER_KEYPAIR], {
     skipPreflight: false,
   });
 }
