@@ -1,0 +1,151 @@
+# CPI /Flash Swap
+
+This section pertains to Dapps and Protocols that has a need to perform swaps programmatically with access to the best prices and liquidity for program owned accounts.
+
+While it has always been possible to perform swaps for program owned accounts using Jupiter swap via CPI calls, there has always been some limitations such as the large transaction size and the hassle of initialising intermediary token accounts. This obstacles has prevented the CPI approach from using the best routes on Jupiter to obtain the best prices with lowest possible slippage.
+
+With the advent of Jupiter V5 / V6, you are no longer required to initialise intermediary accounts prior to performing the swap instruction / transaction and in combination with address lookup tables, it is now 10x simpler to access the best prices and liquidity when performing swaps.
+
+Rather than taking a CPI approach, we recommend performing a “flash-swap” to bypass the limitations of CPI ie transaction size limit. Unlike a typical flash loan, the token used to repay is different from the token taken for the loan. As such, various on-chain validations would need to be performed (we'll get to this later)
+
+## Here’s how “flash-swap” works conceptually:
+
+1.  An off-chain process takes a “flash loan” from the program owned account’s token account
+2.  The off-chain process then invokes the swap instruction on Jupiter and repays the loan in the same instruction
+
+These are the corresponding 2 instructions that should be bundled in a single transaction to perform a “flash swap”.
+
+In order to avoid exploits, you should perform rigorous checks on-chain aka in your program.
+
+Let’s jump into some code with a practical example:
+
+**Scenario:** Your program is a TWAPP program. Users use your protocol to split up their large order of USDC -> SOL to multiple large orders. Hence, the users' USDC is likely stored in a program account which will then be used to swap to SOL periodically.
+
+Here's a minimal program instruction example:
+
+```rust
+pub fn initiate_flash_swap(ctx: Context<InitiateFlashSwap>, borrow_amount: u64) -> Result<()> {
+    let instructions_sysvar = ctx.accounts.instructions_sysvar.to_account_info();
+
+    // check #1: make sure the current instruction isn't a cpi call
+    let current_idx = load_current_index_checked(&instructions_sysvar)? as usize;
+    let current_ixn = load_instruction_at_checked(current_idx, &instructions_sysvar)?;
+    require_keys_eq!(
+        current_ixn.program_id,
+        crate::ID,
+        InstructionError
+    );
+
+    // check #2: check that the next instruction in the transaction performs a swap
+    let swap_ix_index = current_idx + 1;
+    if let Ok(jup_swap_ixn) = load_instruction_at_checked(swap_ix_index, &instructions_sysvar) {
+        // check #2a: check that it calls Jup v5 program
+        require_keys_eq!(
+            jup_swap_ixn.program_id,
+            Pubkey::from_str("JUP5jSkuNHeHLoapB97P7MpckomsS4kLSG1Y31VZoLv").unwrap(),
+            InvalidJupiterProgram
+        );
+
+        // check #2b: check that it calls Jup's swap instruction
+        let ixn_identifier = u64::from_be_bytes(jup_swap_ixn.data[..8].try_into().unwrap());
+        require!(
+            ixn_identifier == get_instruction_discriminator(&[b"global:route"]),
+            InvalidSwapInstruction
+        );
+
+        // check #2c: check that destinationTokenAccount for Jup ix is the correct out acount
+        // the out account is recommended to be this account out token account
+        // e.g. PDA Account's Associated Token Account
+        require_keys_eq!(
+            jup_swap_ixn.accounts[3].pubkey,
+            ctx.accounts.out_ata.key(), // make sure there's some form of check on out_ata
+            InvalidDestinationAccount
+        );
+
+        // check #2d: check that the output mint is the desired output mint
+        require_keys_eq!(
+            jup_swap_ixn.accounts[5].pubkey,
+            ctx.accounts.twapp.output_mint, // make sure there's some form of check on out_ata
+            InvalidDestinationAccount
+        );
+
+
+        // check #2e: check that the full amount (or adjust to the correct amount) is used to swap
+        let swap_amount_start_at = jup_swap_ixn.data.len() - 19;
+        let swap_amount = u64::from_le_bytes(
+            jup_swap_ixn.data[swap_amount_start_at..swap_amount_start_at + 8]
+                .try_into()
+                .unwrap(),
+        );
+        require_eq!(swap_amount, borrow_amount, ShortChanged);
+    } else {
+        return Err(error!(MissingSwapInstructions));
+    }
+
+    // transfer from pool to keeper
+    let idx_bytes = ctx.accounts.twapp.idx.to_le_bytes();
+    let signer_seeds: &[&[&[u8]]] = &[twapp_seeds!(ctx.accounts.dca, idx_bytes)];
+
+    anchor_spl::token::transfer(
+        CpiContext::new_with_signer(
+            ctx.accounts.token_program.to_account_info(),
+            anchor_spl::token::Transfer {
+                from: ctx.accounts.in_account.to_account_info(),
+                to: ctx.accounts.borrower_in_account.to_account_info(),
+                authority: ctx.accounts.twapp.to_account_info(),
+            },
+            signer_seeds,
+        ),
+        borrow_amount,
+    )?;
+
+    Ok(())
+}
+
+#[derive(Accounts)]
+pub struct InitiateFlashFill<'info> {
+    #[account(mut)]
+    borrower: Signer<'info>,
+
+    #[account(mut)]
+    twapp: Account<'info, Twapp>,
+
+    /// The token to borrow
+    #[account(
+      address=twapp.input_mint
+    )]
+    input_mint: Account<'info, Mint>,
+
+    /// The account to send borrowed tokens to
+    #[account(
+        init_if_needed,
+        payer = borrower,
+        associated_token::mint=input_mint,
+        associated_token::authority=borrower,
+    )]
+    borrower_in_account: Box<Account<'info, TokenAccount>>,
+
+    /// The account to borrow from
+    #[account(
+      mut,
+      address=twapp.in_account
+    )]
+    in_account: Account<'info, TokenAccount>,
+
+    /// The account to repay to
+    #[account(
+      address=twapp.out_account // this check is very important
+    )]
+    out_account: Account<'info, TokenAccount>,
+
+    /// Solana Instructions Sysvar
+    /// CHECK: Checked using address
+    #[account(address = sysvar::instructions::ID @ AddressMismatch)]
+    pub instructions_sysvar: UncheckedAccount<'info>,
+
+    system_program: Program<'info, System>,
+    token_program: Program<'info, Token>,
+    associated_token_program: Program<'info, AssociatedToken>,
+}
+
+```
