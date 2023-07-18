@@ -17,11 +17,12 @@ These are the corresponding 2 instructions that should be bundled in a single tr
 
 In order to avoid exploits, you should perform rigorous checks on-chain aka in your program.
 
+## Example
 Let’s jump into some code with a practical example:
 
 **Scenario:** Your program is a TWAPP program. Users use your protocol to split up their large order of USDC -> SOL to multiple large orders. Hence, the users' USDC is likely stored in a program account which will then be used to swap to SOL periodically.
 
-Here's a minimal program instruction example:
+### Here's a minimal program instruction example:
 _(you will need to tweak the code according to your program for this example to work)_
 
 ```rust
@@ -151,7 +152,7 @@ pub struct InitiateFlashFill<'info> {
 
 ```
 
-A sample client code:
+### A sample client code:
 
 ```typescript
 async function getAddressLookupTableAccounts(
