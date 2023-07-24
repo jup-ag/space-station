@@ -280,7 +280,7 @@ const main = async () => {
   });
 
   // Execute swap
-  const swapResult: any = await execute(); // Force any to ignore TS misidentifying SwapResult type
+  const swapResult: SwapResult = await execute();
 
   if (swapResult.error) {
     console.log(swapResult.error);

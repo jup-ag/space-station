@@ -79,6 +79,44 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
     permalink:
       "https://twitter.com/SolCS95/status/1647734143525228544?s=20",
   },
+  {
+    author: {
+      name: "Netrunner - Portfolio Tools",
+      username: "NetrunnerNFT",
+      image:
+        "https://pbs.twimg.com/profile_images/1616532703108796416/9zuxs0RG_400x400.jpg",
+    },
+    tweet: "@JupiterExchange is the reason our 'swap' feature can exist. \n\nbuilding together on the ecosystem, what more could we ask for?",
+    time: new Date(2023, 5, 20, 18, 25),
+    permalink:
+      "https://twitter.com/netrunnernft/status/1671101933023821824"
+  },
+  {
+    author: {
+      name: "7Layer | Overclock Validator",
+      username: "7LayerMagik",
+      image:
+        "https://pbs.twimg.com/profile_images/1677479168303325184/WiiRG23S_400x400.jpg",
+    },
+    tweet: "Try @JupiterExchange it's the best dex aggregator and possibly best UX in crypto",
+    time: new Date(2023, 7, 3, 17, 11),
+    permalink:
+      "https://twitter.com/7LayerMagik/status/1675610438057222144"
+  },
+  {
+    author: {
+      name: "T.Yen🎈🎒🔥💃",
+      username: "Teck_jy",
+      image:
+        "https://pbs.twimg.com/profile_images/1611537765958823937/-wXWyQPP_400x400.jpg",
+    },
+    tweet: `That's awesome. I've been slowly migrating from various CEX to @JupiterExchange recently and it works quite well for me. 
+    
+    Plenty of limit orders filled and more open orders awaiting!`,
+    time: new Date(2023, 6, 17, 17, 21),
+    permalink:
+      "https://twitter.com/Teck_jy/status/1669998720136675328"
+  },
 ];
 export default function Home(): JSX.Element {
   return (
