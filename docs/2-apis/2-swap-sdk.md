@@ -1,5 +1,4 @@
 ---
-
 sidebar_label: "Swap SDK"
 description: "Interact with Jupiter with Javascript"
 title: "Swap SDK: Interact with Jupiter with Javascript"
@@ -18,19 +17,20 @@ https://t.me/jupiter_sdk
 
 Our published package can be found here [NPM](https://www.npmjs.com/package/@jup-ag/core).
 
-```yarn add @jup-ag/core jsbi```
+`yarn add @jup-ag/core jsbi`
 
 ### Usage
 
 **1. Import the needed libraries**
 
-If building this example from scratch, install the libraries first: ```yarn add bs58```
-``` js
-import bs58 from 'bs58';
-import fetch from 'node-fetch';
-import JSBI from 'jsbi';
-import { Connection, PublicKey, Keypair } from '@solana/web3.js';
-import { Jupiter, RouteInfo, TOKEN_LIST_URL, SwapResult } from '@jup-ag/core';
+If building this example from scratch, install the libraries first: `yarn add bs58`
+
+```js
+import bs58 from "bs58";
+import fetch from "node-fetch";
+import JSBI from "jsbi";
+import { Connection, PublicKey, Keypair } from "@solana/web3.js";
+import { Jupiter, RouteInfo, TOKEN_LIST_URL } from "@jup-ag/core";
 ```
 
 **2. Start off with a simple root level function**
@@ -58,10 +58,10 @@ const main = async () => {
 
     // Fetch token list from Jupiter API
     // This token list contains token meta data
-    const tokens: Token[] = await (await fetch(TOKEN_LIST_URL[ENV])).json();
+    const tokens: TokenInfo[] = await (await fetch(TOKEN_LIST_URL[ENV])).json();
     // ...
   }
-  ```
+```
 
 :::note
 Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore.
@@ -75,7 +75,8 @@ In this example, you can paste in your private key for testing purposes but this
 ```js
 import { Jupiter, TOKEN_LIST_URL } from "@jup-ag/core";
 
-export const WALLET_PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY || "PASTE YOUR WALLET PRIVATE KEY";
+export const WALLET_PRIVATE_KEY =
+  process.env.WALLET_PRIVATE_KEY || "PASTE YOUR WALLET PRIVATE KEY";
 export const USER_PRIVATE_KEY = bs58.decode(WALLET_PRIVATE_KEY);
 export const USER_KEYPAIR = Keypair.fromSecretKey(USER_PRIVATE_KEY);
 
@@ -93,7 +94,7 @@ const main = async () => {
   });
 
   // ...
-}
+};
 ```
 
 <details>
@@ -113,6 +114,7 @@ ammsToExclude - Can set which AMMs to exclude from routing.
 shouldLoadSerumOpenOrders - perform a getProgramAccounts on a user's Serum/Openbook Open Orders accounts. Turn off if RPC is slow.
 
 usePreloadedAddressLookupTableCache - Use a preloaded address lookup table cache rather than a lazy cache.
+
 </details>
 
 **5. Get the route map**
@@ -123,7 +125,7 @@ The route map identifies what tokens you can swap to given an input token. The r
 const main = async () => {
   // ...
 
-  const routeMap: Map<string, string[]> = jupiter.getRouteMap()
+  const routeMap: Map<string, string[]> = jupiter.getRouteMap();
 
   // ...
 };
@@ -131,10 +133,10 @@ const main = async () => {
 
 **6. Discover what tokens you can swap to (optional)**
 
-(a) Declare the token interface.
+(a) Declare the token info interface.
 
 ```js
-export interface Token {
+export interface TokenInfo {
   chainId: number; // 101,
   address: string; // 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   symbol: string; // 'USDC',
@@ -143,6 +145,8 @@ export interface Token {
   logoURI: string; // 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW/logo.png',
   tags: string[]; // [ 'stablecoin' ]
 }
+// or import it
+import type { TokenInfo } from "@solana/spl-token-registry";
 ```
 
 (b) Add a helper function that returns the possible tokens you can swap to given an input token.
@@ -154,31 +158,30 @@ const getPossiblePairsTokenInfo = ({
   routeMap,
   inputToken,
 }: {
-  tokens: Token[];
+  tokens: TokenInfo[];
   routeMap: Map<string, string[]>;
-  inputToken?: Token;
-}) => {
-  try {
-    const possiblePairs = routeMap.get(inputToken.address)
-    var possiblePairsTokenInfo: { [key: string]: Token | undefined } = {};
-    possiblePairs.forEach((address) => {
-      possiblePairsTokenInfo[address] = tokens.find((t) => {
-        return t.address == address;
-      });
-    });
+  inputToken: TokenInfo;
+}): Record<string, TokenInfo | undefined> => {
+  const tokenRecord = tokens.reduce<Record<string, TokenInfo>>((acc, tokenInfo) => {
+    acc[tokenInfo.address] = tokenInfo;
+    return acc;
+  }, {});
 
-    return possiblePairsTokenInfo;
-  } catch (error) {
-    throw error;
-  }
+  const possiblePairs = routeMap.get(inputToken.address) ?? [];
+  const possiblePairsTokenInfo = possiblePairs.reduce<Record<string, TokenInfo | undefined>>((acc, address) => {
+    acc[address] = tokenRecord[address];
+    return acc;
+  }, {});
+
+  return possiblePairsTokenInfo;
 };
 ```
 
 (c) Finally, determine which pair you would like to swap, in our case, we will be swapping from USDC to USDT.
 
 ```js
-const INPUT_MINT_ADDRESS = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-const OUTPUT_MINT_ADDRESS = "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+const INPUT_MINT_ADDRESS = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
+const OUTPUT_MINT_ADDRESS = "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB";
 
 const main = async () => {
   // ...
@@ -192,7 +195,7 @@ const main = async () => {
   // Alternatively, check step 4
 
   // ...
-}
+};
 ```
 
 (d) **Optional**. Finding the possible output pairs.
@@ -205,8 +208,6 @@ const possiblePairsTokenInfo = await getPossiblePairsTokenInfo({
   routeMap,
   inputToken,
 });
-
-// possiblePairsTokenInfo returns a Map<string, Token | undefined>
 ```
 
 **7. Get the routes**
@@ -216,7 +217,7 @@ const routes = await jupiter.computeRoutes({
   inputMint: new PublicKey(inputToken.address),
   outputMint: new PublicKey(outputToken.address),
   amount: JSBI.BigInt(1000000), // 1000000 => 1 USDC if inputToken.address is USDC mint.
-  slippageBps  // 1 bps = 0.01%.
+  slippageBps, // 1 bps = 0.01%.
   // forceFetch (optional) => to force fetching routes and not use the cache.
   // intermediateTokens => if provided will only find routes that use the intermediate tokens.
   // feeBps => the extra fee in BPS you want to charge on top of this swap.
@@ -248,6 +249,7 @@ swapMode (SwapMode, optional) "ExactIn" | "ExactOut" - Defaults to "ExactIn". Ex
 asLegacyTransaction (boolean, optional) - Defaults to false. If true, instead of a Versioned Transaction, a legacy transaction is returned.
 
 filterTopNResult (number, optional) - Filter how many top individual routes to be used to compared.
+
 </details>
 
 :::info How do you calculate the inputAmount?
@@ -257,9 +259,12 @@ Assuming in the UI, user entered a value of **1 USDC**, we can derive the amount
 
 ```js
 const inputAmount = 1; // UI input
-const inputTokenInfo = tokens.find(item => item.address === "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"); // Token info
-const amount = inputAmount * (10 ** inputTokenInfo.decimals); // Amount to send to Jupiter
+const inputTokenInfo = tokens.find(
+  (item) => item.address === "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+); // Token info
+const amount = inputAmount * 10 ** inputTokenInfo.decimals; // Amount to send to Jupiter
 ```
+
 :::
 
 **8. Execute the swap**
@@ -269,9 +274,9 @@ const main = async () => {
   // ...
 
   // Routes are sorted based on outputAmount, so ideally the first route is the best.
-  bestRoute = routes.routesInfos[0]
+  bestRoute = routes.routesInfos[0];
   const { execute } = await jupiter.exchange({
-    routeInfo: bestRoute
+    routeInfo: bestRoute,
   });
 
   // Execute swap
@@ -281,12 +286,16 @@ const main = async () => {
     console.log(swapResult.error);
   } else {
     console.log(`https://explorer.solana.com/tx/${swapResult.txid}`);
-    console.log(`inputAddress=${swapResult.inputAddress.toString()} outputAddress=${swapResult.outputAddress.toString()}`);
-    console.log(`inputAmount=${swapResult.inputAmount} outputAmount=${swapResult.outputAmount}`);
+    console.log(
+      `inputAddress=${swapResult.inputAddress.toString()} outputAddress=${swapResult.outputAddress.toString()}`
+    );
+    console.log(
+      `inputAmount=${swapResult.inputAmount} outputAmount=${swapResult.outputAmount}`
+    );
   }
 
   // ...
-}
+};
 ```
 
 <details>
@@ -313,38 +322,48 @@ If transaction objects are preferred, you can use the following:
 **1. Get the transaction**
 
 ```js
-import { Wallet } from '@project-serum/anchor';
-import { sendAndConfirmRawTransaction } from '@solana/web3.js';
-const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
+import { Wallet } from "@project-serum/anchor";
+import { sendAndConfirmRawTransaction } from "@solana/web3.js";
+const wallet = new Wallet(
+  Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || ""))
+);
 ```
 
 ```js
 // get the transaction
 const { swapTransaction } = await jupiter.exchange({
-  routeInfo:routes.routesInfos[0],
+  routeInfo: routes.routesInfos[0],
 });
 ```
 
 :::note Adding your own instructions
+
 ```js
-import { TransactionMessage, VersionedTransaction, SystemProgram, AddressLookupTableAccount } from '@solana/web3.js';
+import {
+  TransactionMessage,
+  VersionedTransaction,
+  SystemProgram,
+  AddressLookupTableAccount,
+} from "@solana/web3.js";
 // get the transaction and address lookup table accounts
 const { swapTransaction, addressLookupTableAccounts } = await jupiter.exchange({
-  routeInfo:routes.routesInfos[0],
+  routeInfo: routes.routesInfos[0],
 });
 
 // decompile transaction message and add transfer instruction
 message = TransactionMessage.decompile(swapTransaction.message, {
-  addressLookupTableAccounts: addressLookupTableAccounts
+  addressLookupTableAccounts: addressLookupTableAccounts,
 });
 
 // create your instruction and add it to message.instructions
-const instruction = // add your own instruction here
-message.instructions.push(instruction);
+const instruction = message.instructions.push(instruction); // add your own instruction here
 
 // compile the message and update the swapTransaction
-swapTransaction.message = message.compileToV0Message(addressLookupTableAccounts);
+swapTransaction.message = message.compileToV0Message(
+  addressLookupTableAccounts
+);
 ```
+
 Read more details on [composing versioned transactions](/docs/additional-topics/composing-with-versioned-transaction).
 :::
 
@@ -357,8 +376,8 @@ swapTransaction.sign([wallet.payer]);
 const rawTransaction = swapTransaction.serialize();
 const txid = await sendAndConfirmRawTransaction(connection, rawTransaction, {
   skipPreflight: true,
-  commitment: 'confirmed',
-  maxRetries: 2
+  commitment: "confirmed",
+  maxRetries: 2,
 });
 console.log(`https://solscan.io/tx/${txid}`);
 ```
