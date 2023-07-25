@@ -259,16 +259,6 @@
   color: white;
 }
 
-.get {
-  border: 1px solid #1976f2;
-  background-color: #1976f2 !important;
-}
-
-.post {
-  border: 1px solid #018847;
-  background-color: #018847 !important;
-}
-
 .api-method-path {
   font-size: 14px;
   display: inline;

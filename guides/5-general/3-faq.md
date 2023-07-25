@@ -29,7 +29,7 @@ description: "Frequently ask question can be found here"
 
 ### How do I integrate Jupiter swap into my protocol / dApp? 
 
-Protocols / Projects are free to integrate Jupiter swap with either the [Swap API](/docs/apis/swap-api) or [Swap SDK](/docs/apis/swap-sdk), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
+Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/apis/swap-api), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
 
 ----
 

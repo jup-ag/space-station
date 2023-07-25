@@ -5,11 +5,15 @@ description: Convert any token to USDC
 
 # Payments API: Convert any token to USDC
 
+:::info Note
+ v6 API have yet to support Payment API. Please look into the [v4 api](https://quote-api.jup.ag/v4/docs/static/index.html)
+:::
+
 Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount.
 
 ## Use Case
 
-Payments or interaction with a protocol can require an exact amount of token B. Users might not have token A or prefer to hold other tokens long term. The Jupiter Swap SDK and API allow building a swap transaction to receive an exact amount of token A for a maximum in amount of token B.
+Payments or interaction with a protocol can require an exact amount of token B. Users might not have token A or prefer to hold other tokens long term. The Jupiter API allow building a swap transaction to receive an exact amount of token A for a maximum in amount of token B.
 
 ## A Practical Example using the API
 
