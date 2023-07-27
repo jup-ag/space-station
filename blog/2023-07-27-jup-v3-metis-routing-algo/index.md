@@ -13,27 +13,36 @@ The upgrade, coming only a few months after v2, embodies our efforts to push the
 
 This is obviously a mega update so let’s dive right in!
 
-## 1. Introducing [**Metis**](https://en.wikipedia.org/wiki/Metis_(moon))
+## [**Metis**](https://en.wikipedia.org/wiki/Metis_(moon))
 
 Today, we introduce Metis, our new advanced routing algorithm, a heavily modified variant of the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) catered for the key requirements of offering best price routing at scale in a very dynamic operational space.
 
-**Key Features**
+### Key Features
 
-**Best Price:**  To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
+#### Incremental Route Building 
+
+To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
 
 ![Metis2](Metis2.png)
 
-**Much Better Efficiency:** To improve the efficiency of the algo, we combine route generation and quoting into a single step, allowing us to avoid generating and using bad routes, which besides improving the efficiency, also allows us to use a larger set of tokens as intermediaries.
+#### Much Better Efficiency 
 
-**Future Proofing:** v2 runs fast when the total number of DEXs used is small since Solana limits us to use at most 4 DEXs in a swap *(due to the account lock limit of 64)*. Future Solana upgrades will relax this limit and allow more DEXs to be used in a single transaction. In addition, we foresee the continued growth of the Solana DeFi ecosystem, which means there will be many more DEXs emerging. 
+To improve the efficiency of the algo, we combine route generation and quoting into a single step, allowing us to avoid generating and using bad routes, which besides improving the efficiency, also allows us to use a larger set of tokens as intermediaries.
+
+#### Future Proofing
+
+v2 runs fast when the total number of DEXs used is small since Solana limits us to use at most 4 DEXs in a swap *(due to the account lock limit of 64)*. Future Solana upgrades will relax this limit and allow more DEXs to be used in a single transaction. In addition, we foresee the continued growth of the Solana DeFi ecosystem, which means there will be many more DEXs emerging. 
 
 With Metis, we are well equipped to be able to handle both these trends, since the algorithm is able to scale to include more DEXs in a route when account lock limits are increased, and can support more DEXs with only a modest increase in running time.
 
 ![Metis3](Metis3.png)
 
-**Infra Upgrade:** In addition, determining the cost per hop for various amounts of splits is obviously a major challenge, since there are many potential outputs for different amounts, including for vastly different liquidity venues like CLOBs and CLAMMs, and getting quotes from lots of AMMs is slow, which limited the scalability of the system.  To resolve this, we embarked on a major infra upgrade to refresh quotes in parallel and in real time.
+#### Infra Upgrade 
 
-**Performance Improvements:** Metis on average, quotes prices that are 5.22% better than our v2 engine, with the improvements increasing sharply based on the trade size.
+In addition, determining the cost per hop for various amounts of splits is obviously a major challenge, since there are many potential outputs for different amounts, including for vastly different liquidity venues like CLOBs and CLAMMs, and getting quotes from lots of AMMs is slow, which limited the scalability of the system.  To resolve this, we embarked on a major infra upgrade to refresh quotes in parallel and in real time.
+
+#### Performance Improvements
+Metis on average, quotes prices that are 5.22% better than our v2 engine, with the improvements increasing sharply based on the trade size.
 
 ![Metis4](Metis4.jpg)
 
@@ -45,13 +54,15 @@ In addition, an great routing engine is crucial for DeFi in so many ways - liqui
 
 ---
 
-## 2. DCA (Dollar-Cost Averaging) Beta!
+## DCA (Dollar-Cost Averaging)
 
 Secondly, we are also delighted to introduce our DCA Beta, a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token.
 
 ![DCA1](DCA1.png)
 
-**Here’s how it works:** If you choose to use USDC 900 to buy SOL daily over 9 days, 900 USDC will be transferred from your wallet to the non-custodial program and executed over the next 9 days.
+### How it works
+
+If you choose to use USDC 900 to buy SOL daily over 9 days, 900 USDC will be transferred from your wallet to the non-custodial program and executed over the next 9 days.
 
 1. Your first order to sell 100 USDC for SOL will take place immediately at the best price available then.
 2. Your second order to sell the next 100 USDC for SOL will take place approximately 24 hours after the initial order at the best price available then
@@ -63,7 +74,7 @@ As with all Jupiter systems, we aim to make very complex transactions as simple 
 
 Also, during the last order of your DCA, any remaining tokens will be sent to you and all program related accounts opened for your DCA will be closed and the rent returned to you automatically.
 
-**Notes:**
+### Notes
 - To ensure best price execution, DCA keepers use Jupiter and also perform price checks against an external price data provider i.e. Birdeye.
 - To prevent people from querying and hijacking the order right before the order is about to be executed, orders have a + 2 ~ 30 second variability.
 - Note that there is a 0.1% keeper fee for DCA order executions, only taken upon successful completion.
@@ -76,7 +87,7 @@ DCA is still in beta! So please give us as much feedback as possible to help us 
 
 ---
 
-## 3. Limit Order Preliminary Integration Into Jupiter
+## Limit Order Integration Into Jupiter
 
 At Jupiter, we aim to build the easiest limit orders in DeFi. Over the last couple of months, we have been steadily improving Jupiter limit orders behind the scenes, particularly on vastly improving the efficiency of the path discovery and order execution. Now, we are happy to share that Jupiter Limit Order has been integrated into Jupiter. 
 
@@ -92,7 +103,7 @@ We will continue to make major improvements to the limit orders over the next fe
 
 ---
 
-## 4. Jupiter Station: Open Resource For All Space Cats!
+## Jupiter Space Station
 
 Jupiter Space Station is a comprehensive resource for everything related to Jupiter, all in one place for easy access!
 
@@ -119,27 +130,27 @@ We will be constantly improving this page, in our quest to make this the all in 
 
 ---
 
-## 5. New Improved Features 
+## New Improved Features 
 
 Jupiter v3 also features a number of smaller but important improvements based on user and developer feedback.
 
-**1. Feedback Mechanism**
+### Feedback Mechanism
 
 We have a direct feedback channel on top of our Discord support. Whenever a transaction or swap fails, there will be a quick button that prompts a feedback form. This allows users to inform us of any issues they are facing. If you miss the toast message, you can find the feedback form on the bottom-right of the site. The feedback form goes directly to the team. If you require a prompt response, please reach out to us through our official Discord channel.
 
 ![Feedback1](Feedback1.jpg)
 
-**2. Fallback Mechanisms**
+### Fallback Mechanisms
 
 Aggregator works with a dozen DEXs and AMMs, and sometimes, DEX/AMM errors can cause certain routes to fail, resulting in the swap failing to go through. To improve this, our fallback mechanism will exclude any affected DEX/AMM causing errors in our trading routes and immediately refetch a new quote. Traders can then execute the new route and perform the swap without any issues. We have extended this mechanism to both Ver. Txn and Legacy routes to ensure a seamless trading experience for all our users. 
 
 ![Fallback1](Fallback1.jpg)
 
-**3. Expanded Market Selection**
+### Expanded Market Selection
 
 To optimise for a safer and more robust trading experience, we previously set a strict criteria for the pools and markets where we stimulate swaps between $250 worth of tokens, with no more than a 70% loss/price difference. In our latest update, we are also including tokens that have already had liquidity elsewhere, as well as markets with single-sided liquidity of $1,000 within 20% of market price.
 
-**4. Shared Intermediate Token Accounts**
+### Shared Intermediate Token Accounts
 
 We are testing a new contract that will leverage shared intermediate token accounts. The need for manually opening up intermediate token accounts has been a pain point for users given the initial setup cost and high number of potential swap failures. The new shared account feature streamlines the integration process and brings cost-saving benefits to partners and users alike.
 
