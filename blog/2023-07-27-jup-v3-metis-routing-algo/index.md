@@ -25,7 +25,7 @@ To find the best price, Metis streams the input tokens to incrementally build a 
 
 ![Metis2](Metis2.png)
 
-### Much Better Efficiency 
+### Combine Route Generation and Quoting
 
 To improve the efficiency of the algo, we combine route generation and quoting into a single step, allowing us to avoid generating and using bad routes, which besides improving the efficiency, also allows us to use a larger set of tokens as intermediaries.
 
