@@ -43,7 +43,7 @@ In addition, determining the cost per hop for various amounts of splits is obvio
 
 ### Performance Improvements
 
-Metis on average, quotes prices that are 5.22% better than our v2 engine, with the improvements increasing sharply based on the trade size.
+The system has undergone rigorous testing over the past few weeks in production. At the same time, we have been benchmarking the performance of the algorithm. On average, Metis quotes prices that are 5.22% better than our v2 engine, with the improvements increasing sharply based on the trade size.
 
 ![Metis4](Metis4.jpg)
 
