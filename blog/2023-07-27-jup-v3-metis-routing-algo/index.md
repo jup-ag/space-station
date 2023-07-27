@@ -19,17 +19,17 @@ Today, we introduce Metis, our new advanced routing algorithm, a heavily modifie
 
 ### Key Features
 
-#### Incremental Route Building 
+### Incremental Route Building 
 
 To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
 
 ![Metis2](Metis2.png)
 
-#### Much Better Efficiency 
+### Much Better Efficiency 
 
 To improve the efficiency of the algo, we combine route generation and quoting into a single step, allowing us to avoid generating and using bad routes, which besides improving the efficiency, also allows us to use a larger set of tokens as intermediaries.
 
-#### Future Proofing
+### Future Proofing
 
 v2 runs fast when the total number of DEXs used is small since Solana limits us to use at most 4 DEXs in a swap *(due to the account lock limit of 64)*. Future Solana upgrades will relax this limit and allow more DEXs to be used in a single transaction. In addition, we foresee the continued growth of the Solana DeFi ecosystem, which means there will be many more DEXs emerging. 
 
@@ -37,11 +37,12 @@ With Metis, we are well equipped to be able to handle both these trends, since t
 
 ![Metis3](Metis3.png)
 
-#### Infra Upgrade 
+### Infra Upgrade 
 
 In addition, determining the cost per hop for various amounts of splits is obviously a major challenge, since there are many potential outputs for different amounts, including for vastly different liquidity venues like CLOBs and CLAMMs, and getting quotes from lots of AMMs is slow, which limited the scalability of the system.  To resolve this, we embarked on a major infra upgrade to refresh quotes in parallel and in real time.
 
-#### Performance Improvements
+### Performance Improvements
+
 Metis on average, quotes prices that are 5.22% better than our v2 engine, with the improvements increasing sharply based on the trade size.
 
 ![Metis4](Metis4.jpg)
