@@ -186,6 +186,8 @@ components:
           $ref: '#/components/schemas/QuoteResponseV2'
         wrapAndUnwrapSol:
           type: boolean
+        useSharedAccounts:
+          type: boolean
         feeAccount:
           type: string
         computeUnitPriceMicroLamports:
