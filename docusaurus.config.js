@@ -82,7 +82,7 @@ const config = {
       ({
         api: {
           path: "openapi/quoteV6.yaml",
-          routeBasePath: "quote-v6",
+          routeBasePath: "api-v6",
         },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
