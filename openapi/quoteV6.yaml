@@ -27,7 +27,7 @@ paths:
         - $ref: '#/components/parameters/ExcludeDexesParameter'
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
-        - $ref: '#/components/parameters/platformFeeBpsParameter'
+        - $ref: '#/components/parameters/PlatformFeeBpsParameter'
       responses:
         '200':
           description: Successful response
@@ -98,6 +98,25 @@ paths:
 
 components:
   schemas:
+    TransactionObject:
+      type: object
+      properties:
+        programId:
+          type: string
+        data:
+          type: string
+        accountts:
+          type: array
+          items:
+            type: object
+            properties:
+              pubkey:
+                type: string
+              isSigner:
+                type: boolean
+              isWritable:
+                type: boolean
+
     QuoteResponse:
       type: object
       required:
@@ -235,28 +254,28 @@ components:
       properties:
         tokenLedgerInstruction:
           description: If you are using `useTokenLedger = true`.
-          type: string
+          $ref: '#/components/schemas/TransactionObject'
         computeBudgetInstructions:
           description: The necessary instructions to setup the compute budget.
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/TransactionObject'
         setupInstructions:
           description: Setup missing ATA for the users.
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/TransactionObject'
         swapInstruction:
           description: The actual swap instruction.
-          type: string
+          $ref: '#/components/schemas/TransactionObject'
         cleanupInstruction:
           description: Unwrap the SOL if `wrapUnwrapSOL = true`.
-          type: string
+          $ref: '#/components/schemas/TransactionObject'
         addressLookupTableAddresses:
           description: The lookup table addresses that you can use if you are using versioned transaction.
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/TransactionObject'
 
     IndexedRouteMapResponse:
       type: object
@@ -341,7 +360,7 @@ components:
       in: query
       schema:
         type: boolean
-    platformFeeBpsParameter:
+    PlatformFeeBpsParameter:
       name: platformFeeBps
       description: If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.
       in: query
