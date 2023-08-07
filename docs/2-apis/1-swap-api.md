@@ -354,3 +354,60 @@ const messageV0 = new TransactionMessage({
 }).compileToV0Message(addressLookupTableAccounts);
 const transaction = new VersionedTransaction(messageV0);
 ```
+
+## Using Token Ledger Instruction
+
+Sometimes you may not know the exact input amount for the Jupiter swap until an instruction before the swap happens.
+
+For example:
+
+```ts
+const instructions = await (
+  await fetch('https://quote-api.jup.ag/v6/swap-instructions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+      useTokenLedger: true,
+  })
+).json();
+
+const {
+  tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
+  swapInstruction: swapInstructionPayload, // The actual swap instruction.
+  addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
+} = instructions;
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
+// A withdraw instruction that will increase the user input token account amount.
+const withdrawInstruction = ...;
+
+// Coupled with the tokenLedgerInstruction, the swap instruction will use the
+// user increased amount of the input token account after the withdrawal as input amount.
+const swapInstruction = new TransactionInstruction({
+  programId: new PublicKey(swapInstructionPayload.programId),
+  keys: swapInstructionPayload.accounts.map((key) => ({
+    pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+  data: Buffer.from(swapInstructionPayload.data, "base64"),
+});
+
+addressLookupTableAccounts.push(
+  ...(await getAdressLookupTableAccounts(connection, [
+    ...addressLookupTableAddresses
+  ]))
+);
+
+const messageV0 = new TransactionMessage({
+  payerKey: payerPublicKey,
+  recentBlockhash: blockhash,
+  instructions: [tokenLedgerInstruction, withdrawInstruction, swapInstruction],
+}).compileToV0Message(addressLookupTableAccounts);
+const transaction = new VersionedTransaction(messageV0);
+```
