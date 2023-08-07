@@ -324,8 +324,33 @@ const {
   tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
   computeBudgetInstructions, // The necessary instructions to setup the compute budget.
   setupInstructions, // Setup missing ATA for the users.
-  swapInstruction, // The actual swap instruction.
+  swapInstruction: swapInstructionPayload, // The actual swap instruction.
   cleanupInstruction, // Unwrap the SOL if `wrapUnwrapSOL = true`.
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
+const swapInstruction = new TransactionInstruction({
+  programId: new PublicKey(swapInstructionPayload.programId),
+  keys: swapInstructionPayload.accounts.map((key) => ({
+    pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+  data: Buffer.from(swapInstructionPayload.data, "base64"),
+});
+
+addressLookupTableAccounts.push(
+  ...(await getAdressLookupTableAccounts(connection, [
+    ...addressLookupTableAddresses
+  ]))
+);
+
+const messageV0 = new TransactionMessage({
+  payerKey: payerPublicKey,
+  recentBlockhash: blockhash,
+  instructions: [swapInstruction],
+}).compileToV0Message(addressLookupTableAccounts);
+const transaction = new VersionedTransaction(messageV0);
 ```
