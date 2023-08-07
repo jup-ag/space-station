@@ -411,3 +411,5 @@ const messageV0 = new TransactionMessage({
 }).compileToV0Message(addressLookupTableAccounts);
 const transaction = new VersionedTransaction(messageV0);
 ```
+
+This can be useful if you want to withdraw from Solend and immediately convert your withdrawl token into another token with Jupiter.
