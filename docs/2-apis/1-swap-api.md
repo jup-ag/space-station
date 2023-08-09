@@ -203,7 +203,6 @@ const transaction = await (
       // auto wrap and unwrap SOL. default is true
       wrapUnwrapSOL: true,
       // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
-      // This is the ATA account for the output token where the fee will be sent to. If you are swapping from SOL->USDC then this would be the USDC ATA you want to collect the fee.
       // feeAccount: "fee_account_public_key"
     })
   })
@@ -228,7 +227,7 @@ const { swapTransaction } = transaction;
 | `quoteResponse`    | Quote Response | Yes | The object that is returned from the Quote API.          |
 | `wrapUnwrapSOL`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
 | `useSharedAccounts`    | Boolean  | No     | Default is true. This enables the usage of shared program accountns. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher. |
-| `feeAccount`    | String | No       | Fee token account for the output token (only pass in if you set a `platformFeeBps` in `/quote`).     |
+| `feeAccount`    | String | No       | Fee token account for the output token, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a `platformFeeBps` in `/quote` and make sure that the feeAccount has been created) |
 | `computeUnitPriceMicroLamports`    | Integer | No       | The compute unit price to prioritize the transaction, the additional fee will be `computeUnitSet (1400000) * computeUnitPriceMicroLamports`.     |
 | `asLegacyTransaction` | Boolean | No | Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large. |
 | `useTokenLedger` | Boolean | No | Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount. |
