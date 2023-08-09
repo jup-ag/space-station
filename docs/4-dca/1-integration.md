@@ -2,7 +2,7 @@
 sidebar_label: Integrate DCA
 description: Integrate DCA
 ---
-# Integrating DCA
+# Integrating DCA (language agnostic)
 
 Jupiter DCA provides users with the simplest way to place DCA orders on Solana and receive tokens directly in their wallet as each order is filled!
 
