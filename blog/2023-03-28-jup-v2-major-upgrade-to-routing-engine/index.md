@@ -3,6 +3,8 @@ slug: jup-v2-major-upgrade-to-routing-engine
 title: "Jupiter v2 - A Major Upgrade to our Routing Engine!"
 ---
 
+![NewDesign](new_design.jpeg)
+
 We are excited to announce Jupiter v2 - a major upgrade to our routing engine! Rewritten in Rust to tap on the speed of Solana, it now offers advanced routing across 20+ liquidity venues for better pricing on both large and small trades. 
 
 This engine was made possible by the introduction of major composability improvements in Solana last year, including Versioned Transactions, where more complex transactions such as multiple hops and split trades can be executed together within one atomic transaction.
@@ -29,7 +31,7 @@ User safety and security are our top priority. By default, we show only communit
 
 We will introduce a refreshed brand with an even better user experience at Jupiter. We are committed to collaborating closely with the community, sharing design ideas and gathering feedback throughout the process to make this happen!
 
-![NewDesign](new_design.jpeg)
+![NewDesign](new_design1.jpg)
 
 We will be rolling out these enhancements incrementally and engaging the community along the way. Stay tuned for product updates and feature/design discussions in Discord. Your feedback and suggestions will help shape our products and features for v2!
 
