@@ -19,17 +19,15 @@ Jupiter API is the easiest way for developers to access liquidity on Solana. Sim
 
 ```shell
 # Copy and paste this into your terminal!
-curl -s 'https://quote-api.jup.ag/v4/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=10000&slippageBps=1' | jq '.data | .[0] | .outAmount'
+curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1' | jq '.outAmount'
 ```
 
-## V4 API Reference
+## V6 API Reference
 
-:::tip V4 uses Versioned Transactions and Address Lookup Tables
-All Jupiter swaps are now only a single transaction. Not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions you may request a legacy transaction instead from the API.
-:::
+All Jupiter swaps are using versioned transactions and address lookup tables. But not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to use the `asLegacyTransaction` parameter.
 
 :::info API Documentation
- [Swagger](https://quote-api.jup.ag/v4/docs/static/index.html)
+ [OpenAPI Documentation](/api-v6)
 :::
 
 ### Guide
@@ -77,37 +75,36 @@ const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_
 You can retrieve the route map to find out what tokens are listed on Jupiter and what swaps are possible with a particular token. The route map only returns the token mint addresses and not the token metadata.
 
 ```js
-// retrieve indexed routed map
-const indexedRouteMap = await (await fetch('https://quote-api.jup.ag/v4/indexed-route-map')).json();
+// Retrieve the `indexed-route-map`
+const indexedRouteMap = await (await fetch('https://quote-api.jup.ag/v6/indexed-route-map')).json();
 const getMint = (index) => indexedRouteMap["mintKeys"][index];
 const getIndex = (mint) => indexedRouteMap["mintKeys"].indexOf(mint);
 
-// generate route map by replacing indexes with mint addresses
+// Generate the route map by replacing indexes with mint addresses
 var generatedRouteMap = {};
 Object.keys(indexedRouteMap['indexedRouteMap']).forEach((key, index) => {
   generatedRouteMap[getMint(key)] = indexedRouteMap["indexedRouteMap"][key].map((index) => getMint(index))
 });
 
-// list all possible input tokens by mint Address
+// List all possible input tokens by mint address
 const allInputMints = Object.keys(generatedRouteMap);
 
-// list tokens can swap by mint address for SOL
-const swappableOutputForSol = generatedRouteMap['So11111111111111111111111111111111111111112'];
-// console.log({ allInputMints, swappableOutputForSol })
+// List all possition output tokens that can be swapped from the mint address for SOL.
+// SOL -> X
+const swappableOutputForSOL = generatedRouteMap['So11111111111111111111111111111111111111112'];
+// console.log({ allInputMints, swappableOutputForSOL })
 ```
 
 <details>
   <summary>
     <div>
       <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v4/indexed-route-map</p>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/indexed-route-map</p>
     </div>
   </summary>
 
- ### Retrieve an indexed route map for the possible token pairs you can swap between.
-
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
-  </details>
+ ### Retrieve an indexed route map for all the possible token pairs you can swap between.
+</details>
 
 
 <style jsx>
@@ -139,52 +136,49 @@ const swappableOutputForSol = generatedRouteMap['So11111111111111111111111111111
   }
 `}</style>
 
-**5. Get the routes for a swap**
+**5. Get the route for a swap**
 
 In this example, we try swapping SOL to USDC.
 
 ```js
-// swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
+// Swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
 const { data } = await (
-  await fetch('https://quote-api.jup.ag/v4/quote?inputMint=So11111111111111111111111111111111111111112\
+  await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
 &outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
 &amount=100000000\
 &slippageBps=50'
   )
 ).json();
-const routes = data;
-// console.log(routes)
+const quoteResponse = data;
+// console.log(quoteResponse)
 ```
 
 <details>
   <summary>
     <div>
       <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v4/quote</p>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
     </div>
   </summary>
 
- ### Get the top 3 swap routes for a token trade pair sorted by largest output token amount
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
+ ### Get the best swap routes for a token trade pair sorted by largest output token amount
 
 ### Request Parameters
 
 | Parameter   | Type     | Required | Description                        |
 |-------------|----------|----------|------------------------------------|
-| `inputMint`    |  | Yes      | input token mint address           |
-| `outputMint`    |  | Yes       |     |
-| `amount`    | Integer  | Yes       |The API takes in <i>amount</i>  in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
-| `swapMode`    |  | No       | (<i>ExactIn</i> or <i>ExactOut</i>)  Defaults to <i>ExactIn</i>.  <i>ExactOut</i> is for supporting use cases where you need an exact token amount, like payments. In this case the slippage is on the input token      |
-| `slippageBps`    | Integer | No       | The slippage % in BPS.  If the output token amount exceeds the slippage then the swap transaction will halt.      |
-| `feeBps`    |Integer| No       | If you want to charge the user a fee, you can specify the fee in BPS.  Fee % is taken out of the output token.|
-| `onlyDirectRoutes`    |Integer| No       | Default is false.  Direct Routes limits Jupiter routing to single hop routes only.  |
-| `userPublicKey`    || No       | Public key of the user (only pass in if you want deposit and fee being returned, might slow down query)  |
-| `asLegacyTransaction`    |Boolean| No       | Only return routes that can be done in a single legacy transaction. (Routes might be limited)  |
-
-  </details>
+| `inputMint` | String | Yes      | Input token mint address           |
+| `outputMint` | String | Yes       | Output token mint address    |
+| `amount`    | Integer  | Yes       | The API takes in <i>amount</i> in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
+| `slippageBps`    | Integer | No       | The slippage % in BPS. If the output token amount exceeds the slippage then the swap transaction will fail. |
+| `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
+| `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
+| `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
+| `excludeDexes`    | Array | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
+</details>
 
 :::tip Platform Fee
-If you'd like to charge a fee, pass in feeBps as a parameter in the quote.
+If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the quote.
 :::
 
 :::tip Amount
@@ -195,53 +189,50 @@ The API takes in amount in integer and you have to factor in the decimals for ea
 
 ```js
 // get serialized transactions for the swap
-const transactions = await (
-  await fetch('https://quote-api.jup.ag/v4/swap', {
+const transaction = await (
+  await fetch('https://quote-api.jup.ag/v6/swap', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      // route from /quote api
-      route: routes[0],
+      // quoteResponse from /quote api
+      quoteResponse,
       // user public key to be used for the swap
       userPublicKey: wallet.publicKey.toString(),
       // auto wrap and unwrap SOL. default is true
       wrapUnwrapSOL: true,
       // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
-      // This is the ATA account for the output token where the fee will be sent to. If you are swapping from SOL->USDC then this would be the USDC ATA you want to collect the fee.
       // feeAccount: "fee_account_public_key"
     })
   })
 ).json();
 
-const { swapTransaction } = transactions;
+const { swapTransaction } = transaction;
 ```
 
 <details>
   <summary>
     <div>
       <div className="api-method-box post">POST</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v4/swap</p>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/swap</p>
     </div>
   </summary>
-
- ### Get the serialized swap transactions for the swap route provided.
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
 
 ### Request Parameters
 
 | Parameter   | Type     | Required | Description                        |
 |-------------|----------|----------|------------------------------------|
-| `route`    | `Route` | Yes      | Route object returned from Quote API. See Swaggar for definition           |
-| `userPublicKey`    |  | Yes       | public key of the user      |
-| `wrapUnwrapSOL`    | Boolean  | No       | if true, will automatically wrap/unwrap SOL.  If false it will use wSOL token account. Defaults to true.     |
-| `feeAccount`    |  | No       | The fee token account for the output token (only pass in if you set a feeBps)      |
-| `asLegacyTransaction`    | Boolean | No       | Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using  <i>asLegacyTransaction</i>  otherwise the transaction might be too large      |
-| `destinationWallet`    |  | No       | Public key of the wallet that will receive the output of the swap. This assumes the associated token account exists, and currently adds a token transfer instruction.      |
-  </details>
-
-
+| `userPublicKey`    | String  | Yes | The user public key.      |
+| `quoteResponse`    | Quote Response | Yes | The object that is returned from the Quote API.          |
+| `wrapUnwrapSOL`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
+| `useSharedAccounts`    | Boolean  | No     | Default is true. This enables the usage of shared program accountns. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher. |
+| `feeAccount`    | String | No       | Fee token account for the output token, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a `platformFeeBps` in `/quote` and make sure that the feeAccount has been created) |
+| `computeUnitPriceMicroLamports`    | Integer | No       | The compute unit price to prioritize the transaction, the additional fee will be `computeUnitSet (1400000) * computeUnitPriceMicroLamports`.     |
+| `asLegacyTransaction` | Boolean | No | Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large. |
+| `useTokenLedger` | Boolean | No | Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount. |
+| `destinationTokenAccount` | String | No | Public key of the token account that will be used to receive the token out of the swap. If not provided, the user's ATA will be used. If provided, we assume that the token account is already initialized. |
+</details>
 
 **7. Deserialize and sign the transaction**
 
@@ -272,22 +263,152 @@ await connection.confirmTransaction(txid);
 console.log(`https://solscan.io/tx/${txid}`);
 ```
 
-## Arbitrage Bot Using the API
+## Advance error handling to disable certain AMM from the API
 
-Use the API to build your own arbitrage bot.
+Sometimes an AMM throw an error when swapping and to prevent getting the failed AMM for the same quote, you can use the `excludeDexes` parameter when getting `/quote`.
 
+Example JS, with the help of `@mercurial-finance/optimist` package:
+```ts
+import { parseErrorForTransaction } from '@mercurial-finance/optimist';
 
-Jupiter API Arbitrage Example checks whether there is an opportunity for USDC => SOL and SOL => USDC, it submits two transactions that do not always promise profit and might incur losses, use it at your own risk.
+// TX ID from last step if the transaction failed.
+const transaction = connection.getTransaction(txid, {
+  maxSupportedTransactionVersion: 0,
+  commitment: 'confirmed'
+});
 
-[API Arbs Example (Using V1 API)](https://github.com/jup-ag/api-arbs-example)
+const programIdToLabelHash = await (
+  await fetch('https://quote-api.jup.ag/v6/program-id-to-label')
+).json();
+const { programIds } = parseErrorForTransaction(transaction);
 
-**Clone, Build and Run**
+let excludeDexes = new Set();
+if (programIds) {
+  for (let programId of programIds) {
+    let foundLabel = programIdToLabelHash[programId];
+    if(foundLabel) {
+      excludeDexes.add(foundLabel);
+    }
+  }
+}
 
-First, fetch the latest version of the example code:
-
-```shell
-$ git clone https://github.com/jup-ag/api-arbs-example.git
-$ cd api-arbs-example
+// Request another quote with `excludeDexes`.
+const { data } = await (
+  await fetch(`https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112
+&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+&amount=100000000&excludeDexes=${Array.from(excludeDexes).join(',')}
+&slippageBps=50`
+  )
+).json();
 ```
 
-Next, follow the steps in the git repository's [README](https://github.com/jup-ag/api-arbs-example/blob/main/README.md).
+## Instructions Instead of Transaction
+
+Sometimes you prefer to compose using instructions instead of one transaction that is returned from the `/swap` endpoint. You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint.
+
+```ts
+const instructions = await (
+  await fetch('https://quote-api.jup.ag/v6/swap-instructions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+  })
+).json();
+
+const {
+  tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
+  computeBudgetInstructions, // The necessary instructions to setup the compute budget.
+  setupInstructions, // Setup missing ATA for the users.
+  swapInstruction: swapInstructionPayload, // The actual swap instruction.
+  cleanupInstruction, // Unwrap the SOL if `wrapUnwrapSOL = true`.
+  addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
+} = instructions;
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
+const swapInstruction = new TransactionInstruction({
+  programId: new PublicKey(swapInstructionPayload.programId),
+  keys: swapInstructionPayload.accounts.map((key) => ({
+    pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+  data: Buffer.from(swapInstructionPayload.data, "base64"),
+});
+
+addressLookupTableAccounts.push(
+  ...(await getAdressLookupTableAccounts(connection, [
+    ...addressLookupTableAddresses
+  ]))
+);
+
+const messageV0 = new TransactionMessage({
+  payerKey: payerPublicKey,
+  recentBlockhash: blockhash,
+  instructions: [swapInstruction],
+}).compileToV0Message(addressLookupTableAccounts);
+const transaction = new VersionedTransaction(messageV0);
+```
+
+## Using Token Ledger Instruction
+
+Sometimes you may not know the exact input amount for the Jupiter swap until an instruction before the swap happens.
+
+For example:
+
+```ts
+const instructions = await (
+  await fetch('https://quote-api.jup.ag/v6/swap-instructions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+      useTokenLedger: true,
+  })
+).json();
+
+const {
+  tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
+  swapInstruction: swapInstructionPayload, // The actual swap instruction.
+  addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
+} = instructions;
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
+// A withdraw instruction that will increase the user input token account amount.
+const withdrawInstruction = ...;
+
+// Coupled with the tokenLedgerInstruction, the swap instruction will use the
+// user increased amount of the input token account after the withdrawal as input amount.
+const swapInstruction = new TransactionInstruction({
+  programId: new PublicKey(swapInstructionPayload.programId),
+  keys: swapInstructionPayload.accounts.map((key) => ({
+    pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+  data: Buffer.from(swapInstructionPayload.data, "base64"),
+});
+
+addressLookupTableAccounts.push(
+  ...(await getAdressLookupTableAccounts(connection, [
+    ...addressLookupTableAddresses
+  ]))
+);
+
+const messageV0 = new TransactionMessage({
+  payerKey: payerPublicKey,
+  recentBlockhash: blockhash,
+  instructions: [tokenLedgerInstruction, withdrawInstruction, swapInstruction],
+}).compileToV0Message(addressLookupTableAccounts);
+const transaction = new VersionedTransaction(messageV0);
+```
+
+This can be useful if you want to withdraw from Solend and immediately convert your withdrawl token into another token with Jupiter.

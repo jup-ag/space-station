@@ -3,22 +3,10 @@ sidebar_label: "Legacy Txns"
 description: "About Jupiter Legacy Transactions"
 ---
 
-# About Jupiter Legacy Transactions
-## Multiple Transactions
+# About Jupiter Legacy Transaction
+Latest v6 API only return one swapTransaction when `asLegacyTransaction=true` is supplied to enable legacy transaction. So you no longer need to do a setup or cleanup transaction anymore.
 
-Due to transaction size limits, some swap routes cannot fit into a single transaction.  In this case Jupiter will return up to 3 transactions while preserving all swap instructions in a single swap transaction.
-
-- If Jupiter returns 3 transactions it will be:
-    - **setupTransaction** - used to handle creating ATA or Serum open order accounts.
-    - **swapTransactions** - performing the actual swaps.
-    - **cleanupTransaction** - unwrap SOL if a SOL swap.
-- If Jupiter returns a single transaction it will be the `swapTransaction`.
-- Wallets on Solana can sign multiple transactions in 1 click
-    - https://github.com/solana-labs/wallet-adapter/blob/master/packages/core/base/src/signer.ts#L7
-- You must send each transaction sequentially in the order setupTransaction -> swapTransaction -> cleanupTransaction and wait for each to be 'confirmed' before sending the next one.
-    - This article is helpful: https://jstarry.notion.site/Transaction-confirmation-d5b8f4e09b9c4a70a1f263f82307d7ce
-    - A common error is for an RPC node's cache to not get updated between the `setupTransaction` and `swapTransaction`. The `setupTransaction` will create the ATA account, so the account will be on-chain but not in the RPC node's cache. In this case, you can contact your RPC provider to work with them on this.
-- If you want to only deal with a single tx for any swap, you use the `onlyDirectRoutes` option which will disable multi-hop routing and trade splitting.
+Due to transaction size limits, only certains amms can be swap through together. 
 
 ## Swap Success / Failure
 
