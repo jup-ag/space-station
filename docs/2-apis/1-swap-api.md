@@ -136,7 +136,7 @@ const swappableOutputForSOL = generatedRouteMap['So11111111111111111111111111111
   }
 `}</style>
 
-**5. Get the routes for a swap**
+**5. Get the route for a swap**
 
 In this example, we try swapping SOL to USDC.
 

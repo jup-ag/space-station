@@ -3,7 +3,7 @@ description: How to get your DEX / AMM into Jupiter via Rust
 ---
 # Rust Integration
 
-To facilitate integration of your DEX with [@jup-ag/core](https://www.npmjs.com/package/@jup-ag/core) you need to provide a DEX SDK that allow us to implement the following interface:
+To facilitate integration of your DEX with Jupiter, you need to provide a DEX SDK that allow us to implement the following interface:
 
 ```rust
 pub trait Amm {
