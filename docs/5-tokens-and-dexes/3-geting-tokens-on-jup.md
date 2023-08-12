@@ -20,6 +20,8 @@ We felt that this is a good balance to allow users to trade newer tokens – whi
 
 Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address [here](https://cache.jup.ag/markets?v=3).
 
+If you have a important situation that requires you to set up a one sided market (eg: on Openbook), reach out in [Discord](https://discord.gg/jup) to discuss options. Note that for UX and safety reasons, this exception will be rarely given.
+
 ### Getting on the Strict List
 
 For the safety and convenience of users, we provide a "strict" list, which shows a smaller set of validated tokens and is the default on our UI. The strict list is put together by the community and your token should be known and supported by them. More details are shared on the linked Github repo.
