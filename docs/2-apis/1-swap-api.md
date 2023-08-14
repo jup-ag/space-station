@@ -411,4 +411,4 @@ const messageV0 = new TransactionMessage({
 const transaction = new VersionedTransaction(messageV0);
 ```
 
-This can be useful if you want to withdraw from Solend and immediately convert your withdrawl token into another token with Jupiter.
+This can be useful if you want to withdraw from Solend and immediately convert your withdrawal token into another token with Jupiter.
