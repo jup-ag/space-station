@@ -22,7 +22,7 @@ Jupiter API is the easiest way for developers to access liquidity on Solana. Sim
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1' | jq '.outAmount'
 ```
 
-## V6 API Reference
+## V6 API Reference (Beta)
 
 All Jupiter swaps are using versioned transactions and address lookup tables. But not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to use the `asLegacyTransaction` parameter.
 
