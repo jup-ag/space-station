@@ -8,6 +8,8 @@ Jupiter DCA provides users with the simplest way to place DCA orders on Solana a
 
 This page will serve as a general guide on integrating DCA whether you are building a bot for yourself or to integrate with existing (d)apps regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk)
 
+You can learn more about the mechanics of Jupiter's DCA here: [How DCA Works](/guides/dca/how-dca-work)
+
 ## Address
 DCA Program (mainnet-beta): `DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M`
 
@@ -18,10 +20,27 @@ There are 2 key instructions that can be executed
 - Cancelling (and receiving excess tokens) an existing DCA
 
 
-### Instructions
-**1. Create a DCA Account**
+## Instructions
+### 1. Create a DCA Account
 
-A DCA Account is a PDA account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. *(if you are not familiar with constructing a transaction on Solana, we suggest you look at using [DCA SDK](/docs/dca/dca-sdk) with more thorough code examples)*
+A DCA Account is a PDA account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. *(if you are not familiar with constructing a transaction on Solana, we suggest you look at using [DCA SDK](/docs/dca/dca-sdk) with more thorough code examples)*.
+
+Each DCA account has unique parameters. If you want to have different parameters, you can create any number of DCA accounts.
+
+**Instruction**
+```rust
+pub fn open_dca(
+    ctx: Context<OpenDCA>,
+    application_idx: u64,
+    in_amount: u64,
+    in_amount_per_cycle: u64,
+    cycle_frequency: i64,
+    min_price: Option<u64>,
+    max_price: Option<u64>,
+    start_at: Option<i64>,
+    close_wsol_in_ata: Option<bool>,
+) -> Result<()> {}
+```
 
 **Arguments needed (in this order):**
 
@@ -68,3 +87,29 @@ const [dcaPubKey] = await PublicKey.findProgramAddressSync(
 Phew! That's all that is necessary to contruct the instruction. Next, you will need to sign and send the transaction!
 
 Here's what a successful transaction to create a DCA account look like [see on Solana Explorer](https://explorer.solana.com/tx/24kSsH2uLnjSEsYp1mZ6ZmCeGZ8KmYFMDrNJs3nbU6SVH9jwYfcEA6oeRf72CxmzAuUZwFwkyNYvX8ABFc6ABAtv)
+
+### 2. Cancelling a DCA
+
+For whatever reason, if you decide to stop DCA, you can close the DCA account. Closing the DCA account also returns any leftover tokens to the owner of the DCA account.
+
+Similar to opening a DCA account, you will need to send a transaction containing an instruction to `close_dca`.
+
+Closing a DCA is relatively simple. There are no arguments needed. The accounts necessary are
+
+**Accounts needed:**
+
+|Accounts|Description|
+|---|---|
+|user|This is the user's account that owns the DCA Account. This account will also be the signer and payer of the transaction|
+|dca|The DCA account you want to close|
+|inputMint|Token to sell|
+|outputMint|Token to buy|
+|inAta|The associated token account's address of DCA PDA for inputMint. Example: `getAssociatedTokenAddressSync(inputMint, dcaPubKey, true)` from `@solana/spl-token` library|
+|outAta|The associated token account's address of DCA PDA for outputMint. Example: `getAssociatedTokenAddressSync(outputMint, dcaPubKey, true)` from `@solana/spl-token` library|
+|userInAta|User's token account for input_mint. If not initialized, will initialize.|
+|userOutAta|User's token account for output_mint. If not initialized, will initialize.|
+|systemProgram|The usual `new PublicKey("11111111111111111111111111111111")`|
+|tokenProgram|`new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');` DCA has not been tested to work with Token 2022 yet|
+|associatedTokenProgram|`new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');`|
+|eventAuthority|`new PublicKey('Cspp27eGUDMXxPEdhmEXFVRn6Lt1L7xJyALF3nmnWoBj')` This is DCA Program's event authority for Anchor `0.28.0`'s event CPI feature.|
+|program|The DCA program itself `new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M')`|
