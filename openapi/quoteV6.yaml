@@ -13,7 +13,7 @@ info:
 
     ### Data types
     - Public keys are base58 encoded strings
-    - raw data such as Vec<u8> are base64 encoded strings
+    - raw data such as Vec<u8\> are base64 encoded strings
 
 servers:
   - url: https://quote-api.jup.ag/v6
