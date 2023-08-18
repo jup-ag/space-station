@@ -7,18 +7,28 @@ title: "Jupiter LSTs Integration with Sanctum"
 
 ![Sanctum](sanctum.gif)
 
-To maximize the adoption of LSTs (Liquid Staking Tokens) by users and protocols, we've integrated [Sanctum](https://www.sanctum.so/) into our routing system. This allows users to swap seamlessly between xSOL and SOL at the best possible rates across all markets, regardless of trade amount.
+In order to maximize the adoption of LSTs *(Liquid Staking Tokens)* with users and protocols alike, we have integrated [Sanctum](https://www.sanctum.so/) into our routing system, allowing users to swap from xSOL-SOL with the best possible rates, regardless of trade amount.
 
-This integration coincides with the formal launch of Sanctum and its reserve pool, which has over 200K SOL. This means large amounts of xSOL can be immediately swapped for tokens like USDC.
+This integration coincides with the formal launch of Sanctum and its reserve pool with over 200K SOL - meaning large amounts of xSOL can be immediately swapped for tokens like USDC via the pool and Jupiter.
 
-LSTs have always had great potential for use by both users and DeFi protocols as a valuable source of yield. However, they've been held back from mass adoption due to the inability to instantly liquidate large amounts of LSTs. Typically, there's a wait to unstake, and there isn't enough liquidity in standard markets.
+## Key Features of the Sanctum
 
-With this launch and integration, many of these problems are addressed for the foreseeable future. Jupiter’s integration with Sanctum enables users to stake, unstake, and swap LSTs within its routing seamlessly.
+- **Instant Unstaking:** Leveraging Sanctum’s SOL reserve pool, users can instant unstake LSTs. Unlike traditional LST <--> SOL pools that fragment liquidity, Sanctum services every staked pool with one SOL pool, enabling every stake pool token to be accessible across DeFi.
 
-Liquidators can now also run liquidations more efficiently with bigger pools of liquidity, using Jupiter’s liquidity routing, including Sanctum’s SOL reserve pool and other markets. This ensures minimal price impact and slippage regardless of trade size.
+- **Improved Validators Experience:** Validators can easily launch stake-pools-of-one by tapping into Sanctum's shared liquidity. This reduces concerns about sourcing liquidity and unlocks a substantial portion of staked SOL for use in Solana's DeFi ecosystem.
 
-Besides being a strong source of reassurance for LST holders, this integration also removes the most significant barrier to LST adoption in DeFi.
+- **Competitive Pricing:** Sanctum routing provides a pricing edge for smaller stake pool tokens and transactions, shifting away from heavy reliance on liquidity provision to AMMs.
 
-The integration provides deep liquidity for both existing and new LSTs, eliminating the need for liquidity bootstrapping. This accelerates LST adoption, broadening Solana's tradable assets and potentially unlocking $9B in staked DeFi capital.
+## Three Main Functions on Jupiter
 
-This is significant for the Solana ecosystem as it paves the way for protocols to optimize their capital efficiency and yield without typical constraints. We're excited about the innovative products to come from this foundation and delighted to have worked with the amazing Sanctum team on this integration!
+- **SOL - xSOL:** Direct staking through Sanctum, allowing SOL deposits into stakepools, with users receiving corresponding LSTs.
+- **xSOL - xSOL:** Support for LSTs trading, with partial support for various xSOL routes.
+- **xSOL - SOL:** Integration with Sanctum enables instant unstaking and liquidity access for staked SOL.
+
+## Benefit To The Ecosystem
+
+LSTs have always held great potential for use by both users and DeFi protocols as a valuable source of yield. However, they've been hindered from mass adoption due to the challenge of instantly liquidating large LST amounts. Liquidity in standard markets is insufficient for large traders or liquidators who need rapid liquidity exit.
+
+With this launch and integration, many of these problems are mitigated. Liquidators can now efficiently liquidate both small and large xSOL positions, leveraging Jupiter’s liquidity routes that include the Sanctum SOL reserve pool and other integrated liquidity sources instantly, with optimal prices and minimized price impact and slippage.
+
+This unlocks LST adoption, introducing more tradable assets to Solana that can significantly increase TVL, unlock $9B in staked DeFi capital, and most importantly, enable protocols to maximize their capital efficiency and yield without typical cooldown or liquidity constraints. This pivotal step is a game-changer, and we eagerly anticipate the innovative products to be built upon this foundation.
