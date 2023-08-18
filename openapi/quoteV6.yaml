@@ -28,6 +28,7 @@ paths:
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
         - $ref: '#/components/parameters/PlatformFeeBpsParameter'
+        - $ref: '#/components/parameters/MaxAccountsParameter'
       responses:
         '200':
           description: Successful response
@@ -234,9 +235,6 @@ components:
         asLegacyTransaction:
           description: Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large.
           type: boolean
-        maxAccounts:
-          description: Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count.
-          type: integer
         useTokenLedger:
           description: Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount.
           type: boolean
@@ -366,6 +364,12 @@ components:
     PlatformFeeBpsParameter:
       name: platformFeeBps
       description: If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.
+      in: query
+      schema:
+        type: integer
+    MaxAccountsParameter:
+      name: maxAccounts
+      description: Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count.
       in: query
       schema:
         type: integer
