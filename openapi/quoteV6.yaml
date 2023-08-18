@@ -11,6 +11,10 @@ info:
     ### API Wrapper
     - Typescript [@jup-ag/api](https://github.com/jup-ag/jupiter-quote-api-node)
 
+    ### Data types
+    - Public keys are base58 encoded strings
+    - raw data such as Vec<u8\> are base64 encoded strings
+
 servers:
   - url: https://quote-api.jup.ag/v6
 
@@ -28,6 +32,7 @@ paths:
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
         - $ref: '#/components/parameters/PlatformFeeBpsParameter'
+        - $ref: '#/components/parameters/MaxAccountsParameter'
       responses:
         '200':
           description: Successful response
@@ -98,24 +103,35 @@ paths:
 
 components:
   schemas:
-    TransactionObject:
+    Instruction:
       type: object
       properties:
         programId:
           type: string
-        data:
-          type: string
-        accountts:
+        accounts:
           type: array
           items:
-            type: object
-            properties:
-              pubkey:
-                type: string
-              isSigner:
-                type: boolean
-              isWritable:
-                type: boolean
+            $ref: '#/components/schemas/AccountMeta'
+        data:
+          type: string
+      required:
+        - programId
+        - accounts
+        - data
+
+    AccountMeta:
+      type: object
+      properties:
+        pubkey:
+          type: string
+        isSigner:
+          type: boolean
+        isWritable:
+          type: boolean
+      required:
+        - pubkey
+        - isSigner
+        - isWritable
 
     QuoteResponse:
       type: object
@@ -148,7 +164,7 @@ components:
         platformFee:
           $ref: '#/components/schemas/PlatformFee'
         priceImpactPct:
-          type: number
+          type: string
         routePlan:
           type: array
           items:
@@ -181,6 +197,9 @@ components:
         percent:
           type: integer
           format: int32
+      required:
+        - swapInfo
+        - percent
 
     SwapInfo:
       type: object
@@ -234,9 +253,6 @@ components:
         asLegacyTransaction:
           description: Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large.
           type: boolean
-        maxAccounts:
-          description: Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count.
-          type: integer
         useTokenLedger:
           description: Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount.
           type: boolean
@@ -251,34 +267,41 @@ components:
       properties:
         swapTransaction:
           type: string
+      required:
+        - swapTransaction
 
     SwapInstructionsResponse:
       type: object
       properties:
         tokenLedgerInstruction:
           description: If you are using `useTokenLedger = true`.
-          $ref: '#/components/schemas/TransactionObject'
+          $ref: '#/components/schemas/Instruction'
         computeBudgetInstructions:
           description: The necessary instructions to setup the compute budget.
           type: array
           items:
-            $ref: '#/components/schemas/TransactionObject'
+            $ref: '#/components/schemas/Instruction'
         setupInstructions:
           description: Setup missing ATA for the users.
           type: array
           items:
-            $ref: '#/components/schemas/TransactionObject'
+            $ref: '#/components/schemas/Instruction'
         swapInstruction:
           description: The actual swap instruction.
-          $ref: '#/components/schemas/TransactionObject'
+          $ref: '#/components/schemas/Instruction'
         cleanupInstruction:
           description: Unwrap the SOL if `wrapUnwrapSOL = true`.
-          $ref: '#/components/schemas/TransactionObject'
+          $ref: '#/components/schemas/Instruction'
         addressLookupTableAddresses:
           description: The lookup table addresses that you can use if you are using versioned transaction.
           type: array
           items:
-            $ref: '#/components/schemas/TransactionObject'
+            type: string
+      required:
+        - computeBudgetInstructions
+        - setupInstructions
+        - swapInstruction
+        - addressLookupTableAddresses
 
     IndexedRouteMapResponse:
       type: object
@@ -363,6 +386,12 @@ components:
       in: query
       schema:
         type: boolean
+    MaxAccountsParameter:
+      name: maxAccounts
+      description: Rough estimate of the max accounts to be used for the quote, so that you can compose with your own accounts
+      in: query
+      schema:
+        type: integer
     PlatformFeeBpsParameter:
       name: platformFeeBps
       description: If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.
