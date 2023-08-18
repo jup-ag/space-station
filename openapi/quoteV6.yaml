@@ -106,7 +106,7 @@ components:
           type: string
         data:
           type: string
-        accountts:
+        accounts:
           type: array
           items:
             type: object
