@@ -33,11 +33,6 @@ By utilizing Versioned Transactions with Address Lookup Tables, all Jupiter swap
 We automatically construct the transactions to use the correct Jupiter lookup tables for you.  However, using your own on-chain lookup tables will allow you to fit more instructions into the transaction.
 :::
 
-## Example:  Add your own fixed referral fee to Jupiter transactions
-
-:::tip You can easily add a custom referral fee with `feeBps`, check out [Adding Your Own Fees](./adding-your-own-fees).
-:::
-
 **1. Get the Jupiter swap transaction from the API.**
 
 You can refer to the example code in Using the API for retrieving a Jupiter swap transaction.
