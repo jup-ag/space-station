@@ -15,7 +15,7 @@ If a platform fee is set, Jupiter will take 20% of the platform fee charged by t
 
 With the Jupiter API, you can just add in the `platformFeeBps` parameter to the Quote API:
 
-[# 5. Get the route for a swap](/docs/apis/swap-api#guide)
+[# 5. Get the route for a swap](/docs/3-v6-beta/1-swap-api.md)
 
 **Jupiter Referral Dashboard**
 
