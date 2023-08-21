@@ -1,7 +1,7 @@
 ---
-sidebar_label: "Swap API"
+sidebar_label: "V6 Swap API"
 description: "The Most Powerful Swap API In DeFi"
-title: "Swap API (Beta)"
+title: "V6 Swap API (Beta)"
 ---
 
 :::info
