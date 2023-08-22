@@ -1,7 +1,7 @@
 ---
-sidebar_label: "Swap API "
+sidebar_label: "V4 Swap API "
 description: "v4 Swap API"
-title: "Swap API"
+title: "V4 Swap API"
 ---
 
 :::tip
