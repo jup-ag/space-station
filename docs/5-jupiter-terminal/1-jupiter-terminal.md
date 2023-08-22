@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Jupiter Terminal (Recommended)"
+sidebar_label: "Overview"
 description: Easiest way to add Jupiter to your DApp.
 ---
 import Tabs from '@theme/Tabs';

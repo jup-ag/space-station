@@ -175,7 +175,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: "Jupiter Station (BETA)",
+        title: "Jupiter Station",
         logo: {
           alt: "Jupiter Logo",
           src: "img/jupiter-logo.svg",
