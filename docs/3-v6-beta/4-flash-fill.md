@@ -5,7 +5,7 @@ draft: true
 
 ---
 
-# Flash Fill
+# Jupiter Swap via Flash-Fill
 
 Integrate your program with Jupiter Swap without the limitations of CPI via the "Flash Fill" approach.
 
@@ -130,7 +130,6 @@ pub fn flash_fill(ctx: Context<FlashFill>, amount: u64) -> Result<()> {
 
     require_gte!(ctx.accounts.escrow_input_token_account.amount, amount);
 
-    let idx_bytes = ctx.accounts.escrow.idx.to_le_bytes();
     let signer_seeds: &[&[&[u8]]] = &[...];
     let now = Clock::get()?.unix_timestamp;
 
