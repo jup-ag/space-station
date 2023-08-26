@@ -9,7 +9,9 @@ draft: true
 
 Integrate your program with Jupiter Swap without the limitations of CPI via the "Flash Fill" approach.
 
-> *In order to get the best prices and maximum out amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, the CPI approach would generally fail. Although there is a way to force Jupiter's quote API to limit the number of accounts, in doing so, you would sacrifice the best routes - not ideal.*
+Flash fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is [CPI](/docs/v6-beta/cpi-example).
+
+> *In order to get the best prices and maximum out amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, the CPI approach would generally fail. Although there is a way to force Jupiter's quote API to limit the number of accounts, in doing so, you would sacrifice the best routes - not ideal, hence, flash fill!*
 
 When constructing a transaction off-chain, you have the option to use [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account from 32 bytes to 1 byte - something we can't do via the CPI approach.
 
