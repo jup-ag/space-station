@@ -7,15 +7,21 @@ draft: true
 
 # Jupiter Swap via Flash-Fill
 
-Integrate your program with Jupiter Swap without the limitations of CPI via the "Flash Fill" approach.
+Integrate your program with Jupiter Swap without the limitations of CPI via the "Flash-Fill" approach.
 
-Flash fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is [CPI](/docs/v6-beta/cpi-example).
+Flash-Fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is [CPI](/docs/v6-beta/cpi-example).
 
-> *In order to get the best prices and maximum out amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, the CPI approach would generally fail. Although there is a way to force Jupiter's quote API to limit the number of accounts, in doing so, you would sacrifice the best routes - not ideal, hence, flash fill!*
+Our team engineered "flash-fill" to allow developers and integrators to utilize the full potential of Jupiter swap with their programs.
 
-When constructing a transaction off-chain, you have the option to use [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account from 32 bytes to 1 byte - something we can't do via the CPI approach.
+:::info Why Flash-Fill?
+_In order to get the best prices and maximum returned amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, the CPI approach would generally fail._
 
-Our team has engineered a solution which we coin as "flash-fill" to allow developers and integrators to utilize the full potential of Jupiter swap with their programs.
+_Although there is a way to force Jupiter's quote API to limit the number of accounts or simply construct a swap instruction that utilizes a single dex, in doing so, you would sacrifice the best routes - not ideal, hence, flash-fill!_
+
+_Flash-filling allows the use of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account from 32 bytes to 1 byte - something we can't do via the CPI approach._
+:::
+
+
 
 ## Example
 Here's the minimum number of steps (and corresponding instructions) involved:
@@ -24,7 +30,9 @@ Here's the minimum number of steps (and corresponding instructions) involved:
 
 These 2 instructions will need to be performed within the same transaction.
 
-> _**Warning!** Unlike a typical flash loan, the repayment is in a different mint from the loan. As such, there is no easy way to ensure that the repayment amount is appropriate, do to take extra steps to minimize the surface area of exploits. That's beyond the scope of this guide._
+:::danger A note of caution
+_Unlike a typical flash loan, the repayment is in a different mint from the loan. As such, there is no easy way to ensure that the repayment amount is appropriate, do to take extra measures to minimize the surface area for exploits. For e.g. making the instruction permissioned to trusted admins or utilizing a price oracle etc+. The exact implementation is protocol specific and, hence, beyond the scope of this guide._
+:::
 
 **Program code example:**
 ```rust
@@ -310,3 +318,5 @@ const messageV0 = new TransactionMessage({
 const tx = new VersionedTransaction(messageV0);
 // then sign and send this tx
 ```
+
+Give it a shot and if you need help, reach out to us via Discord!
