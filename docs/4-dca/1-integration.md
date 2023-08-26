@@ -2,6 +2,7 @@
 sidebar_label: Integrate DCA
 description: Integrate DCA
 ---
+
 # Integrating DCA (language agnostic)
 
 Jupiter DCA provides users with the simplest way to place DCA orders on Solana and receive tokens directly in their wallet as each order is filled!
@@ -11,76 +12,85 @@ This page will serve as a general guide on integrating DCA whether you are build
 You can learn more about the mechanics of Jupiter's DCA here: [How DCA Works](/guides/dca/how-dca-work)
 
 ## Address
+
 DCA Program (mainnet-beta): `DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M`
 
 ## Big Picture
 
 There are 2 key instructions that can be executed
+
 - Creating a DCA
 - Cancelling (and receiving excess tokens) an existing DCA
 
-
 ## Instructions
-### 1. Create a DCA Account
 
-A DCA Account is a PDA account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. *(if you are not familiar with constructing a transaction on Solana, we suggest you look at using [DCA SDK](/docs/dca/dca-sdk) with more thorough code examples)*.
+### 1. Setting up a DCA
+
+A DCA Account is a PDA account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. _(if you are not familiar with constructing a transaction on Solana, we suggest you look at using [DCA SDK](/docs/dca/dca-sdk) with more thorough code examples)_.
 
 Each DCA account has unique parameters. If you want to have different parameters, you can create any number of DCA accounts.
 
 **Instruction**
+
 ```rust
-pub fn open_dca(
-    ctx: Context<OpenDCA>,
+pub fn open_dca_v2(
+    ctx: Context<OpenDcaOnBehalf>,
     application_idx: u64,
     in_amount: u64,
     in_amount_per_cycle: u64,
     cycle_frequency: i64,
-    min_price: Option<u64>,
-    max_price: Option<u64>,
+    min_out_amount: Option<u64>,
+    max_out_amount: Option<u64>,
     start_at: Option<i64>,
-    close_wsol_in_ata: Option<bool>,
-) -> Result<()> {}
+) -> Result<()> {
 ```
 
 **Arguments needed (in this order):**
 
-|Arguments|Type|Description|
-|---|---|---|
-|applicationIdx|u64|A unix timestamp in seconds|
-|inAmount|u64|Total token amount to DCA. For e.g. if you are trying to buy 1 SOL every day over 10 days, `inAmount` should be 10|
-|inAmountPerCycle|u64|Total token amount to DCA. For e.g. if you are trying to buy 1 SOL every day over 10 days, `inAmountPerCycle` should be 1|
-|cycleFrequency|i64|The number of seconds between each periodic buys. For e.g. if you are trying to buy 1 SOL every day over 10 days, `cycleFrequency` should be 60 * 60 * 24 = 86,400|
-|minPrice*|u64|Let's say you're trying to do a "reverse" DCA ie you want to take profit. Say you bought SOL at $10 and now SOL is at $300 🚀 and you only want to DCA sell SOL for USDC above 300 USDC, you can use this argument. Just pass in `30000` as a u64 equivalent (`BN` in the case of JS). If you can pass in `0` if you do not care about the execution price. Note: We will still try to execute your order based on `cycleFrequency` but if it does not meet the `minPrice` criteria, it will just keep retrying until the price condition is met|
-|maxPrice*|u64|This is just the inverse scenario of `minPrice` ie you want to buy below a maximum price. Remember if you are try to buy SOL below 30 SOL/USDC, pass in 30 * 100 = 3000|
-|startAt|i64|Unix timestamp in seconds of when you would like DCA to start. Pass `0` if you want to start immediately or pass a future time as a unix timestamp in seconds|
-|closeWsolInAta|bool|If you are trying to sell SOL for something else (you are depositing SOL into your DCA account), the best practise is to first wrap SOL to a WSOL token account. If you pass `true`, it will auto close the WSOL token account and refund the rent to your account, otherwise, if you pass `false`, your wSOL token account will just remain open and you can close it manually|
+| Arguments        | Type          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| applicationIdx   | `u64`         | A unix timestamp in seconds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| inAmount         | `u64`         | Total input mint amount to sell.<br />_For e.g. if you are trying to buy SOL using 100 USDC every day over 10 days, `inAmount` should be `100 _ 10 _ (10^6)` - USDC has 6 decimals_                                                                                                                                                                                                                                                                                                                                                                           |
+| inAmountPerCycle | `u64`         | Input mint amount to sell each time.<br/>_For e.g. if you are trying to buy SOL using 100 USDC every day over 10 days, `inAmountPerCycle` should be `100 _ (10^6)`\*                                                                                                                                                                                                                                                                                                                                                                                          |
+| cycleFrequency   | `i64`         | The number of seconds between each periodic buys. For e.g. if you are trying to DCA on a daily basis, `cycleFrequency` should be 60 _ 60 _ 24 = 86,400                                                                                                                                                                                                                                                                                                                                                                                                        |
+| minOutAmount     | `Option<u64>` | This is an optional field. Following the examples above, let's say you only want to buy SOL if SOL is below SOL-USDC $20, that means for each cycle, with every 100 USDC, you want to receive a minimum of `100 / 20 = 5 SOL`. You can then pass `5 * LAMPORTS_PER_SOL` as argument here. This ensures that you receive > 5 SOL for each order.                                                                                                                                                                                                               |
+| maxOutAmount     | `Option<u64>` | This is just the inverse scenario of `minOutAmount`. While `maxOutAmount` is a little counter intuitive, it can be used by advanced traders / investors who believe an asset is at risk of further decline in prices if it goes beyond a certain threshold. Say in the case of output mint being a stablecoin, if the stablecoin drops to $0.5, you will get more buying into it, but that may not necessary be a good thing since the risk of a stablecoin going to $0 is very real if it could depeg to $0.5. This is where `maxOutAmount` could be useful. |
+| startAt          | i64           | Unix timestamp in seconds of when you would like DCA to start. Pass `0` if you want to start immediately or pass a future time as a unix timestamp in seconds                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-*Currently, `minPrice` and `maxPrice` are not enforced in the program but by off-chain keepers.
+**Context Accounts needed:**
 
-**Accounts needed:**
-
-|Accounts|Description|
-|---|---|
-|dca|You will need to derive a DCA PDA here. The 4 buffers used to generate the PDA are seed -> 'dca', user public key, input token public key, output token public key and a uid (use a unix timestamp). See [code example](/docs/dca/integration#getting-a-dca-pda) below|
-|user|This is the user's pubkey. Needs to be a signer of the transaction. Is also the payer to open token accounts needed to open the input and output token account for DCA PDA account|
-|inputMint|Token to sell|
-|outputMint|Token to buy|
-|userAta|User's token account holding the token to sell. Does not necessarily need to be a associated token account. Will transfer inputMint tokens from this account to DCA PDA's inputMint ATA|
-|inAta|The associated token account's address of DCA PDA for inputMint. Example: `getAssociatedTokenAddressSync(inputMint, dcaPubKey, true)` from `@solana/spl-token` library|
-|outAta|The associated token account's address of DCA PDA for outputMint. Example: `getAssociatedTokenAddressSync(outputMint, dcaPubKey, true)` from `@solana/spl-token` library|
-|systemProgram|The usual `new PublicKey("11111111111111111111111111111111")`|
-|tokenProgram|`new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');` DCA has not been tested to work with Token 2022 yet|
-|associatedTokenProgram|`new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');`|
-|eventAuthority|`new PublicKey('Cspp27eGUDMXxPEdhmEXFVRn6Lt1L7xJyALF3nmnWoBj')` This is DCA Program's event authority for Anchor `0.28.0`'s event CPI feature.|
-|program|The DCA program itself `new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M')`|
-
-
+| Accounts               | Description                                                                                                                                                                                                                                                            | isSigner? | isWritable? |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
+| dca                    | You will need to derive a DCA PDA here. The 4 buffers used to generate the PDA are seed -> 'dca', user public key, input token public key, output token public key and a uid (use a unix timestamp). See [code example](/docs/dca/integration#getting-a-dca-pda) below | false     | true        |
+| user                   | This is the user's pubkey. Needs to be a signer of the transaction.                                                                                                                                                                                                    | true      | false       |
+| payer                  | This is the payer's pubkey. Needs to be a signer of the transaction. Pays for the rent to open token accounts needed as well as user's DCA (PDA) account. This can be the same as user.                                                                                | true      | true        |
+| inputMint              | Token to sell                                                                                                                                                                                                                                                          | false     | false       |
+| outputMint             | Token to buy                                                                                                                                                                                                                                                           | false     | false       |
+| userAta                | User's token account holding the token to sell. Does not necessarily need to be a associated token account. Will transfer inputMint tokens from this account to DCA PDA's inputMint ATA                                                                                | false     | true        |
+| inAta                  | The associated token account's address of DCA PDA for inputMint. Example: `getAssociatedTokenAddressSync(inputMint, dcaPubKey, true)` from `@solana/spl-token` library                                                                                                 | false     | true        |
+| outAta                 | The associated token account's address of DCA PDA for outputMint. Example: `getAssociatedTokenAddressSync(outputMint, dcaPubKey, true)` from `@solana/spl-token` library                                                                                               | false     | true        |
+| systemProgram          | The usual `new PublicKey("11111111111111111111111111111111")`                                                                                                                                                                                                          | false     | false       |
+| tokenProgram           | `new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');` DCA has not been tested to work with Token 2022 yet                                                                                                                                                    | false     | false       |
+| associatedTokenProgram | `new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');`                                                                                                                                                                                                       | false     | false       |
+| eventAuthority         | `new PublicKey('Cspp27eGUDMXxPEdhmEXFVRn6Lt1L7xJyALF3nmnWoBj')` This is DCA Program's event authority for Anchor `0.28.0`'s event CPI feature.                                                                                                                         | false     | false       |
+| program                | The DCA program itself `new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M')`                                                                                                                                                                                 | false     | false       |
 
 #### Getting a DCA PDA
+
 ```js
-const [dcaPubKey] = await PublicKey.findProgramAddressSync(
-  [Buffer.from('dca'), userPubKey.toBuffer(), inTokenPubKey.toBuffer(), outTokenPubKey.toBuffer(), new BN(parseInt((Date.now() / 1000).toString())).toArrayLike(Buffer, 'le', 8)],
-  new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M'),
+const [dca] = await PublicKey.findProgramAddressSync(
+  [
+    Buffer.from("dca"),
+    userPubKey.toBuffer(),
+    inTokenPubKey.toBuffer(),
+    outTokenPubKey.toBuffer(),
+    new BN(parseInt((Date.now() / 1000).toString())).toArrayLike(
+      Buffer,
+      "le",
+      8
+    ),
+  ],
+  new PublicKey("DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M")
 );
 ```
 
@@ -98,18 +108,18 @@ Closing a DCA is relatively simple. There are no arguments needed. The accounts 
 
 **Accounts needed:**
 
-|Accounts|Description|
-|---|---|
-|user|This is the user's account that owns the DCA Account. This account will also be the signer and payer of the transaction|
-|dca|The DCA account you want to close|
-|inputMint|Token to sell|
-|outputMint|Token to buy|
-|inAta|The associated token account's address of DCA PDA for inputMint. Example: `getAssociatedTokenAddressSync(inputMint, dcaPubKey, true)` from `@solana/spl-token` library|
-|outAta|The associated token account's address of DCA PDA for outputMint. Example: `getAssociatedTokenAddressSync(outputMint, dcaPubKey, true)` from `@solana/spl-token` library|
-|userInAta|User's token account for input_mint. If not initialized, will initialize.|
-|userOutAta|User's token account for output_mint. If not initialized, will initialize.|
-|systemProgram|The usual `new PublicKey("11111111111111111111111111111111")`|
-|tokenProgram|`new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');` DCA has not been tested to work with Token 2022 yet|
-|associatedTokenProgram|`new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');`|
-|eventAuthority|`new PublicKey('Cspp27eGUDMXxPEdhmEXFVRn6Lt1L7xJyALF3nmnWoBj')` This is DCA Program's event authority for Anchor `0.28.0`'s event CPI feature.|
-|program|The DCA program itself `new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M')`|
+| Accounts               | Description                                                                                                                                                              | isSigner? | isWritable? |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------- |
+| user                   | This is the user's account that owns the DCA Account. This account will also be the signer and payer of the transaction                                                  | true     | true       |
+| dca                    | The DCA account you want to close                                                                                                                                        | false     | true       |
+| inputMint              | Token to sell                                                                                                                                                            | false     | false       |
+| outputMint             | Token to buy                                                                                                                                                             | false     | false       |
+| inAta                  | The associated token account's address of DCA PDA for inputMint. Example: `getAssociatedTokenAddressSync(inputMint, dcaPubKey, true)` from `@solana/spl-token` library   | false     | true       |
+| outAta                 | The associated token account's address of DCA PDA for outputMint. Example: `getAssociatedTokenAddressSync(outputMint, dcaPubKey, true)` from `@solana/spl-token` library | false     | true       |
+| userInAta              | User's token account for input_mint. If not initialized, will initialize.                                                                                                | false     | true       |
+| userOutAta             | User's token account for output_mint. If not initialized, will initialize.                                                                                               | false     | true       |
+| systemProgram          | The usual `new PublicKey("11111111111111111111111111111111")`                                                                                                            | false     | false       |
+| tokenProgram           | `new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');` DCA has not been tested to work with Token 2022 yet                                                      | false     | false       |
+| associatedTokenProgram | `new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');`                                                                                                         | false     | false       |
+| eventAuthority         | `new PublicKey('Cspp27eGUDMXxPEdhmEXFVRn6Lt1L7xJyALF3nmnWoBj')` This is DCA Program's event authority for Anchor `0.28.0`'s event CPI feature.                           | false     | false       |
+| program                | The DCA program itself `new PublicKey('DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M')`                                                                                   | false     | false       |

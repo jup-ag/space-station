@@ -42,8 +42,8 @@ async function createDCA() {
     cycleSecondsApart: BigInt(86400), // 1 day between each order -> 60 * 60 * 24
     inputMint: USDC, // sell
     outputMint: BONK, // buy
-    minPrice: null,  // refer to Integration doc
-    maxPrice: null, // refer to Integration doc
+    minOutAmount: null,  // refer to Integration doc
+    maxOutAmount: null, // refer to Integration doc
     startAt: null, // unix timestamp in seconds
     userInTokenAccount, // optional: if the inputMint token is not in an Associated Token Account but some other token account, pass in the PublicKey of the token account, otherwise, leave it undefined
   };
