@@ -1,7 +1,6 @@
 ---
 sidebar_label: CPI Example
-description: Coming Soon
-draft: true
+description: Integrate Jupiter Swap via CPI
 
 ---
 

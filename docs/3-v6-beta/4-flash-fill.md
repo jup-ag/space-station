@@ -1,7 +1,6 @@
 ---
 sidebar_label: Flash Fill
-description: Coming Soon
-draft: true
+description: Integrate Jupiter Swap via Flash-Fill
 
 ---
 
