@@ -350,6 +350,29 @@ const messageV0 = new TransactionMessage({
 const transaction = new VersionedTransaction(messageV0);
 ```
 
+## Using `maxAccounts`
+
+Sometimes, if you are composing with Jupiter Swap instruction, you may want to spare some accounts (64 max in 1 Solana transaction)
+for your own program instruction, you can use `maxAccounts`.
+
+```js
+// If you know that your instruction will take up 10 accounts, you
+// can pass in 54 as `maxAccounts` when quoting.
+const { data } = await (
+  await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
+&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
+&amount=100000000\
+&slippageBps=50\
+&maxAccounts=54'
+  )
+).json();
+const quoteResponse = data;
+// console.log(quoteResponse)
+```
+
+The `maxAccounts` is an estimation since it doesn't consider account overlapping but it is a good start to control how many accounts
+you want per transaction.
+
 ## Using Token Ledger Instruction
 
 Sometimes you may not know the exact input amount for the Jupiter swap until an instruction before the swap happens.
