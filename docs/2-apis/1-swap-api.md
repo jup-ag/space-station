@@ -5,7 +5,7 @@ title: "V4 Swap API"
 ---
 
 :::tip
-We recommend checking out our [v6 API](/docs/3-v6-beta/1-swap-api.md) for more reliability, performance and pricing.
+We recommend checking out our [v6 API](/docs/3-v6-beta/1-swap-api.md) for more reliability, performance and better pricing.
 :::
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:
