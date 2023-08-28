@@ -81,3 +81,7 @@ const { swapTransaction } = transactions;
 
 // Execute the `swapTransaction`
 ```
+
+:::tip
+If you want to add your own fees, check out: [Adding Your Own Fees](/docs/v6-beta/adding-fees)
+:::
