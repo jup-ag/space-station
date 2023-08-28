@@ -45,7 +45,6 @@ To run this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). I
 ```shell
 npm i @solana/web3.js
 npm i cross-fetch
-npm i @project-serum/anchor
 npm i bs58
 ```
 
@@ -56,7 +55,6 @@ Next you can copy the following code snippets to a javascript file jupiter-api-e
 ```js
 import { Connection, Keypair, VersionedTransaction } from '@solana/web3.js';
 import fetch from 'cross-fetch';
-import { Wallet } from '@project-serum/anchor';
 import bs58 from 'bs58';
 
 // It is recommended that you use your own RPC endpoint.
@@ -73,7 +71,7 @@ Always make sure that you are using your own RPC endpoint. The RPC endpoint used
 In this example, you can paste in your private key for testing purposes but this is not recommended for production applications.
 
 ```js
-const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
+const keypair = Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || ''));
 ```
 
 **4. Retrieve the route map**
@@ -209,7 +207,7 @@ const transactions = await (
       // route from /quote api
       route: routes[0],
       // user public key to be used for the swap
-      userPublicKey: wallet.publicKey.toString(),
+      userPublicKey: keypair.publicKey.toString(),
       // auto wrap and unwrap SOL. default is true
       wrapUnwrapSOL: true,
       // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
@@ -256,7 +254,7 @@ var transaction = VersionedTransaction.deserialize(swapTransactionBuf);
 console.log(transaction);
 
 // sign the transaction
-transaction.sign([wallet.payer]);
+transaction.sign([keypair]);
 ```
 
 :::tip
