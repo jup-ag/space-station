@@ -408,3 +408,29 @@ const transaction = new VersionedTransaction(messageV0);
 ```
 
 This can be useful if you want to withdraw from Solend and immediately convert your withdrawal token into another token with Jupiter.
+
+## Setting Priority Fee for Your Transaction
+
+Sometimes, you might see your transaction expiring without confirmation on-chain. You can set `computeUnitPriceMicroLamports`, this
+means that you will have to pay additional fee, `computeUnitSet (1400000) * computeUnitPriceMicroLamports`, to prioritize your transaction.
+
+```js
+const transaction = await (
+  await fetch('https://quote-api.jup.ag/v6/swap', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+      // user public key to be used for the swap
+      userPublicKey: wallet.publicKey.toString(),
+      // custom priority fee
+      computeUnitPriceMicroLamports: 1000 // or 'auto',
+    })
+  })
+).json();
+```
+
+If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 1,000,000 lamports.
