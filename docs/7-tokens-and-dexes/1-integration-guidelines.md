@@ -18,7 +18,7 @@ Our top priority is securing best prices, best token selection for our users, so
 
 - **Minimum DEX TVL of $500k**
     - Given the amount of integration work involved, a DEX must have enough liquidity to be useful for trading and to attract volume.
-    - Each market/pool must have a minimum liquidity of $500 to show up on Jupiter. You can keep up to date on how we list tokens [here](/docs/get-your-token-onto-jup)
+    - Each market/pool must have a minimum liquidity of $500 to show up on Jupiter. You can keep up to date on how we list tokens [here](/guides/general/get-your-token-onto-jup)
 - **An API for listing/delisting pools on the DEX**
     - This will allow us to automatically track new markets as you add them to your DEX.
 - **Provide a Rust SDK**

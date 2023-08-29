@@ -90,7 +90,7 @@ A few scenarios or cases where the order is not being fulfill
 ### How do I get my new project token to be available to trade on Jupiter? 
 
 - Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](../general/new-token-guide)
-- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
+- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/guides/general/get-your-token-onto-jup)
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 

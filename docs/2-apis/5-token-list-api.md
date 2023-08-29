@@ -20,7 +20,7 @@ Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-
 ## 'Strict' and 'All' Lists
 
 :::info Our lists only show tokens that satisfy our minimum liquidity requirements
-Our lists are designed for trading -- The "All" list only shows tokens that satisfy our minimum liquidity requirements. Tokens will automatically be picked up once they are above the threshold, and will fall off when they are below. See [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup) for more details on liqudity requirements.
+Our lists are designed for trading -- The "All" list only shows tokens that satisfy our minimum liquidity requirements. Tokens will automatically be picked up once they are above the threshold, and will fall off when they are below. See [Getting Your Token on Jupiter](/guides/general/get-your-token-onto-jup) for more details on liqudity requirements.
 :::
 
 For your convenience, we packed it into 2 endpoints for you to choose from.
@@ -42,7 +42,7 @@ Each token can have 1 or more of the following:
 - `tags` Community: Attested by Jupiter's communities. This includes newer and widely traded tokens created after the old-registry was archived like Bonk and Hades.
 - `tags` [Wormhole](https://github.com/wormhole-foundation/wormhole-token-list/blob/main/content/dest_solana.md): Bridged assets to Solana via wormhole
 - `tags` [SolanaFM](https://docs.solana.fm/api-reference/tokens): Tokens that are "verified" on the solana-fm list.
-- `tags` Unknown: Assets that were [picked up automatically by Jupiter](/docs/get-your-token-onto-jup).
+- `tags` Unknown: Assets that were [picked up automatically by Jupiter](/guides/general/get-your-token-onto-jup).
 - `tags` Token2022: Tokens on the [Token-2022 Program](https://spl.solana.com/token-2022).
 - `extensions` isBanned: Generally fake tokens trying to impersonate another project (E.g. fake wSOL), flagged by our community.
 
@@ -54,7 +54,7 @@ On our UI, we have 2 modes. The default that all users land on is the "strict" m
 
 ## Community Validation for Strict Mode (BETA)
 
-Anyone can propose an addition to the strict list. You can refer to [Getting on the strict list](/docs/get-your-token-onto-jup#getting-on-the-strict-list) to know more about our community-driven process. This new process is still in its early days, and we ask for your patience as we iterate.
+Anyone can propose an addition to the strict list. You can refer to [Getting on the strict list](/guides/general/get-your-token-onto-jup#getting-on-the-strict-list) to know more about our community-driven process. This new process is still in its early days, and we ask for your patience as we iterate.
 
 
 ## Collaborate with us 🤝 

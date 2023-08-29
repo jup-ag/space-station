@@ -4,7 +4,7 @@ description: Getting your token onto Jupiter
 slug: "/get-your-token-onto-jup"
 ---
 # Getting Your Token onto Jupiter
-![cat_list2](./cat_list2.png)
+![cat_list2](../img/cat_list2.png)
 
 :::info All List Vs Strict List
 We list tokens with sufficient liquidity automatically. These new tokens are marked with the 'Unknown' label on the 'All' list, to encourage users to double-check that the mint addresses are the right ones that they wish to interact with before proceeding. The default mode on our UI shows the 'Strict' list, which projects can request to be on.

@@ -15,4 +15,7 @@ This section is user-oriented. If you're looking for technical documentation, pl
 - **Limit Orders:** Learn [How to Use Limit Order](/guides/limit-order/limit-order) and see [How Limit Order Works](/guides/limit-order/how-lo-work)
 - **Community:** Engage with us by reading our [blog](/blog), following us on Twitter [@JupiterExchange](https://twitter.com/JupiterExchange) and sharing feedback and ideas in our [Discord](https://discord.gg/jup). 
 
+For projects who wants to make your token visible on the Strict list, see:
+- [Get your Token onto Jupiter](/guides/get-your-token-onto-jup)
+
 Happy trading and see you in our community chats!
