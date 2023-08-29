@@ -65,6 +65,7 @@ const symmetry = '/img/dex_amm/symmetry.svg';
 const sanctum = 'img/dex_amm/sanctum.svg';
 const fluxbeam = 'img/dex_amm/fluxbeam.png';
 const helium = 'img/dex_amm/helium.svg';
+const drift = '/img/dex_amm/drift.png';
 
 const rango = '/img/bridge/rango.png';
 const allbridge = '/img/bridge/allbridge.png';
@@ -404,6 +405,11 @@ const sections = [
         logo: stepfinance,
         link: 'https://www.step.finance/',
       },
+      {
+        title: 'Drift',
+        logo: drift,
+        link: 'https://app.drift.trade',
+      }
     ],
   },
   {
