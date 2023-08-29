@@ -411,8 +411,7 @@ This can be useful if you want to withdraw from Solend and immediately convert y
 
 ## Setting Priority Fee for Your Transaction
 
-Sometimes, you might see your transaction expiring without confirmation on-chain. You can set `computeUnitPriceMicroLamports`, this
-means that you will have to pay additional fee, `computeUnitSet (1400000) * computeUnitPriceMicroLamports`, to prioritize your transaction.
+If transactions are expiring without confirmation on-chain, this might mean that you have to pay additional fees to prioritize your transaction. To do so, you can set the `computeUnitPriceMicroLamports` parameter. 
 
 ```js
 const transaction = await (
