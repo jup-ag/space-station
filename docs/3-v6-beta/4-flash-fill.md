@@ -106,7 +106,7 @@ pub fn flash_fill(ctx: Context<FlashFill>, amount: u64) -> Result<()> {
         let ixn_identifier = u64::from_be_bytes(jup_swap_ixn.data[..8].try_into().unwrap());
         require!(
             ixn_identifier == get_instruction_discriminator(&[b"global:shared_accounts_route"])
-        );
+        ); // here we check 'shared_accounts_route' because the client-side code example fetches the instruction from Jupiter's API with the option `useSharedAccounts: true` (refer to client-side example fn `getSwapIx` below). There are other possible instructions to perform a swap.
 
         // check #2c: check that the correct input and output mint is used for the swap
         require_keys_eq!(
