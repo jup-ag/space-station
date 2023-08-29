@@ -166,6 +166,7 @@ const quoteResponse = data;
 | `outputMint` | String | Yes       | Output token mint address    |
 | `amount`    | Integer  | Yes       | The API takes in <i>amount</i> in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
 | `slippageBps`    | Integer | No       | The slippage % in BPS. If the output token amount exceeds the slippage then the swap transaction will fail. |
+| `swapMode` | String | No | (ExactIn or ExactOut) Defaults to ExactIn. ExactOut is for supporting use cases where you need an exact token amount, like payments. In this case the slippage is on the input token. |
 | `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
 | `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
 | `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
