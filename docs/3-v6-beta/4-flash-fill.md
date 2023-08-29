@@ -139,7 +139,6 @@ pub fn flash_fill(ctx: Context<FlashFill>, amount: u64) -> Result<()> {
     require_gte!(ctx.accounts.escrow_input_token_account.amount, amount);
 
     let signer_seeds: &[&[&[u8]]] = &[...];
-    let now = Clock::get()?.unix_timestamp;
 
     // transfer to admin for swap
     anchor_spl::token::transfer(
