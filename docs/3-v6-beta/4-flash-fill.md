@@ -38,6 +38,7 @@ _Unlike a typical flash loan, the repayment is in a different mint from the loan
 #[event_cpi]
 #[derive(Accounts)]
 pub struct FlashFill<'info> {
+    #[account(mut)]
     admin: Signer<'info>,
 
     #[account(mut)]
