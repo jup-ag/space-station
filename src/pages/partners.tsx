@@ -62,6 +62,8 @@ const stepfinance = '/img/dex_amm/stepfinance.png';
 const stepn = '/img/dex_amm/stepn.svg';
 const bonkswap = '/img/dex_amm/bonkswap.png';
 const symmetry = '/img/dex_amm/symmetry.svg';
+const sanctum = 'img/dex_amm/sanctum.svg';
+const fluxbeam = 'img/dex_amm/fluxbeam.png';
 
 const rango = '/img/bridge/rango.png';
 const allbridge = '/img/bridge/allbridge.png';
@@ -375,6 +377,16 @@ const sections = [
         title: 'Symmetry',
         logo: symmetry,
         link: 'https://www.symmetry.fi/',
+      },
+      {
+        title: 'Sanctum',
+        logo: sanctum,
+        link: 'https://www.sanctum.so/',
+      },
+      {
+        title: 'Fluxbeam',
+        logo: fluxbeam,
+        link: 'https://fluxbeam.xyz/',
       },
       {
         title: 'Bonkswap',
