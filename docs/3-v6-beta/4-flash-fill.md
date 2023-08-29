@@ -16,6 +16,8 @@ Our team engineered "flash-fill" to allow developers and integrators to utilize 
 In order to get the best prices and maximum returned amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, because the CPI approach has no the ability to use lookup tables to minimize the size of each account, CPI calls to swap via Jupiter would generally fail.
 
 Flash-filling allows the use of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account - something we can't do via the CPI approach.
+
+_note: when using Jupiter's API, you can set [maxAccounts](/docs/v6-beta/swap-api#using-maxaccounts) to reduce the number of accounts._
 :::
 
 
