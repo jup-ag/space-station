@@ -13,11 +13,11 @@ Flash-Fill is one of two approaches to integrate Jupiter swap with your protocol
 Our team engineered "flash-fill" to allow developers and integrators to utilize the full potential of Jupiter swap with their programs.
 
 :::info Why Flash-Fill?
-_In order to get the best prices and maximum returned amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, the CPI approach would generally fail._
+In order to get the best prices and maximum returned amount for any swaps, Jupiter splits and routes an order across multiple dexes in a single transaction to minimize price impact while prioritizing routes with the lowest prices. This results in a single transaction that may involve too many accounts. Transactions on Solana has a maximum of 1232 bytes (as of August 2023) and each account would take up 32 bytes. On top of that, instruction data would also use up precious bytes. As such, because the CPI approach has no the ability to use lookup tables to minimize the size of each account, CPI calls to swap via Jupiter would generally fail.
 
-_Although there is a way to force Jupiter's quote API to limit the number of accounts or simply construct a swap instruction that utilizes a single dex, in doing so, you would sacrifice the best routes - not ideal, hence, flash-fill!_
+Although there is a way to force Jupiter's quote API to limit the number of accounts or simply construct a swap instruction that utilizes a single dex, in doing so, you would sacrifice the best routes - not ideal, hence, flash-fill!
 
-_Flash-filling allows the use of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account from 32 bytes to 1 byte - something we can't do via the CPI approach._
+Flash-filling allows the use of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account from 32 bytes to 1 byte - something we can't do via the CPI approach.
 :::
 
 
