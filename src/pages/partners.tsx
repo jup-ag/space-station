@@ -64,6 +64,7 @@ const bonkswap = '/img/dex_amm/bonkswap.png';
 const symmetry = '/img/dex_amm/symmetry.svg';
 const sanctum = 'img/dex_amm/sanctum.svg';
 const fluxbeam = 'img/dex_amm/fluxbeam.png';
+const helium = 'img/dex_amm/helium.svg';
 
 const rango = '/img/bridge/rango.png';
 const allbridge = '/img/bridge/allbridge.png';
@@ -377,6 +378,11 @@ const sections = [
         title: 'Symmetry',
         logo: symmetry,
         link: 'https://www.symmetry.fi/',
+      },
+      {
+        title: 'Helium Network',
+        logo: helium,
+        link: 'https://www.helium.com/',
       },
       {
         title: 'Sanctum',
