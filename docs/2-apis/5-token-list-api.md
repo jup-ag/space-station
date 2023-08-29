@@ -56,6 +56,7 @@ On our UI, we have 2 modes. The default that all users land on is the "strict" m
 
 To allow anyone to propose an addition to the strict list, we experiment a community-driven approach. You can refer to [Getting on the strict list](/docs/get-your-token-onto-jup#getting-on-the-strict-list) to know more. This new process is still in its early days, and we ask for your patience as we iterate.
 
+
 ## Collaborate with us 🤝 
 
 The Jupiter Token API is still early and we want to work w everyone – users, community members, protocols and data consumers to build a better one for the ecosystem.

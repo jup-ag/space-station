@@ -290,7 +290,7 @@ components:
           description: The actual swap instruction.
           $ref: '#/components/schemas/Instruction'
         cleanupInstruction:
-          description: Unwrap the SOL if `wrapUnwrapSOL = true`.
+          description: Unwrap the SOL if `wrapAndUnwrapSol = true`.
           $ref: '#/components/schemas/Instruction'
         addressLookupTableAddresses:
           description: The lookup table addresses that you can use if you are using versioned transaction.

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Adding Your Own Fees
+sidebar_label: Adding Fees
 description: Adding your own platform fee to Jupiter swap
 ---
 # Adding Your Own Platform Fee To Jupiter swap
@@ -7,7 +7,7 @@ description: Adding your own platform fee to Jupiter swap
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
 
-If a platform fee is set, Jupiter will take 20% of the platform fee charged by the integrators.
+If a platform fee is set, Jupiter will take 10% of the platform fee charged by the integrators.
 
 ## Usage
 
@@ -15,7 +15,7 @@ If a platform fee is set, Jupiter will take 20% of the platform fee charged by t
 
 With the Jupiter API, you can just add in the `platformFeeBps` parameter to the Quote API:
 
-[# 5. Get the route for a swap](/docs/apis/swap-api#guide)
+[# 5. Get the route for a swap](/docs/3-v6-beta/1-swap-api.md)
 
 **Jupiter Referral Dashboard**
 

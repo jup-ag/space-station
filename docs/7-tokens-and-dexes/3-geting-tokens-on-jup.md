@@ -40,4 +40,5 @@ When you open the PR, a **markdown template** guides you through the main steps 
 - For projects with some traction, which plans to launch a new token, you can request to be included in the strict-list before being tradable on Jupiter. Please note that the token will only be showed in the UI once the liquidity requirements above have been met.
 - Finally, to avoid misleading users, it is not allowed to ask to be added to the strict-list if the token uses the name (or similarly named) of an existing token (like Ethereum, Bitcoin, ...)
 
+
 You can also get the list of tokens via the [Token List API](/docs/apis/token-list-api).
