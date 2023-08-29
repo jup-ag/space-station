@@ -35,6 +35,8 @@ use jupiter_cpi;
 
 let signer_seeds: &[&[&[u8]]] = &[...];
 
+// pass accounts to context one-by-one and construct accounts here.
+// Or in practise, it may be easier to use `remaining_accounts` https://book.anchor-lang.com/anchor_in_depth/the_program_module.html
 let accounts = jupiter_cpi::cpi::accounts::SharedAccountsRoute {
     token_program: ,
     program_authority: ,
