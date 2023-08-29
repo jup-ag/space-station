@@ -85,8 +85,8 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /indexed-route-map:
     get:
@@ -139,6 +139,7 @@ components:
       required:
         - inputMint
         - outputMint
+        - inAmount
         - outAmount
         - otherAmountThreshold
         - swapMode
@@ -268,8 +269,11 @@ components:
       properties:
         swapTransaction:
           type: string
+        lastValidBlockHeight:
+          type: number
       required:
         - swapTransaction
+        - lastValidBlockHeight
 
     SwapInstructionsResponse:
       type: object
