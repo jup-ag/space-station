@@ -54,7 +54,8 @@ On our UI, we have 2 modes. The default that all users land on is the "strict" m
 
 ## Community Validation for Strict Mode (BETA)
 
-Anyone who wants to propose an addition to the strict list can open a PR against our [public Github Repo](https://github.com/jup-ag/token-list). It's a community-driven approach in its early days, and we ask for your patience as we iterate.
+Anyone can propose an addition to the strict list. You can refer to [Getting on the strict list](/docs/get-your-token-onto-jup#getting-on-the-strict-list) to know more about our community-driven process. This new process is still in its early days, and we ask for your patience as we iterate.
+
 
 ## Collaborate with us 🤝 
 
