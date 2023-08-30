@@ -98,10 +98,6 @@ var transaction = VersionedTransaction.deserialize(transactionBuf);
 transaction.sign([wallet.payer, base]);
 ```
 
-:::info
-After you deserialize the transaction you can insert your own instructions in the transaction to support your use case.
-:::
-
 **6. Execute the transaction**
 
 ```js
