@@ -652,7 +652,7 @@ export default function Home(): JSX.Element {
                             transition: 'transform .2s ease-in-out',
                             zIndex: 1,
                           }}
-                          className="relative h-[60px] rounded-[20px] img-scale"
+                          className="relative h-[60px] rounded-[10px] img-scale"
                         />
                       </div>
                       <h3 className="text-center mt-2 mb-4 text-base font-bold opacity-80">
