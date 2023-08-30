@@ -23,9 +23,6 @@ For DEXes looking to integrate Jupiter, check out:
 
 - [Jupiter Terminal](/docs/jupiter-terminal/jupiter-terminal) for the easiest way to integrate with your UI
 
-For projects who wants to make your token visible on the Strict list, see:
-
-- [Get your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
 To learn how to use Jupiter from the perspective of the user, see [User guides.](/guides)
 

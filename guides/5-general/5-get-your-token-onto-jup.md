@@ -1,7 +1,7 @@
 ---
+title: Getting your Token onto Jupiter
 sidebar_label: "Getting your Token onto Jupiter"
 description: Getting your token onto Jupiter
-slug: "/get-your-token-onto-jup"
 ---
 # Getting Your Token onto Jupiter
 ![cat_list2](../img/cat_list2.png)
