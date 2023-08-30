@@ -243,10 +243,6 @@ console.log(transaction);
 transaction.sign([wallet.payer]);
 ```
 
-:::tip
-After you deserialize the transaction you can insert your own instructions in the transaction to support your use case.
-:::
-
 **8. Execute the transaction**
 
 ```js
