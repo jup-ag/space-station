@@ -1,5 +1,5 @@
 ---
-sidebar_label: Adding Your Own Fees
+sidebar_label: Adding Fees
 description: Adding your own platform fee to Jupiter swap
 ---
 # Adding Your Own Platform Fee To Jupiter swap

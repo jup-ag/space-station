@@ -166,6 +166,7 @@ const quoteResponse = data;
 | `outputMint` | String | Yes       | Output token mint address    |
 | `amount`    | Integer  | Yes       | The API takes in <i>amount</i> in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
 | `slippageBps`    | Integer | No       | The slippage % in BPS. If the output token amount exceeds the slippage then the swap transaction will fail. |
+| `swapMode` | String | No | (ExactIn or ExactOut) Defaults to ExactIn. ExactOut is for supporting use cases where you need an exact token amount, like payments. In this case the slippage is on the input token. |
 | `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
 | `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
 | `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
@@ -350,6 +351,29 @@ const messageV0 = new TransactionMessage({
 const transaction = new VersionedTransaction(messageV0);
 ```
 
+## Using `maxAccounts`
+
+Sometimes, if you are composing with Jupiter Swap instruction, you may want to spare some accounts (64 max in 1 Solana transaction)
+for your own program instruction, you can use `maxAccounts`.
+
+```js
+// If you know that your instruction will take up 10 accounts, you
+// can pass in 54 as `maxAccounts` when quoting.
+const { data } = await (
+  await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
+&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
+&amount=100000000\
+&slippageBps=50\
+&maxAccounts=54'
+  )
+).json();
+const quoteResponse = data;
+// console.log(quoteResponse)
+```
+
+The `maxAccounts` is an estimation since it doesn't consider account overlapping but it is a good start to control how many accounts
+you want per transaction.
+
 ## Using Token Ledger Instruction
 
 Sometimes you may not know the exact input amount for the Jupiter swap until an instruction before the swap happens.
@@ -406,7 +430,6 @@ const messageV0 = new TransactionMessage({
 }).compileToV0Message(addressLookupTableAccounts);
 const transaction = new VersionedTransaction(messageV0);
 ```
-
 This can be useful if you want to withdraw from Solend and immediately convert your withdrawal token into another token with Jupiter.
 
 ## Setting Priority Fee for Your Transaction
