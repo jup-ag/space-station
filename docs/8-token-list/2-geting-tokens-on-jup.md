@@ -41,4 +41,4 @@ When you open the PR, a **markdown template** guides you through the main steps 
 - Tokens that seem to intentionally mislead users, such as those named similarly to popular tokens, will not be validated.
 
 
-You can get our list of validated tokens via the [Token List API](/docs/apis/token-list-api).
+You can get our list of validated tokens via the [Token List API](/docs/token-list/token-list-api).
