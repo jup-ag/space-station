@@ -36,6 +36,7 @@ const tulip = '/img/defi/tulip.png';
 const marginfi = '/img/defi/marginfi.svg';
 const samoyed = '/img/defi/samoyed.svg';
 const hawksight = '/img/defi/hawksight.png';
+const drift = '/img/defi/drift.png';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -253,6 +254,11 @@ const sections = [
         title: 'Hawksight',
         logo: hawksight,
         link: 'https://www.hawksight.co/'
+      },
+      {
+        title: 'Drift',
+        logo: drift,
+        link: 'https://app.drift.trade',
       }
     ],
   },
@@ -403,7 +409,7 @@ const sections = [
         title: 'Step Finance',
         logo: stepfinance,
         link: 'https://www.step.finance/',
-      },
+      }
     ],
   },
   {
