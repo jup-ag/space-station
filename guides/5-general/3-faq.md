@@ -94,7 +94,7 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 
-- To get on to the Jupiter Strict Token List/ removing the `unknown` token tag through our public [Token verification](/docs/apis/token-list-api#community-validation-for-strict-mode-beta) process in [Jupiter Token List Public Repo](https://github.com/jup-ag/token-list).
+- To get on to the Jupiter Strict Token List/ removing the `unknown` token tag through our public [Token verification](/docs/token-list/token-list-api#community-validation-for-strict-mode-beta) process in [Jupiter Token List Public Repo](https://github.com/jup-ag/token-list).
 
 ----
 

@@ -24,13 +24,21 @@ If you have a important situation that requires you to set up a one sided market
 
 ### Getting on the Strict List
 
-For the safety and convenience of users, we provide a "strict" list, which shows a smaller set of validated tokens and is the default on our UI. The strict list is put together by the community and your token should be known and supported by them. More details are shared on the linked Github repo.
+For the safety and convenience of users, we provide a "strict" list, which shows a smaller set of validated tokens and is the default on our UI. The strict list is put together by the community and your token should be known and supported by them. 
 
-To get your token on the Strict list:
-- Open a PR on the [Token List Repo](https://github.com/jup-ag/token-list)
+*"If I'm trying to trade this token from this project, am I looking at the right one?"* Our validation process matches the expected Mint address to the project. 
+
+To get your token on the Strict list, the first item required is **a tweet from the official project account attesting the Mint address. You should also tag @JupiterExchange and have some degree of community support on your tweet.**
+
+Then, go to the [Token List Repo](https://github.com/jup-ag/token-list) and open a PR.
+
+When you open the PR, a **markdown template** guides you through the main steps involved in the validation process.
+
+**Community validation process**
+- To allow time for community discovery and discussion, reviews are generally done on a weekly basis. Your PR will not be reviewed until there is some community support. Once there is, it will be reviewed within a week.
 - Please go through the README on the github repo carefully  -- it contains everything you need to know with sample PRs and notes on how to engage the community.
-- The best way to get validated faster is to follow the examples of community-support in the example PRs listed on the README, and share meaningful introductions about your project on Twitter and Discord, so that the community can support you.
-- Please prepare the PR early so that the community is given sufficient time to support your validation request. To allow time for community discovery and discussion, reviews are generally done on a weekly basis.
+- If you are a known project with traction, with an upcoming token launch, you can request to be included in the strict-list before your token is tradable on Jupiter. Please note that the token will only be showned in the UI once the liquidity requirements above have been met.
+- Tokens that seem to intentionally mislead users, such as those named similarly to popular tokens, will not be validated.
 
 
-You can also get the list of tokens via the [Token List API](/docs/apis/token-list-api).
+You can get our list of validated tokens via the [Token List API](/docs/token-list/token-list-api).

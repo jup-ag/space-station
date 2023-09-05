@@ -36,6 +36,7 @@ const tulip = '/img/defi/tulip.png';
 const marginfi = '/img/defi/marginfi.svg';
 const samoyed = '/img/defi/samoyed.svg';
 const hawksight = '/img/defi/hawksight.png';
+const drift = '/img/defi/drift.png';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -62,6 +63,9 @@ const stepfinance = '/img/dex_amm/stepfinance.png';
 const stepn = '/img/dex_amm/stepn.svg';
 const bonkswap = '/img/dex_amm/bonkswap.png';
 const symmetry = '/img/dex_amm/symmetry.svg';
+const sanctum = 'img/dex_amm/sanctum.svg';
+const fluxbeam = 'img/dex_amm/fluxbeam.png';
+const helium = 'img/dex_amm/helium.svg';
 
 const rango = '/img/bridge/rango.png';
 const allbridge = '/img/bridge/allbridge.png';
@@ -250,6 +254,11 @@ const sections = [
         title: 'Hawksight',
         logo: hawksight,
         link: 'https://www.hawksight.co/'
+      },
+      {
+        title: 'Drift',
+        logo: drift,
+        link: 'https://app.drift.trade',
       }
     ],
   },
@@ -377,6 +386,21 @@ const sections = [
         link: 'https://www.symmetry.fi/',
       },
       {
+        title: 'Helium Network',
+        logo: helium,
+        link: 'https://www.helium.com/',
+      },
+      {
+        title: 'Sanctum',
+        logo: sanctum,
+        link: 'https://www.sanctum.so/',
+      },
+      {
+        title: 'Fluxbeam',
+        logo: fluxbeam,
+        link: 'https://fluxbeam.xyz/',
+      },
+      {
         title: 'Bonkswap',
         logo: bonkswap,
         link: 'https://www.bonkswap.io/',
@@ -385,7 +409,7 @@ const sections = [
         title: 'Step Finance',
         logo: stepfinance,
         link: 'https://www.step.finance/',
-      },
+      }
     ],
   },
   {
