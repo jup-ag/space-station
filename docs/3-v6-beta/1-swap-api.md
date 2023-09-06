@@ -391,7 +391,7 @@ const instructions = await (
 ).json();
 
 const {
-  tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
+  tokenLedgerInstruction: tokenLedgerPayload, // If you are using `useTokenLedger = true`.
   swapInstruction: swapInstructionPayload, // The actual swap instruction.
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
@@ -403,6 +403,16 @@ const withdrawInstruction = ...;
 
 // Coupled with the tokenLedgerInstruction, the swap instruction will use the
 // user increased amount of the input token account after the withdrawal as input amount.
+const tokenLedgerInstruction = new TransactionInstruction({
+  programId: new PublicKey(tokenLedgerPayload.programId),
+  keys: tokenLedgerPayload.accounts.map((key) => ({
+    pubkey: new PublicKey(key.pubkey),
+      isSigner: key.isSigner,
+      isWritable: key.isWritable,
+    })),
+  data: Buffer.from(tokenLedgerPayload.data, "base64"),
+});
+
 const swapInstruction = new TransactionInstruction({
   programId: new PublicKey(swapInstructionPayload.programId),
   keys: swapInstructionPayload.accounts.map((key) => ({
@@ -430,7 +440,7 @@ This can be useful if you want to withdraw from Solend and immediately convert y
 
 ## Setting Priority Fee for Your Transaction
 
-If transactions are expiring without confirmation on-chain, this might mean that you have to pay additional fees to prioritize your transaction. To do so, you can set the `computeUnitPriceMicroLamports` parameter. 
+If transactions are expiring without confirmation on-chain, this might mean that you have to pay additional fees to prioritize your transaction. To do so, you can set the `computeUnitPriceMicroLamports` parameter.
 
 ```js
 const transaction = await (
