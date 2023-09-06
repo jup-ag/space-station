@@ -24,6 +24,12 @@ _note: when using Jupiter's API, you can set [maxAccounts](/docs/v6-beta/swap-ap
 
 Here we are showing an example on how to utilize Jupiter Swap via Flash Fill to swap from any tokens to SOL even if the user doesn't have enough SOL. You can even allow a third-party payer if the user doesn't have any SOL at all.
 
+:::danger
+A note of caution Unlike a typical flash loan, the repayment is in a different mint from the loan. As such, there is no easy way to ensure that the repayment amount is appropriate, do take extra measures to minimize the surface area for exploits. For e.g. making the instruction permissioned to trusted admins or utilizing a price oracle etc+.
+
+The exact implementation is protocol specific and, hence, beyond the scope of this guide.
+:::
+
 ### How this works?
 For a Flash Fill to work, the transaction will be composed of these instructions:
 
