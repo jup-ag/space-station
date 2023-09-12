@@ -5,7 +5,7 @@ title: "Game Development (C#)"
 ---
 
 :::info
-Jupiter is fully supported within the Solana.Unity-SDK. The core [library](https://github.com/magicblock-labs/Solana.Unity-Core/tree/master/src/Solana.Unity.Dex) is independent of Unity and can be incorporated into Unreal Engine using the library or as a C# backend.
+Jupiter is fully supported within the Solana.Unity-SDK. The core [library](https://github.com/magicblock-labs/Solana.Unity-Core/tree/master/src/Solana.Unity.Dex) is independent of Unity and can be incorporated into Unreal Engine using the UnrealCLR library or in a C# backend.
 :::
 
 Game developers can effortlessly incorporate Jupiter swaps into their games and achieve cross-platform compatibility without the need to modify a single line of code.
