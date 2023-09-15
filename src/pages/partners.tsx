@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import { useLocation } from '@docusaurus/router';
+import Link from '@docusaurus/Link';
 
 const wallet = '/img/wallet.png';
 const defi = '/img/defi.png';
@@ -576,6 +578,18 @@ export default function Home(): JSX.Element {
     setSelectedCat(id);
   };
 
+  const { search } = useLocation();
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(search);
+      const cateogry = params.get("category");
+
+      if (cateogry) {
+        setSelectedCat(cateogry);
+      }
+    }
+  }, [search]);
+
   return (
     <Layout title={`Partners`} description=" ">
       <div className="my-10 container mt-32 mb-28">
@@ -592,7 +606,7 @@ export default function Home(): JSX.Element {
               <br></br>
               Are you building something cool?
               <br></br>
-              Let us know or checkout our docs on{' '}
+              Let us know or checkout our docs on{" "}
               <a href="/docs" className="underline text-black font-bold">
                 how to get started.
               </a>
@@ -603,23 +617,30 @@ export default function Home(): JSX.Element {
           <h2 className="text-2xl font-bold text-black">Explore projects</h2>
           <div>
             <div role="list" className="powered-categoryes-wrap w-dyn-items">
-              <div
-                role="listitem"
-                className="inline-block"
-                onClick={() => onSelectCat('all')}
-              >
-                <ButtonFilter active={selectedCat === 'all'}>All</ButtonFilter>
-              </div>
-              {sections.map((section) => (
+              <Link href={`?`}>
                 <div
                   role="listitem"
                   className="inline-block"
-                  onClick={() => onSelectCat(section.title)}
+                  onClick={() => onSelectCat("all")}
                 >
-                  <ButtonFilter active={selectedCat === section.title}>
-                    {section.title}
+                  <ButtonFilter active={selectedCat === "all"}>
+                    All
                   </ButtonFilter>
                 </div>
+              </Link>
+
+              {sections.map((section) => (
+                <Link href={`?category=${section.title}`}>
+                  <div
+                    role="listitem"
+                    className="inline-block"
+                    // onClick={() => onSelectCat(section.title)}
+                  >
+                    <ButtonFilter active={selectedCat === section.title}>
+                      {section.title}
+                    </ButtonFilter>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
