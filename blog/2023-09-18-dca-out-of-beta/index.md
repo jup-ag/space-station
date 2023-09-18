@@ -21,7 +21,7 @@ We are thrilled to announce that **Jupiter DCA is now officially out of beta!** 
 
 - **Tweaked Default Slippage Rate:** Adjusting the default slippage rate to 10 basis points (bps) for improved transaction rates.
 
-- **Optimized Order Fulfilment:** The default slippage rate has been adjusted to 10 basis points (bps) for improved and better transaction fulfilment rate.
+- **Optimized Order Fulfilment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfillment rate.
 
 - **Additional Checks and Warnings:** Implementing further checks and warnings to enhance safety and security for users.
 
@@ -36,7 +36,7 @@ We are thrilled to announce that **Jupiter DCA is now officially out of beta!** 
 One of the most eagerly requested additions from our users and partners is the introduction of a Min/Max parameter or Advanced Pricing Strategy, addressing the need for precise control. This feature is implemented at the contract level, empowering users to define a minimum price for selling and a maximum price for buying within their DCA orders, adding an extra layer of security for more precise order execution. This strategy ensures order execution within a user-defined price range. If the price falls outside the range during the execution, Jupiter will reattempt to fill your order at a later time till successful, while also enforcing our randomiser at a later time so your trade remains unpredictable. 
 
 ![DCA2](DCA(2).jpg)
-*Example above is setting both minimum and maximum price for the DCA order to be executed.*
+*The example above sets both the minimum and maximum prices for the DCA order to be executed.*
 
 - Minimum price - $19 
 - Maximum price - $20 
@@ -58,7 +58,7 @@ Furthermore, in alignment with this extensive enhancement **powered by Metis**, 
 
 Introducing settings that allow for a maximum duration of one year to meet specific trading needs.
 
-We have a suggestive text that explain each min and max frequency for each iteration, this will make the frequency input feel more natural and it will always show frequency error message if input falls out of bound or when wallet is not connected or no input value.
+We have a suggestive text that explains each min and max frequency for each iteration, this will make the frequency input feel more natural and it will always show the frequency error message if input falls out of bounds or when the wallet is not connected or no input value.
 
 - Minute → 2 - 1440 minutes (~ 1 day)
 - Hour → 2 - 168 hours (~1 week)
@@ -69,10 +69,10 @@ We have a suggestive text that explain each min and max frequency for each itera
 ![dcaerror2](dcaerror2.jpg)
 
 ## How Jupiter DCA works
-When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you picked. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
+When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you pick. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
 
 Read more details here https://station.jup.ag/guides/dca/how-dca-work 
 
 ## Join us!
 
-These measures collectively strengthen the safety and effectiveness of Jupiter DCA, enhancing your experience while reducing potential risks. Your trust and feedback propel us forward, and we are committed to refining and expanding DCA capabilities. We are dedicated to providing a seamless and secure environment for your DCA journey. Join us on this exciting path and stay informed within our active community. https://discord.gg/jup
+These measures collectively strengthen the safety and effectiveness of Jupiter DCA, enhancing your experience while reducing potential risks. Your trust and feedback propel us forward, and we are committed to refining and expanding DCA's capabilities. We are dedicated to providing a seamless and secure environment for your DCA journey. Join us on this exciting path and stay informed within our active community. https://discord.gg/jup
