@@ -1,25 +1,20 @@
 ---
 sidebar_label: Game Dev (C#)
-description: Easily integrate Jupiter swaps in game development
+description: Seamlessly integrate Jupiter swaps and Jupiter payments into your game development workflow.
 title: "Game Development (C#)"
-
 ---
 
 :::info
-Jupiter is natively supported in the Solana.Unity-SDK. 
+Jupiter is fully supported within the Solana.Unity-SDK. The core [library](https://github.com/magicblock-labs/Solana.Unity-Core/tree/master/src/Solana.Unity.Dex) is independent of Unity and can be incorporated into Unreal Engine using the UnrealCLR library or in a C# backend.
 :::
 
-Game developers can easily integrate Jupiter swaps in their games and compile cross platforms without changing a single line of code.
+Game developers can effortlessly incorporate Jupiter swaps into their games and achieve cross-platform compatibility without the need to modify a single line of code.
 
+The Jupiter Payments API is also available, enabling you to utilize Jupiter + SolanaPay for facilitating user payments with any SPL token, allowing pricing in USDC or other tokens.
 
-# Demos 
-- Check out this demo video of an in-game swap powered by the Jupiter integration:  https://youtu.be/nCceV53thjY
-- Live demo can be accessed here: https://magicblock-labs.github.io/Solana.Unity-SDK/
+## Documentation
+For detailed documentation, please visit: [Solana Unity SDK Jupiter Documentation](https://solana.unity-sdk.gg/docs/jupiter)
 
-# Documentation
-Documentation: https://solana.unity-sdk.gg/docs/jupiter
-
-# PRs
-- PR defining the Dex aggregator interface and including a concrete implementation for Jupiter: https://github.com/magicblock-labs/Solana.Unity-Core/pull/42
-
-- PR adding an example for Jupiter swap in the Solana.Unity-SDK demo scene: https://github.com/magicblock-labs/Solana.Unity-SDK/pull/170
+## Demos 
+- Explore this demo video showcasing an in-game swap powered by the Jupiter integration: [Watch Demo Video](https://youtu.be/nCceV53thjY)
+- Access a live demo here: [Live Demo](https://magicblock-labs.github.io/Solana.Unity-SDK/)
