@@ -83,6 +83,7 @@ const staratlas = '/img/game/staratlas.png';
 const candypay = '/img/payment/candypay.svg';
 const helio = '/img/payment/helio.svg';
 const sphere = '/img/payment/sphere.svg';
+const elusiv = '/img/payment/elusiv.svg';
 
 const famousfoxfederation = '/img/nft/fff.png';
 const hadeswap = '/img/nft/hadeswap.png';
@@ -514,6 +515,11 @@ const sections = [
         logo: sphere,
         link: 'https://spherepay.co/',
       },
+	  {
+		title: 'Elusiv',
+		logo: elusiv,
+		link: 'https://elusiv.io/',
+	  }
     ],
   },
   {
