@@ -14,7 +14,7 @@ Powerful charts data and technology powered by <b>Birdeye</b> and <b>TradingView
   </a>
 </div>
 
-Charts data are powered by <b>Birdeye's</b> on-chain data.
+Charts data are powered by <a href="https://birdeye.so" target="_blank">Birdeye's</a> on-chain data.
 
 <hr/>
 
@@ -37,5 +37,5 @@ Charts data are powered by <b>Birdeye's</b> on-chain data.
   </a>
 </div>
 
-Jupiter uses <b>TradingView</b> technology to showcase chart data. TradingView serves as a charting platform catering to a worldwide network of traders and investors, offering exceptional access to real-time information such as the <b>SOL/USD</b> chart, the most recent news, financial reports, Stock screener and Economic calendar. 
+Jupiter uses <a href="https://www.tradingview.com/" target="_blank">TradingView</a> technology to showcase chart data. TradingView serves as a charting platform catering to a worldwide network of traders and investors, offering exceptional access to real-time information such as the <b>SOL/USD</b> chart, the most recent news, financial reports, <a href="https://www.tradingview.com/screener/" target="_blank">Stock screener</a> and <a href="https://www.tradingview.com/economic-calendar/" target="_blank">Economic calendar</a>. 
 
