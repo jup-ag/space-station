@@ -52,7 +52,9 @@ Additionally, we've significantly broadened our range of supported tokens, expan
 
 ## Any-to-any token trading pairs & Metis Algorithm Implementation
 
-Furthermore, in alignment with this extensive enhancement **powered by Metis**, DCA now facilitates trading between **any-to-any pairs with improved routing and pricing**.
+In line with our extensive Metis-powered enhancements, DCA now effortlessly enables trading between any-to-any pairs with improved routing and pricing efficiency.
+
+Metis, our powerful routing engine, dynamically operates on a vast scale. It optimizes routes by splitting and merging input and output tokens, ensuring the best prices for even more complex trades. This enhanced efficiency opens doors to a broader range of intermediary tokens while keeping costs minimal, just a fraction of a cent.
 
 ## Minimum Frequency and Maximum Cycle Settings
 
