@@ -26,5 +26,5 @@ On the `/swap` endpoint, remember to add your `feeAccount` parameter.
 For more information on how the Referral Program works, check it out [here](/docs/additional-topics/referral-program).
 
 :::note
-The Jupiter Swap's project account for the Referral Program is ``.
+The Jupiter Swap's project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
 :::

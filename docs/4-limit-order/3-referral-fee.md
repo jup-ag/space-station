@@ -13,5 +13,5 @@ We are using the [Referral Program](https://github.com/TeamRaccoons/referral) to
 For more information on how the Referral Program works, check it out [here](/docs/additional-topics/referral-program).
 
 :::info
-The Jupiter Limit Order's project account for the Referral Program is ``.
+The Jupiter Limit Order's project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
 :::
