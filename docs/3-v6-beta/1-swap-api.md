@@ -137,15 +137,14 @@ In this example, we try swapping SOL to USDC.
 
 ```js
 // Swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
-const { data } = await (
+const quoteResponse = await (
   await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
 &outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
 &amount=100000000\
 &slippageBps=50'
   )
 ).json();
-const quoteResponse = data;
-// console.log(quoteResponse)
+// console.log({ quoteResponse })
 ```
 
 <details>
@@ -186,7 +185,7 @@ The API takes in amount in integer and you have to factor in the decimals for ea
 
 ```js
 // get serialized transactions for the swap
-const transaction = await (
+const { swapTransaction } = await (
   await fetch('https://quote-api.jup.ag/v6/swap', {
     method: 'POST',
     headers: {
@@ -204,8 +203,6 @@ const transaction = await (
     })
   })
 ).json();
-
-const { swapTransaction } = transaction;
 ```
 
 <details>
