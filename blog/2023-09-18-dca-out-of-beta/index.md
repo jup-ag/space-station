@@ -7,7 +7,7 @@ In an important step towards building the most powerful and usable set of spot t
 
 ## Jupiter DCA Recap
 
-Jupiter DCA is a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token. 
+2 months ago, we launched the beta version of Jupiter DCA - a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token.
 
 When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you pick. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
 
