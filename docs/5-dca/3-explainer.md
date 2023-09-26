@@ -1,7 +1,10 @@
 ---
-slug: dca
-title: "Dollar Cost Averaging with Jupiter"
+sidebar_label: DCA Explainer and Use Cases
+description: Typescript / Javascript
 ---
+
+
+# DCA Explainer and Use Cases
 
 ![DCA1](DCA(1).png)
 
@@ -38,5 +41,5 @@ Using DCA to take profit during bull markets and accumulate during bear markets 
 ### Splitting up large orders
 Executing market orders, whether through decentralized or centralized exchanges, can lead to negative price impacts, particularly in times of exceptionally low liquidity or with a substantial capital. This is where Dollar-Cost Averaging (DCA) proves invaluable. By spreading your order over a period, you exert less buying / selling pressure on the market, ultimately securing a more favorable average price. With Jupiter's DCA, you have the flexibility to divide your orders down to intervals as short as 1 minute. In essence, this transforms into a variation of a TWAP (time-weighted average price) strategy, a method frequently utilized by major investors to strategically accumulate / dispose assets.
 
-### Dumping shitcoins
+### Selling tokens with low liquidity
 Tokens with low liquidity levels pose a challenge when it comes to selling, as doing so can create significant downward price pressure, leading to larger losses than necessary. Employing a Dollar-Cost Averaging (DCA) strategy can alleviate this issue by spreading out your selling activity, thereby reducing the overall selling pressure and potentially boosting your returns.

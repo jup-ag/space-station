@@ -1,13 +1,26 @@
 ---
-slug: dca-out-of-beta
-title: "Jupiter DCA Out of Beta"
+slug: dca-official-launch
+title: "Jupiter DCA Is Now Officially Launched!"
 ---
 
-![DCA1](DCA(1).png)
+In an important step towards building the most powerful and usable set of spot trading features in DeFi, we are thrilled to announce that **Jupiter DCA is now officially launched!** After many rounds of rigorous testing and user feedback, we have incorporated a ton of improvements based on valuable suggestions and ideas from partners and users to increase platform stability and add more features.
 
-We are thrilled to announce that **Jupiter DCA is now officially out of beta!** After more than a month of rigorous testing and user feedback, we have incorporated a ton of improvements based on valuable suggestions and ideas from partners and users to increase platform stability and add more features.
+## Jupiter DCA Recap
 
-## **Quick summary of the latest DCA upgrade:**
+Jupiter DCA is a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token. 
+
+When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you pick. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
+
+Key use cases for DCA includes:
+
+1. Bear market accumulation
+2. Bull mmarket profit taking
+3. Splitting up large orders
+4. Exiting low liquidity tokens
+
+To ensure best price execution, DCA keepers use Jupiter and also perform price checks against an external price data provider i.e. Birdeye. In additon, to prevent people from querying and hijacking the order right before the order is about to be executed, orders have a + 2 ~ 30 second variability.
+
+## Upgrades From Beta:**
 
 - **Advanced Pricing Strategy:** Introducing Min/Max parameters for users to define a precise, user-defined executable price range. This gives users more control over their investments and helps them avoid buying or selling at unfavorable prices.
 
@@ -70,10 +83,6 @@ We have a suggestive text that explains each min and max frequency for each iter
 
 ![dcaerror2](dcaerror2.jpg)
 
-## How Jupiter DCA works
-When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you pick. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
-
-Read more details here https://station.jup.ag/guides/dca/how-dca-work 
 
 ## Join us!
 
