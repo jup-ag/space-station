@@ -32,9 +32,7 @@ To ensure best price execution, DCA keepers use Jupiter and also perform price c
 
 - **Increased Global Upper Limit:** We have increased the global upper limit for a single DCA order from $5,000 USD to $20,000 USD. This change offers users more flexibility for a wider range of use cases.
 
-- **Tweaked Default Slippage Rate:** Adjusting the default slippage rate to 10 basis points (bps) for improved transaction rates.
-
-- **Optimized Order Fulfilment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfillment rate.
+- **Enhanced Default Slippage Rate for Improved Order Fulfillment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfilment rate without disrupting the DCA flow.
 
 - **Additional Checks and Warnings:** Implementing further checks and warnings to enhance safety and security for users.
 
@@ -46,7 +44,7 @@ To ensure best price execution, DCA keepers use Jupiter and also perform price c
 ![DCAcomment2](DCAcomment2.jpg)
 ![DCAcomment3](DCAcomment3.jpg)
 
-One of the most eagerly requested additions from our users and partners is the introduction of a Min/Max parameter or Advanced Pricing Strategy, addressing the need for precise control. This feature is implemented at the contract level, empowering users to define a minimum price for selling and a maximum price for buying within their DCA orders, adding an extra layer of security for more precise order execution. This strategy ensures order execution within a user-defined price range. If the price falls outside the range during the execution, Jupiter will reattempt to fill your order at a later time till successful, while also enforcing our randomiser at a later time so your trade remains unpredictable. 
+One of the most eagerly requested additions from our users and partners is the introduction of a Min/Max parameter or Advanced Pricing Strategy, addressing the need for precise control. This feature is implemented at the contract level, empowering users to define a minimum price for selling and a maximum price for buying within their DCA orders, adding an extra layer of control for more precise order execution. This strategy ensures order execution within a user-defined price range. If the price falls outside the range during the execution, Jupiter will reattempt to fill your order at a later time till successful, while also enforcing our randomiser at a later time so your trade remains unpredictable. 
 
 ![DCA2](DCA(2).jpg)
 *The example above sets both the minimum and maximum prices for the DCA order to be executed.*
