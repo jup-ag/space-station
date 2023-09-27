@@ -5,6 +5,8 @@ title: "Jupiter DCA Is Now Officially Launched!"
 
 In an important step towards building the most powerful and usable set of spot trading features in DeFi, we are thrilled to announce that **Jupiter DCA is now officially launched!** After many rounds of rigorous testing and user feedback, we have incorporated a ton of improvements based on valuable suggestions and ideas from partners and users to increase platform stability and add more features.
 
+![DCALaunch](dcalaunch.gif)
+
 ## Jupiter DCA Recap
 
 2 months ago, we launched the beta version of Jupiter DCA - a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token.
@@ -20,7 +22,7 @@ Key use cases for DCA includes:
 
 To ensure best price execution, DCA keepers use Jupiter and also perform price checks against an external price data provider i.e. Birdeye. In additon, to prevent people from querying and hijacking the order right before the order is about to be executed, orders have a + 2 ~ 30 second variability.
 
-## Upgrades From Beta:**
+## Upgrades From Beta
 
 - **Advanced Pricing Strategy:** Introducing Min/Max parameters for users to define a precise, user-defined executable price range. This gives users more control over their investments and helps them avoid buying or selling at unfavorable prices.
 
@@ -34,9 +36,9 @@ To ensure best price execution, DCA keepers use Jupiter and also perform price c
 
 - **Enhanced Default Slippage Rate for Improved Order Fulfillment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfilment rate without disrupting the DCA flow.
 
-- **Additional Checks and Warnings:** Implementing further checks and warnings to enhance safety and security for users.
+- **Enhanced Safety Mechanism with additional checks and warning:** Verifying scheduled date/time, token validation against the Jupiter Strict List, and issuing warnings for high price impact. User can now see estimated price impacts for each cycle, and lower-cap tokens have more precise decimal market rates, with more warning and banners to bolster trading experience.
 
-- **Enhanced Safety Mechanism:** Verification of the scheduled date/time and validation of available tradable tokens on Jupiter Strict token list to add an extra layer of security for users when trading new tokens. 
+![DCA3](DCA(3).jpg)
 
 ## Advanced Pricing Strategy
 
@@ -54,6 +56,7 @@ One of the most eagerly requested additions from our users and partners is the i
 
 So in this scenario, if the **SOL price is within $19-$20**, the DCA will execute the order, and if it *falls below* or *pump above* the range, Jupiter will retry at a later time to try to check with the price, and if it is within the user-defined range, Jupiter will attempt to execute the order while enforcing our randomiser so your trade remains unpredictable.
 
+![DCA4](DCA(4).jpg)
 
 ## Expanded Tradable Token Selection
 
@@ -80,7 +83,6 @@ We have a suggestive text that explains each min and max frequency for each iter
 - Month → 2 - 12 months (~1 year)
 
 ![dcaerror2](dcaerror2.jpg)
-
 
 ## Join us!
 
