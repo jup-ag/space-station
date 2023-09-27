@@ -137,15 +137,14 @@ In this example, we try swapping SOL to USDC.
 
 ```js
 // Swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
-const { data } = await (
+const quoteResponse = await (
   await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
 &outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
 &amount=100000000\
 &slippageBps=50'
   )
 ).json();
-const quoteResponse = data;
-// console.log(quoteResponse)
+// console.log({ quoteResponse })
 ```
 
 <details>
@@ -186,7 +185,7 @@ The API takes in amount in integer and you have to factor in the decimals for ea
 
 ```js
 // get serialized transactions for the swap
-const transaction = await (
+const { swapTransaction } = await (
   await fetch('https://quote-api.jup.ag/v6/swap', {
     method: 'POST',
     headers: {
@@ -198,14 +197,12 @@ const transaction = await (
       // user public key to be used for the swap
       userPublicKey: wallet.publicKey.toString(),
       // auto wrap and unwrap SOL. default is true
-      wrapUnwrapSOL: true,
+      wrapAndUnwrapSol: true,
       // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
       // feeAccount: "fee_account_public_key"
     })
   })
 ).json();
-
-const { swapTransaction } = transaction;
 ```
 
 <details>
@@ -222,7 +219,7 @@ const { swapTransaction } = transaction;
 |-------------|----------|----------|------------------------------------|
 | `userPublicKey`    | String  | Yes | The user public key.      |
 | `quoteResponse`    | Quote Response | Yes | The object that is returned from the Quote API.          |
-| `wrapUnwrapSOL`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
+| `wrapAndUnwrapSol`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
 | `useSharedAccounts`    | Boolean  | No     | Default is true. This enables the usage of shared program accountns. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher. |
 | `feeAccount`    | String | No       | Fee token account for the output token, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a `platformFeeBps` in `/quote` and make sure that the feeAccount has been created) |
 | `computeUnitPriceMicroLamports`    | Integer | No       | The compute unit price to prioritize the transaction, the additional fee will be `computeUnitSet (1400000) * computeUnitPriceMicroLamports`.     |
@@ -317,7 +314,7 @@ const {
   computeBudgetInstructions, // The necessary instructions to setup the compute budget.
   setupInstructions, // Setup missing ATA for the users.
   swapInstruction: swapInstructionPayload, // The actual swap instruction.
-  cleanupInstruction, // Unwrap the SOL if `wrapUnwrapSOL = true`.
+  cleanupInstruction, // Unwrap the SOL if `wrapAndUnwrapSol = true`.
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
 
