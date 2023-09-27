@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Wallet list"
+sidebar_label: "Wallet List"
 description: Wallets that are compatible with Jupiter
 ---
 # Wallets supported on Jupiter
@@ -19,11 +19,11 @@ Wallets that do not conform to the latest standard have always been difficult fo
 - Not supporting Versioned Transaction, which severely impacts the routing experience and prevents us from getting you the best quote
 - Unpatched security
 - Abandoned development
-- Unnecessary impact on user experience from large bundle sizes of unused wallets 
+- Unnecessary impact on user experience from large bundle sizes of unused wallets
 
 ---
 ## More resources
 - What is Wallet Standard
   - https://docs.phantom.app/developer-powertools/wallet-standard
-- Developer guides 
+- Developer Guides
   - https://github.com/solana-labs/wallet-standard

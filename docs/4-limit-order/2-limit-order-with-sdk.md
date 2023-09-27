@@ -116,43 +116,4 @@ Due to the transaction size limit, the maximum cancellation order in a batch is 
 
 ## Referral
 
-Referrers are entitled to a share of 0.1% of referral fees, while the platform collects another 0.1%. The fees are collected and withheld by the program and are claimable anytime.
-
-**1.  Create a referral account**
-
-```js
-const { tx, referralAccountPubKey } = await limitOrder.createReferralAccount(
-  KEYPAIR.publicKey // payer
-);
-
-await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
-```
-
-**2.  Create referral token accounts**
-
-For every token you would like to collect referral fees in, you need to generate a token account for that. Referral fees are given in the output mint token.
-
-```js
-const { tx, referralTokenAccountPubKey } =
-  await limitOrder.createReferralTokenAccount(
-    mint,
-    KEYPAIR.publicKey // payer
-  );
-
-await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
-```
-
-**3.  Collect fees**
-
-Once you include your referralPubKey in LimitOrderProvider initialization and output mint referral token account have been created, the referral fees will be credited into the token account after the order has been fulfilled.
-
-**4.  Claim fees**
-
-```js
-const tx = await limitOrder.claimReferral(
-  mint,
-  KEYPAIR.publicKey // payer
-);
-
-await sendAndConfirmTransaction(connection, tx, [KEYPAIR]);
-```
+Check out the [referral program](/docs/limit-order/referral-fee) for Limit Order.
