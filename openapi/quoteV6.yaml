@@ -241,7 +241,7 @@ components:
           description: The user public key.
           type: string
         wrapAndUnwrapSol:
-          description: Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.  Will be ignored if `destination_token_account` is set because the `destination_token_account` may belong to a different user that we have no authority to close.
+          description: Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.  Will be ignored if `destinationTokenAccount` is set because the `destinationTokenAccount` may belong to a different user that we have no authority to close.
           type: boolean
         useSharedAccounts:
           description: Default is true. This enables the usage of shared program accountns. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher.
