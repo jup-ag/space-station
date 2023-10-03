@@ -29,6 +29,7 @@ paths:
         - $ref: '#/components/parameters/AmountParameter'
         - $ref: '#/components/parameters/SlippageParameter'
         - $ref: '#/components/parameters/SwapModeParameter'
+        - $ref: '#/components/parameters/DexesParameter'
         - $ref: '#/components/parameters/ExcludeDexesParameter'
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
@@ -373,6 +374,7 @@ components:
         enum: ['ExactIn', 'ExactOut']
     DexesParameter:
       name: dexes
+      description: Default is that all DEXes are included. You can pass in the DEXes that you want to include only and separate them by `,`. You can check out the full list [here](https://quote-api.jup.ag/v6/program-id-to-label).
       in: query
       schema:
         type: array
@@ -380,13 +382,12 @@ components:
           type: string
     ExcludeDexesParameter:
       name: excludeDexes
-      description: Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`.
+      description: Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. You can check out the full list [here](https://quote-api.jup.ag/v6/program-id-to-label).
       in: query
       schema:
         type: array
         items:
           type: string
-          enum: ["Aldrin", "Aldrin V2", "Balansol", "Crema", "Cropper", "FluxBeam", "Lifinity V1", "Lifinity V2", "Oasis", "Bonkswap", "Marinade", "Mercurial", "Meteora", "Phoenix", "Raydium", "Raydium CLMM", "Saber", "Saber (Decimals)", "Openbook", "Saros", "Orca V2", "StepN", "Orca V1", "Penguin", "Symmetry", "Whirlpool", "Invariant", "Helium Network", "Jupiter LO", "Sanctum"]
     OnlyDirectRoutesParameter:
       name: onlyDirectRoutes
       description: Default is false. Direct Routes limits Jupiter routing to single hop routes only.
