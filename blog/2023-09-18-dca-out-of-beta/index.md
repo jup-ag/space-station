@@ -9,18 +9,18 @@ In an important step towards building the most powerful and usable set of spot t
 
 ## Jupiter DCA Recap
 
-2 months ago, we launched the beta version of Jupiter DCA - a non-custodial, on-chain dollar cost averaging solution to automate the purchase or sale of any token.
+2 months ago, we launched the beta version of Jupiter DCA - a non-custodial, on-chain dollar cost-averaging solution to automate the purchase or sale of any token.
 
 When you set up a DCA order, your chosen tokens get moved from your wallet to a special account owned by the DCA program. Imagine it like putting your tokens in a vault. The first order happens right after you create your DCA, and then more orders come in at the times you pick. So, if you're DCA-ing 1,000 $USDC into $SOL every day for 10 days, the first 100 $USDC -> $SOL order goes through when you start, and you'll have 9 more daily orders to go.
 
-Key use cases for DCA includes:
+Key use cases for DCA include:
 
 1. Bear market accumulation
-2. Bull mmarket profit taking
+2. Bull market profit taking
 3. Splitting up large orders
 4. Exiting low liquidity tokens
 
-To ensure best price execution, DCA keepers use Jupiter and also perform price checks against an external price data provider i.e. Birdeye. In additon, to prevent people from querying and hijacking the order right before the order is about to be executed, orders have a + 2 ~ 30 second variability.
+To ensure the best price execution, DCA keepers use Jupiter and also perform price checks against an external price data provider i.e. Birdeye. In addition, to prevent people from querying and hijacking the order right before the order is about to be executed, orders have a + 2 ~ 30 seconds variability.
 
 ## Upgrades From Beta
 
@@ -34,9 +34,9 @@ To ensure best price execution, DCA keepers use Jupiter and also perform price c
 
 - **Increased Global Upper Limit:** We have increased the global upper limit for a single DCA order from $5,000 USD to $20,000 USD. This change offers users more flexibility for a wider range of use cases.
 
-- **Enhanced Default Slippage Rate for Improved Order Fulfillment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfilment rate without disrupting the DCA flow.
+- **Enhanced Default Slippage Rate for Improved Order Fulfillment:** The default slippage rate has been adjusted to 10 basis points (bps) for an improved and better transaction fulfillment rate without disrupting the DCA flow.
 
-- **Enhanced Safety Mechanism with additional checks and warning:** Verifying scheduled date/time, token validation against the Jupiter Strict List, and issuing warnings for high price impact. User can now see estimated price impacts for each cycle, and lower-cap tokens have more precise decimal market rates, with more warning and banners to bolster trading experience.
+- **Enhanced Safety Mechanism with additional checks and warnings:** Verifying scheduled date/time, token validation against the Jupiter Strict List, and issuing warnings for high price impact. Users can now see estimated price impacts for each cycle, and lower-cap tokens have more precise decimal market rates, with more warnings and banners to bolster the trading experience.
 
 ![DCA3](DCA(3).jpg)
 
