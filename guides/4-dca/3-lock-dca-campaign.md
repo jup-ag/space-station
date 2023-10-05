@@ -13,7 +13,7 @@ We've established distinct states to enable integrators to effortlessly inquire 
 ## Setting up
 
 1. Adjust the parameters (Airdrops bps and Program id)
-2. Fork and deploy the lock [DCA program]((https://github.com/jup-ag/dca-cpi-example)) with a new program id 
+2. Fork and deploy the lock [DCA program](https://github.com/jup-ag/dca-cpi-example) with a new program id 
 3. Customize the frontend with [scaffold skeleton UI](https://locked-dca.vercel.app/), GH repo for the UI - (https://github.com/TeamRaccoons/locked-dca) (Using your new program id)
 4. Craft new plans for the campaigns - Plans are hardcoded on the Frontend, and enforce on the contract level.
 
