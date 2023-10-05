@@ -3,8 +3,6 @@ slug: jup-limit-order-upgrade
 title: "Limit Order Upgrade: Any-to-any token trading, 0% maker fee and more!"
 ---
 
-We’re delighted by the overwhelming support shown for **Jupiter Limit Order**.
-
 ![Limit Order Upgrade](limit-order-upgrade.png)
 
 Today, we’re introducing the key upgrades to Jupiter Limit Order, with features like **any-to-any tokens trading**, **fee removal** and **enhancements** that will elevate your trading experience and open up exciting new possibilities.
