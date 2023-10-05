@@ -54,6 +54,13 @@ For our partners and integrators, we offer a scaffold skeleton UI for Lock DCA. 
 
 We also have an airdrop script readily available, which allows our partners to easily query all DCA orders and associated users for incentive programs.
 
+### User flow
+
+1. User create a DCA order via escrow with the partners or integrators.
+2. DCA completes within the preset duration.
+3. User will be able to navigate to the site and close their escrow and receive all of the executed DCA orders.
+4. Once the order and escrow has been closed, partners and integrators will automatically airdrop rewards or incentives directly into user's wallet *(With the provided script running in a infinite loop in the background)*
+
 - **Scaffold Skeleton UI for Lock DCA:**
     - **[Visit the Scaffold Skeleton UI](https://locked-dca.vercel.app/)**
     - **[Access the Repository on GitHub](https://github.com/TeamRaccoons/locked-dca)**
