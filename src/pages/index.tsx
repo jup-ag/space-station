@@ -25,8 +25,7 @@ const tweetsJupPromise: TweetCardProps[] = [
     },
     tweet: `Undeniably the best protocol in DeFi. Simple idea yet executed to perfection`,
     time: new Date(2023, 3, 15, 16, 1),
-    permalink:
-      "https://twitter.com/Mabrehan/status/1647148241505632259?s=20",
+    permalink: "https://twitter.com/Mabrehan/status/1647148241505632259?s=20",
   },
   {
     author: {
@@ -76,8 +75,7 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
     },
     tweet: `@aeyakovenko @JupiterExchange is incredible. Miles above anything else`,
     time: new Date(2023, 3, 17, 6, 50),
-    permalink:
-      "https://twitter.com/SolCS95/status/1647734143525228544?s=20",
+    permalink: "https://twitter.com/SolCS95/status/1647734143525228544?s=20",
   },
   {
     author: {
@@ -86,10 +84,10 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
       image:
         "https://pbs.twimg.com/profile_images/1616532703108796416/9zuxs0RG_400x400.jpg",
     },
-    tweet: "@JupiterExchange is the reason our 'swap' feature can exist. \n\nbuilding together on the ecosystem, what more could we ask for?",
+    tweet:
+      "@JupiterExchange is the reason our 'swap' feature can exist. \n\nbuilding together on the ecosystem, what more could we ask for?",
     time: new Date(2023, 5, 20, 18, 25),
-    permalink:
-      "https://twitter.com/netrunnernft/status/1671101933023821824"
+    permalink: "https://twitter.com/netrunnernft/status/1671101933023821824",
   },
   {
     author: {
@@ -98,10 +96,10 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
       image:
         "https://pbs.twimg.com/profile_images/1677479168303325184/WiiRG23S_400x400.jpg",
     },
-    tweet: "Try @JupiterExchange it's the best dex aggregator and possibly best UX in crypto",
+    tweet:
+      "Try @JupiterExchange it's the best dex aggregator and possibly best UX in crypto",
     time: new Date(2023, 7, 3, 17, 11),
-    permalink:
-      "https://twitter.com/7LayerMagik/status/1675610438057222144"
+    permalink: "https://twitter.com/7LayerMagik/status/1675610438057222144",
   },
   {
     author: {
@@ -114,8 +112,7 @@ this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
     
     Plenty of limit orders filled and more open orders awaiting!`,
     time: new Date(2023, 6, 17, 17, 21),
-    permalink:
-      "https://twitter.com/Teck_jy/status/1669998720136675328"
+    permalink: "https://twitter.com/Teck_jy/status/1669998720136675328",
   },
 ];
 export default function Home(): JSX.Element {
