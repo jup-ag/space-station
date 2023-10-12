@@ -37,7 +37,7 @@ When you open the PR, a **markdown template** guides you through the main steps 
 **Community validation process**
 - To allow time for community discovery and discussion, reviews are generally done on a weekly basis. Your PR will not be reviewed until there is some community support. Once there is, it will be reviewed within a week.
 - Please go through the README on the github repo carefully  -- it contains everything you need to know with sample PRs and notes on how to engage the community.
-- If you are a known project with traction, with an upcoming token launch, you can request to be included in the strict-list before your token is tradable on Jupiter. Please note that the token will only be showned in the UI once the liquidity requirements above have been met.
+- If you are a known project with traction, with an upcoming token launch, you can request to be included in the strict-list before your token is tradable on Jupiter. Please note that the token will only be shown in the UI once the liquidity requirements above have been met.
 - Tokens that seem to intentionally mislead users, such as those named similarly to popular tokens, will not be validated.
 
 
