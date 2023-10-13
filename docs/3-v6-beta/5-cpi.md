@@ -1,6 +1,6 @@
 ---
-sidebar_label: CPI
-description: Integrate Jupiter Swap via CPI
+sidebar_label: "CPI / Smart Contract Integration"
+description: Cross Program Invocation Integration with Jupiter Swap
 
 ---
 
