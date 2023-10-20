@@ -318,8 +318,6 @@ const {
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
 
-const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
-
 const swapInstruction = new TransactionInstruction({
   programId: new PublicKey(swapInstructionPayload.programId),
   keys: swapInstructionPayload.accounts.map((key) => ({
@@ -330,10 +328,32 @@ const swapInstruction = new TransactionInstruction({
   data: Buffer.from(swapInstructionPayload.data, "base64"),
 });
 
+const getAdressLookupTableAccounts = async (
+  keys: string[]
+): Promise<AddressLookupTableAccount[]> => {
+  const addressLookupTableAccountInfos =
+    await connection.getMultipleAccountsInfo(
+      keys.map((key) => new PublicKey(key))
+    );
+
+  return addressLookupTableAccountInfos.reduce((acc, accountInfo, index) => {
+    const addressLookupTableAddress = keys[index];
+    if (accountInfo) {
+      const addressLookupTableAccount = new AddressLookupTableAccount({
+        key: new PublicKey(addressLookupTableAddress),
+        state: AddressLookupTableAccount.deserialize(accountInfo.data),
+      });
+      acc.push(addressLookupTableAccount);
+    }
+
+    return acc;
+  }, new Array<AddressLookupTableAccount>());
+};
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
 addressLookupTableAccounts.push(
-  ...(await getAdressLookupTableAccounts(connection, [
-    ...addressLookupTableAddresses
-  ]))
+  ...(await getAdressLookupTableAccounts(addressLookupTableAddresses))
 );
 
 const messageV0 = new TransactionMessage({
@@ -393,8 +413,6 @@ const {
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
 
-const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
-
 // A withdraw instruction that will increase the user input token account amount.
 const withdrawInstruction = ...;
 
@@ -420,10 +438,32 @@ const swapInstruction = new TransactionInstruction({
   data: Buffer.from(swapInstructionPayload.data, "base64"),
 });
 
+const getAdressLookupTableAccounts = async (
+  keys: string[]
+): Promise<AddressLookupTableAccount[]> => {
+  const addressLookupTableAccountInfos =
+    await connection.getMultipleAccountsInfo(
+      keys.map((key) => new PublicKey(key))
+    );
+
+  return addressLookupTableAccountInfos.reduce((acc, accountInfo, index) => {
+    const addressLookupTableAddress = keys[index];
+    if (accountInfo) {
+      const addressLookupTableAccount = new AddressLookupTableAccount({
+        key: new PublicKey(addressLookupTableAddress),
+        state: AddressLookupTableAccount.deserialize(accountInfo.data),
+      });
+      acc.push(addressLookupTableAccount);
+    }
+
+    return acc;
+  }, new Array<AddressLookupTableAccount>());
+};
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
 addressLookupTableAccounts.push(
-  ...(await getAdressLookupTableAccounts(connection, [
-    ...addressLookupTableAddresses
-  ]))
+  ...(await getAdressLookupTableAccounts(addressLookupTableAddresses))
 );
 
 const messageV0 = new TransactionMessage({
