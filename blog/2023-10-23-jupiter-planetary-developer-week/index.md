@@ -106,6 +106,7 @@ The motivation behind building the referral fees system was to automate the proc
 The partner journey is now hyper easy - They head over to Jupiter, create a referral account, and then plug the referral account parameters into their integration. It's that simple!
 
 Give our dashboard a spin here: https://referral.jup.ag
+
 Read here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag/docs/v6-beta/adding-fees
 
 ![Referral](referral1.jpg)
