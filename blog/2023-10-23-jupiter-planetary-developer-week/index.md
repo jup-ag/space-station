@@ -3,6 +3,8 @@ slug: jup-plantary-dev-update
 title: "Jupiter Planetary Developer Week"
 ---
 
+![Planetary](planetary.jpg)
+
 ## Introduction
 Calling all Jupiter Space Catdets, welcome to the Jupiter Planetary Developer Week! 
 
