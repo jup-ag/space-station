@@ -25,7 +25,7 @@ In this article, we will go through key upgrades made for v6 to make building li
 - Token ledger for increased swap success rates
 - A brand new referral fees system
 
-In addition, we will also show advanced usage patterns,\examples of how our partners are using it. 
+In addition, we will also show advanced usage patterns, examples of how our partners are using it. 
 
 *This launch of the v6 API is part of a series of developer announcements we are rolling out to enhance the liquidity infrastructure landscape for Solana. Stay tuned!*
 
@@ -165,9 +165,9 @@ Sphere Pay is a payments platform and API for digital currencies, where business
 Sollinked is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens. 
 
 ## Day 1 Ending Notes
-Jupiter’s goal is to provide the best possible liquidity infrastructure for Solana.
+**Jupiter’s goal is to provide the best possible liquidity infrastructure for Solana.**
 
-With this major v6 upgrade, we are confident we have taken a major step in this direction. As always, we would love feedback and your thoughts on how we can improve, please join our feedback conversations on Discord!
-https://discord.gg/jup 
+With this major v6 upgrade, we are confident we have taken a major step in this direction. As always, we would love feedback and your thoughts on how we can improve, please join our feedback conversations on [Discord](https://discord.gg/jup)!
+
 
 **Stay tuned for Day 2 of the Jupiter Planetary Developer Week where we are going to talk about Jupiter and payments!**
