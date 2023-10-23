@@ -109,7 +109,7 @@ Give our dashboard a spin here: https://referral.jup.ag
 
 Read here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag/docs/v6-beta/adding-fees
 
-![Referral](referral1.jpg)
+<!-- ![Referral](referral1.jpg) -->
 
 
 ## Performing Advanced Swaps with Jupiter v6
