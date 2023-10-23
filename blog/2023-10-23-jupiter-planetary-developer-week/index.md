@@ -35,13 +35,13 @@ Undeterred, the team persisted and eventually crafted the innovative Metis algor
 
 Key features of Metis include the following:
 
-#### Incremental Route Building
+- #### Incremental Route Building
 Generating routes for each split iteratively one after another allowing the use of the same DEX in different splits. This leads us to find routes with better prices with more complex trades.
 
-#### Combining Route Generation and Quoting
+- #### Combining Route Generation and Quoting
 Route generation and quoting are combined into a single step, allowing us to avoid generating and using bad routes. This improves efficiency and lets us use a larger set of tokens as intermediaries. 
 
-#### Future Proofing
+- #### Future Proofing
 Future Solana upgrades will allow more DEXs to be used in a single transaction. Metis is equipped to handle and support more DEXs in a route with only a modest increase in running time. 
 
 ![Metis](metis.png)
@@ -55,24 +55,22 @@ Such an insanely powerful engine will be completely out of reach for the average
 
 A great routing engine is crucial for DeFi in many ways:
 
-#### Efficient Trade Execution
+- #### Efficient Trade Execution
 DeFi platforms involve complex trading strategies and require the ability to execute transactions across multiple liquidity sources. A routing engine optimizes the path and execution of trades, ensuring that users obtain the best possible prices while minimizing transaction costs.
 
-#### Liquidity and Market Depth
+- #### Liquidity and Market Depth
 Liquidations require single transactions for large amounts to be as efficient as possible. A routing engine helps identify the most liquid markets, ensuring that traders can execute orders of various sizes without causing significant price slippage.
 
-#### Opportunities for New DEXs
+- #### Opportunities for New DEXs
 New DEXs need a fair chance to be leveraged for volume as the more established ones. Jupiter allows these newcomers to compete on a level playing field with established DEXs, providing them with opportunities to attract trading volume and liquidity.
 
-We look forward to continuously push the limits of Solana and letting the world know how powerful defi can get!
+We look forward to continuously pushing the limits of Solana and letting the world know how powerful defi can get!
 
 ### Shared Intermediate Token Accounts For Integration Simplification and Cost Savings
 The idea of Shared Intermediate Token Accounts came about because there was an increasing number of intermediate token accounts to be created in order for a swap to be successful, which increased integration complexity and cost for users that needed to be addressed.
 
 Previously: 
 - Integrators needed to create every single intermediate token account before integrating and obtaining quote routes, to make sure that the swaps were executed without any disruption. Any token accounts that were missed out would lead to swap errors.
-
-- Also, as there is a size cap for transactions, there was a maximum number of token accounts we could add to transactions, limiting the types of transaction integrators could call.
 
 - In Solana, an account rent fee is incurred for every Solana account to store data on the blockchain. With a large number of intermediate token accounts to be created per protocol, users incur a sizable amount of rent. 
 
@@ -130,11 +128,11 @@ The motivation behind building the referral fees system was to automate the proc
 The partner journey is now hyper easy - They head over to Jupiter, create a referral account, and then plug the referral account parameters into their integration. It's that simple!
 
 Give our dashboard a spin here: https://referral.jup.ag
-Read the docs here: https://docs.jup.ag/docs/v6-beta/adding-fees
+Read the docs here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag/docs/v6-beta/adding-fees
 
 ![Referral](referral1.jpg)
 
-Looking to the future, we have plans to open source this referral contract to other partners for use in their projects and with their integrators.
+*Looking to the future, we have plans to open source this referral contract to other partners for use in their projects and with their integrators.*
 
 
 
@@ -154,12 +152,12 @@ For CPI to work, the transaction will be composed of these instructions:
 
 Read more here: https://station.jup.ag/docs/v6-beta/cpi
 
-The CPI approach is not without its limitations - Due to Solana’s transaction limit of 1232 bytes, swaps via CPI can fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. Instead, we recommend taking the “flash-fill” approach to utilize Jupiter Swap. 
+The CPI approach is not without its limitations - because of Solana’s transaction limit of 1232 byte size, lookup tables cannot be used within a CPI call, swaps via CPI can fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. Instead, we recommend taking the “flash-fil” approach to utilizing Jupiter Swap. 
 
 #### Flash-Fill Approach
 The “Flash-fill” approach is a way to integrate your program with Jupiter swap without the limitations of CPI. Flash-filling allows the use of Versioned Transactions in combination with Address Lookup Tables to include more accounts per transaction while keeping within the 1232 bytes limit. 
 
-To understand the Flash-Fill approach, we will walk through the same example of utilizing Jupiter swap via Flash-Fill to swap from any token to SOL even if the user has insufficient SOL.
+To understand the Flash-Fill approach, we will walk through the same example of utilizing Jupiter swap via Flash-Fill to swap from any token to SOL even if the user has insufficient SOL. Note that Flash-Fill can facilitate swaps from any token to any token, not limited to SOL.
 
 For Flash Fill to work, the transaction will be composed of these instructions:
 1. Borrow enough SOL from the program to open a wSOL account that the program owns.
