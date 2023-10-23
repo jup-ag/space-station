@@ -14,57 +14,35 @@ This is a whole week dedicated to Solana developers, where we will unveil major 
 
 So, get ready to supercharge your **BUIDLing** journey with us!
 
-## Day 1 - v6 API Official Release
+## Day 1 - V6 Quoting API Official Release
 Today, we are happy to announce the official release of our v6 API! This is DeFi’s most powerful and comprehensive liquidity API and will power the development of sophisticated use cases and complex DeFi processes on Solana.
 
 This announcement comes on the heels of 2 months of relentless stability and feature-level improvements, helped immensely by key early adopters, including [Solend](https://solend.fi/), [Mango](https://mango.markets/), [Drift](https://drift.trade/), [Birdeye](https://birdeye.so/), [Hawksight](https://www.hawksight.co/), [Sphere](https://spherepay.co/), and [Kamino](https://kamino.finance/) who not just helped to iron out a lot of the kinks for any new infrastructure service, but also guided us towards specific improvements to make it possible for them to use Jupiter for their use cases.
 
-In this article, we will go through key upgrades made for v6 to make building liquidity use cases much more powerful and fun, a brand new referral fees system, advanced usage patterns, and examples of how our partners are using it. 
+In this article, we will go through key upgrades made for v6 to make building liquidity use cases much more powerful and easier:
+- Upgrade to use the Metis Algo for higher liquidity to support key use cases
+- Using shared intermediate token accounts for integration simplification and cost savings 
+- Token ledger for increased swap success rates
+- A brand new referral fees system
+
+In addition, we will also show advanced usage patterns,\examples of how our partners are using it. 
 
 *This launch of the v6 API is part of a series of developer announcements we are rolling out to enhance the liquidity infrastructure landscape for Solana. Stay tuned!*
 
-## Key features for v6
+
+## Key features for V6 Quoting API
 
 ### Metis Algo As Backbone For v6 Routing 
 
-The very first version of Jupiter was written in JavaScript and ran a brute-force heuristic optimization algorithm to search for price routes. As Javascript is single-threaded, it limited scalability and it quickly became apparent that this approach wasn't scalable as Solana's automated market makers multiplied. We hit performance bottlenecks with the increasing number of permutations needed to perform a trade. 
+Three months ago, we launched Metis on our homepage. It's an innovative new algorithm with real time streaming and discovery, with the routing engine also completely rewritten in Rust. This heavily modified variant of the Bellman-Ford algorithm incorporates key features such as incremental route building, combined route generation and quoting, and it's also future-proofed for much better scalability as we add more DEXes and tokens.
 
-To overcome these limitations, we decided to rewrite the algorithm in Rust, a move that resulted in a remarkable tenfold improvement in performance. We had experimented with the Uniswap algorithm but it still did not solve the issue of scaling with large liquidity trades. 
+The previous version of the API utilized an older version of the algorithm that had significant limitations. Most notably, it did not provide efficient routing for large trades, which constrained its applicability for major use cases such as margin trading and liquidations. Moreover, it employed the former JavaScript engine, resulting in inconsistent API performance.
 
-Undeterred, the team persisted and eventually crafted the innovative Metis algorithm, a heavily modified variant of the Bellman-Ford algorithm. This approach allowed Jupiter to adjust our quoting strategies dynamically based on trade sizes.
+![Planetary2](planetary2.jpg)
 
-Key features of Metis include the following:
+With the v6 API now using Metis, all partners can enjoy a far higher level of liquidity for key use cases. For example, Solend which is using it for margin trading, where the trading amount is often much larger and requires deeper liquidity. 
 
-- #### Incremental Route Building
-Generating routes for each split iteratively one after another allowing the use of the same DEX in different splits. This leads us to find routes with better prices with more complex trades.
-
-- #### Combining Route Generation and Quoting
-Route generation and quoting are combined into a single step, allowing us to avoid generating and using bad routes. This improves efficiency and lets us use a larger set of tokens as intermediaries. 
-
-- #### Future Proofing
-Future Solana upgrades will allow more DEXs to be used in a single transaction. Metis is equipped to handle and support more DEXs in a route with only a modest increase in running time. 
-
-![Metis](metis.png)
-
-Read more about Metis here: https://station.jup.ag/blog/jup-v3-metis-routing-algo
-
-### Metis and the Ecosystem
-Jupiter plays an important role in powering liquidity on Solana and the greater defi ecosystem. That is why it is very important for us to continuously innovate and improve our tech stack that eventually resulted in Metis. 
-
-Such an insanely powerful engine will be completely out of reach for the average user in most other platforms given the high level of gas fees and average transaction time required. This is only possible on Solana, because it powers blazing transaction speeds, at a fraction of cost to the user.
-
-A great routing engine is crucial for DeFi in many ways:
-
-- #### Efficient Trade Execution
-DeFi platforms involve complex trading strategies and require the ability to execute transactions across multiple liquidity sources. A routing engine optimizes the path and execution of trades, ensuring that users obtain the best possible prices while minimizing transaction costs.
-
-- #### Liquidity and Market Depth
-Liquidations require single transactions for large amounts to be as efficient as possible. A routing engine helps identify the most liquid markets, ensuring that traders can execute orders of various sizes without causing significant price slippage.
-
-- #### Opportunities for New DEXs
-New DEXs need a fair chance to be leveraged for volume as the more established ones. Jupiter allows these newcomers to compete on a level playing field with established DEXs, providing them with opportunities to attract trading volume and liquidity.
-
-We look forward to continuously pushing the limits of Solana and letting the world know how powerful defi can get!
+On the backend, we are constantly upgrading the API and making incremental improvements to deliver an easier, smoother and more efficient liquidity infrastructure for our partners.  
 
 ### Shared Intermediate Token Accounts For Integration Simplification and Cost Savings
 The idea of Shared Intermediate Token Accounts came about because there was an increasing number of intermediate token accounts to be created in order for a swap to be successful, which increased integration complexity and cost for users that needed to be addressed.
@@ -74,11 +52,11 @@ Previously:
 
 - In Solana, an account rent fee is incurred for every Solana account to store data on the blockchain. With a large number of intermediate token accounts to be created per protocol, users incur a sizable amount of rent. 
 
-With the Shared Intermediate Token Accounts, Jupiter creates and maintains a set of Associated Token Account (ATA) contracts for intermediate token accounts. These shared accounts are global and shared among all protocols and partners integrated with Jupiter. Integrators now only need to ensure they have the final output token account to receive tokens for every swap. 
+With the Shared Intermediate Token Accounts, Jupiter creates and maintains a set of Associated Token Account *(ATA)* contracts for intermediate token accounts. These shared accounts are global and shared among all protocols and partners integrated with Jupiter. Integrators now only need to ensure they have the final output token account to receive tokens for every swap. 
 
 On top of this, OpenBook Open Orders accounts are no longer required as well, because all orders accounts are also globally initialized and shared amongst integrators.
 
-For instance, when swapping from Token A → Token B → Token C, instead of having to create accounts for Token B and Token C, integrators will only need to set up for the final out token (Token C in this case). Any intermediate tokens in between, regardless of the number of token hops, are automatically initialized and managed by Jupiter’s pre-established shared token accounts. 
+For instance, when swapping from Token A → Token B → Token C, instead of having to create accounts for Token B and Token C, integrators will only need to set up for the final out token *(Token C in this case)*. Any intermediate tokens in between, regardless of the number of token hops, are automatically initialized and managed by Jupiter’s pre-established shared token accounts. 
 
 Creating individual token ATA accounts incurs account rent fees, which accumulate over time due to the growing number of intermediate tokens. With fewer intermediate token accounts required, users benefit from not having to incur account rent fees for maintaining their individual token ATA accounts with each protocol they swap on.
 
@@ -132,9 +110,6 @@ Read here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag
 
 ![Referral](referral1.jpg)
 
-*Looking to the future, we have plans to open source this referral contract to other partners for use in their projects and with their integrators.*
-
-
 
 ## Performing Advanced Swaps with Jupiter v6
 
@@ -149,6 +124,7 @@ For CPI to work, the transaction will be composed of these instructions:
 2. Swap X token from the user to wSOL on Jupiter via CPI.
 3. Close the wSOL account and send it to the program.
 4. The program then transfers the SOL back to the user.
+
 
 Read more here: https://station.jup.ag/docs/v6-beta/cpi
 
