@@ -229,6 +229,7 @@ Sphere uses Jupiter to enable “universal settlement”, where customers can pa
 
 Here is an example of how Sphere users can select to pay in any currency of their choice, with merchants receiving any currency they wish. Thanks to v6, these swaps are blazing fast, and shared ATAs and versioned transactions/lookup tables allow all of this to be bundled into a single transaction.
 
+![Sphere](spheredemo.gif)
 
 ### Ending Words
 
