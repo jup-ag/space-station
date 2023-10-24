@@ -107,9 +107,11 @@ The partner journey is now hyper easy - They head over to Jupiter, create a refe
 
 Give our dashboard a spin here: https://referral.jup.ag
 
-Read here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag/docs/v6-beta/adding-fees
+Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/v6-beta/adding-fees
 
-<!-- ![Referral](referral1.jpg) -->
+More info on Jupiter Referral Program: https://station.jup.ag/docs/additional-topics/referral-program 
+
+![Referral](referral1.jpg)
 
 
 ## Performing Advanced Swaps with Jupiter v6
@@ -155,7 +157,7 @@ A big shout out to our key early adopters for running our v6 API and helping us 
 - [Hawksight](https://www.hawksight.co/) integrated Jupiter v6 for their auto-swap deposits, making it super easy for users to maximise yield through auto-compounding and auto-rebalancing their LP positions efficiently. 
 - [Ultimate Wallet](https://ultimate.app/) integrated Jupiter into their native in-wallet swap. With the upgrade from v4 to v6, Token2022 is fully supported and the latest Metis algorithm expanded the price routes, enabling their users to swap over the widest range of tokens and access even better price quotes for their users.
 - [Sphere](https://spherepay.co/) is a payments platform and API for digital currencies, where businesses can start accepting card, ACH, wire, stablecoins, and other digital currencies in a single universal checkout page. Jupiter provides the swap infrastructure for the built-in token swap.
-- [Solinked](https://sollinked.com/) is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens. 
+- [Sollinked](https://sollinked.com/) is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens. 
 
 ## Day 1 Ending Notes
 **Jupiter’s goal is to provide the best possible liquidity infrastructure for Solana.**
