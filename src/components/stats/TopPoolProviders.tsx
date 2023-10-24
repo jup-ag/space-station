@@ -65,7 +65,7 @@ const PoolProviderLogoMap: Record<string, any> = {
 };
 
 // Use this to hide the AMMs that are not ready to be shown
-const HIDE_AMMS: string[] = [];
+const HIDE_AMMS: string[] = ["Perps"];
 
 const getFrequencyText = (mode: Mode) =>
   mode === "day" ? `24H` : mode === "week" ? `Weekly` : `Monthly`;
