@@ -209,10 +209,27 @@ Check out this demo of a user buying a cup of coffee priced in USD with their SA
 
 https://twitter.com/JupiterExchange/status/1638799925348794369 
 
+
+### ExactOut Showcase # 3 - Helio
+
+Helio, the leading payments app for Solana, powers sales for +3,000 creators & merchants who sell NFTs, digital content, e-commerce and more with the power of blokchain payments. Helio partnered with Jupiter to power seamless token swaps inside the Helio checkout flow. Buyers spend SOL or any token, merchants always receive USDC or their asset of choice.
+
+`"The future of commerce is based on lightning fast blockchain payments and one of the key advantages is that buyers can spend any token while merchants instantly receive their own currency of choice. Jupiter has abstracted the complexity of a DEX and given us a few simple lines of code to help us deliver on this promise"` **CTO - Jim Walker**
+
+![Helio](heliodemo.gif)
+
+<!-- ### ExactOut Showcase # 4 - Sphere Pay
+Sphere is an end-to-end payments API for digital currencies, offering on-ramp, multi-chain and fiat payments, to off-ramp in a single integration.
+
+Sphere uses Jupiter to enable “universal settlement”, where customers can pay in whichever currency they want, and merchants will receive any currency of their choice — with Jupiter handling the ExactOut swap behind the scenes at the best possible rates.
+
+Below is an example of how Sphere users can select to pay in any currency of their choice, with merchants receiving any currency they wish. Thanks to v6, these swaps are blazing fast, and shared ATAs and versioned transactions/lookup tables allow all of this magic to be bundled into a single transaction. -->
+
+
 ### Ending Words
 
 With Jupiter providing the essential infrastructure support for payments, we see Jupiter playing an important role in helping support the payment and fees infrastructure of Solana. 
 
-If you have any feedback and product improvements, do feel free to swing by and share them on our [Discord](https://discord.gg/jup)
+If you have any feedback and product improvements, do feel free to swing by and share them on our [**Discord**](https://discord.gg/jup)!
 
 **Stay tuned for Day 3 of the Jupiter Planetary Developer Week where we are going to talk about the much anticipated Terminal v2!**
