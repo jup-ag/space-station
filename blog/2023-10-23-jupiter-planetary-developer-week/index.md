@@ -107,9 +107,11 @@ The partner journey is now hyper easy - They head over to Jupiter, create a refe
 
 Give our dashboard a spin here: https://referral.jup.ag
 
-Read here on how to add your platform fees to Jupiter Swap : https://docs.jup.ag/docs/v6-beta/adding-fees
+Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/v6-beta/adding-fees
 
-<!-- ![Referral](referral1.jpg) -->
+More info on Jupiter Referral Program: https://station.jup.ag/docs/additional-topics/referral-program 
+
+![Referral](referral1.jpg)
 
 
 ## Performing Advanced Swaps with Jupiter v6
@@ -155,7 +157,7 @@ A big shout out to our key early adopters for running our v6 API and helping us 
 - [Hawksight](https://www.hawksight.co/) integrated Jupiter v6 for their auto-swap deposits, making it super easy for users to maximise yield through auto-compounding and auto-rebalancing their LP positions efficiently. 
 - [Ultimate Wallet](https://ultimate.app/) integrated Jupiter into their native in-wallet swap. With the upgrade from v4 to v6, Token2022 is fully supported and the latest Metis algorithm expanded the price routes, enabling their users to swap over the widest range of tokens and access even better price quotes for their users.
 - [Sphere](https://spherepay.co/) is a payments platform and API for digital currencies, where businesses can start accepting card, ACH, wire, stablecoins, and other digital currencies in a single universal checkout page. Jupiter provides the swap infrastructure for the built-in token swap.
-- [Solinked](https://sollinked.com/) is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens. 
+- [Sollinked](https://sollinked.com/) is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens. 
 
 ## Day 1 Ending Notes
 **Jupiter’s goal is to provide the best possible liquidity infrastructure for Solana.**
@@ -163,4 +165,76 @@ A big shout out to our key early adopters for running our v6 API and helping us 
 With this major v6 upgrade, we are confident we have taken a major step in this direction. As always, we would love feedback and your thoughts on how we can improve, please join our feedback conversations on [Discord](https://discord.gg/jup)!
 
 
-**Stay tuned for Day 2 of the Jupiter Planetary Developer Week where we are going to talk about Jupiter and payments!**
+<!-- **Stay tuned for Day 2 of the Jupiter Planetary Developer Week where we are going to talk about Jupiter and payments!** -->
+
+---
+
+![PlanetaryDay2](planetaryday2.png)
+
+## Day 2 - Jupiter for Payments v2
+Today, we are thrilled to dive into the world of Jupiter for payments, where we will introduce you to the upgraded ExactOut API. Join us as we delve into the improvements we have made to our ExactOut API, and how we have been facilitating online and offline payments in recent months. 
+
+A big shout out to [**Sollinked**](https://sollinked.com/), [**CandyPay**](https://candypay.fun/), [**Sphere**](https://spherepay.co/) and [**Helio**](https://www.hel.io/) for integrating Jupiter swap into their payment systems. These are super exciting times as we break down the barriers separating the world of crypto from traditional finance.
+
+So, without further ado, let's get started!
+
+## ExactOut v2 API to Power Payments
+ExactOut is an important feature, particularly in supporting payment use cases within any ecosystem. Jupiter's ExactOut API allows users to specify the precise amount of output tokens they require, with the input token amount being calculated accordingly. For instance, with ExactOut integrated, a protocol’s user can indicate they wish to receive exactly 100 USDC in exchange for SOL via Jupiter, instead of having to manually calculate and input the amount of SOL required to swap for an approximate amount of 100 USDC. 
+
+In the initial release of ExactOut v1, we could only support direct routes, limiting token selection and routing options that can be used. However, in Jupiter v6 API, our program has been updated to conduct on-chain calculations, thus enabling multi-hop routes for ExactOut v2. 
+
+This upgrade significantly broadens the range of supported routes from around 20 to over 400 trading pairs, enhancing route options and price selections. With 20 times more available price routes, aggregated across our partner platforms like Raydium and Orca, users can expect considerably better prices for their ExactOut swaps.
+
+
+### How ExactOut is used
+ExactOut is particularly useful in scenarios involving the purchase of NFTs, allowing users to make payments with any tokens they possess. To illustrate, let's consider a situation where an NFT Marketplace has integrated ExactOut on its platform. You wish to buy your favorite NFT which is priced at 40 SOL, but most of your liquid assets are in BONK. Without ExactOut, you would need to estimate the amount of BONK required to obtain 40 SOL and manually swap on an external platform to convert BONK into SOL.
+
+The good news is that since the NFT Marketplace has integrated ExactOut into its interface, you can simply purchase the 40 SOL NFT and Jupiter swap would automatically calculate the most optimal amount of BONK required to purchase the 40 SOL NFT. This is achieved in a single click, eliminating the need to leave the site or perform additional calculations, while ensuring that you receive the best possible price through Jupiter.
+This is extremely important to Solana as payments are a crucial part of bridging crypto with real-life applications, ultimately contributing to the mainstream adoption of the Solana ecosystem.
+
+Read more about ExactOut here: https://station.jup.ag/docs/v6-beta/payments-api 
+
+### ExactOut Showcase #1 - Sollinked
+
+Sollinked is a social app designed for gated communities, offering a platform for newsletters or "paid" email inboxes that can be prioritized through incentives. Sollinked utilizes Jupiter to facilitate payments for emails and reservations using all SPL tokens.
+
+See how Sollinked users make payments with various SPL tokens to bump up their newsletters and emails, even though payments are primarily denominated in USDC. This is possible through the integration with Jupiter ExactOut.
+
+![Sollinked1](sollinked1.gif)
+
+![Sollinked2](sollinked2.gif)
+
+
+### ExactOut Showcase #2 - CandyPay Coffee
+
+Candy Pay has integrated Jupiter to power built-in swap transactions to facilitate payments in SPL tokens. Users can now make purchases with any token they have in their wallets. 
+
+Check out this demo of a user buying a cup of coffee priced in USD with their SAMO tokens. How cool is that!
+
+https://twitter.com/JupiterExchange/status/1638799925348794369 
+
+
+### ExactOut Showcase # 3 - Helio
+
+Helio, the leading payments app for Solana, powers sales for +3,000 creators & merchants who sell NFTs, digital content, e-commerce and more with the power of blockchain payments. Helio partnered with Jupiter to power seamless token swaps inside the Helio checkout flow. Buyers can spend SOL or any token, while merchants always receive USDC or their asset of choice.
+
+`"The future of commerce is based on lightning fast blockchain payments and one of the key advantages is that buyers can spend any token while merchants instantly receive their own currency of choice. Jupiter has abstracted the complexity of a DEX and given us a few simple lines of code to help us deliver on this promise"` **CTO - Jim Walker**
+
+![Helio](heliodemo.gif)
+
+### ExactOut Showcase # 4 - Sphere Pay
+Sphere is an end-to-end payments API for digital currencies, offering on-ramp, multi-chain and fiat payments, to off-ramp in a single integration.
+
+Sphere uses Jupiter to enable “universal settlement”, where customers can pay in whichever currency they want, and merchants will receive any currency of their choice — with Jupiter handling the ExactOut swap behind the scenes at the best possible rates.
+
+Here is an example of how Sphere users can select to pay in any currency of their choice, with merchants receiving any currency they wish. Thanks to v6, these swaps are blazing fast, and shared ATAs and versioned transactions/lookup tables allow all of this to be bundled into a single transaction.
+
+![Sphere](spheredemo.gif)
+
+### Ending Words
+
+With Jupiter providing the essential infrastructure support for payments, we see Jupiter playing an important role in helping support the payment and fees infrastructure of Solana. 
+
+If you have any feedback and product improvements, do feel free to swing by and share them on our [**Discord**](https://discord.gg/jup)!
+
+**Stay tuned for Day 3 of the Jupiter Planetary Developer Week where we are going to talk about the much anticipated Terminal v2!**
