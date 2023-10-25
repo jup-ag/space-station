@@ -3,7 +3,7 @@ slug: jup-plantary-dev-update
 title: "Jupiter Planetary Developer Week"
 ---
 
-![Planetary](planetary.png)
+![Planetary](planetary.jpg)
 
 ## Introduction
 Calling all Jupiter Space Catdets, welcome to the Jupiter Planetary Developer Week! 
@@ -16,6 +16,8 @@ So, get ready to supercharge your **BUIDLing** journey with us!
 
 ## Day 1 - V6 Quoting API Official Release
 Today, we are happy to announce the official release of our v6 API! This is DeFi’s most powerful and comprehensive liquidity API and will power the development of sophisticated use cases and complex DeFi processes on Solana.
+
+![Planetary1](planetary1.png)
 
 This announcement comes on the heels of 2 months of relentless stability and feature-level improvements, helped immensely by key early adopters, including [Solend](https://solend.fi/), [Mango](https://mango.markets/), [Drift](https://drift.trade/), [Birdeye](https://birdeye.so/), [Hawksight](https://www.hawksight.co/), [Sphere](https://spherepay.co/), and [Kamino](https://kamino.finance/) who not just helped to iron out a lot of the kinks for any new infrastructure service, but also guided us towards specific improvements to make it possible for them to use Jupiter for their use cases.
 
@@ -245,7 +247,7 @@ If you have any feedback and product improvements, do feel free to swing by and 
 
 Today we will be unveiling the brand new Jupiter Terminal V2! It is the smallest, fastest and easiest way to add Jupiter to your dApp with just a few lines of code!
 
-![Terminal](terminaldemo.gif)
+![Planetary3](planetaryday3.png)
 
 A big shout out to [**Meteora**](https://app.meteora.ag/), [**MarginFi**](https://www.marginfi.com/), [**FamousFoxFederation**](https://famousfoxes.com/) and [**Bonk**](https://www.bonkcoin.com/) for being one of the early adopters of Terminal V2, seamlessly implementing swap functionality for their users without the need to navigate away from their pages.
 
@@ -258,6 +260,8 @@ In this update, we will go through key upgrades made for Terminal v2 to make imp
 - Improved UX enhancements
 
 Let’s dive in!
+
+![Terminal](terminaldemo.gif)
 
 ### What’s new in Terminal V2
 Terminal is a very popular way to integrate Jupiter into various platforms and applications, enabling protocols to seamlessly implement swap functionality for their users. It is also super easy to customize, from configuring input/output mint states, exact output mode, displaying tokens from Jupiter’s strict token list, all these are toggled on and off with just a few clicks to generate the code snippet. 
@@ -281,7 +285,7 @@ useEffect(() => {
 }, [passthroughWalletContextState.connected, props]);
 ```
 
-- Terminal v2 is using the Unified Wallet Kit - an open-sourced wallet adapter, that incorporates wallet standards and passthrough wallet capabilities. It seamlessly interfaces with many well used wallets out there, to give the best wallet experience for your users.
+- Terminal v2 is using the [Unified Wallet Kit](https://unified.jup.ag/) - an open-sourced wallet adapter, that incorporates wallet standards and passthrough wallet capabilities. It seamlessly interfaces with many well used wallets out there, to give the best wallet experience for your users.
 
 - Jupiter Terminal now offers fee support for partners and integrators. Partners can choose to enable platform fees on top of the swaps. To facilitate this, partners need to create token fee accounts to begin collecting platform fees. The Jupiter Referral Dashboard allows partners and integrators to monitor and claim these fees conveniently.
 
