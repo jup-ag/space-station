@@ -287,6 +287,7 @@ useEffect(() => {
 
 - We have also enhanced the user experience by implementing additional error and warning messages to guide users. There is now a built-in RPC monitor that notifies users of any RPC abnormalities or degradation in the Solana network.
 
+![Terminal4](terminal4.jpg)
 
 ### Terminal Showcase
 Check out this mini showcase of how our partners have integrated Terminal to provide swap functionality for their users:
