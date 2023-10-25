@@ -237,4 +237,81 @@ With Jupiter providing the essential infrastructure support for payments, we see
 
 If you have any feedback and product improvements, do feel free to swing by and share them on our [**Discord**](https://discord.gg/jup)!
 
-**Stay tuned for Day 3 of the Jupiter Planetary Developer Week where we are going to talk about the much anticipated Terminal v2!**
+<!-- **Stay tuned for Day 3 of the Jupiter Planetary Developer Week where we are going to talk about the much anticipated Terminal v2!** -->
+
+---
+
+## Day 3 - Jupiter Terminal v2
+
+Today we will be unveiling the brand new Jupiter Terminal V2! It is the smallest, fastest and easiest way to add Jupiter to your dApp with just a few lines of code!
+
+![Terminal](terminaldemo.gif)
+
+A big shout out to [**Meteora**](https://app.meteora.ag/), [**MarginFi**](https://www.marginfi.com/), [**FamousFoxFederation**](https://famousfoxes.com/) and [**Bonk**](https://www.bonkcoin.com/) for being one of the early adopters of Terminal V2, seamlessly implementing swap functionality for their users without the need to navigate away from their pages.
+
+In this update, we will go through key upgrades made for Terminal v2 to make implementing swap functionality for your dApp better, easier and just more fun:
+
+- Terminal v2 is now equipped with the latest v6 API, featuring Metis
+- Cross app state sharing with Jupiter Terminal
+- Unified Wallet Kit integration
+- Fee support for partners and integrators
+- Improved UX enhancements
+
+Let’s dive in!
+
+### What’s new in Terminal V2
+Terminal is a very popular way to integrate Jupiter into various platforms and applications, enabling protocols to seamlessly implement swap functionality for their users. It is also super easy to customize, from configuring input/output mint states, exact output mode, displaying tokens from Jupiter’s strict token list, all these are toggled on and off with just a few clicks to generate the code snippet. 
+
+Here are the details of what’s new in v2:
+
+- Jupiter Terminal v2 is upgraded to v6 API that is running Metis, bringing to you the most powerful price quote engine for the best prices and best token selection, with the best user experience.  
+
+- We introduce cross app state sharing with Jupiter Terminal through the new syncProps() API function: 
+    - Starting with wallet Passthrough, syncProps() API will make sure your wallet states are always in sync, and Terminal can also callback to your dApp to request for wallet connection.
+    - We are actively working on implementing cross-app state syncing for slippage, verTx, priority fees, as well as input mint and amount.
+
+
+```js
+import { useWallet } from '@solana/wallet-adapter-react'; // Or @jup-ag/wallet-adapter;
+
+const passthroughWalletContextState = useWallet();
+useEffect(() => {
+  if (!window.Jupiter.syncProps) return;
+  window.Jupiter.syncProps({ passthroughWalletContextState });
+}, [passthroughWalletContextState.connected, props]);
+```
+
+- Terminal v2 is using the Unified Wallet Kit - an open-sourced wallet adapter, that incorporates wallet standards and passthrough wallet capabilities. It seamlessly interfaces with many well used wallets out there, to give the best wallet experience for your users.
+
+- Jupiter Terminal now offers fee support for partners and integrators. Partners can choose to enable platform fees on top of the swaps. To facilitate this, partners need to create token fee accounts to begin collecting platform fees. The Jupiter Referral Dashboard allows partners and integrators to monitor and claim these fees conveniently.
+
+- We have also enhanced the user experience by implementing additional error and warning messages to guide users. There is now a built-in RPC monitor that notifies users of any RPC abnormalities or degradation in the Solana network.
+
+
+### Terminal Showcase
+Check out this mini showcase of how our partners have integrated Terminal to provide swap functionality for their users:
+
+#### Terminal Showcase #1
+[Meteora](https://app.meteora.ag/)'s mission is to grow liquidity on Solana by building dynamic liquidity protocols - including stablecoin liquidity, LST liquidity and multi-token pools. Idle capital is dynamically distributed to various lending protocols to earn additional yield on top of swap fees and rewards. Meteora’s keeper - Hermes will continuously watch lending pool utilization rates and reserve levels, ready to withdraw the funds for safety. 
+Terminal v2 has been integrated on Meteora via the widget approach to let their users easily swap on-site for the required tokens to participate in liquidity provisioning.
+
+![Terminal1](terminal1.jpg)
+
+#### Terminal Showcase #2
+[FamousFoxFederation](https://famousfoxes.com/), an NFT and gaming project, offers raffles and sweepstakes to participate in their NFT events. Users are able to both auction and trade their NFTs through raffle events, as well as stand a chance to win NFTs through the sweepstakes.
+FamousFoxes has seamlessly integrated Jupiter Terminal into their raffle platform via the Modal approach to let their users stay on the site and effortlessly swap for the tokens required to buy the raffle tickets.
+
+![Terminal3](terminal3.jpg)
+
+#### Terminal Showcase #3
+[MarginFi](https://www.marginfi.com/) is one of the leading lending/borrowing protocols in Solana. It offers users a comprehensive platform where they can seamlessly borrow, lend, and even stake SOL for LSTs – all within a unified environment.
+MarginFi integrated Jupiter Terminal via the Integrated mode, rendering the swap as part of its dapp, on a dedicated page. Their users can stay on the site to also swap their tokens on top of participating margin trading.
+
+![Terminal2](terminal2.jpg)
+
+### Ending Words
+Terminal v2 is like the magic wand for adding swap superpowers to your Solana dApp in the most hassle-free and elegant way. If you haven't given it a spin yet, now's the perfect time to unlock its awesomeness and inject some fun and additional functionality into your project!
+
+https://terminal.jup.ag/
+
+**Stay tuned for Day 4 of the Jupiter Planetary Developer Week where we are going to introduce the Unified Wallet Kit!**
