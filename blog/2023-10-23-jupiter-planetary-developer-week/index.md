@@ -388,7 +388,7 @@ Jupiter is dedicated to help make BUIDLing easier for everyone. Developers shoul
 
 Let’s keep moving forward together!
 
-**Stay tuned for Day 5 of the Jupiter Planetary Developer Week where we are going to delve into the world of Jupiter for Gaming, announced in collaboration with MagicBlock.**
+<!-- **Stay tuned for Day 5 of the Jupiter Planetary Developer Week where we are going to delve into the world of Jupiter for Gaming, announced in collaboration with MagicBlock.** -->
 
 ---
 
