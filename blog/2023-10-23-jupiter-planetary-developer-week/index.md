@@ -478,3 +478,15 @@ The interface provides convenient methods for performing swaps and accepting pay
 Jupiter is Solana's liquidity hub, offering the best prices and deep liquidity, strongly supporting diverse use cases and enhancing the gaming experience. We believe that Solana is the best place for web3 gaming, with amazing infrastructure support from teams like MagicBlock with their Solana Unity SDK, the perfect foundation for game development.
 
 **We can’t wait to see the brilliant game creations of the builders of Solana!**
+
+---
+
+This marks the end of our inaugural Jupiter Planetary Developer Week. It was an amazing week of developer focused updates where we unveiled the spanking new v6 API with Metis for routing, Referral Fees System for easy fee management, ExactOut v2 for Payments, Terminal v2 for the easiest way to integrate Jupiter, Unified Wallet Kit for the best wallet integration experience and showcasing Jupiter for games. We are committed to making things easy for you to create awesome liquidity use cases.
+
+All these just in time for the Breakpoint Conference happening next week! Thanks for following through all days of our massive update, we hope you had supercharged your BUILDling journey with us. 
+
+**Come talk to us and join our upcoming talks at Breakpoint**
+
+![Breakpoint1](bp1.png)
+
+![Breakpoint2](bp2.jpg)
