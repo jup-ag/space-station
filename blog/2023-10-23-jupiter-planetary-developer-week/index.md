@@ -463,7 +463,7 @@ Ready to include Jupiter into your game? Check out the docs here: https://docs.m
 
 ### Showcase - DeFi Land
 
-[DeFi Land](https://defiland.app/) is a multi-chain agriculture-simulation game created to gamify Decentralized Finance. While there are games that make use of the blockchain, DeFi Landtakes DeFi as a whole and aggregates the various actions that can be taken on each DeFi platform and turns them into an interactive game that can be played. 
+[DeFi Land](https://defiland.app/) is a multi-chain agriculture-simulation game created to gamify Decentralized Finance. While there are games that make use of the blockchain, DeFi Land takes DeFi as a whole and aggregates the various actions that can be taken on each DeFi platform and turns them into an interactive game that can be played. 
 
 Check out how Defi Land has integrated Jupiter to power their in-game Market, taking the entire experience of DeFi swaps to the next level.
 
