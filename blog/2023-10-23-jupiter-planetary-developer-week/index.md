@@ -321,6 +321,8 @@ https://terminal.jup.ag/
 
 <!-- Stay tuned for Day 4 of the Jupiter Planetary Developer Week where we are going to introduce the Unified Wallet Kit! -->
 
+---
+
 ## Day 4 - Unified Wallet Kit
 
 Today, we will be introducing the [Unified Wallet Kit](https://unified.jup.ag/), which was born out of our desire to help developers build more easily on Solana, fast tracking through all the challenges we faced in trying to support the majority of the wallets out there and building a great wallet UI/UX.
@@ -339,7 +341,7 @@ Let’s learn how.
 
 To bootstrap a dApp with a wallet, we often find ourselves repeating the same setup, such as getting the various wallet adapters (both Solana Wallet Standard and custom wallets) installed, building notifications for wallet state (selected,connected, disconnected etc.), auto-reconnecting to the last connected wallet, adapting to a mobile-first responsive design, theming etc., over and over again.
 
-This is our biggest motivation in building the Unified Wallet Kit.
+This is our biggest motivation in building the Unified Wallet Kit - to have all these essential yet repetitive basic building blocks provided in a simple package that anyone can just plug and play.
 
 Being one of the most used dApps on Solana, where we facilitate the majority of liquidity exchange in the ecosystem, we built our own world-class wallet adapter to support the majority of wallets for access to this liquidity. This wallet adapter includes all the important blocks mentioned above and more, to provide users with the best wallet experience.
 
@@ -387,3 +389,92 @@ Jupiter is dedicated to help make BUIDLing easier for everyone. Developers shoul
 Let’s keep moving forward together!
 
 **Stay tuned for Day 5 of the Jupiter Planetary Developer Week where we are going to delve into the world of Jupiter for Gaming, announced in collaboration with MagicBlock.**
+
+---
+
+## Day 5 - Jupiter Gaming Unity SDK
+
+![PlanetaryDay5](planetaryday5.png)
+
+Today, we are excited to delve into the world of Jupiter for gaming, where we will look at how Jupiter has been facilitating in-game swaps and enabling gaming use cases through the integration with the [Solana.Unity-SDK](https://solana.unity-sdk.gg/), developed by the talented team at MagicBlock. This post is brought to you in collaboration with [MagicBlock](https://www.magicblock.gg/).
+
+Live Demo: https://magicblock-labs.github.io/Solana.Unity-SDK/
+
+![SolanaUnitySDK](solanaunity.gif)
+
+**In this post, we will learn about:**
+- Why Solana is the major blockchain for on-chain games
+- Solana.Unity-SDK and its main features
+- Jupiter’s role in supporting gaming, use cases that the Jupiter x Solana Unity SDK powers, and a partner showcase
+
+Before anything else, a big shout out to [Star Atlas](https://staratlas.com/), [Guac](https://www.guacamole.gg/),[Genopets](https://www.genopets.me/), [DefiLand](https://defiland.app/) and [FamousFoxes](https://famousfoxes.com/) for integrating Jupiter and enriching the gaming experience of their users, by providing a seamless and immersive swap experience.
+
+Without further ado, let’s dive in.
+
+
+### Solana, the major blockchain for on-chain gaming
+
+On-chain games are introducing a paradigm shift in the way players interact, own and experience new forms of entertainment. It’s no surprise Solana stands out as a major blockchain for on-chain gaming, thanks to its high throughput, low transaction fees, and robust ecosystem. Its ability to process thousands of transactions per second ensures that gamers experience minimal latency, creating a seamless and enjoyable gaming experience. 
+
+Furthermore, Solana’s vibrant community and extensive developer tools make it an attractive platform for game developers of all sorts, from those looking to infuse their game with on-chain assets to the ones pushing the boundaries with fully-on-chain games.
+
+Solana is also designed to be interoperable with other blockchain networks. This means game developers can easily add Solana-based games to other blockchain platforms, allowing for seamless user experience. 
+
+As the gaming sector grows, Solana is poised to take the lead in on-chain gaming over all the other chains.  
+
+### Solana Unity SDK and its main features
+
+[**MagicBlock**](https://www.magicblock.gg/), the team behind the Solana Unity SDK, is an end-to-end infrastructure provider for on-chain gaming on Solana, empowering developers to create a new category of composable and permissionless gaming experiences. 
+
+The Solana Unity SDK simplifies the integration of Solana-based NFTs, tokens, and on-chain programs into Unity games, making it easier for game developers to create web3 games and experiences. 
+
+**Some features of Solana.Unity-SDK:**
+
+- Full JSON RPC API coverage
+- Transaction and message decoding/encoding from base64 and wire formats
+- Non-custodial Solana wallet setup in Unity, supporting Solana Wallet Adapter (Phantom, Backpack, Solflare...) and Web3auth (Social login)
+- TokenWallet object for sending and receiving SPL tokens and JIT provisioning of Associated Token Accounts
+- Additional capabilities include NFT support, compiling games to xNFTs (Backpack), native DEX operations (Orca, Jupiter), and websockets for custom events, along with Solana Mobile Stack support
+
+
+With the Unity-SDK game developers can easily create seamless onboarding flows with wallets, social authentication and gasless API. Now, they can also provide a seamless trading experience with Jupiter swap!
+
+Give the SDK a spin here: https://github.com/magicblock-labs/Solana.Unity-SDK
+
+### Jupiter x Solana.Unity-SDK Native Integration to Power Gaming
+
+As the liquidity infrastructure of Solana, Jupiter provides the best rates and deep liquidity from across the ecosystem. This is important in gaming contexts where gamers trade in-game assets frequently, especially rare assets that are very valuable. The best prices and higher liquidity makes it much easier for the gamers to stay within the game to trade these assets, improving the overall gaming experience. 
+
+Jupiter is natively supported in the Solana.Unity-SDK and runs the v6 Quote API and ExactOut v2 API for the best swap prices. 
+
+The integration features:
+
+- Utility methods to easily retrieve tokens information, get swap quotes and perform swaps. Game developers can easily integrate Jupiter swaps in their games and compile cross platforms without changing a single line of code.
+- A native integration that ensures a smooth and uninterrupted game experience for the players where users can exchange assets from the game UI, without annoying popups or embedded iframes.
+- Furthermore, you can effortlessly combine Jupiter with other instructions through the SDK, such as Session Keys, which eliminates the need for manual transaction approvals and ensures uninterrupted gameplay.
+
+This integration caters to a wide range of use cases, which include but are not limited to:
+- Marketplace purchases
+- In-game payment with any coin
+- Asset swaps 
+- Gamified trading experiences
+
+Ready to include Jupiter into your game? Check out the docs here: https://docs.magicblock.gg/SolanaUnitySDK/guides/jupiter
+
+### Showcase - DeFi Land
+
+[DeFi Land](https://defiland.app/) is a multi-chain agriculture-simulation game created to gamify Decentralized Finance. While there are games that make use of the blockchain, DeFi Landtakes DeFi as a whole and aggregates the various actions that can be taken on each DeFi platform and turns them into an interactive game that can be played. 
+
+Check out how Defi Land has integrated Jupiter to power their in-game Market, taking the entire experience of DeFi swaps to the next level.
+
+![DefiLand](defillanddemo.gif)
+
+DeFi Land is built with the Unity Engine 2021.2.1 and uses the IDexAggregator interface in the SDK to create their Market. 
+
+The interface provides convenient methods for performing swaps and accepting payment - while working seamlessly on any platform. Most notably, DeFi Land is also available as xNFT where players directly leverage Backpack to perform in-game swaps, powered by Jupiter.  
+
+### Ending Words
+
+Jupiter is Solana's liquidity hub, offering the best prices and deep liquidity, strongly supporting diverse use cases and enhancing the gaming experience. We believe that Solana is the best place for web3 gaming, with amazing infrastructure support from teams like MagicBlock with their Solana Unity SDK, the perfect foundation for game development.
+
+**We can’t wait to see the brilliant game creations of the builders of Solana!**
