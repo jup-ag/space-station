@@ -13,11 +13,11 @@ CPI is one of two approaches to swap via Jupiter.
 :::info CPI Limitations
 As of August 2023, taking the CPI approach has some tradeoffs. Due to Solana's transaction limit of 1232 bytes, swaps via CPI will likely fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. You could set a limit to the number of accounts used for swaps via Jupiter's swap API to fit it within your needs. However, limiting the accounts will likely incur greater price impact.
 
-_note: when using Jupiter's API, you can set [maxAccounts](/docs/v6-beta/swap-api#using-maxaccounts) to reduce the number of accounts._
+_note: when using Jupiter's API, you can set [maxAccounts](/docs/v6/swap-api#using-maxaccounts) to reduce the number of accounts._
 :::
 
 :::info Use Flash-Fill
-Instead, we recommend taking the [flash-fill](/docs/v6-beta/flash-fill) approach. The flash-fill approach takes advantage of Versioned Transaction and Address Lookup Tables to allow for more accounts per transaction while keeping within the 1232 bytes limit.
+Instead, we recommend taking the [flash-fill](/docs/v6/flash-fill) approach. The flash-fill approach takes advantage of Versioned Transaction and Address Lookup Tables to allow for more accounts per transaction while keeping within the 1232 bytes limit.
 :::
 
 ## Example
