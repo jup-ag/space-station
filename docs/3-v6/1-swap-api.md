@@ -1,11 +1,11 @@
 ---
 sidebar_label: "V6 Swap API"
 description: "The Most Powerful Swap API In DeFi"
-title: "V6 Swap API (Beta)"
+title: "V6 Swap API"
 ---
 
 :::info
-Our V6 API is stable but still in beta and subject to updates as we get more and more feedback.
+Our V6 API is the latest version. We welcome feedback and suggestions in our Discord.
 :::
 
 Jupiter API is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
