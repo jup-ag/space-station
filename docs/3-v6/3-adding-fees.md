@@ -17,7 +17,7 @@ We are using the [Referral Program](https://github.com/TeamRaccoons/referral) to
 
 With the Jupiter API, you can just add in the `platformFeeBps` parameter to the `/quote` endpoint:
 
-[# 5. Get the route for a swap](/docs/3-v6-beta/1-swap-api.md)
+[# 5. Get the route for a swap](/docs/3-v6/1-swap-api.md)
 
 On the `/swap` endpoint, remember to add your `feeAccount` parameter.
 
