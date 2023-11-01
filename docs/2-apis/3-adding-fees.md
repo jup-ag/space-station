@@ -2,49 +2,29 @@
 sidebar_label: Adding Fees
 description: Adding your own platform fee to Jupiter swap
 ---
-# Adding Your Own Platform Fee To Jupiter swap
+# Adding Your Own Platform Fee To Jupiter Swap
 ![cat_flying](./cat_flying_money.png)
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
 
-:::info Zero Fees
-Jupiter doesn't take any fees.
-:::
+If a platform fee is set, Jupiter will take 10% of the platform fee charged by the integrators.
+
+We are using the [Referral Program](https://github.com/TeamRaccoons/referral) to power our platform fee. You can check out how the [Referral Program](/docs/additional-topics/referral-program) works.
 
 ## Usage
 
 **Jupiter API**
 
-With the Jupiter API, you can just add in the `feeBps` paramter to the Quote API:
+With the Jupiter API, you can just add in the `platformFeeBps` parameter to the `/quote` endpoint:
 
-[# 5. Get the routes for a swap](/docs/apis/swap-api#guide)
+[# 5. Get the route for a swap](/docs/APIs/swap-api)
 
+On the `/swap` endpoint, remember to add your `feeAccount` parameter.
 
-**Jupiter SDK**
+## Referral Program
 
-```js
-import { Jupiter, getPlatformFeeAccounts, TOKEN_LIST_URL } from '@jup-ag/core';
-import { Connection } from '@solana/web3.js';
+For more information on how the Referral Program works, check it out [here](/docs/additional-topics/referral-program).
 
-const SOLANA_RPC_ENDPOINT = "https://solana-api.projectserum.com";
-
-const connection = new Connection(SOLANA_RPC_ENDPOINT);
-
-const platformFeeAndAccounts = {
-  feeBps: 50,
-  feeAccounts: await getPlatformFeeAccounts(
-    connection,
-    new PublicKey('BUX7s2ef2htTGb2KKoPHWkmzxPj4nTWMWRgs5CSbQxf9') // The platform fee account owner
-  ) // map of mint to token account pubkey
-};
-
-const jupiter = Jupiter.load({
-  ..., // Other arguments, refer to @jup-ag/core documentation
-  platformFeeAndAccounts
-});
-```
-You will need to create the token fee accounts to collect the platform fee. The platform fee is collected in the output mint in `ExactIn` mode and in input mint in `ExactOut` mode.
-
-We have created a tool to help you create the token accounts and also to consolidate fee tokens into a desired token. e.g. convert *$DUST* into *$SOL* or *$USDC*.
-
-https://github.com/jup-ag/jupiter-cli
+:::note
+The Jupiter Swap's project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
+:::
