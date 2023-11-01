@@ -8,7 +8,7 @@ description: Integrate Jupiter Swap via Flash-Fill
 
 Integrate your program with Jupiter Swap without the limitations of CPI via the "Flash-Fill" approach.
 
-Flash-Fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is [CPI](/docs/v6/cpi).
+Flash-Fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is [CPI](/docs/APIs/cpi).
 
 Our team engineered "flash-fill" to allow developers and integrators to utilize the full potential of Jupiter swap with their programs.
 
@@ -17,7 +17,7 @@ In order to get the best prices and maximum returned amount for any swaps, Jupit
 
 Flash-filling allows the use of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus, reducing the "size" of each account - something we can't do via the CPI approach.
 
-_note: when using Jupiter's API, you can set [maxAccounts](/docs/v6/swap-api#using-maxaccounts) to reduce the number of accounts._
+_note: when using Jupiter's API, you can set [maxAccounts](/docs/APIs/swap-api#using-maxaccounts) to reduce the number of accounts._
 :::
 
 ## Example
