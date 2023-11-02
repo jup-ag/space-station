@@ -131,23 +131,23 @@ const config = {
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: "community",
-        path: "community",
-        routeBasePath: "community",
-        sidebarPath: require.resolve("./sidebars-community.js"),
-        sidebarCollapsed: false,
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
         id: "labs",
         path: "labs",
         routeBasePath: "labs",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: false,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+      }),
+    ],
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        sidebarPath: require.resolve("./sidebars-community.js"),
+        sidebarCollapsed: false,
       }),
     ],
     async function myPlugin() {
@@ -206,6 +206,11 @@ const config = {
             label: "Docs",
           },
           {
+            to: "/labs",
+            position: "left",
+            label: "Labs",
+          },
+          {
             to: "/partners",
             label: "Partners",
             position: "left",
@@ -223,11 +228,6 @@ const config = {
           {
             to: "/blog",
             label: "Blog",
-            position: "left",
-          },
-          {
-            to: "/labs",
-            label: "Labs",
             position: "left",
           },
           {
