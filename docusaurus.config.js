@@ -154,9 +154,9 @@ const config = {
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: "susd",
-        path: "susd",
-        routeBasePath: "susd",
+        id: "labs",
+        path: "labs",
+        routeBasePath: "labs",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: false,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
@@ -243,8 +243,8 @@ const config = {
             position: "left",
           },
           {
-            to: "/susd",
-            label: "LST Stablecoin",
+            to: "/labs",
+            label: "Labs",
             position: "left",
           },
           {
