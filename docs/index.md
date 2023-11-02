@@ -14,8 +14,8 @@ Our goal is simple: Help you give world class experiences for your users with as
 
 We offer a wide range of tools to make it possible, including:
 
-- [Swaps](/docs/apis/swap-api)
-- [Payments API](/docs/apis/payments-api) to specific an exact output token amount
+- [Swaps](/docs/APIs/swap-api)
+- [Payments API](/docs/APIs/payments-api) to specific an exact output token amount
 - [Limit Orders](/docs/limit-order/)
 - [DCA](/docs/dca/)
 

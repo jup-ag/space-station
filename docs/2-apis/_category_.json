@@ -1,7 +1,7 @@
 {
-  "label": "APIs V4",
+  "label": "Jupiter APIs",
   "link": {
     "type": "generated-index",
-    "slug": "/apis"
+    "slug": "/api"
   }
 }
