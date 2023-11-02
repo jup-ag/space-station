@@ -131,6 +131,18 @@ const config = {
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
+        id: "labs",
+        path: "labs",
+        routeBasePath: "labs",
+        sidebarPath: require.resolve("./sidebars-guides.js"),
+        sidebarCollapsed: false,
+        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+      }),
+    ],
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
         id: "community",
         path: "community",
         routeBasePath: "community",
@@ -192,6 +204,11 @@ const config = {
             to: "/docs",
             position: "left",
             label: "Docs",
+          },
+          {
+            to: "/labs",
+            position: "left",
+            label: "Labs",
           },
           {
             to: "/partners",
