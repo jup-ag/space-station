@@ -7,11 +7,9 @@ description: Key Concepts of Perpetual Exchange
 
 ## Overview
 
-Perps is peer to pool perpetuals based on Oracle prices.
+Our perpetual exchange is LP-to-trader perpetual exchange based on oracle prices.
 
-A pool consists of multiple tokens. Liquidity providers desposit one of the
-pool tokens into the pool in exchange for LP tokens representing their share of
-the pool.
+Our pool consists of 5 tokens, SOL, ETH, WBTC, USDC, and USDT. Liquidity providers desposit one of the pool tokens into the pool in exchange for LP tokens representing their share of the pool.
 
 A trader may open a leveraged position by putting up collateral and borrowing
 the rest of the position from the pool.
