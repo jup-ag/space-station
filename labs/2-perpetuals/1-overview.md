@@ -9,7 +9,7 @@ Jup Perps, a novel LP-to-peer perpetual exchange on Solana, offers up to 75x lev
 
 ---
 
-![Perp1](../img/perp1.jpg)
+![Perp1](../img/perps1.jpg)
 
 1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 75x.
 
@@ -32,7 +32,7 @@ Jup Perps, a novel LP-to-peer perpetual exchange on Solana, offers up to 75x lev
 
 ---
 
-![Perp2](../img/perp2.jpg)
+![Perp2](../img/perps2.jpg)
 
 1. **Earn Tab -** The Earn tab is where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
 
@@ -50,7 +50,7 @@ Jup Perps, a novel LP-to-peer perpetual exchange on Solana, offers up to 75x lev
 
 ---
 
-![Perp3](../img/perp3.jpg)
+![Perp3](../img/perps3.jpg)
 
 1. **Positions Tab -** The Positions tab is where you can view and manage all your current open positions.
 
@@ -70,9 +70,9 @@ Jup Perps, a novel LP-to-peer perpetual exchange on Solana, offers up to 75x lev
 
 ---
 
-![Perp4](../img/perp4.jpg)
+![Perp4](../img/perps4.jpg)
 
-1. **Trade History Tab -** The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
+**Trade History Tab -** The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
 
 |Item| Description|
 |---|---|
