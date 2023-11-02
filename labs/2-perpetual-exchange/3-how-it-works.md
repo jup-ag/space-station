@@ -1,6 +1,6 @@
 ---
-sidebar_label: "How it works"
-description: Key concepts of perpetuals.
+sidebar_label: "How It Works"
+description: Key Concepts of Perpetual Exchange
 ---
 
 # How it works
