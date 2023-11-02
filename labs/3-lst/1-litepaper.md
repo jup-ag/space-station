@@ -1,11 +1,12 @@
 ---
-title: "LST Stablecoin"
-sidebar_position: 1
+sidebar_label: "Litepaper"
+title: LST Stablecoin Litepaper
+description: LST Overview.
 ---
 
 This litepaper introduces SUSD, a native Solana yield-bearing stablecoin protocol backed by SOL liquid staking tokens (LSTs) with dynamic leverage to supercharge yield for holders of SUSD.
 
-![LST Stablecoin](./img/lst-overview.png)
+![LST Stablecoin](../img/lst-overview.png)
 
 ## Introduction
 
@@ -40,7 +41,7 @@ Minters of SUSD opens a loan position with an initial collateralization ratio of
 SUSD is an overcollateralized stablecoin minted in a permissionless manner by depositing SOL. With the deposited SOL, the protocol converts it to SOL LSTs with leverage via lending protocols to maximize yield generated for holders of SUSD.
 
 ### Minting SUSD
-![Mint](./img/minting.png)
+![Mint](../img/minting.png)
 
 Users are allowed to mint up to an initial collateralization ratio of 130% while maintaining a minimum collateral ratio of 110% to prevent liquidation.
 
@@ -55,7 +56,7 @@ We propose the initial and minimum collateral ratio of 130% and 110% to eventual
 A minimal minting fee (amount yet-to-be determined) is charged to cover the cost of converting SOL to leveraged SOL LST.
 
 ### Protocol Leverage
-![Protocol Leverage](./img/protocol-leverage.png)
+![Protocol Leverage](../img/protocol-leverage.png)
 
 The proposed protocol leverage is used to provide yield to stablecoin holders, and allow SUSD minters interest-free loans. This yield is derived from POS staking through LSTs, hence offering a reasonably stable and sustainable yield. We propose the use of leverage to increase yield further.
 
@@ -78,7 +79,7 @@ When SOL is converted to LST, the keeper should automatically look for routes to
 
 
 #### The Deleveraging process
-![Deleveraging](./img/deleveraging.png)
+![Deleveraging](../img/deleveraging.png)
 
 1. Deleveraging has to occur whenever a user is attempting to withdraw SOL collateral or when a SUSD position needs to be liquidated or redeemed against.
 1. After a request for SOL has been submitted on-chain, the keeper sees the request and withdraws LST SOL to be converted back to SOL recursively up to the desired amount. There are 2 primary ways to convert LST SOL to SOL - swapping or unstaking. The keeper will always prefer swapping if the rates are equal to the output amount through unstaking given the instant nature of swap.
@@ -87,7 +88,7 @@ When SOL is converted to LST, the keeper should automatically look for routes to
 Converting LST SOL to SOL via unstaking incurs a 0.1% fee. Since, we propose a maximum leverage of 3x, this fee has to be multiplied by 3 or 0.3%. This fee will be borne by users who mint SUSD.
 
 ### Loan Repayment
-![Repayment](./img/repayment.png)
+![Repayment](../img/repayment.png)
 
 Users can redeem their amount of SOL deposited (net minting fee) as long as their position stays above the minimum collateralization ratio.
 
@@ -96,7 +97,7 @@ In order to redeem more or their entire net SOL deposited, they would have to re
 ### User Liquidation
 XYZ protocol mints SUSD with an overcollateralization of SOL such that 1 SUSD is always backed by > $1.1 worth of SOL. In order to maintain the collateralization level, each user’s position will need to be within the minimum collateralization ratio of 110% as introduced above. Should a user’s position go below the minimum collateralization ratio, liquidators are entitled to perform liquidation by repaying SUSD on the user’s position until the position is brought back to 110% collateral ratio. Liquidators are awarded 1% additional SOL for liquidation.
 
-![Liquidations](./img/user-liquidation.png)
+![Liquidations](../img/user-liquidation.png)
 
 
 ## Additional Mechanisms

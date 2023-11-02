@@ -150,18 +150,6 @@ const config = {
         sidebarCollapsed: false,
       }),
     ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "labs",
-        path: "labs",
-        routeBasePath: "labs",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
     async function myPlugin() {
       return {
         name: "docusaurus-tailwindcss",
@@ -240,11 +228,6 @@ const config = {
           {
             to: "/blog",
             label: "Blog",
-            position: "left",
-          },
-          {
-            to: "/labs",
-            label: "Labs",
             position: "left",
           },
           {
