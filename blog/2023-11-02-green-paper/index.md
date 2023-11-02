@@ -8,11 +8,10 @@ title: "Jupiter Green Paper"
 # Growing the Pie
 In this paper, we share an overview of what Jupiter has built in the past year, our ethos and our strategic direction for the future. **This paper serves a consultative purpose. We want to invite you to engage in dialogue with us, and contribute to shaping the future of Jupiter and its role within the Solana ecosystem. **
 
-We will be also introducing for the first time $JUP, Jupiter Start and Jupiter Labs. We hope that the details in here will serve as a catalyst for fruitful discussions. 
+We will be also introducing for the first time **$JUP, Jupiter Start and Jupiter Labs**. We hope that the details in here will serve as a catalyst for fruitful discussions. 
 
-Today, Jup.ag is the default destination for traders on Solana. We have the best aggregator in crypto and the most seamlessly integrated platform in Solana – powering a variety of trading activities, including but not limited to swaps, limit orders, dollar cost averaging strategies and more. 
+Today, Jup.ag is the default destination for traders on Solana. We have the best aggregator in crypto and the most seamlessly integrated platform in Solana – powering a variety of trading activities, including but not limited to swaps, limit orders, dollar cost averaging strategies and more ... 
 <!--truncate-->
----
 
 ## 2023: Building the Best Decentralised Trading Experience 
 
@@ -22,7 +21,7 @@ Our commitment was met with prolific shipping throughout 2023, as we successfull
 
 
 
-* Our routing improvements include the launch of Metis – a novel routing algorithm that was customised for Solana’s fast blocktimes and instant staked SOL to SOL swaps that gives you the best price across all trade sizes. 
+* Our routing improvements include the launch of Metis – a novel routing algorithm that was customised for Solana’s fast blocktimes.  We also launched instant staked SOL to SOL swaps that gives you the best price across all trade sizes. 
 * Our product portfolio expanded to include Dollar Cost Averaging(DCA), Limit Orders and a Bridge Comparator. 
 * Our developer tooling improved with 2 major API Upgrades, Jup for Payments & Games, and the Jupiter Terminal. 
 
@@ -103,7 +102,7 @@ For the initial supply of tokens, the proposed allocation will be as follows:
 
 There will be 3 parts to the launch phases; the Community Airdrop, the Growth Airdrop and the Locked Token Sale. 
 
-**Initiating a 2 week consultation period for airdrop criteria**
+**Initiating a 2 week consultation period for airdrop mechanics**
 
 Traditionally, the mechanics of airdrops are unilaterally determined by the team, with the community subsequently informed of the decision. This often leaves limited scope for discourse or community input.
 
@@ -138,7 +137,9 @@ There is a very clear distribution of roles between the team and the DAO - The t
 The entire initial supply belongs to community participants through the token sale, airdrops, and growth incentives, while the team’s allocation will be vested over 2 years. The strategic allocation (for potential future investors and talent) can only be used by the team at least a year after token liquidity, and there will be at least 6 months notice before any tokens are released from this pool.
 
 
-Our aim is to energise the Solana ecosystem by driving investment, users and capital to Solana, generate more momentum for new ecosystem tokens and build up a strong and focused Jupiter community to help improve Solana. Together, we work towards a future where the victories of Solana translate to victories for all. Solana wins, everybody wins!
+Our aim is to energise the Solana ecosystem by driving investment, users and capital to Solana, generate more momentum for new ecosystem tokens and build up a strong and focused Jupiter community to help improve Solana. 
+
+Together, we work towards a future where the victories of Solana translate to victories for all. Solana wins, everybody wins!
 
 
 # Jupiter Start 
@@ -149,7 +150,7 @@ New projects are essential for invigorating new ecosystems, and this underscores
 
 Most fundamentally, launchpads today seem more focused on pumping the value of their own platform token rather than genuinely supporting new projects and the crypto ecosystem, with unfair advantages given to insiders and the encouragement of FOMO and speculative behaviour that leads to tokens dumping quickly post-launch. 
 
-The crypto industry is at a point where the need for real-world use cases, trustworthiness, and long-term sustainable projects has become more apparent than ever. There is a strong desire among community members and investors to contribute to projects that show promise and innovation. After all, the beauty of crypto is the ability to be involved in the entire value creation as early as possible. At the same time, new and legitimate teams are in need of support in terms of users, community engagement, and financing to build momentum and bring their visions to life.
+The crypto industry is at a point where the need for real-world use cases, trustworthiness, and long-term sustainable projects has become more apparent than ever. There is a strong desire among community members and investors to contribute to projects that show promise and innovation. After all, the beauty of crypto is the ability of anyone to be involved in the entire value creation as early as possible. At the same time, new and legitimate teams are in need of support in terms of users, community engagement, and financing to build momentum and bring their visions to life.
 
 Also, crypto needs a lot more use cases and trust worthiness. Two of the most prominent criticisms of crypto have been that there are no real use cases for real world adoption and that the prevalence of scams and rugs erode trust among retail investors. 
 
@@ -193,15 +194,15 @@ We hope that Jupiter Start will illuminate Solana's significant advancements, sh
 
 # Jupiter Labs
 
-Jupiter Labs will debut top-tier DeFi protocols in partnership with Jupiter users, JUP DAO, and the Solana community. We aim to bolster Solana's DeFi ecosystem by nurturing new projects, leaders, and tokens. Although these initiatives will originate within Jupiter, they are ultimately designed to launch and operate independently.
+[Jupiter Labs](https://station.jup.ag/labs/) will debut top-tier DeFi protocols in partnership with Jupiter users, JUP DAO, and the Solana community. We aim to bolster Solana's DeFi ecosystem by nurturing new projects, leaders, and tokens. Although these initiatives will originate within Jupiter, they are ultimately designed to launch and operate independently.
 
 Jupiter Labs is initiating two innovative projects which are at different stages of development: 
 
 
 
-1. LP &lt;> Trader Perpetuals: This is a novel LP-to-trader perpetual exchange on Solana that offers up to 100x leverage. By utilising pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With Jupiter Swap integration, any Solana token can be used to open positions. 
+1. [LP &lt;> Trader Perpetuals](https://station.jup.ag/labs/perpetuals/overview): This is a novel LP-to-trader perpetual exchange on Solana that offers up to 100x leverage. By utilising pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With Jupiter Swap integration, any Solana token can be used to open positions. 
 
-2. xSOL Leveraged Stablecoin: We propose sUSD, a new stablecoin backed by SOL and uses leveraged LSTs as the primary yield mechanism with protocol level dynamic rebalancing for stability. Borrowers can mint sUSD using SOL as collateral through interest-free loans with returns from the staked leveraged SOL covering the borrowing costs while providing annualised returns of 7~20% to sUSD holders. We suggest several mechanisms to further enhance the stability and utility of sUSD, including USDC-sUSD pool and various sUSD redemption mechanisms. 
+2. [xSOL Leveraged Stablecoin](https://station.jup.ag/labs/lst/litepaper): We propose sUSD, a new stablecoin backed by SOL and uses leveraged LSTs as the primary yield mechanism with protocol level dynamic rebalancing for stability. Borrowers can mint sUSD using SOL as collateral through interest-free loans with returns from the staked leveraged SOL covering the borrowing costs while providing annualised returns of 7~20% to sUSD holders. We suggest several mechanisms to further enhance the stability and utility of sUSD, including USDC-sUSD pool and various sUSD redemption mechanisms. 
 
 
 These projects will be bootstrapped in conjunction with Jupiter users, the JUP DAO and the Solana ecosystem. Jupiter users will be granted priority access to test and benefit from incentives associated with these protocols and the JUP DAO will receive part of the protocol tokens. Crucially, we would invite knowledgeable members of the Solana ecosystem to be part of the process of community and protocol development early on, with community tokens allocated for this purpose. 
