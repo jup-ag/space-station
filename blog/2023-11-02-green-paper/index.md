@@ -2,8 +2,7 @@
 slug: green-paper
 title: "Jupiter Green Paper"
 ---
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS6f894Simr-4SSv9wiWYGS9BkwQEyyaHk79cbMLAN6EUP4xLa5387MVhy5_toReLsVvFs-54f5xxoY/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+![Cats-making-pie](./cats-pie.png)
 
 # Growing the Pie
 In this paper, we share an overview of what Jupiter has built in the past year, our ethos and our strategic direction for the future. **This paper serves a consultative purpose. We want to invite you to engage in dialogue with us, and contribute to shaping the future of Jupiter and its role within the Solana ecosystem. **
