@@ -99,3 +99,11 @@ from the target ration will incur additional fees.
 The pool is also integrated with Jupiter to provide more liquidity to the Solana
 ecosystem. At the same time, this swap mechanism is also acting as a way to rebalance
 the token ratio in the pool as well.
+
+## Fees
+
+| Action | Fee |
+|---|---|
+| Opening a Position | 10 BPS x Leverage|
+| Closing a Position | 10 BPS x Leverage |
+| Swap Fee | Between 0 BPS to 200 BPS depending on pool weightage |
