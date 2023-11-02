@@ -63,7 +63,7 @@ In alignment with this vision, we are excited to introduce The Jupiter Plan, a s
 
 
 
-1. **$JUP Governance Token:** Our goal is to cultivate a robust community and DAO for Jupiter. We also aim to incentivize engagement and new capital flows into the Solana ecosystem, thereby fostering its growth and vibrancy. 
+1. **$JUP Governance Token:** Our goal is to cultivate a robust community and DAO for Jupiter. We also aim to incentivize engagement and new capital flows into the Solana ecosystem, thereby fostering its growth and vibrancy. NOTE: $JUP is not live yet, please beware of fake tokens.
 
 2. **Jupiter Start**: This is a year-long initiative designed to help great new projects win on Solana, with a focus on projects that contribute to the health of the Solana ecosystem, not short term pump and dumps. There will also be a commitment to transparency and public seeding, so that the community can invest in good projects early on without gatekeeping.
 
@@ -72,8 +72,9 @@ In alignment with this vision, we are excited to introduce The Jupiter Plan, a s
 
 ## **$JUP: Unveiling our Governance Token ** 
 
+NOTE: $JUP is not live yet, please beware of fake tokens.
 
-We are thrilled to formally announce the launch of the $JUP token, a milestone that our community has been keenly anticipating. Our approach to introducing the JUP token has been deliberate, and we believe that the conditions are now optimal for its launch, as several key pieces are falling into place: 
+We are thrilled to formally announce the impending launch of the $JUP token, a milestone that our community has been keenly anticipating. Our approach to introducing the JUP token has been deliberate, and we believe that the conditions are now optimal for its launch, as several key pieces are falling into place: 
 
 
 
