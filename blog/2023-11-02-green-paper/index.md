@@ -3,7 +3,7 @@ slug: green-paper
 title: "Jupiter Green Paper"
 ---
 ![Cats-making-pie](./cats-pie.png)
-Slides presented at breakpoint 2023 can be viewed [here](https://docs.google.com/presentation/d/1IbQRIpqo8ASyOOVT5zS-F6N-XkQSYbYHefyITrdTChM/edit?usp=sharing) 
+Slides presented at breakpoint 2023 can be viewed [here](https://docs.google.com/presentation/d/e/2PACX-1vRaX5lcWSpDEx_-MsTh3c702Myed6A0sxZv68i4gJL2qtRYu1AaH5-4MiQrqD4tXZSGDbJJ-Jr9BjP7/pub?start=true&loop=false&delayms=3000) 
 
 # Growing the Pie
 In this paper, we share an overview of what Jupiter has built in the past year, our ethos and our strategic direction for the future. **This paper serves a consultative purpose. We want to invite you to engage in dialogue with us, and contribute to shaping the future of Jupiter and its role within the Solana ecosystem. **
