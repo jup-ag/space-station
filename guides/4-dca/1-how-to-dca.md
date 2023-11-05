@@ -15,7 +15,7 @@ description: "Jupiter DCA user guide"
 1. **DCA (Beta)** tab along with Jupiter suite of products.
 2. **Input Token Selector** for token that you are looking to spend/ sell/ swap from.
 3. **Input field** for the amount of input tokens that you are looking to spend/ sell/ swap from.
-4. **Ouput Token Selector** for token that you are looking to buy/ swap into. *(In beta phase, we are resctricting to only Top 20 tokens traded on Jupiter)*
+4. **Output Token Selector** for token that you are looking to buy/ swap into. *(In beta phase, we are restricting to only Top 20 tokens traded on Jupiter)*
 5. **Frequency** of purchase/ sale of tokens over a period of duration, selection from hour, day, week, and month.
 6. **Duration** for the purchase/ sale of tokens.
 7. **Order Summary** for the current DCA order that you are placing/ submitting. From the screenshot example:

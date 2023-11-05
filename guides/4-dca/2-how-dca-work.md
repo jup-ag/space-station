@@ -29,7 +29,7 @@ To minimise the predictability of your DCA strategy, orders are filled within a 
 A DCA order or account is broken down to many orders. The number of orders depends on the options or iterations you choose. For example, if you choose to DCA into SOL with $900 USDC over 3 days, your DCA order/account will have a total of 3 trades/ transactions of $300 USDC each.
 :::
 
-- You can choose to split your oder to `hourly`, `daily`, or `weekly`.
+- You can choose to split your order to `hourly`, `daily`, or `weekly`.
 
 Scenario with example:
 

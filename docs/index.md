@@ -10,7 +10,7 @@ description: " "
 
 ## Building World Class Swap Experiences Together
 
-Our goal is simple: Help you give world class experiences for your users with as little work as possible, regardless of your use case or neeeds.
+Our goal is simple: Help you give world class experiences for your users with as little work as possible, regardless of your use case or needs.
 
 We offer a wide range of tools to make it possible, including:
 
