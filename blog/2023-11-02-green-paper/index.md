@@ -123,7 +123,7 @@ We will reward trading on Jupiter and Solana to incentivise users to trade more 
 
 **Locked Token Sale Phase**
 
-To reinvigorate the public sale market of Solana, we are initiating a Locked Token Sale (LTS) phase, featuring a substantial initial float of 40%. In order to make it as egalitarian as possible, there will be no exclusivity in terms of whitelisting nor early access, providing an equitable opportunity for all. 
+To reinvigorate the public sale market of Solana, we are initiating a Locked Token Sale (LTS) phase for 20% of tokens. In order to make it as egalitarian as possible, there will be no exclusivity in terms of whitelisting nor early access, providing an equitable opportunity for all. 
 
 Tokens acquired in this sale will be locked, but they will confer voting rights upon the holders. This includes the ability to vote on pivotal decisions such as determining the initial liquidity date of the token. Consequently, participants in the token sale will effectively become the inaugural members of the DAO, playing an integral role in shaping its direction.
 
