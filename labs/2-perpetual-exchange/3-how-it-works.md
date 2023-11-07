@@ -74,36 +74,3 @@ Positions where the trader's collateral less fees and less unrealized losses is
 less than 1% of the position size are automatically closed.
 
 Extra fund from position closure will be returned to the trader automatically.
-
-## For LPs
-
-### Providing liquidity
-
-Liquidity providers acts as the counterparty to traders. Traders borrow tokens
-from the pool to open a leveraged position.
-
-When positions are closed, the trader's gains are paid out from the borrowed
-tokens. Similarly, the trader's losses are paid out to the pool from the
-trader's collateral.
-
-### Target ratio and fees
-
-Each token has a target ratio in the pool.
-
-Add liquidity/remove liquidity transactions which bring the token's ratio in
-the pool closer to the target ration will have a fee rebate.
-
-In contrast, transactions that move the token's ratio in the pool further away
-from the target ration will incur additional fees.
-
-The pool is also integrated with Jupiter to provide more liquidity to the Solana
-ecosystem. At the same time, this swap mechanism is also acting as a way to rebalance
-the token ratio in the pool as well.
-
-## Fees
-
-| Action | Fee |
-|---|---|
-| Opening a Position | 10 BPS |
-| Closing a Position | 10 BPS |
-| Swap Fee | Between 0 BPS to 200 BPS depending on pool weightage |
