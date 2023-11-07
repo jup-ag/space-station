@@ -1,10 +1,9 @@
 ---
-sidebar_label: "User Guides"
-title: "User Guide"
-description: How to Use Perpetual Exchange
+sidebar_label: "JLP Pool"
+title: "JLP Pool"
+description: How to Become Liquidity Provider
 ---
 
-## JLP Pool
 Users have the opportunity to become Liquidity Providers (LPs) by allocating their assets or tokens into the JLP (Jupiter Liquidity Pool) and, in return, receive LP tokens.
 
 ### JLP, Liquidity Provider Token
@@ -31,7 +30,7 @@ It's essential to note that pool earnings, and losses are not factored into the 
 
 ### Adding/Removing Liquidity
 
-When an LP adds liquidity to the JLP pool, they increase the amount of liquidity in the total TVL (Total value lock) which increase the amount tradable on the trading side. 
+When an LP adds liquidity to the JLP pool, they increase the amount of liquidity in the total TVL (Total value lock) which increase the amount tradable on the trading side.
 
 Liquidity providers (LPs) may use any token to deposit into one of the pool's custody. We will use Jupiter Swap to swap the LP's token into the custody's token.
 
@@ -83,30 +82,36 @@ Hourly funding fee = (tokens borrowed / tokens in the pool) x hourly funding rat
 
 Trade fees for the pool typically range between 0% and 2%.
 
+### Example Yield
+
 To provide an estimated perspective, you can calculate potential revenue by taking JUP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
-Total Daily Volume: 50 million
-
-Fee Percentage: 0.1%
-
-Revenue Share Percentage: 70%
+* Total Daily Volume: 50 million
+* Fee Percentage: 0.1%
+* Revenue Share Percentage: 70%
 
 Using these values, the calculation would be as follows:
 
-Total revenue to be shared between JLP pool holders = 50 million x 0.1% x 70% = $35,000
+Total revenue to be shared between JLP pool holders:
+
+```
+$50M x 0.1% x 70% = $35,000
+```
 
 To determine your specific share or weight in the total JLP pool, use the following formula:
 
-Your contributed amount to the pool / total pool amount x 100 = your percentage of the pool
+```
+your_pool_contributed_amount / total_pool_amount x 100 = your_pool_percentage
+```
 
 For example:
-Your contribution: $1,000
 
-Total pool amount: $4,000,000
-
-Your share percentage: 1,000 / 4,000,000 x 100 = 0.025%
+* Your contribution: $1,000
+* Total pool amount: $4,000,000
+* Your share percentage: 1,000 / 4,000,000 x 100 = 0.025%
 
 Finally, you can calculate your generated revenue share by multiplying the results of the first and second calculations:
 
-Revenue share you'd generate = $35,000 x 0.025% = $8.75
-
+```
+revenue share you generate = $35,000 x 0.025% = $8.75
+```
