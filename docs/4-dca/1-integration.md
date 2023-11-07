@@ -94,7 +94,7 @@ const [dca] = await PublicKey.findProgramAddressSync(
 );
 ```
 
-Phew! That's all that is necessary to contruct the instruction. Next, you will need to sign and send the transaction!
+Phew! That's all that is necessary to construct the instruction. Next, you will need to sign and send the transaction!
 
 Here's what a successful transaction to create a DCA account look like [see on Solana Explorer](https://explorer.solana.com/tx/24kSsH2uLnjSEsYp1mZ6ZmCeGZ8KmYFMDrNJs3nbU6SVH9jwYfcEA6oeRf72CxmzAuUZwFwkyNYvX8ABFc6ABAtv)
 

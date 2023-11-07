@@ -12,7 +12,7 @@ This litepaper introduces SUSD, a native Solana yield-bearing stablecoin protoco
 
 Current popular stablecoins such as USDC, USDT are plagued by multiple levels of custodian and regulatory risks. In addition, there are unfair levels of risks for holders of these fiat backed centralized stablecoins, granting centralized issuers full autonomy on investment decisions, risking fiat-deposits without distributing the yield generated to holders of these stablecoin - the actual risk bearers.
 
-While other various decentralized stablecoins such as DAI by Maker generates yield from Real-World assets, introducing additional risk vectors, XYZ aims to solve these problems by introducing an overcollateralized fully decentralized stablecoin, SUSD, backed by SOL LSTs while channelling proof-of-stake yield back to the actual risk-bearers - individuals and organizations holding SUSD.
+While other various decentralized stablecoins such as DAI by Maker generates yield from Real-World assets, introducing additional risk vectors, XYZ aims to solve these problems by introducing an overcollateralized fully decentralized stablecoin, SUSD, backed by SOL LSTs while channeling proof-of-stake yield back to the actual risk-bearers - individuals and organizations holding SUSD.
 
 
 ## Use Cases / Benefits
