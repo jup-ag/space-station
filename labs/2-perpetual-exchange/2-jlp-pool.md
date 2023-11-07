@@ -24,6 +24,8 @@ Now, let's explore some of the risks associated with holding JLP:
 
 **Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
 
+**Deposit/Withdrawal Fees:** In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
+
 Upon closing their positions, traders receive their gains, which are sourced from the borrowed tokens. In the unfortunate event of a trader's losses, those losses are absorbed by the pool, utilizing the trader's collateral.
 
 A significant portion of the fees paid by traders, precisely 70%, is disbursed by the pool. This amount is directly reinvested into the JLP, facilitating continuous compounding of yield and earnings.
@@ -67,6 +69,7 @@ The transactions involving the addition or removal of liquidity have the primary
 
 Similarly, each custody plays a role in maintaining a target ratio within the pool. This target ratio significantly influences the fees that are applicable to instructions aimed at modifying the ratio of the custodies within the pool.
 
+In order to manage the target ratio or weightage of the pool, the JLP pool is also integrated into Jupiter Routing Engine for any swap between any two tokens in the ppol. The trade fees range between 0% and 2% based on the target ratio or weightage of the tokens.
 
 ### Fee Calculations
 
