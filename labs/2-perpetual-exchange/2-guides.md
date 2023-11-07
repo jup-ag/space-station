@@ -35,12 +35,16 @@ And at the point of depositing assets into JLP pool, the protocol will price in 
 3. Keep in mind that when you deposit into the JLP pool with a relatively high weightage, fees will be incurred. Conversely, depositing into a token pool with lower weightage will result in lower or even zero fees during the deposit process.
 4. For instance, if users deposit a token asset that is not in the pool (e.g., SOL, ETH, BTC, USDC, or USDT), JLP will perform a swap into the token asset with the lowest weightage, ensuring minimal fees.
 
+![JLP1](../img/jlp1.jpg)
+
 #### How to Remove Liquidity from JLP:
 
 1. Start by selecting the token asset you intend to withdraw from the JLP pool. You can choose from the list of available token assets in the pool, and the chosen asset will be withdrawn directly into your wallet.
 2. JLP Pool will automatically identify the token asset in the JLP pool with the highest weightage and swap your chosen asset into that pool if your selected output token is not in the list of token assets. Your assets will then be withdrawn directly into your wallet.
 3. It's important to note that when you withdraw from the JLP token pool with a relatively low weightage, fees will be incurred. Conversely, withdrawing from a token pool with higher weightage will result in lower or even zero fees during the withdrawal process.
 4. In situations where users are withdrawing a token asset not present in the pool (e.g., SOL, ETH, BTC, USDC, or USDT), JLP will withdraw from the token pool with the highest weightage, incurring minimal fees. The withdrawn assets will be swapped into the selected output token and then transferred directly into the user's wallet.
+
+![JLP2](../img/jlp2.jpg)
 
 ### Target Ratio and Fees
 
