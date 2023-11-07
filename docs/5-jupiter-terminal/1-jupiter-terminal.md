@@ -31,7 +31,7 @@ Mode is Deprecated in v1. Use formProps instead.
     - alternatively, preload the app bundle with data-preload attributes.
 - Several major built-in wallets, or passthrough wallets from your dApp.
 - Auto wallet detection for Versioned Tx.
-- Flexbile display modes, Modal, Integrated, or Widget.
+- Flexible display modes, Modal, Integrated, or Widget.
 - Flexible form customization, e.g. Full swap experience, Payment flow.
 - Support ExactIn, and ExactOut swap modes.
 - Flexible layout, and customizable stylings.

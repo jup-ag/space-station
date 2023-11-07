@@ -66,7 +66,7 @@ export const LOCKING_PLAN: ILockingPlan[] = [
 
 ## Here's how it works
 
-A user creates a DCA via your frontend and program. This creates an escrow acount that integrates with Jupiter's DCA program.
+A user creates a DCA via your frontend and program. This creates an escrow account that integrates with Jupiter's DCA program.
 
 Once the DCA is completed (all orders are executed), the user will then be able to claim the tokens that they bought. Once they claim, the airdrop script will also airdrop additional tokens from your admin account to them.
 

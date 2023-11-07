@@ -14,4 +14,4 @@ description: Key concepts for your swap.
 - **Set a slippage amount to protect yourself:** [Slippage](./price-impact-slippage-price-warning#slippage) is your swap protection if the price diverges from the quoted price.
 - **Jupiter cannot guess the final spot price or know what is a reasonable price impact for you**. We encourage checking these before the swap:
   - Check the [Price Impact](./price-impact-slippage-price-warning#price-impact). *Price impact varies across the AMM and DEXes that Jupiter uses in each route.*
-  - Check aginst a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or some CEX pricing
+  - Check against a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or some CEX pricing

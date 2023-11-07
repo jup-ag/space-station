@@ -42,7 +42,7 @@ Jupiter has worked to optimize its swap aggregation so that it all fits with the
 3. Jupiter **calculates out all the possible routes** for the token trade.
 4. Jupiter **fetches the quotes** for each of those routes and returns the amount of tokens you will receive per route. This includes all fees.
 5. Jupiter **ranks each route** by most tokens you will receive.
-6. User can select select any route but the first route offers the most tokens.
+6. User can select  any route but the first route offers the most tokens.
 7. User clicks to trigger a swap.
 8. User approves the Jupiter transactions from their wallet
 9. Jupiter executes the trade.

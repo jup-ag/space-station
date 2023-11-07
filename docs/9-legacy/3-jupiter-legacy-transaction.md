@@ -6,7 +6,7 @@ description: "About Jupiter Legacy Transactions"
 # About Jupiter Legacy Transaction
 Latest v6 API only return one swapTransaction when `asLegacyTransaction=true` is supplied to enable legacy transaction. So you no longer need to do a setup or cleanup transaction anymore.
 
-Due to transaction size limits, only certains amms can be swap through together. 
+Due to transaction size limits, only certain amms can be swap through together. 
 
 ## Swap Success / Failure
 

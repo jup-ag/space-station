@@ -339,7 +339,7 @@ Let’s learn how.
 
 ### Unified Wallet Kit to make BUIDLing Easier
 
-To bootstrap a dApp with a wallet, we often find ourselves repeating the same setup, such as getting the various wallet adapters (both Solana Wallet Standard and custom wallets) installed, building notifications for wallet state (selected,connected, disconnected etc.), auto-reconnecting to the last connected wallet, adapting to a mobile-first responsive design, theming etc., over and over again.
+To bootstrap a dApp with a wallet, we often find ourselves repeating the same setup, such as getting the various wallet adapters (both Solana Wallet Standard and custom wallets) installed, building notifications for wallet state (selected, connected, disconnected etc.), auto-reconnecting to the last connected wallet, adapting to a mobile-first responsive design, theming etc., over and over again.
 
 This is our biggest motivation in building the Unified Wallet Kit - to have all these essential yet repetitive basic building blocks provided in a simple package that anyone can just plug and play.
 

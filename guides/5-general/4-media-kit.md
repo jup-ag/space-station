@@ -6,9 +6,9 @@ description: "Download Jupiter Media Kit"
 
 import DownloadBox from '/src/components/DownloadBox';
 
-Please find official Jupiter information, imagery, inforgraphics and contacts below for your own use. 
+Please find official Jupiter information, imagery, infographics and contacts below for your own use. 
 
-For additional info or media inquieries, please contact feedback@jup.ag
+For additional info or media inquiries, please contact feedback@jup.ag
 
 Or contact Jupiter through [Twitter](https://twitter.com/JupiterExchange) or [Discord](https://discord.gg/jup)
 
