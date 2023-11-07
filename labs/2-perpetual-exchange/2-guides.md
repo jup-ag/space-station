@@ -27,7 +27,7 @@ Upon closing their positions, traders receive their gains, which are sourced fro
 
 A significant portion of the fees paid by traders, precisely 70%, is disbursed by the pool. This amount is directly reinvested into the JLP, facilitating continuous compounding of yield and earnings.
 
-It's essential to note that liquidation fees, pool earnings, and losses are not factored into the overall yield calculations.
+It's essential to note that pool earnings, and losses are not factored into the overall yield calculations.
 
 ### Adding/Removing Liquidity
 
@@ -66,7 +66,14 @@ The transactions involving the addition or removal of liquidity have the primary
 
 Similarly, each custody plays a role in maintaining a target ratio within the pool. This target ratio significantly influences the fees that are applicable to instructions aimed at modifying the ratio of the custodies within the pool.
 
+
 ### Fee Calculations
+
+| Action | Fee |
+|---|---|
+| Opening a Position | 10 BPS |
+| Closing a Position | 10 BPS |
+| Swap Fee | Between 0 BPS to 200 BPS depending on pool weightage |
 
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.1%.
 
@@ -93,3 +100,4 @@ Your share percentage: 1,000 / 4,000,000 * 100 = 0.025%
 
 Finally, you can calculate your generated revenue share by multiplying the results of the first and second calculations:
 Revenue share you'd generate = $35,000 * 0.025% = $8.75
+
