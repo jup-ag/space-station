@@ -45,7 +45,7 @@ And at the point of depositing assets into JLP pool, the protocol will price in 
 1. Begin by selecting the token asset you wish to deposit into the JLP pool from the list of token assets available in your wallet.
 2. JLP Pool will automatically identify which token asset in the JLP pool has the lowest weightage and swap your selected asset into that pool (if your chosen output token is not in the list of token assets). Your assets will then be deposited into the pool.
 3. Keep in mind that when you deposit into the JLP pool with a relatively high weightage, fees will be incurred. Conversely, depositing into a token pool with lower weightage will result in lower or even zero fees during the deposit process.
-4. For instance, if users deposit a token asset that is not in the pool (e.g., SOL, ETH, BTC, USDC, or USDT), JLP will perform a swap into the token asset with the lowest weightage, ensuring minimal fees.
+4. For instance, if users deposit a token asset that is not in the pool (e.g., SOL, ETH, BTC, USDC, or USDT), swap will be executed into the token asset with the lowest weightage, ensuring minimal fees.
 
 ![JLP1](../img/jlp1.jpg)
 
@@ -79,25 +79,34 @@ Fee calculation for opening and closing positions involves the volume of these t
 
 The borrow fee, often termed as the hourly funding fee, is computed as follows:
 
-Hourly funding fee = (tokens borrowed / tokens in the pool) * hourly funding rate * position size
+Hourly funding fee = (tokens borrowed / tokens in the pool) x hourly funding rate x position size
+
 Trade fees for the pool typically range between 0% and 2%.
 
 To provide an estimated perspective, you can calculate potential revenue by taking JUP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
 Total Daily Volume: 50 million
+
 Fee Percentage: 0.1%
+
 Revenue Share Percentage: 70%
+
 Using these values, the calculation would be as follows:
-Total revenue to be shared between JLP pool holders = 50 million * 0.1% * 70% = $35,000
+
+Total revenue to be shared between JLP pool holders = 50 million x 0.1% x 70% = $35,000
 
 To determine your specific share or weight in the total JLP pool, use the following formula:
-Your contributed amount to the pool / total pool amount * 100 = your percentage of the pool
+
+Your contributed amount to the pool / total pool amount x 100 = your percentage of the pool
 
 For example:
 Your contribution: $1,000
+
 Total pool amount: $4,000,000
-Your share percentage: 1,000 / 4,000,000 * 100 = 0.025%
+
+Your share percentage: 1,000 / 4,000,000 x 100 = 0.025%
 
 Finally, you can calculate your generated revenue share by multiplying the results of the first and second calculations:
-Revenue share you'd generate = $35,000 * 0.025% = $8.75
+
+Revenue share you'd generate = $35,000 x 0.025% = $8.75
 
