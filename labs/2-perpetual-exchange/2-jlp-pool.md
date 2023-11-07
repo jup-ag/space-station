@@ -16,6 +16,8 @@ Liquidity providers serve a crucial role as they act as counterparts to traders.
 - Borrowing Fees of Positions
 - Trading Fees of the Pool
 
+The fees are being compounded into the pool hourly.
+
 Now, let's explore some of the risks associated with holding JLP:
 
 **Profit and Loss (P&L) Dynamics:** Traders' P&L from perpetual trading impacts the JLP pool. If a trader incurs a net negative P&L, the losses are sourced from the JLP pool to compensate the trader. Conversely, if a trader's P&L is net positive, the gains are deposited into the JLP pool for LP holders.
@@ -82,7 +84,7 @@ Hourly funding fee = (tokens borrowed / tokens in the pool) x hourly funding rat
 
 Trade fees for the pool typically range between 0% and 2%.
 
-### Example Yield
+### Example APR Yield
 
 To provide an estimated perspective, you can calculate potential revenue by taking JUP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
