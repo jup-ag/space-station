@@ -321,10 +321,10 @@ const {
 } = instructions;
 
 const deserializeInstruction = (instruction) => {
-  return new solanaWeb3.TransactionInstruction({
-    programId: new solanaWeb3.PublicKey(instruction.programId),
+  return new TransactionInstruction({
+    programId: new PublicKey(instruction.programId),
     keys: instruction.accounts.map((key) => ({
-      pubkey: new solanaWeb3.PublicKey(key.pubkey),
+      pubkey: new PublicKey(key.pubkey),
       isSigner: key.isSigner,
       isWritable: key.isWritable,
     })),
