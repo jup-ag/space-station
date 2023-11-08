@@ -89,7 +89,9 @@ Hourly funding fee = (tokens borrowed / tokens in the pool) x hourly funding rat
 
 Trade fees for the pool typically range between 0% and 2%.
 
-### Example APR Yield
+### APR Yield
+
+The APY yield will get compounded into JLP so you will see JLP value increases. Also, the current shown APY is calculated based on past week performance and it gets updated weekly every Monday. Future APY may differ depending on all the different factors shown above.
 
 To provide an estimated perspective, you can calculate potential revenue by taking JLP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
