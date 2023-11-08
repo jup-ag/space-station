@@ -20,13 +20,11 @@ The fees are being compounded into the pool hourly.
 
 Now, let's explore some of the risks associated with holding JLP:
 
-**Profit and Loss (P&L) Dynamics:** Traders' P&L from perpetual trading impacts the JLP pool. If a trader incurs a net negative P&L, the losses are sourced from the JLP pool to compensate the trader. Conversely, if a trader's P&L is net positive, the gains are deposited into the JLP pool for LP holders.
+**Profit and Loss (P&L) Dynamics:** LPs are counterparties to traders, and traders' P&L impacts the JLP pool. If a trader makes a profit, the gains are sourced from the JLP pool to pay the trader. Conversely, if a trader loses money, that amount is deposited into the JLP pool for LP holders.
 
 **Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit.
 
 **Deposit/Withdrawal Fees:** Deposit and withdrawal fees for the JLP Pool may reduce the number of tokens withdrawn, particularly for shorter holding periods. In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
-
-**Deposit/Withdrawal Fees:** In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
 
 Upon closing their positions, traders receive their gains, which are sourced from the borrowed tokens. In the unfortunate event of a trader's losses, those losses are absorbed by the pool, utilizing the trader's collateral.
 
