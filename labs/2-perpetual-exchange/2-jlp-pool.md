@@ -26,8 +26,6 @@ Now, let's explore some of the risks associated with holding JLP:
 
 **Deposit/Withdrawal Fees:** Deposit and withdrawal fees for the JLP Pool may reduce the number of tokens withdrawn, particularly for shorter holding periods. In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
 
-**Deposit/Withdrawal Fees:** In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
-
 Upon closing their positions, traders receive their gains, which are sourced from the borrowed tokens. In the unfortunate event of a trader's losses, those losses are absorbed by the pool, utilizing the trader's collateral.
 
 A significant portion of the fees paid by traders, precisely 70%, is disbursed by the pool. This amount is directly reinvested into the JLP, facilitating continuous compounding of yield and earnings.
