@@ -22,7 +22,9 @@ Now, let's explore some of the risks associated with holding JLP:
 
 **Profit and Loss (P&L) Dynamics:** Traders' P&L from perpetual trading impacts the JLP pool. If a trader incurs a net negative P&L, the losses are sourced from the JLP pool to compensate the trader. Conversely, if a trader's P&L is net positive, the gains are deposited into the JLP pool for LP holders.
 
-**Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
+**Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit.
+
+**Deposit/Withdrawal Fees:** Deposit and withdrawal fees for the JLP Pool may reduce the number of tokens withdrawn, particularly for shorter holding periods. In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
 
 **Deposit/Withdrawal Fees:** In order to keep the target ratio or weightage in the JLP pool, if you deposit in an over-weight token, the pool will incur more fees on you. If you withdraw in an under-weight token, the pool will incur more fees on you.
 
@@ -87,7 +89,9 @@ Hourly funding fee = (tokens borrowed / tokens in the pool) x hourly funding rat
 
 Trade fees for the pool typically range between 0% and 2%.
 
-### Example APR Yield
+### APR Yield
+
+The APY yield will get compounded into JLP so you will see JLP value increases. Also, the current shown APY is calculated based on past week performance and it gets updated weekly every Monday. Future APY may differ depending on all the different factors shown above.
 
 To provide an estimated perspective, you can calculate potential revenue by taking JLP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
