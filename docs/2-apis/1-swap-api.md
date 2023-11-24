@@ -302,8 +302,14 @@ const instructions = await (
     body: JSON.stringify({
       // quoteResponse from /quote api
       quoteResponse,
+      userPublicKey: swapUserKeypair.publicKey.toBase58(),
+    })
   })
 ).json();
+
+if (instructions.error) {
+  throw new Error("Failed to get swap instructions: " + instructions.error);
+}
 
 const {
   tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
@@ -314,17 +320,19 @@ const {
   addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
 } = instructions;
 
-const swapInstruction = new TransactionInstruction({
-  programId: new PublicKey(swapInstructionPayload.programId),
-  keys: swapInstructionPayload.accounts.map((key) => ({
-    pubkey: new PublicKey(key.pubkey),
+const deserializeInstruction = (instruction) => {
+  return new TransactionInstruction({
+    programId: new PublicKey(instruction.programId),
+    keys: instruction.accounts.map((key) => ({
+      pubkey: new PublicKey(key.pubkey),
       isSigner: key.isSigner,
       isWritable: key.isWritable,
     })),
-  data: Buffer.from(swapInstructionPayload.data, "base64"),
-});
+    data: Buffer.from(instruction.data, "base64"),
+  });
+};
 
-const getAdressLookupTableAccounts = async (
+const getAddressLookupTableAccounts = async (
   keys: string[]
 ): Promise<AddressLookupTableAccount[]> => {
   const addressLookupTableAccountInfos =
@@ -349,13 +357,18 @@ const getAdressLookupTableAccounts = async (
 const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
 
 addressLookupTableAccounts.push(
-  ...(await getAdressLookupTableAccounts(addressLookupTableAddresses))
+  ...(await getAddressLookupTableAccounts(addressLookupTableAddresses))
 );
 
+const blockhash = (await connection.getLatestBlockhash()).blockhash;
 const messageV0 = new TransactionMessage({
   payerKey: payerPublicKey,
   recentBlockhash: blockhash,
-  instructions: [swapInstruction],
+  instructions: [
+    // uncomment if needed: ...setupInstructions.map(deserializeInstruction),
+    deserializeInstruction(swapInstructionPayload),
+    // uncomment if needed: deserializeInstruction(cleanupInstruction),
+  ],
 }).compileToV0Message(addressLookupTableAccounts);
 const transaction = new VersionedTransaction(messageV0);
 ```
