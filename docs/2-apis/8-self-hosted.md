@@ -16,11 +16,13 @@ Download the binary for your host
 
 ## Typical usage
 
-`RUST_LOG=info ./jupiter-swap-api --rpc-url https://supersolnode.jup/91842103123091841 --yellowstone-grpc-endpoint https://supersolnode.jup --yellowstone-grpc-x-token 91842103123091841`
+`RUST_LOG=info ./jupiter-swap-api --rpc-url <RPC-URL> --yellowstone-grpc-endpoint <GRPC-ENDPOINT> --yellowstone-grpc-x-token <X-TOKEN>`
+
+For instance, if you used Triton and your RPC url is https://supersolnode.jup/91842103123091841, the arguments would be `--rpc-url https://supersolnode.jup/91842103123091841 --yellowstone-grpc-endpoint https://supersolnode.jup --yellowstone-grpc-x-token 91842103123091841`
 
 It is also possible to run the API in poll mode (heavy for nodes and not recommended). Periodically polling the Solana RPC node for accounts rather than listening with the yellowstone grpc endpoint
 
-`RUST_LOG=info ./jupiter-swap-api --rpc-url https://supersolnode.jup/91842103123091841`
+`RUST_LOG=info ./jupiter-swap-api --rpc-url <RPC-URL>`
 
 Other options can be discovered through `--help`
 
