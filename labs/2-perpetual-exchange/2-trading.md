@@ -86,7 +86,7 @@ Opening or closing a position on Jupiter Perpetual Exchange incurs a fee equival
 
 For long positions, the collateral is the token being longed *(e.g., SOL for SOL longs, BTC for BTC longs)*, while short positions are collateralized with supported stablecoins like USDC or USDT.
 
-Jupiter Perpetuals Trading seamlessly integrates Jupiter Swap. Consequently, when a swap is required during the opening or closing of a position, regular DEX fees and slippages are applicable. The specific fee is contingent on whether the swap enhances or diminishes the balance.
+Jupiter Perpetual Exchange seamlessly integrates Jupiter Swap. Consequently, when a swap is required during the opening or closing of a position, regular DEX fees and slippages are applicable.
 
 ### Execution Fee
 
