@@ -3,7 +3,7 @@ sidebar_label: "How It Works"
 description: Key Concepts of Perpetual Exchange
 ---
 
-# How it works
+# How It Works
 
 ## Overview
 
@@ -16,7 +16,7 @@ the rest of the position from the pool.
 
 ## For Traders
 
-### Example trade
+### Example Trade
 
 For example, a trader opens a 2x long SOL position at a position size of $100
 USD by depositing $50 USD worth of SOL as collateral and borrowing $50 USD
@@ -37,16 +37,17 @@ asset. For example, to open long SOL-USD position, the trader deposits SOL.
 Conversely, to open a short position, a trader deposits collateral matching one
 of the stablecoins in the pool.
 
-### Leverage by borrowing from the pool
+### Leverage by Borrowing from The Pool
 
 To allow for leverage, traders may borrow assets from the pool to create a
 larger position. To create a 2x long position SOL-USD, the other 1x SOL will be
 borrowed from the pool.
 
-### Swap integration
+### Swap Integration
 
 Liquidity providers (LPs) may use any token to deposit into one of the pool's
-custody. We will use Jupiter Swap to swap the LP's token into the custody's token.
+custody. We will use Jupiter Swap to swap the LP's token into the custody's token,
+all positions are denominated in USD.
 
 When withdrawing from a custody, LPs may request to receive a
 different token than the custody's token. We will use Jupiter Swap to swap the
@@ -55,22 +56,22 @@ custody's token to the LP's desired token.
 For convenience, we allow traders to open positions using any token and we will
 use Jupiter Swap to swap the trader's token to the required token.
 
-### Hourly funding fee
+### Hourly Borrow Rate
 
-Traders pay an hourly funding fee to the pool based on the hourly funding rate, position size, and
-token utilization. This is computed for each token that a trader borrows.
+Traders pay an hourly borrow fee to the pool based on the hourly borrow rate, position size, and
+token utilization percentage. This is computed for each token that a trader borrows.
 
-`hourly funding fee = tokens borrowed/tokens in the pool * hourly funding rate * position size`
+`hourly borrow fee = tokens borrowed/tokens in the pool * hourly borrow rate * position size`
 
 For example, suppose SOL is at 50% utilization and assuming an hourly funding
 rate of 0.01%. Then a trader with a long position SOL-USD of size 1000 USD will
 accumulate funding fees at a rate of 0.05 USD per hour.
 
-### Auto closing positions that exceed maximum leverage
+### Auto Closing Positions that Exceed Maximum Leverage
 
-The maximum allowed leverage is 100x.
+The maximum allowed leverage is 200x.
 
 Positions where the trader's collateral less fees and less unrealized losses is
-less than 1% of the position size are automatically closed.
+less than 0.5% of the position size are automatically closed.
 
 Extra fund from position closure will be returned to the trader automatically.
