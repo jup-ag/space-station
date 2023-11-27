@@ -85,7 +85,7 @@ Apart from the withdrawal/deposit fee mechanisms, JLP pool is also integrated in
 | Opening a Position | 10 BPS |
 | Closing a Position | 10 BPS |
 | Swap Fee | Between 0 BPS to 200 BPS depending on pool weightage |
-| Borrow Rate | 1 BPS/hour |
+| Borrow Rate | 1 BPS/hour x token utilization percentage |
 
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.1%.
 

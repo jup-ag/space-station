@@ -69,9 +69,9 @@ accumulate funding fees at a rate of 0.05 USD per hour.
 
 ### Auto Closing Positions that Exceed Maximum Leverage
 
-The maximum allowed leverage is 250x.
+The maximum allowed leverage is 200x.
 
 Positions where the trader's collateral less fees and less unrealized losses is
-less than 0.4% of the position size are automatically closed.
+less than 0.5% of the position size are automatically closed.
 
 Extra fund from position closure will be returned to the trader automatically.
