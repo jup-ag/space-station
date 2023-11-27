@@ -92,6 +92,6 @@ Jupiter Perpetuals Trading seamlessly integrates Jupiter Swap. Consequently, whe
 
 The process of opening, closing, or editing a position on Jupiter Perpetual Exchange entails two transactions:
 
-- Users initiate the first transaction to the keeper to request actions such as opening, closing, depositing collateral, or withdrawing collateral.
+- Users send the transaction on-chain to request actions such as opening, closing, depositing collateral, or withdrawing collateral, and the keeper monitors it for execution.
 
 - This transaction is directed to an escrow account ([PDA](https://solanacookbook.com/core-concepts/pdas.html#facts)), where the keeper will monitors the blockchain for these requests and executes them as needed.
