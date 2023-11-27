@@ -168,6 +168,10 @@ const config = {
           name: "theme-color",
           content: "#000000",
         },
+        {
+          property: 'og:image',
+          content: 'https://hub.jup.ag/img/twitter-card.png',
+        },
       ],
       colorMode: {
         defaultMode: "light",
