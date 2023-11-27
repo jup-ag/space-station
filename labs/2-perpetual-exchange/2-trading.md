@@ -55,7 +55,6 @@ You can close a position by clicking on the `Close` button in the position row.
 
 *Note: You also have the option to select a specific token for closure and receive the assets accordingly, taking market conditions into account. Jupiter will assist in seamlessly swapping into your desired token. This feature provides users with additional control and optimization over their trading outcomes.*
 
-
 ## Take-Profit / Stop-Loss Orders
 
 You can set take-profit and stop-loss trigger orders by selecting the `Add TP` or `Add SL` button in the position row.
@@ -76,22 +75,26 @@ Upon liquidation, any remaining collateral, net of losses and fees, will be retu
 
 ## Pricing
 
-On Jupiter Perpetual Exchange, **trades incur no price impact**, allowing for the execution of large trades precisely at the mark price. 
+On Jupiter Perpetual Exchange, **trades incur no price impact**, allowing for the execution of large trades precisely at the mark price.
 
-Mark prices are conveniently presented in the same row as the market name *(e.g., SOL-PERP)*. Notably, long positions and short positions are opened and closed at the same price as `Mark Price` when initiated market order. 
+Mark prices are conveniently presented in the same row as the market name *(e.g., SOL-PERP)*. Notably, long positions and short positions are opened and closed at the same price as `Mark Price` when initiating market order.
 
 ## Fees
 
-Opening or closing a position on Jupiter Perpetual Exchange incurs a fee equivalent to 0.1% of the position size.
+Opening or closing a position on Jupiter Perpetual Exchange incurs a fee equivalent to 0.1% of the position size. You also have to pay an hourly borrow fee as calculated as such:
+
+```
+hourly borrow fee = (tokens borrowed / tokens in the pool) x hourly borrow rate x position size
+```
 
 For long positions, the collateral is the token being longed *(e.g., SOL for SOL longs, BTC for BTC longs)*, while short positions are collateralized with supported stablecoins like USDC or USDT.
 
 Jupiter Perpetual Exchange seamlessly integrates Jupiter Swap. Consequently, when a swap is required during the opening or closing of a position, regular DEX fees and slippages are applicable.
 
-### Execution Fee
+### Solana Fee
 
-The process of opening, closing, or editing a position on Jupiter Perpetual Exchange entails two transactions:
+Users will have to pay SOL for submitting transactions onto the Solana chain. At the same time, a minor SOL amount will be used for rent to create an escrow account ([PDA](https://solanacookbook.com/core-concepts/pdas.html#facts)). The SOL rent will be returned to you once you close your position.
 
-- Users send the transaction on-chain to request actions such as opening, closing, depositing collateral, or withdrawing collateral, and the keeper monitors it for execution.
+## Keepers
 
-- This transaction is directed to an escrow account ([PDA](https://solanacookbook.com/core-concepts/pdas.html#facts)), where the keeper will monitors the blockchain for these requests and executes them as needed.
+[TODO]: How to describe keepers here?
