@@ -5,12 +5,12 @@ description: Perpetual Exchange Overview
 
 # Summary
 
-Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, offers up to 100x leverage. Utilizing LP pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With Jupiter Swap integration, any Solana token can be used to open positions.
+Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, offering up to 100x leverage. Utilizing LP pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With the Jupiter Swap integration, any Solana token can be used to open positions.
 
 The LP pool is also integrated into Jupiter to provide liquidity to the overall Solana ecosystem. Jupiter users can swap using the liquidity from the LP pool.
 
 ---
-
+### Overview
 ![Perp1](../img/perps1.jpg)
 
 1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
@@ -32,6 +32,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 9. **Order Summary -** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
 
 ---
+### Earn Tab 
 
 ![Perp2](../img/perps2.jpg)
 
@@ -50,7 +51,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 5. **Deposit & Withdraw -** This is where users can deposit SPL tokens into the JLP token and withdraw from the JLP token into SPL tokens.
 
 ---
-
+### Positions Tab
 ![Perp3](../img/perps3.jpg)
 
 1. **Positions Tab -** The Positions tab is where you can view and manage all your current open positions.
@@ -70,7 +71,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 2. **Close Order / Share -** This button allows you to immediately close the current position, securing gains or losses at the current market price.
 
 ---
-
+### Trade History Tab
 ![Perp4](../img/perps4.jpg)
 
 **Trade History Tab -** The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
