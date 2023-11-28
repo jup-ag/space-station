@@ -4,18 +4,15 @@ sidebar_label: "How to use DCA"
 description: "Jupiter DCA user guide"
 ---
 
-**Jupiter DCA (Beta)** is a dollar cost averaging solution to enable users to automate the purchase or sale of any SPL tokens at a regular intervals over a certain period of time.
+**Jupiter DCA** is a dollar cost averaging solution to enable users to automate the purchase or sale of any SPL tokens at a regular intervals over a certain period of time.
 
-:::info
-**For Beta phase**, there is a minimum requirement of USD $1 and a maximum of USD $5,000 in deposit value regardless of what token you use to create a DCA order, we use Jupiter [Price API](/docs/apis/price-api) to determine the dollar value.
-:::
 
 ![DCA1](../img/dca/dca1.jpg)
 
-1. **DCA (Beta)** tab along with Jupiter suite of products.
+1. **DCA** tab along with Jupiter suite of products.
 2. **Input Token Selector** for token that you are looking to spend/ sell/ swap from.
 3. **Input field** for the amount of input tokens that you are looking to spend/ sell/ swap from.
-4. **Output Token Selector** for token that you are looking to buy/ swap into. *(In beta phase, we are restricting to only Top 20 tokens traded on Jupiter)*
+4. **Output Token Selector** for token that you are looking to buy/ swap into.
 5. **Frequency** of purchase/ sale of tokens over a period of duration, selection from hour, day, week, and month.
 6. **Duration** for the purchase/ sale of tokens.
 7. **Order Summary** for the current DCA order that you are placing/ submitting. From the screenshot example:
