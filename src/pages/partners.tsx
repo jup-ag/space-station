@@ -11,7 +11,7 @@ const payment = '/img/payment.png';
 const nft = '/img/nft.png';
 const game = '/img/game.png';
 
-const phantom = '/img/wallet/phantom.png';
+const phantom = '/img/wallet/phantom.svg';
 const solflare = '/img/wallet/solflare.svg';
 const ultimate = '/img/wallet/ultimate.png';
 const brave = '/img/wallet/brave.png';
@@ -636,7 +636,7 @@ export default function Home(): JSX.Element {
               </Link>
 
               {sections.map((section) => (
-                <Link href={`?category=${section.title}`}>
+                <Link key={section.id} href={`?category=${section.title}`}>
                   <div
                     role="listitem"
                     className="inline-block"
