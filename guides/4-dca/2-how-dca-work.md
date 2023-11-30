@@ -15,12 +15,6 @@ description: "Jupiter DCA 101"
 To minimise the predictability of your DCA strategy, orders are filled within a randomised padding of +/- 30 seconds.
 :::
 
-:::success Beta Limits
-- During the beta phase, there's a minimum of USD 1 and maximum USD 5,000 worth of tokens to be used for DCA e.g.:
-- If $SOL is USD20, the minimum amount of SOL you can use is USD 1 / USD 20 = 0.05 SOL
-- If $SOL is USD20, the maximum amount of SOL you can use is USD5000 / USD20 = 250 SOL
-:::
-
 ---
 
 ## Order Mechanism
