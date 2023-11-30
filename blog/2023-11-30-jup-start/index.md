@@ -1,9 +1,9 @@
 ---
 slug: jup-start
-title: "Grow The Pie Update 2: Jupiter Start"
+title: "Grow The Pie Update #2"
 ---
 
-# "Grow The Pie" Update 2: Jupiter Start
+## Grow The Pie Update #2: Jupiter Start
 
 At Breakpoint, we presented 3 major initiatives to grow the Solana Pie: $JUP, Jupiter Start, and Jupiter Labs. Today, after extensive discussions with the ecosystem, we are delighted to elaborate more about Jupiter Start.
 
@@ -91,6 +91,3 @@ The most challenging thing about this whole endeavor is defining what 'good' mea
 As such, we are designing Jupiter Start in a way such that the team is not the only entity involved in the process – instead, the community will play a leading role in proposing, deciding, or vetoing these endeavors.
 
 Let's make Solana and crypto a better place for both good new projects and users - our moms will be very proud if that happens!
-
-Love,  
-M
