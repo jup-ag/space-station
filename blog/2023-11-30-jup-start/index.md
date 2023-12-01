@@ -1,5 +1,5 @@
 ---
-slug: grow-the-pie-2
+slug: jup-start
 title: "Grow The Pie Update #2"
 ---
 
