@@ -85,6 +85,7 @@ const helio = '/img/payment/helio.svg';
 const sphere = '/img/payment/sphere.svg';
 const elusiv = '/img/payment/elusiv.svg';
 
+const sniper = '/img/nft/sniper.svg';
 const famousfoxfederation = '/img/nft/fff.png';
 const hadeswap = '/img/nft/hadeswap.png';
 const hyperspace = '/img/nft/hyperspace.svg';
@@ -534,6 +535,11 @@ const sections = [
     ),
     description: `NFTs (Non-Fungible Tokens) marketplaces refer to online platforms where individuals can buy, sell, and trade unique digital assets represented as NFTs. NFTs are digital assets that are verified on a blockchain network and are used to represent unique digital items such as artwork, music, videos, and more.`,
     cards: [
+      {
+        title: 'Sniper',
+        logo: sniper,
+        link: 'https://sniper.xyz/',
+      },
       {
         title: 'Hyperspace',
         logo: hyperspace,
