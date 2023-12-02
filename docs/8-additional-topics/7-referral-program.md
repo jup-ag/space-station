@@ -31,3 +31,55 @@ const [feeAccount] = await PublicKey.findProgramAddressSync(
 ```
 
 When passing in the fee token account, please make sure that the fee token account exists.
+
+You can make sure the fee token account exists with code like below:
+
+```
+export async function getPlatformFeeAccounts(
+  connection,
+  referralAccountAddress
+) {
+  const referralAccountPubKey = new PublicKey(referralAccountAddress);
+  const referralProgramId = new PublicKey(
+    "REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3"
+  );
+  const projectId = new PublicKey(
+    "45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp"
+  );
+
+  const feeAccounts = new Map();
+  await Promise.all(
+    [TOKEN_PROGRAM_ID, TOKEN_2022_PROGRAM_ID].map(async (programId) => {
+      const mintSet = new Set();
+
+      // get all token accounts belong to project
+      const allTokenAccounts = await connection.getTokenAccountsByOwner(
+        projectId,
+        { programId }
+      );
+
+      // get unique mint and all token accounts
+      allTokenAccounts.value.map((tokenAccount) => {
+        const accountData = AccountLayout.decode(tokenAccount.account.data);
+        if (!mintSet.has(accountData.mint.toBase58())) {
+          const [address] = PublicKey.findProgramAddressSync(
+            [
+              Buffer.from("referral_ata"),
+              referralAccountPubKey.toBuffer(),
+              accountData.mint.toBuffer(),
+            ],
+            referralProgramId
+          );
+
+          if (address.equals(tokenAccount.pubkey)) {
+            mintSet.add(accountData.mint.toBase58());
+            feeAccounts.set(accountData.mint, address);
+          }
+        }
+      });
+    })
+  );
+
+  return feeAccounts;
+}
+```
