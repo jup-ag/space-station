@@ -17,9 +17,9 @@ Jupiter Start will be our year-long initiative to do so, banking on close collab
 
 The 5 aspects of Jupiter Start are:
 
-- [Jupiter Start: Community Intro](./jupiter-start/community-intro)
-- [Jupiter Start: Educate](./jupiter-start/educate)
-- [Jupiter Start: Pre-Listing](./jupiter-start/pre-listing)
+- [Jupiter Start: Community Intro](./2-jupiter-start/1-community-intro.md)
+- [Jupiter Start: Educate](./2-jupiter-start/2-educate.md)
+- [Jupiter Start: Pre-Listing](./2-jupiter-start/3-pre-listing.md)
 - Jupiter Start: Launchpad (Soon)
 - Jupiter Start: Atlas (Soon)
 

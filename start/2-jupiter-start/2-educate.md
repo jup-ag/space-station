@@ -10,7 +10,7 @@ Each education campaign is expected to run for at least one week. During this ti
 
 To participate, projects should meet the following requirements:
 
-- Introduce themselves in the [Jupiter Start: Community Introduction](../jupiter-start/community-intro) and obtain attestation from community members.
+- Introduce themselves in the [Jupiter Start: Community Introduction](../2-jupiter-start/1-community-intro.md) and obtain attestation from community members.
 
 - Provide write-ups for the Educate page.
 

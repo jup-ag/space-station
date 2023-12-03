@@ -8,7 +8,7 @@ Jupiter Start: Pre-Listing is designed to facilitate the seamless availability o
 
 To participate, projects should meet the following requirements:
 
-- Introduce themselves in the [Jupiter Start: Community Introduction](../jupiter-start/community-intro) and gain attestation from community members.
+- Introduce themselves in the [Jupiter Start: Community Introduction](../2-jupiter-start/1-community-intro.md) and gain attestation from community members.
 
 - Specify the exact start time for liquidity to be added to the on-chain markets *(this information will remain confidential)*.
 
