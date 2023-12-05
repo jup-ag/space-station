@@ -4,7 +4,7 @@ description: "Run the swap API with your own infra"
 title: "Self-hosted V6 Swap API"
 ---
 
-Advanced users can run a self-hosted Jupiter Swap API, you can download the jupiter-swap-api [here](https://github.com/jup-ag/jupiter-swap-api/releases).
+Advanced users can run a self-hosted Jupiter Swap API, you can download the jupiter-swap-api [here](https://github.com/jup-ag/jupiter-swap-api/releases). Alternatively, users can contact an RPC provider such as [Helius](https://www.helius.dev/) or [Triton](https://triton.one/) to set up a gRPC node with Jupiter's Swap API.
 
 ## Prerequisites
 
