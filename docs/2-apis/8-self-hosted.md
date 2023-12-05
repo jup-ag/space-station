@@ -6,9 +6,18 @@ title: "Self-hosted V6 Swap API"
 
 Advanced users can run a self-hosted Jupiter Swap API, you can download the jupiter-swap-api [here](https://github.com/jup-ag/jupiter-swap-api/releases).
 
+Mission-critical use cases, like liquidations and oracles, can deploy their own API servers relying on their own RPC nodes to entirely decouple their systems from Jupiter infrastructure.
+
+Integrators load is no longer restricted by the public API rate limits.
+
 ## Prerequisites
 
-- Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
+A Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
+
+The following RPC providers can provide a RPC node with the geyser plugin:
+
+- [Triton](https://triton.one)
+- [Helius](https://docs.helius.dev) Use our referral link TfQej6RVw5 for 5m credits!
 
 ## Usage
 
