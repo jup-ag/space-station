@@ -29,3 +29,8 @@ For projects, the benefits include:
 - Visibility: The token will be available in the token selector and selectable by users before liquidity starts to flow. We will also promote it and direct traffic on our main swap site with a banner.
 
 - Tokens will be marked with a `New` tag to have more visibility
+
+
+:::info
+Do get in touch with us through Discord or Twitter/X if you want to coordinate the launch with us. 
+:::
