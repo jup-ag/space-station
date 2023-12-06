@@ -1,5 +1,5 @@
 ---
-slug: jup-plantary-dev-update
+slug: jup-planetary-dev-update
 title: "Jupiter Planetary Developer Week"
 ---
 
@@ -91,7 +91,7 @@ The Token Ledger caters to a wide range of use cases, which include but are not 
 - Facilitating the exchange of NFTs for tokens other than SOL.
 
 Read more about the Token Ledger:
-https://station.jup.ag/docs/v6-beta/swap-api#using-token-ledger-instruction
+https://station.jup.ag/docs/apis/swap-api#using-token-ledger-instruction
 
 ### Referral Fees Program to Simplify Fee Collection
 In our pursuit of making life easier for our partners, we've streamlined the process of charging referral fees with the new referral fees program.
@@ -109,7 +109,7 @@ The partner journey is now hyper easy - They head over to Jupiter, create a refe
 
 Give our dashboard a spin here: https://referral.jup.ag
 
-Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/v6-beta/adding-fees
+Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/apis/adding-fees
 
 More info on Jupiter Referral Program: https://station.jup.ag/docs/additional-topics/referral-program
 
@@ -131,7 +131,7 @@ For CPI to work, the transaction will be composed of these instructions:
 4. The program then transfers the SOL back to the user.
 
 
-Read more here: https://station.jup.ag/docs/v6-beta/cpi
+Read more here: https://station.jup.ag/docs/apis/cpi
 
 The CPI approach is not without its limitations - because of Solana’s transaction limit of 1232 byte size, lookup tables cannot be used within a CPI call, swaps via CPI can fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. Instead, we recommend taking the “flash-fil” approach to utilizing Jupiter Swap.
 
@@ -149,7 +149,7 @@ For Flash Fill to work, the transaction will be composed of these instructions:
 
 This approach entirely bypasses the need for CPI calls, effectively sidestepping the constraints imposed by CPI.
 
-To delve deeper into these two approaches, check out our documentation here: https://station.jup.ag/docs/v6-beta/flash-fill
+To delve deeper into these two approaches, check out our documentation here: https://station.jup.ag/docs/apis/flash-fill
 
 ## Partners Using v6 API
 A big shout out to our key early adopters for running our v6 API and helping us improve our stability and features. Check out how they are using Jupiter to power their use cases.
@@ -194,7 +194,7 @@ ExactOut is particularly useful in scenarios involving the purchase of NFTs, all
 The good news is that since the NFT Marketplace has integrated ExactOut into its interface, you can simply purchase the 40 SOL NFT and Jupiter swap would automatically calculate the most optimal amount of BONK required to purchase the 40 SOL NFT. This is achieved in a single click, eliminating the need to leave the site or perform additional calculations, while ensuring that you receive the best possible price through Jupiter.
 This is extremely important to Solana as payments are a crucial part of bridging crypto with real-life applications, ultimately contributing to the mainstream adoption of the Solana ecosystem.
 
-Read more about ExactOut here: https://station.jup.ag/docs/v6-beta/payments-api
+Read more about ExactOut here: https://station.jup.ag/docs/apis/payments-api
 
 ### ExactOut Showcase #1 - Sollinked
 
@@ -414,19 +414,19 @@ Without further ado, let’s dive in.
 
 ### Solana, the major blockchain for on-chain gaming
 
-On-chain games are introducing a paradigm shift in the way players interact, own and experience new forms of entertainment. It’s no surprise Solana stands out as a major blockchain for on-chain gaming, thanks to its high throughput, low transaction fees, and robust ecosystem. Its ability to process thousands of transactions per second ensures that gamers experience minimal latency, creating a seamless and enjoyable gaming experience. 
+On-chain games are introducing a paradigm shift in the way players interact, own and experience new forms of entertainment. It’s no surprise Solana stands out as a major blockchain for on-chain gaming, thanks to its high throughput, low transaction fees, and robust ecosystem. Its ability to process thousands of transactions per second ensures that gamers experience minimal latency, creating a seamless and enjoyable gaming experience.
 
 Furthermore, Solana’s vibrant community and extensive developer tools make it an attractive platform for game developers of all sorts, from those looking to infuse their game with on-chain assets to the ones pushing the boundaries with fully-on-chain games.
 
-Solana is also designed to be interoperable with other blockchain networks. This means game developers can easily add Solana-based games to other blockchain platforms, allowing for seamless user experience. 
+Solana is also designed to be interoperable with other blockchain networks. This means game developers can easily add Solana-based games to other blockchain platforms, allowing for seamless user experience.
 
-As the gaming sector grows, Solana is poised to take the lead in on-chain gaming over all the other chains.  
+As the gaming sector grows, Solana is poised to take the lead in on-chain gaming over all the other chains.
 
 ### Solana Unity SDK and its main features
 
-[**MagicBlock**](https://www.magicblock.gg/), the team behind the Solana Unity SDK, is an end-to-end infrastructure provider for on-chain gaming on Solana, empowering developers to create a new category of composable and permissionless gaming experiences. 
+[**MagicBlock**](https://www.magicblock.gg/), the team behind the Solana Unity SDK, is an end-to-end infrastructure provider for on-chain gaming on Solana, empowering developers to create a new category of composable and permissionless gaming experiences.
 
-The Solana Unity SDK simplifies the integration of Solana-based NFTs, tokens, and on-chain programs into Unity games, making it easier for game developers to create web3 games and experiences. 
+The Solana Unity SDK simplifies the integration of Solana-based NFTs, tokens, and on-chain programs into Unity games, making it easier for game developers to create web3 games and experiences.
 
 **Some features of Solana.Unity-SDK:**
 
@@ -443,9 +443,9 @@ Give the SDK a spin here: https://github.com/magicblock-labs/Solana.Unity-SDK
 
 ### Jupiter x Solana.Unity-SDK Native Integration to Power Gaming
 
-As the liquidity infrastructure of Solana, Jupiter provides the best rates and deep liquidity from across the ecosystem. This is important in gaming contexts where gamers trade in-game assets frequently, especially rare assets that are very valuable. The best prices and higher liquidity makes it much easier for the gamers to stay within the game to trade these assets, improving the overall gaming experience. 
+As the liquidity infrastructure of Solana, Jupiter provides the best rates and deep liquidity from across the ecosystem. This is important in gaming contexts where gamers trade in-game assets frequently, especially rare assets that are very valuable. The best prices and higher liquidity makes it much easier for the gamers to stay within the game to trade these assets, improving the overall gaming experience.
 
-Jupiter is natively supported in the Solana.Unity-SDK and runs the v6 Quote API and ExactOut v2 API for the best swap prices. 
+Jupiter is natively supported in the Solana.Unity-SDK and runs the v6 Quote API and ExactOut v2 API for the best swap prices.
 
 The integration features:
 
@@ -456,22 +456,22 @@ The integration features:
 This integration caters to a wide range of use cases, which include but are not limited to:
 - Marketplace purchases
 - In-game payment with any coin
-- Asset swaps 
+- Asset swaps
 - Gamified trading experiences
 
 Ready to include Jupiter into your game? Check out the docs here: https://docs.magicblock.gg/SolanaUnitySDK/guides/jupiter
 
 ### Showcase - DeFi Land
 
-[DeFi Land](https://defiland.app/) is a multi-chain agriculture-simulation game created to gamify Decentralized Finance. While there are games that make use of the blockchain, DeFi Land takes DeFi as a whole and aggregates the various actions that can be taken on each DeFi platform and turns them into an interactive game that can be played. 
+[DeFi Land](https://defiland.app/) is a multi-chain agriculture-simulation game created to gamify Decentralized Finance. While there are games that make use of the blockchain, DeFi Land takes DeFi as a whole and aggregates the various actions that can be taken on each DeFi platform and turns them into an interactive game that can be played.
 
 Check out how Defi Land has integrated Jupiter to power their in-game Market, taking the entire experience of DeFi swaps to the next level.
 
 ![DefiLand](defillanddemo.gif)
 
-DeFi Land is built with the Unity Engine 2021.2.1 and uses the IDexAggregator interface in the SDK to create their Market. 
+DeFi Land is built with the Unity Engine 2021.2.1 and uses the IDexAggregator interface in the SDK to create their Market.
 
-The interface provides convenient methods for performing swaps and accepting payment - while working seamlessly on any platform. Most notably, DeFi Land is also available as xNFT where players directly leverage Backpack to perform in-game swaps, powered by Jupiter.  
+The interface provides convenient methods for performing swaps and accepting payment - while working seamlessly on any platform. Most notably, DeFi Land is also available as xNFT where players directly leverage Backpack to perform in-game swaps, powered by Jupiter.
 
 ### Ending Words
 
@@ -483,7 +483,7 @@ Jupiter is Solana's liquidity hub, offering the best prices and deep liquidity, 
 
 This marks the end of our inaugural Jupiter Planetary Developer Week. It was an amazing week of developer focused updates where we unveiled the spanking new v6 API with Metis for routing, Referral Fees System for easy fee management, ExactOut v2 for Payments, Terminal v2 for the easiest way to integrate Jupiter, Unified Wallet Kit for the best wallet integration experience and showcasing Jupiter for games. We are committed to making things easy for you to create awesome liquidity use cases.
 
-All these just in time for the Breakpoint Conference happening next week! Thanks for following through all days of our massive update, we hope you had supercharged your BUILDling journey with us. 
+All these just in time for the Breakpoint Conference happening next week! Thanks for following through all days of our massive update, we hope you had supercharged your BUILDling journey with us.
 
 **Come talk to us and join our upcoming talks at Breakpoint**
 

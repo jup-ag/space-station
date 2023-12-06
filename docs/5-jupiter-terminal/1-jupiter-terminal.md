@@ -58,7 +58,7 @@ With several templates to get you started, and auto generated code snippets.
 - Fees Support
   - Customisable fees
   - Track fees with Jupiter Referral Dashboard
-  
+
 ## Getting Started
 
 - [Demo + Auto Code Gen](https://terminal.jup.ag)
@@ -110,7 +110,7 @@ window.Jupiter.init({});
 ### 3. Setup other props
 ```tsx
 window.Jupiter.init({
-  /** Required 
+  /** Required
    * Solana RPC endpoint
    * We do not recommend using the public RPC endpoint for production dApp, you will get severely rate-limited
   */
@@ -160,7 +160,7 @@ Similar to Jupiter, Jupiter Terminal supports fee for integrators.
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. 20 bps for 0.2% of the token output.
 
-Refer to [Adding your own fees](https://docs.jup.ag/docs/v6-beta/adding-fees) docs for more details.
+Refer to [Adding your own fees](/docs/APIs/adding-fees) docs for more details.
 
 _Note: You will need to create the Token fee accounts to collect the platform fee._
 

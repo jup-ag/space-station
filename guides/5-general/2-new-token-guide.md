@@ -8,14 +8,14 @@ description: "Step-by-step guide of how to start a new token and get it on Jupit
 
 ## Minting a new token
 
-There are multiple ways of creating/ minting a new set of fungible tokens. 
+There are multiple ways of creating/ minting a new set of fungible tokens.
 Here are some of the available tools to minting new tokens.
 
 **Tools:**
 
-- Solana Token Program (CLI): https://spl.solana.com/token 
-- Solana Tools: https://solanatools.vercel.app/spltoken 
-- Dexlab: https://www.dexlab.space/mintinglab/spl-token 
+- Solana Token Program (CLI): https://spl.solana.com/token
+- Solana Tools: https://solanatools.vercel.app/spltoken
+- Dexlab: https://www.dexlab.space/mintinglab/spl-token
 
 
 ![Dexlab Token Mint](../img/dexlab-mint1.jpg)
@@ -33,7 +33,7 @@ After which, Jupiter will be able to pick up your market automatically.
 
 ![Meteora](../img/meteora1.jpg)
 
-#### [Orca](https://www.orca.so/liquidity/create) 
+#### [Orca](https://v1.orca.so/liquidity/create)
 
 ![Orca](../img/orca1.jpg)
 
@@ -42,7 +42,7 @@ After which, Jupiter will be able to pick up your market automatically.
 ![Raydium](../img/raydium1.jpg)
 
 
-:::info 
+:::info
 Jupiter has a minimum liquidity requirement to be able to pick up your market, to enable trading on Jupiter.
 Read more [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup)
 :::
@@ -53,7 +53,7 @@ Jupiter validated token list is built up together with partners and our communit
 
 ## Integrating Jupiter Terminal
 
-Another good way of integrating Jupiter is through Jupiter Terminal. Where you can have all the functionalities and features of Jupiter with just a few lines of code. 
+Another good way of integrating Jupiter is through Jupiter Terminal. Where you can have all the functionalities and features of Jupiter with just a few lines of code.
 
 Here's a more detailed developers docs for more information [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/jupiter-terminal/jupiter-terminal)
 
