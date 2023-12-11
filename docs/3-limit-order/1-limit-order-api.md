@@ -2,12 +2,12 @@
 sidebar_label: Limit Order API
 description: Run a limit order bot with Javascript
 ---
+
 # Run a limit order bot with Javascript
 
 Jupiter Limit Order provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
 
 ![limit](limit-order.jpeg)
-
 
 ## Create Limit Order
 
@@ -24,17 +24,19 @@ npm i bs58
 
 **2. Import from libraries and setup connection**
 
-Next you can copy the following code snippets to a javascript file *jupiter-api-example.js*. And when you are ready to run the code, just type: *node jupiter-api-example.js*
+Next you can copy the following code snippets to a javascript file _jupiter-api-example.js_. And when you are ready to run the code, just type: _node jupiter-api-example.js_
 
 ```js
-import { Connection, Keypair, VersionedTransaction } from '@solana/web3.js';
-import fetch from 'cross-fetch';
-import { Wallet } from '@project-serum/anchor';
-import bs58 from 'bs58';
+import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
+import fetch from "cross-fetch";
+import { Wallet } from "@project-serum/anchor";
+import bs58 from "bs58";
 
 // It is recommended that you use your own RPC endpoint.
 // This RPC endpoint is only for demonstration purposes so that this example will run.
-const connection = new Connection('https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/');
+const connection = new Connection(
+  "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
+);
 ```
 
 :::info
@@ -46,8 +48,12 @@ Always make sure that you are using your own RPC endpoint. The RPC endpoint used
 In this example, you can paste in your private key for testing purposes but this is not recommended for production applications.
 
 ```js
-const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
-const referral = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.REFERRAL_PRIVATE_KEY || '')));
+const wallet = new Wallet(
+  Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || ""))
+);
+const referral = new Wallet(
+  Keypair.fromSecretKey(bs58.decode(process.env.REFERRAL_PRIVATE_KEY || ""))
+);
 ```
 
 **4. Get the serialized transactions to perform the swap**
@@ -91,7 +97,7 @@ const { tx } = transactions;
 
 ```js
 // deserialize the transaction
-const transactionBuf = Buffer.from(tx, 'base64');
+const transactionBuf = Buffer.from(tx, "base64");
 var transaction = VersionedTransaction.deserialize(transactionBuf);
 
 // sign the transaction using the required key
@@ -103,17 +109,16 @@ transaction.sign([wallet.payer, base]);
 
 ```js
 // Execute the transaction
-const rawTransaction = transaction.serialize()
+const rawTransaction = transaction.serialize();
 const txid = await connection.sendRawTransaction(rawTransaction, {
   skipPreflight: true,
-  maxRetries: 2
+  maxRetries: 2,
 });
 await connection.confirmTransaction(txid);
 console.log(`https://solscan.io/tx/${txid}`);
 ```
 
 ## Query user open order, order history and trade history
-
 
 <details>
   <summary>
@@ -125,9 +130,11 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query   | Type     | Required |
-|-------------|----------|----------|
-| `wallet`    | string   | Yes      |
+| Query        | Type   | Required |
+| ------------ | ------ | -------- |
+| `wallet`     | string | No       |
+| `inputMint`  | string | No       |
+| `outputMint` | string | No       |
 
 ### Response
 
@@ -140,24 +147,24 @@ console.log(`https://solscan.io/tx/${txid}`);
       </span>
     </summary>
 
-  ```json
-  [​
-    {​
-      "publicKey": "string",​
-      "account": {​
-        "maker": "string",​
-        "inputMint": "string",​
-        "outputMint": "string",​
-        "oriInAmount": 0,​
-        "oriOutAmount": 0,​
-        "inAmount": 0,​
-        "outAmount": 0,​
-        "expiredAt": 0,​
-        "base": "string"​
-      }​
+```json
+[​
+  {​
+    "publicKey": "string",​
+    "account": {​
+      "maker": "string",​
+      "inputMint": "string",​
+      "outputMint": "string",​
+      "oriInAmount": 0,​
+      "oriOutAmount": 0,​
+      "inAmount": 0,​
+      "outAmount": 0,​
+      "expiredAt": 0,​
+      "base": "string"​
     }​
-  ​]
-  ```
+  }​
+​]
+```
 
   </details>
 
@@ -188,12 +195,12 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query   | Type     | Required |
-|-------------|----------|----------|
-| `wallet`    | string   | Yes      |
-| `cursor`    | number   | No      |
-| `skip`    | number   | No      |
-| `take`    | number   | No      |
+| Query    | Type   | Required |
+| -------- | ------ | -------- |
+| `wallet` | string | Yes      |
+| `cursor` | number | No       |
+| `skip`   | number | No       |
+| `take`   | number | No       |
 
 ### Response
 
@@ -206,27 +213,27 @@ console.log(`https://solscan.io/tx/${txid}`);
       </span>
     </summary>
 
-  ```json
-  [​
-    {​
-      "id": 0,​
-      "orderKey": "string",​
-      "maker": "string",​
-      "inputMint": "string",​
-      "outputMint": "string",​
-      "inAmount": 0,​
-      "oriInAmount": 0,​
-      "outAmount": 0,​
-      "oriOutAmount": 0,​
-      "expiredAt": 0,​
-      "state": "Waiting",​
-      "createTxid": "string",​
-      "cancelTxid": "string",​
-      "updatedAt": "2023-05-05T07:48:36.390Z",​
-      "createdAt": "2023-05-05T07:48:36.390Z"​
-    }​
+```json
+[​
+  {​
+    "id": 0,​
+    "orderKey": "string",​
+    "maker": "string",​
+    "inputMint": "string",​
+    "outputMint": "string",​
+    "inAmount": 0,​
+    "oriInAmount": 0,​
+    "outAmount": 0,​
+    "oriOutAmount": 0,​
+    "expiredAt": 0,​
+    "state": "Waiting",​
+    "createTxid": "string",​
+    "cancelTxid": "string",​
+    "updatedAt": "2023-05-05T07:48:36.390Z",​
+    "createdAt": "2023-05-05T07:48:36.390Z"​
+  }​
 ​  ]
-  ```
+```
 
   </details>
 
@@ -258,12 +265,14 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query   | Type     | Required |
-|-------------|----------|----------|
-| `wallet`    | string   | Yes      |
-| `cursor`    | number   | No      |
-| `skip`    | number   | No      |
-| `take`    | number   | No      |
+| Query        | Type   | Required |
+| ------------ | ------ | -------- |
+| `wallet`     | string | No       |
+| `inputMint`  | string | No       |
+| `outputMint` | string | No       |
+| `cursor`     | number | No       |
+| `skip`       | number | No       |
+| `take`       | number | No       |
 
 ### Response
 
@@ -276,23 +285,23 @@ console.log(`https://solscan.io/tx/${txid}`);
       </span>
     </summary>
 
-  ```json
-  [​
-  {​
+```json
+[​
+{​
+  "id": 0,​
+  "outAmount": 0,​
+  "txid": "string",​
+  "updatedAt": "2023-05-05T07:48:36.390Z",​
+  "createdAt": "2023-05-05T07:48:36.390Z",​
+  "order": {​
     "id": 0,​
-    "outAmount": 0,​
-    "txid": "string",​
-    "updatedAt": "2023-05-05T07:48:36.390Z",​
-    "createdAt": "2023-05-05T07:48:36.390Z",​
-    "order": {​
-      "id": 0,​
-      "orderKey": "string",​
-      "inputMint": "string",​
-      "outputMint": "string"​
-    }​
+    "orderKey": "string",​
+    "inputMint": "string",​
+    "outputMint": "string"​
   }​
+}​
 ​]
-  ```
+```
 
   </details>
 
@@ -315,7 +324,6 @@ console.log(`https://solscan.io/tx/${txid}`);
 </details>
 
 ## Cancel order
-
 
 <details>
   <summary>
@@ -348,9 +356,9 @@ console.log(`https://solscan.io/tx/${txid}`);
       </span>
     </summary>
 
-  ```json
-  { "tx": "string"​ }
-  ```
+```json
+{ "tx": "string"​ }
+```
 
   </details>
   <details>
