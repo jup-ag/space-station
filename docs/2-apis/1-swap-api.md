@@ -509,3 +509,8 @@ const transaction = await (
 ```
 
 If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
+
+## Examples
+
+* Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
+* Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-examplehttps://github.com/jup-ag/jupiter-api-rust-example)
