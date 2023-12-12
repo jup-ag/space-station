@@ -500,8 +500,9 @@ const transaction = await (
       quoteResponse,
       // user public key to be used for the swap
       userPublicKey: wallet.publicKey.toString(),
+      dynamicComputeUnitLimit: true, // allow dynamic compute limit instead of max 1,400,000
       // custom priority fee
-      computeUnitPriceMicroLamports: 1000 // or 'auto',
+      prioritizationFeeLamports: 'auto' // or custom lamports: 1000
     })
   })
 ).json();
