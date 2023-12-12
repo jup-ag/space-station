@@ -508,4 +508,4 @@ const transaction = await (
 ).json();
 ```
 
-If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 1,000,000 lamports.
+If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
