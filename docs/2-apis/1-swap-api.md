@@ -500,11 +500,17 @@ const transaction = await (
       quoteResponse,
       // user public key to be used for the swap
       userPublicKey: wallet.publicKey.toString(),
+      dynamicComputeUnitLimit: true, // allow dynamic compute limit instead of max 1,400,000
       // custom priority fee
-      computeUnitPriceMicroLamports: 1000 // or 'auto',
+      prioritizationFeeLamports: 'auto' // or custom lamports: 1000
     })
   })
 ).json();
 ```
 
-If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 1,000,000 lamports.
+If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
+
+## Examples
+
+* Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
+* Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-examplehttps://github.com/jup-ag/jupiter-api-rust-example)
