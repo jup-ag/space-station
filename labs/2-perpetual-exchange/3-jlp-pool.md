@@ -4,7 +4,7 @@ title: "JLP Pool"
 description: How to Become Liquidity Provider
 ---
 
-Users can become Liquidity Providers (LPs) by allocating their assets or tokens into the Jupiter Liquidity Provider Pool (JLP Pool) and in return, receive 70% of the fees, compounding into the price of JLP.
+Users can become Liquidity Providers (LPs) by allocating their assets or tokens into the Jupiter Liquidity Provider Pool (JLP Pool) and in return, you will get the JLP token. JLP token receives 70% of the fees, compounding into the price of JLP.
 
 ### JLP, Liquidity Provider Token
 
