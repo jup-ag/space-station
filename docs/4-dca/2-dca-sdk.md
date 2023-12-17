@@ -5,9 +5,15 @@ description: Typescript / Javascript
 
 # Integrating DCA (JS/TS)
 
+> Following code is tested to work with
+```
+NodeJS v20
+@jup-ag/dca-sdk@2.3.5
+```
+
 To ease integration, you may use [DCA SDK](https://www.npmjs.com/package/@jup-ag/dca-sdk?activeTab=readme)
 
-The following example is for a nodejs environment but you can also adapt it to work in a frontend browser application. The only difference is in how you sign and send a transaction.
+The following example is for a NodeJS environment but you can also adapt it to work in a frontend browser application. The only difference is in how you sign and send a transaction.
 
 Code example and description as comments in-line:
 
@@ -16,7 +22,7 @@ Code example and description as comments in-line:
 mkdir dca-bot
 cd dca-bot
 npm init -y
-npm i @solana/web3.js @jup-ag/dca-sdk dotenv
+npm i @solana/web3.js @jup-ag/dca-sdk@2.3.5 dotenv
 ```
 
 2. Create a Typescript file with the following:
