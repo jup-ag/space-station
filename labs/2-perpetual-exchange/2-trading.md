@@ -67,11 +67,11 @@ In the event of manually closing a position, the associated trigger orders will 
 
 ## Liquidations
 
-In the scenario of opening a long position in SOL, where the position size surpasses the collateral value, there exists a critical point known as the Liquidation Price. This price is calculated based on the threshold where the loss amount, collateral value, and borrow fee collectively dip below 0.5% of your position's size. If the token's price surpasses this point, the system will automatically close the position.
+In the scenario of opening a long position in SOL, where the position size surpasses the collateral value, there exists a critical point known as the Liquidation Price. This price is calculated based on the threshold where the loss amount, collateral value, and borrow fee collectively dip below 0.2% of your position's size. If the token's price surpasses this point, the system will automatically close the position.
 
 It's crucial to note that the liquidation price is subject to change over time, particularly with leverage exceeding 10x and extended position durations. Regularly monitoring your liquidation price is essential. To mitigate the risk of liquidation, collateral adjustments and leverage fine-tuning can be performed through the `Edit` button in the position row, offering an avenue to add collateral and enhance the liquidation price.
 
-Upon liquidation, any remaining collateral, net of losses and fees, will be returned to your account.
+Upon liquidation, any remaining collateral, net of losses and fees, will be kept as liquidation fee to the JLP pool.
 
 ## Pricing
 
