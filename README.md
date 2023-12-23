@@ -8,12 +8,12 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 To install:
 ```
-yarn
+pnpm
 ```
 
 To build and start local development:
 ```
-yarn build && yarn start
+pnpm build && pnpm start
 ```
 
 ## Send us a PR to improve our documentation!
