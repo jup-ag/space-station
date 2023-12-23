@@ -514,3 +514,5 @@ If 'auto' is used, Jupiter will automatically set a priority fee for the transac
 
 * Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
 * Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-examplehttps://github.com/jup-ag/jupiter-api-rust-example)
+
+More issues? Head to [Troubleshooting](/docs/apis/troubleshooting) section.
