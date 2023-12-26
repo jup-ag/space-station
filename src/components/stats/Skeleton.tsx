@@ -1,13 +1,19 @@
-import classNames from 'classnames';
-import React from 'react';
+import clsx from "clsx";
+import React from "react";
 
-export const Skeleton = ({ className, style }: { className?: string; style?: React.CSSProperties }) => {
+export const Skeleton = ({
+  className,
+  style,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+}) => {
   return (
     <div
       style={style}
-      className={classNames(
-        'w-full h-12 bg-gray-300 rounded-lg animate-shine-reverse bg-skeleton dark:bg-skeleton-dark bg-200-auto',
-        className,
+      className={clsx(
+        "w-full h-12 bg-gray-300 rounded-lg animate-shine-reverse bg-skeleton dark:bg-skeleton-dark bg-200-auto",
+        className
       )}
     />
   );

@@ -23,7 +23,7 @@ All Jupiter swaps are using versioned transactions and address lookup tables. Bu
 
 ### Guide
 
-**1. Install the libraries**
+#### 1. Install the libraries
 
 To run this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). In your command line terminal, install the libraries.
 
@@ -34,7 +34,7 @@ npm i @project-serum/anchor
 npm i bs58
 ```
 
-**2. Import from libraries and setup connection**
+#### 2. Import from libraries and setup connection
 
 Next you can copy the following code snippets to a javascript file jupiter-api-example.js. And when you are ready to run the code, just type: *node jupiter-api-example.js*
 
@@ -53,7 +53,7 @@ const connection = new Connection('https://neat-hidden-sanctuary.solana-mainnet.
 Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore.
 :::
 
-**3. Setup your wallet**
+#### 3. Setup your wallet
 
 In this example, you can paste in your private key for testing purposes but this is not recommended for production applications.
 
@@ -61,7 +61,7 @@ In this example, you can paste in your private key for testing purposes but this
 const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
 ```
 
-**4. Retrieve the route map**
+#### 4. Retrieve the route map
 
 You can retrieve the route map to find out what tokens are listed on Jupiter and what swaps are possible with a particular token. The route map only returns the token mint addresses and not the token metadata.
 
@@ -127,7 +127,7 @@ const swappableOutputForSOL = generatedRouteMap['So11111111111111111111111111111
   }
 `}</style>
 
-**5. Get the route for a swap**
+#### 5. Get the route for a swap
 
 In this example, we try swapping SOL to USDC.
 
@@ -177,7 +177,7 @@ If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the qu
 The API takes in amount in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.
 :::
 
-**6. Get the serialized transactions to perform the swap**
+#### 6. Get the serialized transactions to perform the swap
 
 ```js
 // get serialized transactions for the swap
@@ -224,7 +224,7 @@ const { swapTransaction } = await (
 | `destinationTokenAccount` | String | No | Public key of the token account that will be used to receive the token out of the swap. If not provided, the user's ATA will be used. If provided, we assume that the token account is already initialized. |
 </details>
 
-**7. Deserialize and sign the transaction**
+#### 7. Deserialize and sign the transaction
 
 ```js
 // deserialize the transaction
@@ -236,7 +236,7 @@ console.log(transaction);
 transaction.sign([wallet.payer]);
 ```
 
-**8. Execute the transaction**
+#### 8. Execute the transaction
 
 ```js
 // Execute the transaction
@@ -514,3 +514,5 @@ If 'auto' is used, Jupiter will automatically set a priority fee for the transac
 
 * Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
 * Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-example)
+
+More issues? Head to [Troubleshooting](/docs/apis/troubleshooting) section.
