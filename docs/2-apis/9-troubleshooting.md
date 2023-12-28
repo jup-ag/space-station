@@ -35,6 +35,6 @@ The Jupiter API cannot fix this for you but we do have a few things that can hel
 
 ### Blockhash is Invaild/Not Found
 
-This can happen because of the decentralized nature of the chain. My local chain can be faster than your chain but they will eventually sync up. If you run into this problem, we suggest using `processed` commitment when submitting the transaction and use `confirmed` commitment to confirm your transaction. Setting `skipPreflight` to `true`` can be very helpful too when submitting the transaction. But this will mean that you will skip transaction simulation entirely.
+This can happen because of the decentralized nature of the chain. My local chain can be faster than your chain but they will eventually sync up. If you run into this problem, we suggest using `processed` commitment when submitting the transaction and use `confirmed` commitment to confirm your transaction. Setting `skipPreflight` to `true` can be very helpful too when submitting the transaction. But this will mean that you will skip transaction simulation entirely.
 
 If this problem persists, you can always set your own blockhash before submitting the transaction. You can check out a very helpful article [here](https://solanacookbook.com/guides/retrying-transactions.html#retrying-transactions).
