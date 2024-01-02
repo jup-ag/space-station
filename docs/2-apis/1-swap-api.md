@@ -55,47 +55,11 @@ Always make sure that you are using your own RPC endpoint. The RPC endpoint used
 
 #### 3. Setup your wallet
 
-In this example, you can paste in your private key for testing purposes but this is not recommended for production applications.
+You can paste in your private key for testing purposes but this is not recommended for production applications.
 
 ```js
 const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
 ```
-
-#### 4. Retrieve the route map
-
-You can retrieve the route map to find out what tokens are listed on Jupiter and what swaps are possible with a particular token. The route map only returns the token mint addresses and not the token metadata.
-
-```js
-// Retrieve the `indexed-route-map`
-const indexedRouteMap = await (await fetch('https://quote-api.jup.ag/v6/indexed-route-map')).json();
-const getMint = (index) => indexedRouteMap["mintKeys"][index];
-const getIndex = (mint) => indexedRouteMap["mintKeys"].indexOf(mint);
-
-// Generate the route map by replacing indexes with mint addresses
-var generatedRouteMap = {};
-Object.keys(indexedRouteMap['indexedRouteMap']).forEach((key, index) => {
-  generatedRouteMap[getMint(key)] = indexedRouteMap["indexedRouteMap"][key].map((index) => getMint(index))
-});
-
-// List all possible input tokens by mint address
-const allInputMints = Object.keys(generatedRouteMap);
-
-// List all possition output tokens that can be swapped from the mint address for SOL.
-// SOL -> X
-const swappableOutputForSOL = generatedRouteMap['So11111111111111111111111111111111111111112'];
-// console.log({ allInputMints, swappableOutputForSOL })
-```
-
-<details>
-  <summary>
-    <div>
-      <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v6/indexed-route-map</p>
-    </div>
-  </summary>
-
- ### Retrieve an indexed route map for all the possible token pairs you can swap between.
-</details>
 
 
 <style jsx>
@@ -127,9 +91,9 @@ const swappableOutputForSOL = generatedRouteMap['So11111111111111111111111111111
   }
 `}</style>
 
-#### 5. Get the route for a swap
+#### 4. Get the route for a swap
 
-In this example, we try swapping SOL to USDC.
+Here, we are getting a quote to swap from SOL to USDC.
 
 ```js
 // Swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
@@ -177,7 +141,9 @@ If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the qu
 The API takes in amount in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.
 :::
 
-#### 6. Get the serialized transactions to perform the swap
+#### 5. Get the serialized transactions to perform the swap
+
+Once we have the quote, we need to serialize the quote into a swap transaction that can be submitted on chain.
 
 ```js
 // get serialized transactions for the swap
@@ -224,7 +190,7 @@ const { swapTransaction } = await (
 | `destinationTokenAccount` | String | No | Public key of the token account that will be used to receive the token out of the swap. If not provided, the user's ATA will be used. If provided, we assume that the token account is already initialized. |
 </details>
 
-#### 7. Deserialize and sign the transaction
+#### 6. Deserialize and sign the transaction
 
 ```js
 // deserialize the transaction
@@ -236,7 +202,7 @@ console.log(transaction);
 transaction.sign([wallet.payer]);
 ```
 
-#### 8. Execute the transaction
+#### 7. Execute the transaction
 
 ```js
 // Execute the transaction
