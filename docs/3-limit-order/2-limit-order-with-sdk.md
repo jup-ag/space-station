@@ -2,6 +2,7 @@
 sidebar_label: "Limit Order with SDK"
 description: Compose Limit Order with the SDK
 ---
+
 # Compose Limit Order with the SDK
 
 ## Program Address
@@ -21,24 +22,25 @@ yarn add @jup-ag/limit-order-sdk
 **1. Import the needed libraries**
 
 ```js
-import { LimitOrderProvider } from '@jup-ag/limit-order-sdk'
+import { LimitOrderProvider } from "@jup-ag/limit-order-sdk";
 ```
 
-**2.  Load limit order instance with connection**
+**2. Load limit order instance with connection**
 
 ```js
 // It is recommended that you use your own RPC endpoint.
 // This RPC endpoint is only for demonstration purposes so that this example will run.
-const SOLANA_RPC_ENDPOINT = "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
+const SOLANA_RPC_ENDPOINT =
+  "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/";
 const connection = new Connection($SOLANA_RPC_ENDPOINT);
 
 const limitOrder = new LimitOrderProvider(
-    connection,
-    // referralPubKey and name are both optional
-    // provide both to get referral fees
-    // more details in the section below
-    referralPubKey,
-    referralName
+  connection,
+  // referralPubKey and name are both optional
+  // provide both to get referral fees
+  // more details in the section below
+  referralPubKey,
+  referralName
 );
 ```
 
@@ -48,14 +50,14 @@ const limitOrder = new LimitOrderProvider(
 // Base key are used to generate a unique order id
 const base = Keypair.generate();
 
-const {tx, orderPubKey} = await limitOrder.createOrder({
+const { tx, orderPubKey } = await limitOrder.createOrder({
   owner: owner.publicKey,
   inAmount: new BN(100000), // 1000000 => 1 USDC if inputToken.address is USDC mint
   outAmount: new BN(100000),
   inputMint: new PublicKey(inputToken.address),
   outputMint: new PublicKey(outputToken.address),
   expiredAt: null, // new BN(new Date().valueOf() / 1000)
-  base: base.publicKey
+  base: base.publicKey,
 });
 
 await sendAndConfirmTransaction(connection, tx, [owner, base]);
@@ -66,30 +68,30 @@ await sendAndConfirmTransaction(connection, tx, [owner, base]);
 ## Query user order and history
 
 ```js
-import { ownerFilter } from '@jup-ag/limit-order-sdk'
+import { ownerFilter } from "@jup-ag/limit-order-sdk";
 import { OrderHistoryItem, TradeHistoryItem } from "@jup-ag/limit-order-sdk";
 
-const openOrder = await limitOrder.getOrder([ownerFilter(owner.publicKey)]);
+const openOrder = await limitOrder.getOrders([ownerFilter(owner.publicKey)]);
 
 const orderHistory: OrderHistoryItem[] = await limitOrder.getOrderHistory({
-    wallet: owner.publicKey.toBase58(),
-    take: 20, // optional, default is 20, maximum is 100
-    // lastCursor: order.id // optional, for pagination
-})
+  wallet: owner.publicKey.toBase58(),
+  take: 20, // optional, default is 20, maximum is 100
+  // lastCursor: order.id // optional, for pagination
+});
 
 const orderHistoryCount: number = await limitOrder.getOrderHistoryCount({
-    wallet: owner.publicKey.toBase58()
-})
+  wallet: owner.publicKey.toBase58(),
+});
 
 const tradeHistory: TradeHistoryItem[] = await limitOrder.getTradeHistory({
-    wallet: owner.publicKey.toBase58(),
-    take: 20, // optional, default is 20, maximum is 100
-    // lastCursor: order.id // optional, for pagination
-})
+  wallet: owner.publicKey.toBase58(),
+  take: 20, // optional, default is 20, maximum is 100
+  // lastCursor: order.id // optional, for pagination
+});
 
 const tradeHistoryCount: number = await limitOrder.getTradeHistoryCount({
-    wallet: owner.publicKey.toBase58()
-})
+  wallet: owner.publicKey.toBase58(),
+});
 ```
 
 ## Cancel order
