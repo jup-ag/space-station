@@ -15,6 +15,8 @@ You can manage your Referral Account on `https://referral.jup.ag/` (currently on
 
 You can check out the Referral Javascript SDK [here](https://www.npmjs.com/package/@jup-ag/referral-sdk). For a list of methods that you can use, check out the source code [here](https://github.com/TeamRaccoons/referral/blob/main/packages/sdk/src/referral.ts).
 
+There are also examples on how to use the SDK [here](https://github.com/TeamRaccoons/referral/tree/main/example).
+
 ## Deriving the Fee Token Account
 
 The `feeAccount` is a PDA based on the referral account you have created with the dashboard above. Here is an example code on how to derive it:
