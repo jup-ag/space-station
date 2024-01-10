@@ -83,7 +83,7 @@ jupiter_cpi::cpi::shared_accounts_route(
     route_plan,
     in_amount,
     quoted_out_amount,
-    slippage_bos,
+    slippage_bps,
     platform_fee_bps,
 )?;
 
