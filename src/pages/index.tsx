@@ -218,7 +218,7 @@ export default function Home(): JSX.Element {
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    The <GradientText>Ultimate CEX Replacement</GradientText> 🚀
+                    The <GradientText>Best Decentralized Trading Platform in Crypto, Driving DeFi 2.0</GradientText> 🚀
                     on Solana
                   </h2>
                   <p className="mt-6 text-lg">
