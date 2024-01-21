@@ -75,3 +75,9 @@ Positions where the trader's collateral less fees and less unrealized losses is
 less than 0.5% of the position size are automatically closed.
 
 Extra fund from position closure will be returned to the trader automatically.
+
+### Oracle
+
+For the product to work, we depend on Pyth oracles on the trading prices. There are two types of oracles by Pyth that we are using, the `mainnet-beta` oracles and the `pythnet` oracles. For example, you can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
+
+For any positions, we first use the price reported by the `mainnet-beta` oracle first, from time to time, if the `mainnet-beta` oracle is behind or stale, we will use the `pythnet` oracle as the backup oracle.
