@@ -85,22 +85,15 @@ const tweetsCexReplacement: TweetCardProps[] = [
   },
   {
     author: {
-      name: "Topo Gigio",
-      username: "TopoGigio_sol",
+      name: "KEMOSABE",
+      username: "KEMOS4BE",
       image:
-        "https://pbs.twimg.com/profile_images/1743441039522775040/zsyVpoqT_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1734717290346668032/ZzuUh064_400x400.jpg",
     },
-    tweet: `Did you know?: @JupiterExchange has a bridge feature? Where it will compare rates and find you the most efficient path to $SOL
-
-    Jupiter, for me, is the single most important app on $SOL
-    
-    It is our Grand Central Station. 
-    
-    Love at first swap 
-    GM`,
-    time: new Date(2023, 11, 21, 22, 36),
-    permalink:
-      "https://twitter.com/TopoGigio_sol/status/1737844551317147964",
+    tweet:
+      "Jupiter is an objectively better dApp than uniswap, or any other app on the Ethereum network.",
+    time: new Date(2023, 11, 23, 8, 51),
+    permalink: "https://twitter.com/KEMOS4BE/status/1738361680978153537",
   },
   {
     author: {
@@ -128,15 +121,22 @@ const tweetsCexReplacement: TweetCardProps[] = [
   },
   {
     author: {
-      name: "KEMOSABE",
-      username: "KEMOS4BE",
+      name: "Topo Gigio",
+      username: "TopoGigio_sol",
       image:
-        "https://pbs.twimg.com/profile_images/1734717290346668032/ZzuUh064_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1743441039522775040/zsyVpoqT_400x400.jpg",
     },
-    tweet:
-      "Jupiter is an objectively better dApp than uniswap, or any other app on the Ethereum network.",
-    time: new Date(2023, 11, 23, 8, 51),
-    permalink: "https://twitter.com/KEMOS4BE/status/1738361680978153537",
+    tweet: `Did you know?: @JupiterExchange has a bridge feature? Where it will compare rates and find you the most efficient path to $SOL
+
+    Jupiter, for me, is the single most important app on $SOL
+    
+    It is our Grand Central Station. 
+    
+    Love at first swap 
+    GM`,
+    time: new Date(2023, 11, 21, 22, 36),
+    permalink:
+      "https://twitter.com/TopoGigio_sol/status/1737844551317147964",
   },
   {
     author: {
