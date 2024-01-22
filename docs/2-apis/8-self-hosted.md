@@ -10,6 +10,10 @@ Mission-critical use cases, like liquidations and oracles, can deploy their own 
 
 Integrators load is no longer restricted by the public API rate limits.
 
+:::info Paid V6 Swap API from QuickNode
+ Get higher throughput on your RPS with [Metis - Jupiter V6 Swap API](https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api)
+:::
+
 ## Prerequisites
 
 A Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
