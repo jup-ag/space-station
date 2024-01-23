@@ -75,7 +75,7 @@ const transactions = await (
       outAmount: 100000,
       inputMint: inputMint.toString(),
       outputMint: outputMint.toString(),
-      expiredAt: null // new Date().valueOf() / 1000,
+      expiredAt: null, // new Date().valueOf() / 1000,
       base: base.publicKey.toString(),
       // referralAccount and name are both optional
       // provide both to get referral fees
