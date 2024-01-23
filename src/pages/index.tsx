@@ -7,112 +7,152 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 const tweetsJupPromise: TweetCardProps[] = [
   {
     author: {
-      name: "lightspeed mert | helius.xyz",
-      username: "0xMert_",
+      name: "Jupiter 🪐",
+      username: "JupiterExchange",
       image:
-        "https://pbs.twimg.com/profile_images/1642692955684352000/z-TxRMgD_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1661738815890022410/F8y4vBky_400x400.jpg",
     },
-    tweet: `Tbh, @JupiterExchange is the best aggregator in all of crypto`,
-    time: new Date(2023, 3, 30, 2, 27),
-    permalink: "https://twitter.com/0xMert_/status/1652379023635365889?s=20",
+    tweet: `It’s our time
+    We are ready
+    Users want it
+    Pie is baking 
+    
+    So let us unite as one big happy community and ecosystem to bring the masses over to the decentralized meta.
+    
+    Together, we can reach goals and bake pies that seemed impossible just a year ago.
+    
+    And if not us, who?`,
+    time: new Date(2023, 11, 17, 6, 2),
+    permalink: "https://twitter.com/JupiterExchange/status/1736144803279339602",
   },
   {
     author: {
-      name: "Rehan",
-      username: "@Mabrehan",
+      name: "meow 🥧",
+      username: "weremeow",
       image:
-        "https://pbs.twimg.com/profile_images/1648968873289613319/G3AURQQr_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1714205175815307264/-Uq7WveP_400x400.jpg",
     },
-    tweet: `Undeniably the best protocol in DeFi. Simple idea yet executed to perfection`,
-    time: new Date(2023, 3, 15, 16, 1),
-    permalink: "https://twitter.com/Mabrehan/status/1647148241505632259?s=20",
+    tweet: `My thesis for Jupiter is actually really really simple - if you have great product, chill vibes and healthy ecosystem - it’s really hard to fail.
+
+    The first is super hard but needs persistence and endless forging (fire)
+    The second is all about trying your best and letting the community and market bring you along (water)
+    The third one is about recognizing the deeply symbiotic and spiritual relationship between you and the ecosystem (air)
+    
+    You are the ecosystem and the ecosystem is you. `,
+    time: new Date(2023, 11, 23, 7, 2),
+    permalink: "https://twitter.com/weremeow/status/1738334323114492122",
   },
   {
     author: {
-      name: "LP Finance",
-      username: "LPFinance_",
+      name: "meow 🥧",
+      username: "weremeow",
       image:
-        "https://pbs.twimg.com/profile_images/1633656696320008193/aN_It9YT_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1714205175815307264/-Uq7WveP_400x400.jpg",
     },
-    tweet: `No Solana DeFi without Jupiter. Change my mind.`,
-    time: new Date(2023, 3, 15, 10, 22),
+    tweet: `Operating ethos of Jupiter 
+    - we fuck up we own up
+    - not scale more than we can afford to 
+    - always engage, never pacify 
+    - always fast, never rushed 
+    - all fees made will be onchain or announced 
+    - black swan resilient 
+    - pragmatically idealistic 
+    - correctness is hard, but we always listen
+    - ends will never justify the means
+    - we ship aggressively but incrementally
+    - jup is an incredibly valuable resource 
+    - open to collab w all, but necessarily careful
+    - vibe is not a byproduct, vibe is the product
+    - ecosystem & industry health above any gain
+    - advance the meta `,
+    time: new Date(2023, 11, 21, 10, 48),
     permalink:
-      "https://twitter.com/LPFinance_/status/1647077905380278280?ref_src=twsrc%5Etfw",
+      "https://twitter.com/weremeow/status/1737847520750166074",
   },
 ];
 const tweetsCexReplacement: TweetCardProps[] = [
   {
     author: {
-      name: "ilmoi | Tensor 🎒⚡️",
-      username: "_ilmoi",
+      name: "Jeremy Allaire",
+      username: "jerallaire",
       image:
-        "https://pbs.twimg.com/profile_images/1636159954145910786/xecsPFkY_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1501707897641779208/cpB2Dk9__400x400.jpg",
     },
-    tweet: `every time I use @JupiterExchange I have to pinch myself
+    tweet: `I am super impressed with @JupiterExchange on @solana.
+    Truly excellent UX and features.  An example of maturation in a range of infrastructure -- wallets, usdc on solana liquidity and availability, and product execution.`,
+    time: new Date(2023, 10, 15, 17, 20),
+    permalink: "https://twitter.com/jerallaire/status/1724718929447371174",
+  },
+  {
+    author: {
+      name: "KEMOSABE",
+      username: "KEMOS4BE",
+      image:
+        "https://pbs.twimg.com/profile_images/1734717290346668032/ZzuUh064_400x400.jpg",
+    },
+    tweet:
+      "Jupiter is an objectively better dApp than uniswap, or any other app on the Ethereum network.",
+    time: new Date(2023, 11, 23, 8, 51),
+    permalink: "https://twitter.com/KEMOS4BE/status/1738361680978153537",
+  },
+  {
+    author: {
+      name: "foobar",
+      username: "0xfoobar",
+      image:
+        "https://pbs.twimg.com/profile_images/1745824328594214912/-P4ZBCue_400x400.jpg",
+    },
+    tweet: `jupiter dca feature is the first 0-to-1 UX improvement i've seen in a long while. both feasible cost-wise and simple enough interface to find and use`,
+    time: new Date(2023, 11, 16, 10, 47),
+    permalink: "https://twitter.com/0xfoobar/status/1735854106722336883",
+  },
+  {
+    author: {
+      name: "Joe Kreate",
+      username: "joekreate",
+      image:
+        "https://pbs.twimg.com/profile_images/1648119841189150722/-j2p8UeW_400x400.jpg",
+    },
+    tweet:
+      `Think we take how amazing @JupiterExchange is for granted. Can't tell you how nice it is to have on-chain limit orders and DCA. 
+      Don't even think I realized that's what kept me from doing more on-chain trading until it existed.`,
+    time: new Date(2023, 11, 16, 10, 27),
+    permalink: "https://twitter.com/joekreate/status/1735848992679076161",
+  },
+  {
+    author: {
+      name: "Topo Gigio",
+      username: "TopoGigio_sol",
+      image:
+        "https://pbs.twimg.com/profile_images/1743441039522775040/zsyVpoqT_400x400.jpg",
+    },
+    tweet: `Did you know?: @JupiterExchange has a bridge feature? Where it will compare rates and find you the most efficient path to $SOL
 
-this cannot possibly be onchain, this has got to be a CEX... the UX is INSANE`,
-    time: new Date(2023, 3, 15, 10, 20),
-    permalink: "https://twitter.com/_ilmoi/status/1647077304638529536",
-  },
-  {
-    author: {
-      name: "Noah 🔥💃 🎈",
-      username: "redacted_noah",
-      image:
-        "https://pbs.twimg.com/profile_images/1658481984820375554/eezCUMQ2_400x400.png",
-    },
-    tweet: `Fr. I prefer Jupiter to trading on CEX. And not even because of ideology it’s literally a better UX`,
-    time: new Date(2023, 3, 15, 11, 16),
-    permalink:
-      "https://twitter.com/redacted_noah/status/1647091614026723328?ref_src=twsrc%5Etfw",
-  },
-  {
-    author: {
-      name: "◎☀️🎒",
-      username: "SolCS95",
-      image:
-        "https://pbs.twimg.com/profile_images/1649660167083167746/dLrwvu6Q_200x200.jpg",
-    },
-    tweet: `@aeyakovenko @JupiterExchange is incredible. Miles above anything else`,
-    time: new Date(2023, 3, 17, 6, 50),
-    permalink: "https://twitter.com/SolCS95/status/1647734143525228544?s=20",
-  },
-  {
-    author: {
-      name: "Netrunner - Portfolio Tools",
-      username: "NetrunnerNFT",
-      image:
-        "https://pbs.twimg.com/profile_images/1616532703108796416/9zuxs0RG_400x400.jpg",
-    },
-    tweet:
-      "@JupiterExchange is the reason our 'swap' feature can exist. \n\nbuilding together on the ecosystem, what more could we ask for?",
-    time: new Date(2023, 5, 20, 18, 25),
-    permalink: "https://twitter.com/netrunnernft/status/1671101933023821824",
-  },
-  {
-    author: {
-      name: "7Layer | Overclock Validator",
-      username: "7LayerMagik",
-      image:
-        "https://pbs.twimg.com/profile_images/1677479168303325184/WiiRG23S_400x400.jpg",
-    },
-    tweet:
-      "Try @JupiterExchange it's the best dex aggregator and possibly best UX in crypto",
-    time: new Date(2023, 7, 3, 17, 11),
-    permalink: "https://twitter.com/7LayerMagik/status/1675610438057222144",
-  },
-  {
-    author: {
-      name: "T.Yen🎈🎒🔥💃",
-      username: "Teck_jy",
-      image:
-        "https://pbs.twimg.com/profile_images/1611537765958823937/-wXWyQPP_400x400.jpg",
-    },
-    tweet: `That's awesome. I've been slowly migrating from various CEX to @JupiterExchange recently and it works quite well for me. 
+    Jupiter, for me, is the single most important app on $SOL
     
-    Plenty of limit orders filled and more open orders awaiting!`,
-    time: new Date(2023, 6, 17, 17, 21),
-    permalink: "https://twitter.com/Teck_jy/status/1669998720136675328",
+    It is our Grand Central Station. 
+    
+    Love at first swap 
+    GM`,
+    time: new Date(2023, 11, 21, 22, 36),
+    permalink:
+      "https://twitter.com/TopoGigio_sol/status/1737844551317147964",
+  },
+  {
+    author: {
+      name: "Abbas",
+      username: "Abbasshaikh42",
+      image:
+        "https://pbs.twimg.com/profile_images/1726165383982489600/pEafd7Kv_400x400.jpg",
+    },
+    tweet: `Tell me this isn't a gorgeous fucking product by @JupiterExchange
+    
+    This would previously require me to use a slow, redacted CEX that requires KYC and requires me to handover custody of my assets.
+    
+    The performant chain thesis is simple:
+    When your base layer does not require weeks and months of development efforts purely directed towards gas/fee optimizations, you allow your builders to innovate and focus purely on the product & they make the magic happen`,
+    time: new Date(2023, 11, 16, 16, 28),
+    permalink: "https://twitter.com/Abbasshaikh42/status/1735940030865277244",
   },
 ];
 export default function Home(): JSX.Element {
@@ -244,14 +284,8 @@ export default function Home(): JSX.Element {
               </div>
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  <GradientText>The JUP Promise:</GradientText> Best Price, Best
-                  UX, Best Tokens
+                  <GradientText>The JUP Summary:</GradientText> Strategy, Thesis, and Ethos
                 </h2>
-                <p className="mt-6 text-lg">
-                  The JUP Promise is about relentlessly executing and delivering
-                  on the basics. But don't take our word for it. Hear it from
-                  the community:
-                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweetsJupPromise.map((tweet, index) => (
                     <div key={index}>
