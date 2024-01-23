@@ -22,7 +22,7 @@ You can refer to the documentation here: https://solanacookbook.com/references/t
 
 ### Transaction Confirmation Timeout
 
-From time to time, you may see an error message like `Transaction was not confirmed in 60.00 seconds.`, this means that your transaction expires without being confirmed. Each block on solana has a fixed compute unit allocation. Each account can only take up certain compute units in the block. So, if you are swapping through a very hot pair, that means that many people will compete with you on that limited compute units. You will have to outbid others to get your transaction in. This usually happens if you just consistently being outbid by others to get your transaction in.
+From time to time, you may see an error message like `Transaction was not confirmed in 60.00 seconds.`, this means that your transaction expires without being confirmed. Each block on Solana has a fixed compute unit allocation. Each account can only take up certain compute units in the block. So, if you are swapping through a very hot pair, that means that many people will compete with you on that limited compute units. You will have to outbid others to get your transaction in. This usually happens if you are consistently being outbid by others to get your transaction in.
 
 To learn how to mitigate this problem, you should read this article about Solana transaction here:
 https://jstarry.notion.site/Transaction-confirmation-d5b8f4e09b9c4a70a1f263f82307d7ce
@@ -31,7 +31,7 @@ The Jupiter API cannot fix this for you but we do have a few things that can hel
 
 * `prioritizationFeeLamports`: You can set this to `auto` which will call the `getRecentPrioritizationFees` RPC and get 2x of 75 percentile of all the writable accounts involved in your transaction. This is usually enough to outbid everyone but sometimes during high congestion, it may not be enough. If that is not enough, you can also do `{"autoMultiplier": 2}`, which will 2x of the auto fees. In order to protect user from setting a very high fee, the fee is always capped at 0.005 SOL.
 * If the `prioritizationFeeLamports` doesn't work, you can always set your own fee by using the `/swap-instructions` endpoint.
-* `dynamicComputeUnitLimit`: By default, the Jupiter API assumes that each swap will take up 1.4m compute unit. By setting it this to `true`, it will adjust the compute unit to be dynamic. We run a simulation to estimate the compute units the swap will take then we add an extra 40% margin. By having lower compute units used, we can set a higher priority fee and it will help to get transaction through since now you are bidding on with higher priority fee.
+* `dynamicComputeUnitLimit`: By default, the Jupiter API assumes that each swap will take up 1.4m compute unit. By setting this to `true`, it will adjust the compute unit to be dynamic. We run a simulation to estimate the compute units the swap will take then we add an extra 40% margin. By having lower compute units used, we can set a higher priority fee and it will help to get transaction through since now you are bidding on with higher priority fee.
 
 ### Blockhash is Invaild/Not Found
 
