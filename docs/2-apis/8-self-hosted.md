@@ -65,3 +65,9 @@ Then:
 `RUST_LOG=info ./jupiter-swap-api --market-cache market-cache-no-openbook.json ...`
 
 This will start the API server without Openbook as part of routing. You can also remove individual market as well.
+
+## Paid Hosted APIs
+
+We are working with some Solana RPC partners in the ecosystem as well so that you can get a paid hosted API ran by them.
+
+* QuickNode: https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api
