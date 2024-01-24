@@ -10,10 +10,6 @@ Mission-critical use cases, like liquidations and oracles, can deploy their own 
 
 Integrators load is no longer restricted by the public API rate limits.
 
-:::info Paid V6 Swap API from QuickNode
- Get higher throughput on your RPS with [Metis - Jupiter V6 Swap API](https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api)
-:::
-
 ## Prerequisites
 
 A Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
@@ -69,3 +65,9 @@ Then:
 `RUST_LOG=info ./jupiter-swap-api --market-cache market-cache-no-openbook.json ...`
 
 This will start the API server without Openbook as part of routing. You can also remove individual market as well.
+
+## Paid Hosted APIs
+
+We are working with some Solana RPC partners in the ecosystem as well so that you can get a paid hosted API ran by them.
+
+* QuickNode: https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api
