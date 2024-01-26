@@ -26,4 +26,4 @@ Or contact Jupiter through [Twitter](https://twitter.com/JupiterExchange) or [Di
 
 ### Jupiter Token Logo
 
-<DownloadBox fileName="jupiter-token-logo" />
+<DownloadBox fileName="jupiter-token-logo.zip" />
