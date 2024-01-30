@@ -89,7 +89,7 @@ Trade fees for the pool typically range between 0% and 2%.
 
 ### Example Yield
 
-To provide an estimated perspective, you can calculate potential revenue by taking JUP's daily or weekly total volume and multiplying it by a fee percentage. For instance:
+To provide an estimated perspective, you can calculate potential revenue by taking Jupiter perpetual exchange's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
 * Total Daily Volume: 50 million
 * Fee Percentage: 0.1%
