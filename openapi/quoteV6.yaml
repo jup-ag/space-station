@@ -405,7 +405,7 @@ components:
         items:
           type: string
     RestrictIntermediateTokensParameter:
-      name: restrictIntermediateTokens:
+      name: restrictIntermediateTokens
       description: Restrict intermediate tokens to a top token set that has stable liquidity. This will help to ease potential high slippage error rate when swapping with minimal impact on pricing.
       in: query
       schema:
