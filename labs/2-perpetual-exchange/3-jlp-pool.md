@@ -10,7 +10,7 @@ JLP token is also a SPL token. So, it can be transferred like any SPL tokens. AM
 
 **Note**: JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the governance token of the entire Jupiter platform. 
 
-#### The best way to purchase or exit JLP is always via [Jupiter Swap. ](https://jup.ag/swap/USDC-JLP)
+#### The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
 
 ### JLP, Liquidity Provider Token
 
