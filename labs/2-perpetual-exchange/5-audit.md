@@ -5,4 +5,5 @@ description: Contract Audit
 
 # Audit
 
-The contract is currently undergo audit by OtterSec. Please always make sure that you know what you are doing before using an unaudited project.
+- [OtterSec](../assets/ottersec_perpetual_audit_report.pdf)
+- [Sec3](../assets/sec3_perpetual_audit_report.pdf)
