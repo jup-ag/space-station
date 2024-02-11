@@ -5,7 +5,7 @@ description: "Understand Price Impact, Slippage and Price Warnings"
 
 # Understand Price Impact, Slippage and Price Warnings
 
-Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. On this page, we will explain the difference between price impact, slippage, and price warning
+Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. On this page, we will explain the difference between price impact, slippage, and price warning.
 
 ## Price Impact
 
@@ -33,7 +33,7 @@ Price Warning is an additional layer of protection implemented by Jupiter to ale
 
 ![Price Warning](../img/price-warning.png)
 
-## Addition Safety Confirmation
+### Additional Safety Confirmation
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
