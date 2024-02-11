@@ -8,7 +8,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 To install:
 ```
-pnpm
+pnpm install
 ```
 
 To build and start local development:
