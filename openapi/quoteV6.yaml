@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: '3.0.2'
 info:
   title: Jupiter API v6
   version: 6.0.0
@@ -31,7 +31,7 @@ paths:
         - $ref: '#/components/parameters/SwapModeParameter'
         - $ref: '#/components/parameters/DexesParameter'
         - $ref: '#/components/parameters/ExcludeDexesParameter'
-        - $ref: '#/components/parameters/RestrictIntermediateTokens'
+        - $ref: '#/components/parameters/RestrictIntermediateTokensParameter'
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
         - $ref: '#/components/parameters/PlatformFeeBpsParameter'
@@ -93,7 +93,8 @@ paths:
   /indexed-route-map:
     get:
       summary: GET /indexed-route-map
-      description: Returns a hash map, input mint as key and an array of valid output mint as values, token mints are indexed to reduce the file size
+      description: DEPRECATED, please use /tokens for tradable mints. Returns a hash map, input mint as key and an array of valid output mint as values, token mints are indexed to reduce the file size
+      deprecated: true
       parameters:
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
       responses:
@@ -103,6 +104,23 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/IndexedRouteMapResponse'
+  /tokens:
+    get:
+      summary: GET /tokens
+      description: Returns a list of all the tradable mints
+      responses:
+        '200':
+          description: Default response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example:
+                  - 'So11111111111111111111111111111111111111112'
+                  - 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'
+                  - 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'
 
 components:
   schemas:
