@@ -41,7 +41,7 @@ const txid = await connection.sendRawTransaction(rawTransaction, {
 });
 ```
 
-### Blockhash is Invaild/Not Found
+### Blockhash is Invalid/Not Found
 
 This can happen because of the decentralized nature of the chain. My local chain can be faster than your chain but they will eventually sync up. If you run into this problem, we suggest using `processed` commitment when submitting the transaction and use `confirmed` commitment to confirm your transaction. Setting `skipPreflight` to `true` can be very helpful too when submitting the transaction. But this will mean that you will skip transaction simulation entirely.
 

@@ -31,6 +31,7 @@ paths:
         - $ref: '#/components/parameters/SwapModeParameter'
         - $ref: '#/components/parameters/DexesParameter'
         - $ref: '#/components/parameters/ExcludeDexesParameter'
+        - $ref: '#/components/parameters/RestrictIntermediateTokens'
         - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
         - $ref: '#/components/parameters/AsLegacyTransactionParameter'
         - $ref: '#/components/parameters/PlatformFeeBpsParameter'
@@ -262,9 +263,6 @@ components:
           description: Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large.
           type: boolean
           default: false
-        restrictIntermediateTokens:
-          description: Restrict intermediate tokens to a top token set that has stable liquidity. This will help to ease potential high slippage error rate when swapping with minimal impact on pricing.
-          type: boolean
         useTokenLedger:
           description: Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount.
           type: boolean
@@ -406,6 +404,12 @@ components:
         type: array
         items:
           type: string
+    RestrictIntermediateTokensParameter:
+      name: restrictIntermediateTokens
+      description: Restrict intermediate tokens to a top token set that has stable liquidity. This will help to ease potential high slippage error rate when swapping with minimal impact on pricing.
+      in: query
+      schema:
+        type: boolean
     OnlyDirectRoutesParameter:
       name: onlyDirectRoutes
       description: Default is false. Direct Routes limits Jupiter routing to single hop routes only.

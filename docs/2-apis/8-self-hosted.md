@@ -17,7 +17,7 @@ A Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC
 The following RPC providers can provide a RPC node with the geyser plugin:
 
 - [Triton](https://triton.one)
-- [Helius](https://docs.helius.dev) Contact Helius on [Discord](https://discord.com/invite/6GXdee3gBj) or [Email](mailto:mert@helius.xyz) with code word: Jupiter
+- [Helius](https://docs.helius.dev) Contact Helius on [Discord](https://discord.com/invite/6GXdee3gBj)
 
 ## Usage
 
