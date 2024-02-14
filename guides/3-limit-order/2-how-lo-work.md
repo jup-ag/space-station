@@ -10,7 +10,7 @@ Jupiter Limit Order executes your order based on the price you have set by match
 
 **Scenario**
 - If a Limit Order is placed to buy 1 $SOL with 10 USDC at a rate of 10 USDC per $SOL.
-- The keeper will monitor the price on-chain using Jupiter [Price API](/docs/apis/price-api) and Birdeye API.
+- The keeper will monitor the price on-chain using Jupiter [Price API](/docs/apis/price-api).
 - If the keeper detects that the on-chain price of $SOL reaches 10 USDC, it will proceed to execute and fulfill the order.
     - If the order size is too large, and there is insufficient liquidity on-chain, the keeper will attempt to execute the order in smaller chunks. It will aim for partial fulfillment to ensure the best price with minimal price impact, continuing until the order is fully filled.
 - The executed order, whether fully or partially fulfilled, will be automatically transferred to your wallet.
@@ -33,7 +33,7 @@ Jupiter Limit Order executes your order based on the price you have set by match
 
 **Jupiter Limit Order** is designed to prioritize UX, simplicity, flexibility, and the widest liquidity across Solana.
 
-Orders are executed by the keeper, envisioning the keeper as similar to a liquidator in a lending protocol. When the price hits the limit price (including fees), the keeper will execute the order. After the order is executed, the user will receive exactly what they quoted, including the platform fees charged by Jupiter.
+Orders are executed by the keeper, envisioning the keeper as similar to a liquidator in a lending protocol. When the price hits the limit price (including fees), the keeper will execute the order. After the order is executed, the user will receive what they quoted, minus the platform fees charged by Jupiter.
 
 **Central Limit Orderbook (CLOB)** is a mechanism used by TradFi to facilitate trading between buyers and sellers. It acts as a hub where both buyers and sellers can submit their buy/sell orders, which are matched based on specific rules and executed accordingly.
 
