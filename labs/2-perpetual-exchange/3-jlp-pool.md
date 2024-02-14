@@ -54,16 +54,15 @@ And at the point of depositing assets into JLP pool, the protocol will price in 
 * Virtual Price = Sum of all JLP Assets (in USD) / No. of JLP in circulation
 * Market Price = Virtual Price + Market-assigned Premium (when AUM Limit is hit)
 
-Usually, users can mint new JLP or redeem them at the Virtual Price. However, when AUM Limits are hit, new minting of JLP is disabled to cap the amount of TVL in the pool.
+Usually, users can mint new JLP or redeem (burn) them at the Virtual Price. However, when AUM Limits are hit, new minting of JLP is disabled to cap the amount of TVL in the pool.
 
 When this happens, the demand for JLP on the market usually leads to a premium for JLP compared to the virtual price.
 
-You may sell your JLP for the Market Price at any-time. If the Market Price is below the Virtual Price, your JLP tokens are redeemed at the virtual price instead of sold at the market price.
+You may sell your JLP for the Market Price at any-time. If the Market Price is below the Virtual Price, your JLP tokens are redeemed (burned) at the virtual price instead of sold at the market price.
 
 ![image](https://github.com/jup-ag/space-station/assets/155345966/666557fa-a60c-4060-a586-6aaeb1539b31)
 
 You can view the current TVL and AUM Limit on the main UI.
-
 
 ### Target Ratio and Fees
 
