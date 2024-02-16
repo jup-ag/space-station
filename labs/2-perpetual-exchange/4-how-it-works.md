@@ -67,8 +67,12 @@ Extra fund from position closure will be returned to the trader automatically.
 
 ### Oracle
 
-Jupiter Perps is an oracle based exchange, and uses Pyth Oracles for trading prices. Pyth has 2 types of oracles, the `mainnet-beta` oracles and the `pythnet` oracles. For example, you can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
+Jupiter Perps always use Pyth oracles on the trading prices and chart data. However, there are 2 types of Pyth oracles, the `mainnet-beta` oracle and the `pythnet` oracle.
 
-Our chart uses `Pythnet`, via streaming from the pythnet chain. However, transactions primarily use the `mainnet-beta` oracle. Occasionally, you may observe some slight variations between your executed price and the price on the chart. There is also a  slight lag due to oracle delay. 
+For position changes, such as opening, closing or liquidating positions, Keeper bots utilize Pyth's mainnet-beta prices. In times of congestion, they will use the backup Pythnet oracles. This improves reliability for traders to adjust their positions. 
 
-The `pythnet` oracle is used as a backup oracle, when the `mainnet-beta` oracle is stale or behind.
+For chart data, we are using the Pyth [Hermes](https://docs.pyth.network/price-feeds/pythnet-price-feeds/hermes) web service. The Hermes web service is using the prices from Pythnet. There might be slight deviations between the chart and your execution prices occasionally., due to the small variation between `mainnet-beta` and `pythnet` prices.
+
+You can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
+
+You can also utilize [Pyth Benchmarks](https://pyth.network/benchmarks) to check the oracle price for any of Pyth's listed tokens at any timestamp. Use this to independently verify historical oracle prices. 
