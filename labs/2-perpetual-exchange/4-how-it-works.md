@@ -69,9 +69,9 @@ Extra fund from position closure will be returned to the trader automatically.
 
 Jupiter Perps always use Pyth oracles on the trading prices and chart data. However, there are 2 types of Pyth oracles, the `mainnet-beta` oracle and the `pythnet` oracle.
 
-For position changes, such as opening, closing or liquidating positions, Keeper bots utilize Pyth's mainnet-beta prices. In times of congestion, they will use the backup Pythnet oracles. This improves reliability for traders to adjust their positions. 
+For position changes, such as opening, closing or liquidating positions, keeper bots utilize Pyth's mainnet-beta prices. In times of congestion, they will use the backup Pythnet oracles. This improves reliability for traders to adjust their positions. 
 
-For chart data, we are using the Pyth [Hermes](https://docs.pyth.network/price-feeds/pythnet-price-feeds/hermes) web service. The Hermes web service is using the prices from Pythnet. There might be slight deviations between the chart and your execution prices occasionally., due to the small variation between `mainnet-beta` and `pythnet` prices.
+For chart data, we are using the Pyth [Hermes](https://docs.pyth.network/price-feeds/pythnet-price-feeds/hermes) web service. The Hermes web service is using the prices from Pythnet. There might be slight deviations between the chart and your execution prices occasionally, due to the small variation between `mainnet-beta` and `pythnet` prices.
 
 You can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
 
