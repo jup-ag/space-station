@@ -7,12 +7,12 @@ description: Key Concepts of Perpetual Exchange
 
 ## Overview
 
-Our perpetual exchange is LP-to-trader perpetual exchange based on oracle prices.
+Jupiter Perps is a LP-based perpetual exchange based on oracle prices.
 
-Our pool consists of 5 tokens, SOL, ETH, WBTC, USDC, and USDT. Liquidity providers deposit one of the pool tokens into the pool in exchange for LP tokens representing their share of the pool.
+Our pool consists of 5 tokens, SOL, ETH, WBTC, USDC, and USDT. Users acquire JLP by swapping on [Jupiter Swap](https://jup.ag/swap/USDC-JLP). Jupiter Swap automatically finds the cheapest way of acquiring JLP, by swapping to the desired asset and depositing that, or purchasing off the market. 
 
-A trader may open a leveraged position by putting up collateral and borrowing
-the rest of the position from the pool.
+Traders open leveraged positions by putting up collateral and borrowing
+the rest of the position from the pool. 
 
 ## For Traders
 
@@ -37,24 +37,13 @@ asset. For example, to open long SOL-USD position, the trader deposits SOL.
 Conversely, to open a short position, a trader deposits collateral matching one
 of the stablecoins in the pool.
 
-### Leverage by Borrowing from The Pool
+### Leverage 
 
-To allow for leverage, traders may borrow assets from the pool to create a
+To allow for leverage, traders borrow assets from the pool to create a
 larger position. To create a 2x long position SOL-USD, the other 1x SOL will be
 borrowed from the pool.
 
-### Swap Integration
-
-Liquidity providers (LPs) may use any token to deposit into one of the pool's
-custody. We will use Jupiter Swap to swap the LP's token into the custody's token,
-all positions are denominated in USD.
-
-When withdrawing from a custody, LPs may request to receive a
-different token than the custody's token. We will use Jupiter Swap to swap the
-custody's token to the LP's desired token.
-
-For convenience, we allow traders to open positions using any token and we will
-use Jupiter Swap to swap the trader's token to the required token.
+This borrow leads to a hourly borrow rate to be paid to the pool. Positions always pay borrow fees and are never paid funding. 
 
 ### Hourly Borrow Rate
 
@@ -78,6 +67,8 @@ Extra fund from position closure will be returned to the trader automatically.
 
 ### Oracle
 
-For the product to work, we depend on Pyth oracles on the trading prices. There are two types of oracles by Pyth that we are using, the `mainnet-beta` oracles and the `pythnet` oracles. For example, you can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
+Jupiter Perps is an oracle based exchange, and uses Pyth Oracles for trading prices. Pyth has 2 types of oracles, the `mainnet-beta` oracles and the `pythnet` oracles. For example, you can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
 
-For any positions, we first use the price reported by the `mainnet-beta` oracle first, from time to time, if the `mainnet-beta` oracle is behind or stale, we will use the `pythnet` oracle as the backup oracle.
+Our chart uses `Pythnet`, via streaming from the pythnet chain. However, transactions primarily use the `mainnet-beta` oracle. Occasionally, you may observe some slight variations between your executed price and the price on the chart. There is also a  slight lag due to oracle delay. 
+
+The `pythnet` oracle is used as a backup oracle, when the `mainnet-beta` oracle is stale or behind.
