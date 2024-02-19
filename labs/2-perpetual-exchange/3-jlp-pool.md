@@ -32,14 +32,19 @@ It is essential to note that pool earnings and losses (index token appreciation/
 
 ### Risks Associated with Holding JLP
 
+JLP is denominated in USD. During bull market, JLP is unlikely to outperform SOL, ETH or BTC. It is recommended to swap stable token (USDC/USDT) into JLP and earn the yield from the perps trading activities.
+
 Now, let's explore some of the risks associated with holding JLP:
 
 **Profit and Loss (P&L) Dynamics:** Traders' P&L from perpetual trading impacts the JLP pool. If a trader incurs a net positive P&L, the losses are sourced from the JLP pool to compensate the trader. Conversely, if a trader's P&L is net negative, the gains are deposited into the JLP pool for LP holders.
 
-JLP pool will lose in token value but not in USD value because the underlying token value in the pool appreciate in value as well. Read more about a reasearch from community member on how this work.
-https://skribr.io/app/article/exploring-jupiters-perpetual-futures-a-comprehensive-research-analysis/
+JLP pool will lose in token value but not in USD value because the underlying token value in the pool appreciate in value as well.
+![image](jlp-long-scenarios.png)
+Read more about a reasearch from community member on how this work. https://skribr.io/app/article/exploring-jupiters-perpetual-futures-a-comprehensive-research-analysis/
 
 **Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
+
+**Can JLP go down?** Yes, JLP in USD value will go down when the fees generated are lower than assets depreciation and payout from traders' profit.
 
 ### Adding/Removing Liquidity
 
@@ -130,7 +135,3 @@ revenue share you generate = $35,000 x 0.025% = $8.75
 ```
 
 Every Monday, at ~ UTC 18:00, the Estimated APY figure is updated with the above calculation, by using the previous week's fees and estimating an APR and APY for users.
-
-### Recommended action during bull market
-
-JLP is denominated in USD value. During bull market, JLP will unlikely to outperform SOL, ETH or BTC. It is recommended to swap stable token into JLP and earn the yield by trading activities.
