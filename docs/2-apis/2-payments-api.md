@@ -33,7 +33,7 @@ Response:
 - `otherAmountThreshold` is the maximum in amount, the quote above with the slippage tolerance.
 
 :::info
-Currently, only Orca Whirlpool and Raydium CLAMM support ExactOut mode. All token pairs may not be available in this mode.
+Currently, only Orca Whirlpool, Raydium CLMM, and Raydium CPMM support ExactOut mode. All token pairs may not be available in this mode.
 :::
 
 Then Bob creates the transaction with the `/swap` endpoint, and adds a 5 USDC token transfer from Alice to his payment wallet using the `destinationTokenAccount` argument, which Alice will verify, sign and send.
