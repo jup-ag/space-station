@@ -4,73 +4,7 @@ import GradientText from "../components/GradientText";
 import Layout from "@theme/Layout";
 import { TweetCardProps } from "react-tweet-card";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-const tweetsJupPromise: TweetCardProps[] = [
-  {
-    author: {
-      name: "Jupiter 🪐",
-      username: "JupiterExchange",
-      image:
-        "https://pbs.twimg.com/profile_images/1661738815890022410/F8y4vBky_400x400.jpg",
-    },
-    tweet: `It’s our time
-    We are ready
-    Users want it
-    Pie is baking 
-    
-    So let us unite as one big happy community and ecosystem to bring the masses over to the decentralized meta.
-    
-    Together, we can reach goals and bake pies that seemed impossible just a year ago.
-    
-    And if not us, who?`,
-    time: new Date(2023, 11, 17, 6, 2),
-    permalink: "https://twitter.com/JupiterExchange/status/1736144803279339602",
-  },
-  {
-    author: {
-      name: "meow 🥧",
-      username: "weremeow",
-      image:
-        "https://pbs.twimg.com/profile_images/1714205175815307264/-Uq7WveP_400x400.jpg",
-    },
-    tweet: `My thesis for Jupiter is actually really really simple - if you have great product, chill vibes and healthy ecosystem - it’s really hard to fail.
-
-    The first is super hard but needs persistence and endless forging (fire)
-    The second is all about trying your best and letting the community and market bring you along (water)
-    The third one is about recognizing the deeply symbiotic and spiritual relationship between you and the ecosystem (air)
-    
-    You are the ecosystem and the ecosystem is you. `,
-    time: new Date(2023, 11, 23, 7, 2),
-    permalink: "https://twitter.com/weremeow/status/1738334323114492122",
-  },
-  {
-    author: {
-      name: "meow 🥧",
-      username: "weremeow",
-      image:
-        "https://pbs.twimg.com/profile_images/1714205175815307264/-Uq7WveP_400x400.jpg",
-    },
-    tweet: `Operating ethos of Jupiter 
-    - we fuck up we own up
-    - not scale more than we can afford to 
-    - always engage, never pacify 
-    - always fast, never rushed 
-    - all fees made will be onchain or announced 
-    - black swan resilient 
-    - pragmatically idealistic 
-    - correctness is hard, but we always listen
-    - ends will never justify the means
-    - we ship aggressively but incrementally
-    - jup is an incredibly valuable resource 
-    - open to collab w all, but necessarily careful
-    - vibe is not a byproduct, vibe is the product
-    - ecosystem & industry health above any gain
-    - advance the meta `,
-    time: new Date(2023, 11, 21, 10, 48),
-    permalink:
-      "https://twitter.com/weremeow/status/1737847520750166074",
-  },
-];
-const tweetsCexReplacement: TweetCardProps[] = [
+const tweetsBestExchange: TweetCardProps[] = [
   {
     author: {
       name: "Jeremy Allaire",
@@ -82,42 +16,6 @@ const tweetsCexReplacement: TweetCardProps[] = [
     Truly excellent UX and features.  An example of maturation in a range of infrastructure -- wallets, usdc on solana liquidity and availability, and product execution.`,
     time: new Date(2023, 10, 15, 17, 20),
     permalink: "https://twitter.com/jerallaire/status/1724718929447371174",
-  },
-  {
-    author: {
-      name: "KEMOSABE",
-      username: "KEMOS4BE",
-      image:
-        "https://pbs.twimg.com/profile_images/1734717290346668032/ZzuUh064_400x400.jpg",
-    },
-    tweet:
-      "Jupiter is an objectively better dApp than uniswap, or any other app on the Ethereum network.",
-    time: new Date(2023, 11, 23, 8, 51),
-    permalink: "https://twitter.com/KEMOS4BE/status/1738361680978153537",
-  },
-  {
-    author: {
-      name: "foobar",
-      username: "0xfoobar",
-      image:
-        "https://pbs.twimg.com/profile_images/1745824328594214912/-P4ZBCue_400x400.jpg",
-    },
-    tweet: `jupiter dca feature is the first 0-to-1 UX improvement i've seen in a long while. both feasible cost-wise and simple enough interface to find and use`,
-    time: new Date(2023, 11, 16, 10, 47),
-    permalink: "https://twitter.com/0xfoobar/status/1735854106722336883",
-  },
-  {
-    author: {
-      name: "Joe Kreate",
-      username: "joekreate",
-      image:
-        "https://pbs.twimg.com/profile_images/1648119841189150722/-j2p8UeW_400x400.jpg",
-    },
-    tweet:
-      `Think we take how amazing @JupiterExchange is for granted. Can't tell you how nice it is to have on-chain limit orders and DCA. 
-      Don't even think I realized that's what kept me from doing more on-chain trading until it existed.`,
-    time: new Date(2023, 11, 16, 10, 27),
-    permalink: "https://twitter.com/joekreate/status/1735848992679076161",
   },
   {
     author: {
@@ -153,6 +51,99 @@ const tweetsCexReplacement: TweetCardProps[] = [
     When your base layer does not require weeks and months of development efforts purely directed towards gas/fee optimizations, you allow your builders to innovate and focus purely on the product & they make the magic happen`,
     time: new Date(2023, 11, 16, 16, 28),
     permalink: "https://twitter.com/Abbasshaikh42/status/1735940030865277244",
+  }
+];
+
+const tweetsFeatures: TweetCardProps[] = [
+  {
+    author: {
+      name: "Quirky Qwerty",
+      username: "QuirkyQwerty_",
+      image:
+        "https://pbs.twimg.com/profile_images/1514622423387226118/NreOjFMM_400x400.jpg",
+    },
+    tweet: `Jupiter's DCA function changes the shitcoining game.
+
+    Makes sol shitters charts look vastly different from every other chain. No spooky wicks down, no TP-enticing wicks up. 
+    
+    Slow and smooth.
+    
+    One direction only.`,
+    time: new Date(2023, 11, 22, 13, 24),
+    permalink: "https://twitter.com/QuirkyQwerty_/status/1738067850366275968",
+  },
+  {
+    author: {
+      name: "Joe Kreate",
+      username: "joekreate",
+      image:
+        "https://pbs.twimg.com/profile_images/1648119841189150722/-j2p8UeW_400x400.jpg",
+    },
+    tweet:
+      `Think we take how amazing @JupiterExchange is for granted. Can't tell you how nice it is to have on-chain limit orders and DCA. 
+      Don't even think I realized that's what kept me from doing more on-chain trading until it existed.`,
+    time: new Date(2023, 11, 16, 10, 27),
+    permalink: "https://twitter.com/joekreate/status/1735848992679076161",
+  },
+  {
+    author: {
+      name: "Kulture ⚡",
+      username: "KultureElectric",
+      image:
+        "https://pbs.twimg.com/profile_images/1682323094365511680/dhpZVpna_400x400.jpg",
+    },
+    tweet: `I have so much admiration for @weremeow and the @JupiterExchange team 🙏
+    
+    Truly Solana aligned and leading the way in transparent and honest communication.
+    
+    Not to mention that LFG Launchpad actually worked super well and will kick-start a new era of fair token launches`,
+    time: new Date(2024, 1, 1, 14, 5),
+    permalink: "https://twitter.com/KultureElectric/status/1752936182785130819",
+  },
+];
+
+const tweetsCommunity: TweetCardProps[] = [
+  {
+    author: {
+      name: "Kash Dhanda",
+      username: "kashdhanda",
+      image:
+        "https://pbs.twimg.com/profile_images/1712057099046338560/S2B7ouDm_normal.jpg",
+    },
+    tweet: `Jupiter is a world-class product built by a group of killers.  
+
+    The JUP DAO will be a world-class community launching killer products via the LFG Launchpad. 
+    
+    I'm just lucky to be a (small) part of this going forward 🥳`,
+    time: new Date(2024, 2, 14, 20, 2),
+    permalink: "https://x.com/kashdhanda/status/1757737079264477358?s=20",
+  },
+  {
+    author: {
+      name: "Durden ∞",
+      username: "@durdenwannabe",
+      image:
+        "	https://pbs.twimg.com/profile_images/1501827205957320708/nSrI5I6S_normal.jpg",
+    },
+    tweet: `Jupiter already has a vibrant community 🪐
+
+    I'm excited to help turn that community into a well-functioning DAO that will move not just Jupiter but the whole Solana ecosystem forward 🫡
+    
+    LFJ!`,
+    time: new Date(2024, 2, 13, 0, 23),
+    permalink: "https://twitter.com/durdenwannabe/status/1757080612865970214",
+  },
+  {
+    author: {
+      name: "Noc 😐",
+      username: "xNocsu",
+      image:
+        "https://pbs.twimg.com/profile_images/1761473057489559552/Nf5Of8___400x400.jpg",
+    },
+    tweet: `After having spent a year following and responding to all the JM love from the community this evening, I just wanted to say thank you to @JupiterExchange
+     team as a whole for all the love today. Appreciate each and every one of you. ♥️`,
+    time: new Date(2024, 1, 22, 14, 44),
+    permalink: "https://twitter.com/xNocsu/status/1760374899992899687",
   },
 ];
 export default function Home(): JSX.Element {
@@ -258,17 +249,14 @@ export default function Home(): JSX.Element {
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    The <GradientText>Ultimate CEX Replacement</GradientText> 🚀
-                    on Solana
+                    The <GradientText>Best Onchain Exchange</GradientText> 🚀
                   </h2>
                   <p className="mt-6 text-lg">
-                    We're building the ultimate CEX replacement, and we believe
-                    Solana is the perfect home for it. Marrying low transaction
-                    fees with Jupiter's commitment to product excellence, you'll
-                    never have to go back to CEXes again.
+                  We deliver the finest onchain experience, marrying Solana's low transaction fees with
+                  Jupiter's advanced routing and commitment to product excellence.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
-                    {tweetsCexReplacement.map((tweet, index) => (
+                    {tweetsBestExchange.map((tweet, index) => (
                       <div key={index}>
                         <BrowserOnly>
                           {() => {
@@ -282,12 +270,39 @@ export default function Home(): JSX.Element {
                   </div>
                 </section>
               </div>
+              <div className="max-w-content mx-auto">
+                <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
+                  <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
+                    With <GradientText>Features That People Love</GradientText> ❤️
+                  </h2>
+                  <p className="mt-6 text-lg">
+                   Jupiter's products covers swaps, DCA, limit orders, perpetuals, and a launchpad, with different options for users and developers. We're also constantly adding new features to serve you even better.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
+                    {tweetsFeatures.map((tweet, index) => (
+                      <div key={index}>
+                        <BrowserOnly>
+                          {() => {
+                            const TweetCard =
+                              require("react-tweet-card").default;
+                            return <TweetCard {...tweet} theme="dim" />;
+                          }}
+                        </BrowserOnly>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+              <div className="max-w-content mx-auto">
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  <GradientText>The JUP Summary:</GradientText> Strategy, Thesis, and Ethos
+                  Put Together By An <GradientText>Awesome Community</GradientText> 🙌
                 </h2>
+                <p className="mt-6 text-lg">
+                   With catdets, working groups, and the DAO growing everyday, we have a strong decentralized community of users and builders working together to bring you the very best.
+                  </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
-                  {tweetsJupPromise.map((tweet, index) => (
+                  {tweetsCommunity.map((tweet, index) => (
                     <div key={index}>
                       <BrowserOnly>
                         {() => {
@@ -299,6 +314,7 @@ export default function Home(): JSX.Element {
                   ))}
                 </div>
               </section>
+              </div>
             </div>
           </div>
         </div>
