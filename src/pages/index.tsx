@@ -19,59 +19,6 @@ const tweetsBestExchange: TweetCardProps[] = [
   },
   {
     author: {
-      name: "Joe Kreate",
-      username: "joekreate",
-      image:
-        "https://pbs.twimg.com/profile_images/1648119841189150722/-j2p8UeW_400x400.jpg",
-    },
-    tweet:
-      `Think we take how amazing @JupiterExchange is for granted. Can't tell you how nice it is to have on-chain limit orders and DCA. 
-      Don't even think I realized that's what kept me from doing more on-chain trading until it existed.`,
-    time: new Date(2023, 11, 16, 10, 27),
-    permalink: "https://twitter.com/joekreate/status/1735848992679076161",
-  },
-  {
-    author: {
-      name: "R89",
-      username: "R89Capital",
-      image:
-        "https://pbs.twimg.com/profile_images/1754565037325529091/TFhU1IkV_400x400.jpg",
-    },
-    tweet: `Swap aggregator, limit orders, DCA feature, bridge, perpetual futures, launchpad, LST stablecoin, and DAO.
-
-    The best overall product in crypto and I will continue to support it hard.
-    
-    Some of you can simply go fuck yourselves.`,
-    time: new Date(2024, 1, 2, 16, 20),
-    permalink: "https://twitter.com/R89Capital/status/1753151336097661000",
-  },
-  {
-    author: {
-      name: "KEMOSABE",
-      username: "KEMOS4BE",
-      image:
-        "https://pbs.twimg.com/profile_images/1761276351506489344/WdxOCFwA_400x400.jpg",
-    },
-    tweet:
-      "Jupiter is an objectively better dApp than uniswap, or any other app on the Ethereum network.",
-    time: new Date(2023, 11, 23, 8, 51),
-    permalink: "https://twitter.com/KEMOS4BE/status/1738361680978153537",
-  },
-  {
-    author: {
-      name: "Shoal Research",
-      username: "Shoalresearch",
-      image:
-        "https://pbs.twimg.com/profile_images/1750343257060425728/V1rctkOC_400x400.jpg",
-    },
-    tweet: `@jupiterexchange, Solana's premier DEX aggregator, has its hand in over 60% of all trades on Solana.
-    
-    Today, users can swap, place limit orders, DCA, and trade perps. With the launch of $JUP approaching, we unpack our long-term investment thesis for Jupiter.`,
-    time: new Date(2023, 12, 19, 12, 52),
-    permalink: "https://twitter.com/Shoalresearch/status/1748025686240199125",
-  },
-  {
-    author: {
       name: "Topo Gigio",
       username: "TopoGigio_sol",
       image:
@@ -89,44 +36,25 @@ const tweetsBestExchange: TweetCardProps[] = [
     permalink:
       "https://twitter.com/TopoGigio_sol/status/1737844551317147964",
   },
+  {
+    author: {
+      name: "Abbas",
+      username: "Abbasshaikh42",
+      image:
+        "https://pbs.twimg.com/profile_images/1726165383982489600/pEafd7Kv_400x400.jpg",
+    },
+    tweet: `Tell me this isn't a gorgeous fucking product by @JupiterExchange
+    
+    This would previously require me to use a slow, redacted CEX that requires KYC and requires me to handover custody of my assets.
+    
+    The performant chain thesis is simple:
+    When your base layer does not require weeks and months of development efforts purely directed towards gas/fee optimizations, you allow your builders to innovate and focus purely on the product & they make the magic happen`,
+    time: new Date(2023, 11, 16, 16, 28),
+    permalink: "https://twitter.com/Abbasshaikh42/status/1735940030865277244",
+  }
 ];
 
 const tweetsFeatures: TweetCardProps[] = [
-  {
-    author: {
-      name: "0xt1mfv",
-      username: "pt1mfv_",
-      image:
-        "https://pbs.twimg.com/profile_images/1695546024083808256/D5CKF28x_400x400.jpg",
-    },
-    tweet: `2023 was an active year for @JupiterExchange
-
-    - Metis – new routing algorithm 
-    - Instant staked SOL > SOL swaps
-    - DCA feature, Limit Orders, Perps
-    - Lots of new developer tooling including Jupiter Terminal + 2 new API upgrades 
-    - Bridge comparator (allows users to compare and select the most efficient bridge for bridging to Solana)
-    
-    that's the kind of success you follow up with a token launch. ggwp @weremeow`,
-    time: new Date(2023, 12, 9, 16, 14),
-    permalink:
-      "https://twitter.com/pt1mfv_/status/1744452630770774396",
-  },
-  {
-    author: {
-      name: "Ron 🧊",
-      username: "Ronmaris_",
-      image:
-        "https://pbs.twimg.com/profile_images/1599642352381050880/JcRSlsMN_400x400.jpg",
-    },
-    tweet: `I know there are so many other tokenless protocols out there, but why wouldn't I just use Jupiter? 🤷‍♂️
-
-    Seamless performance, has got some of the best features like DCA & limit buys etc 
-    
-    Farming other DEXs should be top priority, but I just find myself always using @JupiterExchange`,
-    time: new Date(2023, 11, 9, 9, 57),
-    permalink: "https://twitter.com/Ronmaris_/status/1733304911041794337",
-  },
   {
     author: {
       name: "Quirky Qwerty",
@@ -144,9 +72,19 @@ const tweetsFeatures: TweetCardProps[] = [
     time: new Date(2023, 11, 22, 13, 24),
     permalink: "https://twitter.com/QuirkyQwerty_/status/1738067850366275968",
   },
-];
-
-const tweetsCommunity: TweetCardProps[] = [
+  {
+    author: {
+      name: "Joe Kreate",
+      username: "joekreate",
+      image:
+        "https://pbs.twimg.com/profile_images/1648119841189150722/-j2p8UeW_400x400.jpg",
+    },
+    tweet:
+      `Think we take how amazing @JupiterExchange is for granted. Can't tell you how nice it is to have on-chain limit orders and DCA. 
+      Don't even think I realized that's what kept me from doing more on-chain trading until it existed.`,
+    time: new Date(2023, 11, 16, 10, 27),
+    permalink: "https://twitter.com/joekreate/status/1735848992679076161",
+  },
   {
     author: {
       name: "Kulture ⚡",
@@ -162,22 +100,38 @@ const tweetsCommunity: TweetCardProps[] = [
     time: new Date(2024, 1, 1, 14, 5),
     permalink: "https://twitter.com/KultureElectric/status/1752936182785130819",
   },
+];
+
+const tweetsCommunity: TweetCardProps[] = [
   {
     author: {
-      name: "Jakey",
-      username: "SolJakey",
+      name: "Kash Dhanda",
+      username: "kashdhanda",
       image:
-        "https://pbs.twimg.com/profile_images/1754751934999973888/zGiiFqtH_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1712057099046338560/S2B7ouDm_normal.jpg",
     },
-    tweet: `Thank you @JupiterExchange for setting the bar to a new standard.
+    tweet: `Jupiter is a world-class product built by a group of killers.  
+
+    The JUP DAO will be a world-class community launching killer products via the LFG Launchpad. 
     
-    The build up, the stress testing, the COMMUNICATION, and the execution was top tier.
+    I'm just lucky to be a (small) part of this going forward 🥳`,
+    time: new Date(2024, 2, 14, 20, 2),
+    permalink: "https://x.com/kashdhanda/status/1757737079264477358?s=20",
+  },
+  {
+    author: {
+      name: "Durden ∞",
+      username: "@durdenwannabe",
+      image:
+        "	https://pbs.twimg.com/profile_images/1501827205957320708/nSrI5I6S_normal.jpg",
+    },
+    tweet: `Jupiter already has a vibrant community 🪐
+
+    I'm excited to help turn that community into a well-functioning DAO that will move not just Jupiter but the whole Solana ecosystem forward 🫡
     
-    Notes will now be taken from other protocols, platforms and products wanting to do a token.
-    
-    SOLANA is grateful for you!`,
-    time: new Date(2024, 1, 1, 9, 24),
-    permalink: "https://twitter.com/SolJakey/status/1752865440098099278",
+    LFJ!`,
+    time: new Date(2024, 2, 13, 0, 23),
+    permalink: "https://twitter.com/durdenwannabe/status/1757080612865970214",
   },
   {
     author: {
@@ -298,11 +252,8 @@ export default function Home(): JSX.Element {
                     The <GradientText>Best Onchain Exchange</GradientText> 🚀
                   </h2>
                   <p className="mt-6 text-lg">
-                    We are crafting the ultimate on-chain exchange experience, 
-                    and we find Solana to be the ideal platform for it. 
-                    Leveraging Solana's low transaction fees, 
-                    combined with Jupiter's advanced routing and unwavering commitment to product excellence, 
-                    we aim to deliver the finest on-chain crypto experience.
+                  We deliver the finest onchain experience, marrying Solana's low transaction fees with
+                  Jupiter's advanced routing and commitment to product excellence.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                     {tweetsBestExchange.map((tweet, index) => (
@@ -322,13 +273,10 @@ export default function Home(): JSX.Element {
               <div className="max-w-content mx-auto">
                 <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                   <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                    With <GradientText>Features that people love</GradientText> ❤️
+                    With <GradientText>Features That People Love</GradientText> ❤️
                   </h2>
                   <p className="mt-6 text-lg">
-                    In our endeavor to provide the best on-chain exchange experience, 
-                    we've crafted a platform with features that users truly appreciate. 
-                    These elements collectively prioritize user satisfaction and aim to continually improve the overall trading experience. 
-                    Join us in embracing a platform tailored to the preferences and satisfaction of our users.
+                   Jupiter's products covers swaps, DCA, limit orders, perpetuals, and a launchpad, with different options for users and developers. We're also constantly adding new features to serve you even better.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                     {tweetsFeatures.map((tweet, index) => (
@@ -348,8 +296,11 @@ export default function Home(): JSX.Element {
               <div className="max-w-content mx-auto">
               <section className="mt-[108px] sm:mt-[145px] text-center sm:text-left">
                 <h2 className="text-white text-[28px] sm:text-[36px] leading-[1.22]">
-                  <GradientText>Awesome Community</GradientText> in the building 🙌
+                  Put Together By An <GradientText>Awesome Community</GradientText> 🙌
                 </h2>
+                <p className="mt-6 text-lg">
+                   With catdets, working groups, and the DAO growing everyday, we have a strong decentralized community of users and builders working together to bring you the very best.
+                  </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[14px] mt-9">
                   {tweetsCommunity.map((tweet, index) => (
                     <div key={index}>
