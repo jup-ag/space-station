@@ -74,9 +74,9 @@ Then:
 
 This will start the API server without Openbook as part of routing. You can also remove individual market as well.
 
-## Free Third Party Hosted APIs
+## Third Party Hosted APIs
 
-Our collaboration with some Solana RPC partners in the ecosystem allows you to take advantage of a hosted API they provide for free.
+Our collaboration with some Solana RPC partners in the ecosystem allows you to take advantage of a hosted API they provide for free or a small fee.
 
 - Jupiter API Powered by QuickNode: https://www.jupiterapi.com 
   - Endpoint: `https://public.jupiterapi.com`
