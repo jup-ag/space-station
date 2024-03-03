@@ -55,6 +55,7 @@ const PoolProviderLogoMap: Record<string, any> = {
   Balansol: BalansolSVG,
   Dradex: DradexSVG,
   Openbook: OpenbookSVG,
+  "Openbook v2": OpenbookSVG,
   Oasis: OasisSVG,
   BonkSwap: BonkSwapPNG,
   Symmetry: SymmetrySVG,
