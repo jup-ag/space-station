@@ -35,7 +35,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); */
 }
 
-body {
+.home {
   background-color: #131c25;
 }
 
@@ -93,7 +93,6 @@ body {
 @media (min-width: 996px) {
   .navbar {
     height: auto;
-    background-color: rgba(0, 0, 0, 0.1);
     @apply flex justify-center;
   }
 
