@@ -3,7 +3,6 @@ import styles from './styles.module.css';
 import LinkIcon from '../stats/LinkIcon';
 
 const formatFileSize = (bytes) => {
-  console.log("🚀 ~ file: index.tsx:7 ~ formatFileSize ~ bytes:", bytes)
   const fileSizeInKB = (bytes / 1024).toFixed(1);
   return `${fileSizeInKB} KB`;
 };
