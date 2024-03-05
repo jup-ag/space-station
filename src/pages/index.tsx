@@ -19,6 +19,7 @@ const JupiterTopics = () => {
         </a> */}
         <a
           href="https://station.jup.ag/blog/green-paper"
+          target="_blank"
           className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
         >
           Jupiter Green Paper
@@ -32,6 +33,7 @@ const JupiterTopics = () => {
 
         <a
           href="https://www.jupresear.ch"
+          target="_blank"
           className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
         >
           Jup Research
@@ -60,6 +62,7 @@ const JupiterProducts = () => {
               <div className="text-lg font-bold text-center">Swap</div>
               <a
                 href="https://jup.ag/swap"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -69,6 +72,7 @@ const JupiterProducts = () => {
               </a>
               <a
                 href="https://station.jup.ag/guides/jupiter-swap/swap"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -86,6 +90,7 @@ const JupiterProducts = () => {
               </div>
               <a
                 href="https://jup.ag/limit"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -95,6 +100,7 @@ const JupiterProducts = () => {
               </a>
               <a
                 href="https://station.jup.ag/guides/limit-order/limit-order"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -109,6 +115,7 @@ const JupiterProducts = () => {
               <div className="text-lg font-bold  text-center">DCA</div>
               <a
                 href="https://jup.ag/dca"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -118,6 +125,7 @@ const JupiterProducts = () => {
               </a>
               <a
                 href="https://station.jup.ag/guides/dca/how-to-dca"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -132,6 +140,7 @@ const JupiterProducts = () => {
               <div className="text-lg font-bold  text-center">Perps</div>
               <a
                 href="https://jup.ag/perps"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -141,6 +150,7 @@ const JupiterProducts = () => {
               </a>
               <a
                 href="https://station.jup.ag/labs/perpetual-exchange/overview"
+                target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
                 )}
@@ -189,6 +199,7 @@ const JupiterDevelopers = () => {
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
         <a
           href="https://station.jup.ag/docs/apis/swap-api"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -199,6 +210,7 @@ const JupiterDevelopers = () => {
         </a>
         <a
           href="https://station.jup.ag/docs/apis/payments-api"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -209,6 +221,7 @@ const JupiterDevelopers = () => {
         </a>
         <a
           href="https://station.jup.ag/docs/limit-order/limit-order-api"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -219,6 +232,7 @@ const JupiterDevelopers = () => {
         </a>
         <a
           href="https://terminal.jup.ag"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -229,6 +243,7 @@ const JupiterDevelopers = () => {
         </a>
         <a
           href="https://station.jup.ag/docs/dca/dca-sdk"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -239,6 +254,7 @@ const JupiterDevelopers = () => {
         </a>
         <a
           href="https://station.jup.ag/docs/additional-topics/referral-program"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -265,6 +281,7 @@ const JupiterLFGLaunchpad = () => {
       <div className="mt-5 flex flex-col gap-2">
         <a
           href="https://twitter.com/weremeow/status/1749577177333645770"
+          target="_blank"
           rel="noopener noreferrer"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
@@ -276,6 +293,7 @@ const JupiterLFGLaunchpad = () => {
         </a>
         <a
           href="https://www.jupresear.ch/t/jupiter-lfg-launchpad-beta/31"
+          target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -286,6 +304,7 @@ const JupiterLFGLaunchpad = () => {
         </a>
         <a
           href="https://www.youtube.com/@jup-ecosystem/featured"
+          target="_blank"
           rel="noopener noreferrer"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
@@ -319,6 +338,8 @@ const JupiterJupAcronym = () => {
       <div className="mt-5 flex flex-col gap-2">
         <a
           href="https://twitter.com/weremeow/status/1764304344545894904"
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -329,6 +350,8 @@ const JupiterJupAcronym = () => {
         </a>
         <a
           href="https://twitter.com/JupiterExchange/status/1763214551900729797"
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
@@ -339,6 +362,8 @@ const JupiterJupAcronym = () => {
         </a>
         <a
           href="https://twitter.com/JupiterExchange/status/1757079166212505989"
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
             `transition-all hover:gap-3`
