@@ -344,7 +344,7 @@ const JupiterJupAcronym = () => {
             `transition-all hover:gap-3`
           )}
         >
-          <span>Core Working Group</span>
+          <span>Working Groups</span>
           <ChevronRight />
         </a>
         {/* <a
