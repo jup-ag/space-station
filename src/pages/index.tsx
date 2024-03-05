@@ -272,7 +272,6 @@ const JupiterLFGLaunchpad = () => {
   return (
     <div className="w-full text-v2-lily/[.03]">
       <div
-        id="section-lfg-launchpad"
         className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]"
       >
         LFG Launchpad
@@ -569,7 +568,7 @@ const Content = () => {
 
         <div className="bg-v2-lily/5 w-full h-[1px]" />
 
-        <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
+        <div id="section-lfg-launchpad" className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
           <JupiterLFGLaunchpad />
           <JupiterJupAcronym />
         </div>
