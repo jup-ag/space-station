@@ -18,13 +18,6 @@ const JupiterTopics = () => {
           Welcome to Solana
         </a> */}
         <a
-          href="https://station.jup.ag/blog/green-paper"
-          target="_blank"
-          className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
-        >
-          Jupiter Green Paper
-        </a>
-        <a
           href="#section-lfg-launchpad"
           className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
         >
