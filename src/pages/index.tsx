@@ -31,6 +31,13 @@ const JupiterTopics = () => {
         >
           Jup Research
         </a>
+        <a
+          href="https://vote.jup.ag"
+          target="_blank"
+          className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
+        >
+          Governance
+        </a>
         {/* <a href="" className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline">
           J.U.P Governance
         </a> */}
