@@ -10,6 +10,7 @@ const bridge = '/img/bridge.png';
 const payment = '/img/payment.png';
 const nft = '/img/nft.png';
 const game = '/img/game.png';
+const infra = '/img/infra.png';
 
 const gemwallet = '/img/wallet/gemwallet.svg';
 const phantom = '/img/wallet/phantom.svg';
@@ -93,6 +94,8 @@ const hadeswap = '/img/nft/hadeswap.png';
 const hyperspace = '/img/nft/hyperspace.svg';
 const liquifynft = '/img/nft/liquifynft.svg';
 const solsea = '/img/nft/solsea.svg';
+
+const quicknode = '/img/infra/quicknode.svg';
 
 const sections = [
   {
@@ -576,6 +579,25 @@ const sections = [
         title: 'Famous Fox Federation',
         logo: famousfoxfederation,
         link: 'https://famousfoxes.com/',
+      },
+    ],
+  },
+  {
+    id: 8,
+    logo: infra,
+    title: 'Infrastructure',
+    header: (
+      <div className="relative mb-4">
+        <img src={nft} height={37} />
+        <h2 className="absolute top-[4px] left-[40px]">Infrastructure</h2>
+      </div>
+    ),
+    description: `Blockchain infrastructure providers deliver the backbone for decentralized networks, offering scalable and secure platforms for transactions, smart contracts, and application development. They enable seamless access to blockchain ecosystems, supporting the growth of decentralized applications and services.`,
+    cards: [
+      {
+        title: 'QuickNode',
+        logo: quicknode,
+        link: 'https://www.quicknode.com/',
       },
     ],
   },
