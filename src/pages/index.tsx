@@ -395,7 +395,12 @@ const JupiterCredits = () => {
 
       <div className="flex flex-col md:flex-row gap-2 lg:gap-8 mt-6">
         <div className="justify-center items-start gap-8 w-full">
-          <div className="p-4 lg:p-8 bg-[#20292F] rounded-2xl justify-center items-start flex flex-col w-full">
+          <a
+            href="https://twitter.com/jerallaire/status/1724718929447371174"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 lg:p-8 bg-[#20292F] rounded-2xl justify-center items-start flex flex-col w-full hover:bg-[#20292F]/[.9] hover:no-underline"
+          >
             <div className="flex gap-3">
               <img
                 className="w-9 h-9 rounded-full border border-lime-200 border-opacity-20"
@@ -438,11 +443,16 @@ const JupiterCredits = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div className="justify-center items-start gap-8 w-full">
-          <div className="p-4 lg:p-8 bg-[#20292F] rounded-2xl flex flex-col w-full">
+          <a
+            href="https://twitter.com/TopoGigio_sol/status/1737844551317147964"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 lg:p-8 bg-[#20292F] rounded-2xl justify-center items-start flex flex-col w-full hover:bg-[#20292F]/[.9] hover:no-underline"
+          >
             <div className="flex gap-3">
               <img
                 className="w-9 h-9 rounded-full border border-lime-200 border-opacity-20"
@@ -483,11 +493,16 @@ const JupiterCredits = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div className="justify-center items-start gap-8 w-full">
-          <div className="p-4 lg:p-8 bg-[#20292F] rounded-2xl flex flex-col h-auto w-full">
+          <a
+            href="https://twitter.com/Abbasshaikh42/status/1735940030865277244"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 lg:p-8 bg-[#20292F] rounded-2xl justify-center items-start flex flex-col w-full hover:bg-[#20292F]/[.9] hover:no-underline"
+          >
             <div className="flex gap-3">
               <img
                 className="w-9 h-9 rounded-full border border-lime-200 border-opacity-20"
@@ -529,7 +544,7 @@ const JupiterCredits = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
