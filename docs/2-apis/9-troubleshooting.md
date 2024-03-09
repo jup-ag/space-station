@@ -33,6 +33,7 @@ The Jupiter API cannot fix this for you but we do have a few things that can hel
 * If the `prioritizationFeeLamports` doesn't work, you can always set your own fee by using the `/swap-instructions` endpoint.
 * `dynamicComputeUnitLimit` on `/swap`: By default, the Jupiter API assumes that each swap will take up 1.4m compute unit. By setting this to `true`, it will adjust the compute unit to be dynamic. We run a simulation to estimate the compute units the swap will take then we add an extra 40% margin. By having lower compute units used, we can set a higher priority fee and it will help to get transaction through since now you are bidding on with higher priority fee.
 * `maxRetries` on `sendRawTransaction`: This can be useful to retry sending your transaction and increase the chance of your transaction landing.
+* You can check out how we send transaction on https://jup.ag [here](https://github.com/jup-ag/jupiter-quote-api-node/blob/main/example/index.ts#L73).
 
 ```
 const txid = await connection.sendRawTransaction(rawTransaction, {
