@@ -189,9 +189,47 @@ const ChevronRight = ({ width = 14, height = 14 }) => {
   );
 };
 
+const JupiterProjects = () => {
+  return (
+    <div className="w-full md:w-1/3">
+      <div
+        className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]"
+      >
+        Projects
+      </div>
+
+      <div className="mt-5 flex flex-col gap-2">
+        <a
+          href="https://station.jup.ag/docs/get-your-token-onto-jup"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            `transition-all hover:gap-3`
+          )}
+        >
+          <span>Get Listed on Jupiter</span>
+          <ChevronRight />
+        </a>
+        <a
+          href="https://www.jupresear.ch/t/lfg-launchpad-introducing-your-project-to-the-community/5234/2"
+          target="_blank"
+          className={cn(
+            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            `transition-all hover:gap-3`
+          )}
+        >
+          <span>Apply to LFG</span>
+          <ChevronRight />
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const JupiterDevelopers = () => {
   return (
-    <div>
+    <div className="w-full md:w-2/3">
       <div className="text-3xl xl:text-4xl text-center lg:text-start font-bold !text-[#00BEF0]">
         Developers
       </div>
@@ -577,21 +615,23 @@ const Content = () => {
       </div>
 
       <div className="w-full bg-[#13181D] flex flex-col items-center">
-        <div className="max-xl:px-4 xl:max-w-7xl w-full py-[60px]">
-          <JupiterDevelopers />
+        <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
+          <JupiterProjects/>
+          <JupiterDevelopers/>
         </div>
 
-        <div className="bg-v2-lily/5 w-full h-[1px]" />
+        <div className="bg-v2-lily/5 w-full h-[1px]"/>
 
-        <div id="section-lfg-launchpad" className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
-          <JupiterLFGLaunchpad />
-          <JupiterJupAcronym />
+        <div id="section-lfg-launchpad"
+             className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
+          <JupiterLFGLaunchpad/>
+          <JupiterJupAcronym/>
         </div>
       </div>
 
       <div className="bg-[#0D1114] w-full py-[60px] flex justify-center">
         <div className="max-xl:px-4 xl:max-w-7xl w-full">
-          <JupiterCredits />
+          <JupiterCredits/>
         </div>
       </div>
     </div>
