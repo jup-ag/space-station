@@ -56,7 +56,7 @@ const JupiterProducts = () => {
         Jupiter Products
       </div>
       <div className="mt-4 w-full">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
               <div className="text-lg font-bold text-center">Swap</div>
@@ -191,14 +191,12 @@ const ChevronRight = ({ width = 14, height = 14 }) => {
 
 const JupiterProjects = () => {
   return (
-    <div className="w-full md:w-1/3">
-      <div
-        className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]"
-      >
+    <div className="w-full">
+      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
         Projects
       </div>
 
-      <div className="mt-5 flex flex-col gap-2">
+      <div className="mt-5 grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-2 gap-2">
         <a
           href="https://station.jup.ag/docs/get-your-token-onto-jup"
           target="_blank"
@@ -229,7 +227,7 @@ const JupiterProjects = () => {
 
 const JupiterDevelopers = () => {
   return (
-    <div className="w-full md:w-2/3">
+    <div className="w-full">
       <div className="text-3xl xl:text-4xl text-center lg:text-start font-bold !text-[#00BEF0]">
         Developers
       </div>
@@ -309,9 +307,7 @@ const JupiterDevelopers = () => {
 const JupiterLFGLaunchpad = () => {
   return (
     <div className="w-full text-v2-lily/[.03]">
-      <div
-        className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]"
-      >
+      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
         LFG Launchpad
       </div>
 
@@ -615,23 +611,29 @@ const Content = () => {
       </div>
 
       <div className="w-full bg-[#13181D] flex flex-col items-center">
-        <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
-          <JupiterProjects/>
-          <JupiterDevelopers/>
+        <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col xl:flex-row justify-center gap-10 py-[60px]">
+          <div className="w-full xl:w-1/3">
+            <JupiterProjects />
+          </div>
+          <div className="w-full xl:w-2/3">
+            <JupiterDevelopers />
+          </div>
         </div>
 
-        <div className="bg-v2-lily/5 w-full h-[1px]"/>
+        <div className="bg-v2-lily/5 w-full h-[1px]" />
 
-        <div id="section-lfg-launchpad"
-             className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
-          <JupiterLFGLaunchpad/>
-          <JupiterJupAcronym/>
+        <div
+          id="section-lfg-launchpad"
+          className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]"
+        >
+          <JupiterLFGLaunchpad />
+          <JupiterJupAcronym />
         </div>
       </div>
 
       <div className="bg-[#0D1114] w-full py-[60px] flex justify-center">
         <div className="max-xl:px-4 xl:max-w-7xl w-full">
-          <JupiterCredits/>
+          <JupiterCredits />
         </div>
       </div>
     </div>
