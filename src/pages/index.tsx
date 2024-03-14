@@ -56,7 +56,7 @@ const JupiterProducts = () => {
         Jupiter Products
       </div>
       <div className="mt-4 w-full">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
               <div className="text-lg font-bold text-center">Swap</div>
@@ -189,9 +189,45 @@ const ChevronRight = ({ width = 14, height = 14 }) => {
   );
 };
 
+const JupiterProjects = () => {
+  return (
+    <div className="w-full">
+      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
+        Projects
+      </div>
+
+      <div className="mt-5 grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-2 gap-2">
+        <a
+          href="https://station.jup.ag/docs/get-your-token-onto-jup"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            `transition-all hover:gap-3`
+          )}
+        >
+          <span>Get Listed on Jupiter</span>
+          <ChevronRight />
+        </a>
+        <a
+          href="https://www.jupresear.ch/t/lfg-launchpad-introducing-your-project-to-the-community/5234/2"
+          target="_blank"
+          className={cn(
+            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            `transition-all hover:gap-3`
+          )}
+        >
+          <span>Apply to LFG</span>
+          <ChevronRight />
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const JupiterDevelopers = () => {
   return (
-    <div>
+    <div className="w-full">
       <div className="text-3xl xl:text-4xl text-center lg:text-start font-bold !text-[#00BEF0]">
         Developers
       </div>
@@ -271,9 +307,7 @@ const JupiterDevelopers = () => {
 const JupiterLFGLaunchpad = () => {
   return (
     <div className="w-full text-v2-lily/[.03]">
-      <div
-        className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]"
-      >
+      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
         LFG Launchpad
       </div>
 
@@ -577,13 +611,21 @@ const Content = () => {
       </div>
 
       <div className="w-full bg-[#13181D] flex flex-col items-center">
-        <div className="max-xl:px-4 xl:max-w-7xl w-full py-[60px]">
-          <JupiterDevelopers />
+        <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col xl:flex-row justify-center gap-10 py-[60px]">
+          <div className="w-full xl:w-1/3">
+            <JupiterProjects />
+          </div>
+          <div className="w-full xl:w-2/3">
+            <JupiterDevelopers />
+          </div>
         </div>
 
         <div className="bg-v2-lily/5 w-full h-[1px]" />
 
-        <div id="section-lfg-launchpad" className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]">
+        <div
+          id="section-lfg-launchpad"
+          className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]"
+        >
           <JupiterLFGLaunchpad />
           <JupiterJupAcronym />
         </div>
