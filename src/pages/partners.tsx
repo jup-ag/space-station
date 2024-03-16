@@ -317,7 +317,7 @@ const sections = [
       {
         title: 'Openbook',
         logo: openbook,
-        link: 'https://www.openbook-solana.com/',
+        link: 'https://openbookdex.com/',
       },
       {
         title: 'Meteora',
