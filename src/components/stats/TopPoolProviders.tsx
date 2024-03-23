@@ -32,6 +32,8 @@ const PhoenixSVG = "/svg/phoenix.svg";
 const FluxBeamPNG = "/svg/fluxbeam.png";
 const HeliumSVG = "/svg/helium.svg";
 const SanctumSVG = "/svg/sanctum.svg";
+const DexlabSVG = "/svg/dexlab.svg";
+
 
 const PoolProviderLogoMap: Record<string, any> = {
   Orca: OrcaSVG,
@@ -63,6 +65,7 @@ const PoolProviderLogoMap: Record<string, any> = {
   FluxBeam: FluxBeamPNG,
   "Helium Network": HeliumSVG,
   Sanctum: SanctumSVG,
+  Dexlab: DexlabSVG,
 };
 
 // Use this to hide the AMMs that are not ready to be shown
