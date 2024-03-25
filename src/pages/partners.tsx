@@ -12,6 +12,7 @@ const nft = '/img/nft.png';
 const game = '/img/game.png';
 const infra = '/img/infra.png';
 
+const crypto = 'img/wallet/crypto.png'
 const gemwallet = '/img/wallet/gemwallet.svg';
 const phantom = '/img/wallet/phantom.svg';
 const solflare = '/img/wallet/solflare.svg';
@@ -114,6 +115,11 @@ const sections = [
         title: 'Gem Wallet',
         logo: gemwallet,
         link: 'https://gemwallet.com',
+      },
+      {
+        title: 'Crypto.com',
+        logo: crypto,
+        link: 'https://crypto.com/defi-wallet',
       },
       {
         title: 'Phantom',
