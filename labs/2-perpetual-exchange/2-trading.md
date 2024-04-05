@@ -18,7 +18,7 @@ Commence by selecting the perpetual market you wish to open a position on, such 
 - Yields profit if the token price decreases.
 - Incurs losses if the token price increases.
 
-Upon selecting your side, navigate to the `You're Paying` tab, choose the token, input the desired payment amount, and specify the leverage. Above the `LONG/SHORT` button, find a concise summary of your `collateral` and `size in USD` with the leverage multiplier *(ranging from 1.1x to 100x)*.
+Upon selecting your side, navigate to the `You're Paying` tab, choose the token, input the desired payment amount, and specify the leverage. Above the `LONG/SHORT` button, find a concise summary of your `collateral` and `size in USD` with the leverage multiplier _(ranging from 1.1x to 100x)_.
 
 Below the `LONG/SHORT` button, review order details, including:
 
@@ -43,7 +43,7 @@ When initiating a position or depositing collateral, a snapshot of your collater
 
 Profit and loss are proportionate to your position size. For instance, a long SOL position of 1,000 USD with a 10% SOL price increase yields a profit of 100 USD, while a 10% decrease results in a 100 USD loss. Conversely, a short position with a 10% SOL price decrease garners a 100 USD profit, but a 10% increase incurs a 100 USD loss.
 
-Leverage for a position is represented as ```Size (position size) / Collateral (position collateral)```.
+Leverage for a position is represented as `Size (position size) / Collateral (position collateral)`.
 
 ## Closing a Position
 
@@ -53,8 +53,6 @@ You can close a position by clicking on the `Close` button in the position row.
 
 - **Short Positions:** Profits from short positions are paid out in the same stablecoin used to open the position, such as USDC or USDT.
 
-*Note: You also have the option to select a specific token for closure and receive the assets accordingly, taking market conditions into account. Jupiter will assist in seamlessly swapping into your desired token. This feature provides users with additional control and optimization over their trading outcomes.*
-
 ## Take-Profit / Stop-Loss Orders
 
 You can set take-profit and stop-loss trigger orders by selecting the `Add TP` or `Add SL` button in the position row.
@@ -63,7 +61,7 @@ Once you create a trigger order, it will be displayed in your position's row und
 
 In the event of manually closing a position, the associated trigger orders will be automatically canceled and closed, providing a seamless experience when opening new future positions.
 
-*Note: While `TP/SL` orders are set, keepers will monitor the mark price, when reaching the specified price level, TP/SL will close the whole position.*
+_Note: While `TP/SL` orders are set, keepers will monitor the mark price, when reaching the specified price level, TP/SL will close the whole position._
 
 ## Liquidations
 
@@ -77,7 +75,7 @@ Upon liquidation, any remaining collateral, net of losses and fees, will be kept
 
 On Jupiter Perpetual Exchange, **trades incur no price impact**, allowing for the execution of large trades precisely at the mark price.
 
-Mark prices are conveniently presented in the same row as the market name *(e.g., SOL-PERP)*. Notably, long positions and short positions are opened and closed at the same price as `Mark Price` when initiating market order.
+Mark prices are conveniently presented in the same row as the market name _(e.g., SOL-PERP)_. Notably, long positions and short positions are opened and closed at the same price as `Mark Price` when initiating market order.
 
 ## Fees
 
@@ -87,7 +85,7 @@ Opening or closing a position on Jupiter Perpetual Exchange incurs a fee equival
 hourly borrow fee = (tokens borrowed / tokens in the pool) x hourly borrow rate x position size
 ```
 
-For long positions, the collateral is the token being longed *(e.g., SOL for SOL longs, BTC for BTC longs)*, while short positions are collateralized with supported stablecoins like USDC or USDT.
+For long positions, the collateral is the token being longed _(e.g., SOL for SOL longs, BTC for BTC longs)_, while short positions are collateralized with supported stablecoins like USDC or USDT.
 
 Jupiter Perpetual Exchange seamlessly integrates Jupiter Swap. Consequently, when a swap is required during the opening or closing of a position, regular DEX fees and slippages are applicable.
 
