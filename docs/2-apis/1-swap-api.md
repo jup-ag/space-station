@@ -215,6 +215,10 @@ await connection.confirmTransaction(txid);
 console.log(`https://solscan.io/tx/${txid}`);
 ```
 
+:::info Solana Network Congestion
+Due to the network congestion on Solana, the `sendRawTransaction` method may not be able to help you to land your transaction. You should check out this [`transactionSender`](https://github.com/jup-ag/jupiter-quote-api-node/blob/main/example/utils/transactionSender.ts) file to send transaction.
+:::
+
 ## Advance error handling to disable certain AMM from the API
 
 Sometimes an AMM throw an error when swapping and to prevent getting the failed AMM for the same quote, you can use the `excludeDexes` parameter when getting `/quote`.
