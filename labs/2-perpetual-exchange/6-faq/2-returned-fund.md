@@ -9,11 +9,11 @@ description: Returned Funds for Unsuccessful Positions
 
 ![Returned1](returned1.png)
 
-2. Scroll down to `**CreateIncreasePositionMarketRequest**`
+2. Scroll down to `CreateIncreasePositionMarketRequest`
 
 ![Returned2](returned2.png)
 
-3. Click on `**Position Request**` address
+3. Click on `Position Request` address
 
 ![Returned3](returned3.png)
 
@@ -27,7 +27,7 @@ description: Returned Funds for Unsuccessful Positions
 
 ![Returned5](returned5.png)
 
-For **ALL other token**, check `**Token Balance Change**` tab
+For **ALL other token**, check `Token Balance Change` tab
 
 ![Returned6](returned6.png)
 

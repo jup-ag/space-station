@@ -3,28 +3,24 @@ sidebar_label: "FAQ"
 description: Frequently ask question
 ---
 
-# FAQ - Frequently Ask Questions
+# FAQ - Frequently Asked Questions
 
-### **I tried opening a position/ adding collateral and it’s not successful. Where is my funds?**
+### **I tried opening a position/ adding collateral and it’s not successful. Where is my fund?**
 
-Funds will be returned to your wallet address in 5-10 mins. There might be a delay of up to 20 minutes for the funds to be returned. Learn more to check for the returned funds.
-
-[Returned Funds for Unsuccessful Positions](https://www.notion.so/Returned-Funds-for-Unsuccessful-Positions-6c0062d7b21c4bfc9c108bb70301b186?pvs=21)
+Fund will be returned to your wallet address in 10-15 mins. There might be a delay for the fund to be returned when the network is congested. [Learn more](2-returned-fund) to check for the returned fund.
 
 _Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly._
 
-### **I closed my positions with profit and I have not received my funds.**
+### **I closed my position with profit and I have not received my fund.**
 
-You will receive the underlying asset for LONG-positions, i.e. SOL for SOL-Long, ETH for ETH-Long, wBTC for wBTC-Long.
+You will receive the underlying asset for LONG-position, i.e. SOL for SOL-Long, ETH for ETH-Long, wBTC for wBTC-Long.
 
-You will receive USDC or USDT for ALL SHORT-positions.
-Learn more to check for the funds.
-
-[Returned Funds after Closing Position](https://www.notion.so/Returned-Funds-after-Closing-Position-2e9625b699e34e11bc2aec7d0667e56a?pvs=21)
+You will receive USDC or USDT for ALL SHORT-position.
+[Learn more](3-returned-fund2) to check for the fund.
 
 ### **The price has reached my TP/SL price on the chart. Why is my TP/SL not triggered?**
 
-- Associated Token Account (ATA) is active.
+**Associated Token Account (ATA) is active.**
 
 Please ensure you have an active ATA in order for TPSL to be triggered and executed.
 
@@ -38,11 +34,11 @@ For full detail, please refer [here](https://station.jup.ag/labs/perpetual-excha
 
 **`TLDR:`**
 
-Chart data: Jupiter uses pythnet oracle https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet
+Chart data: Jupiter uses [pythnet oracle](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet)
 
-Position: Jupiter uses mainnet-beta oracle https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta
+Position: Jupiter uses [mainnet-beta oracle](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta)
 
-If you’ve ensured that you have the active ATA for the position, checked the mainnet-beta price and TPSL was indeed not triggered at the price it was supposed to, please proceed to open a Perp-ticket.
+If you’ve ensured that you have the active ATA for the position, checked the mainnet-beta price and TPSL was indeed not triggered at the price it was supposed to, please proceed to open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
 
 ### **Why is my liquidation price changing?**
 
@@ -56,7 +52,7 @@ The **`PNL`** shown is the amount before fees. The exact amount is shown under *
 
 [Example Trade](https://station.jup.ag/labs/perpetual-exchange/how-it-works#example-trade)
 
-Assuming 0 fees, with $50 profit, you will be getting SOL in return with value of $150. At the time of closing the position, 1 SOL = $120.
+Assuming 0 fee, with $50 profit, you will be getting SOL in return with value of $150. At the time of closing the position, 1 SOL = $120.
 $150 / $120 = 1.25
 
 Hence you will be getting 1.25 SOL where the value is equivalent to $150.

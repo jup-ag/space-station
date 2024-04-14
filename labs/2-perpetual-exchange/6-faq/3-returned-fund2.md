@@ -3,7 +3,7 @@ sidebar_label: "Returned funds after closing position"
 description: Returned funds after closing position
 ---
 
-1. Under `**Transaction History**` on Jupiter Perpetual Trading, click on the transaction ID of the closed position.
+1. Under `Transaction History` on Jupiter Perpetual Trading, click on the transaction ID of the closed position.
 
    ![Returned2-1](returned2-1.png)
 
@@ -12,7 +12,7 @@ description: Returned funds after closing position
 
 ![Returned2-2](returned2-2.png)
 
-For **ALL other positions**, check `**Token Balance Change**` tab
+For **ALL other positions**, check `Token Balance Change` tab
 
 ![Returned2-3](returned2-3.png)
 
