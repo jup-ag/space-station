@@ -1,6 +1,6 @@
 ---
-sidebar_label: "Returned funds for unsuccessful position"
-description: Returned Funds for Unsuccessful Positions
+sidebar_label: "Returned Fund for Unsuccessful Position"
+description: Learn how to locate returned fund for unsuccessful attempt to increase position
 ---
 
 # Returned Funds for Unsuccessful Positions
