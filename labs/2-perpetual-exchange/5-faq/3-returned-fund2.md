@@ -1,6 +1,6 @@
 ---
-sidebar_label: "Returned funds after closing position"
-description: Returned funds after closing position
+sidebar_label: "Returned Fund after Position is Closed"
+description: Learn how to locate fund after position is closed
 ---
 
 1. Under `Transaction History` on Jupiter Perpetual Trading, click on the transaction ID of the closed position.
