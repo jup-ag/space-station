@@ -8,6 +8,7 @@ description: Frequently Asked Questions
 **1. I tried opening a position/ adding collateral and it’s not successful. Where is my fund?**
 
 Fund will be returned to your wallet address in 10-15 mins. There might be a delay for the fund to be returned when the network is congested.
+
 [Learn more](2-returned-fund.md) to check for the returned fund.
 
 _Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly._
@@ -15,7 +16,7 @@ _Note: Wallet service providers might not be fully parsing the transactions. If 
 **2. I closed my position with profit and I have not received my fund.**
 
 You will receive the underlying asset for LONG-position, i.e. SOL for SOL-Long, ETH for ETH-Long, wBTC for wBTC-Long.
-You will receive USDC or USDT for ALL SHORT-position.
+You will receive USDC or USDT for ALL SHORT-positions.
 
 [Learn more](3-returned-fund2.md) to check for the fund.
 

@@ -3,7 +3,7 @@ sidebar_label: "Returned Fund for Unsuccessful Position"
 description: Learn how to locate returned fund for unsuccessful attempt to increase position
 ---
 
-# Returned Funds for Unsuccessful Positions
+# Returned fund for unsuccessful position
 
 1. Go to the Transaction ID
 
