@@ -19,11 +19,11 @@ description: Learn how to locate returned fund for unsuccessful attempt to incre
 
 4. Click on the latest successful transaction
 
-   ![Returned4](returned4.png)
+![Returned4](returned4.png)
 
 5. You could find your returned fund here:
 
-   For **SOL**, check **`SOL Balance Change`** tab
+For **SOL**, check **`SOL Balance Change`** tab
 
 ![Returned5](returned5.png)
 

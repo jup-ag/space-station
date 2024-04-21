@@ -7,10 +7,11 @@ description: Learn how to locate fund after position is closed
 
 1. Under `Transaction History` on Jupiter Perpetual Trading, click on the transaction ID of the closed position.
 
-   ![Returned2-1](returned2-1.png)
+![Returned2-1](returned2-1.png)
 
 1. You could find your returned fund here:
-   For **SOL-Long position**, check **`SOL Balance Change`** tab
+
+For **SOL-Long position**, check **`SOL Balance Change`** tab
 
 ![Returned2-2](returned2-2.png)
 
