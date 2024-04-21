@@ -19,11 +19,11 @@ description: Learn how to locate returned fund for unsuccessful attempt to incre
 
 4. Click on the latest successful transaction
 
-   ![Returned4](returned4.png)
+![Returned4](returned4.png)
 
 5. You could find your returned fund here:
 
-   For **SOL**, check **`SOL Balance Change`** tab
+For **SOL**, check **`SOL Balance Change`** tab
 
 ![Returned5](returned5.png)
 
@@ -31,4 +31,6 @@ For **ALL other token**, check `Token Balance Change` tab
 
 ![Returned6](returned6.png)
 
-_Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly._
+:::info
+Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly.
+:::
