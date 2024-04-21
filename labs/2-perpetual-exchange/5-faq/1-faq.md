@@ -7,7 +7,7 @@ description: Frequently Asked Questions
 
 **1. I tried opening a position/adding collateral and it’s not successful. Where is my fund?**
 
-Fund will be returend to your wallet address in about 1-2 mins. There might be a delay for the fund to be returned when the network is congested. In that case, you can always close your expired request under the "Expired Orders" tab.
+Fund will be returned to your wallet address in about 1-2 mins. There might be a delay for the fund to be returned when the network is congested. In that case, you can always close your expired request under the `Expired Orders` tab.
 
 Check out this [link](2-returned-fund-for-unsuccessful-position.md) on how to look up for your returned fund.
 
@@ -25,7 +25,7 @@ Check out this [link](3-returned-fund-after-position-is-closed.md) on how to che
 
 **3. The price has reached my TP/SL price on the chart. Why is my TP/SL not triggered?**
 
-* Missing Associated Token Accounts
+- Missing Associated Token Accounts
 
   We won't be able to trigger a TP/SL if there is no active token account for the user. These are the associated token accounts (ATAs) needed for each position.
 
@@ -33,11 +33,13 @@ Check out this [link](3-returned-fund-after-position-is-closed.md) on how to che
   - wBTC Token Account for wBTC-Long;
   - USDC and USDT Token Account for ALL Short positions.
 
-* Oracle Price Not Reached
+- Oracle Price Not Reached
 
-  There are two oracles that we are using for TP/SL, the Pyth Mainnet Oracles and the Pyth Pythnet oracles. For full detail, please refer [here](https://station.jup.ag/labs/perpetual-exchange/how-it-works#oracle). Our chart data is using the [Pythnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet) and the positions uses the [Mainet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta).
+  There are two oracles that we are using for TP/SL, the Pyth Mainnet Oracles and the Pyth Pythnet oracles. For full detail, please refer [here](https://station.jup.ag/labs/perpetual-exchange/how-it-works#oracle).
 
-If you are sure that you have an active ATA for the position and check the Mainnet oracle price and confirm that TPSL is not triggered at the price it is supposed to, please open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
+  Our chart data is using the [Pythnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet) and the positions uses the [Mainet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta).
+
+If you are sure that you have an active ATA for the position and check the Mainnet oracle price and confirm that TP/SL is not triggered at the price it is supposed to, please open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
 
 **4. Why is my liquidation price changing?**
 
@@ -66,7 +68,7 @@ The value of SOL at the time is $189.28, hence `$3086.28 / $189.28 = 16.30`. The
 The **`PNL`** shown is the amount before fees. The exact amount is shown under **`Deposit/Withdraw`** tab.
 :::
 
-**6. I have an existing SOL-Long position. I deposited 1 SOL to open a ne SOL-Long position but I don’t see my new position.**
+**6. I have an existing SOL-Long position. I deposited 1 SOL to open a new SOL-Long position but I don’t see my new position.**
 
 Both positions will be combined into one position, where
 

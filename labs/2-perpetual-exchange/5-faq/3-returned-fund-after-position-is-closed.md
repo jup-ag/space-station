@@ -9,7 +9,7 @@ description: Learn how to locate fund after position is closed
 
 ![Returned2-1](returned2-1.png)
 
-1. You could find your returned fund here:
+2. You could find your returned fund here:
 
 For **SOL-Long position**, check **`SOL Balance Change`** tab
 
@@ -19,4 +19,6 @@ For **ALL other positions**, check `Token Balance Change` tab
 
 ![Returned2-3](returned2-3.png)
 
-_Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly._
+:::info
+Note: Wallet service providers might not be fully parsing the transactions. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly.
+:::
