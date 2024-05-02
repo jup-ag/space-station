@@ -464,7 +464,7 @@ components:
         type: integer
     AutoSlippageParameter:
       name: autoSlippage
-      description: Default is false. By setting this to `true`, our API will suggest a smart slippage that you can use. You should also make sure that you are check out `maxAutoSlippageBps` and `autoSlippageCollisionUsdValue`.
+      description: Default is false. By setting this to `true`, our API will suggest smart slippage info that you can use. `computedAutoSlippage` is the computed result, and `slippageBps` is what we suggest you to use. Additionally, you should check out `maxAutoSlippageBps` and `autoSlippageCollisionUsdValue`.
       in: query
       schema:
         type: boolean
