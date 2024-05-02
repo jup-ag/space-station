@@ -470,7 +470,7 @@ components:
         type: boolean
     MaxAutoSlippageParameter:
       name: maxAutoSlippageBps
-      description: If `autoSlippage` is set to `true`, you can set a max value on the smart slippage the API will suggest using this parameter. It is recommended that you set something here.
+      description: In conjunction with `autoSlippage=true`, the maximum `slippageBps` returned by the API will respect this value. It is recommended that you set something here.
       in: query
       schema:
         type: integer
