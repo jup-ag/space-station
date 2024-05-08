@@ -141,7 +141,8 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How or who do I reach out to for partnerships or collaboration? 
 
-- We're happy to partner and collab with anyone in the ecosystem, please refer to the following READMEs to get featured
+- We're happy to partner and collab with anyone in the ecosystem, please refer to the following READMEs to get featured on the various pages
     - [Guide](https://github.com/jup-ag/space-station?tab=readme-ov-file#jupiter-space-station-partner-page) to [Jupiter Space Station Partner Page](https://station.jup.ag/partners)
     - [Guide](https://github.com/jup-ag/welcome-partners) to [Welcome to Solana Page](https://welcome.jup.ag/)
+- In order for Jupiter to feature you or participate in co-marketing efforts, we require you to clearly indicate and label the usage of Jupiter's products such as (but not limited to) APIs, widgets, interfaces, etc.
 - If you need further assistance or enquire about marketing efforts, you can reach us in our [discord](https://discord.gg/jup), we will try to get in touch as soon as possible. 
