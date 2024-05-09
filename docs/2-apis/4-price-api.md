@@ -4,7 +4,7 @@ description: Get on-chain price for any token
 ---
 # Price API: Get on-chain price for any token
 
-The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible. It also comes with the option to specify another token as the base unit (see "vsToken").
+The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible. It also comes with the option to specify another token as the base unit ([see "vsToken"](#vstoken)).
 
 :::info
 We support fetching the prices for up to 100 tokens in one call right now to manage performance. If you have a use case that is not supported yet, let us know in #developer-support in our discord: [discord.gg/jup](https://discord.gg/jup)
@@ -18,7 +18,7 @@ For example, the most basic call will provide the unit price for the token based
 
 ```json
 # Unit price of SOL based on the buy amount of 1 unit of SOL
-https://price.jup.ag/v4/price?ids=SOL
+https://price.jup.ag/v6/price?ids=SOL
 
 {
   "data": {
@@ -33,12 +33,12 @@ https://price.jup.ag/v4/price?ids=SOL
   "timeTaken": 0.0003002400007972028
 }
 ```
-
-If you include a `vsToken`, it will change the buy token. For example, this call will return the unit price for *DUST based on the buy amount of 1 SOL*.
+<a id="vstoken"></a>
+If you include a `vsToken`, it will change the buy token. For example, this call will return the unit price for *BTC based on the buy amount of 1 ETH*.
 
 ```json
 # Unit price of BTC based on the buy amount of 1 ETH
-https://price.jup.ag/v4/price?ids=BTC&vsToken=ETH
+https://price.jup.ag/v6/price?ids=BTC&vsToken=ETH
 
 {
   "data": {
@@ -58,7 +58,7 @@ Both the `ids` and `vsToken` can also be specified using input mints.
 
 ```json
 # Specifying both id and vsToken with mint addresses
-https://price.jup.ag/v4/price?ids=7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs&vsToken=So11111111111111111111111111111111111111112
+https://price.jup.ag/v6/price?ids=7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs&vsToken=So11111111111111111111111111111111111111112
 
 {
   "data": {
@@ -79,14 +79,14 @@ https://price.jup.ag/v4/price?ids=7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs&v
 A simple GET request, via your browser or one of the terminal commands below:
 
 ```bash
-curl -X 'GET' 'https://price.jup.ag/v4/price?ids=SOL'
+curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL'
 
-curl -X 'GET' 'https://price.jup.ag/v4/price?ids=SOL&vsToken=mSOL'
+curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
 ```
 
 ## Endpoint
 
-**Endpoint:** `https://price.jup.ag/v4/price`
+**Endpoint:** `https://price.jup.ag/v6/price`
 
 **Query params**
 
