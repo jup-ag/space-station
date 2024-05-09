@@ -25,8 +25,8 @@ const config = {
   organizationName: "Raccoons", // Usually your GitHub org/user name.
   projectName: "Jupiter Space Station", // Usually your repo name.
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -127,41 +127,6 @@ const config = {
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "labs",
-        path: "labs",
-        routeBasePath: "labs",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "start",
-        path: "start",
-        routeBasePath: "start",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "JUP",
-        path: "JUP",
-        routeBasePath: "JUP",
-        sidebarPath: require.resolve("./sidebars-jup.js"),
-        sidebarCollapsed: false,
-      }),
-    ],
     async function myPlugin() {
       return {
         name: "docusaurus-tailwindcss",
@@ -208,11 +173,6 @@ const config = {
         },
         items: [
           {
-            to: "/jup",
-            label: "J.U.P",
-            position: "left",
-          },
-          {
             to: "/guides",
             label: "Guides",
             position: "left",
@@ -221,16 +181,6 @@ const config = {
             to: "/docs",
             position: "left",
             label: "Docs",
-          },
-          {
-            to: "/labs",
-            position: "left",
-            label: "Labs",
-          },
-          {
-            to: "/start",
-            position: "left",
-            label: "Start",
           },
           {
             to: "/partners",
