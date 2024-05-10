@@ -7,6 +7,13 @@ title: "V6 Swap API"
 Jupiter API is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
 
 ### Try it out!
+<details>
+  <summary>Click to play video</summary>
+  <video width="320" height="240" controls>
+    <source src="/videos/1-swap-api.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ```shell
 # Copy and paste this into your terminal!
@@ -16,6 +23,8 @@ curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So1111111111111111111111111
 ## V6 API Reference
 
 All Jupiter swaps are using versioned transactions and address lookup tables. But not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to use the `asLegacyTransaction` parameter.
+
+Learn more about the Jupiter API Documentation at the [OpenAPI documentation](/api-v6). This documentation has a REST request list and a built in API Playground. Use the API Playground to try API calls now!
 
 :::info API Documentation
  [OpenAPI Documentation](/api-v6)
