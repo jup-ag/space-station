@@ -78,6 +78,18 @@ https://price.jup.ag/v6/price?ids=7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs&v
 
 A simple GET request, via your browser or one of the terminal commands below:
 
+<details>
+  <summary>Click to play videos</summary>
+  <video width="320" height="240" controls style={{ marginRight: '20px' }}>
+    <source src="/videos/price-api-1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <video width="320" height="240" controls>
+    <source src="/videos/price-api-2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</details>
+
 ```bash
 curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL'
 
