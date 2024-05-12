@@ -88,7 +88,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          sidebarCollapsed: false,
+          sidebarCollapsed: true,
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
@@ -123,7 +123,7 @@ const config = {
         path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
+        sidebarCollapsed: true,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
