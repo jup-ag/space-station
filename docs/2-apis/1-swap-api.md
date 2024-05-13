@@ -30,11 +30,11 @@ Learn more about the Jupiter API Documentation at the [OpenAPI documentation](/a
  [OpenAPI Documentation](/api-v6)
 :::
 
-### Guide
+### Guide for V6 Swap API
 
-#### 1. Install the libraries
+#### 1. Install required libraries
 
-To run this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). In your command line terminal, install the libraries.
+Running this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). In your command line terminal, install the libraries.
 
 ```shell
 npm i @solana/web3.js
@@ -59,7 +59,7 @@ const connection = new Connection('https://neat-hidden-sanctuary.solana-mainnet.
 ```
 
 :::tip
-Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore.
+Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore. For more information about RPC endpoints see the [official Solana Documentation](https://solana.com/docs/core/clusters) to learn more about their public RPC endpoints.
 :::
 
 #### 3. Setup your wallet
@@ -115,7 +115,7 @@ const quoteResponse = await (
 ).json();
 // console.log({ quoteResponse })
 ```
-
+### Get the best swap routes for a token trade pair sorted by largest output token amount
 <details>
   <summary>
     <div>
@@ -123,8 +123,6 @@ const quoteResponse = await (
       <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
     </div>
   </summary>
-
- ### Get the best swap routes for a token trade pair sorted by largest output token amount
 
 ### Request Parameters
 
@@ -228,9 +226,9 @@ console.log(`https://solscan.io/tx/${txid}`);
 Due to the network congestion on Solana, the `sendRawTransaction` method may not be able to help you to land your transaction. You should check out this [`transactionSender`](https://github.com/jup-ag/jupiter-quote-api-node/blob/main/example/utils/transactionSender.ts) file to send transaction.
 :::
 
-## Advance error handling to disable certain AMM from the API
+## Advanced error handling to disable certain AMM from the API
 
-Sometimes an AMM throw an error when swapping and to prevent getting the failed AMM for the same quote, you can use the `excludeDexes` parameter when getting `/quote`.
+Sometimes an AMM will throw an error when swapping. To prevent getting a quote from the failed AMM, you can use the `excludeDexes` parameter when getting `/quote`.
 
 Example JS, with the help of `@mercurial-finance/optimist` package:
 ```ts
@@ -269,7 +267,7 @@ const { data } = await (
 
 ## Instructions Instead of Transaction
 
-Sometimes you prefer to compose using instructions instead of one transaction that is returned from the `/swap` endpoint. You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint.
+Sometimes you may prefer to compose using instructions instead of one transaction that is returned from the `/swap` endpoint. You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint.
 
 ```ts
 const instructions = await (
@@ -490,8 +488,8 @@ const transaction = await (
 If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
 
 ## Examples
-
+ For more example scripts please visit the [jupiter-quote-api-node public Git repository](https://github.com/jup-ag/jupiter-quote-api-node). The repository has some further scripts and instructions for you to explore!
 * Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
 * Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-example)
 
-More issues? Head to [Troubleshooting](/docs/apis/troubleshooting) section.
+Having issues? Head to the [Troubleshooting](/docs/apis/troubleshooting) section for some help.
