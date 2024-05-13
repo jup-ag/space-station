@@ -90,20 +90,6 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
-  /indexed-route-map:
-    get:
-      summary: GET /indexed-route-map
-      description: DEPRECATED, please use /tokens for tradable mints. Returns a hash map, input mint as key and an array of valid output mint as values, token mints are indexed to reduce the file size
-      deprecated: true
-      parameters:
-        - $ref: '#/components/parameters/OnlyDirectRoutesParameter'
-      responses:
-        '200':
-          description: Default response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/IndexedRouteMapResponse'
   /tokens:
     get:
       summary: GET /tokens

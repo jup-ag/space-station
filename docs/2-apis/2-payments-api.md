@@ -17,6 +17,14 @@ Bob is selling a delicious latte for 5 USDC, Alice only holds mSOL but Bob can u
 
 First, we need to show Alice how much mSOL will he have to spend for the latte.
 
+<details>
+  <summary>Click to play video</summary>
+  <video width="320" height="240" controls>
+    <source src="/videos/payments-api.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</details>
+
 ```shell
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=5000000&swapMode=ExactOut&slippageBps=50' | jq '.inAmount, .otherAmountThreshold'
 ```
