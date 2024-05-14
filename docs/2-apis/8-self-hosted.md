@@ -4,7 +4,7 @@ description: "Run the swap API with your own infra"
 title: "Self-hosted V6 Swap API"
 ---
 
-Advanced users can run a self-hosted Jupiter Swap API, you can download the jupiter-swap-api [here](https://github.com/jup-ag/jupiter-swap-api/releases).
+Jupiter provides the ability for advanced users can run a self-hosted Jupiter Swap API. You can download the [jupiter-swap-api here](https://github.com/jup-ag/jupiter-swap-api/releases).
 
 Mission-critical use cases, like liquidations and oracles, can deploy their own API servers relying on their own RPC nodes to entirely decouple their systems from Jupiter infrastructure.
 
@@ -12,7 +12,7 @@ Integrators load is no longer restricted by the public API rate limits.
 
 ## Prerequisites
 
-A Dedicated Solana RPC node, optional but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
+A Dedicated Solana RPC node: **optional** but recommended with the [Yellowstone gRPC plugin](https://github.com/rpcpool/yellowstone-grpc) installed.
 
 The following RPC providers can provide a RPC node with the geyser plugin:
 
@@ -27,7 +27,7 @@ To start the API server:
 
 For instance, if you used Triton and your RPC url is https://supersolnode.jup/91842103123091841, the arguments would be `--rpc-url https://supersolnode.jup/91842103123091841 --yellowstone-grpc-endpoint https://supersolnode.jup --yellowstone-grpc-x-token 91842103123091841`
 
-It is also possible to run the API in poll mode (heavy for nodes and it is not recommended). It will periodically polling the Solana RPC node for accounts rather than listening with the Yellowstone gRPC endpoint:
+It is also possible to run the API in poll mode (heavy for nodes and it is not recommended). It will periodically poll the Solana RPC node for accounts rather than listening with the Yellowstone gRPC endpoint:
 
 `RUST_LOG=info ./jupiter-swap-api --rpc-url <RPC-URL>`
 
@@ -37,7 +37,7 @@ For others options, use `--help`:
 
 Once the API server is ready, it will open a HTTP server at `0.0.0.0:8080`.
 
-The jupiter-swap-api is identical to the public Jupiter Swap API so all the documentation applies [Swap API](/docs/apis/swap-api), replacing the api URL `https://quote-api.jup.ag/v6` with `http://127.0.0.0.1:8080`.
+The jupiter-swap-api is identical to the public Jupiter Swap API so all the documentation applies for the [Swap API](/docs/apis/swap-api), replacing the api URL `https://quote-api.jup.ag/v6` with `http://127.0.0.0.1:8080`.
 
 ## Market cache
 

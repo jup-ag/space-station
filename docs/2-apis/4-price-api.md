@@ -4,17 +4,19 @@ description: Get on-chain price for any token
 ---
 # Price API: Get on-chain price for any token
 
-The Jupiter Price API aims to make getting precise and real-time pricing for all SPL tokens as powerful and simple as possible. It also comes with the option to specify another token as the base unit ([see "vsToken"](#vstoken)).
+Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
+
+The Jupiter Price API comes with the option to specify another token as the base unit ([see "vsToken"](#vstoken)).
 
 :::info
-We support fetching the prices for up to 100 tokens in one call right now to manage performance. If you have a use case that is not supported yet, let us know in #developer-support in our discord: [discord.gg/jup](https://discord.gg/jup)
+We support fetching the prices for up to 100 tokens in one call right now to manage performance. If you have a use case that is not supported yet, let us know in `#developer-support` in our discord: [discord.gg/jup](https://discord.gg/jup)
 :::
 
 ## Usage
 
-Regardless of usage, the price API will always return **the unit buy price for the token** specified with the `ids` parameter, based on the best price available across all the DEXes.
+Jupiter Price API will always return **the unit buy price for the token** specified with the `ids` parameter. This price is based on the best pricing data available across all DEXes queried. Please remember the addresses and token tickers are *case-sensitive*.
 
-For example, the most basic call will provide the unit price for the token based on the *buy amount of 1 unit of SOL*.
+For example, the most basic call will provide the unit price for the token based on the *buy amount of 1 unit of SOL*. <a id="vstoken"></a>
 
 ```json
 # Unit price of SOL based on the buy amount of 1 unit of SOL
@@ -33,24 +35,24 @@ https://price.jup.ag/v6/price?ids=SOL
   "timeTaken": 0.0003002400007972028
 }
 ```
-<a id="vstoken"></a>
-If you include a `vsToken`, it will change the buy token. For example, this call will return the unit price for *BTC based on the buy amount of 1 ETH*.
+
+If you include a `vsToken`, it will change the buy token. For example, this call will return the unit price for *1 JUP, based on the buy amount of Bonk*. Simply put, the `vsToken` argument tells you how much of the `vsToken` (Bonk in this case) you will need to buy the target token (JUP). So for every one JUP we want to buy, we will need 44,580 Bonk.
 
 ```json
-# Unit price of BTC based on the buy amount of 1 ETH
-https://price.jup.ag/v6/price?ids=BTC&vsToken=ETH
+# Unit price of 1 JUP based on the buy amount of Bonk
+https://price.jup.ag/v6/price?ids=JUP&vsToken=Bonk
 
 {
-  "data": {
-    "BTC": {
-      "id": "9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E",
-      "mintSymbol": "BTC",
-      "vsToken": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
-      "vsTokenSymbol": "ETH",
-      "price": 14.689248
-    }
-  },
-  "timeTaken": 0.019405270000788732
+    "data": {
+        "JUP": {
+            "id": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+            "mintSymbol": "JUP",
+            "vsToken": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+            "vsTokenSymbol": "Bonk",
+            "price": 44580.353494
+        }
+    },
+    "timeTaken": 0.0002948529999997618
 }
 ```
 
@@ -76,7 +78,7 @@ https://price.jup.ag/v6/price?ids=7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs&v
 
 ## Try it out!
 
-A simple GET request, via your browser or one of the terminal commands below:
+Try the API calls by making simple GET request via your browser or one of the terminal commands below:
 
 <details>
   <summary>Click to play videos</summary>
@@ -102,7 +104,7 @@ curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
 
 **Query params**
 
-- **ids** `(*required)` `(string)`
+- **ids** **`(*required)`** `(string)`
     Supports symbol or address of a token. You can also pass in an array of ids to with `,` as separator.
     - Address mode are case-sensitive
         - `mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So`

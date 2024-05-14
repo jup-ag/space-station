@@ -5,7 +5,7 @@ description: Convert any token to USDC
 
 # Payments API: Convert any token to USDC
 
-Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount. So, this doesn't just support output token to USDC only.
+Jupiter's Payments API supports your payments use case. Utilize Jupiter + SolanaPay to pay for anything with any SPL token. With the Jupiter Payments API, you can specify an exact output token amount. The API doesn't just support output token to USDC, but to any SPL token!
 
 ## Use Case
 
@@ -13,9 +13,9 @@ Payments or interaction with a protocol can require an exact amount of token B. 
 
 ## A Practical Example using the API
 
-Bob is selling a delicious latte for 5 USDC, Alice only holds mSOL but Bob can use the Jupiter API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet.
+Bob is selling a delicious latte for 5 USDC. Alice wants to buy Bob's latte. The problem is, Alice only holds mSOL. Luckily, Bob can use the Jupiter Payments API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet. 
 
-First, we need to show Alice how much mSOL will he have to spend for the latte.
+First, we need to show Alice how much mSOL will she have to spend for the latte.
 
 <details>
   <summary>Click to play video</summary>
@@ -33,7 +33,7 @@ Parameters:
 
 - The input mint is mSOL and the output mint is USDC.
 - `swapMode` is `ExactOut`, as opposed to the default `ExactIn`.
-- we want to receive amount=5,000,000, 5 USDC.
+- We want to receive amount=5,000,000, 5 USDC.
 
 Response:
 
