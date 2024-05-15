@@ -9,7 +9,7 @@ description: Use Versioned Transaction with Jupiter
 
 ***Jupiter's V4 API improves composability by utilizing Solana's Versioned Transactions and Address Lookup Tables so all Jupiter routes can be done in a single transaction.***
 
-For anyone developing on Solana one of the biggest hurdles to composing protocols has been dealing with the transaction size limit of 1232 bytes.  Given each account takes 32 bytes and each signature takes 64 bytes it is easy to hit the transaction size limit often.  For Jupiter, this meant that we were limited to two-hop swaps and we used up all the transaction size just to fit the two swaps in a single transaction.
+For anyone developing on Solana, one of the biggest hurdles in composing protocols has been dealing with the transaction size limit of 1232 bytes. Given that each account takes 32 bytes and each signature takes 64 bytes, it is easy to hit the transaction size limit frequently. For Jupiter, this meant that we were limited to two-hop swaps and used up all the transaction size just to fit the two swaps into a single transaction.
 
 <details>
 <summary><b>Summary of constraints that affect composability</b></summary>
@@ -23,7 +23,7 @@ For anyone developing on Solana one of the biggest hurdles to composing protocol
 Get more details from the <a href="https://docs.solana.com/developing/programming-model/runtime">Solana runtime</a>.
 </details>
 
-By utilizing Versioned Transactions with Address Lookup Tables, all Jupiter swaps can now be done in a single transaction with ~50% of the transaction size freed for anyone to add their own instructions to.
+By utilizing Versioned Transactions with Address Lookup Tables, all Jupiter swaps can now be done in a single transaction with approximately 50% of the transaction size freed for anyone to add their own instructions.
 
 ## What are Versioned Transactions?
 

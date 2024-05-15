@@ -59,7 +59,7 @@ Anyone can propose an addition to the strict list. You can refer to [Getting on 
 
 ## Collaborate with us 🤝 
 
-The Jupiter Token API is still early and we want to work w everyone – users, community members, protocols and data consumers to build a better one for the ecosystem.
+The Jupiter Token API is still in its early stages, and we want to work with everyone – users, community members, protocols, and data consumers – to build a better one for the ecosystem.
 
 If you have your own data (e.g. your own validation process, bridged / staked token lists) -- talk to us.
 

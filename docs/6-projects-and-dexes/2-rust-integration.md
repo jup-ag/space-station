@@ -63,4 +63,4 @@ You can refer to the implementation guide below for easier integration with Jupi
 https://github.com/jup-ag/rust-amm-implementation
 
 **Notes:**
-- We need to be able to fork your SDK as we want to guarantee our users we can maintain support and fix potential bugs related to integrated DEXs
+- We need to be able to fork your SDK to guarantee our users that we can maintain support and fix potential bugs related to integrated DEXs

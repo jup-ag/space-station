@@ -120,7 +120,7 @@ window.Jupiter.init({
 ```
 
 ### 4. Finishing touches
-Terminal are light, but full of features, such as customising form behaviour, fees, styling and much more.
+Terminals are light, but full of features, such as customising form behaviour, fees, styling and much more.
 
 [Go to our Demo](https://terminal.jup.ag) to explore all these features, with automagically generated integration code.
 
@@ -154,7 +154,7 @@ declare global {
 
 ---
 
-### Fee supports
+### Fee Support
 
 Similar to Jupiter, Jupiter Terminal supports fee for integrators.
 
@@ -184,7 +184,7 @@ window.Jupiter.init({
 
 ---
 
-### Resuming / Closing activity
+### Resuming / Closing Activity
 
 - Everytime `init()` is called, it will create a new activity.
 

@@ -12,7 +12,7 @@ description: " "
 
 Jupiter's goal is simple: Help you provide world class experiences for your users. We aim to do this with as little work as possible on your end, regardless of use case or need.
 
-Jupiter offers a wide range of tools to make your life easy. Some of these tools include:
+**Jupiter offers a wide range of tools to make your life easy. Some of these tools include:**
 
 - [Swaps](/docs/APIs/swap-api): One of the Fastest Swap APIs on Solana. Simply put in your desired pairs, amount, and slippage and receive your serialized transaction from the API to execute your swap.<br/>
 - [Payments API](/docs/APIs/payments-api): Quickly swap any token to USDC. Using this, you can specify an exact output token amount in any token (not just USDC).<br/>
