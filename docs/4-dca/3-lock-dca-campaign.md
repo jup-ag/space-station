@@ -4,12 +4,12 @@ sidebar_label: "DCA CPI Integration"
 description: "DCA CPI"
 ---
 
-This section contains example of composing Jupiter's DCA program in your program via CPI.
+This section contains examples of composing Jupiter's DCA program in your program via Cross Program Invocation (CPI).
 
 Our aim is to simplify the process for our partners to integrate Jupiter's DCA for customized incentive programs.
 
 ## Use Cases
-The use cases are limitless. Feel free to use the following example as an inspiration to introduce your own functionalities.
+The use cases for DCA are limitless. Feel free to use the following example as an inspiration to introduce your own functionalities.
 
 Our example code allows you to have your own customized frontend + program that incentivizes users to DCA into your token in order to receive additional airdrops from you.
 
@@ -68,7 +68,7 @@ export const LOCKING_PLAN: ILockingPlan[] = [
 
 A user creates a DCA via your frontend and program. This creates an escrow account that integrates with Jupiter's DCA program.
 
-Once the DCA is completed (all orders are executed), the user will then be able to claim the tokens that they bought. Once they claim, the airdrop script will also airdrop additional tokens from your admin account to them.
+Once the DCA is completed (all orders are executed), the user will then be able to claim the tokens that they bought. Once they claim their tokens, the airdrop script will airdrop additional tokens from your admin account to them.
 
 ### User flow
 

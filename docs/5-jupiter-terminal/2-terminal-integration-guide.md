@@ -84,5 +84,5 @@ This RPC_ENDPOINT is only for demonstration purposes so that this example will r
 ![Example 7](./terminal/example7.jpg)
 
 :::success Please reach out in discord if you need help
-Feel free to reach out to us in discord if you experience difficulties, we can help you there.
+Feel free to reach out to us in [discord](https://discord.gg/jup) if you experience difficulties, we can help you there.
 :::

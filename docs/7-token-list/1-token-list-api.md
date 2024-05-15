@@ -5,7 +5,7 @@ description: List only verified tokens on your DApp
 # Token List API: Get validated tokens on your DApp
 ![cat_list](./cat_list.png)
 
-The Jupiter Token List API is an **open, collaborative, and dynamic** token list to make trading on Solana more transparent and safer for users and developers.
+The Jupiter Token List API is an **open, collaborative, and dynamic** token list. The Token List makes trading on Solana more transparent and safer for users and developers.
 
 Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-api)
 
@@ -23,7 +23,7 @@ Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-
 Our lists are designed for trading -- The "All" list only shows tokens that satisfy our minimum liquidity requirements. Tokens will automatically be picked up once they are above the threshold, and will fall off when they are below. See [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup) for more details on liquidity requirements.
 :::
 
-For your convenience, we packed it into 2 endpoints for you to choose from.
+For your convenience, we packed the lists into 2 endpoints for you to choose from.
 
 - **Strict:** https://token.jup.ag/strict
     - Only tokens that are tagged "old-registry", "community", or "wormhole" verified.

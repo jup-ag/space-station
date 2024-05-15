@@ -13,7 +13,7 @@ Jupiter Limit Order provides users with the simplest way to place limit orders o
 
 **1. Install the libraries**
 
-To run this example requires a minimum of [NodeJS 16](https://nodejs.org/en). In your command line terminal, install the libraries.
+Running this example requires a minimum of [NodeJS 16](https://nodejs.org/en). In your command line terminal, install the libraries.
 
 ```bash
 npm i @solana/web3.js
@@ -89,7 +89,7 @@ const transactions = await (
 const { tx } = transactions;
 ```
 
-**expiredAt** - It can be either null or Unix timestamp in seconds.
+**expiredAt** - Can be either null or Unix timestamp in seconds.
 
 ### Execute transaction
 

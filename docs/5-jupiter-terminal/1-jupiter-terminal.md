@@ -8,13 +8,13 @@ import ModalModeImgUrl from './modal-mode.jpg';
 import IntegratedModeImgUrl from './integrated-mode.jpg';
 import WidgetModeImgUrl from './widget-mode.jpg';
 
-# Jupiter Terminal: Easiest way to add Jupiter to your DApp
+# Jupiter Terminal: The easiest way to add Jupiter to your DApp
 
 <img src="/terminal/demo/terminal-hero.gif" />
 
-Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code.
+Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap flow functionality by linking it in your HTML with just a few lines of code.
 
-With several templates to get you started, and auto generated code snippets.
+Provided with the code are several templates to get you started and auto generated code snippets.
 
 :::tip Jupiter Terminal Links
 - Demo: https://terminal.jup.ag/
@@ -57,7 +57,7 @@ With several templates to get you started, and auto generated code snippets.
 
 - Fees Support
   - Customisable fees
-  - Track fees with Jupiter Referral Dashboard
+  - Track fees with [Jupiter Referral Dashboard](https://referral.jup.ag/dashboard)
 
 ## Getting Started
 
@@ -120,7 +120,7 @@ window.Jupiter.init({
 ```
 
 ### 4. Finishing touches
-Terminals are light, but full of features, such as customising form behaviour, fees, styling and much more.
+Terminals are light but full of features, such as customizing form behavior, fees, styling, and much more.
 
 [Go to our Demo](https://terminal.jup.ag) to explore all these features, with automagically generated integration code.
 
@@ -139,7 +139,7 @@ Or, [check out our fully typed API reference](https://github.com/jup-ag/terminal
 
 ### Typescript Support
 
-Since Jupiter Terminal is not published on npm, and are only importable via CDN, to get proper typing, you can create a typing decalarion `jupiter-terminal.d.ts` file in your project, and copy the contents in [src/types/index.d.ts](https://github.com/jup-ag/terminal/blob/main/src/types/index.d.ts)
+Since Jupiter Terminal is only importable via CDN, to get proper typing, you can create a typing declaration `jupiter-terminal.d.ts` file in your project, and copy the contents in [src/types/index.d.ts](https://github.com/jup-ag/terminal/blob/main/src/types/index.d.ts)
 
 ```tsx
 declare global {
@@ -243,7 +243,7 @@ window.Jupiter.init({
 
 ### Customising styles: CSSProperties
 
-Any CSS-in-JS can be injected to the outer-most container via containerStyles api.
+Any CSS-in-JS can be injected to the outer-most container via containerStyles API.
 
 Examples:
 
@@ -267,7 +267,7 @@ window.Jupiter.init({
 
 ### Customising className: Tailwind className
 
-Tailwind classes can be injected to the outer-most container via containerClassName api.
+Tailwind classes can be injected to the outer-most container via containerClassName API.
 
 Example:
 

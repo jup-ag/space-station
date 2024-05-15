@@ -63,7 +63,7 @@ const { tx, orderPubKey } = await limitOrder.createOrder({
 await sendAndConfirmTransaction(connection, tx, [owner, base]);
 ```
 
-**expiredAt** - It can be either null or Unix timestamp in seconds.
+**expiredAt** - Can be either null or Unix timestamp in seconds.
 
 ## Query user order and history
 
