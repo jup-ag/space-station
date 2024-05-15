@@ -15,7 +15,7 @@ Payments or interaction with a protocol can require an exact amount of token B. 
 
 Bob is selling a delicious latte for 5 USDC. Alice wants to buy Bob's latte. The problem is, Alice only holds mSOL. Luckily, Bob can use the Jupiter Payments API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet. 
 
-First, we need to show Alice how much mSOL will she have to spend for the latte.
+First, we need to show Alice how much mSOL she will have to spend for the latte.
 
 <details>
   <summary>Click to play video</summary>
