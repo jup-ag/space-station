@@ -7,49 +7,32 @@ description: A community guide to swapping on Jupiter.
 
 ![money_cat](../img/money_cat.png)
 
-*A community guide to swapping on Jupiter's dApp.*
+*A community guide to swapping on Jupiter.ag, created by community members. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
 
-This guide was created through contributions from the following community members:  [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)
-
-:::info [Why do I need Jupiter?](https://oneel.notion.site/Jupiter-Aggregation-0ef3149cd3bb485b8e118432e6cf8472)
-The above link provides a great explanation of how the Jupiter Aggregator works and benefits all who use it, written by community member @oneel_d
+:::tip Jupiter charges no fees.
+There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees which are factored in to the swap calculations. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts.
 :::
 
 1. First make sure your URL is correct: **https://jup.ag/**
 
 2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
 
-<!-- ![Jup Swap 6](//img/jup-swap/jup-swap6.png) -->
-
-*Jupiter supports majority of the wallets in Solana and some multi-chain wallets, checkout the site for the full wallet list*
-
 3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector and enter the amount of tokens that you want to swap.
 
 4. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana, checkout the full supported list [here](/partners).
-
-:::tip Jupiter charges no fees.
-There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts or Serum Open Orders account.
-
-Fees are already factored into the # of tokens you will receive when choosing a route.
-:::
 
 5. Before swapping, you can configure a few parameters before proceeding to help with your trade.
 - Transaction Priority Fees
 - Slippage Settings
 - Swap Settings
-    - Direct Route Only
-    - Use wSOL
-    - Versioned Transaction
-
-:::info What is Slippage?
-This is because between the time you get a quote and the time you execute the trade the price may change. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
-:::
 
 6. After you have confirmed all the parameters and inputs, you can click on the swap button, and the wallet that you have connected to Jupiter will ask you to approve the transaction to submit the order to the chain. If approved, your swap will be executed.
 
 7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
 
 8. You can view your transaction history by clicking the wallet section on the upper right of the site.
+
+### Lets go through the Jupiter Settings in more detail below.
 
 ## Jupiter Settings
 
@@ -65,29 +48,26 @@ This is because between the time you get a quote and the time you execute the tr
 8. **Swap Settings:** These settings will directly impact the routing and pricing of the swaps being performed. Typically, default settings are fine for beginners.
 
 ### Global Settings
+:::tip The RPC Endpoint Selector now displays active end-point latency
+Due to network traffic loads RPC endpoints can get overloaded, which can lead to latency issues that will directly impact your trade executions. Reviewing the RPC latency and selecting the lowest latency option is a best practice to ensure the fastest trade execution.
+:::
 ![Jup Swap 5](../img/jup-swap/jup-swap5.png)
 
    1. **Language:** Pick your preferred language from English, Chinese, Vietnamese, French, Japanese, Indonesian, and Russian.
    2. **Preferred Explorer:** Pick your preferred explorer from Solscan, SolanaFM, Solana Beach, Solana Explorer, XRAY, and OKLink.
    3. **RPC Endpoint:** Pick your preferred public RPC endpoint from Triton RPC, Helius RPC, or use your own custom RPC endpoint.
 
-:::tip The RPC Endpoint Selector now displays active end-point latency
-Due to network traffic loads RPC endpoints can get overloaded, which can lead to latency issues that will directly impact your trade executions. Reviewing the RPC latency and selecting the lowest latency option is a best practice to ensure the fastest trade execution.
-:::
-
 ### Transaction Priority Fees
-![Jup Swap 4](../img/jup-swap/jup-swap4.png)
-
 :::info Transaction Priority Fees
 Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
 :::
+![Jup Swap 4](../img/jup-swap/jup-swap4.png)
 
 ### Slippage Settings
-![Jup Swap 3](../img/jup-swap/jup-swap3.png)
-
 :::info Slippage Settings
 During periods of high Solana network activity, transactions can take a bit longer to process and in crypto asset prices can fluctuate quickly. Utilizing the Slippage Setting to ensure your transactions are executed is a common practice. Although, this is an advanced setting and should be used with caution as bot traders do look for opportunities to front-run high slippage trades and extract value from them (MEV). 
 :::
+![Jup Swap 3](../img/jup-swap/jup-swap3.png)
 
 ### Swap Settings
 ![Jup Swap 2](../img/jup-swap/jup-swap2.png)
