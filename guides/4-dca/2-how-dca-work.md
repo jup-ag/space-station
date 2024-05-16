@@ -1,8 +1,13 @@
 ---
-title: How Jupiter DCA Work
-sidebar_label: "How DCA Work"
-description: "Jupiter DCA 101"
+title: How Jupiter DCA Works
+sidebar_label: "How DCA Works"
+description: Learn how Dollar Cost Averaging (DCA) works on Jupiter
 ---
+
+<head>
+    <title>How Dollar Cost Averaging Works on Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## DCA Creation Process
 

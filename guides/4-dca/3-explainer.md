@@ -1,9 +1,13 @@
 ---
 sidebar_label: DCA Explainer and Use Cases
-description: Typescript / Javascript
+description: Learn the how and why behind Jupiter's Dollar Cost Averaging system.
+title: DCA Explainer and Use Cases
 ---
 
-# DCA Explainer and Use Cases
+<head>
+    <title>Jupiter DCA Explainer and Use Cases</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ![DCA1](../img/dca/DCA(1).png)
 

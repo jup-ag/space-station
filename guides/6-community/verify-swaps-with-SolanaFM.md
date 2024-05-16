@@ -1,9 +1,13 @@
 ---
-sidebar_label: 'Verifying Swaps Transactions'
-description: Verifying Swaps on a Block Explorer.
+sidebar_label: 'Verifying Swaps'
+description: Learn to verify and track swaps on Solana effectively with our concise guide at Jupiter Station. Perfect for all traders.
+title: Verifying Swaps on a Block Explorer
 ---
 
-# Verifying Swaps on a Block Explorer
+<head>
+    <title>Verifying Swaps on Solana: A Step-by-Step Guide</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 :::tip This is a community contributed guide
 This is a community guide to verifying Jupiter swaps on a Block Explorer, created by [@0xmiir](https://twitter.com/0xmiir), Marketing Lead at SolanaFM.

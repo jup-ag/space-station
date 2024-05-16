@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Personal Security On Solana"
-description: A short guide to keeping your assets secure as you enjoy Jupiter and Solana
+description: A short guide to keeping your assets secure as you enjoy Jupiter and Solana.
+title: Personal Security on Solana
 ---
 
-# Personal Security On Solana
+<head>
+    <title>Personal Security on Solana: Safeguard Your Assets</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 :::tip This is a community contributed guide
 This is a community guide to personal security on Solana, created by [@julianhzhu](https://twitter.com/julianhzhu).

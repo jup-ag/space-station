@@ -1,8 +1,13 @@
 ---
 title: Jupiter Media Kit
 sidebar_label: "Media Kit"
-description: "Download Jupiter Media Kit"
+description: "Get the official Jupiter media kit, including logo and brand materials."
 ---
+
+<head>
+    <title>Download the Jupiter Media Kit on Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 import DownloadBox from '/src/components/DownloadBox';
 

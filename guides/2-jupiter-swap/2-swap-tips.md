@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Swap Tips"
-description: Key concepts for your swap.
+description: Learn the key concepts that power Jupiter swaps.
+title: Swap Tips for Users
 ---
 
-# Swap Tips for Users
+<head>
+    <title>Swap Tips For Jupiter Users</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ![cat_coins_banner](../img/cat_coins_banner.png)
 

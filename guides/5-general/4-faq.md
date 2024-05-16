@@ -1,8 +1,13 @@
 ---
-title: Jupiter Frequently Ask Question
+title: Frequently Asked Questions
 sidebar_label: "Jupiter FAQ"
-description: "Frequently ask question can be found here"
+description: "Discover frequently asked questions about Jupiter products."
 ---
+
+<head>
+    <title>Frequently Asked Questions | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Jupiter Swap Aggregator
 
