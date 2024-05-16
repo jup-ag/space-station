@@ -1,6 +1,6 @@
 # Partners
 
-Powerful charts data and technology powered by <b>Birdeye</b> and <b>TradingView</b>.
+Jupiter's powerful charts data and technology is powered by <b>Birdeye</b> and <b>TradingView</b>.
 
 <div style={{ height: 80 }}>
   <a href="https://birdeye.so" target="_blank">

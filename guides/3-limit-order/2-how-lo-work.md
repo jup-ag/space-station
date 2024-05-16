@@ -22,10 +22,10 @@ Jupiter Limit Order executes your order based on the price you have set by match
 1. Users are able to create limit orders, providing a Centralized Exchange (CEX) experience on Solana.
 2. Liquidity from anywhere on Solana is utilized to fulfill the trade. 
 3. Users can place an order with an expiration time. At the end of the period, the system will automatically cancel any unfilled orders and refund the tokens to the user's wallet.
-4. Limit orders ensure that you get what you quote with no slippage, which is especially useful during volatile periods.
+4. Limit orders ensure that you get what you've been quoted with no slippage. This is especially useful during volatile trading periods.
 5. Transactions will not fail due to slippage errors.
 6. Jupiter Limit Order offers a wider range of token selections. As long as there is sufficient liquidity in the market, the token pair will be available to trade (execution will be based on available liquidity on-chain).
-7. You will never get front-run by MEV, experience no slippage, and get exactly what you quote. This feature is particularly useful in highly volatile markets, ensuring that transactions won’t fail due to slippage errors.
+7. You will never get front-run by MEV.
 
 -----
 

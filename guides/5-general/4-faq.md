@@ -1,7 +1,7 @@
 ---
-title: Jupiter Frequently Ask Question
-sidebar_label: "Jupiter FAQ"
-description: "Frequently ask question can be found here"
+title: Jupiter Frequently Asked Questions
+sidebar_label: "Jupiter FAQs"
+description: "Frequently asked questions can be found here"
 ---
 
 ## Jupiter Swap Aggregator
@@ -15,21 +15,21 @@ description: "Frequently ask question can be found here"
 - Yes, the displayed price includes liquidity provider fees and price impact
 - You can find the details in the `Price info` table.
 
-### My swap fails, reporting a slippage error. What should I do?
+### My swap failed and is reporting a slippage error. What should I do?
 
 - Slippage occurs because of changing market conditions between the moment the transaction is submitted and its verification.
-- Your slippage rate is an important setting, it works as a protection. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
+- Your slippage rate is an important setting, it works as a protection for your swap. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
 - Learn more about [slippage and price impact](../jupiter-swap/price-impact-slippage-price-warning)
 
 ### What does it mean when I get the 'some routes failed to load...'
 
-- This means that when Jupiter tried to refresh the routes to fetch the most up-to-date pricing, it failed to return those routes. This could be due to RPC node issues. We won't let you swap because the current route pricing options we show may be outdated, and that put you at risk of getting the less optimum price. 
+- This means that when Jupiter tried to refresh the routes to fetch the most up-to-date pricing, it failed to return those routes. This could be due to RPC node issues. Jupiter won't let you swap because the current route pricing options we show may be outdated. This can put you at risk of getting a less than optimal price. 
 - You may try to change the RPC *(setting accessible from the top-right wheel icon)* and refresh the page and try to fetch those routes again.
 
 ### How do I integrate Jupiter swap into my protocol / dApp? 
 
-Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/apis/swap-api), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
+Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/apis/swap-api), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the word out.
 
 ----
 
@@ -37,16 +37,14 @@ Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/ap
 
 ### Does Jupiter Limit Order charge any fees?
 
-- Jupiter Limit Order do charge a platform fees of **0.2%** on taker. 
-- In the case of partners integrating Jupiter Limit Order, they will be entitled to a share of 0.1% referral fees, while Jupiter collects the other 0.1% as platform fees. 
-- The fees are collected and withheld by the program and are claimable anytime. 
+- Jupiter Limit Order do charge a platform fees of **0.1% plus gas fees** on taker.  
 
-### Why is my Limit Order not getting fulfill even when the price hit my limit price?
+### Why is my Limit Order not getting fulfilled even when the price hit my limit price?
 
 - Jupiter Limit Order execute your order based on the price that you have set by matching with the available liquidity on-chain across Solana.
 A few scenarios or cases where the order is not being fulfill
 - If the order size is too large *(and there is insufficient liquidity on-chain)* - in this case, Jupiter keeper will attempt to execute your order in a smaller chunk to partially fill your orders and will continue to do so until order is fully executed
-- The price wick happen for a very short period of time, and the liquidity have all been taken up at that price.
+- The price wick happened for a very short period of time, and the liquidity has all been bought up at that price.
 - For more information on how Jupiter Limit Order works - [How Limit Order Works](../limit-order/how-lo-work)
 
 <!-- ### What happened if I close my order that has partially filled? Do I get the balance of my original input token and also filled output token? -->
@@ -61,8 +59,7 @@ A few scenarios or cases where the order is not being fulfill
 
 ### Does Jupiter DCA charge any fees?
 
-- Jupiter DCA do charge a platform fees of **0.1%** on order completion. 
-- The fees are collected and withheld by the program and are claimable anytime. 
+- Jupiter DCA does charge a platform fee of **0.1%** on order completion. 
 
 ### Will there be any risk of my order getting frontrun?
 
@@ -75,7 +72,7 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I add my protocol / project into Jupiter Space Station partners page?
 
-- To add your protocol or project into Jupiter Station partners page, simply submit a PR to our [Space Station public repo](https://github.com/jup-ag/space-station) and share a little about how you utilizing or integrating Jupiter. 
+- To add your protocol or project into Jupiter Station partners page, simply submit a PR to our [Space Station public repo](https://github.com/jup-ag/space-station) and share a little about how your'e utilizing or integrating Jupiter products. 
 - Here is a sample PR - https://github.com/jup-ag/space-station/pull/98
 
 ### Can I contribute to Jupiter Space Station? If yes, how? 
@@ -89,8 +86,8 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new project token to be available to trade on Jupiter? 
 
-- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](../general/new-token-guide)
-- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
+- Check out one of our guides that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](../general/new-token-guide)
+- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity, **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 
@@ -117,14 +114,14 @@ A few scenarios or cases where the order is not being fulfill
 - If it's your first time approving a dApp, click on "view advanced transaction details to review the actual transaction. Pay attention to the amounts approved. Another option is to just use a burner wallet with only the needed funds on your first transaction to protect yourself.
 
 
-### My swap fails, reporting that the account does not have enough SOL. Why?
+### My swap fails and reports that the account does not have enough SOL. Why?
 
 - On Solana, you use SOL to pay transactions *(around 0.000005 SOL)* but also to pay rent fees for token accounts. It's around 0.002 SOL and they are refundable when you close the account.
 - Read: [What does rent for accounts mean?](https://docs.solana.com/developing/intro/rent)
 
 ### What does rent for accounts mean?
 
-- Everything on Solana is an account, if you want to store data, in particularly the amount of a token you own, you must open a new account to hold that data.
+- Everything on Solana is an account, if you want to store data, in particular the amount of a token you own, you must open a new account to hold that data.
 - So for every token you own, you must open an account to store/hold how much of that token you own.
 - To create an account you must pay rent every epoch to maintain it otherwise it will be automatically closed.
 - However if you deposit 2 years worth of rent, then your account becomes rent-exempt and you will be able to keep your account open forever, or until you close it. This deposit of 2 years rent is approximately **0.02 SOL** at the moment. And this is why many programs deduct this amount from your main account to deposit into a token account created to hold the new tokens you've just acquired.

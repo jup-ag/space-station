@@ -7,30 +7,32 @@ description: A community guide to swapping on Jupiter.
 
 ![money_cat](../img/money_cat.png)
 
-*A community guide to swapping on Jupiter.ag, created by community members. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
+*A community guide to swapping on jup.ag, created by community members. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
 
 :::tip Jupiter charges no fees.
 There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees which are factored in to the swap calculations. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts.
 :::
 
-1. First make sure your URL is correct: **https://jup.ag/**
+1. First, navigate to the [Jupiter Website](https://jup.ag/). **Double check** that the URL in your search bar is correct: https://jup.ag/
 
 2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
 
-3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector and enter the amount of tokens that you want to swap.
+3. After connecting your wallet to Jupiter, you can then select the token pairs that you want to swap from the token selector.
 
-4. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana, checkout the full supported list [here](/partners).
+4. In the token selector input the amount of tokens that you want to swap.
 
-5. Before swapping, you can configure a few parameters before proceeding to help with your trade.
+5. Jupiter will find the best price routes for you amongst all the majority DEXs and AMMs in Solana. Checkout the full list of supported DEXes [here](/partners).
+
+6. Before swapping, you can configure a few parameters before proceeding to help with your trade.
 - Transaction Priority Fees
 - Slippage Settings
 - Swap Settings
 
-6. After you have confirmed all the parameters and inputs, you can click on the swap button, and the wallet that you have connected to Jupiter will ask you to approve the transaction to submit the order to the chain. If approved, your swap will be executed.
+7. After you have confirmed all the parameters and inputs, you can click on the swap button, and the wallet that you have connected to Jupiter will ask you to approve the transaction to submit the order to the chain. If approved, your swap will be executed.
 
-7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
+8. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
 
-8. You can view your transaction history by clicking the wallet section on the upper right of the site.
+9. You can view your transaction history by clicking the wallet section on the upper right of the site.
 
 ### Lets go through the Jupiter Settings in more detail below.
 
@@ -72,8 +74,8 @@ During periods of high Solana network activity, transactions can take a bit long
 ### Swap Settings
 ![Jup Swap 2](../img/jup-swap/jup-swap2.png)
 
-   1. **Direct Route Only:** Using Direct Route Only, ensure that it will be a single transaction submitted to a single pool, which will limit a lot of intermediate tokens which filtered out a lot of other viable routes.
-   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) enable using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
+   1. **Direct Route Only:** Using Direct Route Only ensures that the transaction will only be submitted to a single pool. This will limit a lot of intermediate tokens and filter out a lot of other viable routes that use intermediary tokens.
+   2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get better even better pricing all in a single transaction.
 
 ## Jupiter Swap
@@ -93,7 +95,7 @@ During periods of high Solana network activity, transactions can take a bit long
 11. **Action - Swap:** Once you have confirmed all the parameters, LFG!
 
 :::tip [Token List](/docs/token-list/token-list-api)
-By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that is available to trade.
+By default, `Strict` token list will be enabled, without unknown or banned tokens, users can choose to toggle on the `All` list to include the full list of all SPL tokens in Solana that are available to trade.
 :::
 
 ### Order Routings
@@ -104,6 +106,6 @@ By default, `Strict` token list will be enabled, without unknown or banned token
 ![Jup Swap 10](../img/jup-swap/jup-swap10.png)
 
 1. **Rate for the input and output token selected:** This is the current on-chain price rate for the selected input and output tokens, along with a comparison against Coingecko Price API.
-2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can impact the price impact.
-3. **Minimum Received:** Minimum received takes into account of slippage that have set and computes the minimum that user will receive even with price fluctuates.
+2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the size of the trade can change the price impact.
+3. **Minimum Received:** Minimum received takes into account of slippage that have set and computes the minimum that user will receive even with price fluctuations.
 

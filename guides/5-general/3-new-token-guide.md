@@ -44,18 +44,18 @@ After which, Jupiter will be able to pick up your market automatically.
 
 :::info
 Jupiter has a minimum liquidity requirement to be able to pick up your market, to enable trading on Jupiter.
-Read more [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup)
+Read more about [Getting Your Token on Jupiter](/docs/get-your-token-onto-jup)
 :::
 
-## Getting on Strict List / Verified
+## Getting on the Strict List / Verified
 
-Jupiter validated token list is built up together with partners and our community, feed Jupiter's "Strict" API, and is in use by ecosystem partners. Read More [Getting on Strict List / Verified](/docs/get-your-token-onto-jup#getting-on-the-strict-list)
+Jupiter validated token list is built as a collaborative effort with partners and our community. It feeds Jupiter's "Strict" API, and is widely used by Jupiter's ecosystem partners. Read More about [Getting on the Strict List / Verified](/docs/get-your-token-onto-jup#getting-on-the-strict-list)
 
 ## Integrating Jupiter Terminal
 
-Another good way of integrating Jupiter is through Jupiter Terminal. Where you can have all the functionalities and features of Jupiter with just a few lines of code.
+Another good way of integrating Jupiter is through the Jupiter Terminal. Jupiter Terminal provides all the functionalities and features of Jupiter with just a few lines of code.
 
-Here's a more detailed developers docs for more information [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/jupiter-terminal/jupiter-terminal)
+For detailed developers documentation on Jupiter terminal got to: [Jupiter Terminal: Easiest way to add Jupiter to your DApp](/docs/jupiter-terminal/jupiter-terminal)
 
 ![Terminal](../img/terminal1.jpg)
 
