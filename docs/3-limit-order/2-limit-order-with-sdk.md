@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Limit Order with SDK"
-description: Compose Limit Order with the SDK
+description: Master limit order creation on Solana with Jupiter SDK. Streamline trades and optimize with referral perks.
+title: Creating a Limit Order with the SDK
 ---
 
-# Compose Limit Order with the SDK
+<head>
+    <title>Jupiter Limit Order SDK Documentation</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Program Address
 

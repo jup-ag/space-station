@@ -1,8 +1,13 @@
 ---
 title: DCA CPI Integration
 sidebar_label: "DCA CPI Integration"
-description: "DCA CPI"
+description: "Master Jupiter's DCA CPI integration with our detailed guide, example code, and strategic use cases."
 ---
+
+<head>
+    <title>Jupiter DCA CPI: Enhanced Integration Techniques for Developers</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 This section contains examples of composing Jupiter's DCA program in your program via Cross Program Invocation (CPI).
 

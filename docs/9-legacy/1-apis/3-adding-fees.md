@@ -1,8 +1,14 @@
 ---
 sidebar_label: Adding Fees
-description: Adding your own platform fee to Jupiter swap
+description: Legacy documentation for adding fees in Jupiter Swap V4 API
+title: V4 Referral Program
 ---
-# Adding Your Own Platform Fee To Jupiter swap
+
+<head>
+    <title>Jupiter API V4 Referral Program [Legacy]</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 ![cat_flying](./cat_flying_money.png)
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.

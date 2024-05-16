@@ -1,8 +1,14 @@
 ---
 sidebar_label: Price API
-description: Get on-chain price for any token
+description: Get real-time on-chain prices for any token with Jupiter Price API. Supports up to 100 tokens per call. Easy integration for developers.
+title: "Price API: Get On-Chain Price For Any Token"
 ---
-# Price API: Get on-chain price for any token
+
+<head>
+    <title>Jupiter Price API: Unlock Real-Time On-Chain Pricing for Any Token</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
 

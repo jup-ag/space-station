@@ -1,7 +1,14 @@
 ---
 sidebar_label: "Wallet List"
-description: Wallets that are compatible with Jupiter
+description: Learn which wallets are currently supported by Jupiter.
+title: Compatible Wallets Supported by Jupiter
 ---
+
+<head>
+    <title>What Wallets are Compatible With Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 # Wallets supported on Jupiter
 
 

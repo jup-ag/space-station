@@ -1,10 +1,15 @@
 ---
 sidebar_label: "CPI / Smart Contract Integration"
-description: Cross Program Invocation Integration with Jupiter Swap
-
+description: Learn how to optimize your Solana projects with Jupiter Swap CPI for efficient token swaps and advanced API integration.
+title: Jupiter Swap via CPI
 ---
 
-# Jupiter Swap via CPI
+<head>
+    <title>Jupiter Swap CPI: Streamline Your Solana Integrations</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+
 
 To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](/docs/APIs/flash-fill) or you can utilize Cross Program Invocation (CPI). 
 

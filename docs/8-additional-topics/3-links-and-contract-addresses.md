@@ -1,8 +1,14 @@
 ---
 sidebar_label: "Links and Contract Addresses"
-description: Helpful links and contract addresses
+description: Access Jupiter SDK & API contract addresses
+title: Helpful Links and Contract Addresses
 ---
-# Helpful Links and Contract Addresses
+
+<head>
+    <title>Jupiter API Links and Contract Addresses</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 ## Contracts
 - Jupiter Swap: `JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4`

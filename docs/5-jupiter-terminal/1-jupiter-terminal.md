@@ -1,14 +1,20 @@
 ---
 sidebar_label: "Overview"
-description: Easiest way to add Jupiter to your DApp.
+description: Explore Jupiter Terminal for seamless DApp integration with a feature-rich API. Start now with easy templates and guides. Visit our demo!
+title: Jupiter Terminal Docs
 ---
+
+<head>
+    <title>Jupiter Terminal Docs: Elevate Your DApp Integration</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ModalModeImgUrl from './modal-mode.jpg';
 import IntegratedModeImgUrl from './integrated-mode.jpg';
 import WidgetModeImgUrl from './widget-mode.jpg';
 
-# Jupiter Terminal: The easiest way to add Jupiter to your DApp
 
 <img src="/terminal/demo/terminal-hero.gif" />
 

@@ -1,8 +1,13 @@
 ---
 sidebar_label: Jupiter Stats
-description: Display Jupiter Stats
+description: Learn to fetch key stats such as tickers, swap pairs, and more.
+title: Fetch Jupiter Stats
 ---
-# Display Jupiter Stats
+
+<head>
+    <title>Fetch Jupiter Stats: Tickers, Swap Pairs, and More</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 - Get all tickers (*cached for every 2-5 mins*):  https://stats.jup.ag/coingecko/tickers
 

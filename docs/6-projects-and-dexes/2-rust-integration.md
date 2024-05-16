@@ -1,7 +1,13 @@
 ---
-description: How to get your DEX / AMM into Jupiter via Rust
+sidebar_label: "DEX Guidelines"
+description: Learn how to integrate your DEX with Jupiter. Achieve superior trading performance and user satisfaction.
+title: DEX Integration Guidelines
 ---
-# Rust Integration
+
+<head>
+    <title>Jupiter DEX Integration Guidelines: Enhance Your Crypto Exchange</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 To facilitate integration of your DEX into the Jupiter Core Engine, you will need to provide a DEX SDK that works with the [Jupiter AMM Interface](https://docs.rs/crate/jupiter-amm-interface).
 

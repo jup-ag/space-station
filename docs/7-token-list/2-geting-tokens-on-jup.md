@@ -1,9 +1,15 @@
 ---
-sidebar_label: "Getting your Token onto Jupiter"
-description: Getting your token onto Jupiter
+sidebar_label: "Submit Token"
+description: Learn to list your token on Jupiter, ensuring liquidity and metadata compliance for enhanced safety.
 slug: "/get-your-token-onto-jup"
+title: Add Your Token to Jupiter
 ---
-# Getting Your Token onto Jupiter
+
+<head>
+    <title>How to Add Token to Jupiter: Listing Guide Instructions</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 ![cat_list2](./cat_list2.png)
 
 :::info All List Vs Strict List

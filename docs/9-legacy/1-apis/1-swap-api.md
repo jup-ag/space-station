@@ -1,8 +1,13 @@
 ---
-sidebar_label: "V4 Swap API "
-description: "v4 Swap API"
+sidebar_label: "Swap API"
+description: "Explore the old v4 Swap API"
 title: "V4 Swap API"
 ---
+
+<head>
+    <title>Jupiter V4 Swap API [Legacy]</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 :::tip
 We recommend checking out our [v6 API](/docs/APIs/swap-api) for more reliability, performance and better pricing.

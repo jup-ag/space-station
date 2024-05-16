@@ -1,9 +1,14 @@
 ---
 sidebar_label: DCA with SDK
-description: Typescript / Javascript
+description: Integrate Dollar Cost Averaging (DCA) in JS/TS with Jupiter. Streamline trading with our guide and practical code examples.
+title: Integrating DCA (JS/TS)
 ---
 
-# Integrating DCA (JS/TS)
+<head>
+    <title>Integrating Jupiter DCA With Javascript and Typescript</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 > Following code is tested to work with
 ```

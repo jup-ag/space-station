@@ -1,8 +1,15 @@
 ---
-sidebar_label: "General Builder Tips"
-description: General builder tips on Solana
+sidebar_label: "Builder Tips"
+description: Learn tips for building on Solana with Jupiter products.
+title: General Building Tips
 ---
-# General Builder Tips on Solana
+
+<head>
+    <title>General Tips For Building on Solana With Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+
 
 **New to building on Solana?**
 

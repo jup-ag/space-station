@@ -1,8 +1,14 @@
 ---
 sidebar_label: "Self-hosted V6 Swap API"
-description: "Run the swap API with your own infra"
+description: Unlock the potential of Self Hosted Jupiter Swap API for tailored trading solutions and independence from public API limits.
 title: "Self-hosted V6 Swap API"
 ---
+
+<head>
+    <title>Self Hosted Jupiter Swap API - Personalized Infrastructure</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 Jupiter provides the ability for advanced users can run a self-hosted Jupiter Swap API. You can download the [jupiter-swap-api here](https://github.com/jup-ag/jupiter-swap-api/releases).
 

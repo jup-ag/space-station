@@ -1,9 +1,14 @@
 ---
 sidebar_label: Payments API
-description: Convert any token to USDC
+description: Convert any token to USDC with Jupiter Payments API. A comprehensive guide for seamless crypto transactions.
+title: "Payments API: Convert Any Token to USDC"
 ---
 
-# Payments API: Convert any token to USDC
+<head>
+    <title>Jupiter Payments API Guide: Seamless Token Conversion to USDC</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 Jupiter's Payments API supports your payments use case. Utilize Jupiter + SolanaPay to pay for anything with any SPL token. With the Jupiter Payments API, you can specify an exact output token amount. The API doesn't just support output token to USDC, but to any SPL token!
 

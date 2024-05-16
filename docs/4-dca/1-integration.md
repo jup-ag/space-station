@@ -1,9 +1,13 @@
 ---
 sidebar_label: Integrate DCA
-description: Integrate DCA
+description: Master Jupiter DCA Integration for efficient DCA orders on Solana. Get setup tips and SDK details.
+title: Integrating Jupiter DCA
 ---
 
-# Integrating DCA (language agnostic)
+<head>
+    <title>Jupiter DCA Integration: Seamless Solana Orders</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Jupiter Dollar Cost Average (DCA) provides users with the quickest and easiest way to place DCA orders on Solana! DCA allows users to receive tokens directly in their wallet as each order is filled!
 

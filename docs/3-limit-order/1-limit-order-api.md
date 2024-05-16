@@ -1,9 +1,14 @@
 ---
 sidebar_label: Limit Order API
-description: Run a limit order bot with Javascript
+description: Streamline trading with Jupiter Limit Order API on Solana. Access tutorials, SDK tools, and tips to boost your crypto strategies efficiently.
+title: Build a Limit Order Bot With Javascript
 ---
 
-# Run a limit order bot with Javascript
+<head>
+    <title>Jupiter Limit Order API Documentation</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 Jupiter Limit Order provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
 

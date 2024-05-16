@@ -1,10 +1,15 @@
 ---
 sidebar_label: Flash Fill
-description: Integrate Jupiter Swap via Flash-Fill
-
+description: Learn to integrate Jupiter Swap using Flash-Fill for optimal crypto transactions. Discover unmatched efficiency!
+title: Jupiter Swap via Flash-Fill
 ---
 
-# Jupiter Swap via Flash-Fill
+<head>
+    <title>Jupiter Swap Flash Fill Documentation: Full Explanation</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+
 
 Use Flash Fill to integrate your program with Jupiter Swap. This allows you to avoid the limitations of Cross Program Invocation (CPI) via the "Flash-Fill" approach. Flash-Fill is one of two approaches to integrate Jupiter swap with your protocol. The other approach is Cross Program Invocation [CPI](/docs/APIs/cpi).
 

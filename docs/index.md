@@ -1,8 +1,13 @@
 ---
 sidebar_position: 1
 title: Welcome
-description: " "
+description: "Unlock superior trading with Jupiter Documentation. Integrate APIs for swaps, payments, and more effortlessly. Explore robust tools now!"
 ---
+
+<head>
+    <title>Jupiter APIs and Documentation</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # Welcome Catdet-veloper!
 

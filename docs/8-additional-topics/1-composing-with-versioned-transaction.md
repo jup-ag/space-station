@@ -1,8 +1,13 @@
 ---
-sidebar_label: "Composing with Versioned Txns"
-description: Use Versioned Transaction with Jupiter
+sidebar_label: "Versioned Transactions"
+description: Explore Versioned Transactions with Jupiter’s V4 API for streamlined swaps and more functions on Solana.
+title: Composing With Versioned Transactions
 ---
-# Composing with Versioned Transaction with Jupiter
+
+<head>
+    <title>Versioned Transactions on Jupiter: A Full Guide</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ![versioned_txn](jup_vt.jpeg)
 

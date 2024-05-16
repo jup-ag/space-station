@@ -1,10 +1,16 @@
 ---
 sidebar_label: "Troubleshooting"
-description: Common questions about using the Jupiter API
+description: Master Jupiter Swap API with quick fixes for common issues like timeouts and errors. Boost your API skills now!
+title: Troubleshooting Tips
 ---
-# Troubleshooting
 
-### Swap Execution
+<head>
+    <title>Jupiter Swap API Troubleshooting Tips</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+
+## Swap Execution
 
 Common transaction error:
 
@@ -16,11 +22,11 @@ Common transaction error:
 
 `0x1771` occurs when the slippage tolerance is exceeded, so when the final out amount is less than the minimum out amount.
 
-### Wrap and Unwrap SOL
+## Wrap and Unwrap SOL
 
 You can refer to the documentation here: https://solanacookbook.com/references/token.html#how-to-manage-wrapped-sol. For the Jupiter API, there is also a `wrapAndUnwrapSol` parameter that you can use as well.
 
-### Transaction Confirmation Timeout
+## Transaction Confirmation Timeout
 
 From time to time, you may see an error message like `Transaction was not confirmed in 60.00 seconds.`, this means that your transaction expires without being confirmed. Each block on Solana has a fixed compute unit allocation. Each account can only take up certain compute units in the block. So, if you are swapping through a very hot pair, that means that many people will compete with you for those limited compute units. You will have to outbid others to get your transaction in. This usually happens if you are consistently being outbid by others to get your transaction in.
 
@@ -67,7 +73,7 @@ const txid = await connection.sendRawTransaction(rawTransaction, {
 });
 ```
 
-### Blockhash is Invalid/Not Found
+## Blockhash is Invalid/Not Found
 
 This can happen because of the decentralized nature of the chain. My local chain can be faster than your chain but they will eventually sync up. If you run into this problem, we suggest using `processed` commitment when submitting the transaction and use `confirmed` commitment to confirm your transaction. Setting `skipPreflight` to `true` can be very helpful too when submitting the transaction. This will mean that you will skip transaction simulation entirely.
 

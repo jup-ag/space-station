@@ -1,7 +1,13 @@
 ---
 sidebar_label: Payments API
-description: Convert any token to USDC
+description: Legacy documentation for V4 Payments API
+title: V4 Payments API
 ---
+
+<head>
+    <title>Jupiter V4 Payments API [Legacy]</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # Payments API: Convert any token to USDC
 

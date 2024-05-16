@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Referral Program"
-description: Referral Program
+description: Discover Jupiter Station's Referral Program. Earn fees through seamless integrations with our robust tools and guides. Start now!
+title: Jupiter Referral Program
 ---
 
-# Referral Program
+<head>
+    <title>Jupiter Referral Program | Earn More From Your dApps</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 The Referral Program is an open source program by Jupiter to provide referral fees for integrators who are integrating Jupiter Swap and Jupiter Limit Order. You can check out the code [here](https://github.com/TeamRaccoons/referral) to gain a better understanding of how it works.
 
