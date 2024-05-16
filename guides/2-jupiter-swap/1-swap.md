@@ -99,7 +99,7 @@ By default, `Strict` token list will be enabled, without unknown or banned token
 7. **Output Token Wallet balance:** Jupiter detects the output token balance in your wallet.
 8. **Output Token / Token to buy:** Token selector to select token to buy or swap to.
 9. **Output Token / Token to buy amount:** Jupiter will computes from the input amount with the current on-chain price rate show user the quoted amount *(Including swap fees from various DEXs and AMMs)* of tokens that user will be receiving or buying.
-10. **Order Routing:** Order routing shows the order being routed through which AMM, which sometimes involve [Multi-hop](/docs/legacy/how-does-jupiter-work#multi-hop-routes) and [Split trade](/docs/legacy/how-does-jupiter-work#trade-splitting).
+10. **Order Routing:** Order routing shows the order being routed through which AMM, which sometimes involve Multi-hop and Split trade.
 
 ![Jup Swap 9](../img/jup-swap/jup-swap9.png)
 
