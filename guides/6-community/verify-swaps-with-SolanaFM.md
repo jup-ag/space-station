@@ -15,7 +15,7 @@ This is a community guide to verifying Jupiter swaps on a Block Explorer, create
 Anyone can contribute a guide to Jupiter Station! Simply send us a PR.
 :::
 
-When swapping tokens on Solana, you might come across occasional hiccups — sometimes transactions might not go through, a different amount of tokens appear in your wallet, or the token doesn’t appear at all. How do you figure out what’s going on?
+When swapping tokens on Solana, you might come across occasional hiccups — sometimes transactions might not go through, a different amount of tokens may appear in your wallet, or the token doesn’t appear at all. How do you figure out what’s going on?
 
 This guide will walk you through how to verify your swaps on Jupiter.
 
@@ -62,7 +62,7 @@ Swap 3: 0.25 **SOL** → 5.04 **USDC**
 
 ## Movement of Tokens
 
-The Transaction Flow helps us understand which tokens moved, and how much tokens moved in and out of your wallet accounts.
+The Transaction Flow helps us understand which tokens moved, and how much of each token moved in and out of your wallet accounts.
 
 ![sfm_swap4](../img/sfm_swap4.png)
 
