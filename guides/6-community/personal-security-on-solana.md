@@ -42,6 +42,12 @@ Closely related to the private key is the concept of a seed phrase/passphrase. T
 
 ### Other Considerations
 
+#### Physical Security
+
+- Who else has access to the space where your device is stored? 
+- Are your hardware wallets and backups locked up in a safe? 
+- Do you have secondary backups in second physically secure location?
+
 #### Hardware
 
 - How secure is the user’s device? Are there any backdoors on the device itself?
@@ -76,7 +82,7 @@ Always pay attention to what is written and if a transaction simulation fails or
 
 ### Understanding URL Structure
 
-Learning to recognise the structure of URLs is very important so that you can avoid fradulent sites.
+Learning to recognise the structure of URLs is very important so that you can avoid fradulent sites. This practice is called typo-squatting and malicious sites will go to great lengths to mimic legitimate sites with the only difference being a single character in the URL.
 
 **Let’s take a look at an example**
 
@@ -94,7 +100,7 @@ If there is only 1 dot in an URL, for example https://twitter.com then you need 
 
 Scammers will often register similar-looking domains such as lfg-jup.ag to try and trick you. Notice in this case there is only 1 dot, hence you need to look at both parts surrounding the dot. Clearly lfg-jup.ag is NOT an official site and it is a fake site trying to trick you.
 
-Here are some more links for you to practice your scam-link identification skills. Some of the urls may not even exist. The list is just for you to practise.
+Here are some more links for you to practice your scam-link identification skills. Some of the urls may not even exist. The list is just for you to practice.
 
 - beta.jup.ag ✅
   - 2 dots, so we look at what's after the first dot, in this case jup.ag is an official site.
@@ -111,7 +117,7 @@ Here are some more links for you to practice your scam-link identification skill
 - jup.jup.ag ✅
   - 2 dots, so we look at what's after the first dot, in this case jup.ag is an official site.
 
-Alpha: You can also use this method to sometimes guess what the actual URLs of new releases or features may be and get there before everyone else!
+**Alpha:** You can also use this method to sometimes guess what the actual URLs of new releases or features may be and get there before everyone else!
 
 :::tip
 
@@ -130,7 +136,7 @@ Note, even if you accidentally connect your wallet, As long as you did not sign 
 
 - Never rush. Whenever you rush, it is more likely that you will make mistakes.
 - Avoid signing a transaction that does not clearly simulate in the wallet. Read all balance changes shown in the simulation carefully before signing any transaction.
-- If you really really have to sign something on an untrusted site or sign a transaction that does not simulate, always use a separate wallet with very limited funds to minimise any possibility of a malicious transaction having you drained. Creating a new wallet is very easy on most wallet apps and it is very cheap to fund new wallets on Solana due to low fees. Don’t be cheap or lazy.
+- If you really really have to sign something on an untrusted site or sign a transaction that does not simulate, always use a separate wallet with very limited funds to minimize any possibility of a malicious transaction draining all of your funds. Creating a new wallet is very easy on most wallet apps and it is very cheap to fund new wallets on Solana due to low fees. Don’t be cheap or lazy.
 
 :::
 
