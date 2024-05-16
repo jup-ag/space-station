@@ -1,9 +1,15 @@
 ---
-title: Welcome
+sidebar_label: "Welcome"
+title: Learn about Jupiter
 sidebar_position: 1
+description: Learn how to use Jupiter with these beginner friendly guides and tutorials.
 ---
 
-# Learn about Jupiter
+<head>
+    <title>Jupiter Guides: Welcome Catdets!</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 ![Cats](../guides/img/cat_banner.png)
 

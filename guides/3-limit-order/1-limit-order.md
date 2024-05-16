@@ -1,6 +1,13 @@
 ---
+sidebar_label: How to Use Limit Order
 title: How to Use Limit Order
+Description: Learn how to place a limit order on Jupiter with this beginners guide.
 ---
+
+<head>
+    <title>How To Place a Limit Order Using Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Jupiter Limit Order provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
 

@@ -1,9 +1,14 @@
 ---
 sidebar_label: "How to Swap"
-description: A community guide to swapping on Jupiter.
+description: Learn token swapping on Jupiter with top tips, slippage settings, and easy dApp navigation.
+title: How to Swap Tokens on Jupiter
 ---
 
-# How to Swap
+<head>
+    <title>How to Swap Tokens on Jupiter: Step By Step</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 ![money_cat](../img/money_cat.png)
 

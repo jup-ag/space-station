@@ -1,8 +1,13 @@
 ---
 title: How Jupiter DCA Works
 sidebar_label: "How DCA Works"
-description: "Jupiter DCA 101"
+description: Learn how Dollar Cost Averaging (DCA) works on Jupiter
 ---
+
+<head>
+    <title>How Dollar Cost Averaging Works on Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## DCA Creation Process
 
@@ -59,12 +64,12 @@ As an example, say you opt to DCA into SOL with $900 USDC over 3 days, with SOL 
 In the event your desired purchased token is not SOL, auto withdrawal for each order will only work if you have the correct associated token account (ATA) opened.
 :::
 
-- By default, Jupiter DCA opens the necessary ATA for your wallet when you create a Jupiter DCA account. However, if you close your purchased token's ATA manually via your wallet interface or any other 3rd-party tool, tokens will not be transferred to you automatically on every order but only at the end of your DCA cycles as a single lump sum amount. **This is only applicable to SPL tokens. For SOL: Jupiter takes care of opening/closing your wrapped account.**
+- By default, Jupiter DCA opens the necessary ATA for your wallet when you create a Jupiter DCA account. However, if you close your purchased token's ATA manually via your wallet interface or any other 3rd-party tool, tokens will not be transferred to you automatically on every order but only at the end of your DCA cycles as a single lump sum amount. **This is only applicable to SPL tokens. For SOL: Jupiter takes care to open/close your wrapped account.**
 
 - An example:
   1. Say you have a DCA order of 300 $USDC -> $BONK daily over 3 days, and you **close** your wallet's BONK token account before the 2nd trade/ transaction takes place, the 2nd 100 $USDC worth of $BONK will remain in your DCA vault and not be transferred to your automatically.
   1. However, during the 3rd and last trade/ transaction, auto-withdrawal will happen regardless of whether you have a BONK token account. Based on the example above, even though your BONK tokens did not get transferred to your wallet automatically for your 2nd trade/ transaction, your BONK tokens will be transferred to your wallet on the very last trade - see auto close below for more information.
-  1. Regardless, you can choose to withdraw BONK from your DCA vault at anytime through our UI.
+  1. Irregardless, you can choose to withdraw BONK from your DCA vault at anytime through our UI.
 
 ---
 
@@ -93,5 +98,5 @@ Do not close your ATA without first withdrawing the tokens or swapping them for 
 - Before a transaction is sent to a node, prices are checked and an estimated out-token *(desired token)* amount is pre-calculated.
 - In addition to slippage settings, these parameters are included in the transaction and should the out-token amount be less than the expected minimum out-token amount, the transaction would fail.
     - While this does not prevent MEV front-running, similar to a regular AMM swap, users are guaranteed to receive a minimum amount of out-token
-    - Transactions can be reverted if an inadequate amount of out-token is received. Prices may slip to a level where it is not sufficiently profitable or at-all profitable for potential front-running bots.
+    - Transactions can be reverted if an inadequate amount of out-token is received, prices would may not slip to a level where it is sufficiently profitable or at-all profitable for potential front-running bots.
 - The very nature of DCA is to split an order into multiple orders over a period of time naturally reduces price impact from front-running activities.

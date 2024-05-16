@@ -4,9 +4,11 @@ sidebar_label: "New Token Guide"
 description: "Step-by-step guide of how to start a new token and get it on Jupiter"
 ---
 
-# New Token Guide
+<head>
+    <title>How to Launch a Solana Token | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
-## Minting a new token
 
 There are multiple ways of creating/ minting a new set of fungible tokens.
 Here are some of the available tools to minting new tokens.

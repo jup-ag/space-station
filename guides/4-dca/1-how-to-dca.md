@@ -1,8 +1,13 @@
 ---
 title: How to use Jupiter DCA
 sidebar_label: "How to use DCA"
-description: "Jupiter DCA user guide"
+description: "Learn how to use Dollar Cost Averaging on Jupiter to get the best price on your trades."
 ---
+
+<head>
+    <title>How to use Dollar Cost Averaging (DCA) on Jupiter</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 **Jupiter DCA** is a dollar cost averaging solution to enable users to automate the purchase or sale of any SPL tokens at a regular intervals over a certain period of time.
 
