@@ -37,7 +37,7 @@ For others options, use `--help`:
 
 Once the API server is ready, it will open a HTTP server at `0.0.0.0:8080`.
 
-The jupiter-swap-api is identical to the public Jupiter Swap API so all the documentation applies [Swap API](/docs/apis/swap-api), replacing the api URL `https://quote-api.jup.ag/v6` with `http://127.0.0.0.1:8080`.
+The jupiter-swap-api is identical to the public Jupiter Swap API so all the documentation applies [Swap API](/docs/apis/swap-api), replacing the api URL `https://quote-api.jup.ag/v6` with `http://127.0.0.1:8080`.
 
 ## Market cache
 
