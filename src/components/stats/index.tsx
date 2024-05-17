@@ -172,7 +172,7 @@ const JupOverview = ({ mode }: { mode: Mode }) => {
             </>
           ) : (
             <>
-              <h2 className="mt-4 dark:text-white text-[36px] font-semibold leading-none">
+              <h2 className="mt-4 dark:text-white text-3xl xs:text-4xl font-semibold leading-none whitespace-nowrap overflow-hidden text-ellipsis">
                 ${tradingXVolume}
               </h2>
               <p className="mt-4 text-[14px] text-[rgba(0,0,0,0.5)] dark:text-inherit">
@@ -368,57 +368,57 @@ const TopTradingPair = ({ mode }: { mode: Mode }) => {
           </div>
           {isLoading
             ? Array(10)
-                .fill(null)
-                .map((_, idx) => <RowSkeleton key={idx} />)
+              .fill(null)
+              .map((_, idx) => <RowSkeleton key={idx} />)
             : topPairs.map((item, idx) => {
-                const tokens = item.pair.split("/");
-                const tokenA = tokenMapByMint[tokens[0]];
-                const tokenB = tokenMapByMint[tokens[1]];
+              const tokens = item.pair.split("/");
+              const tokenA = tokenMapByMint[tokens[0]];
+              const tokenB = tokenMapByMint[tokens[1]];
 
-                if (tokenA && tokenB) {
-                  return (
-                    <div
-                      key={item.pair}
-                      className="bg-white grid grid-cols-[24px,1fr,100px,70px] px-6 py-3 rounded-lg dark:bg-[#32323A] justify-items-end gap-2 items-center group dark:hover:bg-trending-item-dark-hover hover:bg-jupiter-bg-grey shadow-row dark:shadow-row-dark"
+              if (tokenA && tokenB) {
+                return (
+                  <div
+                    key={item.pair}
+                    className="bg-white grid grid-cols-[24px,1fr,100px,70px] px-6 py-3 rounded-lg dark:bg-[#32323A] justify-items-end gap-2 items-center group dark:hover:bg-trending-item-dark-hover hover:bg-jupiter-bg-grey shadow-row dark:shadow-row-dark"
+                  >
+                    <p className="justify-self-start">{idx + 1}</p>
+
+                    <Link
+                      to={`https://jup.ag/swap/${tokenA.symbol}-${tokenB.symbol}`}
+                      className="justify-self-start items-center text-[14px] leading-[20px] dark:text-white text-[rgba(0,0,0,0.75)] flex font-medium"
+                      translate="no"
                     >
-                      <p className="justify-self-start">{idx + 1}</p>
+                      <span>
+                        <TokenIcon width={24} height={24} info={tokenA} />
+                      </span>
+                      <span className="ml-1">
+                        <TokenIcon width={24} height={24} info={tokenB} />
+                      </span>
+                      <span className="ml-4">
+                        {tokenA.symbol}/{tokenB.symbol}
+                      </span>
+                    </Link>
 
-                      <Link
-                        to={`https://jup.ag/swap/${tokenA.symbol}-${tokenB.symbol}`}
-                        className="justify-self-start items-center text-[14px] leading-[20px] dark:text-white text-[rgba(0,0,0,0.75)] flex font-medium"
-                        translate="no"
-                      >
-                        <span>
-                          <TokenIcon width={24} height={24} info={tokenA} />
-                        </span>
-                        <span className="ml-1">
-                          <TokenIcon width={24} height={24} info={tokenB} />
-                        </span>
-                        <span className="ml-4">
-                          {tokenA.symbol}/{tokenB.symbol}
-                        </span>
-                      </Link>
-
-                      <p className="text-[rgba(0,0,0,0.5)] dark:text-inherit">
-                        <StaticNumberFormat
-                          value={Number(item.volume)}
-                          decimalScale={0}
-                          prefix="$"
-                        />
-                      </p>
-                      <Link
-                        to={`https://jup.ag/swap/${tokenA.symbol}-${tokenB.symbol}`}
-                        style={{
-                          backgroundClip: "padding-box, border-box",
-                        }}
-                        className="dark:group-hover:text-white dark:group-hover:bg-trending-item-btn-img-dark group-hover:bg-trending-item-btn-img bg-origin-border border-solid border border-solid dark:border-transparent hover:border-transparent text-[11px] py-1 leading-[16px] px-2 bg-white border-[rgba(0,0,0,0.2)] dark:bg-[rgba(0,0,0,0.15)] dark:text-[rgba(255,255,255,0.5)] rounded text-[rgba(0,0,0,0.6)] group-hover:text-black font-medium"
-                      >
-                        Trade
-                      </Link>
-                    </div>
-                  );
-                }
-              })}
+                    <p className="text-[rgba(0,0,0,0.5)] dark:text-inherit">
+                      <StaticNumberFormat
+                        value={Number(item.volume)}
+                        decimalScale={0}
+                        prefix="$"
+                      />
+                    </p>
+                    <Link
+                      to={`https://jup.ag/swap/${tokenA.symbol}-${tokenB.symbol}`}
+                      style={{
+                        backgroundClip: "padding-box, border-box",
+                      }}
+                      className="dark:group-hover:text-white dark:group-hover:bg-trending-item-btn-img-dark group-hover:bg-trending-item-btn-img bg-origin-border border-solid border border-solid dark:border-transparent hover:border-transparent text-[11px] py-1 leading-[16px] px-2 bg-white border-[rgba(0,0,0,0.2)] dark:bg-[rgba(0,0,0,0.15)] dark:text-[rgba(255,255,255,0.5)] rounded text-[rgba(0,0,0,0.6)] group-hover:text-black font-medium"
+                    >
+                      Trade
+                    </Link>
+                  </div>
+                );
+              }
+            })}
         </div>
       </div>
     </div>
@@ -445,31 +445,31 @@ const TopTokens = (props: {
         </div>
         {!props.data.length
           ? Array(10)
-              .fill(null)
-              .map((_, idx) => <RowSkeleton key={idx} />)
+            .fill(null)
+            .map((_, idx) => <RowSkeleton key={idx} />)
           : props.data.map((item, idx) => (
-              <div
-                key={item.mint}
-                className="bg-white grid grid-cols-[20px,1fr,auto] gap-1 px-6 py-3 rounded-lg dark:bg-[#32323A] items-center shadow-row dark:shadow-row-dark"
-                translate="no"
-              >
-                <p>{idx + 1}</p>
-                <p className="text-[14px] leading-[20px] dark:text-white text-[rgba(0,0,0,0.75)] flex items-center font-medium">
-                  <TokenIcon
-                    info={tokenMapByMint[item.mint]}
-                    width={24}
-                    height={24}
-                  />
-                  <span className="ml-3">{item.symbol}</span>
-                </p>
-                <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">
-                  <StaticNumberFormat
-                    value={Number(item.amount)}
-                    decimalScale={0}
-                  />
-                </p>
-              </div>
-            ))}
+            <div
+              key={item.mint}
+              className="bg-white grid grid-cols-[20px,1fr,auto] gap-1 px-6 py-3 rounded-lg dark:bg-[#32323A] items-center shadow-row dark:shadow-row-dark"
+              translate="no"
+            >
+              <p>{idx + 1}</p>
+              <p className="text-[14px] leading-[20px] dark:text-white text-[rgba(0,0,0,0.75)] flex items-center font-medium">
+                <TokenIcon
+                  info={tokenMapByMint[item.mint]}
+                  width={24}
+                  height={24}
+                />
+                <span className="ml-3">{item.symbol}</span>
+              </p>
+              <p className="justify-self-end text-[rgba(0,0,0,0.5)] dark:text-inherit">
+                <StaticNumberFormat
+                  value={Number(item.amount)}
+                  decimalScale={0}
+                />
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );
