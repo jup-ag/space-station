@@ -13,8 +13,6 @@ title: Token List API
 
 The Jupiter Token List API is an **open, collaborative, and dynamic** token list. The Token List makes trading on Solana more transparent and safer for users and developers.
 
-Our Approach: [Introducing the Jupiter Token List API](/blog/jupiter-token-list-api)
-
 ## Core Principles
 
 1. **Safety:** Only validated token addresses are shown by default on the 'Strict List'.
