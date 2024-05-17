@@ -1,8 +1,14 @@
 ---
 sidebar_label: Adding Fees
-description: Adding your own platform fee to Jupiter swap
+description: Legacy documentation for adding fees in Jupiter Swap V4 API
+title: V4 Referral Program
 ---
-# Adding Your Own Platform Fee To Jupiter swap
+
+<head>
+    <title>Jupiter API V4 Referral Program [Legacy]</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 ![cat_flying](./cat_flying_money.png)
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
@@ -43,7 +49,7 @@ const jupiter = Jupiter.load({
   platformFeeAndAccounts
 });
 ```
-You will need to create the token fee accounts to collect the platform fee. The platform fee is collected in the output mint in `ExactIn` mode and in input mint in `ExactOut` mode.
+You will need to create the token fee accounts to collect the platform fee. The platform fee is collected in the output mint in `ExactIn` mode and in the input mint in `ExactOut` mode.
 
 We have created a tool to help you create the token accounts and also to consolidate fee tokens into a desired token. e.g. convert *$DUST* into *$SOL* or *$USDC*.
 

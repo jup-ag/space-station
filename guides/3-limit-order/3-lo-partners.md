@@ -1,6 +1,15 @@
-# Partners
+---
+sidebar_label: Partners
+title: Limit Order Partners
+Description: Learn about Jupiter's limit order partners including Birdeye and TradingView.
+---
 
-Powerful charts data and technology powered by <b>Birdeye</b> and <b>TradingView</b>.
+<head>
+    <title>Limit Order Parters | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+Jupiter's powerful charts data and technology is powered by <b>Birdeye</b> and <b>TradingView</b>.
 
 <div style={{ height: 80 }}>
   <a href="https://birdeye.so" target="_blank">

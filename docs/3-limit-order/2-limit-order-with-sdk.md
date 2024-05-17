@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Limit Order with SDK"
-description: Compose Limit Order with the SDK
+description: Master limit order creation on Solana with Jupiter SDK. Streamline trades and optimize with referral perks.
+title: Creating a Limit Order with the SDK
 ---
 
-# Compose Limit Order with the SDK
+<head>
+    <title>Jupiter Limit Order SDK Documentation</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Program Address
 
@@ -63,7 +67,7 @@ const { tx, orderPubKey } = await limitOrder.createOrder({
 await sendAndConfirmTransaction(connection, tx, [owner, base]);
 ```
 
-**expiredAt** - It can be either null or Unix timestamp in seconds.
+**expiredAt** - Can be either null or Unix timestamp in seconds.
 
 ## Query user order and history
 

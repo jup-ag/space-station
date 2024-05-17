@@ -1,9 +1,15 @@
 ---
-sidebar_label: "Getting your Token onto Jupiter"
-description: Getting your token onto Jupiter
+sidebar_label: "Submit Token"
+description: Learn to list your token on Jupiter, ensuring liquidity and metadata compliance for enhanced safety.
 slug: "/get-your-token-onto-jup"
+title: Add Your Token to Jupiter
 ---
-# Getting Your Token onto Jupiter
+
+<head>
+    <title>How to Add Token to Jupiter: Listing Guide Instructions</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 ![cat_list2](./cat_list2.png)
 
 :::info All List Vs Strict List
@@ -30,15 +36,15 @@ Our validation process matches the expected Mint address to the project ("*"If I
 
 To get your token on the Strict list, go to the [Token List Repo](https://github.com/jup-ag/token-list) and open a PR. 
 
-**Community validation process**
+**Community Validation Process**
 
-The strict list helps to keep users safe, and we ask for some time for the community to discover, discuss and support your request. It is a social process, and not a ticketing system. 
+The strict list helps to keep users safe, and we ask for some time for the community to discover, discuss, and support your request. It is a social process, not a ticketing system.
 
 The best way to get validated faster is to follow the examples of community-support in the example PRs listed on the github README, and **share meaningful introductions** about your project, so that the community can support you. In general, reviews with good community support will be approved in a week. 
 
-As a reminder, your token is available for trading on the 'All' list even if you are not on the strict list yet, as long as you met the liquidity requirements above. 
+As a reminder, your token is available for trading on the 'All' list even if you are not on the strict list yet, as long as you have met the liquidity requirements above. 
 
-User safety is our priority. As such, 
+**User safety is our priority.** As such, 
 - Any requests to validate tokens that impersonate other projects will be shut down immediately.
 - If you are a known project with strong traction and an upcoming token launch, you can request to included in the strict-list before your token is tradable on Jupiter. Please reach out. 
 

@@ -1,30 +1,33 @@
 ---
 sidebar_label: "CPI / Smart Contract Integration"
-description: Cross Program Invocation Integration with Jupiter Swap
-
+description: Learn how to optimize your Solana projects with Jupiter Swap CPI for efficient token swaps and advanced API integration.
+title: Jupiter Swap via CPI
 ---
 
-# Jupiter Swap via CPI
+<head>
+    <title>Jupiter Swap CPI: Streamline Your Solana Integrations</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
-Integrate your program with Jupiter Swap.
 
-CPI is one of two approaches to swap via Jupiter.
 
-:::info CPI Limitations
+To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](/docs/APIs/flash-fill) or you can utilize Cross Program Invocation (CPI). 
+
+:::danger CPI Limitations
 As of August 2023, taking the CPI approach has some tradeoffs. Due to Solana's transaction limit of 1232 bytes, swaps via CPI will likely fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. You could set a limit to the number of accounts used for swaps via Jupiter's swap API to fit it within your needs. However, limiting the accounts will likely incur greater price impact.
 
-_note: when using Jupiter's API, you can set [maxAccounts](/docs/APIs/swap-api#using-maxaccounts) to reduce the number of accounts._
+_Note: when using Jupiter's API, you can set [maxAccounts](/docs/APIs/swap-api#using-maxaccounts) to reduce the number of accounts._
 :::
 
 :::info Use Flash-Fill
-Instead, we recommend taking the [flash-fill](/docs/APIs/flash-fill) approach. The flash-fill approach takes advantage of Versioned Transaction and Address Lookup Tables to allow for more accounts per transaction while keeping within the 1232 bytes limit.
+Instead, we recommend taking the [flash-fill](/docs/APIs/flash-fill) approach. The flash-fill approach takes advantage of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables) to allow for more accounts per transaction while keeping within the 1232 bytes limit.
 :::
 
 ## Example
 
-Here we are showing an example on how to utilize Jupiter Swap via CPI to swap from any tokens to SOL even if the user doesn't have enough SOL. You can even allow a third-party payer if the user doesn't have any SOL at all.
+Here we show an [example transaction](https://solscan.io/tx/GX1rh9y15mn2jqkQ5mosPqkg8YYFWQZqvihR95aRpPQeEMZhhPqWzMUbN1iCqYkubqyB2fLW3UGR4j5w28srrtm) on how to utilize Jupiter Swap via CPI to swap from any tokens to SOL. This works even if the user doesn't have enough SOL. You can even allow a third-party payer if the user doesn't have any SOL at all.
 
-### How this works?
+### How does this work?
 For a CPI to work, the transaction will be composed of these instructions:
 
 1. Borrow enough SOL from the program to open a wSOL account that the program owns.

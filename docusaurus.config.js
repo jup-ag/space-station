@@ -88,19 +88,10 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          sidebarCollapsed: false,
+          sidebarCollapsed: true,
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          blogSidebarTitle: "All posts",
-          blogSidebarCount: "ALL",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -123,43 +114,8 @@ const config = {
         path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
+        sidebarCollapsed: true,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "labs",
-        path: "labs",
-        routeBasePath: "labs",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "start",
-        path: "start",
-        routeBasePath: "start",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: false,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "JUP",
-        path: "JUP",
-        routeBasePath: "JUP",
-        sidebarPath: require.resolve("./sidebars-jup.js"),
-        sidebarCollapsed: false,
       }),
     ],
     async function myPlugin() {
@@ -208,11 +164,6 @@ const config = {
         },
         items: [
           {
-            to: "/jup",
-            label: "J.U.P",
-            position: "left",
-          },
-          {
             to: "/guides",
             label: "Guides",
             position: "left",
@@ -223,16 +174,6 @@ const config = {
             label: "Docs",
           },
           {
-            to: "/labs",
-            position: "left",
-            label: "Labs",
-          },
-          {
-            to: "/start",
-            position: "left",
-            label: "Start",
-          },
-          {
             to: "/partners",
             label: "Partners",
             position: "left",
@@ -240,11 +181,6 @@ const config = {
           {
             to: "/stats",
             label: "Stats",
-            position: "left",
-          },
-          {
-            to: "/blog",
-            label: "Blog",
             position: "left",
           },
           {

@@ -1,4 +1,13 @@
-# Wrapped SOL (wSOL)
+---
+sidebar_label: Wrapped SOL
+description: Learn what wrapped SOL is and how to use it in this beginners guide.
+title: What is Wrapped SOL (wSOL)?
+---
+
+<head>
+    <title>Wrapped SOL (wSOL) Explained | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Wrapped SOL is native SOL that is wrapped using the Solana Token Program, which allows it to be treated like any other Token program token type.
 

@@ -1,8 +1,13 @@
 ---
 sidebar_label: "Referral Fee"
-description: Earn Referral Fee With Jupiter Limit Order
-title: "Referral Fee"
+description: Join the Jupiter API Referral Program to boost your earnings with each transaction. Claim your fees now!
+title: Referral Fees
 ---
+
+<head>
+    <title>Jupiter API Referral Fees Explained</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Referrers are entitled to a share of referral fees, while the platform collects the remaining. The fees are collected and withheld by the program and are claimable anytime.
 

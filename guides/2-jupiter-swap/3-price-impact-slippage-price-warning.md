@@ -1,9 +1,13 @@
 ---
 sidebar_label: "Price Impact, Slippage, Warnings"
 description: "Understand Price Impact, Slippage and Price Warnings"
+title: Understand Price Impact, Slippage and Price Warnings
 ---
 
-# Understand Price Impact, Slippage and Price Warnings
+<head>
+    <title>Price Impact, Slippage, and Warnings on Jupiter Swap</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. On this page, we will explain the difference between price impact, slippage, and price warning.
 

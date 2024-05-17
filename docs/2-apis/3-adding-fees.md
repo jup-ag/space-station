@@ -1,15 +1,21 @@
 ---
 sidebar_label: Adding Fees
-description: Adding your own platform fee to Jupiter swap
+description: Enhance your platform revenue by adding customizable fees to Jupiter swap using the Jupiter API. Learn how to implement it effortlessly!
+title: Adding Your Own Fee To Jupiter Swap
 ---
-# Adding Your Own Platform Fee To Jupiter Swap
+
+<head>
+    <title>Add Fees to Jupiter API: Enhance Your Platform Revenue Seamlessly</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 ![cat_flying](./cat_flying_money.png)
 
-There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
+By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
 
-If a platform fee is set, Jupiter will take 2.5% of the platform fee charged by the integrators.
+If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators.
 
-We are using the [Referral Program](https://github.com/TeamRaccoons/referral) to power our platform fee. You can check out how the [Referral Program](/docs/additional-topics/referral-program) works.
+Jupiter uses the [Referral Program](https://github.com/TeamRaccoons/referral) to power our platform fee. You can check out how the [Referral Program](/docs/additional-topics/referral-program) works.
 
 ## Usage
 
@@ -17,11 +23,11 @@ We are using the [Referral Program](https://github.com/TeamRaccoons/referral) to
 
 #### 1. Obtain a referral account
 
-Go to the [referral dashboard](https://referral.jup.ag/dashboard) to create your own referral account. After creating your own referral account, remember to look up `Referral Key` on the page, that is your referral account public key.
+Go to the [referral dashboard](https://referral.jup.ag/dashboard) to create your referral account. After creating your referral account, remember to find your `Referral Key` on the page. This is your referral account public key. You'll need this to gather platform fees.
 
 #### 2. Set your referral fee
 
-To set your referral fee with the Jupiter API, you can just add in the `platformFeeBps` parameter to the `/quote` endpoint:
+Setting your referral fee with the Jupiter API is simple. You just add in the `platformFeeBps` parameter to the `/quote` endpoint:
 
 [# 5. Get the route for a swap](/docs/apis/swap-api#5-get-the-route-for-a-swap)
 

@@ -6,7 +6,7 @@
 
 - You do not have to support Versioned Transactions to migrate to v4.  You can set the `parameterasLegacyTransaction=true` to have the api return a legacy swap transaction.
 - V3 used Legacy transactions. V4 has migrated to use Versioned Transactions with Address Lookup Tables.
-- With `VersionedTransaction` and Address Lookup Tables, all Jupiter swaps are done in a single transaction so no longer a need to handle sequentially sending more than one transaction.
+- With `VersionedTransaction` and Address Lookup Tables, all Jupiter swaps are done in a single transaction, so they no longer need to handle sending multiple transactions sequentially.
 - Use `VersionedTransaction.deserialize`  to deserialize the transaction object in order to insert your own instructions in the transaction.
 - V4 swagger: https://quote-api.jup.ag/v4/docs/static/index.html
 

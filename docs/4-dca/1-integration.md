@@ -1,13 +1,17 @@
 ---
 sidebar_label: Integrate DCA
-description: Integrate DCA
+description: Master Jupiter DCA Integration for efficient DCA orders on Solana. Get setup tips and SDK details.
+title: Integrating Jupiter DCA
 ---
 
-# Integrating DCA (language agnostic)
+<head>
+    <title>Jupiter DCA Integration: Seamless Solana Orders</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
-Jupiter DCA provides users with the simplest way to place DCA orders on Solana and receive tokens directly in their wallet as each order is filled!
+Jupiter Dollar Cost Average (DCA) provides users with the quickest and easiest way to place DCA orders on Solana! DCA allows users to receive tokens directly in their wallet as each order is filled!
 
-This page will serve as a general guide on integrating DCA whether you are building a bot for yourself or to integrate with existing (d)apps regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk)
+This page will serve as a general guide on integrating DCA into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's DCA program will work regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk)
 
 You can learn more about the mechanics of Jupiter's DCA here: [How DCA Works](/guides/dca/how-dca-work)
 
@@ -26,7 +30,7 @@ There are 2 key instructions that can be executed
 
 ### 1. Setting up a DCA
 
-A DCA Account is a PDA account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. _(if you are not familiar with constructing a transaction on Solana, we suggest you look at using [DCA SDK](/docs/dca/dca-sdk) with more thorough code examples)_.
+A DCA Account is a Program Derived Address (PDA) account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. _(if you are not familiar with constructing a transaction on Solana, take a look at using [DCA SDK](/docs/dca/dca-sdk). This guide provides more thorough code examples)_.
 
 Each DCA account has unique parameters. If you want to have different parameters, you can create any number of DCA accounts.
 
@@ -96,11 +100,10 @@ const [dca] = await PublicKey.findProgramAddressSync(
 
 Phew! That's all that is necessary to construct the instruction. Next, you will need to sign and send the transaction!
 
-Here's what a successful transaction to create a DCA account look like [see on Solana Explorer](https://explorer.solana.com/tx/24kSsH2uLnjSEsYp1mZ6ZmCeGZ8KmYFMDrNJs3nbU6SVH9jwYfcEA6oeRf72CxmzAuUZwFwkyNYvX8ABFc6ABAtv)
-
+Here's what a successful transaction to create a [DCA account looks like](https://explorer.solana.com/tx/24kSsH2uLnjSEsYp1mZ6ZmCeGZ8KmYFMDrNJs3nbU6SVH9jwYfcEA6oeRf72CxmzAuUZwFwkyNYvX8ABFc6ABAtv).
 ### 2. Cancelling a DCA
 
-For whatever reason, if you decide to stop DCA, you can close the DCA account. Closing the DCA account also returns any leftover tokens to the owner of the DCA account.
+If you decide to stop your DCA program, you can close the DCA account. Closing the DCA account also returns any leftover tokens to the owner of the DCA account.
 
 Similar to opening a DCA account, you will need to send a transaction containing an instruction to `close_dca`.
 

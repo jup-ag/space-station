@@ -1,9 +1,14 @@
 ---
 title: Jupiter Terminal Walkthrough
-sidebar_label: "Jupiter Terminal Walkthrough"
-description: "Jupiter Terminal Integration walk-through"
+sidebar_label: "Walkthrough"
+description: "Quickly integrate Jupiter Terminal with our guide. Enhance your Solana dapps with ease using our key resources and demos."
 ---
-## A detailed guide to integrating Jupiter Terminal
+
+<head>
+    <title>Jupiter Terminal Walkthough: Streamlined Integrations</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your HTML with just a few lines of code. 
 
@@ -84,5 +89,5 @@ This RPC_ENDPOINT is only for demonstration purposes so that this example will r
 ![Example 7](./terminal/example7.jpg)
 
 :::success Please reach out in discord if you need help
-Feel free to reach out to us in discord if you experience difficulties, we can help you there.
+Feel free to reach out to us in [discord](https://discord.gg/jup) if you experience difficulties, we can help you there.
 :::

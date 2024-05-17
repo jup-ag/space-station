@@ -1,11 +1,16 @@
 ---
 sidebar_label: Payments API
-description: Convert any token to USDC
+description: Convert any token to USDC with Jupiter Payments API. A comprehensive guide for seamless crypto transactions.
+title: "Payments API: Convert Any Token to USDC"
 ---
 
-# Payments API: Convert any token to USDC
+<head>
+    <title>Jupiter Payments API Guide: Seamless Token Conversion to USDC</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
-Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount. So, this doesn't just support output token to USDC only.
+
+Jupiter's Payments API supports your payments use case. Utilize Jupiter + SolanaPay to pay for anything with any SPL token. With the Jupiter Payments API, you can specify an exact output token amount. The API doesn't just support output token to USDC, but to any SPL token!
 
 ## Use Case
 
@@ -13,9 +18,17 @@ Payments or interaction with a protocol can require an exact amount of token B. 
 
 ## A Practical Example using the API
 
-Bob is selling a delicious latte for 5 USDC, Alice only holds mSOL but Bob can use the Jupiter API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet.
+Bob is selling a delicious latte for 5 USDC. Alice wants to buy Bob's latte. The problem is, Alice only holds mSOL. Luckily, Bob can use the Jupiter Payments API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet. 
 
-First, we need to show Alice how much mSOL will he have to spend for the latte.
+First, we need to show Alice how much mSOL she will have to spend for the latte.
+
+<details>
+  <summary>Click to play video</summary>
+  <video width="320" height="240" controls>
+    <source src="/videos/payments-api.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</details>
 
 ```shell
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=5000000&swapMode=ExactOut&slippageBps=50' | jq '.inAmount, .otherAmountThreshold'
@@ -25,7 +38,7 @@ Parameters:
 
 - The input mint is mSOL and the output mint is USDC.
 - `swapMode` is `ExactOut`, as opposed to the default `ExactIn`.
-- we want to receive amount=5,000,000, 5 USDC.
+- We want to receive amount=5,000,000, 5 USDC.
 
 Response:
 

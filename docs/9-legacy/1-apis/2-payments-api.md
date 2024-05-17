@@ -1,15 +1,21 @@
 ---
 sidebar_label: Payments API
-description: Convert any token to USDC
+description: Legacy documentation for V4 Payments API
+title: V4 Payments API
 ---
+
+<head>
+    <title>Jupiter V4 Payments API [Legacy]</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # Payments API: Convert any token to USDC
 
-Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this, you can specify an exact output token amount.
+Jupiter supports the payments use case. You can use Jupiter + SolanaPay to pay for anything with any SPL token. With this technique you can specify an exact output token amount.
 
 ## Use Case
 
-Payments or interaction with a protocol can require an exact amount of token B. Users might not have token A or prefer to hold other tokens long term. The Jupiter API allow building a swap transaction to receive an exact amount of token A for a maximum in amount of token B.
+Payments or interaction with a protocol can require an exact amount of token B. Users might not have token A or prefer to hold other tokens long term. The Jupiter API allows for building a swap transaction to receive an exact amount of token A for a maximum in amount of token B.
 
 ## A Practical Example using the API
 
