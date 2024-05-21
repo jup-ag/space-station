@@ -34,7 +34,7 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 
 ## Jupiter Settings
 
-![Jup Swap](../img/jup-swap/jup-swap-1.png)
+![Jup Swap](../img/jup-swap/jup-swap-1.png 'Main jupiter swap screen showing basic user settings and configuration options.')
 
 1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where a user can instantly spot token swap for any supported SPL token.
 2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in your wallet if the order is triggered and filled.
@@ -49,7 +49,7 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 :::tip The RPC Endpoint Selector now displays active end-point latency
 Due to network traffic loads RPC endpoints can get overloaded, which can lead to latency issues that will directly impact your trade executions. Reviewing the RPC latency and selecting the lowest latency option is a best practice to ensure the fastest trade execution.
 :::
-![Jup Swap 5](../img/jup-swap/jup-swap-2.png)
+![Jup Swap 5](../img/jup-swap/jup-swap-2.png 'Global settings for Jupiter Swap, including language, preferred explorer and RPC endpoint.')
 
    1. **Language:** Pick your preferred language from English, Chinese, Vietnamese, French, Japanese, Indonesian, and Russian.
    2. **Preferred Explorer:** Pick your preferred explorer from Solscan, SolanaFM, Solana Beach, Solana Explorer, XRAY, and OKLink.
@@ -59,7 +59,7 @@ Due to network traffic loads RPC endpoints can get overloaded, which can lead to
 :::info Transaction Priority Fees
 Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
 :::
-![Jup Swap 4](../img/jup-swap/jup-swap-3.png)
+![Jup Swap 4](../img/jup-swap/jup-swap-3.png 'Priority fee settings, including Jito tips, fee mode, and priority levels.')
 
    1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option, a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
    2. **Priority Level:** Specify the Priority Level for the transactions you are completeing. Must execute transactions falling under the Ultra Priority Level.
@@ -78,13 +78,13 @@ This is an advanced setting and should be used with caution.
 
 ::::
 
-![Jup Swap 3](../img/jup-swap/jup-swap-4.png)
+![Jup Swap 3](../img/jup-swap/jup-swap-4.png 'Slippage settings allow you the user to change mode from fixed to Auto and set the percentage.')
 
    1. **Mode:** Select the slippage mode you want to utilize. Auto slippage will utilize Jupiters internal slippage calculations for the best setting, and Fixed will adhere to your selected slippage rate.
    2. **Slippage:** Select the Max acceptable slippage rate for your swaps.
 
 ### Swap Settings
-![Jup Swap 2](../img/jup-swap/jup-swap-5.png)
+![Jup Swap 2](../img/jup-swap/jup-swap-5.png 'General swap settings for wSOL, versioned transactions, and utilizing direct routes.')
 
    1. **Direct Route Only:** Using Direct Route Only ensures that the transaction will only be submitted to a single pool. This will limit a lot of intermediate tokens and filter out a lot of other viable routes that use intermediary tokens.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
@@ -92,7 +92,7 @@ This is an advanced setting and should be used with caution.
 
 ## Jupiter Swap
 
-![Jup Swap 7](../img/jup-swap/jup-swap-6.png)
+![Jup Swap 7](../img/jup-swap/jup-swap-6.png 'The main jupiter swap user interface, showing a variety of features described below.')
 
 1. **Input Token Wallet balance:** Jupiter detects the input token balance in your wallet.
 2. **Half/ Max amount:** Shortcut buttons to quickly input `Half` or `Max` of the balance amount.
@@ -109,11 +109,11 @@ This is an advanced setting and should be used with caution.
 :::info Order Routing
 Clicking on the 9. from the Swap terminal above, will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
 :::
-![Jup Swap 9](../img/jup-swap/jup-swap-7.png)
+![Jup Swap 9](../img/jup-swap/jup-swap-7.png 'The order routing map shows how your tokens swapped through multiple liquidity pools.')
 
 ## Swap Details / Price Info
 
-![Jup Swap 10](../img/jup-swap/jup-swap-8.png)
+![Jup Swap 10](../img/jup-swap/jup-swap-8.png 'The collapsable "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
 
 1. **Exchange rate for the selected tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
 2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the larger the trade the larger the price impact on the selected assets.
