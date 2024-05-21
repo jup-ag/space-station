@@ -1,15 +1,15 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 const userLocale =
-  typeof window !== "undefined"
+  typeof window !== 'undefined'
     ? navigator.languages && navigator.languages.length
       ? navigator.languages[0]
       : navigator.language
-    : "en-US";
+    : 'en-US';
 
 export const numberFormatter = new Intl.NumberFormat(userLocale, {
-  style: "decimal",
+  style: 'decimal',
   minimumFractionDigits: 0,
   maximumFractionDigits: 12,
 });
@@ -17,7 +17,7 @@ export const numberFormatter = new Intl.NumberFormat(userLocale, {
 export const formatNumber = {
   format: (val?: number, precision?: number) => {
     if (!val && val !== 0) {
-      return "--";
+      return '--';
     }
 
     return numberFormatter.format(
@@ -28,7 +28,7 @@ export const formatNumber = {
 
 export const detectedSeparator = formatNumber.format(1.1).substring(1, 2);
 
-var SI_SYMBOL = ["", "k", "M", "B", "G", "T", "P", "E"];
+var SI_SYMBOL = ['', 'k', 'M', 'B', 'G', 'T', 'P', 'E'];
 
 const abbreviateNumber = (number: number, precision: number) => {
   let tier = (Math.log10(number) / 3) | 0;
