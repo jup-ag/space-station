@@ -134,141 +134,160 @@ In the example bellow, we assume the associated token account exists on `destina
 :::
 
 ```js
-import { Token, TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID } from '@solana/spl-token';
-import { PublicKey, Connection, Transaction } from '@solana/web3.js';
-import axios from 'axios';
+import { PublicKey, Connection, Keypair, VersionedTransaction, VersionedMessage, TransactionMessage } from '@solana/web3.js';
+import { getAssociatedTokenAddress, TOKEN_PROGRAM_ID, ASSOCIATED_TOKEN_PROGRAM_ID } from '@solana/spl-token';
+import fetch from 'node-fetch';
 
-const USDC_MINT = new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v');
-const paymentAmount = 5_000_000; // 5 USDC
-const bobWallet = new PublicKey('BUX7s2ef2htTGb2KKoPHWkmzxPj4nTWMWRgs5CSbQxf9');
+// Replace with actual valid base58 public keys
+const USDC_MINT = new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v');  // USDC mint address
+const bobWalletPublicKey = new PublicKey('BUX7s2ef2htTGb2KKoPHWkmzxPj4nTWMWRgs5CSbQxf9');  // Bob's wallet address
 
-// Replace these with actual values
-const aliceWallet = { publicKey: new PublicKey('AliceWalletPublicKey') };
+// Establish a connection to the Solana cluster
 const connection = new Connection('https://api.mainnet-beta.solana.com');
 
-async function getBobUSDCTokenAccount(): Promise<PublicKey> {
-  return await Token.getAssociatedTokenAddress(
-    ASSOCIATED_TOKEN_PROGRAM_ID,
-    TOKEN_PROGRAM_ID,
+// Replace these with actual valid base58 public keys
+const feeAccount = new PublicKey('ReplaceWithActualValidBase58Key');  // Replace with actual fee account public key
+const trackingAccount = new PublicKey('ReplaceWithActualValidBase58Key');  // Replace with actual tracking account public key
+
+// Ensure these are valid base58 strings
+console.log("USDC_MINT:", USDC_MINT.toBase58());
+console.log("bobWalletPublicKey:", bobWalletPublicKey.toBase58());
+console.log("feeAccount:", feeAccount.toBase58());
+console.log("trackingAccount:", trackingAccount.toBase58());
+
+// Get the associated token account for Bob's wallet
+async function getBobUSDCTokenAccount(bobWalletKeypair) {
+  const bobUSDCTokenAccount = await getAssociatedTokenAddress(
     USDC_MINT,
-    bobWallet,
+    bobWalletKeypair.publicKey,
     true,
+    TOKEN_PROGRAM_ID,
+    ASSOCIATED_TOKEN_PROGRAM_ID
   );
+  return bobUSDCTokenAccount;
 }
 
-async function fetchSwapTransaction(): Promise<any> {
-  const bobUSDCTokenAccount = await getBobUSDCTokenAccount();
-  
-  const quoteResponse = {
-    "inputMint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
-    "inAmount": "23698263",
-    "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-    "outAmount": "5000000",
-    "otherAmountThreshold": "23816755",
-    "swapMode": "ExactOut",
-    "slippageBps": 50,
-    "platformFee": null,
-    "priceImpactPct": "0",
-    "routePlan": [
-      {
-        "swapInfo": {
-          "ammKey": "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
-          "label": "Raydium CLMM",
-          "inputMint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
-          "outputMint": "So11111111111111111111111111111111111111112",
-          "inAmount": "23698263",
-          "outAmount": "28158132",
-          "feeAmount": "1992",
-          "feeMint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So"
-        },
-        "percent": 100
-      },
-      {
-        "swapInfo": {
-          "ammKey": "CSP4RmB6kBHkKGkyTnzt9zYYXDA8SbZ5Do5WfZcjqjE4",
-          "label": "Whirlpool",
-          "inputMint": "So11111111111111111111111111111111111111112",
-          "outputMint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
-          "inAmount": "28158132",
-          "outAmount": "100994175",
-          "feeAmount": "1",
-          "feeMint": "So11111111111111111111111111111111111111112"
-        },
-        "percent": 100
-      },
-      {
-        "swapInfo": {
-          "ammKey": "5LnAsMfjG32kdUauAzEuzANT6YmM3TSRpL1rWsCUDKus",
-          "label": "Whirlpool",
-          "inputMint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
-          "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-          "inAmount": "100994175",
-          "outAmount": "5000000",
-          "feeAmount": "131292",
-          "feeMint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux"
-        },
-        "percent": 100
-      }
-    ],
-    "contextSlot": 267155237,
-    "timeTaken": 0.010184745
+// Step 1: Fetch swap info
+async function fetchSwapInfo() {
+  const response = await fetch('https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=5000000&swapMode=ExactOut&slippageBps=50');
+  const data = await response.json();
+  return {
+    inAmount: data.inAmount,
+    otherAmountThreshold: data.otherAmountThreshold,
+    quoteResponse: data
   };
+}
 
-  const data = JSON.stringify({
-    quoteResponse,
-    destinationTokenAccount: bobUSDCTokenAccount.toString(),
-    userPublicKey: aliceWallet.publicKey.toString(),
+// Step 2: Fetch the swap transaction
+async function fetchSwapTransaction(swapUserKeypair, bobUSDCTokenAccount, swapInfo) {
+  const requestBody = {
+    userPublicKey: swapUserKeypair.publicKey.toBase58(),
     wrapAndUnwrapSol: true,
     useSharedAccounts: true,
-    feeAccount: "YOUR_FEE_ACCOUNT", // replace with actual fee account if applicable
-    trackingAccount: "YOUR_TRACKING_ACCOUNT", // replace with actual tracking account if applicable
-    computeUnitPriceMicroLamports: 0,
-    prioritizationFeeLamports: 0,
+    feeAccount: feeAccount.toBase58(),  // Use actual key
+    trackingAccount: trackingAccount.toBase58(),  // Use actual key
+    prioritizationFeeLamports: 0,  // No prioritization fee in this case
     asLegacyTransaction: false,
     useTokenLedger: false,
+    destinationTokenAccount: bobUSDCTokenAccount.toBase58(),
     dynamicComputeUnitLimit: true,
     skipUserAccountsRpcCalls: true,
-  });
-
-  const config = {
-    method: 'post',
-    maxBodyLength: Infinity,
-    url: 'https://quote-api.jup.ag/v6/swap',
-    headers: { 
-      'Content-Type': 'application/json', 
-      'Accept': 'application/json'
-    },
-    data: data
+    quoteResponse: swapInfo.quoteResponse
   };
 
-  try {
-    const response = await axios.request(config);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching swap transaction:", error);
-    throw error;
-  }
+  const response = await fetch('https://quote-api.jup.ag/v6/swap', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody),
+  });
+
+  const { swapTransaction, lastValidBlockHeight } = await response.json();
+  return { swapTransaction, lastValidBlockHeight };
 }
 
-async function executeSwapTransaction(swapTransaction: string, connection: Connection) {
-  const transaction = Transaction.from(Buffer.from(swapTransaction, 'base64'));
-  // Execute the transaction using your preferred method
-  // e.g., sendTransaction(transaction, connection, { signers: [userSigner] });
+// Step 3: Send the transaction to the Solana blockchain
+async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockHeight) {
+  const versionedMessage = VersionedMessage.deserialize(Buffer.from(swapTransaction, 'base64'));
+  const transaction = new VersionedTransaction(versionedMessage);
+
+  // Get the recent blockhash
+  // Using 'finalized' commitment to ensure the blockhash is final and secure
+  // You may experiment with 'processed' or 'confirmed' for fetching blockhash to increase speed
+  // Reference: https://solana.com/docs/rpc/http/getlatestblockhash
+  const bhInfo = await connection.getLatestBlockhashAndContext({ commitment: "finalized" });
+  transaction.recentBlockhash = bhInfo.value.blockhash;
+  transaction.feePayer = swapUserKeypair.publicKey;
+
+  // Print keys involved in the transaction to diagnose issues
+  console.log("Keys in Transaction:", transaction.instructions.flatMap(instr => instr.keys.map(k => k.pubkey.toBase58())));
+
+  // Sign the transaction with the swap user's keypair
+  transaction.sign([swapUserKeypair]);
+
+  // Simulate the transaction to ensure it will succeed
+  // Using 'finalized' commitment for the simulation to match the security level of the actual send
+  // You may experiment with 'confirmed' or 'processed' to simulate faster, but keep in mind the risks
+  // Reference: https://solana.com/docs/core/transactions#commitment
+  const simulation = await connection.simulateTransaction(transaction, { commitment: "finalized" });
+  if (simulation.value.err) {
+    throw new Error(`Simulation failed: ${simulation.value.err.toString()}`);
+  }
+
+  // Send the transaction
+  try {
+    const signature = await connection.sendTransaction(transaction, {
+      // NOTE: Adjusting maxRetries to a lower value for trading, as 20 retries can be too much
+      // Experiment with different maxRetries values based on your tolerance for slippage and speed
+      // Reference: https://solana.com/docs/core/transactions#retrying-transactions
+      maxRetries: 5,
+      skipPreflight: true,
+      preflightCommitment: "finalized",
+    });
+
+    // Confirm the transaction
+    // Using 'finalized' commitment to ensure the transaction is fully confirmed
+    // Reference: https://solana.com/docs/core/transactions#confirmation
+    const confirmation = await connection.confirmTransaction({
+      signature,
+      blockhash: bhInfo.value.blockhash,
+      lastValidBlockHeight: bhInfo.value.lastValidBlockHeight,
+    }, "finalized");
+
+    if (confirmation.value.err) {
+      throw new Error(`Transaction not confirmed: ${confirmation.value.err.toString()}`);
+    }
+
+    console.log("Confirmed: ", signature);
+  } catch (error) {
+    console.error("Failed: ", error);
+    throw error;
+  }
 }
 
 // Example usage
 (async () => {
   try {
-    const transactions = await fetchSwapTransaction();
-    const { swapTransaction } = transactions;
+    // Generate keypairs for swap user and Bob's wallet, replace with actual keypairs for real usage
+    const swapUserKeypair = Keypair.generate();
+    const bobWalletKeypair = Keypair.generate();  // Replace this with Bob's actual keypair
 
-    await executeSwapTransaction(swapTransaction, connection);
-    console.log('Swap transaction executed successfully');
+    // Ensure the bobUSDCTokenAccount is correct
+    const bobUSDCTokenAccount = await getBobUSDCTokenAccount(bobWalletKeypair);
+
+    // Step 1: Fetch swap info
+    const swapInfo = await fetchSwapInfo();
+
+    // Step 2: Fetch the swap transactions
+    const { swapTransaction, lastValidBlockHeight } = await fetchSwapTransaction(swapUserKeypair, bobUSDCTokenAccount, swapInfo);
+
+    // Step 3: Send the transaction to the blockchain
+    await sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockHeight);
   } catch (error) {
-    console.error("Error in transaction execution:", error);
+    console.error('Error:', error);
   }
 })();
-
 ```
 
 :::tip
