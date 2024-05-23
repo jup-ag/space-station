@@ -11,11 +11,9 @@ title: Adding Your Own Fee To Jupiter Swap
 
 ![cat_flying](./cat_flying_money.png)
 
-By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output.
+The Referral Program is an open source program by Jupiter to provide referral fees for integrators who are integrating Jupiter Swap and Jupiter Limit Order. You can check out the code [here](https://github.com/TeamRaccoons/referral) to gain a better understanding of how it works.
 
-If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators.
-
-Jupiter uses the [Referral Program](https://github.com/TeamRaccoons/referral) to power our platform fee. You can check out how the [Referral Program](/docs/additional-topics/referral-program) works.
+By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output. If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators.
 
 ## Usage
 
@@ -172,9 +170,11 @@ getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quoteResponse, wall
 The fee token account should be the same mint as your output mint on the swap for ExactIn. For ExactOut, the fee is being taken as the same mint as the input mint. Also, make sure that the fee token account has been created. You can create the fee token account on the referral dashboard.
 :::
 
-## Referral Program
+## Referral Javascript SDK
 
-For more information on how the Referral Program works, check it out [here](/docs/additional-topics/referral-program).
+You can check out the Referral Javascript SDK [here](https://www.npmjs.com/package/@jup-ag/referral-sdk). For a list of methods that you can use, check out the source code [here](https://github.com/TeamRaccoons/referral/blob/main/packages/sdk/src/referral.ts).
+
+There are also examples on how to use the SDK [here](https://github.com/TeamRaccoons/referral/tree/main/example).
 
 :::note
 The Jupiter Swap's project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
