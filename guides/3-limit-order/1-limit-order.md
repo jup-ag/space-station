@@ -26,7 +26,7 @@ Jupiter Limit Order provides the easiest way to place limit orders on Solana, of
 
 ## Jupiter Limit Order Settings
 
-![Limit Order 2](../img/limit-order/limit-order-2.png)
+![Limit Order 2](../img/limit-order/limit-order-1.png)
 
 1. **Input:** Pick a token from the token selector and specify the amount of token that you're selling
 2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `Use Market` for the current market price)
@@ -36,7 +36,7 @@ Jupiter Limit Order provides the easiest way to place limit orders on Solana, of
 
 ### Open Order
 
-![Limit Order 4](../img/limit-order/limit-order4.png)
+![Limit Order 4](../img/limit-order/limit-order-2.png)
 
 Open Order section is where users keep track of submitted order/ transaction that has yet to be fulfilled.
 
@@ -48,7 +48,7 @@ Open Order section is where users keep track of submitted order/ transaction tha
 
 ### Order History
 
-![Limit Order 3](../img/limit-order/limit-order3.png)
+![Limit Order 3](../img/limit-order/limit-order-3.png)
 
 Order History section is where users keep track of orders that have been completed or cancelled.
 
