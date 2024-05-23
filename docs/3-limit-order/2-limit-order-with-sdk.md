@@ -122,4 +122,4 @@ Due to the transaction size limit, the maximum cancellation order in a batch is 
 
 ## Referral
 
-Check out the [referral program](/docs/limit-order/referral-fee) for Limit Order.
+Check out the [referral program](/docs/apis/adding-fees) for Limit Order.

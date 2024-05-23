@@ -27,10 +27,10 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](/partners).
 6. Configure additional parameters to help with your trade, including: Transaction Fees, Slippage Settings, and Swap Settings.
 7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be executed.
-8. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
+8. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
 9. You can view your transaction history by clicking the wallet section on the upper right of the site.
 
-**Lets go through the Jupiter Settings in more detail below.**
+**Let's go through the Jupiter Settings in more detail below.**
 
 ## Jupiter Settings
 

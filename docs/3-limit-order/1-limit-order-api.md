@@ -390,6 +390,10 @@ Deserialize, sign and execute the transaction from the response like [here](#exe
 Due to the transaction size limit, the maximum cancellation order in a batch is 10.
 :::
 
+:::info
+The Jupiter Limit Order's project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
+:::
+
 ## Referral
 
-Check out the [referral program](/docs/limit-order/referral-fee) for Limit Order.
+Check out the [referral program](/docs/apis/adding-fees) for Limit Order.
