@@ -15,7 +15,7 @@ Jupiter offers several information signals to help users make informed trading d
 
 Price impact refers to the change in an asset's price due to the execution of a trade. This is especially relevant in decentralized exchanges (DEXs) or automated market makers (AMMs) due to their liquidity model.
 
-Price Impact is influenced by the available liquidity to settle the trade, and the size of the trade. For example, if you want to swap a large amount of one token for another in a liquidity pool, the larger your trade compared to the pool's size, the more significant the price impact will be. This is because the execution of your trade will shift the balance between the tokens in the pool, and this shift will directly affect the price according to the AMM's formula. 
+Price Impact is influenced by the available liquidity to settle the trade and the size of the trade. For example, if you want to swap a large amount of one token for another in a liquidity pool, the larger your trade compared to the pool's size, the more significant the price impact will be. This is because the execution of your trade will shift the balance between the tokens in the pool which will directly affect the price according to the AMM's formula. 
 
 Price impact numbers vary across AMMs and the figure shown on Jupiter is an aggregate based on your particular route. 
 
