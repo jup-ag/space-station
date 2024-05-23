@@ -57,13 +57,13 @@ Due to network traffic loads RPC endpoints can get overloaded, which can lead to
 
 ### Transaction Priority Fees
 :::info Transaction Priority Fees
-Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
+Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through, increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
 :::
 ![Jup Swap 4](../img/jup-swap/jup-swap-3.png 'Priority fee settings, including Jito tips, fee mode, and priority levels.')
 
-   1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option, a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
+   1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option. Choose from a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
    2. **Priority Level:** Specify the Priority Level for the transactions you are completeing. Must execute transactions falling under the Ultra Priority Level.
-   3. **Fee Mode:** Pick your preferred Fee Mode, either specify a Max Cap for your fee, or an Exact Fee for your transactions.
+   3. **Fee Mode:** Pick your preferred Fee Mode. Either specify a Max Cap for your fee or an Exact Fee for your transactions.
 
 ### Slippage Settings
 ::::info Slippage Settings
@@ -80,7 +80,7 @@ This is an advanced setting and should be used with caution.
 
 ![Jup Swap 3](../img/jup-swap/jup-swap-4.png 'Slippage settings allow you the user to change mode from fixed to Auto and set the percentage.')
 
-   1. **Mode:** Select the slippage mode you want to utilize. Auto slippage will utilize Jupiters internal slippage calculations for the best setting, and Fixed will adhere to your selected slippage rate.
+   1. **Mode:** Select the slippage mode you want to utilize. Auto slippage will utilize Jupiters internal slippage calculations for the best setting. Fixed will adhere to your selected slippage rate.
    2. **Slippage:** Select the Max acceptable slippage rate for your swaps.
 
 ### Swap Settings
