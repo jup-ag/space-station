@@ -9,11 +9,22 @@ Description: Learn how to place a limit order on Jupiter with this beginners gui
     <meta name="twitter:card" content="summary" />
 </head>
 
-Jupiter Limit Order provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled!
+Jupiter Limit Order provides the easiest way to place limit orders on Solana, offering the widest selection of token pairs and leveraging all the available liquidity across the entire Solana ecosystem. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
 
-![Limit Order](../img/limit-order/limit-order-1.png)
+## Basic Limit Order User Flow
 
-## How to place a Limit Order
+1. First, navigate to the [Jupiter Website](https://jup.ag/) and then Click on the Limit Order product icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/limit
+2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
+3. Select the token you are selling and the token you are buying on the terminal.
+4. Enter the amount of the token you are selling in the amount field, set the execution price for the order, and the expiry option in the selector. 
+5. Double check the limit order inputs and if things look good, click the `Place Limit Order` button.
+6. Confirm the wallet notification and the Limit Order will be submitted to the system. 
+7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
+8. Your new Limit Order will populate the Open Orders Section below the Terminal once it is confirmed and the UI updates.
+
+### Lets go through the Limit Order Settings in more detail below.
+
+## Jupiter Limit Order Settings
 
 ![Limit Order 2](../img/limit-order/limit-order-2.png)
 
@@ -22,8 +33,6 @@ Jupiter Limit Order provides users with the simplest way to place limit orders o
 3. **Expiry:** Set an expiry period for your order, from 10 minutes to Custom, or even Never
 4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting
 5. **Place Order:** Once you've reviewed the summary of your order, you will be able to place order and submit the transaction over to Jupiter Limit Order
-
-## Open Order & Order History
 
 ### Open Order
 
