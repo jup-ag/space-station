@@ -94,20 +94,20 @@ This is an advanced setting and should be used with caution.
 
 ![Jup Swap 7](../img/jup-swap/jup-swap-6.png 'The main jupiter swap user interface, showing a variety of features described below.')
 
-1. **Input Token Wallet balance:** Jupiter detects the input token balance in your wallet.
-2. **Half/ Max amount:** Shortcut buttons to quickly input `Half` or `Max` of the balance amount.
-3. **Input Token / Token to sell:** Token selector to select token to sell or swap from.
-4. **Input Token / Token to sell amount:** Specify the amount of input token to sell or to swap from.
-5. **Input token & Output token switch:** This button switches the input and output token.
-6. **Output Token Wallet balance:** Jupiter detects the output token balance in your wallet.
-7. **Output Token / Token to buy:** Token selector to select token to buy or swap to.
-8. **Output Token / Token to buy amount:** Jupiter computes this quoted output amount from the swap configuration and current on-chain price rates of the assets involved in the route. *(This includes swap fees from all DEXs and AMMs along the route.)*
+1. **Input Token Wallet Balance:** Jupiter detects the input token balance in your wallet.
+2. **Half/ Max Amount:** Shortcut buttons to quickly input `Half` or `Max` of the balance amount.
+3. **Input Token / Token to Sell:** Token selector to select token to sell or swap from.
+4. **Input Token / Token to Sell Amount:** Specify the amount of input token to sell or to swap from.
+5. **Input token & Output Token Switch:** This button switches the input and output token.
+6. **Output Token Wallet Balance:** Jupiter detects the output token balance in your wallet.
+7. **Output Token / Token to Buy:** Token selector to select token to buy or swap to.
+8. **Output Token / Token to Buy Amount:** Jupiter computes this quoted output amount from the swap configuration and current on-chain price rates of the assets involved in the route. *(This includes swap fees from all DEXs and AMMs along the route.)*
 9. **Order Routing:** Order routing shows the markets being routed through and each hop along the path. This can sometimes involve Multi-hop and Split trades to achieve the best results.
 10. **Action - Swap:** Once you have confirmed all the parameters, LFG!
 
 ### Order Routings
 :::info Order Routing
-Clicking on the 9. from the Swap terminal above, will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
+Clicking on the area marked number 9 from the Swap terminal above will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
 :::
 ![Jup Swap 9](../img/jup-swap/jup-swap-7.png 'The order routing map shows how your tokens swapped through multiple liquidity pools.')
 
@@ -115,7 +115,7 @@ Clicking on the 9. from the Swap terminal above, will show you the exact order r
 
 ![Jup Swap 10](../img/jup-swap/jup-swap-8.png 'The collapsable "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
 
-1. **Exchange rate for the selected tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
+1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
 2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the larger the trade the larger the price impact on the selected assets.
 3. **Minimum Received:** Minimum received takes into account the slippage setting and and market liquidity to compute the minimum amount that the user will receive even with maximum price fluctuations during a successful swap.
 4. **Max Transaction Fee** This is the maximum fee you will pay to execute the quoted transaction. This takes into account your selected fee settings.
