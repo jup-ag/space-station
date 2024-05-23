@@ -336,7 +336,7 @@ const JupiterLFGLaunchpad = () => {
           <ChevronRight />
         </a>
         <a
-          href="https://www.youtube.com/@jup-ecosystem/featured"
+          href="https://www.youtube.com/@jupecosystem/featured"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(

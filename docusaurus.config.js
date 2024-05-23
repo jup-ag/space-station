@@ -174,6 +174,11 @@ const config = {
             label: "Docs",
           },
           {
+            to: "/api-v6",
+            position: "left",
+            label: "API Playground",
+          },
+          {
             to: "/partners",
             label: "Partners",
             position: "left",
