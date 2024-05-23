@@ -36,12 +36,12 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 
 ![Jup Swap](../img/jup-swap/jup-swap-1.png 'Main jupiter swap screen showing basic user settings and configuration options.')
 
-1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where a user can instantly spot token swap for any supported SPL token.
-2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in your wallet if the order is triggered and filled.
-3. **Global Priority Fee:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is part of Solana features to bid for priority for their transactions in the leader's queue. 
-4. **Global Settings:** Jupiter Global Settings, to select your default settings like language, Solana explorer and RPC endpoint.
+1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where a user can instantly spot swap for any supported SPL token.
+2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in their wallet if the order is triggered and filled.
+3. **Global Priority Fee:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is a Solana feature that allows users to bid for priority for their transactions in the leader's queue. 
+4. **Jupiter Global Settings:** to select your default settings like language, Solana explorer and RPC endpoint.
 5. **Connect Wallet:** Connect to your preferred wallet to interact with Jupiter.
-6. **Refresh quote:** Refresh quote button to quickly update the latest quote for the configured asset swap in the terminal.
+6. **Refresh Quote:** Refresh quote button to quickly update the latest quote for the configured asset swap in the terminal.
 7. **Slippage Settings:** [Slippage settings](./price-impact-slippage-price-warning) configure your acceptable threshold for price change between when you submit a transaction and it executes.
 8. **Swap Settings:** These settings will directly impact the routing and pricing of the swaps being performed. Typically, default settings are fine for beginners.
 
