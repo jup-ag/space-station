@@ -12,21 +12,21 @@ Description: Learn how to place a limit order on Jupiter with this beginners gui
 Jupiter Limit Order provides the easiest way to place limit orders on Solana, offering the widest selection of token pairs and leveraging all the available liquidity across the entire Solana ecosystem. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
 
 :::tip Order Minimum & Fees
-The Jupiter Limit Order feature has a minimum order size requirement of $5 (underlying assets must be greater thann $5 per order) and there is a 0.1% platform fee.
+The Jupiter Limit Order feature has a minimum order size requirement of $5 (underlying assets must be greater than $5 per order) and there is a 0.1% platform fee.
 :::
 
 ## Basic Limit Order User Flow
 
-1. First, navigate to the [Jupiter Website](https://jup.ag/) and then Click on the Limit Order icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/limit
+1. First, navigate to the [Jupiter Website](https://jup.ag/) and then click on the `Limit Order` icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/limit
 2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
 3. Select the token you are selling and the token you are buying on the terminal.
 4. Enter the amount of the token you are selling in the amount field, set the execution price for the order, and the expiry option in the selector. 
 5. Double check the limit order inputs and if things look good, click the `Place Limit Order` button.
 6. Confirm the wallet notification and the Limit Order will be submitted to the system. 
-7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
+7. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
 8. Your new Limit Order will populate the Open Orders Section below the Terminal once it is confirmed and the UI updates.
 
-**Lets go through the Limit Order Settings in more detail below.**
+**Let's go through the Limit Order Settings in more detail below.**
 
 :::info
 Global Settings still apply to the Limit Order Functionality, please reference [global settings](https://station.jup.ag/guides/jupiter-swap/swap#global-settings) for more information.
@@ -37,8 +37,8 @@ Global Settings still apply to the Limit Order Functionality, please reference [
 ![Limit Order 2](../img/limit-order/limit-order-1.png)
 
 1. **Input:** Pick a token from the selector drop-down and specify the amount of tokens that you want to limit sell.
-2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `Use Market` for the current market price).
-3. **Expiry:** Set an expiry period for your order, from 10 minutes to Custom, or even Never.
+2. **Rate/ Price:** Here you specify the limit order rate / price that you're buying the output token (Or `Use Market` for the current market price).
+3. **Expiry:** Set an expiry period for your order, from 10 minutes to custom, or even never.
 4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting.
 5. **Place Order:** Once you've reviewed the order details, you will be able to place the limit order and submit the transaction to the system.
 
