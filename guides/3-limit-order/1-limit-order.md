@@ -11,6 +11,10 @@ Description: Learn how to place a limit order on Jupiter with this beginners gui
 
 Jupiter Limit Order provides the easiest way to place limit orders on Solana, offering the widest selection of token pairs and leveraging all the available liquidity across the entire Solana ecosystem. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
 
+:::tip Order Minimum & Fees
+The Jupiter Limit Order feature has a minimum order size requirement of $5 (underlying assets must be greater thann $5 per order) and there is a 0.1% platform fee.
+:::
+
 ## Basic Limit Order User Flow
 
 1. First, navigate to the [Jupiter Website](https://jup.ag/) and then Click on the Limit Order product icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/limit
@@ -22,17 +26,21 @@ Jupiter Limit Order provides the easiest way to place limit orders on Solana, of
 7. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
 8. Your new Limit Order will populate the Open Orders Section below the Terminal once it is confirmed and the UI updates.
 
-### Lets go through the Limit Order Settings in more detail below.
+**Lets go through the Limit Order Settings in more detail below.**
+
+:::info
+Global Settings still apply to the Limit Order Functionality, please reference [global settings](https://station.jup.ag/guides/jupiter-swap/swap#global-settings) for more information.
+:::
 
 ## Jupiter Limit Order Settings
 
 ![Limit Order 2](../img/limit-order/limit-order-1.png)
 
-1. **Input:** Pick a token from the token selector and specify the amount of token that you're selling
-2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `Use Market` for the current market price)
-3. **Expiry:** Set an expiry period for your order, from 10 minutes to Custom, or even Never
-4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting
-5. **Place Order:** Once you've reviewed the summary of your order, you will be able to place order and submit the transaction over to Jupiter Limit Order
+1. **Input:** Pick a token from the token selector and specify the amount of token that you're selling.
+2. **Rate/ Price:** Here you specify the rate / price that you're buying the output token (Or `Use Market` for the current market price).
+3. **Expiry:** Set an expiry period for your order, from 10 minutes to Custom, or even Never.
+4. **Output:** Jupiter Limit Order will be able to compute your parameters and come up with the rate that you'll be getting.
+5. **Place Order:** Once you've reviewed the order details, you will be able to place the limit order and submit the transaction over to the system.
 
 ### Open Order
 
