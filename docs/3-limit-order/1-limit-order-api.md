@@ -123,6 +123,73 @@ await connection.confirmTransaction(txid);
 console.log(`https://solscan.io/tx/${txid}`);
 ```
 
+<details>
+  <summary>
+    <div>
+      <div><b>Whole code snippet</b></div>
+    </div>
+  </summary>
+
+```js
+import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
+import fetch from "cross-fetch";
+import { Wallet } from "@project-serum/anchor";
+import bs58 from "bs58";
+
+// It is recommended that you use your own RPC endpoint.
+// This RPC endpoint is only for demonstration purposes so that this example will run.
+const connection = new Connection(
+  "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
+);
+
+// Base key are used to generate a unique order id
+const base = Keypair.generate();
+
+// get serialized transactions
+const transactions = await (
+  await fetch('https://jup.ag/api/limit/v1/createOrder', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      owner: wallet.publicKey.toString(),
+      inAmount: 100000, // 1000000 => 1 USDC if inputToken.address is USDC mint
+      outAmount: 100000,
+      inputMint: inputMint.toString(),
+      outputMint: outputMint.toString(),
+      expiredAt: null, // new Date().valueOf() / 1000,
+      base: base.publicKey.toString(),
+      // referralAccount and name are both optional
+      // provide both to get referral fees
+      // more details in the section below
+      referralAccount: referral.publicKey.toString(),
+      referralName: "Referral Name"
+    })
+  })
+).json();
+
+const { tx } = transactions;
+
+// deserialize the transaction
+const transactionBuf = Buffer.from(tx, "base64");
+var transaction = VersionedTransaction.deserialize(transactionBuf);
+
+// sign the transaction using the required key
+// for create order, wallet and base key are required.
+transaction.sign([wallet.payer, base]);
+
+// Execute the transaction
+const rawTransaction = transaction.serialize();
+const txid = await connection.sendRawTransaction(rawTransaction, {
+  skipPreflight: true,
+  maxRetries: 2,
+});
+await connection.confirmTransaction(txid);
+console.log(`https://solscan.io/tx/${txid}`); 
+```
+</details>
+
 ## Query user open order, order history and trade history
 
 <details>
@@ -135,12 +202,20 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query        | Type   | Required |
-| ------------ | ------ | -------- |
-| `wallet`     | string | No       |
-| `inputMint`  | string | No       |
-| `outputMint` | string | No       |
+| Query        | Type   | Required | Note | 
+| ------------ | ------ | -------- | -------- |
+| `wallet`     | string | No       | The wallet address
+| `inputMint`  | string | No       | The contract address of the token used to place the limit order
+| `outputMint` | string | No       | The contract address of the token being bought
 
+:::info
+Due to the transaction size limit, it is best to provide a wallet address even if it is not required.
+:::
+
+### Example Request
+```js
+curl -X GET "https://jup.ag/api/limit/v1/openorders?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT&inputMint=So11111111111111111111111111111111111111112&outputMint=WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk"
+```
 ### Response
 
   <details>
@@ -153,22 +228,22 @@ console.log(`https://solscan.io/tx/${txid}`);
     </summary>
 
 ```json
-[​
-  {​
-    "publicKey": "string",​
-    "account": {​
-      "maker": "string",​
-      "inputMint": "string",​
-      "outputMint": "string",​
-      "oriInAmount": 0,​
-      "oriOutAmount": 0,​
-      "inAmount": 0,​
-      "outAmount": 0,​
-      "expiredAt": 0,​
-      "base": "string"​
-    }​
-  }​
-​]
+[
+    {
+        "publicKey": "APCQFtJqMhv6MpXHEtwTBxuSzGTLcJz3XcQGKc1hNpc2",
+        "account": {
+            "maker": "TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT",
+            "inputMint": "So11111111111111111111111111111111111111112",
+            "outputMint": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk",
+            "oriInAmount": "30000000",
+            "oriOutAmount": "150000000000",
+            "inAmount": "30000000",
+            "outAmount": "150000000000",
+            "expiredAt": null,
+            "base": "314Ybz35QBeJ4DNRYbpBVM8DFhcDrchpmvTLQQhcLj23"
+        }
+    }
+]
 ```
 
   </details>
@@ -200,13 +275,17 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query    | Type   | Required |
-| -------- | ------ | -------- |
-| `wallet` | string | Yes      |
-| `cursor` | number | No       |
-| `skip`   | number | No       |
-| `take`   | number | No       |
+| Query    | Type   | Required | Note
+| -------- | ------ | -------- | --------
+| `wallet` | string | Yes      | wallet address
+| `cursor` | number | No       | 
+| `skip`   | number | No       | 
+| `take`   | number | No       | 
 
+### Example Request
+```js
+curl -X GET "https://jup.ag/api/limit/v1/orderHistory?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT"
+```
 ### Response
 
   <details>
@@ -219,25 +298,25 @@ console.log(`https://solscan.io/tx/${txid}`);
     </summary>
 
 ```json
-[​
-  {​
-    "id": 0,​
-    "orderKey": "string",​
-    "maker": "string",​
-    "inputMint": "string",​
-    "outputMint": "string",​
-    "inAmount": 0,​
-    "oriInAmount": 0,​
-    "outAmount": 0,​
-    "oriOutAmount": 0,​
-    "expiredAt": 0,​
-    "state": "Waiting",​
-    "createTxid": "string",​
-    "cancelTxid": "string",​
-    "updatedAt": "2023-05-05T07:48:36.390Z",​
-    "createdAt": "2023-05-05T07:48:36.390Z"​
-  }​
-​  ]
+[
+{
+        "id": 38422148,
+        "orderKey": "BBdAfjXB3kiu2Z6XZM6BAm5hei5awU3SwTT12btaQmgx",
+        "maker": "TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT",
+        "inputMint": "So11111111111111111111111111111111111111112",
+        "outputMint": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk",
+        "inAmount": "0",
+        "oriInAmount": "30000000",
+        "outAmount": "0",
+        "oriOutAmount": "2715393334",
+        "expiredAt": null,
+        "state": "Completed",
+        "createTxid": "5xbd6BhqCbfhrorEsrxSGs2wGzaJMycuqy6X11PTMrJtF2mMAoAo4e7vJgCzjWDKNRWMqrMyAL4u5aaWaEtnAFKW",
+        "cancelTxid": null,
+        "updatedAt": "2024-05-23T17:09:31.024Z",
+        "createdAt": "2024-05-23T17:07:47.000Z"
+    }
+]
 ```
 
   </details>
@@ -270,15 +349,19 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query        | Type   | Required |
-| ------------ | ------ | -------- |
-| `wallet`     | string | No       |
-| `inputMint`  | string | No       |
-| `outputMint` | string | No       |
+| Query        | Type   | Required | Note |
+| ------------ | ------ | -------- | --------
+| `wallet`     | string | No       | Wallet Address |
+| `inputMint`  | string | No       | Contract address of the token being sold |
+| `outputMint` | string | No       | Contract address of the token being bought
 | `cursor`     | number | No       |
 | `skip`       | number | No       |
 | `take`       | number | No       |
 
+### Example Request
+```js
+curl -X GET "https://jup.ag/api/limit/v1/tradeHistory?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT"
+```
 ### Response
 
   <details>
@@ -291,21 +374,22 @@ console.log(`https://solscan.io/tx/${txid}`);
     </summary>
 
 ```json
-[​
-{​
-  "id": 0,​
-  "outAmount": 0,​
-  "txid": "string",​
-  "updatedAt": "2023-05-05T07:48:36.390Z",​
-  "createdAt": "2023-05-05T07:48:36.390Z",​
-  "order": {​
-    "id": 0,​
-    "orderKey": "string",​
-    "inputMint": "string",​
-    "outputMint": "string"​
-  }​
-}​
-​]
+[
+    {
+        "id": 47520095,
+        "inAmount": "30000000",
+        "outAmount": "2715393334",
+        "txid": "2csWeVyrqfCcjYHUhpYikEW7aspz7piThp1CjrXv3iCofwa4Kd9zhF5PrRuidH4pJ4U5ZCeA9edYgqZgHWhKYVpt",
+        "updatedAt": "2024-05-23T17:09:29.999Z",
+        "createdAt": "2024-05-23T17:09:23.000Z",
+        "order": {
+            "id": 38422148,
+            "orderKey": "BBdAfjXB3kiu2Z6XZM6BAm5hei5awU3SwTT12btaQmgx",
+            "inputMint": "So11111111111111111111111111111111111111112",
+            "outputMint": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk"
+        }
+    }
+]
 ```
 
   </details>
@@ -337,6 +421,13 @@ console.log(`https://solscan.io/tx/${txid}`);
       <p className="api-method-path">https://jup.ag/api/limit/v1/<b>cancelOrders</b></p>
     </div>
   </summary>
+
+### Parameters
+| Query        | Type   | Required | Note |
+| ------------ | ------ | -------- | -------- |
+| `owner`      | string | No       |
+| `feePayer`   | string | No       |
+| `orders`     | string list | No | List of orders being attempted to cancel |
 
 ### Body
 
