@@ -202,7 +202,7 @@ console.log(`https://solscan.io/tx/${txid}`);
 
 ### Parameters
 
-| Query        | Type   | Required | Note | 
+| Query        | Type   | Required | Description | 
 | ------------ | ------ | -------- | -------- |
 | `wallet`     | string | No       | The wallet address
 | `inputMint`  | string | No       | The contract address of the token used to place the limit order
@@ -213,7 +213,7 @@ Due to the transaction size limit, it is best to provide a wallet address even i
 :::
 
 ### Example Request
-```js
+```shell
 curl -X GET "https://jup.ag/api/limit/v1/openorders?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT&inputMint=So11111111111111111111111111111111111111112&outputMint=WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk"
 ```
 ### Response
@@ -275,7 +275,7 @@ curl -X GET "https://jup.ag/api/limit/v1/openorders?wallet=TVeKgyTMp3DjwVFRYC9mY
 
 ### Parameters
 
-| Query    | Type   | Required | Note
+| Query    | Type   | Required | Description
 | -------- | ------ | -------- | --------
 | `wallet` | string | Yes      | wallet address
 | `cursor` | number | No       | 
@@ -283,7 +283,7 @@ curl -X GET "https://jup.ag/api/limit/v1/openorders?wallet=TVeKgyTMp3DjwVFRYC9mY
 | `take`   | number | No       | 
 
 ### Example Request
-```js
+```shell
 curl -X GET "https://jup.ag/api/limit/v1/orderHistory?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT"
 ```
 ### Response
@@ -349,7 +349,7 @@ curl -X GET "https://jup.ag/api/limit/v1/orderHistory?wallet=TVeKgyTMp3DjwVFRYC9
 
 ### Parameters
 
-| Query        | Type   | Required | Note |
+| Query        | Type   | Required | Description |
 | ------------ | ------ | -------- | --------
 | `wallet`     | string | No       | Wallet Address |
 | `inputMint`  | string | No       | Contract address of the token being sold |
@@ -359,7 +359,7 @@ curl -X GET "https://jup.ag/api/limit/v1/orderHistory?wallet=TVeKgyTMp3DjwVFRYC9
 | `take`       | number | No       |
 
 ### Example Request
-```js
+```shell
 curl -X GET "https://jup.ag/api/limit/v1/tradeHistory?wallet=TVeKgyTMp3DjwVFRYC9mYcRStRnbRsFExrZDFCKrXnT"
 ```
 ### Response
@@ -423,7 +423,7 @@ curl -X GET "https://jup.ag/api/limit/v1/tradeHistory?wallet=TVeKgyTMp3DjwVFRYC9
   </summary>
 
 ### Parameters
-| Query        | Type   | Required | Note |
+| Query        | Type   | Required | Description |
 | ------------ | ------ | -------- | -------- |
 | `owner`      | string | No       |
 | `feePayer`   | string | No       |

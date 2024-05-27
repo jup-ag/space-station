@@ -88,7 +88,7 @@ const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_
     color: white
   }
 
-  .get {
+.get {
   border: 1px solid #018847;
   background-color: #018847 !important;
 }
