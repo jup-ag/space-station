@@ -88,15 +88,15 @@ const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_
     color: white
   }
 
-  .get {
-    border: 1px solid #1976F2;
-    background-color: #1976F2 !important;
-  }
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
 
-  .post {
-    border: 1px solid #018847;
-    background-color: #018847 !important;
-  }
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
 
   .api-method-path {
     font-size: 14px;
