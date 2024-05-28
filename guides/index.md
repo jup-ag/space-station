@@ -20,7 +20,7 @@ These are user-oriented guides for the Jupiter products suite created by communi
 :::
 
 ## Getting Started
-Hello, curious cat! We're so glad you're here to learn more about using the Jupiter products. These guides were created specifically to get new users up to speed fast and to learn all the intricacies and advanced features of the Jupiter platform. With most things, the best way to get started is to try it out for yourself on [Jup.ag](https://jup.ag).
+Hello, curious cat! We're so glad you're here to learn more about using the Jupiter products. These guides were created to get new users up to speed fast and to explain the settings and advanced features of the Jupiter platform. With most things, the best way to get started is to try it out for yourself on [Jup.ag](https://jup.ag).
 
 Another great resource to review is this [**How does a DEX Aggregator work?**](https://oneel.notion.site/Jupiter-Aggregation-0ef3149cd3bb485b8e118432e6cf8472) explainer on DEX Aggregators by community member @oneel_d
 
