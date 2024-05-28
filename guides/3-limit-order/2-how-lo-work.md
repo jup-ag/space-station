@@ -1,7 +1,7 @@
 ---
 sidebar_label: How Limit Order Works
 title: How Limit Order Works
-Description: Discover how Jupiter powers limit orders on Solana.
+description: Discover how Jupiter powers limit orders on Solana.
 ---
 
 <head>

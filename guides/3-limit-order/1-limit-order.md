@@ -1,7 +1,7 @@
 ---
 sidebar_label: How to Use Limit Order
 title: How to Use Limit Order
-Description: Learn how to place a limit order on Jupiter with this beginners guide.
+description: Learn how to place a limit order on Jupiter with this beginners guide.
 ---
 
 <head>
