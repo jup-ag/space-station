@@ -15,7 +15,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 
 1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
 
-2. **Earn Tab -** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities.
+2. **Earn Tab -** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities (For information on the earn tab and the liquidity used by perpertuals, head over to [JLP](../jlp-pool/jlp)).
 
 3. **Different Perp Markets -** Currently, we only support the three main blue-chip markets: SOL, ETH, and BTC.
 
@@ -30,25 +30,6 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 8. **Leverage (1.1x - 100x) -** Here, users can increase their trading size with leverage ranging from 1.1x to a maximum of 100x.
 
 9. **Order Summary -** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
-
----
-### Earn Tab 
-
-![Perp2](../img/perps2.jpg)
-
-1. **Earn Tab -** The Earn tab is where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
-
-2. **JLP Pool -** The JLP Pool consists of a collection of tokens, including SOL, ETH, WBTC, USDC, and USDT. Each asset has its respective pool size, current and target weightage, and utilization.
-
-    - **Pool Size:** The current size of the pool.
-    - **Current / Target Weightage:** A comparison of the current weightage to the target weightage.
-    - **Utilization:** A measure of how the pool's assets are currently being used.
-
-3. **Total Value Locked (TVL)** - TVL represents the total value of pool assets at their current token prices.
-
-4. **JLP Price & Total Supply -** Here, you can find the current `JLP Price` and `Total Supply` displayed.
-
-5. **Deposit & Withdraw -** This is where users can deposit SPL tokens into the JLP token and withdraw from the JLP token into SPL tokens.
 
 ---
 ### Positions Tab
@@ -86,3 +67,8 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 |**Size**|This column reveals the size of the position that triggered the action or event.|
 |**PnL**|The PnL column shows the Profit and Loss associated with the position.|
 |**Txn**|In this column, you can find a transaction link to the action or event that took place on-chain.|
+
+---
+
+
+
