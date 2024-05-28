@@ -30,19 +30,22 @@ Jupiter DCA is a dollar cost averaging solution designed to enable users to auto
 
 ![DCA-1](../img/dca/dca-1.png)
 
-1. **DCA:** The DCA tab in the product navigation menu.
+1. **DCA:** Select the DCA tab in the product navigation menu to arrive at the DCA terminal.
 2. **Input Token Selector:** Select the token you want to spend with your DCA orders.
 3. **Input Field:** The amount of the input tokens that you are looking to spend with your DCA orders.
 4. **Output Token Selector:** The token that you are looking to DCA into or Buy.
 5. **Frequency:** Specify the time freqency for the DCA order with a numerical input and the dropdown selector.
 6. **Duration:** The number of orders you want the DCA to be spread out over. 
 7. **Order Summary:** The details for the current DCA order that you are creating. 
-    From the screenshot example:
-    - Sell - 1 SOL (You are selling SOL)
-    - Get - USDC (You are buying USDC)
-    - Frequency - Days (A trade will take place every day)
-    - Amount per cycle - An estimation of the amount of tokens you will be receiving with each order.
-    - End Date - The final DCA orders will finish by this date.
+    In this example:
+    - Sell Total - 50 USDC (You are selling USDC)
+    - Sell per order - The Sell total divided by the numerical duration entry. ( 50 USDC / 12 )
+    - Receive - JUP (You are buying JUP)
+    - Order Interval - 5 minutes (A trade will take place every 5 minutes)
+    - Start Date - The DCA will begin immediately upon submission.
+    - Estimated End Date - The final DCA orders will finish by this date.
+    - Estimated Price Impact Per Order - Estimated impact on the market price of the assets being swapped per DCA trade.
+    - Platform Fee - 0.1% platform fee for DCAs.
 8. **Start DCA:** Click this button to submit the DCA transaction.
 
 ### Active DCAs
@@ -57,14 +60,15 @@ Jupiter DCA is a dollar cost averaging solution designed to enable users to auto
     - Total Deposited - The input amount and token that user selling or swapping from.
     - Total Spent - The progress of the DCA, or the amount spent to swap from.
     - Each Order Size - The average order size for the DCA.
-    - Current Average Price - The average price for each order from input token to output token.
+    - Current Average Price - The average price for the transactions being completed over the DCA.
     - Buying - The output token you are purchasing with the DCA order.
     - Interval - The time interval specified in the Frequency fields.
-    - '# of Orders Left - The number of orders remaining with this DCA request.
+    - '#' of Orders Left - The number of orders remaining with this DCA request.
     - Created - The date and time when the DCA initiated or submitted.
     - Date Ends - The date and time when the DCA will be ending.
-6. **Close and Withdraw:** Use this to cancel and close the DCA, this will halt the progress on the DCA order and withdrawal all funds in the order to your wallet. 
+6. **Close and Withdraw:** Use this to cancel and close the DCA. This will halt the progress on the DCA order and withdrawal all funds in the order to your wallet. 
 
+#### Active DCA Orders
 ![DCA-3](../img/dca/dca-3.png)
 
 1. **Orders:** Where all DCA transactions will display for active orders.
@@ -79,6 +83,7 @@ Jupiter DCA is a dollar cost averaging solution designed to enable users to auto
 3. **Balance Summary:** You can see the balance details of past order here.
 4. **Order Summary:** This shows all of the details of the past order including all of the details outlined above.
 
+#### Past DCA Orders
 ![DCA-5](../img/dca/dca-5.png)
 
 1. **Orders:** All the transactions for your DCA orders are shown here.
