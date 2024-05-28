@@ -12,7 +12,7 @@ title: How to Swap Tokens on Jupiter
 
 ![money_cat](../img/money_cat.png)
 
-*A community guide to swapping on jup.ag, created by community members and maintained by the WWG. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
+*Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44) for their work on v1.*
 
 :::tip Jupiter charges no fees
 There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees which are factored in to the swap calculations. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts.
