@@ -37,7 +37,7 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 #### The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
 
 ## The JLP UI
-![jlp](../../img/jlp-v2.png)
+![jlp](../../img/perps/perps-4.png)
 
 
 1. **Perps Tab -** Where users can go to trade perpetuals or add/remove liquidity from the pool.
