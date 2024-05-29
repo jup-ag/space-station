@@ -11,6 +11,8 @@ description: "Learn how to use Dollar Cost Averaging on Jupiter to get the best 
 
 Jupiter DCA is a dollar cost averaging solution designed to enable users to automate the purchase or sale of any SPL tokens at regular intervals over a specified period of time.
 
+The DCA feature has some very powerful use cases, such as interacting with low liquitity markets, long term accumulation, or consistent profit taking without distrupting the market price too much. Check out this [Explainer Page](https://station.jup.ag/guides/dca/explainer) to learn more about DCA other use cases.
+
 ## Basic DCA User Flow
 
 1. First, navigate to the [Jupiter Website](https://jup.ag/) and then click on the `DCA` icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/dca/
@@ -79,12 +81,12 @@ Jupiter DCA is a dollar cost averaging solution designed to enable users to auto
 ![DCA-4](../img/dca/dca-4.png)
 
 1. **Past DCAs:** Here you will find all your DCA order history, whether they completed or were cancelled.
-2. **Overview:** This tab is the same as above and opens up to show the order and balance summary.
+2. **Overview:** The Overview tab opens up to show the order details and balance summary.
 3. **Balance Summary:** You can see the balance details of past order here.
 4. **Order Summary:** This shows all of the details of the past order including all of the details outlined above.
 
 ### Past DCA Orders
 ![DCA-5](../img/dca/dca-5.png)
 
-1. **Orders:** All the transactions for your DCA orders are shown here.
+1. **Orders:** All the transactions for your DCA order are shown here.
 2. **Trade Summary:** This shows each individual order amount respective to the date and transaction id.
