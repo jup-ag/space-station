@@ -32,6 +32,8 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 
 **Let's go through the Jupiter Settings in more detail below.**
 
+---
+
 ## Jupiter Settings
 
 ![Jup Swap](../img/jup-swap/jup-swap-1.png 'Main jupiter swap screen showing basic user settings and configuration options.')
@@ -90,6 +92,8 @@ This is an advanced setting and should be used with caution.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction.
 
+---
+
 ## Jupiter Swap
 
 ![Jup Swap 7](../img/jup-swap/jup-swap-6.png 'The main jupiter swap user interface, showing a variety of features described below.')
@@ -110,6 +114,8 @@ This is an advanced setting and should be used with caution.
 Clicking on the area marked number 9 from the Swap terminal above will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
 :::
 ![Jup Swap 9](../img/jup-swap/jup-swap-7.png 'The order routing map shows how your tokens swapped through multiple liquidity pools.')
+
+---
 
 ## Swap Details / Price Info
 

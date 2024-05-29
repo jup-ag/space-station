@@ -36,33 +36,33 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 
 #### The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
 
+---
+
 ## The JLP UI
 ![jlp](../../img/perps/perps-4.png)
 
 
-1. **Perps Tab -** Where users can go to trade perpetuals or add/remove liquidity from the pool.
+1. **Earn Tab:** Where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
 
-2. **Earn Tab -** Where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
+2. **APY:** This measure shows the current trajectory of yield from holding the JLP token.
 
-3. **APY -** This measure shows the current trajectory of yield from JLP.
+3. **Trade:** Here a user can Trade, Buy or Sell JLP.
 
-4. **Trade -** Here a user can Trade, Buy or Sell JLP.
+4. **Total Value Locked (TVL):** - `TVL` represents the total value of pool assets at their current token prices.
 
-5. **Token Selector -** The user can choose the token they would like to trade or receive.
+5. **Token Selector:** The user can choose the token they would like to trade or receive.
 
-6. **Estimations and Fees-** The user is shown the estimated fee for trading the token they pick and the estimated JLP to be received.
+6. **Token(List):** The list of tokens currently held in the JLP pool.
 
-7. **Utilization:** A measure of how the pool's assets are currently being used.
+7. **Pool Size:** The current size of each token's pool.
 
-8. **Current / Target Weightage -** A comparison of the current weightage to the target weightage.
+8. **Current / Target Weightage:** A comparison of the current weightage to the target weightage.
 
-9. **Pool Size -** The current size of each token's pool.
+9. **Utilization:** A measure of how the pool's assets are currently being used.
 
-10. **Liquidity Allocation -** The tokens currently held in the pool.
+10. **Estimations and Fees:** The user is shown the estimated fee for trading the token they pick and the estimated JLP to be received.
 
-11. **Total Value Locked (TVL) -** - `TVL` represents the total value of pool assets at their current token prices.
-
-12. **JLP Price & Total Supply -** Here, you can find the current `JLP Price` and `Total Supply` displayed. The Price is obtained by dividing `TVL` by `Total Supply`.
+11. **JLP Price & Total Supply:** Here, you can find the current `JLP Price` and `Total Supply` displayed. The Price is obtained by dividing `TVL` by `Total Supply`.
 
 
 
