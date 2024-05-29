@@ -12,15 +12,15 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
  - Contribute assets or tokens to the Jupiter Liquidity Provider Pool (JLP Pool).
  - JLP tokens represent your share of the pool.
  - Any asset traded on JUP can be used to buy into JLP.
- - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../How-JLP-Works#target-ratio-and-fees)).
- - More on how to get the token in [How To Get JLP](../How-To-Get-JLP).
+ - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../jlp-pool/How-JLP-Works#target-ratio-and-fees)).
+ - More on how to get the token in [How To Get JLP](../jlp-pool/How-To-Get-JLP).
 
 ### Rewards and Earnings:
 
  - Captures 70% of all trading fees, distributed among JLP holders.
  - Forms an Annual Percentage Rate (APR).
  - Higher trading volume generally leads to higher earnings for JLP holders.
- - More on how it works in [How JLP Works](../How-JLP-Works).
+ - More on how it works in [How JLP Works](../jlp-pool/How-JLP-Works).
 
 ### Advantages of the JLP System:
 

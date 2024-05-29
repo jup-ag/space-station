@@ -15,7 +15,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 
 1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
 
-2. **Earn Tab -** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities (For information on the earn tab and the liquidity used by perpertuals, head over to [JLP](../jlp-pool/jlp)).
+2. **Earn Tab -** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities (For information on the earn tab and the liquidity used by perpertuals, head over to [JLP](/guides/perpetual-exchange/jlp-pool/jlp)).
 
 3. **Different Perp Markets -** Currently, we only support the three main blue-chip markets: SOL, ETH, and BTC.
 

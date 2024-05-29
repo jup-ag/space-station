@@ -26,6 +26,6 @@ For a detailed breakdown of swaps checkout [How to Swap](../../Jupiter-swap/swap
 3. An input box will appear at the bottom of the interface with a token selector.
 5. Select the token you'd like to trade for JLP.
 6. Decide the amount you'd like to swap for JLP.
-7. A module will appear at the bottom showing the estimated quantity of JLP and the fees for buying into the pool (More info on these fees here [Target Ratio and Fees](../How-JLP-Works#target-ratio-and-fees))
+7. A module will appear at the bottom showing the estimated quantity of JLP and the fees for buying into the pool (More info on these fees here [Target Ratio and Fees](../jlp-pool/How-JLP-Works#target-ratio-and-fees))
 8. A notification asking for confirmation of the transaction will appear, confirm the transaction.
 9. You will receive a message on the success of the transaction.
