@@ -1,16 +1,13 @@
 ---
 sidebar_label: How Limit Order Works
 title: How Limit Order Works
-description: Discover how Jupiter powers limit orders on Solana.
+Description: Discover how Jupiter powers limit orders on Solana.
 ---
 
 <head>
     <title>How Limit Orders Work on Jupiter: Beginners Guide</title>
     <meta name="twitter:card" content="summary" />
 </head>
-
-
-Jupiter Limit Order provides the easiest way to place limit orders on Solana, offering the widest selection of token pairs and leveraging all the available liquidity across the entire Solana ecosystem. With Jupiter Limit Order, you have the flexibility to buy or sell any token pair according to your specified price limit.
 
 :::info Not an Order Book
 This is not an order book system. The limit order system utilizes a keeper to monitor token prices on-chain and trigger the fulfillment of orders if liquidity is available.

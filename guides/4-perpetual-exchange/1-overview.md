@@ -1,41 +1,37 @@
 ---
-sidebar_label: "Overview"
+sidebar_label: "Perpetual Exchange Overview"
 description: Perpetual Exchange Overview
 ---
 
-# Summary
+# Perpetual Trading Overview
 
 Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, offering up to 100x leverage. Utilizing LP pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With the Jupiter Swap integration, any Solana token can be used to open positions.
 
 The LP pool is also integrated into Jupiter to provide liquidity to the overall Solana ecosystem. Jupiter users can swap using the liquidity from the LP pool.
 
----
-## Overview
+## Perpetual Trading Interface
 ![Perp1](../img/perps/perps-1.png)
 
-1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
-
-2. **Earn Tab -** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities (For information on the earn tab and the liquidity used by perpertuals, head over to [JLP](/guides/jlp/jlp)).
-
-3. **Different Perp Markets -** Currently, we only support the three main blue-chip markets: SOL, ETH, and BTC.
-
-4. **Price Stats -** Here, you can find a quick overview of the current real-time stats, including the current index price, 24-hour price movement, 24-hour highs, and 24-hour lows.
-
-5. **Long/Short -** Choose whether you want to go 'Long' or 'Short' on the respective market.
-
-6. **Token Selector (Input) -** This is the input section where you can select any SPL tokens to use as collateral to enter a position.
-
-7. **Price Chart -** This real-time price chart is generated using Pyth Oracle price data and displayed with the TradingView charting tool.
-
-8. **Leverage (1.1x - 100x) -** Here, users can increase their trading size with leverage ranging from 1.1x to a maximum of 100x.
-
-9. **Order Summary -** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
+1. **Perpetual Trading Tab:** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
+2. **Earn Tab:** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities (For information on the earn tab and the liquidity used by perpertuals, head over to [JLP](/guides/jlp/jlp)).
+3. **Perp Market Selector:** Currently, we only support the three main blue-chip markets: SOL, ETH, and BTC.
+4. **Price Stats:** Here, you can find a quick overview of the current real-time stats, including the current index price, 24-hour price movement, 24-hour highs, and 24-hour lows.
+5. **Long/Short Selector:** Choose whether you want to go 'Long' or 'Short' on the respective market.
+6. **Input Token Selector:** This is the input section where you can select any SPL tokens to use as collateral to enter a position.
+7. **Leverage Slider:** Here, users can increase their trading size with leverage ranging from 1.1x to a maximum of 100x.
+8. **Order Summary -** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
 
 ---
 ## Positions Tab
 ![Perp3](../img/perps/perps-2.png)
 
-1. **Positions Tab -** The Positions tab is where you can view and manage all your current open positions.
+1. **Positions Tab:** The Positions tab is where you can view and manage all your current open positions.
+2. **Net Value Display:** By hovering over the number value of your position you can see the overall position details. This includes the fees being incurred by your trading actions, such as: opening, closing, and borrowing.
+3. **Collateral Management:** You can use the `Edit` Button to add or remove collateral to more closesly manage your positions.
+4. **Add TP / Add SL:** These buttons will allow you to set orders that will automatically execute upon reaching Take Profit or Stop Loss prices.
+5. **Close Order / Share:** This button allows you to immediately close the current position, securing gains or losses at the current market price.
+
+### Additional Descriptions
 
 |Item| Description|
 |---|---|
@@ -49,13 +45,12 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 |**Take Profit**|Take profit is the price set by the user. When the mark price hits this level, it will automatically close the position to lock in and realize gains.|
 |**Stop Loss**|Stop loss is the price set by the user. When the mark price reaches this level, it will automatically close the position to limit losses.|
 
-2. **Close Order / Share -** This button allows you to immediately close the current position, securing gains or losses at the current market price.
 
 ---
-## Trade History Tab
+### Trade History Tab
 ![Perp4](../img/perps/perps-3.png)
 
-**Trade History Tab -** The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
+The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
 
 |Item| Description|
 |---|---|
