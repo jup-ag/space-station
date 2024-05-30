@@ -141,7 +141,7 @@ When this happens, the demand for JLP on the market usually leads to a premium f
 
 You may sell your JLP for the Market Price at any time. If the Market Price is below the Virtual Price, your JLP tokens are redeemed (burned) at the virtual price instead of sold at the market price.
 
-![image](../../img/jlp-TVL.png)
+![image](../img/jlp/jlp-TVL.png)
 
 You can view the current TVL and AUM Limit on the main UI.
 

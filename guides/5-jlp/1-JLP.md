@@ -12,15 +12,15 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
  - Contribute assets or tokens to the Jupiter Liquidity Provider Pool (JLP Pool).
  - JLP tokens represent your share of the pool.
  - Any asset traded on JUP can be used to buy into JLP.
- - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../jlp-pool/How-JLP-Works#target-ratio-and-fees)).
- - More on how to get the token in [How To Get JLP](../jlp-pool/How-To-Get-JLP).
+ - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../jlp/How-JLP-Works#target-ratio-and-fees)).
+ - More on how to get the token in [How To Get JLP](../jlp/How-To-Get-JLP).
 
 ### Rewards and Earnings:
 
  - Captures 70% of all trading fees, distributed among JLP holders.
  - Forms an Annual Percentage Rate (APR).
  - Higher trading volume generally leads to higher earnings for JLP holders.
- - More on how it works in [How JLP Works](../jlp-pool/How-JLP-Works).
+ - More on how it works in [How JLP Works](../jlp/How-JLP-Works).
 
 ### Advantages of the JLP System:
 
@@ -39,7 +39,7 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 ---
 
 ## The JLP UI
-![jlp](../../img/perps/perps-4.png)
+![jlp](../img/jlp/jlp-1.png)
 
 
 1. **Earn Tab:** Where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
@@ -48,7 +48,7 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 
 3. **Trade:** Here a user can Trade, Buy or Sell JLP.
 
-4. **Total Value Locked (TVL):** - `TVL` represents the total value of pool assets at their current token prices.
+4. **Total Value Locked (TVL):** `TVL` represents the total value of pool assets at their current token prices.
 
 5. **Token Selector:** The user can choose the token they would like to trade or receive.
 

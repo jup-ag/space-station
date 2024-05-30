@@ -32,9 +32,9 @@ Join the community and engage with us directly by sharing feedback and ideas in 
 - **Jupiter Swap:** Get a detailed walkthrough on [How to Swap](/guides/jupiter-swap/swap). Read [Swap Tips](/guides/jupiter-swap/swap-tips) to make the best of your swap experience.
 - **Limit Order:** Learn [How to Use Limit Orders](/guides/limit-order/limit-order) and see [How Limit Orders Work](/guides/limit-order/how-lo-work)
 - **DCA:** Learn [How to DCA](/guides/dca/how-to-dca) and understand the best [Use Cases](/guides/dca/explainer) for this product.
-- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview) and how it works with the [JLP Token](/guides/perpetual-exchange/jlp-pool).
-- **General Guides:** Find more general guides related to the Solana ecosystem such as: Creating a New Token, the Jupiter Media Kit, and FAQs about the Jupiter Platform.
-- **Community Contributions:** Community created guides to help you stay secure and verify your on-chain activity. 
+- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview).
+- **JLP Pool:** Learn about the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the the Perpetuals Exchange. 
+- **General Guides:** Find more general guides related to the Solana ecosystem such as: Creating a New Token, the Jupiter Media Kit, Personal Security on Solana and FAQs about the Jupiter Platform.
 
 Happy trading and welcome to the community!
 
