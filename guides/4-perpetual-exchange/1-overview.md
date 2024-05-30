@@ -10,7 +10,7 @@ Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, off
 The LP pool is also integrated into Jupiter to provide liquidity to the overall Solana ecosystem. Jupiter users can swap using the liquidity from the LP pool.
 
 ---
-### Overview
+## Overview
 ![Perp1](../img/perps/perps-1.png)
 
 1. **Trade Tab -** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
@@ -32,7 +32,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 9. **Order Summary -** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
 
 ---
-### Positions Tab
+## Positions Tab
 ![Perp3](../img/perps/perps-2.png)
 
 1. **Positions Tab -** The Positions tab is where you can view and manage all your current open positions.
@@ -52,7 +52,7 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 2. **Close Order / Share -** This button allows you to immediately close the current position, securing gains or losses at the current market price.
 
 ---
-### Trade History Tab
+## Trade History Tab
 ![Perp4](../img/perps/perps-3.png)
 
 **Trade History Tab -** The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
