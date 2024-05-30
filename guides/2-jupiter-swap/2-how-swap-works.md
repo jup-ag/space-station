@@ -1,7 +1,7 @@
 ---
 sidebar_label: How Swap Works
 description: How Swap Works 
-title: Discover how Jupiter powers Swaps on Solana
+title: How the Jupiter Swap Works
 ---
 
 <head>
@@ -9,7 +9,7 @@ title: Discover how Jupiter powers Swaps on Solana
     <meta name="twitter:card" content="summary" />
 </head>
 
-Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. On this page, we will explain the difference between price impact, slippage, and price warning.
+The Jupiter Swap is a decentralized exchange aggregator designed to provide the best rates for swapping SPL tokens on the Solana blockchain. It routes trades through multiple liquidity sources to ensure optimal prices, low slippage, and efficient transaction execution. Users benefit from its seamless interface, deep liquidity, and the ability to perform complex token swaps in a single transaction.
 
 ---
 
@@ -26,7 +26,14 @@ Jupiter offers several information signals to help users make informed trading d
 
 ---
 
-## Price Impact
+## Safety Notifications
+
+:::info UI Notifications 
+Jupiter offers several information signals to help users make informed trading decisions and protect themselves from potential losses. We will explain the difference between price impact, slippage, and price warnings below.
+:::
+
+
+### Price Impact
 
 Price impact refers to the change in an asset's price due to the execution of a trade. This is especially relevant in decentralized exchanges (DEXs) or automated market makers (AMMs) due to their liquidity model.
 
@@ -40,19 +47,19 @@ Be sure to check the minimum amount of destination tokens quoted on the Jupiter 
 
 ![Price Impact](../img/price-impact.png)
 
-## Slippage
+### Slippage
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
 ![Slippage](../img/slippage-setting.png)
 
-## Price Warning
+### Price Warning
 
 Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
 
 ![Price Warning](../img/price-warning.png)
 
-### Additional Safety Confirmation
+#### Additional Safety Confirmation
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
