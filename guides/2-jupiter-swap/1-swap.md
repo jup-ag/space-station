@@ -12,7 +12,7 @@ title: How to Swap Tokens on Jupiter
 
 ![money_cat](../img/money_cat.png)
 
-*A community guide to swapping on jup.ag, created by community members and maintained by the WWG. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
+*Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44) for their work on v1.*
 
 :::tip Jupiter charges no fees
 There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees which are factored in to the swap calculations. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts.
@@ -32,6 +32,8 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 
 **Let's go through the Jupiter Settings in more detail below.**
 
+---
+
 ## Jupiter Settings
 
 ![Jup Swap](../img/jup-swap/jup-swap-1.png 'Main jupiter swap screen showing basic user settings and configuration options.')
@@ -42,7 +44,7 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 4. **Jupiter Global Settings:** to select your default settings like language, Solana explorer and RPC endpoint.
 5. **Connect Wallet:** Connect to your preferred wallet to interact with Jupiter.
 6. **Refresh Quote:** Refresh quote button to quickly update the latest quote for the configured asset swap in the terminal.
-7. **Slippage Settings:** [Slippage settings](./price-impact-slippage-price-warning) configure your acceptable threshold for price change between when you submit a transaction and it executes.
+7. **Slippage Settings:** Slippage settings configure your acceptable threshold for price change between when you submit a transaction and it executes.
 8. **Swap Settings:** These settings will directly impact the routing and pricing of the swaps being performed. Typically, default settings are fine for beginners.
 
 ### Global Settings
@@ -90,6 +92,8 @@ This is an advanced setting and should be used with caution.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction.
 
+---
+
 ## Jupiter Swap
 
 ![Jup Swap 7](../img/jup-swap/jup-swap-6.png 'The main jupiter swap user interface, showing a variety of features described below.')
@@ -111,12 +115,14 @@ Clicking on the area marked number 9 from the Swap terminal above will show you 
 :::
 ![Jup Swap 9](../img/jup-swap/jup-swap-7.png 'The order routing map shows how your tokens swapped through multiple liquidity pools.')
 
+---
+
 ## Swap Details / Price Info
 
 ![Jup Swap 10](../img/jup-swap/jup-swap-8.png 'The collapsable "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
 
 1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
-2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets.
+2. **Price Impact:** Price Impact is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets.
 3. **Minimum Received:** Minimum received takes into account the slippage setting and and market liquidity to compute the minimum amount that the user will receive even with maximum price fluctuations during a successful swap.
 4. **Max Transaction Fee** This is the maximum fee you will pay to execute the quoted transaction. This takes into account your selected fee settings.
 5. **Deposit** If you are transacting assets you have not owned before, Solana may require a small deposit amount to create the ATA account in your wallet to hold that asset. This will only occur with assets you have not owned previously. 
