@@ -29,7 +29,7 @@ Join the community and engage with us directly by sharing feedback and ideas in 
 ---
 
 ## Navigating the Product Guides
-- **Jupiter Swap:** Get a detailed walkthrough on [How to Swap](/guides/jupiter-swap/swap). Read [Swap Tips](/guides/jupiter-swap/swap-tips) to make the best of your swap experience.
+- **Jupiter Swap:** Get a detailed walkthrough on [How to Swap](/guides/jupiter-swap/swap). Read [How Swap Works](/guides/jupiter-swap/how-swap-works) to make the best of your swap experience.
 - **Limit Order:** Learn [How to Use Limit Orders](/guides/limit-order/limit-order) and see [How Limit Orders Work](/guides/limit-order/how-lo-work)
 - **DCA:** Learn [How to DCA](/guides/dca/how-to-dca) and understand the best [Use Cases](/guides/dca/explainer) for this product.
 - **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview).
