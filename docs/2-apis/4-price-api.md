@@ -9,6 +9,34 @@ title: "Price API: Get On-Chain Price For Any Token"
     <meta name="twitter:card" content="summary" />
 </head>
 
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
+
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
 
 Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
 

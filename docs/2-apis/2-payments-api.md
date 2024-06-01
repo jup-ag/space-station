@@ -9,6 +9,34 @@ title: "Payments API: Convert Any Token to USDC"
     <meta name="twitter:card" content="summary" />
 </head>
 
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
+
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
 
 Jupiter's Payments API supports your payments use case. Utilize Jupiter + SolanaPay to pay for anything with any SPL token. With the Jupiter Payments API, you can specify an exact output token amount. The API doesn't just support output token to USDC, but to any SPL token!
 
