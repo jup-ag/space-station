@@ -27,18 +27,32 @@ Go to the [referral dashboard](https://referral.jup.ag/dashboard) to create your
 
 Setting your referral fee with the Jupiter API is simple. You just add in the `platformFeeBps` parameter to the [`GET /quote`](/api-v6/get-quote) endpoint:
 
-**Endpoint:** [`GET /quote`](/api-v6/get-quote)
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
+    </div>
+  </summary>
 
-**URL:** `https://station.jup.ag/api-v6/get-quote`
-
-**Parameters:**
+  **Parameters in use in the below code example:**
 - `inputMint`: The mint address of the input token.
 - `outputMint`: The mint address of the output token.
 - `amount`: The amount of input tokens to be swapped.
 - `slippage`: The maximum allowable slippage for the swap.
 - `platformFeeBps`: Basis points of the fee to be added.
 
-[# 5. Get the route for a swap](/docs/apis/swap-api#5-get-the-route-for-a-swap)
+```shell
+curl -G "https://quote-api.jup.ag/v6/quote" \
+     --data-urlencode "inputMint=So11111111111111111111111111111111111111112" \
+     --data-urlencode "outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" \
+     --data-urlencode "amount=100000000" \
+     --data-urlencode "slippageBps=50" \
+     --data-urlencode "platformFeeBps=20"
+```
+</details>
+
+[See this for a guide on how to get the route for a swap!](/docs/apis/swap-api#5-get-the-route-for-a-swap)
 
 ```js
 // Function to swap SOL to USDC with input 0.1 SOL and 0.5% slippage
@@ -92,18 +106,35 @@ getQuote();
 
 On the [`POST /swap`](/api-v6/post-swap) endpoint, remember to add your `feeAccount` parameter.
 
-**Endpoint:** [`POST /swap`](/api-v6/post-swap)
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://station.jup.ag/v6/swap</p>
+    </div>
+  </summary>
 
-**URL:** `https://station.jup.ag/api-v6/post-swap`
-
-**Parameters:**
+  **Parameters in use in the below code example:**
 - `quoteResponse`: The response object from the `/quote` API.
 - `userPublicKey`: The public key of the user initiating the swap.
 - `wrapAndUnwrapSol`: Auto wrap and unwrap SOL. Default is true.
 - `feeAccount`: The fee account associated with the swap.
 - `platformFeeBps`: Basis points of the fee to be added.
 
-[# 6. Get the serialized transactions to perform the swap](/docs/apis/swap-api#6-get-the-serialized-transactions-to-perform-the-swap)
+```shell
+# Example being constructed in code below
+curl -X POST "https://quote-api.jup.ag/v6/swap" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "quoteResponse": { /* The quote response from the /quote API */ },
+           "userPublicKey": "YourUserPublicKey",
+           "wrapAndUnwrapSol": true,
+           "feeAccount": "YourFeeAccountPublicKey"
+         }'
+```
+</details>
+
+[Guide for getting the serialized transactions to perform the swap](/docs/apis/swap-api#6-get-the-serialized-transactions-to-perform-the-swap)
 
 ```js
 // Function to find the fee account and get serialized transactions for the swap
