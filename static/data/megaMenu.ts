@@ -5,7 +5,7 @@ type LinkGroup = {
 
 export const guidesLinkItems: LinkGroup[] = [
   {
-    heading: 'Products',
+    heading: 'Product Guides',
     children: [
       {
         title: 'Jupiter Swap',
@@ -30,7 +30,7 @@ export const guidesLinkItems: LinkGroup[] = [
     ],
   },
   {
-    heading: 'APIs',
+    heading: 'Additional Topics',
     children: [
       {
         title: 'Personal Security on Solana',
