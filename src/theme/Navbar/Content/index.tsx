@@ -23,7 +23,6 @@ function useNavbarItems() {
 }
 
 function NavbarItems({ items }: { items: NavbarItemConfig[] }): JSX.Element {
-  console.log('🪵 | NavbarItems | items:', items);
   return (
     <>
       {items.map((item, i) => (
@@ -62,7 +61,6 @@ function NavbarContentLayout({
 
 export default function NavbarContent(): JSX.Element {
   const mobileSidebar = useNavbarMobileSidebar();
-  console.log('🪵 | NavbarContent | mobileSidebar:', mobileSidebar);
 
   const location = useLocation();
   const isHomePage = location.pathname === '/';
