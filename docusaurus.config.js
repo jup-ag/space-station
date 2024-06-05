@@ -127,11 +127,33 @@ const config = {
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/guides/perpetual-exchange/overview',
+            from: '/labs/perpetual-exchange/overview',
+          },
+          {
+            to: '/guides/perpetual-exchange/trading',
+            from: '/labs/perpetual-exchange/trading',
+          },
+          {
+            to: '/guides/jlp/JLP',
+            from: '/labs/perpetual-exchange/jlp-pool',
+          },
+          {
+            to: '/guides/jlp/How-JLP-Works',
+            from: '/labs/perpetual-exchange/how-it-works',
+          },
+        ],
+      },
+    ],
     async function myPlugin() {
       return {
         name: "docusaurus-tailwindcss",
         configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
           postcssOptions.plugins.push(require("tailwindcss"));
           postcssOptions.plugins.push(require("autoprefixer"));
           return postcssOptions;
