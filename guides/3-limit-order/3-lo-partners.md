@@ -1,7 +1,7 @@
 ---
 sidebar_label: Partners
 title: Limit Order Partners
-description: Learn about Jupiter's limit order partners including Birdeye and TradingView.
+Description: Learn about Jupiter's limit order partners including Birdeye and TradingView.
 ---
 
 <head>

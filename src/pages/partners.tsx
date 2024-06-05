@@ -166,7 +166,7 @@ const sections = [
       {
         title: 'Backpack',
         logo: backpack,
-        link: 'https://backpack.app/',
+        link: 'https://www.backpack.app/',
       },
       {
         title: 'Frontier Wallet',
