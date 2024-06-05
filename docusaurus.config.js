@@ -136,6 +136,10 @@ const config = {
             from: '/labs/perpetual-exchange/overview',
           },
           {
+            to: '/guides/perpetual-exchange/overview',
+            from: '/labs',
+          },
+          {
             to: '/guides/perpetual-exchange/trading',
             from: '/labs/perpetual-exchange/trading',
           },
