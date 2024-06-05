@@ -12,9 +12,9 @@ title: How to Swap Tokens on Jupiter
 
 ![money_cat](../img/money_cat.png)
 
-*A community guide to swapping on jup.ag, created by community members and maintained by the WWG. Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44)*
+*Special thanks to [@Cryptolasp](https://twitter.com/cryptolasp) [@DucPhuBui1](https://twitter.com/DucPhuBui1) [@Val_chi44](https://twitter.com/Val_chi44) for their work on v1.*
 
-:::tip Jupiter charges no fees.
+:::tip Jupiter charges no fees
 There are no protocol fees on Jupiter.  The only fees are transaction fees and exchange fees which are factored in to the swap calculations. If you see more SOL deducted than what you expect, then, it is probably due to deposits for creating Associated Token Accounts.
 :::
 
@@ -27,22 +27,24 @@ There are no protocol fees on Jupiter.  The only fees are transaction fees and e
 5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](/partners).
 6. Configure additional parameters to help with your trade, including: Transaction Fees, Slippage Settings, and Swap Settings.
 7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be executed.
-8. A notification toast will appear in the lower left corner that will notify user once the transaction has been sent and has completed.
+8. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
 9. You can view your transaction history by clicking the wallet section on the upper right of the site.
 
-### Lets go through the Jupiter Settings in more detail below.
+**Let's go through the Jupiter Settings in more detail below.**
+
+---
 
 ## Jupiter Settings
 
 ![Jup Swap](../img/jup-swap/jup-swap-1.png 'Main jupiter swap screen showing basic user settings and configuration options.')
 
-1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where a user can instantly spot token swap for any supported SPL token.
-2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in your wallet if the order is triggered and filled.
-3. **Global Priority Fee:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is part of Solana features to bid for priority for their transactions in the leader's queue. 
-4. **Global Settings:** Jupiter Global Settings, to select your default settings like language, Solana explorer and RPC endpoint.
+1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab *(the current tab you are in)* where a user can instantly spot swap for any supported SPL token.
+2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in their wallet if the order is triggered and filled.
+3. **Global Priority Fee:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is a Solana feature that allows users to bid for priority for their transactions in the leader's queue. 
+4. **Jupiter Global Settings:** to select your default settings like language, Solana explorer and RPC endpoint.
 5. **Connect Wallet:** Connect to your preferred wallet to interact with Jupiter.
-6. **Refresh quote:** Refresh quote button to quickly update the latest quote for the configured asset swap in the terminal.
-7. **Slippage Settings:** [Slippage settings](./price-impact-slippage-price-warning) configure your acceptable threshold for price change between when you submit a transaction and it executes.
+6. **Refresh Quote:** Refresh quote button to quickly update the latest quote for the configured asset swap in the terminal.
+7. **Slippage Settings:** Slippage settings configure your acceptable threshold for price change between when you submit a transaction and it executes.
 8. **Swap Settings:** These settings will directly impact the routing and pricing of the swaps being performed. Typically, default settings are fine for beginners.
 
 ### Global Settings
@@ -57,13 +59,13 @@ Due to network traffic loads RPC endpoints can get overloaded, which can lead to
 
 ### Transaction Priority Fees
 :::info Transaction Priority Fees
-Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
+Trades submitted through the blockchain are assigned a priority based on the fee bidding process. The higher the transaction fee you set, the higher in the execution queue your transactions will be. During times with increased competition to get transactions through, increasing your fee can help. Use with caution and remember to re-adjust the fee selection afterwards.
 :::
 ![Jup Swap 4](../img/jup-swap/jup-swap-3.png 'Priority fee settings, including Jito tips, fee mode, and priority levels.')
 
-   1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option, a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
+   1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option. Choose from a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
    2. **Priority Level:** Specify the Priority Level for the transactions you are completeing. Must execute transactions falling under the Ultra Priority Level.
-   3. **Fee Mode:** Pick your preferred Fee Mode, either specify a Max Cap for your fee, or an Exact Fee for your transactions.
+   3. **Fee Mode:** Pick your preferred Fee Mode. Either specify a Max Cap for your fee or an Exact Fee for your transactions.
 
 ### Slippage Settings
 ::::info Slippage Settings
@@ -80,7 +82,7 @@ This is an advanced setting and should be used with caution.
 
 ![Jup Swap 3](../img/jup-swap/jup-swap-4.png 'Slippage settings allow you the user to change mode from fixed to Auto and set the percentage.')
 
-   1. **Mode:** Select the slippage mode you want to utilize. Auto slippage will utilize Jupiters internal slippage calculations for the best setting, and Fixed will adhere to your selected slippage rate.
+   1. **Mode:** Select the slippage mode you want to utilize. Auto slippage will utilize Jupiters internal slippage calculations for the best setting. Fixed will adhere to your selected slippage rate.
    2. **Slippage:** Select the Max acceptable slippage rate for your swaps.
 
 ### Swap Settings
@@ -90,33 +92,37 @@ This is an advanced setting and should be used with caution.
    2. **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
    3. **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction.
 
+---
+
 ## Jupiter Swap
 
 ![Jup Swap 7](../img/jup-swap/jup-swap-6.png 'The main jupiter swap user interface, showing a variety of features described below.')
 
-1. **Input Token Wallet balance:** Jupiter detects the input token balance in your wallet.
-2. **Half/ Max amount:** Shortcut buttons to quickly input `Half` or `Max` of the balance amount.
-3. **Input Token / Token to sell:** Token selector to select token to sell or swap from.
-4. **Input Token / Token to sell amount:** Specify the amount of input token to sell or to swap from.
-5. **Input token & Output token switch:** This button switches the input and output token.
-6. **Output Token Wallet balance:** Jupiter detects the output token balance in your wallet.
-7. **Output Token / Token to buy:** Token selector to select token to buy or swap to.
-8. **Output Token / Token to buy amount:** Jupiter computes this quoted output amount from the swap configuration and current on-chain price rates of the assets involved in the route. *(This includes swap fees from all DEXs and AMMs along the route.)*
+1. **Input Token Wallet Balance:** Jupiter detects the input token balance in your wallet.
+2. **Half/ Max Amount:** Shortcut buttons to quickly input `Half` or `Max` of the balance amount.
+3. **Input Token / Token to Sell:** Token selector to select token to sell or swap from.
+4. **Input Token / Token to Sell Amount:** Specify the amount of input token to sell or to swap from.
+5. **Input token & Output Token Switch:** This button switches the input and output token.
+6. **Output Token Wallet Balance:** Jupiter detects the output token balance in your wallet.
+7. **Output Token / Token to Buy:** Token selector to select token to buy or swap to.
+8. **Output Token / Token to Buy Amount:** Jupiter computes this quoted output amount from the swap configuration and current on-chain price rates of the assets involved in the route. *(This includes swap fees from all DEXs and AMMs along the route.)*
 9. **Order Routing:** Order routing shows the markets being routed through and each hop along the path. This can sometimes involve Multi-hop and Split trades to achieve the best results.
 10. **Action - Swap:** Once you have confirmed all the parameters, LFG!
 
 ### Order Routings
 :::info Order Routing
-Clicking on the 9. from the Swap terminal above, will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
+Clicking on the area marked number 9 from the Swap terminal above will show you the exact order routing path for the quoted transaction. You can also see the split trades and all market hops along the route.
 :::
 ![Jup Swap 9](../img/jup-swap/jup-swap-7.png 'The order routing map shows how your tokens swapped through multiple liquidity pools.')
+
+---
 
 ## Swap Details / Price Info
 
 ![Jup Swap 10](../img/jup-swap/jup-swap-8.png 'The collapsable "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
 
-1. **Exchange rate for the selected tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
-2. **Price Impact:** [Price Impact](./price-impact-slippage-price-warning#price-impact) is influenced by the available liquidity to settle the trade, and the larger the trade the larger the price impact on the selected assets.
+1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
+2. **Price Impact:** Price Impact is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets.
 3. **Minimum Received:** Minimum received takes into account the slippage setting and and market liquidity to compute the minimum amount that the user will receive even with maximum price fluctuations during a successful swap.
 4. **Max Transaction Fee** This is the maximum fee you will pay to execute the quoted transaction. This takes into account your selected fee settings.
 5. **Deposit** If you are transacting assets you have not owned before, Solana may require a small deposit amount to create the ATA account in your wallet to hold that asset. This will only occur with assets you have not owned previously. 

@@ -10,6 +10,7 @@ title: "V6 Swap API"
 
 Jupiter API is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
 
+### Swap and Quote API requests
 ### Try it out!
 <details>
   <summary>Click to play video</summary>
@@ -19,10 +20,182 @@ Jupiter API is the easiest way for developers to access liquidity on Solana. Sim
   </video>
 </details>
 
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box post">POST</div>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/swap</p>
+    </div>
+  </summary>
+
+### Request Parameters
+
+| Parameter   | Type     | Required | Description                        |
+|-------------|----------|----------|------------------------------------|
+| `userPublicKey`    | String  | Yes | The user public key.      |
+| `quoteResponse`    | Quote Response | Yes | The object that is returned from the Quote API.          |
+| `wrapAndUnwrapSol`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
+| `useSharedAccounts`    | Boolean  | No     | Default is true. This enables the usage of shared program accounts. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher. |
+| `feeAccount`    | String | No       | Fee token account for the output token, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a `platformFeeBps` in `/quote` and make sure that the feeAccount has been created) |
+| `computeUnitPriceMicroLamports`    | Integer | No       | The compute unit price to prioritize the transaction, the additional fee will be `computeUnitSet (1400000) * computeUnitPriceMicroLamports`.     |
+| `asLegacyTransaction` | Boolean | No | Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large. |
+| `useTokenLedger` | Boolean | No | Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount. |
+| `destinationTokenAccount` | String | No | Public key of the token account that will be used to receive the token out of the swap. If not provided, the user's ATA will be used. If provided, we assume that the token account is already initialized. |
+
+```shell
+# This is only an example of the parameters. You must replace the placeholder keys before the request can work
+curl -X POST "https://quote-api.jup.ag/v6/swap" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "userPublicKey": "YourUserPublicKey",
+           "quoteResponse": {
+             "inAmount": 1000000,
+             "outAmount": 2000000,
+             "swapTransaction": "YourSwapTransaction"
+           },
+           "wrapAndUnwrapSol": true,
+           "useSharedAccounts": true,
+           "feeAccount": "YourFeeAccountPublicKey",
+           "computeUnitPriceMicroLamports": 100,
+           "asLegacyTransaction": false,
+           "useTokenLedger": false,
+           "destinationTokenAccount": "YourDestinationTokenAccountPublicKey"
+         }'
+```
+***Response***
+ <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{
+    "errorCode": "string",
+    "error": "string"
+}
+```
+</details>
+</details>
+
+
+Get the best swap routes for a token trade pair sorted by largest output token amount
+
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
+    </div>
+  </summary>
+
+### Request Parameters
+
+| Parameter   | Type     | Required | Description                        |
+|-------------|----------|----------|------------------------------------|
+| `inputMint` | String | Yes      | Input token mint address           |
+| `outputMint` | String | Yes       | Output token mint address    |
+| `amount`    | Integer  | Yes       | The API takes in <i>amount</i> in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
+| `slippageBps`    | Integer | No       | The slippage % in BPS. If the output token amount exceeds the slippage then the swap transaction will fail. |
+| `swapMode` | String | No | (ExactIn or ExactOut) Defaults to ExactIn. ExactOut is for supporting use cases where you need an exact token amount, like payments. In this case the slippage is on the input token. |
+| `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
+| `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
+| `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
+| `excludeDexes`    | Array | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
+| `maxAccounts` | Integer | No | Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count. |
+
+:::tip Platform Fee
+If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the quote.
+:::
+
+:::tip Amount
+The API takes in amount in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.
+:::
+
 ```shell
 # Copy and paste this into your terminal!
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1' | jq '.outAmount'
 ```
+***Response***
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+```json
+{
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "inAmount": "1000000",
+    "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "outAmount": "166974",
+    "otherAmountThreshold": "166958",
+    "swapMode": "ExactIn",
+    "slippageBps": 1,
+    "platformFee": null,
+    "priceImpactPct": "0",
+    "routePlan": [
+        {
+            "swapInfo": {
+                "ammKey": "5BUwFW4nRbftYTDMbgxykoFWqWHPzahFSNAaaaJtVKsq",
+                "label": "Perps",
+                "inputMint": "So11111111111111111111111111111111111111112",
+                "outputMint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+                "inAmount": "1000000",
+                "outAmount": "4386",
+                "feeAmount": "19",
+                "feeMint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"
+            },
+            "percent": 100
+        },
+        {
+            "swapInfo": {
+                "ammKey": "EtM8dePn8AE2BkbbEr9AHHbcbuNSpi3ELCaJRLAP8FLx",
+                "label": "Meteora DLMM",
+                "inputMint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+                "outputMint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
+                "inAmount": "4386",
+                "outAmount": "284006",
+                "feeAmount": "18",
+                "feeMint": "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"
+            },
+            "percent": 100
+        },
+        {
+            "swapInfo": {
+                "ammKey": "7A772vpSqmT4fDPCBPTZqwPAETay9Pcun6cfpBA3cdzK",
+                "label": "Raydium CLMM",
+                "inputMint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
+                "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+                "inAmount": "284006",
+                "outAmount": "166974",
+                "feeAmount": "121",
+                "feeMint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ"
+            },
+            "percent": 100
+        }
+    ],
+    "contextSlot": 269110546,
+    "timeTaken": 2.561226463
+}
+```
+
+  </details>
+
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{
+    "errorCode": "string",
+    "error": "string"
+}
+```
+</details>
+</details>
+
+ Get the best swap routes for a token trade pair sorted by largest output token amount using the quote api above!
 
 ## V6 API Reference
 
@@ -34,7 +207,7 @@ Learn more about the Jupiter API Documentation at the [OpenAPI documentation](/a
  [OpenAPI Documentation](/api-v6)
 :::
 
-### Guide for V6 Swap API
+### Guide for V6 Swap API (code example)
 
 #### 1. Install required libraries
 
@@ -88,15 +261,15 @@ const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_
     color: white
   }
 
-  .get {
-    border: 1px solid #1976F2;
-    background-color: #1976F2 !important;
-  }
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
 
-  .post {
-    border: 1px solid #018847;
-    background-color: #018847 !important;
-  }
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
 
   .api-method-path {
     font-size: 14px;
@@ -119,38 +292,6 @@ const quoteResponse = await (
 ).json();
 // console.log({ quoteResponse })
 ```
-### Get the best swap routes for a token trade pair sorted by largest output token amount
-<details>
-  <summary>
-    <div>
-      <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
-    </div>
-  </summary>
-
-### Request Parameters
-
-| Parameter   | Type     | Required | Description                        |
-|-------------|----------|----------|------------------------------------|
-| `inputMint` | String | Yes      | Input token mint address           |
-| `outputMint` | String | Yes       | Output token mint address    |
-| `amount`    | Integer  | Yes       | The API takes in <i>amount</i> in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.     |
-| `slippageBps`    | Integer | No       | The slippage % in BPS. If the output token amount exceeds the slippage then the swap transaction will fail. |
-| `swapMode` | String | No | (ExactIn or ExactOut) Defaults to ExactIn. ExactOut is for supporting use cases where you need an exact token amount, like payments. In this case the slippage is on the input token. |
-| `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
-| `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
-| `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
-| `excludeDexes`    | Array | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
-| `maxAccounts` | Integer | No | Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count. |
-</details>
-
-:::tip Platform Fee
-If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the quote.
-:::
-
-:::tip Amount
-The API takes in amount in integer and you have to factor in the decimals for each token by looking up the decimals for that token. For example, USDC has 6 decimals and 1 USDC is 1000000 in integer when passing it in into the API.
-:::
 
 #### 5. Get the serialized transactions to perform the swap
 
@@ -177,29 +318,6 @@ const { swapTransaction } = await (
   })
 ).json();
 ```
-
-<details>
-  <summary>
-    <div>
-      <div className="api-method-box post">POST</div>
-      <p className="api-method-path">https://quote-api.jup.ag/v6/swap</p>
-    </div>
-  </summary>
-
-### Request Parameters
-
-| Parameter   | Type     | Required | Description                        |
-|-------------|----------|----------|------------------------------------|
-| `userPublicKey`    | String  | Yes | The user public key.      |
-| `quoteResponse`    | Quote Response | Yes | The object that is returned from the Quote API.          |
-| `wrapAndUnwrapSol`    | Boolean  | No     | Default is true. If true, will automatically wrap/unwrap SOL. If false, it will use wSOL token account.   |
-| `useSharedAccounts`    | Boolean  | No     | Default is true. This enables the usage of shared program accounts. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher. |
-| `feeAccount`    | String | No       | Fee token account for the output token, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a `platformFeeBps` in `/quote` and make sure that the feeAccount has been created) |
-| `computeUnitPriceMicroLamports`    | Integer | No       | The compute unit price to prioritize the transaction, the additional fee will be `computeUnitSet (1400000) * computeUnitPriceMicroLamports`.     |
-| `asLegacyTransaction` | Boolean | No | Default is false. Request a legacy transaction rather than the default versioned transaction, needs to be paired with a quote using asLegacyTransaction otherwise the transaction might be too large. |
-| `useTokenLedger` | Boolean | No | Default is false. This is useful when the instruction before the swap has a transfer that increases the input token amount. Then, the swap will just use the difference between the token ledger token amount and post token amount. |
-| `destinationTokenAccount` | String | No | Public key of the token account that will be used to receive the token out of the swap. If not provided, the user's ATA will be used. If provided, we assume that the token account is already initialized. |
-</details>
 
 #### 6. Deserialize and sign the transaction
 
@@ -229,6 +347,76 @@ console.log(`https://solscan.io/tx/${txid}`);
 :::info Solana Network Congestion
 Due to the network congestion on Solana, the `sendRawTransaction` method may not be able to help you to land your transaction. You should check out this [`transactionSender`](https://github.com/jup-ag/jupiter-quote-api-node/blob/main/example/utils/transactionSender.ts) file to send transaction.
 :::
+
+<details>
+  <summary>
+    <div>
+      <div><b>Whole code snippet</b></div>
+    </div>
+  </summary>
+
+```js
+import { Connection, Keypair, VersionedTransaction } from '@solana/web3.js';
+import fetch from 'cross-fetch';
+import { Wallet } from '@project-serum/anchor';
+import bs58 from 'bs58';
+
+// It is recommended that you use your own RPC endpoint.
+// This RPC endpoint is only for demonstration purposes so that this example will run.
+const connection = new Connection('https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/');
+
+const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
+
+// Swapping SOL to USDC with input 0.1 SOL and 0.5% slippage
+const quoteResponse = await (
+  await fetch('https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112\
+&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\
+&amount=100000000\
+&slippageBps=50'
+  )
+).json();
+// console.log({ quoteResponse })
+
+// get serialized transactions for the swap
+const { swapTransaction } = await (
+  await fetch('https://quote-api.jup.ag/v6/swap', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+      // user public key to be used for the swap
+      userPublicKey: wallet.publicKey.toString(),
+      // auto wrap and unwrap SOL. default is true
+      wrapAndUnwrapSol: true,
+      // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
+      // feeAccount: "fee_account_public_key"
+    })
+  })
+).json();
+
+// deserialize the transaction
+const swapTransactionBuf = Buffer.from(swapTransaction, 'base64');
+var transaction = VersionedTransaction.deserialize(swapTransactionBuf);
+console.log(transaction);
+
+// sign the transaction
+transaction.sign([wallet.payer]);
+
+// Execute the transaction
+const rawTransaction = transaction.serialize()
+const txid = await connection.sendRawTransaction(rawTransaction, {
+  skipPreflight: true,
+  maxRetries: 2
+});
+await connection.confirmTransaction(txid);
+console.log(`https://solscan.io/tx/${txid}`);
+```
+</details>
+
+
 
 ## Advanced error handling to disable certain AMM from the API
 

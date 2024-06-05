@@ -9,6 +9,34 @@ title: "Payments API: Convert Any Token to USDC"
     <meta name="twitter:card" content="summary" />
 </head>
 
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
+
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
 
 Jupiter's Payments API supports your payments use case. Utilize Jupiter + SolanaPay to pay for anything with any SPL token. With the Jupiter Payments API, you can specify an exact output token amount. The API doesn't just support output token to USDC, but to any SPL token!
 
@@ -25,10 +53,6 @@ First, we need to show Alice how much mSOL she will have to spend for the latte.
 ### 1. Get Quote
 Retrieve a quote for swapping a specific amount of tokens.
 
-**Endpoint:** [`GET /quote`](/api-v6/get-quote)
-
-**URL:** `https://quote-api.jup.ag/v6/quote`
-
 <details>
   <summary>Click to play video</summary>
   <video width="320" height="240" controls>
@@ -36,6 +60,14 @@ Retrieve a quote for swapping a specific amount of tokens.
     Your browser does not support the video tag.
   </video>
 </details>
+
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://quote-api.jup.ag/v6/quote</p>
+    </div>
+  </summary>
 
 ```shell
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=5000000&swapMode=ExactOut&slippageBps=50' | jq '.inAmount, .otherAmountThreshold'
@@ -59,6 +91,16 @@ curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3
 - `autoSlippageCollisionUsdValue`: Custom USD value for calculating slippage impact (optional).
 
 **Response**:
+
+<details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
 ```json
 {
     "inputMint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
@@ -115,6 +157,19 @@ curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3
     "timeTaken": 0.010184745
 }
 ```
+</details>
+
+<details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{
+    "errorCode": "string",
+    "error": "string"
+}
+```
+</details>
+</details>
 
 :::info
 Currently, only Orca Whirlpool, Raydium CLMM, and Raydium CPMM support ExactOut mode. All token pairs may not be available in this mode. To see more price options use ExactIn mode.
@@ -125,12 +180,11 @@ Then Bob creates the transaction with the [`POST /swap`](/api-v6/post-swap) endp
 ### 2. Post Swap
 Returns a transaction that you can use from the quote you get from `GET /quote`.
 
-**Endpoint:** [`POST /swap`](/api-v6/post-swap)
-
-**URL:** `https://quote-api.jup.ag/v6/swap`
+**Try it live in the playground:**
+[`POST https://quote-api.jup.ag/v6/swap`](/api-v6/post-swap)
 
 :::info
-In the example bellow, we assume the associated token account exists on `destinationTokenAccount`.
+In the example below, we assume the associated token account exists on `destinationTokenAccount`.
 :::
 
 ```js
