@@ -15,7 +15,7 @@ import {
 } from './Menu';
 import NavbarItem from '@theme/NavbarItem';
 import { ChevronDown } from 'lucide-react';
-import { docsLinkItems, guidesLinkItems } from '@site/build/data/megaMenu';
+import { docsLinkItems, guidesLinkItems } from '../../../static/data/megaMenu';
 
 const CustomTrigger = React.forwardRef((props, ref) => (
   <span ref={ref} {...props} style={{ cursor: 'pointer', color: 'blue' }}>
