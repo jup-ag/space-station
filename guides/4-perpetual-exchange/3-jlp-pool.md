@@ -4,7 +4,7 @@ title: "JLP Pool"
 description: How to Become Liquidity Provider
 ---
 
-Users can become Liquidity Providers (LPs) by allocating their assets or tokens into the Jupiter Liquidity Provider Pool (JLP Pool) and in return, you will get the JLP token. The JLP pool receives 70% of the fees, and forms an APR for all JLP holders. This APR is collected within each JLP token, whenever someone makes a trade. There is no need to "stake" or "harvest" your yield.
+Users can become Liquidity Providers (LPs) by allocating their assets or tokens into the Jupiter Liquidity Provider Pool (JLP Pool) and in return, you will get the JLP token. The JLP pool receives 75% of the fees, and forms an APR for all JLP holders. This APR is collected within each JLP token, whenever someone makes a trade. There is no need to "stake" or "harvest" your yield.
 
 JLP token is also a SPL token. So, it can be transferred like any SPL tokens. AMM pools can also be set up for trading JLP token as well.
 
@@ -20,9 +20,9 @@ Liquidity providers serve a crucial role as they act as counterparty to traders.
 
 The exchange generates fees and yield in three ways:
 
-- Opening and Closing Fees of Positions
+- Opening and Closing Fees of Positions, either the flat or variable price impact fee.
 - Borrowing Fees of Positions
-- Trading Fees of the Pool
+- Trading Fees of the Pool, for spot assets
 
 The fees are being compounded into the pool hourly.
 
@@ -85,12 +85,15 @@ Transactions that move the token's ratio away from the target incurs additional 
 
 | Action             | Fee                                                  |
 | ------------------ | ---------------------------------------------------- |
-| Opening a Position | 10 BPS                                               |
-| Closing a Position | 10 BPS                                               |
+| Opening a Position | 70 BPS                                               |
+| Closing a Position | 70 BPS                                               |
+| Price Impact Fee   | Variable                                             |
 | Swap Fee           | Between 0 BPS to 200 BPS depending on pool weightage |
 | Borrow Rate        | 1 BPS/hour x token utilization percentage            |
 
-Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.1%.
+Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.07%.
+
+The price impact fee from larger trades are then added. More analytics on this to follow.
 
 The borrow fee, often termed as the hourly borrow fee, is computed as follows:
 
@@ -105,15 +108,16 @@ Swap fee for the pool typically ranges between 0% and 2%.
 To provide an estimated perspective, you can calculate potential revenue by taking Jupiter perpetual exchange's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
 - Total Daily Volume: 50 million
-- Fee Percentage: 0.1%
-- Revenue Share Percentage: 70%
+- Fee Percentage: 0.07%
+- Price Impact Fees: 0.01% average
+- Revenue Share Percentage: 75%
 
 Using these values, the calculation would be as follows:
 
 Total revenue to be shared between JLP pool holders:
 
 ```
-$50M x 0.1% x 70% = $35,000
+$50M x 0.08% x 75% = $30,000
 ```
 
 To determine your specific share or weight in the total JLP pool, use the following formula:
@@ -131,7 +135,7 @@ For example:
 Finally, you can calculate your generated revenue share by multiplying the results of the first and second calculations:
 
 ```
-revenue share you generate = $35,000 x 0.025% = $8.75
+revenue share you generate = $30,000 x 0.025% = $7.50
 ```
 
 Every Monday, at ~ UTC 18:00, the Estimated APY figure is updated with the above calculation, by using the previous week's fees and estimating an APR and APY for users.
