@@ -9,6 +9,35 @@ title: Integrating Jupiter DCA
     <meta name="twitter:card" content="summary" />
 </head>
 
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
+
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
+
 Jupiter Dollar Cost Average (DCA) provides users with the quickest and easiest way to place DCA orders on Solana! DCA allows users to receive tokens directly in their wallet as each order is filled!
 
 This page will serve as a general guide on integrating DCA into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's DCA program will work regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk)

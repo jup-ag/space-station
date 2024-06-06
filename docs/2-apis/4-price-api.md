@@ -9,6 +9,34 @@ title: "Price API: Get On-Chain Price For Any Token"
     <meta name="twitter:card" content="summary" />
 </head>
 
+<style jsx>
+{`
+  .api-method-box {
+    border-radius: 8px;
+    margin: 16px 0;
+    display: inline;
+    padding: 4px;
+    font-weight: 700;
+    margin-right: 8px;
+    font-size: 12px;
+    color: white
+  }
+
+.get {
+  border: 1px solid #018847;
+  background-color: #018847 !important;
+}
+
+.post {
+  border: 1px solid #eaba0c;
+  background-color: #eaba0c !important;
+}
+
+  .api-method-path {
+    font-size: 14px;
+    display: inline;
+  }
+`}</style>
 
 Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
 
@@ -98,33 +126,30 @@ Try the API calls by making simple GET request via your browser or one of the te
   </video>
 </details>
 
-```bash
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://price.jup.ag/v6/price</p>
+    </div>
+  </summary>
+
+```shell
 curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL'
-
-curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
 ```
-
-## Endpoint
-
-**Endpoint:** `https://price.jup.ag/v6/price`
-
-**Query params**
-
-- **ids** **`(*required)`** `(string)`
-    Supports symbol or address of a token. You can also pass in an array of ids to with `,` as separator.
+**Parameters:**
+- `ids (required, string)`: Supports symbol or address of a token. You can also pass in an array of ids to with `,` as separator.
     - Address mode are case-sensitive
         - `mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So`
         - `mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So`,`So11111111111111111111111111111111111111112`
     - Symbol mode are case-sensitive
         - `SOL`, `BTC`, `mSOL`
-- **vsToken** `(string)`
-    Supports symbol or address of a token.
+- `vsToken (string)`:     Supports symbol or address of a token.
     - Defaults to `USDC`
     - Symbol mode are case-sensitive
         - `SOL`, `BTC`, `mSOL`
     - Address mode are case-sensitive
         - `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`
-## Response
 
 **Typings**
 
@@ -134,6 +159,92 @@ curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
 - **vsTokenSymbol (`string`)** - Symbol of vs token
 - **price (`number`)** - Default to 1 unit of the token worth in USDC if vsToken is not specified
 - **timeTaken (`number`)** - API internal compute response time
+
+**_Response_**
+
+<details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+```json
+{
+  "data": {
+    "SOL": {
+      "id": "So11111111111111111111111111111111111111112",
+      "mintSymbol": "SOL",
+      "vsToken": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "vsTokenSymbol": "USDC",
+      "price": 165.827567017
+    }
+  },
+  "timeTaken": 0.0004649519978556782
+}
+```
+:::tip
+You will get an empty response if the token is not found or there is an error in the params!
+:::
+</details>
+
+  <details>
+  <summary><span>&bull; </span><b style={{marginRight: '36px'}}>default</b> <span style={{fontSize: '14px'}}>Error Response</span></summary>
+
+```json
+{
+  "data": {},
+  "timeTaken": 0.00007273000665009022
+}
+```
+
+</details>
+</details>
+
+<details>
+  <summary>
+    <div>
+      <div className="api-method-box get">GET</div>
+      <p className="api-method-path">https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL</p>
+    </div>
+  </summary>
+
+
+```shell
+curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
+```
+**_Response_**
+
+<details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#018847', marginRight: '36px'}}>200: OK</b>
+        Success Response
+      </span>
+    </summary>
+
+    
+```json
+
+{
+    "data": {
+        "SOL": {
+            "id": "So11111111111111111111111111111111111111112",
+            "mintSymbol": "SOL",
+            "vsToken": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+            "vsTokenSymbol": "mSOL",
+            "price": 0.839028001
+        }
+    },
+    "timeTaken": 0.00020902999676764011
+}
+
+```
+</details>
+</details>
 
 ## HTTP Status Codes
 
