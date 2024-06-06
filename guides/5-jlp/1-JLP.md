@@ -17,7 +17,7 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
 
 ### Rewards and Earnings:
 
- - Captures 70% of all trading fees, distributed among JLP holders.
+ - 75% of all perpetual trading fees are deposited into the JLP pool to be distributed among JLP holders (reflected as an increase in the JLP token price).
  - Forms an Annual Percentage Rate (APR).
  - Higher trading volume generally leads to higher earnings for JLP holders.
  - More on how it works in [How JLP Works](../jlp/How-JLP-Works).
@@ -32,7 +32,7 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
 
 Overall, the JLP system offers a user-friendly method for participants to earn passive income while contributing to the liquidity and stability of the trading environment.
 
-**Note**: JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the governance token of the entire Jupiter platform.
+**Note**: JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the governance token of the JUP DAO.
 
 #### The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
 
@@ -42,7 +42,7 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 ![jlp](../img/jlp/jlp-1.png)
 
 
-1. **Earn Tab:** Where users can participate by depositing into the JLP Pool to earn passive fees generated from all trading activities.
+1. **Earn Tab:** Where users can participate by depositing into the JLP Pool to earn passive fees generated from all perpetual trading activities.
 
 2. **APY:** This measure shows the current trajectory of yield from holding the JLP token.
 
