@@ -151,6 +151,14 @@ const config = {
             to: '/guides/jlp/How-JLP-Works',
             from: '/labs/perpetual-exchange/how-it-works',
           },
+          {
+            to: '/guides/jlp/How-JLP-Works',
+            from: '/labs/faq/faq',
+          },
+          {
+            to: '/guides/jlp/How-JLP-Works',
+            from: '/labs/perps-faq',
+          },
         ],
       },
     ],
