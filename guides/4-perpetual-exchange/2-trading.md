@@ -79,7 +79,23 @@ Mark prices are conveniently presented in the same row as the market name _(e.g.
 
 ## Fees
 
-Opening or closing a position on Jupiter Perpetual Exchange incurs a fee equivalent to 0.1% of the position size. You also have to pay an hourly borrow fee as calculated as such:
+There are 3 types of fees on Jupiter Perpetual:
+
+1. A flat 0.07% (7bps) base fee, applied on notional position size.
+2. A price impact fee, simulating the orderbook impact given notional size.
+3. Borrow Fee, paid hourly on open positions, based on notional size.
+
+### Price Impact Fee
+
+The goal of the price impact fee is to simulate the orderbook impact given some notional size, where a smaller trade will incur less in price impact, and a larger trade will incur more price impact.
+
+![Price Impact Fee Graph](price-impact-fee-graph.png)
+
+This adequately compensates JLP holders while also reducing the high flat fee.
+
+Read more from Gauntlet's recommendations: https://www.jupresear.ch/t/jupiter-perpetuals-price-impact-fee-mechanism/17140
+
+### Borrow Fee
 
 ```
 hourly borrow fee = (tokens borrowed / tokens in the pool) x hourly borrow rate x position size
