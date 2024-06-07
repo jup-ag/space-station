@@ -17,7 +17,7 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
 
 ### Rewards and Earnings:
 
- - Captures 70% of all trading fees, distributed among JLP holders.
+ - Captures 75% of all trading fees, distributed among JLP holders.
  - Forms an Annual Percentage Rate (APR).
  - Higher trading volume generally leads to higher earnings for JLP holders.
  - More on how it works in [How JLP Works](../jlp/How-JLP-Works).
