@@ -145,11 +145,19 @@ const config = {
           },
           {
             to: '/guides/jlp/JLP',
-            from: ['/labs/perpetual-exchange/jlp-pool', '/guides/perpetual-exchange/jlp-pool'],
+            from: '/labs/perpetual-exchange/jlp-pool',
           },
           {
             to: '/guides/jlp/How-JLP-Works',
             from: '/labs/perpetual-exchange/how-it-works',
+          },
+          {
+            to: '/guides/jlp/How-JLP-Works',
+            from: '/labs/faq/faq',
+          },
+          {
+            to: '/guides/jlp/How-JLP-Works',
+            from: '/labs/perps-faq',
           },
         ],
       },
