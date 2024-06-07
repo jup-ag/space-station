@@ -24,8 +24,8 @@ Below the `LONG/SHORT` button, review order details, including:
 
 - Entry Price
 - Liquidation Price
-- Trading Fee (0.1% for opening and closing positions)
-- Borrow Fee (calculated hourly based on pool utilization)
+- [Trading Fee](#fees)
+- [Borrow Fee](#borrow-fee) (calculated hourly based on pool utilization)
 - Available Liquidity
 
 While trades incur no price impacts, slippage may occur due to price variations between transaction submission and blockchain confirmation. Slippage, the difference between expected and execution prices, can be customized in the icon at the top right of the trading form.
