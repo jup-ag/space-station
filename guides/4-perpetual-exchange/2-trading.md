@@ -81,7 +81,7 @@ Mark prices are conveniently presented in the same row as the market name _(e.g.
 
 There are 3 types of fees on Jupiter Perpetual:
 
-1. A flat 0.07% (7bps) fee, applied on notional position size.
+1. A flat 0.07% (7bps) base fee, applied on notional position size.
 2. A price impact fee, simulating the orderbook impact given notional size.
 3. Borrow Fee, paid hourly on open positions, based on notional size.
 
