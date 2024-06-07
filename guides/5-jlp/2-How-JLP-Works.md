@@ -55,7 +55,7 @@ Read more research from a community member on how this works. https://skribr.io/
 
 The exchange generates fees and yields in three ways:
 
-- Opening and Closing Fees of Positions, either the flat or variable price impact fee.
+- Opening and Closing Fees of Positions (consisting of the flat and variable price impact fee).
 - Borrowing Fees of Positions
 - Trading Fees of the Pool, for spot assets
 
