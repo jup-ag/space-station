@@ -54,6 +54,10 @@ There is a platform fee of 0.1% for Jupiter VA. This fee is applied at time of o
 
 ---
 
+## Value Averaging Token2022 tokens
+
+You can value average any Token2022 tokens **but not those with transfer tax**. The reason is that tokens with transfer tax involved, are able to tax you when a transaction is made, this means that during every purchase in your VA order, the amount taxed is done on every transaction, which might lead you to a loss.
+
 ## Automatic Transfer of Purchased Tokens on every order
 
 You will receive purchased tokens in your wallet within the same transaction of each order.
