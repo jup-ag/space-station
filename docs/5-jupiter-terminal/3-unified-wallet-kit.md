@@ -9,7 +9,7 @@ title: Jupiter Terminal Docs
     <meta name="twitter:card" content="summary" />
 </head>
 
-<img src="/terminal/demo/terminal-hero.gif" />
+<img src="terminal/unified-wallet-1.png" />
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap flow functionality by linking it in your HTML with just a few lines of code.
 
@@ -44,8 +44,7 @@ pnpm i @jup-ag/wallet-adapter
 
 ### Below is a provided example from the Unified Wallet Kit Repository.
 
-```
-js
+```jsx
 const ExampleBaseOnly = () => {
   return (
     <UnifiedWalletProvider
@@ -77,8 +76,7 @@ export default ExampleBaseOnly;
 This kit also supports the attachment of custom elements to specific wallets
 :::
 
-```
-js
+```jsx
 config={{
   walletAttachments: { 
     'Phantom': {
@@ -89,7 +87,7 @@ config={{
 ```
 
 ## Live Playground
-<image here>
+<img src="terminal/unified-wallet-2.png" />
 
 :::info
 See all of the available features the Unified Wallet Kit provides in real-time at our live playground: https://unified.jup.ag. To see more examples of how the code works view the Unified Github Wallet Kit.
