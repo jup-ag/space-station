@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Unified Wallet Kit"
 description: Explore Jupiter Terminal for seamless DApp integration with a feature-rich API. Start now with easy templates and guides. Visit our demo!
-title: Jupiter Terminal Docs
+title: Unified Wallet Kit
 ---
 
 <head>
@@ -9,17 +9,16 @@ title: Jupiter Terminal Docs
     <meta name="twitter:card" content="summary" />
 </head>
 
-<img src="terminal/unified-wallet-1.png" />
+##  Overview
 
-Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap flow functionality by linking it in your HTML with just a few lines of code.
+The Unified Wallet Kit is an open-source, Swiss Army Knife wallet adapter designed to streamline your development on Solana. This wallet kit is purpose built to help ease the burdens of integrating multiple wallets with seamless UI/UX into your custom program. Make your development process faster and more efficient with Jupiter’s Unified Wallet Kit.
 
-Provided with the code are several templates to get you started and auto generated code snippets.
+The Unified Wallet Kit was created with developers in mind. At Jupiter, we often found ourselves repeating the same setup tasks: creating a notification system for wallets, managing wallet states (connected, disconnected, etc.), and adapting the wallet connector to be mobile-friendly. The Unified Wallet Kit eliminates these redundancies by providing these building blocks in a simple, plug-and-play package. This leaves developers to focus on what matters most—building innovative features for your dApp.
 
 :::tip Unified Wallet Adapter Links
 - Demo: https://unified.jup.ag/
 - Repo: https://github.com/TeamRaccoons/Unified-Wallet-Kit
 :::
-
 
 ## Core Features
 - Compact Bundle: Main ESM bundle is a lightweight 94KB (20KB gzipped).
@@ -30,6 +29,15 @@ Provided with the code are several templates to get you started and auto generat
 - Internationalization: Supports multiple languages including English, Chinese, Vietnamese, French, Japanese, Bahasa Indonesia, and Russian.
 - Theming Options: Choose from light, dark, and Jupiter modes, with more customization options coming soon.
 - New User Onboarding: Simplifies the onboarding process for new users.
+
+![Unified Wallet Kit 1](./unified-wallet-1.jpg)
+
+### Unified Wallet Kit Usage Flow
+1. Adjust the Theme Selector to your desired version.
+2. Select your appropriate Language
+3. Expand the "Show Snippet" box for the wallet configuration you would like in your app and Copy to Clipboard for easy insertion into your app.
+
+![Unified Wallet Kit 2](./unified-wallet-2.jpg)
 
 ## Implementation
 
@@ -87,10 +95,10 @@ config={{
 ```
 
 ## Live Playground
-<img src="terminal/unified-wallet-2.png" />
+
 
 :::info
-See all of the available features the Unified Wallet Kit provides in real-time at our live playground: https://unified.jup.ag. To see more examples of how the code works view the Unified Github Wallet Kit.
+See all of the available features the Unified Wallet Kit provides in real-time at our live playground: https://unified.jup.ag. To see more examples of how the code works view the Unified Github Wallet Kit: https://github.com/TeamRaccoons/Unified-Wallet-Kit.
 :::
 
 ---
