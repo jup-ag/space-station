@@ -76,7 +76,8 @@ export default ExampleBaseOnly;
 This kit also supports the attachment of custom elements to specific wallets
 :::
 
-```js
+```
+js
 config={{
   walletAttachments: { 
     'Phantom': {
