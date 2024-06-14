@@ -44,7 +44,8 @@ pnpm i @jup-ag/wallet-adapter
 
 ### Below is a provided example from the Unified Wallet Kit Repository.
 
-```js
+```
+js
 const ExampleBaseOnly = () => {
   return (
     <UnifiedWalletProvider
