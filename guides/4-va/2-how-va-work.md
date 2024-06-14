@@ -25,12 +25,13 @@ To minimize the predictability of your VA strategy, orders are filled within a r
 ## Order Mechanism
 
 :::info VA Order / Account
-A VA order or account is broken down to many orders. The number of orders depends on the options or iterations you choose. For example, if you choose to VA into SOL with 900 USDC over 3 days, your VA order/account will have around a total of 3 trades/ transactions of around 300 USDC each.
+A VA order or account is broken down to many orders. The number of orders depends on the options or iterations you choose. For example, if you choose to VA into SOL with 900 USDC over 3 days, depending on your portfolio strategy, your VA order/account will defer accordingly to the price action.
 :::
 
 **Scenario with example:**
 
-If you choose to VA into SOL using 1,000 USDC and increase your portfolio value by $100 per month: 
+If you choose to VA into SOL using 1,000 USDC and increase your portfolio value by $100 per month:
+
 - Your first transaction to buy SOL using 100 USDC will take place immediately after the VA order has been confirmed.
 - Your second transaction to buy SOL using USDC will take place approximately 30 days later after the initial transaction.
 - Your next transaction to buy SOL using USDC will take place approximately 30 days after the second order and so on.
@@ -39,7 +40,7 @@ If you choose to VA into SOL using 1,000 USDC and increase your portfolio value 
 If during each buy, the price of SOL drastically changes, this is how value average will execute:
 
 | Month | SOL Price | Total SOL Before | Total Value Before | Target Value | To Spend | To Buy    | Total SOL After | Total Value After |
-| ------|-----------|------------------|--------------------|--------------|----------|-----------|-----------------|------------------ |
+| ----- | --------- | ---------------- | ------------------ | ------------ | -------- | --------- | --------------- | ----------------- |
 | 1     | $100      | 0 SOL            | $0                 | $100         | $100     | 1 SOL     | 1 SOL           | $100              |
 | 2     | $50       | 1 SOL            | $50                | $200         | $150     | 3 SOL     | 4 SOL           | $200              |
 | 3     | $80       | 4 SOL            | $320               | $300         | $0       | 0 SOL     | 4 SOL           | $320              |
@@ -49,8 +50,9 @@ VA executes by calculating predetermined amounts for the total value of the inve
 
 **Fees:**
 There is a platform fee of 0.1% for Jupiter VA. This fee is applied at time of order/ transaction execution. With the previous example:
-- For the first order, instead of receiving 1 SOL, you will receive 1 * (100 - 0.1) % = 0.999 SOL.
-- For the second order, 3 * (100 - 0.1) % = 2.997 SOL, user will receive 2.997 SOL.
+
+- For the first order, instead of receiving 1 SOL, you will receive 1 \* (100 - 0.1) % = 0.999 SOL.
+- For the second order, 3 \* (100 - 0.1) % = 2.997 SOL, user will receive 2.997 SOL.
 
 ---
 
@@ -63,6 +65,7 @@ You can value average any Token2022 tokens **but not those with transfer tax**. 
 You will receive purchased tokens in your wallet within the same transaction of each order.
 
 Using the previous example:
+
 - For the first order, you will receive $100 worth of SOL in your wallet automatically.
 - For the second order, you will receive $150 worth of SOL in your wallet automatically.
 
@@ -98,8 +101,8 @@ Do not close your ATA without first withdrawing the tokens or swapping them for 
 
 - Orders are not placed exactly when it is due.
 - Orders have a +2 ~ 30 seconds variability, which introduces uncertainty and exposure risk to exploiters and eliminates any sort of risk-free return, rendering front-running a highly risky endeavour.
-- Before a transaction is sent to a node, prices are checked and an estimated out-token *(desired token)* amount is pre-calculated.
+- Before a transaction is sent to a node, prices are checked and an estimated out-token _(desired token)_ amount is pre-calculated.
 - In addition to slippage settings, these parameters are included in the transaction and should the out-token amount be less than the expected minimum out-token amount, the transaction would fail.
-    - While this does not prevent MEV front-running, similar to a regular AMM swap, users are guaranteed to receive a minimum amount of out-token
-    - Transactions can be reverted if an inadequate amount of out-token is received. This ensures prices will not slip to a level where it is sufficiently profitable or at-all profitable for potential front-running bots.
+  - While this does not prevent MEV front-running, similar to a regular AMM swap, users are guaranteed to receive a minimum amount of out-token
+  - Transactions can be reverted if an inadequate amount of out-token is received. This ensures prices will not slip to a level where it is sufficiently profitable or at-all profitable for potential front-running bots.
 - The very nature of VA is to split an order into multiple orders over a period of time, this naturally reduces price impact from front-running activities.

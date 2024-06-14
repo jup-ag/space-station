@@ -11,19 +11,19 @@ description: "Learn how to use Value Averaging on Jupiter to get the best price 
 
 Value averaging (VA) is a strategy that works like dollar-cost averaging (DCA). It works similarly by making contributions in a consistent time period but differs by the amount of each contribution. VA focuses on equal growth of the portfolio instead of equal investments.
 
-VA features the ability to react to market volatility and price action, in short, buying more tokens when price is low and buying less tokens when price is high. Check out this [Explainer Page](https://station.jup.ag/guides/va/explainer) to learn more about VA.
+VA features the ability to react to market volatility and price action, in short, buying more tokens when price is low and buying less tokens when price is high. Check out this [Explainer Page](3-explainer.md) to learn more about VA.
 
 ## Basic VA User Flow
 
 1. First, navigate to the [Jupiter Website](https://jup.ag/) and then click on the `VA` icon below the top navigation bar. **Double check** that the URL in your search bar is correct: https://jup.ag/va/
 2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
-3. Set the Amount (Increase Portfolio Value By) and the Duration (Every) for the VA orders.
-**Do note** that the amount is based on how much of the total you want to increase by and not how much each contribution is
-4. Select the token you want to buy and the token you are allocating (Max Budget) on the VA terminal.
+3. Set the Amount _(Increase Portfolio Value By)_ and the Duration _(Every)_ for the VA orders.
+   **Do note** that the amount is based on how much of the total you want to increase by and not how much each contribution is
+4. Select the token you want to buy and the token you are allocating _(Max Budget)_ on the VA terminal.
 5. Select between to Start Now or place the order in the future through Start At.
 6. Select between to auto receive the bought tokens in your account or manually claim it.
 7. Double check the order Summary details and if things look good, click the `Place Order` button.
-8. Confirm the wallet notification and the VA order will be submitted to the system. 
+8. Confirm the wallet notification and the VA order will be submitted to the system.
 9. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
 10. Your new VA order will populate the Active VAs section below the Terminal once it is confirmed and the UI updates.
 11. You can expand the Active VAs and inspect the progress of each VA, or view previously completed VAs in Past VAs.
@@ -43,7 +43,7 @@ VA features the ability to react to market volatility and price action, in short
 5. **Input Token Selector:** Select the token you want to allocate or spend in your VA order.
 6. **Input Field:** Enter the amount of the input tokens you want to allocate or spend in your VA order.
 7. **Start Date:** Select between to start your VA order now or in the future.
-8. **Receive Method:** Select between to automatically receive in your account or manually claim it  after every buy.
+8. **Receive Method:** Select between to automatically receive in your account or manually claim it after every buy.
 9. **Backtest Result Summary:** A summary is provided based on your inputs and historical data to calculate how much you would have spent and earned in a period.
 10. **Backtest Result Values:** A breakdown of the backtest result summary:
     - Average Price - The average price of bought tokens across the period.
@@ -70,25 +70,26 @@ VA features the ability to react to market volatility and price action, in short
 2. **Individual VA Orders:** On-going VAs with your current input token value and a PnL value.
 3. **Order Overview:** To see the VA order details, expand one of your on-going VA orders and review the Overview Details.
 4. **Order Summary:** A quick overview of the VA order:
-    - Spent - The total amount of input tokens (with USDC value) spent.
-    - Bought - The total amount of output tokens bought.
-    - Average Buying Price - The average price of bought tokens.
-    - Current Token Price - The current token price of the output token.
-    - PnL - The amount of Profit of Loss based on the difference between total spent and Current Token Price multiplied by total bought tokens.
+   - Spent - The total amount of input tokens (with USDC value) spent.
+   - Bought - The total amount of output tokens bought.
+   - Average Buying Price - The average price of bought tokens.
+   - Current Token Price - The current token price of the output token.
+   - PnL - The amount of Profit of Loss based on the difference between total spent and Current Token Price multiplied by total bought tokens.
 5. **Order Breakdown:** A breakdown of the VA order:
-    - Buying - The output token you are buying with the VA order.
-    - Interval - The time interval specified in the Duration fields.
-    - Created At - The date and time when the VA was submitted.
-    - Next Order At - The date and time of the next order to be executed.
-    - Estimated $ Next Buy - The estimated price at which the next buy will be valued in USD.
-    - Total Deposited - The input amount and token that you are selling from.
-    - Amount Withdrawn - The amount of input or output tokens withdrawn from the order.
-    - Value Balance - The amount of input or output tokens currently in the order.
+   - Buying - The output token you are buying with the VA order.
+   - Interval - The time interval specified in the Duration fields.
+   - Created At - The date and time when the VA was submitted.
+   - Next Order At - The date and time of the next order to be executed.
+   - Estimated $ Next Buy - The estimated price at which the next buy will be valued in USD.
+   - Total Deposited - The input amount and token that you are selling from.
+   - Amount Withdrawn - The amount of input or output tokens withdrawn from the order.
+   - Value Balance - The amount of input or output tokens currently in the order.
 6. **Deposit:** Use this to deposit or allocate more input tokens to continue value averaging.
 7. **Withdraw:** Use this to withdraw either the input (reduce order size) or output (claim the amount bought) tokens currently in the order.
 8. **Close and Withdraw:** Use this to cancel and close the VA order. This will halt the progress on the VA order and withdrawal all funds in the order to your account.
 
 ### Active VA Orders
+
 ![VA-3](../img/va/va-3.png)
 
 1. **Orders:** Where all VA transactions will display for active orders.
@@ -106,6 +107,7 @@ VA features the ability to react to market volatility and price action, in short
 4. **Order Breakdown:** This shows all of the details of the past order including all of the details outlined above.
 
 ### Past VA Orders
+
 ![VA-5](../img/va/va-5.png)
 
 1. **Orders:** All the transactions for your VA order are shown here.
