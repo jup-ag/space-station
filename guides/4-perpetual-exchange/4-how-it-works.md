@@ -62,8 +62,6 @@ The maximum allowed leverage is 200x.
 
 Positions where the trader's collateral less fees and less unrealized losses is less than 0.5% of the position size will be liquidated.
 
-Extra fund from position closure will be returned to the trader automatically.
-
 ### Oracle
 
 Jupiter Perps always use Pyth oracles on the trading prices and chart data. However, there are 2 types of Pyth oracles, the `mainnet-beta` oracle and the `pythnet` oracle.
