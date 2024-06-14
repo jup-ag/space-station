@@ -58,9 +58,11 @@ You can close a position by clicking on the `Close` button in the position row.
 You can set take-profit and stop-loss trigger orders by selecting the `Add TP` or `Add SL` button in the position row.
 
 An active Associate Token Account (ATA) is needed for TP/SL to be triggered and executed:
-- ETH ATA for ETH-Long;
-- wBTC ATA for wBTC-Long;
-- USDC or USDT ATA for ALL Short positions.
+- ETH ATA for ETH-Long
+- wBTC ATA for wBTC-Long
+- USDC or USDT ATA for ALL Short positions
+
+An ATA will be automatically created for you when you create a TP/SL, please note that the TP/SL will not be triggered if you close the respective ATA needed.
 
 Once you have created a trigger order, it will be displayed in your position's row under the `Take Profit` and `Stop Loss` columns. You have the flexibility to edit the order and adjust the trigger price as needed.
 
