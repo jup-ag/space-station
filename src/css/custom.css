@@ -82,7 +82,6 @@
   @apply font-bold text-[18px];
   font-weight: bold;
   font-size: 18px;
-  color: #19232d;
   display: none;
 }
 
@@ -106,13 +105,26 @@
   .navbar__title {
     display: block;
   }
+
+/* These styles are what was breaking dark mode */
+@media  (prefers-color-scheme: light) {
   .navbar__item.navbar__link {
-    @apply text-sm font-semibold text-[#304256]/40 hover:text-[#304256] hover:no-underline;
-    margin-right: 16px;
-  }
+      @apply text-sm font-semibold text-[#304256]/40 hover:text-[#304256] hover:no-underline;
+    }
+
   .navbar__item.navbar__link.navbar__link--active {
     @apply text-[#304256];
+    }
+
+  .navbar__title {
+    color: #19232d;
+}
   }
+
+  .navbar__item.navbar__link {
+    margin-right: 16px;
+  }
+
   .navbar__items--right .navbar__item {
     padding: 0;
   }
