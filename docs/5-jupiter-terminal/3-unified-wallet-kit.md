@@ -98,7 +98,7 @@ config={{
 
 
 :::info
-See all of the available features the Unified Wallet Kit provides in real-time at our live playground: https://unified.jup.ag. To see more examples of how the code works view the Unified Github Wallet Kit: https://github.com/TeamRaccoons/Unified-Wallet-Kit.
+See all of the available features the Unified Wallet Kit provides in real-time at our [live playground](https://unified.jup.ag). To see more examples of how the code works view the [Unified Github Wallet Kit](https://github.com/TeamRaccoons/Unified-Wallet-Kit).
 :::
 
 ---
