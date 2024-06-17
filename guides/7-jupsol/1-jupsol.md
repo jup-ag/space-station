@@ -19,13 +19,9 @@ SOL that’s deposited into JupSOL is staked. The staking rewards from that SOL 
 
 JupSOL earns staking yields and MEV kickbacks from Jupiter’s validator, and has no fees.
 
-<<<<<<< HEAD
 ![jupSOL](../img/jupsol/jupSOL-1.png)
 
-Additionally, the Jupiter team will be delegating 100K SOL to the Jupiter validator, and using the yields to enhance the APY of JupSOL to reward Jupiter’s users. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
-=======
 Additionally, the Jupiter team will be delegating 100K SOL to the Jupiter validator. They will use the yield from the SOL to enhance the APY of JupSOL. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
->>>>>>> f4e3b1ed943f7915950323287c313d2ec7eb7045
 
 For Example:
 - When the JupSOL validator pool was launched, 1 JupSOL = 1 SOL. 
