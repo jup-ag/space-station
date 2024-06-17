@@ -27,6 +27,10 @@ export const guidesLinkItems: LinkGroup[] = [
         title: 'JLP Pool',
         href: '/guides/jlp/JLP',
       },
+      {
+        title: 'JupSOL',
+        href: '/guides/jupsol/jupsol',
+      },
     ],
   },
   {
@@ -142,6 +146,10 @@ export const docsLinkItems: LinkGroup[] = [
       {
         title: 'Terminal Walkthrough',
         href: '/docs/jupiter-terminal/terminal-integration-guide',
+      },
+      {
+        title:  'Unified Wallet Kit',
+        href: '/docs/jupiter-terminal/unified-wallet-kit',
       },
     ],
   },

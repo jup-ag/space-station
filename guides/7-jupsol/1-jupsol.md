@@ -37,7 +37,9 @@ JupSOL has the following fees:
 - 0.1% SOL deposit fee
 - 0% withdrawal fee
 
-We charge a small SOL deposit fee to prevent an arbitrage attack on the pool.
+:::info Arbitrage Protection
+Jupiter charges a small SOL deposit fee to prevent an arbitrage attack on the pool.
+:::
 
 ## Why should I buy and hold JupSOL?
 
