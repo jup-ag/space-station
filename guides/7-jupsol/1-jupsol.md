@@ -47,7 +47,7 @@ Jupiter charges a small SOL deposit fee to prevent an arbitrage attack on the po
 
 ### JupSOL Security
 
-JupSOL is powered by the SPL stake pool program. The SPL stake pool program is one of the safest programs in the world. It has been audited multiple times and is used by the largest stake pools like jitoSOL and bSOL, and has secured more than $1B of staked SOL for years without any issues.
+JupSOL is powered by the SPL stake pool program. The SPL stake pool program is one of the safest programs in the world. It has been [audited multiple times](https://learn.sanctum.so/docs/security/audits) and is used by the largest stake pools like jitoSOL and bSOL, and has secured more than $1B of staked SOL for years without any issues.
 
 The program authority is secured by a multisig that includes, among others, members from Sanctum, Jupiter, Mango, marginfi and Jito. Any changes to the program will have to be approved by a majority vote from this multisig. No single party can unilaterally change the program. We plan to significantly grow the size of the multisig and eventually freeze the program.
 
