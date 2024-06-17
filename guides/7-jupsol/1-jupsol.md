@@ -18,7 +18,16 @@ SOL that’s deposited into JupSOL is staked. The staking rewards from that SOL 
 
 JupSOL earns staking yields and MEV kickbacks from Jupiter’s validator, and has no fees.
 
+![jupSOL](../img/jupsol/jupSOL-1.png)
+
 Additionally, the Jupiter team will be delegating 100K SOL to the Jupiter validator, and using the yields to enhance the APY of JupSOL to reward Jupiter’s users. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
+
+For Example:
+- When the JupSOL validator pool was launched, 1 JupSOL = 1 SOL. 
+- Assuming a 10% APR (inclusive of all rewards) and a Solana epoch time of ~2 days that equates to ~0.000547945 SOL rewards per epoch.
+- At the end of one epoch, 1 JupSOL = ~1.000547945 SOL. 
+- At the end of two epochs, 1 JupSOL = ~1.001096191 SOL.
+- And at the end of one year, 1 JupSOL = ~1.105163349 SOL due to compounding rewards.
 
 ## JupSOL Fees
 - 0% management fee
