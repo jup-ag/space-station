@@ -7,6 +7,7 @@ title: "JupSOL Overview"
 # JupSOL Liquid Staking Token
 
 JupSOL represents staked Solana (SOL) tokens with Jupiter’s validator, which is hosted and managed by Triton. Jupiter passes all validator rewards collected and 100% of MEV (Maximal Extractable Value) along to stakers for maximum yield. The JupSOL token is issued through Sanctum.
+JupSOL represents staked Solana (SOL) tokens with Jupiter’s validator, which is hosted and managed by Triton. Jupiter passes all validator rewards collected to stakers including 100% of MEV (Maximal Extractable Value) to stakers for maximum yield. The JupSOL token is issued through Sanctum.
 
 Review the official JupSOL Announcement forum post [Here](https://www.jupresear.ch/t/jupsol-jupiter-staked-sol/14666).
 
@@ -18,9 +19,13 @@ SOL that’s deposited into JupSOL is staked. The staking rewards from that SOL 
 
 JupSOL earns staking yields and MEV kickbacks from Jupiter’s validator, and has no fees.
 
+<<<<<<< HEAD
 ![jupSOL](../img/jupsol/jupSOL-1.png)
 
 Additionally, the Jupiter team will be delegating 100K SOL to the Jupiter validator, and using the yields to enhance the APY of JupSOL to reward Jupiter’s users. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
+=======
+Additionally, the Jupiter team will be delegating 100K SOL to the Jupiter validator. They will use the yield from the SOL to enhance the APY of JupSOL. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
+>>>>>>> f4e3b1ed943f7915950323287c313d2ec7eb7045
 
 For Example:
 - When the JupSOL validator pool was launched, 1 JupSOL = 1 SOL. 
@@ -53,3 +58,4 @@ For more details, check out this post on [Sanctum](https://learn.sanctum.so/docs
 Buying and holding JupSOL helps you earn native staking yields on your SOL; this is the “risk-free” rate of SOL. As an extra incentive to hold JupSOL, Jupiter is returning all validator MEV rewards to JupSOL. This should lead to higher APY than native staking.
 
 When you hold JupSOL you also help Jupiter improve its transaction inclusion rate, helping all Jupiter users to more easily swap, DCA or limit order in congested conditions.
+When you hold JupSOL you also help Jupiter improve its transaction inclusion rate, helping all Jupiter users to more easily swap, DCA, or limit order in congested conditions.
