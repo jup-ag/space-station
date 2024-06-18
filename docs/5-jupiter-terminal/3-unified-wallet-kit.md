@@ -44,7 +44,7 @@ The Unified Wallet Kit eliminates redundancies by providing these building block
 3. Expand the "Show Snippet" box for the wallet configuration you would like in your app and 
 4. Select the `Copy to Clipboard` button for easy code insertion into your app. (Image Below)
 
-![Unified Wallet Kit 2](./unified-wallet-2.jpg)
+![Unified Wallet Kit 2](./unified-wallet-2.png)
 
 ## Implementation
 
