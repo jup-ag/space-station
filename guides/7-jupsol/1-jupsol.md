@@ -53,3 +53,11 @@ Buying and holding JupSOL helps you earn native staking yields on your SOL; this
 
 When you hold JupSOL you also help Jupiter improve its transaction inclusion rate, helping all Jupiter users to more easily swap, DCA or limit order in congested conditions.
 
+### What is a Liquid Staking Token?
+
+Liquid staking lets you participate in DeFi while earning staking yields. Liquid staking solves the [Staking Dilemma](https://learn.sanctum.so/guides/more-about-sanctum/sanctums-value-proposition) by giving you the best of both worlds – it lets you secure the network and use your SOL at the same time.
+
+You can think of staking as putting gold in a vault, and liquid staking as issuing a piece of paper money (an IOU, "I owe you") for the gold in that vault. In the same way that a paper IOU can be redeemed at any time for the gold, a liquid staking token (LST) can be redeemed at any time for staked SOL.
+Unlike natively-staked SOL, this liquid staking token is transferable. It can be used in all of DeFi – borrow-lend, perps, stablecoin issuance, etc.
+
+
