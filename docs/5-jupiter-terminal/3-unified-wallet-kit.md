@@ -13,7 +13,12 @@ title: Unified Wallet Kit
 
 The Unified Wallet Kit is an open-source, Swiss Army Knife wallet adapter designed to streamline your development on Solana. This wallet kit is purpose built to help ease the burdens of integrating multiple wallets with seamless UI/UX into your custom program. Make your development process faster and more efficient with Jupiter’s Unified Wallet Kit.
 
-The Unified Wallet Kit was created with developers in mind. At Jupiter, we often found ourselves repeating the same setup tasks: creating a notification system for wallets, managing wallet states (connected, disconnected, etc.), and adapting the wallet connector to be mobile-friendly. The Unified Wallet Kit eliminates these redundancies by providing these building blocks in a simple, plug-and-play package. This leaves developers to focus on what matters most—building innovative features for your dApp.
+The Unified Wallet Kit will help you reduce repetitive tasks within your development process, including:
+- Creating a wallet notification system
+- Managing wallet states (connected, disconnected, etc.)
+- Implementing a mobile-friendly wallet connector 
+
+The Unified Wallet Kit eliminates redundancies by providing these building blocks in a simple, plug-and-play package. This allows developers to focus on what matters most, building innovative features for your dApp.
 
 :::tip Unified Wallet Adapter Links
 - Demo: https://unified.jup.ag/
