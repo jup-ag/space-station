@@ -18,7 +18,7 @@ The Unified Wallet Kit will help you reduce repetitive tasks within your develop
 - Managing wallet states (connected, disconnected, etc.)
 - Implementing a mobile-friendly wallet connector 
 
-The Unified Wallet Kit eliminates redundancies by providing these building blocks in a simple, plug-and-play package. This allows developers to focus on what matters most, building innovative features for your dApp.
+The Unified Wallet Kit eliminates redundancies by providing these building blocks in a simple, plug-and-play package. This allows developers to focus on what matters most: building innovative features for your dApp.
 
 :::tip Unified Wallet Adapter Links
 - Demo: https://unified.jup.ag/
@@ -40,9 +40,8 @@ The Unified Wallet Kit eliminates redundancies by providing these building block
 ### Unified Wallet Kit Usage Flow
 1. Adjust the Theme Selector to your desired version.
 2. Select your appropriate Language
-3. Expand the "Show Snippet" box for the wallet configuration you would like in your app and Copy to Clipboard for easy insertion into your app.
 3. Expand the "Show Snippet" box for the wallet configuration you would like in your app and 
-4. Select the `Copy to Clipboard` button for easy code insertion into your app. (Image Below)
+4. Select the `Copy to Clipboard` button for easy code insertion into your app. (See Image Below)
 
 ![Unified Wallet Kit 2](./unified-wallet-2.png)
 
@@ -55,7 +54,7 @@ Implementing the Unified Wallet Kit is straightforward and efficient. Here's a q
 pnpm i @jup-ag/wallet-adapter
 ```
 
-2. Wrap your app with <UnifiedWalletProvider /> and pass in as little to as many wallets you would like to support.
+2. Wrap your app with `<UnifiedWalletProvider />` and pass in as little to as many wallets you would like to support.
 
 ### An Example from the Unified Wallet Kit Repository
 
