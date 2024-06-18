@@ -55,7 +55,7 @@ pnpm i @jup-ag/wallet-adapter
 
 2. Wrap your app with <UnifiedWalletProvider /> and pass in as little to as many wallets you would like to support.
 
-### Below is a provided example from the Unified Wallet Kit Repository.
+### An Example from the Unified Wallet Kit Repository
 
 ```jsx
 const ExampleBaseOnly = () => {
