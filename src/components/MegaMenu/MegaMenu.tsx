@@ -30,7 +30,7 @@ export function MegaMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger asChild>
             <div className="p-0 mt-2 -mb-1">
-              <a className="navbar__item navbar__link cursor-pointer ">Guide</a>
+              <a className="navbar__item navbar__link cursor-pointer ">Guides</a>
               <ChevronDown
                 className="text-white relative top-[1px] h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                 aria-hidden="true"

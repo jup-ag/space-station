@@ -8,10 +8,6 @@ export const guidesLinkItems: LinkGroup[] = [
     heading: 'Product Guides',
     children: [
       {
-        title: '$JUP Tokenomics',
-        href: '/guides/jup-tokenomics/jup-tokenomics',
-      },
-      {
         title: 'Jupiter Swap',
         href: '/guides/jupiter-swap/swap',
       },
@@ -38,7 +34,7 @@ export const guidesLinkItems: LinkGroup[] = [
     ],
   },
   {
-    heading: 'Additional Topics',
+    heading: 'General Guides',
     children: [
       {
         title: 'Personal Security on Solana',
