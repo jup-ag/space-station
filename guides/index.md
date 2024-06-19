@@ -34,6 +34,7 @@ Join the community and engage with us directly by sharing feedback and ideas in 
 - **DCA:** Learn [How to DCA](/guides/dca/how-to-dca) and understand the best [Use Cases](/guides/dca/explainer) for this product.
 - **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview).
 - **JLP Pool:** Learn about the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the the Perpetuals Exchange. 
+- **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
 - **General Guides:** Find more general guides related to the Solana ecosystem such as: Creating a New Token, the Jupiter Media Kit, Personal Security on Solana and FAQs about the Jupiter Platform.
 
 Happy trading and welcome to the community!
