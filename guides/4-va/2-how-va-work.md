@@ -54,11 +54,19 @@ There is a platform fee of 0.1% for Jupiter VA. This fee is applied at time of o
 - For the first order, instead of receiving 1 SOL, you will receive 1 \* (100 - 0.1) % = 0.999 SOL.
 - For the second order, 3 \* (100 - 0.1) % = 2.997 SOL, user will receive 2.997 SOL.
 
+**Other scenarios:**
+VA may not *always* buy at the same interval. For example, the VA order is set to buy at 8AM every day.
+- If during the second day, the price of the token had increased, at 8AM, the keeper will calculate the value of your portfolio (which should have increased) and if the current portfolio value is more than the target value at this interval, the keeper will not execute at 8AM rather it will continue to retry. When the price of the token drops, and your portfolio does not meet the current target value, at any time, the keeper will execute a buy (with a minimum value of $0.50).
+- If the price of the token increases gradually, and the portfolio meets the first few incremented target value, eventually, the target value should have incremented enough, such that the portfolio needs to buy in order to meet the target value.
+- If the price of the token keeps increasing, and the portfolio keeps meeting the target value at every increment, the portfolio does not need to buy.
+
 ---
 
 ## Value Averaging Token2022 tokens
 
 You can value average any Token2022 tokens **but not those with transfer tax**. The reason is that tokens with transfer tax involved, are able to tax you when a transaction is made, this means that during every purchase in your VA order, the amount taxed is done on every transaction, which might lead you to a loss.
+
+---
 
 ## Automatic Transfer of Purchased Tokens on every order
 
