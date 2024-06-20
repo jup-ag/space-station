@@ -22,7 +22,7 @@ Value Averaging (VA) involves setting a target value for your investment portfol
 Cryptocurrency is a highly volatile market, prices can swing dramatically within short periods. VA helps to mitigate the impact of these fluctuations by adjusting investment amounts based on market performance. When prices drop, you invest more, and when prices rise, you invest less, effectively capitalizing on market volatility.
 
 ### Long term strategy
-Since VA is effective at capitalizing on market volatility, regardless of market conditions, VA can be a good tool to build portfolio and invest consistently based on market conditions. In bear market scenarios, VA can be used to steadily accumulate and contrastingly, VA can be used to take profit during a bull market. VA can be can be more attractive to than using a set contribution schedule is that you are somewhat protected from overpaying when the market is hot. If you avoid overpaying, your long-term returns will be stronger compared to people who invested set amounts no matter the market condition.
+Since VA is effective at capitalizing on market volatility, regardless of market conditions, VA can be a good tool to build portfolio and invest consistently based on market conditions. In bear market scenarios, VA can be used to steadily accumulate and contrastingly, VA can be used to take profit during a bull market. VA can be more attractive to than using a set contribution schedule is that you are somewhat protected from overpaying when the market is hot. If you avoid overpaying, your long-term returns will be stronger compared to people who invested set amounts no matter the market condition.
 
 
 ### Splitting up large orders
