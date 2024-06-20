@@ -13,21 +13,13 @@ The Jupiter Swap is a decentralized exchange aggregator designed to provide the 
 
 ## **Jupiter v3: The Metis Routing Algo**
 
-On Jupiter, swaps are powered by our advanced routing algorithm, Metis, introduced in Jupiter v3.
+On Jupiter, swaps are powered by the advanced routing algorithm, Metis, introduced in Jupiter v3.
 
 Metis is a heavily modified variant of the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) catered for the key requirements of offering best price routing at scale in a very dynamic operational space.
 
-### Metis Routing
-
-Metis enhances our industry-leading aggregator by improving route discovery for all trading pairs, reducing slippage for large trades, and offering scalable solutions in preparation for upcoming Solana upgrades and new DEXs.
-
 Metis is designed to operate seamlessly on Solana’s hyper-fast blocktimes, supported by major improvements to our backend infrastructure. This ensures that trades are executed quickly and efficiently, even under high demand.
 
-In addition to Metis, Jupiter offers several other features to enhance your trading experience. The Dollar-Cost Averaging beta allows for systematic investment strategies, while a new contract eliminates the need for users to maintain intermediate token accounts. We’ve also integrated Limit Orders into our routing system, providing more control over your trades.
-
-The Jupiter space station is another innovation, along with several new features based on user feedback. These upgrades, coming just a few months after v2, demonstrate our commitment to pushing the boundaries of Solana and providing a powerful, user-friendly trading platform.
-
-With these enhancements, Jupiter aims to be a genuine CEX replacement, facilitating the migration to decentralized platforms with ease and efficiency.
+Metis enhances our industry-leading aggregator by improving route discovery for all trading pairs, reducing slippage for large trades, and offering scalable solutions in preparation for upcoming Solana upgrades and new DEXs.
 
 Dive into the details below.
 
