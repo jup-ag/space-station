@@ -16,7 +16,7 @@ SOL that’s deposited into JupSOL is staked. The staking rewards from that SOL 
 
 ### Where does the yield come from?
 
-JupSOL earns staking yields and MEV kickbacks from Jupiter’s validator, and has no fees. Additionally, the Jupiter team has delegated 100K SOL to the Jupiter validator. They will use the yield from that SOL to enhance the APY of JupSOL. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
+JupSOL earns staking yields and MEV kickbacks from Jupiter’s validator, which has no fees. Additionally, the Jupiter team has delegated 100K SOL to the Jupiter validator. They will use the yield from that SOL to enhance the APY of JupSOL. Expect to see higher than average APYs on JupSOL compared to regular LSTs.
 
 ![jupSOL](../img/jupsol/jupSOL-1.png)
 
