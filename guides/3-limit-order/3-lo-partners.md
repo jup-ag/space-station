@@ -9,7 +9,7 @@ description: Learn about Jupiter's limit order partners including Birdeye and Tr
     <meta name="twitter:card" content="summary" />
 </head>
 
-Jupiter's powerful charts data and technology is powered by <b>Birdeye</b> and <b>TradingView</b>.
+Jupiter's powerful charts data and technology are powered by <b>Birdeye</b> and <b>TradingView</b>.
 
 <div style={{ height: 80 }}>
   <a href="https://birdeye.so" target="_blank">
