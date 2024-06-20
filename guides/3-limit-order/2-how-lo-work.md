@@ -9,11 +9,11 @@ Description: Discover how Jupiter powers limit orders on Solana.
     <meta name="twitter:card" content="summary" />
 </head>
 
+Jupiter Limit Order executes your order based on the price you have set by matching it with the available liquidity on-chain across Solana. Once the order is placed, keepers will continuously monitor the liquidity landscape and execute the limit order when the market price reaches your specified limit. 
+
 :::info Not an Order Book
 This is not an order book system. The limit order system utilizes a keeper to monitor token prices on-chain and trigger the fulfillment of orders if liquidity is available.
 :::
-
-Jupiter Limit Order executes your order based on the price you have set by matching it with the available liquidity on-chain across Solana. Once the order is placed, keepers will continuously monitor the liquidity landscape and execute the limit order when the market price reaches your specified limit. 
 
 **Scenario**
 - If a Limit Order is placed to buy 1 $SOL with 10 USDC at a rate of 10 USDC per $SOL.

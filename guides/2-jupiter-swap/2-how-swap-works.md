@@ -11,7 +11,7 @@ title: How the Jupiter Swap Works
 
 The Jupiter Swap is a decentralized exchange aggregator designed to provide the best rates for swapping SPL tokens on the Solana blockchain. It routes trades through multiple liquidity sources to ensure optimal prices, low slippage, and efficient transaction execution. Users benefit from its seamless interface, deep liquidity, and the ability to perform complex token swaps in a single transaction.
 
-## [**Metis**](https://en.wikipedia.org/wiki/Metis_(moon))
+## **Jupiter v3: The Metis Routing Algo**
 
 On Jupiter, swaps are powered by our advanced routing algorithm, Metis, introduced in Jupiter v3.
 
@@ -31,7 +31,7 @@ With these enhancements, Jupiter aims to be a genuine CEX replacement, facilitat
 
 Dive into the details below.
 
-### Key Features
+## Key Features
 
 ### Incremental Route Building
 
@@ -82,17 +82,6 @@ The Token Ledger caters to a wide range of use cases, which include but are not 
 Read more about the Token Ledger:
 https://station.jup.ag/docs/apis/swap-api#using-token-ledger-instruction
 
-## Swap Tips
-
-- **Always double check the token mint address:** Token metadata such as name, symbol, and icon can be faked. The true identity of a token is its mint address.
-  - [Tweet: A gentle reminder to check the mint address of the token you're trading](https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZfuS6tQpvEQ7Pg)
-  - [We provide a "strict" list mode, with a smaller set of validated tokens](/docs/get-your-token-onto-jup)
-- **The quote given is not the final price:** The quote given on a route is based on the current liquidity in the pools. Pool liquidity can go up or down at any time and in some cases, pools may close. An example would be oracle-based Lifinity which may stop accepting swaps after a price movement.
-- **Set a slippage amount to protect yourself:** Slippage is your swap protection if the price diverges too much from the quoted price.
-- **Jupiter cannot guess the final spot price or know what is a reasonable price impact for you**. We encourage checking these before the swap:
-  - Check the Price Impact. *Price impact varies across the AMM and DEXes that Jupiter uses in each route.*
-  - Check against a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or CEX pricing.
-
 ---
 
 ## Safety Notifications
@@ -133,3 +122,16 @@ Price Warning is an additional layer of protection implemented by Jupiter to ale
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
 ![Safety Modal](../img/safety-modal.png)
+
+---
+
+## Swap Tips
+
+- **Always double check the token mint address:** Token metadata such as name, symbol, and icon can be faked. The true identity of a token is its mint address.
+  - [Tweet: A gentle reminder to check the mint address of the token you're trading](https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZfuS6tQpvEQ7Pg)
+  - [We provide a "strict" list mode, with a smaller set of validated tokens](/docs/get-your-token-onto-jup)
+- **The quote given is not the final price:** The quote given on a route is based on the current liquidity in the pools. Pool liquidity can go up or down at any time and in some cases, pools may close. An example would be oracle-based Lifinity which may stop accepting swaps after a price movement.
+- **Set a slippage amount to protect yourself:** Slippage is your swap protection if the price diverges too much from the quoted price.
+- **Jupiter cannot guess the final spot price or know what is a reasonable price impact for you**. We encourage checking these before the swap:
+  - Check the Price Impact. *Price impact varies across the AMM and DEXes that Jupiter uses in each route.*
+  - Check against a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or CEX pricing.
