@@ -21,7 +21,7 @@ export const guidesLinkItems: LinkGroup[] = [
       },
       {
         title: 'VA',
-        href: '/guides/dca/how-to-va',
+        href: '/guides/va/how-to-va',
       },
       {
         title: 'Perpetual Exchange',
