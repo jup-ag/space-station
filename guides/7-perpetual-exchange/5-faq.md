@@ -41,13 +41,13 @@ For **ALL other token**, check `Token Balance Change` tab
 Wallet service providers might not be fully parsing the transactions, so, it is always a better idea to check on-chain. If you still couldn’t locate your fund although it was shown that it’s returned on the explorers, please contact your wallet service provider accordingly.
 :::
 
-### 2. I closed my position with profit and I have not received my fund.
+### 2. I closed my position with profit and I have not received my funds.
 
 You will receive the underlying asset for a LONG-position, i.e. SOL for SOL-Long, ETH for ETH-Long, wBTC for wBTC-Long.
 
 You will receive either USDC or USDT for all SHORT-positions.
 
-#### Perform these steps to check for funds from closed positons.
+#### Perform these steps to check for funds from closed positions.
 
 1. Under `Transaction History` on Jupiter Perpetual Trading, click on the transaction ID of the closed position.
 
