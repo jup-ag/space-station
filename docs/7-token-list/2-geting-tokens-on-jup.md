@@ -24,7 +24,7 @@ We felt that this is a good balance to allow users to trade newer tokens – whi
 - Your token must have at least $250 liquidity on both buy and sell sides.
 - The buy and sell price impact shouldn't be more than 30% as well. This is to prevent single-sided liquidity markets.
 
-Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address [here](https://cache.jup.ag/markets?v=3).
+Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address [here](https://token.jup.ag/strict).
 
 If you have a important situation that requires you to set up a one sided market (eg: on Openbook), reach out in [Discord](https://discord.gg/jup) to discuss options. Note that for UX and safety reasons, this exception will be rarely given.
 

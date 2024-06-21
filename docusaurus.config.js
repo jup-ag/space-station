@@ -195,7 +195,7 @@ const config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: true,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: true,
       },
       navbar: {
         title: "Jupiter Station",
