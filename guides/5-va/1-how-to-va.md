@@ -38,7 +38,7 @@ VA features the ability to react to market volatility and price action, in short
 
 1. **VA:** Select the VA tab in the product navigation menu to arrive at the VA terminal.
 2. **Amount:** Specify the total value where your portfolio will increase by.
-3. **Duration:** Specify the time freqency for the VA order with a numerical input and the dropdown selector.
+3. **Duration:** Specify the time frequency for the VA order with a numerical input and the dropdown selector.
 4. **Output Token Selector:** Select the token that you are looking to buy.
 5. **Input Token Selector:** Select the token you want to allocate or spend in your VA order.
 6. **Input Field:** Enter the amount of the input tokens you want to allocate or spend in your VA order.
@@ -53,7 +53,7 @@ VA features the ability to react to market volatility and price action, in short
     - Current Investment Value - The total value of your bought tokens (output token) at the current price.
     - PnL - The amount of Profit or Loss based on the difference between Total Spent and Current Investment Value.
 11. **Order Details:** A breakdown of each backtest order when hovering over a circle:
-    - Date - The date when the backtest order have bought.
+    - Date - The date when the backtest order was bought.
     - Spent - The amount spent in the specific order.
     - Bought - The amount used to buy in the specific order.
     - Purchased Price - The value of the bought tokens at the specific time.
@@ -67,14 +67,14 @@ VA features the ability to react to market volatility and price action, in short
 ![VA-2](../img/va/va-2.png)
 
 1. **Active VAs:** This tab lists out all of your active VA orders.
-2. **Individual VA Orders:** On-going VAs with your current input token value and a PnL value.
-3. **Order Overview:** To see the VA order details, expand one of your on-going VA orders and review the Overview Details.
+2. **Individual VA Orders:** Ongoing VAs with your current input token value and a PnL value.
+3. **Order Overview:** To see the VA order details, expand one of your ongoing VA orders and review the Overview Details.
 4. **Order Summary:** A quick overview of the VA order:
    - Spent - The total amount of input tokens (with USDC value) spent.
    - Bought - The total amount of output tokens bought.
    - Average Buying Price - The average price of bought tokens.
    - Current Token Price - The current token price of the output token.
-   - PnL - The amount of Profit of Loss based on the difference between total spent and Current Token Price multiplied by total bought tokens.
+   - PnL - The amount of Profit or Loss based on the difference between total spent and Current Token Price multiplied by total bought tokens.
 5. **Order Breakdown:** A breakdown of the VA order:
    - Buying - The output token you are buying with the VA order.
    - Interval - The time interval specified in the Duration fields.
@@ -86,7 +86,7 @@ VA features the ability to react to market volatility and price action, in short
    - Value Balance - The amount of input or output tokens currently in the order.
 6. **Deposit:** Use this to deposit or allocate more input tokens to continue value averaging.
 7. **Withdraw:** Use this to withdraw either the input (reduce order size) or output (claim the amount bought) tokens currently in the order.
-8. **Close and Withdraw:** Use this to cancel and close the VA order. This will halt the progress on the VA order and withdrawal all funds in the order to your account.
+8. **Close and Withdraw:** Use this to cancel and close the VA order. This will halt the progress on the VA order and withdraw all funds in the order to your account.
 
 ### Active VA Orders
 
