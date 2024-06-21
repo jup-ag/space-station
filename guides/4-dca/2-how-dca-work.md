@@ -68,7 +68,7 @@ In the event your desired purchased token is not SOL, auto withdrawal for each o
 - An example:
   1. Say you have a DCA order of 300 $USDC -> $BONK daily over 3 days, and you **close** your wallet's BONK token account before the 2nd trade/ transaction takes place, the 2nd 100 $USDC worth of $BONK will remain in your DCA vault and not be transferred to your wallet automatically.
   1. However, during the 3rd and last trade/ transaction, auto-withdrawal will happen regardless of whether you have an open BONK token account. Based on the example above, even though your BONK tokens did not get transferred to your wallet automatically for your 2nd trade/ transaction, your BONK tokens will be transferred to your wallet on the very last trade - see auto close below for more information.
-  1. Regardless, you can choose to withdraw BONK from your DCA vault at anytime through our UI.
+  1. Regardless, you can choose to withdraw BONK from your DCA vault at any time through our UI.
 
 ---
 
@@ -85,7 +85,7 @@ However, if there are still tokens yet to be transferred to you (ie. if you clos
 This allows the program to transfer the remaining purchased tokens to you. As such, you would only receive 2/3 of the rent incurred to initialise your DCA account. Having said that, this 1/3 rent is not absorbed by any third-party. This rent will remain recoverable by you if you decide to close your ATA that “holds” your purchased token.
 
 :::warning
-Do not close your ATA without first withdrawing the tokens or swapping them for other tokens. Doing so can result in the lost of tokens. This is not unique to Jupiter or Jupiter’s DCA. This has to do with how Solana wallets and accounts work.
+Do not close your ATA without first withdrawing the tokens or swapping them for other tokens. Doing so can result in the loss of tokens. This is not unique to Jupiter or Jupiter’s DCA. This has to do with how Solana wallets and accounts work.
 :::
 
 ---
