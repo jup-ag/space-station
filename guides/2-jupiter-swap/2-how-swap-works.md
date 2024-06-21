@@ -29,7 +29,7 @@ Dive into the details below.
 
 To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
 
-![Metis2](Metis2.png)
+![Metis2](../img/jup-swap/Metis2.png)
 
 ### Combine Route Generation and Quoting
 
@@ -41,13 +41,13 @@ v2 runs fast when the total number of DEXs used is small since Solana limits us 
 
 Metis(v3) is equipped to handle both of these trends, since the algorithm is able to scale to include more DEXs in a route when account lock limits are increased, and can support more DEXs with only a modest increase in running time.
 
-![Metis3](Metis3.png)
+![Metis3](../img/jup-swap/Metis3.png)
 
 ### Performance Improvements
 
 Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These imporivements increase sharply based on the trade size.
 
-![Metis4](Metis4.jpg)
+![Metis4](../img/jup-swap/Metis4.jpg)
 
 ### Token Ledger For Increased Swap Success Rates
 
