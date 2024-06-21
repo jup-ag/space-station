@@ -46,7 +46,7 @@ Global Settings still apply to the Limit Order Functionality, please reference [
 
 ![Limit Order 4](../img/limit-order/limit-order-2.png)
 
-The Open Orders section is where users will see their open submitted order that are in the system and have yet to be filled.
+The Open Orders section is where users will see their open submitted orders that are in the system and have yet to be filled.
 
 1. **Order Info:** This identifies the order token details from TokenA _(Selling)_ to TokenB _(Buying)_ and the amounts for the order.
 2. **Price:** Price is the specified user submitted rate for the limit order - When the on-chain price of the purchase token hits, order will be executed, if there is liquidity available.
