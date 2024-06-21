@@ -20,6 +20,10 @@ export const guidesLinkItems: LinkGroup[] = [
         href: '/guides/dca/how-to-dca',
       },
       {
+        title: 'VA',
+        href: '/guides/dca/how-to-va',
+      },
+      {
         title: 'Perpetual Exchange',
         href: '/guides/perpetual-exchange/overview',
       },
