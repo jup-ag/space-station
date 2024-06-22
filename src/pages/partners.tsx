@@ -45,6 +45,7 @@ const samoyed = '/img/defi/samoyed.svg';
 const hawksight = '/img/defi/hawksight.png';
 const drift = '/img/defi/drift.png';
 const vybe = '/img/defi/vybe.svg';
+const coinhall = '/img/defi/coinhall.svg';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -295,7 +296,12 @@ const sections = [
       {
         title: 'Vybe Network',
         logo: vybe,
-        link: 'https://alpha.vybenetwork.com',
+        link: 'https://alpha.vybenetwork.com'
+      },
+      {
+	title: 'Coinhall',
+	logo: coinhall,
+	link: 'https://coinhall.org'
       },
     ],
   },
