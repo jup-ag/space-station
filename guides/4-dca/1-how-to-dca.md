@@ -11,7 +11,7 @@ description: "Learn how to use Dollar Cost Averaging on Jupiter to get the best 
 
 Jupiter DCA is a dollar cost averaging solution designed to enable users to automate the purchase or sale of any SPL tokens at regular intervals over a specified period of time.
 
-The DCA feature has some very powerful use cases, such as interacting with low liquitity markets, long term accumulation, or consistent profit taking without distrupting the market price too much. Check out this [Explainer Page](https://station.jup.ag/guides/dca/explainer) to learn more about DCA other use cases.
+The DCA feature has some very powerful use cases, such as interacting with low liquidity markets, long term accumulation, or consistent profit taking without disrupting the market price too much. Check out this [Explainer Page](https://station.jup.ag/guides/dca/explainer) to learn more about DCA other use cases.
 
 ## Basic DCA User Flow
 
@@ -38,7 +38,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 2. **Input Token Selector:** Select the token you want to spend/ allocate with your DCA orders.
 3. **Input Field:** Enter the amount of the input tokens that you are looking to spend/ allocate with your DCA orders.
 4. **Output Token Selector:** Select the token that you are looking to DCA into or Buy.
-5. **Frequency:** Specify the time freqency for the DCA orders with a numerical input and the dropdown selector.
+5. **Frequency:** Specify the time frequency for the DCA orders with a numerical input and the dropdown selector.
 6. **Duration:** The number of orders you want the DCA to be spread out over. 
 7. **Order Summary:** Specify the details for the current DCA order that you are creating. 
     In this example:
@@ -57,10 +57,10 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 ![DCA-2](../img/dca/dca-2.png)
 
 1. **Active DCAs:** This tab lists out all of your active DCA orders.
-2. **Individual DCA Orders:** On-going DCAs with a progress bar to indicate how much of the DCA has been executed.
-3. **Order Overview:** To see the DCA order details, expand one of your on-going DCA orders and review the Overview Details.
+2. **Individual DCA Orders:** Ongoing DCAs with a progress bar to indicate how much of the DCA has been executed.
+3. **Order Overview:** To see the DCA order details, expand one of your ongoing DCA orders and review the Overview Details.
 4. **Balance Summary:** This shows the DCA order balance progress. First is the remaining balance of the token you are spending/ allocating. Second is the amount of tokens that have been successfully purchased. Third is the amount of tokens purchased that have been withdrawn.
-5. **Order Summary:** This will show the current on-going DCA order, with information like:
+5. **Order Summary:** This will show the current ongoing DCA order, with information like:
     - Total Deposited - The input amount and token that you are selling or swapping from.
     - Total Spent - The progress of the DCA, or the amount spent to swap from.
     - Each Order Size - The average order size for the DCA.
@@ -70,7 +70,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
     - '#' of Orders Left - The number of orders remaining with this DCA request.
     - Next Order - The date and time of the next order to be executed.
     - Created - The date and time when the DCA was submitted.
-6. **Close and Withdraw:** Use this to cancel and close the DCA. This will halt the progress on the DCA order and withdrawal all funds in the order to your wallet. 
+6. **Close and Withdraw:** Use this to cancel and close the DCA. This will halt the progress on the DCA order and withdraw all funds in the order to your wallet. 
 
 ### Active DCA Orders
 ![DCA-3](../img/dca/dca-3.png)

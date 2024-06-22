@@ -28,10 +28,10 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 1. **Positions Tab:** The Positions tab is where you can view and manage all your current open positions.
 2. **Value Display:** Shows the value of the currently open positions. By hovering over the number value of your position you can see the overall position details. This includes the fees being incurred by your trading actions, such as: opening, closing, and borrowing.
 3. **Size:** Size indicates the current size of your positions factoring in the leverage as well. It's calculated as the initial collateral amount multiplied by the leverage level. 
-4. **Collateral:** This is the initial amount you provided when opening your long or short position. You can use the `Edit` Button to add or remove collateral to more closesly manage your positions.
+4. **Collateral:** This is the initial amount you provided when opening your long or short position. You can use the `Edit` Button to add or remove collateral to more closely manage your positions.
 5. **Entry / Mark Price:** The entry price indicates the price at which the position was opened. The mark price indicates the current market price of the position asset.
 6. **Liquidation Price:** The liquidation price is the threshold at which the mark price reaching this level triggers liquidation. This process is to repay any loan associated with opening the position.
-7. **Take Profit:** Set up a Take Profit order for your position. A take profit order is a conditional sell order set by the user to close a position if it reaches a specified price  level. This is a common way to secure profits on a winning trade at pre-defined price levels. 
+7. **Take Profit:** Set up a Take Profit order for your position. A take profit order is a conditional sell order set by the user to close a position if it reaches a specified price level. This is a common way to secure profits on a winning trade at pre-defined price levels. 
 8. **Stop Loss:** Set up a Stop Loss order for your position. A stop loss order is a conditional sell order set by the user to close a position if it reaches a specified price level. This is a common way to limit losses on trades.
 9. **Close Positions / Share:** Immediately close all positions or individually close positions, securing gains or losses at the current market price.
 
