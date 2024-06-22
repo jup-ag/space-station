@@ -86,7 +86,7 @@ Always pay attention to what is written and if a transaction simulation fails or
 
 ### Understanding URL Structure
 
-Learning to recognise the structure of URLs is very important so that you can avoid fradulent sites. This practice is called typo-squatting and malicious sites will go to great lengths to mimic legitimate sites with the only difference being a single character in the URL.
+Learning to recognise the structure of URLs is very important so that you can avoid fraudulent sites. This practice is called typo-squatting and malicious sites will go to great lengths to mimic legitimate sites with the only difference being a single character in the URL.
 
 **Let’s take a look at an example**
 
@@ -144,4 +144,4 @@ Note, even if you accidentally connect your wallet, As long as you did not sign 
 
 :::
 
-And with that, I wish you all the best on your journey on Solana. It no doubt has one of the best user experience across any blockchains and by following these tips I have shared here, I am confident that you will have a great time here.
+And with that, I wish you all the best on your journey on Solana. It no doubt has one of the best user experience across any blockchain and by following these tips I have shared here, I am confident that you will have a great time here.
