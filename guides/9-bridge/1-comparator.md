@@ -24,7 +24,7 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 
 ## Bridge Comparator UI
 
-![Bridge Comparator UI]()
+![Bridge Comparator UI](../img/bridge/bridge-1.png)
 
 1. The Bridge Comparator tool is found by selecting Solana on the top bar, and Compare on the app selector.
 2. Dropdown selectors to choose the blockchain, the token, and the token amount you are wanting to swap from.
@@ -34,7 +34,7 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 
 ### Available Quotes
 
-![Available Quotes]()
+![Available Quotes](../img/bridge/bridge-2.png)
 
 1. **Bridging App:** The bridging app that is providing the quote.
 2. **Expected Receive:** The expected amount to be received based on the bridging transaction simulation.
