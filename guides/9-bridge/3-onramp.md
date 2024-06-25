@@ -22,7 +22,7 @@ Jupiter will never charge any additional fees for using the Onramp service and O
 
 ## Onramp UI
 
-![Onramp UI]()
+![Onramp UI](../img/bridge/bridge-3.png)
 
 1. **Onramp App Selector:** App selector to navigate to the Onramp tool.
 2. **Options Menu:** Select your language preferences, review the Terms of Usage and Privacy Policy, and find Help & Support here. 
