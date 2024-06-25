@@ -9,20 +9,15 @@ title: How to Use the Bridge Comparator
     <meta name="twitter:card" content="summary" />
 </head>
 
-:::tip
-:::
+The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare and select the most efficient bridge for transferring tokens from other chains to Solana. This bolsters the Jupiter product line by offering an intuitive experience to help bring more capital to Solana in the most efficient ways possible.
 
 ## Basic Bridge Comparator User Flow
 
 1. Starting on the [Bridge Comparator page](https://jup.ag/bridge-compare). 
-2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
-3. Select the tokens that you want to swap from and into with the token selectors.
-4. Enter the input amount of the selected token that you want to swap from.
-5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](/partners).
-6. Configure additional parameters to help with your trade, including: Transaction Fees, Slippage Settings, and Swap Settings.
-7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be executed.
-8. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
-9. You can view your transaction history by clicking the wallet section on the upper right of the site.
+2. Select the token and blockchain that you want to bridge from.
+3. Select the token and blockchain that you want to bridge to.
+4. Review the Available Quotes for the bridge route you are specifying. These will populate underneith the selector section.
+5. Choose the app that best suits your needs for the bridge based on exchange rate and confirmation time then proceed to bridge through that app.
 
 **Let's take a look at the comparator UI below**
 
