@@ -239,7 +239,7 @@ const JupiterProducts = () => {
           </div>
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center">Bridge</div>
+              <div className="text-lg font-bold  text-center">Bridge Comparator</div>
               <a
                 href="https://jup.ag/bridge-compare"
                 target="_blank"
@@ -248,7 +248,7 @@ const JupiterProducts = () => {
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch Bridge</div>
+                <div className="text-xs lg:text-sm">Launch Bridge Comparator</div>
               </a>
               <a
                 href="https://station.jup.ag/guides/bridge/comparator"
