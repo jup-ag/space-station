@@ -9,23 +9,29 @@ title: Onramps to Solana
     <meta name="twitter:card" content="summary" />
 </head>
 
-:::tip
+Jupiter has integrated with Onramper to power a direct Onramp application from dirty fiat directly into the Solana asset of your choosing. 
+
+Onramper is an onramp aggregator, helping users around the world get on-chain quickly and easily with the best prices. Onramp includes the top onramp services (Stripe, Banxa and Topper) to provide the best routing and options based on your region, desired amount and payment preference.
+
+:::info
+Jupiter will never charge any additional fees for using the Onramp service and Onramper is offering a reduced fee promotional period for the first six months. This reduced fee promotional period will end in December 2024.
 :::
 
-## Basic Bridge Comparator User Flow
-
-1. Starting on the [Bridge Comparator page](https://jup.ag/bridge-compare). 
-2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
-3. Select the tokens that you want to swap from and into with the token selectors.
-4. Enter the input amount of the selected token that you want to swap from.
-5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](/partners).
-6. Configure additional parameters to help with your trade, including: Transaction Fees, Slippage Settings, and Swap Settings.
-7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be executed.
-8. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
-9. You can view your transaction history by clicking the wallet section on the upper right of the site.
-
-**Let's take a look at the comparator UI below**
-
+**Lets take a look at the Onramp App below.**
 ---
 
-## Bridge Comparator UI
+## Onramp UI
+
+![Onramp UI]()
+
+1. **Onramp App Selector:** App selector to navigate to the Onramp tool.
+2. **Options Menu:** Select your language preferences, review the Terms of Usage and Privacy Policy, and find Help & Support here. 
+3. **You Spend:** Selector to choose the currency and input the amount you would like to purchase.
+4. **You Get:** Selector to choose the Solana asset and the output amount of that asset you will get for your input purchase amount.
+5. **Payment Processor Selector:** Select your preferred payment processor to complete the Onramp purchase.
+6. **Pay Using:** A dropdown to choose the payment method to use with the purchase. This includes credit, debit, Apple Pay, Google Pay and ACH options.
+7. **Buy Button:** Click this to begin the Onramp purchase transaction.
+
+Once you click `Buy Button` a new tab will open for you to complete the transaction through the payment processors site with the specified inputs above.
+
+
