@@ -14,10 +14,10 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 ## Basic Bridge Comparator User Flow
 
 1. Starting on the [Bridge Comparator page](https://jup.ag/bridge-compare). 
-2. Select the token and blockchain that you want to bridge from.
-3. Select the token and blockchain that you want to bridge to.
-4. The Available Bridge Route Quotes will populate underneith the selectors section.
-5. Evaluate & choose the app that best suits your needs for the bridge based on exchange rate and confirmation time.
+2. Select the blockchain and token that you want to bridge from. Enter the token amount you wish to bridge.
+3. Select the blockchain and token that you want to bridge to.
+4. The Available Bridge Route Quotes will populate underneath the Selector section.
+5. Evaluate & choose the application that best suits your needs for the bridge, based on exchange rate and confirmation time.
 6. Proceed to that application and complete the bridge process.
 
 **Let's take a look at the Comparator UI below**
@@ -42,7 +42,7 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 2. **Expected Receive:** The expected amount to be received based on the bridging transaction simulation.
 3. **Min Receive:** The minimum amount to be received based on the bridging transaction simulation and acceptable price fluctuations.
 4. **Additional Fee:** This section outlines the bridging fees that apply to this bridge route.
-5. **Src. Gas Fee:** This identifies the source chain fee level, based on that networks current transaction activity levels.
+5. **Src. Gas Fee:** This identifies the source chain fee level, based on that network's current transaction activity levels.
 6. **Bridging App Selector:** This selector will take you to the bridging application to complete the transaction.
 
 
