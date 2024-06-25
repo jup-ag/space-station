@@ -85,9 +85,7 @@ const JupiterProducts = () => {
 
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center whitespace-nowrap">
-                Limit Order
-              </div>
+              <div className="text-lg font-bold  text-center whitespace-nowrap">Limit Order</div>
               <a
                 href="https://jup.ag/limit"
                 target="_blank"
@@ -137,7 +135,7 @@ const JupiterProducts = () => {
           </div>
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center">Perps</div>
+              <div className="text-lg font-bold  text-center">Value Average</div>
               <a
                 href="https://jup.ag/perps"
                 target="_blank"
@@ -146,7 +144,7 @@ const JupiterProducts = () => {
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch Perps</div>
+                <div className="text-xs lg:text-sm">Launch Value Average</div>
               </a>
               <a
                 href="https://station.jup.ag/guides/perpetual-exchange/overview"
@@ -165,7 +163,7 @@ const JupiterProducts = () => {
           </div>
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold text-center">Swap</div>
+              <div className="text-lg font-bold text-center">Perps</div>
               <a
                 href="https://jup.ag/swap"
                 target="_blank"
@@ -174,7 +172,7 @@ const JupiterProducts = () => {
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch Swap</div>
+                <div className="text-xs lg:text-sm">Launch Perps</div>
               </a>
               <a
                 href="https://station.jup.ag/guides/jupiter-swap/swap"
