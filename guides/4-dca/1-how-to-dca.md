@@ -1,5 +1,5 @@
 ---
-title: How to use Jupiter DCA
+title: How to Use Jupiter DCA
 sidebar_label: "How to Use DCA"
 description: "Learn how to use Dollar Cost Averaging on Jupiter to get the best price on your trades."
 ---
