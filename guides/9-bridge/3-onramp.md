@@ -14,10 +14,11 @@ Jupiter has integrated with Onramper to power a direct Onramp application from d
 Onramper is an onramp aggregator, helping users around the world get on-chain quickly and easily with the best prices. Onramp includes the top onramp services (Stripe, Banxa and Topper) to provide the best routing and options based on your region, desired amount and payment preference.
 
 :::info
-Jupiter will never charge any additional fees for using the Onramp service and Onramper is offering a reduced fee promotional period for the first six months. This reduced fee promotional period will end in December 2024.
+Jupiter will never charge any additional fees for using the Onramp service and Onramper is offering a reduced fee promotional period for the first six months of the integration. This reduced fee promotional period will end in December 2024.
 :::
 
 **Lets take a look at the Onramp App below.**
+
 ---
 
 ## Onramp UI

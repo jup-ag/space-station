@@ -22,6 +22,8 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 
 **Let's take a look at the Comparator UI below**
 
+---
+
 ## Bridge Comparator UI
 
 ![Bridge Comparator UI](../img/bridge/bridge-1.png)
