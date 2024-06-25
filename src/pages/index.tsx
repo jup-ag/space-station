@@ -1,10 +1,10 @@
-import React, { ReactNode, useEffect, useState } from "react";
-import Link from "@docusaurus/Link";
-import GradientText from "../components/GradientText";
-import Layout from "@theme/Layout";
-import { TweetCardProps } from "react-tweet-card";
-import BrowserOnly from "@docusaurus/BrowserOnly";
-import { cn } from "../utils";
+import React, { ReactNode, useEffect, useState } from 'react';
+import Link from '@docusaurus/Link';
+import GradientText from '../components/GradientText';
+import Layout from '@theme/Layout';
+import { TweetCardProps } from 'react-tweet-card';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import { cn } from '../utils';
 
 const JupiterTopics = () => {
   return (
@@ -64,7 +64,7 @@ const JupiterProducts = () => {
                 href="https://jup.ag/swap"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
@@ -74,7 +74,7 @@ const JupiterProducts = () => {
                 href="https://station.jup.ag/guides/jupiter-swap/swap"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-guide.svg" />
@@ -92,7 +92,7 @@ const JupiterProducts = () => {
                 href="https://jup.ag/limit"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
@@ -102,7 +102,7 @@ const JupiterProducts = () => {
                 href="https://station.jup.ag/guides/limit-order/limit-order"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-guide.svg" />
@@ -117,7 +117,7 @@ const JupiterProducts = () => {
                 href="https://jup.ag/dca"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
@@ -127,7 +127,7 @@ const JupiterProducts = () => {
                 href="https://station.jup.ag/guides/dca/how-to-dca"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-guide.svg" />
@@ -142,7 +142,7 @@ const JupiterProducts = () => {
                 href="https://jup.ag/perps"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
@@ -152,7 +152,113 @@ const JupiterProducts = () => {
                 href="https://station.jup.ag/guides/perpetual-exchange/overview"
                 target="_blank"
                 className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7111a82941aa614d6513ab0b6fd9fe5fafe5d1a46c07d49684acb29ccdb98c52?"
+                  className="my-auto w-4 aspect-square"
+                />
+                <div className="text-xs lg:text-sm">User Guide</div>
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col flex-1">
+            <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
+              <div className="text-lg font-bold text-center">Swap</div>
+              <a
+                href="https://jup.ag/swap"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-launch.svg" />
+                <div className="text-xs lg:text-sm">Launch Swap</div>
+              </a>
+              <a
+                href="https://station.jup.ag/guides/jupiter-swap/swap"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-guide.svg" />
+                <div className="text-xs lg:text-sm">User Guide</div>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col flex-1">
+            <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
+              <div className="text-lg font-bold  text-center whitespace-nowrap">
+                Limit Order
+              </div>
+              <a
+                href="https://jup.ag/limit"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-launch.svg" />
+                <div className="text-xs lg:text-sm">Launch Limit Order</div>
+              </a>
+              <a
+                href="https://station.jup.ag/guides/limit-order/limit-order"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-guide.svg" />
+                <div className="text-xs lg:text-sm">User Guide</div>
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col flex-1">
+            <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
+              <div className="text-lg font-bold  text-center">DCA</div>
+              <a
+                href="https://jup.ag/dca"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-launch.svg" />
+                <div className="text-xs lg:text-sm">Launch DCA</div>
+              </a>
+              <a
+                href="https://station.jup.ag/guides/dca/how-to-dca"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-guide.svg" />
+                <div className="text-xs lg:text-sm">User Guide</div>
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col flex-1">
+            <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
+              <div className="text-lg font-bold  text-center">Perps</div>
+              <a
+                href="https://jup.ag/perps"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
+                )}
+              >
+                <img src="img/home/icon-launch.svg" />
+                <div className="text-xs lg:text-sm">Launch Perps</div>
+              </a>
+              <a
+                href="https://station.jup.ag/guides/perpetual-exchange/overview"
+                target="_blank"
+                className={cn(
+                  'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img
@@ -202,7 +308,7 @@ const JupiterProjects = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -213,7 +319,7 @@ const JupiterProjects = () => {
           href="https://www.jupresear.ch/t/lfg-launchpad-introducing-your-project-to-the-community/5234/2"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -237,7 +343,7 @@ const JupiterDevelopers = () => {
           href="https://station.jup.ag/docs/apis/swap-api"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -248,7 +354,7 @@ const JupiterDevelopers = () => {
           href="https://station.jup.ag/docs/apis/payments-api"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -259,7 +365,7 @@ const JupiterDevelopers = () => {
           href="https://station.jup.ag/docs/limit-order/limit-order-api"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -270,7 +376,7 @@ const JupiterDevelopers = () => {
           href="https://terminal.jup.ag"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -281,7 +387,7 @@ const JupiterDevelopers = () => {
           href="https://station.jup.ag/docs/dca/dca-sdk"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -292,7 +398,7 @@ const JupiterDevelopers = () => {
           href="https://station.jup.ag/docs/apis/adding-fees"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -317,7 +423,7 @@ const JupiterLFGLaunchpad = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -328,7 +434,7 @@ const JupiterLFGLaunchpad = () => {
           href="https://www.jupresear.ch/t/jupiter-lfg-launchpad-beta/31"
           target="_blank"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -340,7 +446,7 @@ const JupiterLFGLaunchpad = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -366,7 +472,7 @@ const JupiterJupAcronym = () => {
   return (
     <div className="w-full text-v2-lily/[.03]">
       <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
-        {"J.U.P"}
+        {'J.U.P'}
       </div>
       <div className="mt-5 flex flex-col gap-2">
         <a
@@ -374,7 +480,7 @@ const JupiterJupAcronym = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -386,7 +492,7 @@ const JupiterJupAcronym = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -398,7 +504,7 @@ const JupiterJupAcronym = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            'py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline',
             `transition-all hover:gap-3`
           )}
         >
@@ -514,7 +620,7 @@ const JupiterCredits = () => {
                 </a>
 
                 <div className="">
-                  {" "}
+                  {' '}
                   has a bridge feature? Where it will compare rates and find you
                   the most efficient path to $SOL Jupiter, for me, is the single
                   most important app on $SOL
@@ -554,7 +660,7 @@ const JupiterCredits = () => {
             <div className="flex items-start gap-6">
               <div className="mt-5 text-v2-lily/[.65] leading-6 text-xs md:text-sm lg:text-base">
                 <span className="">
-                  Tell me this isn't a gorgeous fucking product by{" "}
+                  Tell me this isn't a gorgeous fucking product by{' '}
                 </span>
                 <a
                   className="text-decoration-none underline text-v2-lily/[.65] px-1"
@@ -594,8 +700,8 @@ const Content = () => {
         <div className="flex flex-col justify-center self-center px-20 mt-12 text-center max-md:px-5 max-md:mt-10 w-full">
           <div
             className={cn(
-              "font-bold max-md:max-w-full text-3xl xl:text-7xl",
-              "bg-gradient-to-r from-[rgba(0,190,240,1)] to-[rgba(199,242,132,1)] text-transparent bg-clip-text"
+              'font-bold max-md:max-w-full text-3xl xl:text-7xl',
+              'bg-gradient-to-r from-[rgba(0,190,240,1)] to-[rgba(199,242,132,1)] text-transparent bg-clip-text'
             )}
           >
             Jupiter Space Station
