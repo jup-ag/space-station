@@ -5,28 +5,31 @@ title: Bridging to Solana
 ---
 
 <head>
-    <title>Understanding CCTP</title>
+    <title>Bridging to Solana</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
+## USDC - CCTP
+
+The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
+
+
+## Basic Bridging User Flow
+
+1. Starting on the [USDC bridge page](https://jup.ag/bridge/cctp). 
+2. Next, connect your source wallet that will be funding the bridging transaction.
+3. Select the source token and input the amount that you want to use in the bridging transaction.
+4. Connect the destination wallet that will be receiving the funds from the bridging transaction.
+5. Select the token that you would like to bridge into on the destination chain.
+6. Review the transaction preview to understand the total fees that the transaction will require.
+7. Approve the bridge transactions. There will be two, one for the source chain and another for the destination chain.
+
 :::info 
-The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. 
+Most bridge applications work in the same way. They require connecting multiple wallets (source & destination chains), selecting the input / output tokens and the input amount. They will also require at least 2 transactions confirming on both the source and destination chains.
 :::
 
-## Basic Bridge Comparator User Flow
 
-1. Starting on the [Bridge Comparator page](https://jup.ag/bridge-compare). 
-2. Next, connect your wallet by clicking the `Connect Wallet` button in the upper right corner of the site.
-3. Select the tokens that you want to swap from and into with the token selectors.
-4. Enter the input amount of the selected token that you want to swap from.
-5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](/partners).
-6. Configure additional parameters to help with your trade, including: Transaction Fees, Slippage Settings, and Swap Settings.
-7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be executed.
-8. A notification toast will appear in the lower left corner that will notify the user once the transaction has been sent and has completed.
-9. You can view your transaction history by clicking the wallet section on the upper right of the site.
+**Let's take a look at the USDC Bridge UI below**
 
-**Let's take a look at the comparator UI below**
+## USDC Bridge UI
 
----
-
-## Bridge Comparator UI

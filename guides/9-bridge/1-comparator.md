@@ -16,11 +16,31 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 1. Starting on the [Bridge Comparator page](https://jup.ag/bridge-compare). 
 2. Select the token and blockchain that you want to bridge from.
 3. Select the token and blockchain that you want to bridge to.
-4. Review the Available Quotes for the bridge route you are specifying. These will populate underneith the selector section.
-5. Choose the app that best suits your needs for the bridge based on exchange rate and confirmation time then proceed to bridge through that app.
+4. The Available Bridge Route Quotes will populate underneith the selectors section.
+5. Evaluate & choose the app that best suits your needs for the bridge based on exchange rate and confirmation time.
+6. Proceed to that application and complete the bridge process.
 
 **Let's take a look at the comparator UI below**
 
----
-
 ## Bridge Comparator UI
+
+![Bridge Comparator UI]()
+
+1. The Bridge Comparator tool is found by selecting Solana on the top bar, and Compare on the app selector.
+2. Dropdown selectors to choose the blockchain, the token, and the token amount you are wanting to swap from.
+3. Dropdown selectors to choose the blockchain and the token you  would like to swap to.
+4. All available quotes for the bridge route you have selected will populate here after you set your selections.
+
+
+### Available Quotes
+
+![Available Quotes]()
+
+1. **Bridging App:** The bridging app that is providing the quote.
+2. **Expected Receive:** The expected amount to be received based on the bridging transaction simulation.
+3. **Min Receive:** The minimum amount to be received based on the bridging transaction simulation and acceptable price fluctuations.
+4. **Additional Fee:** This section outlines the bridging fees that apply to this bridge route.
+5. **Src. Gas Fee:** This identifies the source chain fee level, based on that networks current transaction activity levels.
+6. **Briding App Selector:** This selector will take you to the bridging application to complete the transaction.
+
+
