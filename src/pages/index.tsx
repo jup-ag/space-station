@@ -137,7 +137,7 @@ const JupiterProducts = () => {
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
               <div className="text-lg font-bold  text-center">Value Average</div>
               <a
-                href="https://jup.ag/perps"
+                href="https://jup.ag/va"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -147,7 +147,7 @@ const JupiterProducts = () => {
                 <div className="text-xs lg:text-sm">Launch Value Average</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/perpetual-exchange/overview"
+                href="https://station.jup.ag/guides/va/how-to-va"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -165,7 +165,7 @@ const JupiterProducts = () => {
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
               <div className="text-lg font-bold text-center">Perps</div>
               <a
-                href="https://jup.ag/swap"
+                href="https://jup.ag/perps"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -175,7 +175,7 @@ const JupiterProducts = () => {
                 <div className="text-xs lg:text-sm">Launch Perps</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/jupiter-swap/swap"
+                href="http://station.jup.ag/guides/perpetual-exchange/overview"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -189,21 +189,19 @@ const JupiterProducts = () => {
 
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center whitespace-nowrap">
-                Limit Order
-              </div>
+              <div className="text-lg font-bold  text-center whitespace-nowrap">JLP</div>
               <a
-                href="https://jup.ag/limit"
+                href="https://jup.ag/perps-earn"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch Limit Order</div>
+                <div className="text-xs lg:text-sm">Buy JLP</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/limit-order/limit-order"
+                href="https://station.jup.ag/guides/jlp/JLP"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -216,19 +214,19 @@ const JupiterProducts = () => {
           </div>
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center">DCA</div>
+              <div className="text-lg font-bold  text-center">JupSOL</div>
               <a
-                href="https://jup.ag/dca"
+                href="https://jup.ag/swap/SOL-JupSOL"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch DCA</div>
+                <div className="text-xs lg:text-sm">Buy JupSOL</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/dca/how-to-dca"
+                href="https://station.jup.ag/guides/jupsol/jupsol"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
@@ -241,19 +239,19 @@ const JupiterProducts = () => {
           </div>
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center">Perps</div>
+              <div className="text-lg font-bold  text-center">Bridge</div>
               <a
-                href="https://jup.ag/perps"
+                href="https://jup.ag/bridge-compare"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
                 )}
               >
                 <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">Launch Perps</div>
+                <div className="text-xs lg:text-sm">Launch Bridge</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/perpetual-exchange/overview"
+                href="https://station.jup.ag/guides/bridge/comparator"
                 target="_blank"
                 className={cn(
                   'flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer'
