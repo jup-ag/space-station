@@ -5,64 +5,68 @@ type LinkGroup = {
 
 export const guidesLinkItems: LinkGroup[] = [
   {
-    heading: 'Product Guides',
+    heading: "Product Guides",
     children: [
       {
-        title: 'Jupiter Swap',
-        href: '/guides/jupiter-swap/swap',
+        title: "Jupiter Swap",
+        href: "/guides/jupiter-swap/swap",
       },
       {
-        title: 'Limit Order',
-        href: '/guides/limit-order/limit-order',
+        title: "Limit Order",
+        href: "/guides/limit-order/limit-order",
       },
       {
-        title: 'DCA',
-        href: '/guides/dca/how-to-dca',
+        title: "DCA",
+        href: "/guides/dca/how-to-dca",
       },
       {
-        title: 'VA',
-        href: '/guides/va/how-to-va',
+        title: "VA",
+        href: "/guides/va/how-to-va",
       },
       {
-        title: 'Perpetual Exchange',
-        href: '/guides/perpetual-exchange/overview',
+        title: "Perpetual Exchange",
+        href: "/guides/perpetual-exchange/overview",
       },
       {
-        title: 'JLP Pool',
-        href: '/guides/jlp/JLP',
+        title: "JLP Pool",
+        href: "/guides/jlp/JLP",
       },
       {
-        title: 'JupSOL',
-        href: '/guides/jupsol/jupsol',
+        title: "JupSOL",
+        href: "/guides/jupsol/jupsol",
       },
     ],
   },
   {
-    heading: 'General Guides',
+    heading: "General Guides",
     children: [
       {
-        title: 'Personal Security on Solana',
-        href: '/guides/general/personal-security-on-solana',
+        title: "Personal Security on Solana",
+        href: "/guides/general/personal-security-on-solana",
       },
       {
-        title: 'Verifying Swaps',
-        href: '/guides/general/verify-swaps-with-SolanaFM',
+        title: "Verifying Swaps",
+        href: "/guides/general/verify-swaps-with-SolanaFM",
       },
       {
-        title: 'New Token Guide',
-        href: '/guides/general/new-token-guide',
+        title: "Jupiter, Action & Blinks",
+        href: "/guides/general/blinks",
       },
       {
-        title: 'Wrapped SOL',
-        href: '/guides/general/wrapped-sol',
+        title: "New Token Guide",
+        href: "/guides/general/new-token-guide",
       },
       {
-        title: 'Jupiter FAQ',
-        href: '/guides/general/faq',
+        title: "Wrapped SOL",
+        href: "/guides/general/wrapped-sol",
       },
       {
-        title: 'Media Kit',
-        href: '/guides/general/media-kit',
+        title: "Jupiter FAQ",
+        href: "/guides/general/faq",
+      },
+      {
+        title: "Media Kit",
+        href: "/guides/general/media-kit",
       },
     ],
   },
@@ -70,167 +74,167 @@ export const guidesLinkItems: LinkGroup[] = [
 
 export const docsLinkItems: LinkGroup[] = [
   {
-    heading: 'APIs',
+    heading: "APIs",
     children: [
       {
-        title: 'V6 Swap API',
-        href: '/docs/apis/swap-api',
+        title: "V6 Swap API",
+        href: "/docs/apis/swap-api",
       },
       {
-        title: 'Payments API',
-        href: '/docs/apis/payments-api',
+        title: "Payments API",
+        href: "/docs/apis/payments-api",
       },
       {
-        title: 'Adding Fees',
-        href: '/docs/apis/adding-fees',
+        title: "Adding Fees",
+        href: "/docs/apis/adding-fees",
       },
       {
-        title: 'Price API',
-        href: '/docs/apis/price-api',
+        title: "Price API",
+        href: "/docs/apis/price-api",
       },
       {
-        title: 'Flash Fill',
-        href: '/docs/apis/flash-fill',
+        title: "Flash Fill",
+        href: "/docs/apis/flash-fill",
       },
       {
-        title: 'CPI / Smart Contract Integration',
-        href: '/docs/apis/cpi',
+        title: "CPI / Smart Contract Integration",
+        href: "/docs/apis/cpi",
       },
       {
-        title: 'Game Dev (C#)',
-        href: '/docs/apis/c-sharp-example',
+        title: "Game Dev (C#)",
+        href: "/docs/apis/c-sharp-example",
       },
       {
-        title: 'Self-Hosted V6 Swap API',
-        href: '/docs/apis/self-hosted',
+        title: "Self-Hosted V6 Swap API",
+        href: "/docs/apis/self-hosted",
       },
       {
-        title: 'Troubleshooting',
-        href: '/docs/apis/troubleshooting',
+        title: "Troubleshooting",
+        href: "/docs/apis/troubleshooting",
       },
     ],
   },
   {
-    heading: 'Limit Order',
+    heading: "Limit Order",
     children: [
       {
-        title: 'Limit Order API',
-        href: '/docs/limit-order/limit-order-api',
+        title: "Limit Order API",
+        href: "/docs/limit-order/limit-order-api",
       },
       {
-        title: 'Limit Order with SDK',
-        href: '/docs/limit-order/limit-order-with-sdk',
+        title: "Limit Order with SDK",
+        href: "/docs/limit-order/limit-order-with-sdk",
       },
     ],
   },
   {
-    heading: 'DCA',
+    heading: "DCA",
     children: [
       {
-        title: 'Integrate DCA',
-        href: '/docs/dca/integration',
+        title: "Integrate DCA",
+        href: "/docs/dca/integration",
       },
       {
-        title: 'DCA With SDK',
-        href: '/docs/dca/dca-sdk',
+        title: "DCA With SDK",
+        href: "/docs/dca/dca-sdk",
       },
       {
-        title: 'DCA CPI Integration',
-        href: '/docs/dca/lock-dca-campaign',
+        title: "DCA CPI Integration",
+        href: "/docs/dca/lock-dca-campaign",
       },
     ],
   },
   {
-    heading: 'Jupiter Terminal',
+    heading: "Jupiter Terminal",
     children: [
       {
-        title: 'Overview',
-        href: '/docs/jupiter-terminal/jupiter-terminal',
+        title: "Overview",
+        href: "/docs/jupiter-terminal/jupiter-terminal",
       },
       {
-        title: 'Terminal Walkthrough',
-        href: '/docs/jupiter-terminal/terminal-integration-guide',
+        title: "Terminal Walkthrough",
+        href: "/docs/jupiter-terminal/terminal-integration-guide",
       },
       {
-        title:  'Unified Wallet Kit',
-        href: '/docs/jupiter-terminal/unified-wallet-kit',
+        title: "Unified Wallet Kit",
+        href: "/docs/jupiter-terminal/unified-wallet-kit",
       },
     ],
   },
   {
-    heading: 'Projects and Dexes',
+    heading: "Projects and Dexes",
     children: [
       {
-        title: 'Rust Integration',
-        href: '/docs/projects-and-dexes/integration-guidelines',
+        title: "Rust Integration",
+        href: "/docs/projects-and-dexes/integration-guidelines",
       },
       {
-        title: 'DEX Guidelines',
-        href: '/docs/projects-and-dexes/rust-integration',
+        title: "DEX Guidelines",
+        href: "/docs/projects-and-dexes/rust-integration",
       },
     ],
   },
   {
-    heading: 'Token List',
+    heading: "Token List",
     children: [
       {
-        title: 'Token List API',
-        href: '/docs/token-list/token-list-api',
+        title: "Token List API",
+        href: "/docs/token-list/token-list-api",
       },
       {
-        title: 'Submit Token',
-        href: '/docs/get-your-token-onto-jup',
+        title: "Submit Token",
+        href: "/docs/get-your-token-onto-jup",
       },
     ],
   },
   {
-    heading: 'Additional Topics',
+    heading: "Additional Topics",
     children: [
       {
-        title: 'Versioned Transactions',
-        href: '/docs/additional-topics/composing-with-versioned-transaction',
+        title: "Versioned Transactions",
+        href: "/docs/additional-topics/composing-with-versioned-transaction",
       },
       {
-        title: 'Jupiter Stats',
-        href: '/docs/additional-topics/displaying-jup-stats',
+        title: "Jupiter Stats",
+        href: "/docs/additional-topics/displaying-jup-stats",
       },
       {
-        title: 'Links and Contract Addresses',
-        href: '/docs/additional-topics/links-and-contract-addresses',
+        title: "Links and Contract Addresses",
+        href: "/docs/additional-topics/links-and-contract-addresses",
       },
       {
-        title: 'Builder Tips',
-        href: '/docs/additional-topics/builder-tips',
+        title: "Builder Tips",
+        href: "/docs/additional-topics/builder-tips",
       },
       {
-        title: 'Wallet List',
-        href: '/docs/additional-topics/wallet-list',
+        title: "Wallet List",
+        href: "/docs/additional-topics/wallet-list",
       },
     ],
   },
   {
-    heading: 'Legacy',
+    heading: "Legacy",
     children: [
       {
-        title: 'APIs V4',
-        href: '/docs/apis',
+        title: "APIs V4",
+        href: "/docs/apis",
       },
     ],
   },
   {
-    heading: 'Legal',
+    heading: "Legal",
     children: [
       {
-        title: 'SDK & API License Agreement',
-        href: '/docs/legal/sdk-api-license-agreement',
+        title: "SDK & API License Agreement",
+        href: "/docs/legal/sdk-api-license-agreement",
       },
       {
-        title: 'Terms of Use',
-        href: '/docs/legal/terms-of-use',
+        title: "Terms of Use",
+        href: "/docs/legal/terms-of-use",
       },
       {
-        title: 'Privacy Policy',
-        href: '/docs/legal/privacy-policy',
+        title: "Privacy Policy",
+        href: "/docs/legal/privacy-policy",
       },
     ],
   },
