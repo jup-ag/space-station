@@ -23,13 +23,8 @@ Read More:
 3. Click (or input) the amount to swap.
 4. Sign the Wallet TX.
 
-<details>
-  <summary>Click to play video</summary>
   <video width="320" height="240" controls>
     <source src="/videos/blinks.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</details>
 
 And you're done!
 
