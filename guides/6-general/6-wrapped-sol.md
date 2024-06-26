@@ -20,9 +20,9 @@ This makes Jupiter even faster and more convenient for traders who trade frequen
 
 Currently, Jupiter has to wrap and unwrap SOL when trading in SOL due to the fact that native SOL itself is not an SPL token.
 
-*To read more about wrapping SOL, please click [here](https://spl.solana.com/token#wrapping-sol).*
+_To read more about wrapping SOL, please click [here](https://spl.solana.com/token#wrapping-sol)._
 
-*To read more about transferring tokens, please click [here](https://spl.solana.com/token#transferring-tokens).*
+_To read more about transferring tokens, please click [here](https://spl.solana.com/token#transferring-tokens)._
 
 Because of Solana's transaction size limits, sometimes we need to break up the transaction into multiple ones when wrapping is involved. This can be a source of friction for power traders who transact a lot.
 
@@ -31,8 +31,8 @@ We expect this problem to be resolved with the upcoming transaction size increas
 ![wSOL](../img/wsol.png)
 
 > 1. The Wrap and unwrap tool bar
-2. The swap setting to turn on/off of using wSOL
-3. Once wSOL is toggled on, user will see wSOL as the default for SOL in the token selector
+> 2. The swap setting to turn on/off of using wSOL
+> 3. Once wSOL is toggled on, user will see wSOL as the default for SOL in the token selector
 
 ### Enabling Jupiter wSOL feature
 
@@ -67,4 +67,4 @@ The wSOL mode is for advanced users who are familiar dealing with the wSOL token
 
 - Our unwrap wSOL feature currently only processes unwrapping of all existing wSOL in your wallet to SOL, we do not support partial unwrapping.
 
-*To read more about closing SOL accounts, click [here](https://spl.solana.com/token#closing-accounts).*
+_To read more about closing SOL accounts, click [here](https://spl.solana.com/token#closing-accounts)._
