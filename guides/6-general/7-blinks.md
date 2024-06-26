@@ -23,8 +23,7 @@ Read More:
 3. Click (or input) the amount to swap.
 4. Sign the Wallet TX.
 
-  <video width="320" height="240" controls>
-    <source src="/videos/blinks.mp4" type="video/mp4" />
+![Blinks](/img/blinks.gif)
 
 And you're done!
 
@@ -34,12 +33,6 @@ And you're done!
 2. Copy the URL, it should look something like this https://jup.ag/swap/SOL-JUP
 3. Post it on Twitter!
 
-<details>
-  <summary>Click to play video</summary>
-  <video width="320" height="240" controls>
-    <source src="/videos/create-blink.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</details>
+![Create Blinks](/img/create-blink.gif)
 
 Users can now swap with your Blink, if their wallet has Blinks enabled.
