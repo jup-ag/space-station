@@ -58,7 +58,7 @@ There is a platform fee of 0.1% for Jupiter VA. This fee is applied at time of o
 VA may not *always* buy at the same interval. For example, the VA order is set to buy at 8AM every day.
 - If during the second day, the price of the token had increased, at 8AM, the keeper will calculate the value of your portfolio (which should have increased) and if the current portfolio value is more than the target value at this interval, the keeper will not execute at 8AM rather it will continue to retry. When the price of the token drops, and your portfolio does not meet the current target value, at any time, the keeper will execute a buy (with a minimum value of $0.50).
 - If the price of the token increases gradually, and the portfolio meets the first few incremented target value, eventually, the target value should have incremented enough, such that the portfolio needs to buy in order to meet the target value.
-- If the price of the token keeps increasing, and the portfolio keeps meeting the target value at every increment, the portfolio does not need to buy.
+- If the price of the token keeps increasing, and the portfolio keeps meeting the target value at every increment, VA does not need to buy.
 
 ---
 
