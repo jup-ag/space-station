@@ -28,7 +28,7 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 
 ![Bridge Comparator UI](../img/bridge/bridge-1.png)
 
-1. **Bridge Comparator Selector:** App selector to navigate to the Comparator tool.
+1. **Bridge Comparator Selector:** Application selector to navigate to the Comparator.
 2. **Source Chain and Token Selector:** Dropdown selectors to choose the blockchain, the token, and the token amount you are wanting to swap from.
 3. **Destination Chain and Token Output Selectors:** Dropdown selectors to choose the blockchain and the token you  would like to swap to.
 4. **Available Quotes:** All available quotes for the bridge route you have selected will populate here after you set your selections.

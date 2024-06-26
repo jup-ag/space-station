@@ -34,6 +34,17 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 
 ![USDC Bridge UI](../img/bridge/bridge-4.png)
 
+1. **USDC Bridge Selector:** Application selector to navigate to the Comparator tool.
+2. **Source Wallet Connect:** Connect the wallet associated with the source blockchain you are looking to bridge from.
+3. **Asset Selector and Amount Field:** Select the token from the source wallet and enter the amount of the token you would like to bridge.
+4. **Destination and Source Switching Tab:** This will allow you to switch destination and source chains and assets.
+5. **Destination Wallet Connector:** Connect the wallet associated with the destination blockchain you are looking to bridge to.
+6. **Asset Selector and Amount Field:** Select the token on the destination blockchain you want to bridge to. The amount field is auto-calculated based on market rates and is un-editable.
+7. **Route:** The best route is determined by the application and displayed here for you to review.
+8. **Preview:** The bridging transaction preview will build here, identifying the Amount that will be received and the total fee estimates for the transaction. Note: There will be fees on both the source and destination blockchains as you have to execute transactions on both.
+9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview. 
+
 ## deBridge UI
+
 
 
