@@ -9,10 +9,11 @@ title: Bridging to Solana
     <meta name="twitter:card" content="summary" />
 </head>
 
-## USDC - CCTP
+The current crypto-sphere is made up of numerous blockchains which can act as silo's for assets and liquidity. With that in mind cross chain mobility for crypto assets is a highly desirable solution in this realm. Enter bridges, applications configured to manage asset custody and enable cross chain asset swapping. 
 
-The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
-
+:::info 
+Most bridge applications work in the same way. They require connecting multiple wallets (source & destination chains), selecting the input / output tokens and the input amount. They will also require at least 2 transactions confirming on both the source and destination chains.
+:::
 
 ## Basic Bridging User Flow
 
@@ -24,12 +25,15 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 6. Review the transaction preview to understand the total fees that the transaction will require.
 7. Approve the bridge transactions. There will be two, one for the source chain and another for the destination chain.
 
-:::info 
-Most bridge applications work in the same way. They require connecting multiple wallets (source & destination chains), selecting the input / output tokens and the input amount. They will also require at least 2 transactions confirming on both the source and destination chains.
-:::
 
+## USDC - CCTP
 
-**Let's take a look at the USDC Bridge UI below**
+The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
 
 ## USDC Bridge UI
+
+
+
+## deBridge UI
+
 
