@@ -45,6 +45,7 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 
 ## deBridge
 
+deBridge is a cross-chain interoperability and liquidity transfer protocol that allows decentralized transfer of data and assets between various blockchains.
 
 ### deBridge UI
 
@@ -57,7 +58,7 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 5. **Destination Chain & Token Selector:** Select the token in the destination wallet to bridge into. The amount field will auto-calculate for you based on exchange rates of the bridging route.
 6. **Connect Wallet:** This button allows you to connect your source wallet to begin the bridging process. Once you connect, the UI will update and it will auto detect the wallet balances and populate the UI.
 
-**Part Two Continued Below with the Updated UI with Wallet Connected.**
+**Part two continues below, with the updated interface after connecting your wallet.**
 
 ![deBridge UI](../img/bridge/bridge-6.png)
 
