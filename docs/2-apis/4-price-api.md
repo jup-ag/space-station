@@ -50,10 +50,10 @@ We support fetching the prices for up to 100 tokens in one call right now to man
 
 Jupiter Price API will always return **the unit buy price for the token** specified with the `ids` parameter. This price is based on the best pricing data available across all DEXes queried. Please remember the addresses and token tickers are *case-sensitive*.
 
-For example, the most basic call will provide the unit price for the token based on the *buy amount of 1 unit of SOL*. <a id="vstoken"></a>
+For example, the most basic call will provide the unit price for the token based on the *buy amount of USDC*. <a id="vstoken"></a>
 
 ```json
-# Unit price of SOL based on the buy amount of 1 unit of SOL
+# Unit price of 1 SOL based on the buy amount of USDC
 https://price.jup.ag/v6/price?ids=SOL
 
 {
