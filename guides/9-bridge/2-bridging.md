@@ -36,4 +36,4 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 
 ## deBridge UI
 
-![deBridge UI](../img/bridge/bridge-5.png)
+
