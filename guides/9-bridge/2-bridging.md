@@ -25,7 +25,6 @@ Most bridge applications work in the same way. They require connecting multiple 
 6. Review the transaction preview to understand the total fees that the transaction will require.
 7. Approve the bridge transactions. There will be two, one for the source chain and another for the destination chain.
 
-
 ## USDC - CCTP
 
 The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
@@ -34,7 +33,7 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 
 ![USDC Bridge UI](../img/bridge/bridge-4.png)
 
-1. **USDC Bridge Selector:** Application selector to navigate to the Comparator tool.
+1. **USDC Bridge Selector:** Application selector to navigate to the USDC bridging tool.
 2. **Source Wallet Connect:** Connect the wallet associated with the source blockchain you are looking to bridge from.
 3. **Asset Selector and Amount Field:** Select the token from the source wallet and enter the amount of the token you would like to bridge.
 4. **Destination and Source Switching Tab:** This will allow you to switch destination and source chains and assets.
@@ -42,9 +41,12 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 6. **Asset Selector and Amount Field:** Select the token on the destination blockchain you want to bridge to. The amount field is auto-calculated based on market rates and is un-editable.
 7. **Route:** The best route is determined by the application and displayed here for you to review.
 8. **Preview:** The bridging transaction preview will build here, identifying the Amount that will be received and the total fee estimates for the transaction. Note: There will be fees on both the source and destination blockchains as you have to execute transactions on both.
-9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview. 
+9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview you this will start the bridging transaction process.
 
 ## deBridge UI
 
 
+1. **deBridge Bridge Selector:** Application selector to navigate to the deBridge bridging tool.
+2. **Settings:** Source chain settings can be modified here, including gas fee, node selection and other settings native to the source blockchain.
+3. 
 
