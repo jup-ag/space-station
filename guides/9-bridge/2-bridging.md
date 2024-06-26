@@ -29,7 +29,7 @@ Most bridge applications work in the same way. They require connecting multiple 
 
 The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
 
-## USDC Bridge UI
+### USDC Bridge UI
 
 ![USDC Bridge UI](../img/bridge/bridge-4.png)
 
@@ -43,10 +43,15 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 8. **Preview:** The bridging transaction preview will build here, identifying the Amount that will be received and the total fee estimates for the transaction. Note: There will be fees on both the source and destination blockchains as you have to execute transactions on both.
 9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview you this will start the bridging transaction process.
 
-## deBridge UI
+## deBridge
 
+
+### deBridge UI
+
+![deBridge UI](../img/bridge/bridge-5.png)
 
 1. **deBridge Bridge Selector:** Application selector to navigate to the deBridge bridging tool.
 2. **Settings:** Source chain settings can be modified here, including gas fee, node selection and other settings native to the source blockchain.
 3. 
 
+![deBridge UI](../img/bridge/bridge-6.png)
