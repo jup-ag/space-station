@@ -31,9 +31,10 @@ Join the community and engage with us directly by sharing feedback and ideas in 
 ## Navigating the Product Guides
 - **Jupiter Swap:** Get a detailed walkthrough on [How to Swap](/guides/jupiter-swap/swap). Read [How Swap Works](/guides/jupiter-swap/how-swap-works) to make the best of your swap experience.
 - **Limit Order:** Learn [How to Use Limit Orders](/guides/limit-order/limit-order) and see [How Limit Orders Work](/guides/limit-order/how-lo-work)
-- **DCA:** Learn [How to DCA](/guides/dca/how-to-dca) and understand the best [Use Cases](/guides/dca/explainer) for this product.
+- **Automated Strategies:** Learn [How to DCA](/guides/dca/how-to-dca) and [How to VA](/guides/va/how-to-va). Strengthen your trading arsenal and learn the best [Use Cases](/guides/dca/explainer) for these products.
 - **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview).
-- **JLP Pool:** Learn about the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the the Perpetuals Exchange. 
+- **JLP Pool:** Learn about the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
+- **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
 - **General Guides:** Find more general guides related to the Solana ecosystem such as: Creating a New Token, the Jupiter Media Kit, Personal Security on Solana and FAQs about the Jupiter Platform.
 
 Happy trading and welcome to the community!

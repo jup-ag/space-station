@@ -123,6 +123,6 @@ Jupiter Perpetual Exchange works based on a keeper model. A typical trader actio
 1. Trader submits a request transaction onto the Solana chain.
 2. Keeper monitors the request transaction and executes it as a separate transaction onto the Solana chain.
 
-Sometimes, if the oracle price is stale or the oracle price hits the trader slippage, the keeper will close the trader's request and return the SOL rent on the request and collateral (when opening a position) back to the trader. You will see this a separate transaction on your wallet submitted by our keeper.
+Sometimes, if the oracle price is stale or the oracle price hits the trader slippage, the keeper will close the trader's request and return the SOL rent on the request and collateral (when opening a position) back to the trader. You will see this as a separate transaction on your wallet submitted by our keeper.
 
 You may also notice multiple failed transactions on your wallet submitted by our keepers. You can safely ignore these failed transactions, they don't alter any state on your wallet. This happens because we have multiple keepers to execute your request in order to make sure that the trader experience is swift.

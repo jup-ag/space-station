@@ -25,7 +25,7 @@ To minimize the predictability of your VA strategy, orders are filled within a r
 ## Order Mechanism
 
 :::info VA Order / Account
-A VA order or account is broken down to many orders. The number of orders depends on the options or iterations you choose. For example, if you choose to VA into SOL with 900 USDC over 3 days, depending on your portfolio strategy, your VA order/account will defer accordingly to the price action.
+A VA order or account is broken down into many orders. The number of orders depends on the options or iterations you choose. For example, if you choose to VA into SOL with 900 USDC over 3 days, depending on your portfolio strategy, your VA order/account will defer accordingly to the price action.
 :::
 
 **Scenario with example:**
@@ -101,7 +101,7 @@ However, if there are still tokens yet to be transferred to you (ie. if you clos
 This allows the program to transfer the remaining purchased tokens to you. As such, you would only receive 2/3 of the rent incurred to initialise your VA account. Having said that, this 1/3 rent is not absorbed by any third-party. This rent will remain recoverable by you if you decide to close your ATA that “holds” your purchased token.
 
 :::warning
-Do not close your ATA without first withdrawing the tokens or swapping them for other tokens. Doing so can result in the lost of tokens. This is not unique to Jupiter or Jupiter’s VA. This has to do with how Solana wallets and accounts work.
+Do not close your ATA without first withdrawing the tokens or swapping them for other tokens. Doing so can result in the loss of tokens. This is not unique to Jupiter or Jupiter’s VA. This has to do with how Solana wallets and accounts work.
 :::
 
 ---

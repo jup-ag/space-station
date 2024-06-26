@@ -64,7 +64,7 @@ Trades submitted through the blockchain are assigned a priority based on the fee
 ![Jup Swap 4](../img/jup-swap/jup-swap-3.png 'Priority fee settings, including Jito tips, fee mode, and priority levels.')
 
    1. **Transaction Broadcasting Selector:** Select your transaction broadcasting option. Choose from a traditional priority fee, a Jito Bundle Only, or an optimized Mixed combination of the two. 
-   2. **Priority Level:** Specify the Priority Level for the transactions you are completeing. Must execute transactions falling under the Ultra Priority Level.
+   2. **Priority Level:** Specify the Priority Level for the transactions you are completing. Must execute transactions falling under the Ultra Priority Level.
    3. **Fee Mode:** Pick your preferred Fee Mode. Either specify a Max Cap for your fee or an Exact Fee for your transactions.
 
 ### Slippage Settings
@@ -123,7 +123,7 @@ Clicking on the area marked number 9 from the Swap terminal above will show you 
 
 1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
 2. **Price Impact:** Price Impact is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets.
-3. **Minimum Received:** Minimum received takes into account the slippage setting and and market liquidity to compute the minimum amount that the user will receive even with maximum price fluctuations during a successful swap.
+3. **Minimum Received:** Minimum received takes into account the slippage setting and market liquidity to compute the minimum amount that the user will receive even with maximum price fluctuations during a successful swap.
 4. **Max Transaction Fee** This is the maximum fee you will pay to execute the quoted transaction. This takes into account your selected fee settings.
 5. **Deposit** If you are transacting assets you have not owned before, Solana may require a small deposit amount to create the ATA account in your wallet to hold that asset. This will only occur with assets you have not owned previously. 
 

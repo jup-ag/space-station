@@ -289,7 +289,7 @@ const JupiterDevelopers = () => {
           <ChevronRight />
         </a>
         <a
-          href="https://station.jup.ag/docs/additional-topics/referral-program"
+          href="https://station.jup.ag/docs/apis/adding-fees"
           target="_blank"
           className={cn(
             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
