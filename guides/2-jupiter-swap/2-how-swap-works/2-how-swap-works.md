@@ -11,43 +11,16 @@ title: How the Jupiter Swap Works
 
 The Jupiter Swap is a decentralized exchange aggregator designed to provide the best rates for swapping SPL tokens on the Solana blockchain. It routes trades through multiple liquidity sources to ensure optimal prices, low slippage, and efficient transaction execution. Users benefit from its seamless interface, deep liquidity, and the ability to perform complex token swaps in a single transaction.
 
-## **Jupiter v3: The Metis Routing Algo**
+### **Jupiter V3 Upgrades**
 
-On Jupiter, swaps are powered by the advanced routing algorithm, Metis, introduced in Jupiter v3.
+Jupiter V3 introduced multiple improvements to the swap experience! 
 
-Metis is a heavily modified variant of the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) catered for the key requirements of offering best price routing at scale in a very dynamic operational space.
+The Metropolis upgrade introduced Instant Routing, Dynamic Slippage, Smart Token Filtering, Ecosystem Token List and new Safety features.
+[Dive into these new features in detail here! ->](/guides/jupiter-swap/how-swap-works/metropolis)
 
-Metis is designed to operate seamlessly on Solana’s hyper-fast blocktimes, supported by major improvements to our backend infrastructure. This ensures that trades are executed quickly and efficiently, even under high demand.
+Metis, a routing protocol, was also introduced to improve route discovery, reducing slippage and scalability in V3.
+[Dive into key features of the Metis routing protocol here! ->](/guides/jupiter-swap/how-swap-works/metis-routing)
 
-Metis enhances our industry-leading aggregator by improving route discovery for all trading pairs, reducing slippage for large trades, and offering scalable solutions in preparation for upcoming Solana upgrades and new DEXs.
-
-Dive into the details below.
-
-## Key Features
-
-### Incremental Route Building
-
-To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
-
-![Metis2](../img/jup-swap/Metis-2.png)
-
-### Combine Route Generation and Quoting
-
-To improve the efficiency of the algo, we combine route generation and quoting into a single step, allowing us to avoid generating and using bad routes, which besides improving the efficiency, also allows us to use a larger set of tokens as intermediaries.
-
-### Future Proofing
-
-v2 runs fast when the total number of DEXs used is small since Solana limits us to use at most 4 DEXs in a swap *(due to the account lock limit of 64)*. Future Solana upgrades will relax this limit and allow more DEXs to be used in a single transaction. In addition, we foresee the continued growth of the Solana DeFi ecosystem, which means there will be many more DEXs emerging.
-
-Metis(v3) is equipped to handle both of these trends, since the algorithm is able to scale to include more DEXs in a route when account lock limits are increased, and can support more DEXs with only a modest increase in running time.
-
-![Metis3](../img/jup-swap/Metis-3.png)
-
-### Performance Improvements
-
-Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These imporivements increase sharply based on the trade size.
-
-![Metis4](../img/jup-swap/Metis-4.jpg)
 
 ### Token Ledger For Increased Swap Success Rates
 
@@ -95,25 +68,34 @@ To reduce price impact, users can split trades into several smaller trades over 
 
 Be sure to check the minimum amount of destination tokens quoted on the Jupiter interface, and set a Slippage amount to protect yourself.
 
-![Price Impact](../img/price-impact.png)
+![Price Impact](../../img/price-impact.png)
 
 ### Slippage
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
-![Slippage](../img/slippage-setting.png)
+![Slippage](../../img/slippage-setting.png)
 
 ### Price Warning
 
 Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
 
-![Price Warning](../img/price-warning.png)
+![Price Warning](../../img/price-warning.png)
+
+
+### Authority/Verification warnings
+
+If tokens have things that are common for scams like freeze authority or there already exists a verified token with the same name, you will see warnings for those. There will be other warnings to keep you safe right on the swap interface!
+
+<img src={require('../../img/jup-swap/authority-warning.png').default} alt="Authority Warning" style={{ width: '60%', height: 'auto' }} />
+
+
 
 #### Additional Safety Confirmation
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
-![Safety Modal](../img/safety-modal.png)
+![Safety Modal](../../img/safety-modal.png)
 
 ---
 
