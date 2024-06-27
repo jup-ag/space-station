@@ -39,4 +39,4 @@ Once you click `Buy Button`, a new tab will open for you to complete the transac
 
 ## CEX Transfers to Solana
 
-Transferring assets to Solana has never been easier. If you are looking to transfer assets from a Centralized Exchange (CEX), please refer to the steps provided [Here](https://jup.ag/bridge/cex). Each CEX can have different requirements for external transfers, so please refer to their respective Guide as well.
+Transferring assets to Solana has never been easier. If you are looking to transfer assets from a Centralized Exchange (CEX), please refer to the steps provided [here](https://jup.ag/bridge/cex). Each CEX can have different requirements for external transfers, so please refer to their respective Guide as well.

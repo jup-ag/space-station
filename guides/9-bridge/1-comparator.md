@@ -9,7 +9,7 @@ title: How to Use the Bridge Comparator
     <meta name="twitter:card" content="summary" />
 </head>
 
-The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare and select the most efficient bridge for transferring tokens from other chains to Solana. This bolsters the Jupiter product line by offering an intuitive experience to help bring more capital to Solana in the most efficient ways possible.
+The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare and select the most efficient bridge for transferring tokens from other chains to Solana. This bolsters the Jupiter product line by offering an intuitive experience to help bring more capital to Solana in the most capital efficient way possible.
 
 ## Basic Bridge Comparator User Flow
 
@@ -17,8 +17,8 @@ The Jupiter Bridge Comparator is a tool that allows users to seamlessly compare 
 2. Select the blockchain and token that you want to bridge from. Enter the token amount you wish to bridge.
 3. Select the blockchain and token that you want to bridge to.
 4. The Available Bridge Route Quotes will populate underneath the Selector section.
-5. Evaluate & choose the application that best suits your needs for the bridge, based on exchange rate and confirmation time.
-6. Proceed to that application and complete the bridge process.
+5. Evaluate & choose the bridge application that best suits your needs, based on exchange rate and confirmation time.
+6. Proceed to that bridge application and complete the bridge process.
 
 **Let's take a look at the Comparator UI below**
 

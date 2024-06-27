@@ -9,7 +9,7 @@ title: Bridging to Solana
     <meta name="twitter:card" content="summary" />
 </head>
 
-The current crypto-sphere is made up of numerous blockchains which can act as silo's for assets and liquidity. With that in mind cross chain mobility for crypto assets is a highly desirable solution in this realm. Enter bridges, applications configured to manage asset custody and enable cross chain asset swapping. 
+The current crypto-sphere is made up of numerous blockchains which can act as silo's for assets and liquidity. With that in mind cross chain mobility for crypto assets is a highly desirable solution in this realm. To solve this issue, bridges were invented. Bridges are applications configured to manage asset custody and enable cross chain asset swapping. 
 
 :::info 
 Most bridge applications work in the same way. They require connecting multiple wallets (source & destination chains), selecting the input / output tokens and the input amount. They will also require at least 2 transactions confirming on both the source and destination chains.
@@ -38,7 +38,7 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 3. **Asset Selector & Amount Field:** Select the token from the source wallet and enter the amount of the token you would like to bridge.
 4. **Destination / Source Switching Tab:** This will allow you to switch destination and source chains and tokens respectively.
 5. **Destination Wallet Connector:** Connect the wallet associated with the destination blockchain you are looking to bridge to.
-6. **Asset Selector & Amount Field:** Select the token on the destination blockchain you want to bridge to. The amount field is auto-calculated based on market rates and is un-editable.
+6. **Asset Selector & Amount Field:** Select the token on the destination blockchain you want to bridge to. The amount field is auto-calculated based on market rates and is non-editable.
 7. **Route:** The best route is determined by the application and displayed here for you to review.
 8. **Preview:** The bridging transaction preview will build here, identifying the Amount that will be received and the total fee estimates for the transaction. Note: There will be fees on both the source and destination blockchains as you have to execute transactions on both.
 9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview you this will start the bridging transaction process.
