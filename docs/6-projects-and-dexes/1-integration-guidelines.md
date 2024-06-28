@@ -34,7 +34,5 @@ Our top priority is securing the best prices and the best token selection for ou
 - We are soon migrating to a Rust SDK and so are asking all integrated DEXes to create a Rust SDK version or give access to the code for us to include.
 
 ### Security Audit
-- If you're not using Solana's audited SPL token swap (https://github.com/solana-labs/solana-program-library/tree/master/token-swap), we ask that you get your code audited.
 
-### Referral Programs
-- If your DEX charges a fee and has a referral program for parties that refer volume to you, we would consider prioritizing it. For example, when someone takes a trade on Openbook or GooseFx, part of the proceeds is given to the user or protocol who facilitated that trade. We think these referral programs are healthy for a vibrant ecosystem and offset some of the costs involved.
+- If you're not using Solana's audited SPL token swap (https://github.com/solana-labs/solana-program-library/tree/master/token-swap), we ask that you get your code audited.
