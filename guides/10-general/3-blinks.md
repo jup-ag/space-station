@@ -6,7 +6,7 @@ title: Jupiter, Action & Blinks
 
 ### Jupiter: Actions & Blinks
 
-Jupiter is a launch partner of Solana Actions, which power Blockchain Links (Blinks) across the ecosystem.
+Jupiter is a partner of Solana Actions, which power Blockchain Links (Blinks) across the ecosystem.
 
 Currently, you can make Swap Blinks on Twitter, with the goal of bringing Jupiter to meet more users, wherever they are.
 

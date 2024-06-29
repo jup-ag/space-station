@@ -18,7 +18,7 @@ import WidgetModeImgUrl from './widget-mode.jpg';
 
 <img src="/terminal/demo/terminal-hero.gif" />
 
-Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap flow functionality by linking it in your HTML with just a few lines of code.
+Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap flow functionality by linking it in your HTML with just a few lines of code. Terminal runs on the v3 swap protocol supporting Instant Routing, Smart Token Filtering, Ecosystem Token List support.
 
 Provided with the code are several templates to get you started and auto generated code snippets.
 
