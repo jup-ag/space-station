@@ -54,7 +54,7 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 
 6. **Token(List):** The list of tokens currently held in the JLP pool.
 
-7. **Pool Size:** The current size of each token's pool.
+7. **Pool Size:** The current size of each token's pool. Traders' collateral assets are included in the pool.
 
 8. **Current / Target Weightage:** A comparison of the current weightage to the target weightage.
 
