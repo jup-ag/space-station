@@ -226,11 +226,11 @@ const config = {
             label: "Partners",
             position: "left",
           },
-          {
-            to: "/stats",
-            label: "Stats",
-            position: "left",
-          },
+          // {
+          //   to: "/stats",
+          //   label: "Stats",
+          //   position: "left",
+          // },
           {
             to: "/blog",
             label: "Blog",

@@ -44,7 +44,9 @@ const StatsContent: React.FC<{ mode: Mode }> = ({ mode }) => {
   return (
     <div className="stats dark">
       <div className="w-full px-2 lg:px-4 mt-16 lg:p-0 margin-vert--lg mb-[133px] max-w-desktop !mx-auto">
-        <JupOverview mode={mode} />
+      This page is down for maintenance. Please check back later.
+      
+      { /* <JupOverview mode={mode} />
         <div className="mt-8 md:mt-10" />
         <TopTradingPair mode={mode} />
         <div className="mt-8 md:mt-10" />
@@ -66,7 +68,7 @@ const StatsContent: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </div>
         <div className="mt-8 md:mt-10" />
-        <TopPoolProviders mode={mode} />
+        <TopPoolProviders mode={mode} /> */ }
       </div>
     </div>
   );
