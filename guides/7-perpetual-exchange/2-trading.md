@@ -88,7 +88,7 @@ Mark prices are conveniently presented in the same row as the market name _(e.g.
 
 There are 3 types of fees on Jupiter Perpetual:
 
-1. A flat 0.07% (7bps) base fee, applied on notional position size.
+1. A flat 0.06% (6bps) base fee, applied on notional position size.
 2. A price impact fee, simulating the orderbook impact given notional size.
 3. Borrow Fee, paid hourly on open positions, based on notional size.
 
@@ -100,7 +100,7 @@ The goal of the price impact fee is to simulate the orderbook impact given some 
 
 This adequately compensates JLP holders while also reducing the high flat fee.
 
-Read more from Gauntlet's recommendations: https://www.jupresear.ch/t/jupiter-perpetuals-price-impact-fee-mechanism/17140
+Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127).
 
 ### Borrow Fee
 
