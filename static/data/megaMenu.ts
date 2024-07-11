@@ -186,7 +186,7 @@ export const docsLinkItems: LinkGroup[] = [
         href: "/docs/token-list/token-list-api",
       },
       {
-        title: "Submit Token",
+        title: "Validate Token",
         href: "/docs/get-your-token-onto-jup",
       },
     ],
