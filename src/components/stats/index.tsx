@@ -44,9 +44,11 @@ const StatsContent: React.FC<{ mode: Mode }> = ({ mode }) => {
   return (
     <div className="stats dark">
       <div className="w-full px-2 lg:px-4 mt-16 lg:p-0 margin-vert--lg mb-[133px] max-w-desktop !mx-auto">
-      This page is down for maintenance. Please check back later.
-      
-      { /* <JupOverview mode={mode} />
+        This page is down for maintenance.
+        
+        In the meantime, you can refer to the <a href="https://dune.com/ilemi/jupiter-aggregator-solana">Dune dashboard</a>.
+
+        { /* <JupOverview mode={mode} />
         <div className="mt-8 md:mt-10" />
         <TopTradingPair mode={mode} />
         <div className="mt-8 md:mt-10" />
