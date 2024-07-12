@@ -24,7 +24,7 @@ The following RPC providers can provide a RPC node with the geyser plugin:
 
 - [Triton](https://triton.one)
 - [Helius](https://docs.helius.dev) Contact Helius on [Discord](https://discord.com/invite/6GXdee3gBj)
-- [Shyft](https://shyft.to/#solana_grpc_streaming_service) Provides gRPC as a service. [Discord](https://discord.gg/8JyZCjRPmr)
+- [Shyft](https://shyft.to/#solana_grpc_streaming_service) Contact Shyft on [Discord](https://discord.gg/8JyZCjRPmr)
 
 ## Usage
 
