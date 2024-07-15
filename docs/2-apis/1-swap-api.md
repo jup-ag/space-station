@@ -16,7 +16,6 @@ Jupiter API is the easiest way for developers to access liquidity on Solana. Sim
   <summary>Click to play video</summary>
   <video width="320" height="240" controls>
     <source src="/videos/1-swap-api.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
   </video>
 </details>
 
