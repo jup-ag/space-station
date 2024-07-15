@@ -279,6 +279,16 @@ const JupiterProducts = () => {
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
               <div className="text-lg font-bold  text-center">Ape</div>
               <a
+                href="https://ape.jup.ag/"
+                target="_blank"
+                className={cn(
+                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer"
+                )}
+              >
+                <img src="img/home/icon-launch.svg" />
+                <div className="text-xs lg:text-sm">Launch Ape</div>
+              </a>
+              <a
                 href="https://station.jup.ag/guides/ape/overview"
                 target="_blank"
                 className={cn(
