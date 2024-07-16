@@ -10,7 +10,7 @@ description: Learn how to ape into tokens
 
 Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses a secure vault that only your wallet can access. Simply deposit SOL into the vault to trade on [Ape](https://ape.jup.ag) - Ape Safer and Faster.
 
-## Ape UX Sneak Peak
+## Ape UX Walk-Through
   <video width="240" height="320" controls>
     <source src="/videos/ape-video1.mp4" type="video/mp4" />
   </video>
