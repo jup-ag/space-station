@@ -19,7 +19,7 @@ Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses
 Ape fees will be 0.069% during the promotional period.
 :::
 
-## Benefits of Using Ape
+## Benefits of Using Ape 
 
 - Uses vault technology to ensure your wallet won't be compromised apeing into tokens while connecting to untrustworthy sites.
 - Utilizes Jupiters instant-routing feature to find a direct route for liquidity to each coin launched.
