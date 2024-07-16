@@ -358,13 +358,20 @@ transaction.sign([wallet.payer]);
 #### 7. Execute the transaction
 
 ```js
+// get the latest block hash
+const latestBlockHash = await connection.getLatestBlockhash();
+
 // Execute the transaction
 const rawTransaction = transaction.serialize()
 const txid = await connection.sendRawTransaction(rawTransaction, {
   skipPreflight: true,
   maxRetries: 2
 });
-await connection.confirmTransaction(txid);
+await connection.confirmTransaction({
+ blockhash: latestBlockHash.blockhash,
+ lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+ signature: txid
+});
 console.log(`https://solscan.io/tx/${txid}`);
 ```
 
