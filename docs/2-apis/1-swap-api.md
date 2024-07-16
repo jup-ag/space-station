@@ -101,7 +101,8 @@ Get the best swap routes for a token trade pair sorted by largest output token a
 | `excludeDexes`    | String | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
 | `maxAccounts` | Integer | No | Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count. |
 
-:::info The `dexes` and `excludeDexes` parameters can not be set at the same time. If they are both set you will receive an invalid request error. Below is an example of this. :::
+:::info The `dexes` and `excludeDexes` parameters can not be set at the same time. If they are both set you will receive an invalid request error. Below is an example of this.
+:::
 
 ```shell
 curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1&dexes=Raydium,Whirlpool&excludeDexes=Saber' | jq
@@ -110,7 +111,7 @@ curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So1111111111111111111111111
 
   <details>
     <summary>
-      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{color: '#ff0000'}}>&bull; </span>
       <span style={{fontSize: '14px'}}>
       <b style={{color: '#ff0000', marginRight: '36px'}}>400: Bad Request</b>
         Error Response
