@@ -97,8 +97,33 @@ Get the best swap routes for a token trade pair sorted by largest output token a
 | `platformFeeBps`  | Integer | No       | If you want to charge the user a fee, you can specify the fee in BPS. Fee % is taken out of the output token.|
 | `onlyDirectRoutes`    | Boolean | No       | Default is false. Direct Routes limits Jupiter routing to single hop routes only.  |
 | `asLegacyTransaction`    | Boolean | No       | Default is false. Instead of using versioned transaction, this will use the legacy transaction. |
-| `excludeDexes`    | Array | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
+| `dexes`    | String | No | Only these DEXes you pass in will be considered when getting a route. You pass in these DEXes and separate them by `,`.  For example, `Aldrin,Saber`. |
+| `excludeDexes`    | String | No | Default is that all DEXes are included. You can pass in the DEXes that you want to exclude and separate them by `,`. For example, `Aldrin,Saber`. |
 | `maxAccounts` | Integer | No | Find a route given a maximum number of accounts involved, this might dangerously limit routing ending up giving a bad price. The max is an estimation and not the exact count. |
+
+:::info The `dexes` and `excludeDexes` parameters can not be set at the same time. If they are both set you will receive an invalid request error. Below is an example of this. :::
+
+```shell
+curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=1000000&slippageBps=1&dexes=Raydium,Whirlpool&excludeDexes=Saber' | jq
+```
+***Response***
+
+  <details>
+    <summary>
+      <span style={{color: '#018847'}}>&bull; </span>
+      <span style={{fontSize: '14px'}}>
+      <b style={{color: '#ff0000', marginRight: '36px'}}>400: Bad Request</b>
+        Error Response
+      </span>
+    </summary>
+
+```json
+{
+  "errorCode": "INVALID_REQUEST",
+  "error": "Cannot set dexes and exclude dexes at the same time"
+}
+```
+</details>
 
 :::tip Platform Fee
 If you'd like to charge a fee, pass in `platformFeeBps` as a parameter in the quote.

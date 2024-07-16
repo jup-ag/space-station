@@ -5,13 +5,13 @@ description: Learn how to ape into tokens
 ---
 
 <head>
-    <title>How To Place a Limit Order Using Jupiter</title>
+    <title>Ape Overview</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses a secure vault that only your wallet can access. Simply deposit SOL into the vault to trade on [Ape](https://ape.jup.ag) -  Ape Safer and Faster.
+Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses a secure vault that only your wallet can access. Simply deposit SOL into the vault to trade on [Ape](https://ape.jup.ag) - Ape Safer and Faster.
 
-## Ape UX Walk-Through
+## Ape UX Sneak Peak
   <video width="240" height="320" controls>
     <source src="/videos/ape-video1.mp4" type="video/mp4" />
   </video>
@@ -20,7 +20,7 @@ Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses
 Ape fees will be 0.069% during the promotional period.
 :::
 
-## Benefits of Using Ape 
+## Benefits of Using Ape
 
 - Uses vault technology to ensure your wallet won't be compromised apeing into tokens while connecting to untrustworthy sites.
 - Utilizes Jupiters instant-routing feature to find a direct route for liquidity to each coin launched.
