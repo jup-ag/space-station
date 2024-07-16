@@ -46,6 +46,7 @@ const hawksight = '/img/defi/hawksight.png';
 const drift = '/img/defi/drift.png';
 const vybe = '/img/defi/vybe.svg';
 const coinhall = '/img/defi/coinhall.svg';
+const vaultka = '/img/defi/vaultka.png';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -302,6 +303,11 @@ const sections = [
 	title: 'Coinhall',
 	logo: coinhall,
 	link: 'https://coinhall.org'
+      },
+      {
+        title: 'Vaultka',
+        logo: vaultka,
+        link: 'https://www.vaultka.com'
       },
     ],
   },
