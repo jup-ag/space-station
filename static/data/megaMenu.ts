@@ -36,6 +36,10 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/va/how-to-va",
       },
       {
+        title: "Ape",
+        href: "/guides/ape/overview",
+      },
+      {
         title: "Perpetual Exchange",
         href: "/guides/perpetual-exchange/overview",
       },
@@ -48,8 +52,8 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/jupsol/jupsol",
       },
       {
-        title: 'Bridge Comparator',
-        href: '/guides/bridge/comparator',
+        title: "Bridge Comparator",
+        href: "/guides/bridge/comparator",
       },
     ],
   },
