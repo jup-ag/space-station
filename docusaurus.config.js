@@ -219,6 +219,11 @@ const config = {
         },
         items: [
           {
+            to: "/jup",
+            label: "JUP",
+            position: "left",
+          },
+          {
             to: "/guides",
             label: "Guides",
             position: "left",
