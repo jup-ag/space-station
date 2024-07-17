@@ -247,3 +247,15 @@ export const docsLinkItems: LinkGroup[] = [
     ],
   },
 ];
+
+export const jupLinkItems: LinkGroup[] = [
+  {
+    heading: "ASR",
+    children: [
+      {
+        title: "About ASR",
+        href: "/jup/asr/about",
+      },
+    ],
+  },
+];
