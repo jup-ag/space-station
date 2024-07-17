@@ -3,6 +3,18 @@ type LinkGroup = {
   children: { title: string; href: string }[];
 };
 
+export const jupLinkItems: LinkGroup[] = [
+  {
+    heading: "ASR",
+    children: [
+      {
+        title: "About ASR",
+        href: "/jup/asr/about",
+      },
+    ],
+  },
+];
+
 export const guidesLinkItems: LinkGroup[] = [
   {
     heading: "Product Guides",
@@ -24,10 +36,6 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/va/how-to-va",
       },
       {
-        title: "Ape",
-        href: "/guides/ape/overview",
-      },
-      {
         title: "Perpetual Exchange",
         href: "/guides/perpetual-exchange/overview",
       },
@@ -40,8 +48,8 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/jupsol/jupsol",
       },
       {
-        title: "Bridge Comparator",
-        href: "/guides/bridge/comparator",
+        title: 'Bridge Comparator',
+        href: '/guides/bridge/comparator',
       },
     ],
   },
