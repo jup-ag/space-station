@@ -15,7 +15,11 @@ import {
 } from './Menu';
 import NavbarItem from '@theme/NavbarItem';
 import { ChevronDown } from 'lucide-react';
-import { docsLinkItems, guidesLinkItems, jupLinkItems } from '../../../static/data/megaMenu';
+import {
+  docsLinkItems,
+  guidesLinkItems,
+  jupLinkItems,
+} from '../../../static/data/megaMenu';
 
 const CustomTrigger = React.forwardRef((props, ref) => (
   <span ref={ref} {...props} style={{ cursor: 'pointer', color: 'blue' }}>
@@ -27,10 +31,12 @@ export function MegaMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-      <NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuTrigger asChild>
             <div className="p-0 mt-2 -mb-1">
-              <a className="navbar__item navbar__link cursor-pointer ">JUP</a>
+              <a className="navbar__item navbar__link mega_menu px-1 cursor-pointer text-[16px]">
+                JUP
+              </a>
               <ChevronDown
                 className="text-white relative top-[1px] h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                 aria-hidden="true"
@@ -62,7 +68,9 @@ export function MegaMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger asChild>
             <div className="p-0 mt-2 -mb-1">
-              <a className="navbar__item navbar__link cursor-pointer ">Guides</a>
+              <a className="navbar__item navbar__link mega_menu px-1 cursor-pointer text-[16px]">
+                Guides
+              </a>
               <ChevronDown
                 className="text-white relative top-[1px] h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                 aria-hidden="true"
@@ -94,7 +102,9 @@ export function MegaMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger asChild>
             <div className="p-0 mt-2 -mb-1">
-              <a className="navbar__item navbar__link cursor-pointer ">Docs</a>
+              <a className="navbar__item navbar__link mega_menu px-1 cursor-pointer text-[16px]">
+                Docs
+              </a>
               <ChevronDown
                 className="text-white relative top-[1px] h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
                 aria-hidden="true"
@@ -143,8 +153,8 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="leading-none">{title}</div>
+          <p className="line-clamp-2 leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
