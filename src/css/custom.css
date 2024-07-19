@@ -125,6 +125,10 @@
     margin-right: 16px;
   }
 
+  .navbar__item.navbar__link.mega_menu {
+    margin-right: 0px;
+  }
+
   .navbar__items--right .navbar__item {
     padding: 0;
   }

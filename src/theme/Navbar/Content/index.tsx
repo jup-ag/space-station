@@ -12,8 +12,6 @@ import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
 
 import styles from './styles.module.css';
-import useRouteContext from '@docusaurus/useRouteContext';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import { MegaMenu } from '@site/src/components/MegaMenu/MegaMenu';
 
@@ -82,7 +80,7 @@ export default function NavbarContent(): JSX.Element {
           {showDocsMegaMenu ? (
             <>
               <MegaMenu />
-              <NavbarItems items={leftItems.slice(2)} />
+              <NavbarItems items={leftItems.slice(3)} />
             </>
           ) : (
             <NavbarItems items={leftItems} />
