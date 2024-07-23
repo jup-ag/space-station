@@ -26,10 +26,11 @@ All tokens with sufficient liquidity can be found by searching with its mint add
 - Your token must have at least $250 liquidity on both buy and sell sides.
 - The buy and sell price impact shouldn't be more than 30% as well. This is to prevent single-sided liquidity markets.
 
-Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address [here](https://token.jup.ag/strict).
+Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address on [https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}](https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}).
 
 If you have a important situation that requires you to set up a one sided market (eg: on Openbook), reach out in [Discord](https://discord.gg/jup) to discuss options. Note that for UX and safety reasons, this exception will be rarely given.
 
 ### Get your token validated
 
-More details in [this post](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
+- Get a tag from Jupiter's community on the [catdetlist site](https://catdetlist.jup.ag) 
+- More details about the community tag initative in [this post](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
