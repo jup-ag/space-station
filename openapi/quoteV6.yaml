@@ -254,7 +254,7 @@ components:
           type: boolean
           default: true
         useSharedAccounts:
-          description: Default is true. This enables the usage of shared program accountns. That means no intermediate token accounts or open orders accounts need to be created for the users. But it also means that the likelihood of hot accounts is higher.
+          description: This enables the usage of shared program accounts. That means no intermediate token accounts or open orders accounts need to be created for the users. If you are using `destinationTokenAccount`, you must set this to `true`. If this is not set, this will be set to `false` in the case that the route plan is just through one simple AMM that isn't Openbook or Serum. Otherwise, it will be set to `true`.
           type: boolean
           default: true
         feeAccount:
