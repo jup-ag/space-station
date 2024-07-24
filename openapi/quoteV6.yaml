@@ -258,7 +258,7 @@ components:
           type: boolean
           default: true
         feeAccount:
-          description: Fee token account, it can be both the input mint or the output mint for ExactIn and only the input mint for ExactOut, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a feeBps and make sure that the feeAccount has been created). It doesn't support Token2022 tokens.
+          description: Fee token account, it can be either the input mint or the output mint for ExactIn and only the input mint for ExactOut, it is derived using the seeds = ["referral_ata", referral_account, mint] and the `REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3` referral contract (only pass in if you set a feeBps and make sure that the feeAccount has been created). It doesn't support Token2022 tokens.
           type: string
         trackingAccount:
           description: Tracking account, this can be any public key that you can use to track the transactions, especially useful for integrator. Then, you can use the `https://stats.jup.ag/tracking-account/:public-key/YYYY-MM-DD/HH` endpoint to get all the swap transactions from this public key.
