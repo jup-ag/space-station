@@ -193,6 +193,10 @@ export const docsLinkItems: LinkGroup[] = [
         title: "Validate Token",
         href: "/docs/get-your-token-onto-jup",
       },
+      {
+        title: "API Standard for Partners",
+        href: "/docs/token-api-standard",
+      },
     ],
   },
   {
