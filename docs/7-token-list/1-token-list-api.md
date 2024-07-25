@@ -35,7 +35,7 @@ For most people, these 2 tags are all you need. All tokens would either be verif
 | `community` |  Tokens that are verified by the Jupiter community. To get a community tag for your project, go to https://catdetlist.jup.ag          |
 | `strict` |  Tokens that were validated previously in the strict-list repo. This repo will be deprecated, please use the community site to get a community tag going forward.          |
 | `lst` |  Sanctum’s list from their repo which we automatically pull: https://github.com/igneous-labs/sanctum-lst-list/blob/master/sanctum-lst-list.toml        |
-| `birdeye` |   Top 100 trending tokens from birdeye: https://birdeye.so/find-gems?chain=solana        |
+| `birdeye-trending` |   Top 100 trending tokens from birdeye: https://birdeye.so/find-gems?chain=solana        |
 | `clone` | Tokens from Clone protocol, from their repo: https://raw.githubusercontent.com/Clone-Protocol/token-list/main/token_mints.csv       |
 | `pump` |   Tokens that graduated from pump, from their API       |
 
