@@ -78,7 +78,7 @@ export function MegaMenu() {
             </div>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col flex-wrap w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] max-h-[300px]">
+            <ul className="flex flex-col flex-wrap w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px] max-h-[500px]">
               {guidesLinkItems.map((linkGroup) => (
                 <div className="flex flex-col gap-3">
                   <div className="grid gap-3">
