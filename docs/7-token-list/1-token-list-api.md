@@ -15,7 +15,7 @@ title: "Ecosystem Master Token List"
   <summary>
     <div>
       <div className="api-method-box post">GET tokens by tag</div>
-      <p className="api-method-path">https://tokens.jup.ag/tokens?tags='verified'</p>
+      <p className="api-method-path">https://tokens.jup.ag/tokens?tags=verified</p>
     </div>
   </summary>
 
