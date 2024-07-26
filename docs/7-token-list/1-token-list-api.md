@@ -101,3 +101,4 @@ Usage notes:
 ## Resources
  
 - [Background and History](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
+- [Introducing the Ecosystem Token API and standard](https://www.jupresear.ch/t/introducing-the-ecosystem-token-api-and-standard/20601)
