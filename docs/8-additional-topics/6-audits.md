@@ -16,7 +16,7 @@ title: Smart Contracts Security Audits
 
 - [Offside Labs](../assets/JupiterDAO-Mar-2024.pdf)
 
-Perpetuals
+# Perpetuals
 
 - [Offside Labs](../assets/Jupiter-Perpetuals-Feb-2024.pdf)
 - [OtterSec](../assets/ottersec_perpetual_audit_report.pdf)
