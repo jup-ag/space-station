@@ -32,21 +32,24 @@ import { LimitOrderProvider } from "@jup-ag/limit-order-sdk";
 **2. Load limit order instance with connection**
 
 ```js
-// It is recommended that you use your own RPC endpoint.
-// This RPC endpoint is only for demonstration purposes so that this example will run.
+// This RPC endpoint is only for demonstration purposes so it may not work.
 const SOLANA_RPC_ENDPOINT =
   "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/";
 const connection = new Connection($SOLANA_RPC_ENDPOINT);
 
 const limitOrder = new LimitOrderProvider(
   connection,
-  // referralPubKey and name are both optional
-  // provide both to get referral fees
-  // more details in the section below
-  referralPubKey,
-  referralName
+  // referralPubKey and referalName are both optional.
+  // Please provide both to get referral fees.
+  // More details in the section below.
+  // referralPubKey,
+  // referralName
 );
 ```
+
+:::info
+Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore.
+:::
 
 ## Create limit order
 
@@ -101,23 +104,27 @@ const tradeHistoryCount: number = await limitOrder.getTradeHistoryCount({
 ## Cancel order
 
 ```js
-const txid = await limitOrder.cancelOrder({
+const tx = await limitOrder.cancelOrder({
   owner: owner.publicKey,
   orderPubKey: order.publicKey,
 });
+
+await sendAndConfirmTransaction(connection, tx, [owner]);
 ```
 
 ## Batch cancel order
 
 ```js
-const txid = await limitOrder.batchCancelOrder({
+const tx = await limitOrder.batchCancelOrder({
   owner: owner.publicKey,
   ordersPubKey: batchOrdersPubKey,
 });
+
+await sendAndConfirmTransaction(connection, tx, [owner]);
 ```
 
 :::info
-Due to the transaction size limit, the maximum cancellation order in a batch is 10.
+Due to the transaction size limit, the maximum allowed cancellation order per transaction in a batch is 10.
 :::
 
 ## Referral
