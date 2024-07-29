@@ -455,8 +455,7 @@ import fetch from "cross-fetch";
 import { Wallet } from "@project-serum/anchor";
 import bs58 from "bs58";
 
-// It is recommended that you use your own RPC endpoint.
-// This RPC endpoint is only for demonstration purposes so that this example will run.
+// This RPC endpoint is only for demonstration purposes so it may not work.
 const connection = new Connection(
   "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
 );
@@ -465,7 +464,7 @@ const connection = new Connection(
 const base = Keypair.generate();
 
 // get serialized transaction
-const transaction = await (
+const { tx } = await (
   await fetch('https://jup.ag/api/limit/v1/createOrder', {
     method: 'POST',
     headers: {
@@ -479,16 +478,14 @@ const transaction = await (
       outputMint: outputMint.toString(),
       expiredAt: null, // new Date().valueOf() / 1000,
       base: base.publicKey.toString(),
-      // referralAccount and name are both optional
-      // provide both to get referral fees
-      // more details in the section below
-      referralAccount: referral.publicKey.toString(),
-      referralName: "Referral Name"
+      // referralAccount and name are both optional.
+      // Please provide both to get referral fees.
+      // More details in the section below.
+      // referralAccount: referralPublicKey,
+      // referralName: "Referral Name"
     })
   })
 ).json();
-
-const { tx } = transaction;
 
 // deserialize the transaction
 const transactionBuf = Buffer.from(tx, "base64");
