@@ -57,7 +57,7 @@ Jupiter Limit Order provides users with the simplest way to place limit orders o
 
 ### Parameters
 
-| Query        | Type   | Required | Description | 
+| Query        | Type   | Required | Description |
 | ------------ | ------ | -------- | -------- |
 | `wallet`     | string | No       | The wallet address
 | `inputMint`  | string | No       | The contract address of the token used to place the limit order
@@ -134,9 +134,9 @@ curl -X GET "https://jup.ag/api/limit/v1/openorders?wallet=TVeKgyTMp3DjwVFRYC9mY
 | Query    | Type   | Required | Description
 | -------- | ------ | -------- | --------
 | `wallet` | string | Yes      | wallet address
-| `cursor` | number | No       | 
-| `skip`   | number | No       | 
-| `take`   | number | No       | 
+| `cursor` | number | No       |
+| `skip`   | number | No       |
+| `take`   | number | No       |
 
 ### Example Request
 ```shell
@@ -350,13 +350,12 @@ npm i bs58
 Next you can copy the following code snippets to a javascript file _jupiter-api-example.js_. And when you are ready to run the code, just type: _node jupiter-api-example.js_
 
 ```js
-import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
+import { Connection, Keypair, Transaction } from "@solana/web3.js";
 import fetch from "cross-fetch";
 import { Wallet } from "@project-serum/anchor";
 import bs58 from "bs58";
 
-// It is recommended that you use your own RPC endpoint.
-// This RPC endpoint is only for demonstration purposes so that this example will run.
+// This RPC endpoint is only for demonstration purposes so it may not work.
 const connection = new Connection(
   "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed/"
 );
@@ -374,19 +373,16 @@ In this example, you can paste in your private key for testing purposes but this
 const wallet = new Wallet(
   Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || ""))
 );
-const referral = new Wallet(
-  Keypair.fromSecretKey(bs58.decode(process.env.REFERRAL_PRIVATE_KEY || ""))
-);
 ```
 
-**4. Get the serialized transactions to perform the swap**
+**4. Get the serialized transactions to perform the limit order**
 
 ```js
 // Base key are used to generate a unique order id
 const base = Keypair.generate();
 
 // get serialized transactions
-const transactions = await (
+const { tx } = await (
   await fetch('https://jup.ag/api/limit/v1/createOrder', {
     method: 'POST',
     headers: {
@@ -400,16 +396,14 @@ const transactions = await (
       outputMint: outputMint.toString(),
       expiredAt: null, // new Date().valueOf() / 1000,
       base: base.publicKey.toString(),
-      // referralAccount and name are both optional
-      // provide both to get referral fees
-      // more details in the section below
-      referralAccount: referral.publicKey.toString(),
-      referralName: "Referral Name"
+      // referralAccount and name are both optional.
+      // Please provide both to get referral fees.
+      // More details in the section below.
+      // referralAccount: referralPublicKey,
+      // referralName: "Referral Name"
     })
   })
 ).json();
-
-const { tx } = transactions;
 ```
 
 **expiredAt** - Can be either null or Unix timestamp in seconds.
@@ -421,7 +415,7 @@ const { tx } = transactions;
 ```js
 // deserialize the transaction
 const transactionBuf = Buffer.from(tx, "base64");
-var transaction = VersionedTransaction.deserialize(transactionBuf);
+var transaction = Transaction.deserialize(transactionBuf);
 
 // sign the transaction using the required key
 // for create order, wallet and base key are required.
@@ -456,7 +450,7 @@ console.log(`https://solscan.io/tx/${txid}`);
   </summary>
 
 ```js
-import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
+import { Connection, Keypair, Transaction } from "@solana/web3.js";
 import fetch from "cross-fetch";
 import { Wallet } from "@project-serum/anchor";
 import bs58 from "bs58";
@@ -470,8 +464,8 @@ const connection = new Connection(
 // Base key are used to generate a unique order id
 const base = Keypair.generate();
 
-// get serialized transactions
-const transactions = await (
+// get serialized transaction
+const transaction = await (
   await fetch('https://jup.ag/api/limit/v1/createOrder', {
     method: 'POST',
     headers: {
@@ -494,11 +488,17 @@ const transactions = await (
   })
 ).json();
 
-const { tx } = transactions;
+const { tx } = transaction;
 
 // deserialize the transaction
 const transactionBuf = Buffer.from(tx, "base64");
-var transaction = VersionedTransaction.deserialize(transactionBuf);
+var transaction = Transaction.deserialize(transactionBuf);
+
+// add priority fee
+const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+  microLamports: 1, // probably need to be higher for the transaction to be included on chain.
+});
+transaction.add(addPriorityFee);
 
 // sign the transaction using the required key
 // for create order, wallet and base key are required.
@@ -511,7 +511,7 @@ const txid = await connection.sendRawTransaction(rawTransaction, {
   maxRetries: 2,
 });
 await connection.confirmTransaction(txid);
-console.log(`https://solscan.io/tx/${txid}`); 
+console.log(`https://solscan.io/tx/${txid}`);
 ```
 </details>
 
