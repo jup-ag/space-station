@@ -222,6 +222,10 @@ export const docsLinkItems: LinkGroup[] = [
         title: "Wallet List",
         href: "/docs/additional-topics/wallet-list",
       },
+      {
+        title: "Audits",
+        href: "/docs/additional-topics/audits",
+      },
     ],
   },
   {
