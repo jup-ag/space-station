@@ -53,7 +53,29 @@ The Jupiter self hosted Swap API relies on the market cache https://cache.jup.ag
 
 To pick up those new markets the api has to be restarted. The cache is updated every 30 minutes.
 
-This is the only reliance on Jupiter infrastructure
+This is the only reliance on Jupiter infrastructure.
+
+## Adding New Markets (Without Restart)
+
+To pick up new markets without restart, you can set `--enable-add-market` when starting the Jupiter self hosted Swap API. This way, you will see a new endpoint at `/add-market`. To add a new market without restarting the API, you can post to this endpoint. For example, let's say you have a new market on Raydium AMM, you will have to post the following payload to this endpoint:
+
+```
+{
+  "address": "EzvDheLRnPjWy3S29MZYEi5qzcaR1WR5RNS8YhUA5WG5",
+  "owner": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+  "params": { // Optional
+    "serumAsks":"Ac8Hoi4LBbJfG4pCEUu2sS3jkmNrZBv6tbdmEnxAkRsK",
+    "serumBids":"CF1NyAZjWqi8t9WZ7pSiqCiTSr3taZ94EW44AjyZRsnY",
+    "serumCoinVaultAccount":"65LDE8k8WqhgrZy6NDsVQxGuUq3r8fT8bJunt5WPAZAk",
+    "serumEventQueue":"1Xpk12GqjPLS8bkL8XVRHc6nrnunqcJhDha9jUq6Ymc",
+    "serumPcVaultAccount":"AKATaDtSNPc5HemQCJzhph7o76Q1ndRHyKwai5C4wFkR",
+    "serumVaultSigner":"7xookfS7px2FxR4JzpB3bT9nS3hUAENE4KsGaqkM6AoQ"
+  },
+  "addressLookupTableAddress":"5tVPTN4afHxuyS8CNCNrnU7WZJuYeq5e2FvxUdCMQG7F" // Optional
+}
+```
+
+To derive the params, you can look up the [Serum documentation](https://github.com/project-serum/serum-dex/blob/master/dex/src/state.rs#L293-L343).
 
 ## MacOS
 
