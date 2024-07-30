@@ -42,7 +42,7 @@ title: Adding Your Own Fee To Jupiter Swap
 
 The Referral Program is an open source program by Jupiter to provide referral fees for integrators who are integrating Jupiter Swap and Jupiter Limit Order. You can check out the code [here](https://github.com/TeamRaccoons/referral) to gain a better understanding of how it works.
 
-By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token output. If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators.
+By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token input or output. If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators. It doesn't support Token2022 tokens.
 
 ## Usage
 
@@ -64,7 +64,8 @@ Setting your referral fee with the Jupiter API is simple. You just add in the `p
     </div>
   </summary>
 
-  **Parameters in use in the below code example:**
+**Parameters in use in the below code example:**
+
 - `inputMint`: The mint address of the input token.
 - `outputMint`: The mint address of the output token.
 - `amount`: The amount of input tokens to be swapped.
@@ -79,6 +80,7 @@ curl -G "https://quote-api.jup.ag/v6/quote" \
      --data-urlencode "slippageBps=50" \
      --data-urlencode "platformFeeBps=20"
 ```
+
 </details>
 
 [See this for a guide on how to get the route for a swap!](/docs/apis/swap-api#5-get-the-route-for-a-swap)
@@ -88,23 +90,29 @@ curl -G "https://quote-api.jup.ag/v6/quote" \
 async function getQuote() {
   try {
     // Create a new URL object for the quote API endpoint
-    const url = new URL('https://quote-api.jup.ag/v6/quote');
+    const url = new URL("https://quote-api.jup.ag/v6/quote");
 
     // Append query parameters to the URL
     // inputMint: The mint address of the input token (SOL)
-    url.searchParams.append('inputMint', 'So11111111111111111111111111111111111111112');
-    
+    url.searchParams.append(
+      "inputMint",
+      "So11111111111111111111111111111111111111112"
+    );
+
     // outputMint: The mint address of the output token (USDC)
-    url.searchParams.append('outputMint', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v');
-    
+    url.searchParams.append(
+      "outputMint",
+      "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    );
+
     // amount: The amount of input tokens to be swapped (0.1 SOL in lamports, where 1 SOL = 1,000,000,000 lamports)
-    url.searchParams.append('amount', 100000000);
-    
+    url.searchParams.append("amount", 100000000);
+
     // slippageBps: The maximum allowable slippage for the swap (0.5% expressed in basis points)
-    url.searchParams.append('slippageBps', 50);
-    
+    url.searchParams.append("slippageBps", 50);
+
     // platformFeeBps: The platform fee to be added (20 basis points)
-    url.searchParams.append('platformFeeBps', 20);
+    url.searchParams.append("platformFeeBps", 20);
 
     // Perform the fetch request to the constructed URL
     const response = await fetch(url.toString());
@@ -123,7 +131,7 @@ async function getQuote() {
   } catch (error) {
     // Catch any errors that occur during the fetch request or JSON parsing
     // Log the error to the console
-    console.error('Failed to get quote:', error);
+    console.error("Failed to get quote:", error);
   }
 }
 
@@ -143,7 +151,8 @@ On the [`POST /swap`](/api-v6/post-swap) endpoint, remember to add your `feeAcco
     </div>
   </summary>
 
-  **Parameters in use in the below code example:**
+**Parameters in use in the below code example:**
+
 - `quoteResponse`: The response object from the `/quote` API.
 - `userPublicKey`: The public key of the user initiating the swap.
 - `wrapAndUnwrapSol`: Auto wrap and unwrap SOL. Default is true.
@@ -161,13 +170,19 @@ curl -X POST "https://quote-api.jup.ag/v6/swap" \
            "feeAccount": "YourFeeAccountPublicKey"
          }'
 ```
+
 </details>
 
 [Guide for getting the serialized transactions to perform the swap](/docs/apis/swap-api#6-get-the-serialized-transactions-to-perform-the-swap)
 
 ```js
 // Function to find the fee account and get serialized transactions for the swap
-async function getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quoteResponse, wallet) {
+async function getFeeAccountAndSwapTransaction(
+  referralAccountPubkey,
+  mint,
+  quoteResponse,
+  wallet
+) {
   try {
     // Find the fee account program address synchronously
     // Parameters:
@@ -179,7 +194,7 @@ async function getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quot
       [
         Buffer.from("referral_ata"),
         referralAccountPubkey.toBuffer(),
-        mint.toBuffer()
+        mint.toBuffer(),
       ],
       new PublicKey("REFER4ZgmyYx9c6He5XfaTMiGfdLwRnkV4RPp9t9iF3")
     );
@@ -189,16 +204,16 @@ async function getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quot
       quoteResponse, // The quote response from the /quote API
       userPublicKey: wallet.publicKey.toString(), // The user's public key
       wrapAndUnwrapSol: true, // Auto wrap and unwrap SOL (default is true)
-      feeAccount // The fee account obtained from findProgramAddressSync
+      feeAccount, // The fee account obtained from findProgramAddressSync
     };
 
     // Perform the fetch request to the swap API
-    const response = await fetch('https://quote-api.jup.ag/v6/swap', {
-      method: 'POST',
+    const response = await fetch("https://quote-api.jup.ag/v6/swap", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(requestBody) // Convert the request body to a JSON string
+      body: JSON.stringify(requestBody), // Convert the request body to a JSON string
     });
 
     // Check if the response is not OK (status code is not in the range 200-299)
@@ -217,17 +232,22 @@ async function getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quot
   } catch (error) {
     // Catch any errors that occur during the fetch request or JSON parsing
     // Log the error to the console
-    console.error('Failed to get fee account and swap transaction:', error);
+    console.error("Failed to get fee account and swap transaction:", error);
   }
 }
 
 // Example usage of the function
 // Assuming you have defined referralAccountPubkey, mint, quoteResponse, and wallet elsewhere
-getFeeAccountAndSwapTransaction(referralAccountPubkey, mint, quoteResponse, wallet);
+getFeeAccountAndSwapTransaction(
+  referralAccountPubkey,
+  mint,
+  quoteResponse,
+  wallet
+);
 ```
 
 :::note
-The fee token account should be the same mint as your output mint on the swap for ExactIn. For ExactOut, the fee is being taken as the same mint as the input mint. Also, make sure that the fee token account has been created. You can create the fee token account on the referral dashboard.
+The fee token account, it can either be the input mint or the output mint on the swap for ExactIn. For ExactOut, the fee is being taken as the same mint as the input mint. Also, make sure that the fee token account has been created. You can create the fee token account on the referral dashboard. It doesn't support Token2022 tokens.
 :::
 
 ## Referral Javascript SDK
