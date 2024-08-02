@@ -60,7 +60,7 @@ accumulate funding fees at a rate of 0.05 USD per hour.
 
 The maximum allowed leverage is 200x.
 
-Positions where the trader's collateral less fees and less unrealized losses is less than 0.5% of the position size will be liquidated.
+Positions where the trader's collateral less fees and less unrealized losses is less than 0.2% of the position size will be liquidated.
 
 ### Oracle
 
