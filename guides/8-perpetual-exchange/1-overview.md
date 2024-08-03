@@ -9,7 +9,16 @@ Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, off
 
 The LP pool is also integrated into Jupiter to provide liquidity to the overall Solana ecosystem. Jupiter users can swap using the liquidity from the LP pool.
 
+## Jupiter Perpetual Exchange Statistics Dashboard
+
+| Jupiter Perpetual Exchange Dashboard                                                 |
+| ------------------------------------------------------------------------------------ |
+| [Chaos Labs Dashboard](https://community.chaoslabs.xyz/jupiter/risk/overview)        |
+| [Gauntlet Dashboard](https://app.gauntlet.xyz/protocols/jupiter)                     |
+| [Dune Analytics](https://dune.com/jupiterexchange/jupiter-perps)                     |
+
 ## Perpetual Trading Interface
+
 ![Perp1](../img/perps/perps-1.png)
 
 1. **Perpetual Trading Tab:** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
@@ -22,21 +31,25 @@ The LP pool is also integrated into Jupiter to provide liquidity to the overall 
 8. **Order Summary:** This section provides an order summary with all the information and stats calculated. (Please review and confirm your order before submitting the transaction).
 
 ---
+
 ## Positions Tab
+
 ![Perp3](../img/perps/perps-2.png)
 
 1. **Positions Tab:** The Positions tab is where you can view and manage all your current open positions.
 2. **Value Display:** Shows the value of the currently open positions. By hovering over the number value of your position you can see the overall position details. This includes the fees being incurred by your trading actions, such as: opening, closing, and borrowing.
-3. **Size:** Size indicates the current size of your positions factoring in the leverage as well. It's calculated as the initial collateral amount multiplied by the leverage level. 
+3. **Size:** Size indicates the current size of your positions factoring in the leverage as well. It's calculated as the initial collateral amount multiplied by the leverage level.
 4. **Collateral:** This is the initial amount you provided when opening your long or short position. You can use the `Edit` Button to add or remove collateral to more closely manage your positions.
 5. **Entry / Mark Price:** The entry price indicates the price at which the position was opened. The mark price indicates the current market price of the position asset.
 6. **Liquidation Price:** The liquidation price is the threshold at which the mark price reaching this level triggers liquidation. This process is to repay any loan associated with opening the position.
-7. **Take Profit:** Set up a Take Profit order for your position. A take profit order is a conditional sell order set by the user to close a position if it reaches a specified price level. This is a common way to secure profits on a winning trade at pre-defined price levels. 
+7. **Take Profit:** Set up a Take Profit order for your position. A take profit order is a conditional sell order set by the user to close a position if it reaches a specified price level. This is a common way to secure profits on a winning trade at pre-defined price levels.
 8. **Stop Loss:** Set up a Stop Loss order for your position. A stop loss order is a conditional sell order set by the user to close a position if it reaches a specified price level. This is a common way to limit losses on trades.
 9. **Close Positions / Share:** Immediately close all positions or individually close positions, securing gains or losses at the current market price.
 
 ---
+
 ### Trade History Tab
+
 ![Perp4](../img/perps/perps-3.png)
 
 The Trade History tab is where you can review all your past actions and activities that have occurred with your open positions and orders.
@@ -49,7 +62,3 @@ The Trade History tab is where you can review all your past actions and activiti
 6. **Size:** This column reveals the size of the position that triggered the action or event.
 7. **PNL:** The PNL column shows the Profit and Loss associated with the position.
 8. **Fee:** In this column, you can find a transaction link to the action or event that took place on-chain.
-
-
-
-
