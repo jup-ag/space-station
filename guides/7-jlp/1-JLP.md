@@ -1,8 +1,13 @@
 ---
 sidebar_label: "JLP Overview"
-description: "Introduction to JLP"
+description: "Explore what $JLP is, its role in Jupiter, and how it benefits traders. Boost your trading strategy with $JLP with our beginners guide."
 title: "JLP Overview"
 ---
+
+<head>
+    <title>What is  $JLP: Jupiter Liquidity Provider Explained | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem by supplying the necessary liquidity for perpetual traders. Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders to test their perpetual trading strategies. As a result, Jupiter can offer its trading service without needing to hold huge amounts of liquidity, and LPs are rewarded with the majority of the fees.
 

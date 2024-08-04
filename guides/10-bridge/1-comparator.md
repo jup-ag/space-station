@@ -1,11 +1,11 @@
 ---
 sidebar_label: "How to Use the Bridge Comparator"
-description: A walkthrough guide of the Jupiter Bridge Comparator.
+description: Learn to use Jupiter’s Bridge Comparator effectively. Compare routes, transfer tokens, and optimize efficiency.
 title: How to Use the Bridge Comparator
 ---
 
 <head>
-    <title>How to use the Bridge Comparator</title>
+    <title>How to use the Bridge Comparator on Jupiter</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

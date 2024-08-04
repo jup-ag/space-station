@@ -1,7 +1,7 @@
 ---
 title: How Jupiter DCA Works
 sidebar_label: "How DCA Works"
-description: Learn how Dollar Cost Averaging (DCA) works on Jupiter
+description: Explore how Dollar-Cost Averaging works with Jupiter on Solana, and improve your crypto trading strategies.
 ---
 
 <head>

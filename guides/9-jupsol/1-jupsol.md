@@ -1,8 +1,13 @@
 ---
 sidebar_label: "JupSOL Overview"
-description: "Introduction to JupSOL"
+description: "Discover JupSOL, offering high APYs, zero fees, and strong security. Earn rewarding staking and MEV returns while staying liquid in DeFi."
 title: "JupSOL Overview"
 ---
+
+<head>
+    <title>JupSOL Explained: Elevate Earnings with Jupiter's Rewards</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # JupSOL -  A Liquid Staking Token
 

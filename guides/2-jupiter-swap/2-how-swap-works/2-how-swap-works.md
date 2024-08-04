@@ -1,11 +1,11 @@
 ---
 sidebar_label: How Swap Works
-description: How Swap Works
+description: Learn how Jupiter Swap uses smart routing and safety features to innovate token trading on Solana. Discover its mechanisms in this beginners guide.
 title: How the Jupiter Swap Works
 ---
 
 <head>
-    <title>How Swap Works</title>
+    <title>Understanding Jupiter Swap: Smart Routing & Features</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

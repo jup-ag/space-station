@@ -1,6 +1,6 @@
 ---
 sidebar_label: Wrapped SOL
-description: Learn what wrapped SOL is and how to use it in this beginners guide.
+description: Learn what Wrapped SOL (wSOL) is and its benefits for trading. Quick insights and tips at Jupiter Station.
 title: What is Wrapped SOL (wSOL)?
 ---
 

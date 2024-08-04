@@ -1,7 +1,13 @@
 ---
+title: "How Jupiter Perps Work"
 sidebar_label: "How It Works"
-description: Key Concepts of Perpetual Exchange
+description: Explore how Jupiter Perps enables leveraged trading with a LP-based model and integration with Pyth oracles for accuracy.
 ---
+
+<head>
+    <title>Understanding How Jupiter Perps Work: Complete Guide</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # How It Works
 

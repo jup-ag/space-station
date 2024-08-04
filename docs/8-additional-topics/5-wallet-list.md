@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Wallet List"
-description: Learn which wallets are currently supported by Jupiter.
+description: Explore Jupiter compatible wallets such as Phantom, Glow, and Backpack for premium security features.
 title: Compatible Wallets Supported by Jupiter
 ---
 
 <head>
-    <title>What Wallets are Compatible With Jupiter</title>
+    <title>What Wallets are Compatible With Jupiter? Full List</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

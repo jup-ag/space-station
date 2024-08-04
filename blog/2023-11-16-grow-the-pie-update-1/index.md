@@ -1,7 +1,13 @@
 ---
 slug: grow-the-pie-1
 title: "Grow The Pie Update #1"
+description: "Explore the first community airdrop in Grow the Pie Update #1. Learn the allocation process and future plans on Jupiter."
 ---
+
+<head>
+    <title>Grow the Pie Update #1: Community Airdrop Details</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Grow The Pie Update #1: Community Airdrop 
 

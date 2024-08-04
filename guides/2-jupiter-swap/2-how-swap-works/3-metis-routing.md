@@ -1,9 +1,13 @@
 ---
 sidebar_label: Metis Routing
-description: How Metis Routing Protocol improves swap experience on Jupiter
+description: Learn how Jupiter Metis Routing boosts Solana swaps using a unique algorithm for quicker trades, lower slippage, and scalable upgrades.
 title: Metis Routing 
 ---
 
+<head>
+    <title>Jupiter Metis Routing: Optimize Swaps on Solana</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Metis is a heavily modified variant of the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) catered for the key requirements of offering best price routing at scale in a very dynamic operational space.
 

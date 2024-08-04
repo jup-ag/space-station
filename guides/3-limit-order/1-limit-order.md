@@ -1,11 +1,11 @@
 ---
 sidebar_label: How to Use Limit Order
 title: How to Use Limit Order
-description: Learn how to place a limit order on Jupiter with this beginners guide.
+description: Learn how to place a limit order on Jupiter with this step-by-step guide
 ---
 
 <head>
-    <title>How To Place a Limit Order Using Jupiter</title>
+    <title>Limit Orders on Jupiter: Basic User Flow | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

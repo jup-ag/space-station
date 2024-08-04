@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions
 sidebar_label: "Jupiter FAQ"
-description: "Discover frequently asked questions about Jupiter products."
+description: "Discover FAQs on Jupiter Swap, DCA, and more. Get quick answers and master Jupiter's trading tools."
 ---
 
 <head>

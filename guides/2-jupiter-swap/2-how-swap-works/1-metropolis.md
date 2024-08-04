@@ -1,8 +1,14 @@
 ---
 sidebar_label: Metropolis
-description: Jupiter V3 Metropolis upgrade details
+description: "Explore Jupiter V3 Metropolis: better token discovery, improved slippage, and seamless trading. Enhance safety and efficiency."
 title: Metropolis
 ---
+
+<head>
+    <title>Jupiter Metropolis Explained: Enhanced Swapping Guide | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 The Jupiter swap backend systems have been completely re-engineered for the Metropolis update. This upgrade has significantly improved token discovery, slippage management, token search functionality, and safety measures.
 
 ![Metropolis-1.jpect](../../img/jup-swap/Metropolis-1.jpeg)

@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Builder Tips"
-description: Learn tips for building on Solana with Jupiter products.
+description: Learn key tips for using Jupiter to develop on Solana. Boost DApp efficiency and security effortlessly.
 title: General Building Tips
 ---
 
 <head>
-    <title>General Tips For Building on Solana With Jupiter</title>
+    <title>General Tips For Building on Solana With Jupiter | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
