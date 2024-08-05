@@ -105,7 +105,7 @@ To provide an estimated perspective, you can calculate potential revenue by taki
 - Price Impact Fees: Minimum 0.01%
 - Revenue Share Percentage: 75%
 
-Using these values (excluding price impact and hourly borrow fees), the calculation would be as follows:
+Using these values (excluding price impact and hourly borrow fees), the estimated calculation would be as follows:
 
 Total estimated revenue to be deposited into JLP pool:
 
