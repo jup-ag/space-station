@@ -17,7 +17,7 @@ Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem 
 
 ### Rewards and Earnings:
 
- - 75% of all perpetual trading fees are deposited into the JLP pool to be distributed among JLP holders (reflected as an increase in the JLP token price).
+ - 75% of all perpetual trading and impact fees are deposited into the JLP pool to be distributed among JLP holders (reflected as an increase in the JLP token price).
  - Forms an Annual Percentage Rate (APR).
  - Higher trading volume generally leads to higher earnings for JLP holders.
  - More on how it works in [How JLP Works](../jlp/How-JLP-Works).
