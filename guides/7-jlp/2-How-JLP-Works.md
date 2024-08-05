@@ -69,13 +69,13 @@ It is essential to note that pool earnings and losses (index token appreciation/
 
 | Action             | Fee                                                                        |
 | ------------------ | -------------------------------------------------------------------------- |
-| Opening a Position | 7 BPS                                                                     |
-| Closing a Position | 7 BPS                                                                     |
+| Opening a Position | 6 BPS                                                                     |
+| Closing a Position | 6 BPS                                                                     |
 | Price Impact Fee   | Variable (see [reference](../perpetual-exchange/trading#price-impact-fee)) |
 | Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
 | Borrow Rate        | 1 BPS/hour x token utilization percentage                                  |
 
-Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.07%.
+Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.06%.
 
 The price impact fee from larger trades are then added. More analytics on this to follow.
 
@@ -100,7 +100,7 @@ Transactions that move the token's ratio away from the target incur additional f
 To provide an estimated perspective, you can calculate potential revenue by taking the Jupiter Perpetual Exchange's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
 - Total Daily Volume: 50 million
-- Fee Percentage: 0.07%
+- Fee Percentage: 0.06%
 - Price Impact Fees: 0.01% average
 - Revenue Share Percentage: 75%
 
@@ -109,7 +109,7 @@ Using these values, the calculation would be as follows:
 Total revenue to be deposited into JLP pool:
 
 ```
-$50M x 0.08% x 75% = $30,000
+$50M x 0.07% x 75% = $26,250
 ```
 
 To determine your specific share or weight in the total JLP pool, use the following formula:
@@ -127,7 +127,7 @@ For example:
 Finally, you can calculate your generated revenue share by multiplying the results of the first and second calculations:
 
 ```
-revenue share you generate = $30,000 x 0.025% = $7.50
+revenue share you generate = $26,250 x 0.025% = $6.56
 ```
 
 
