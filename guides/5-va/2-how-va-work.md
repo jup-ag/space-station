@@ -1,11 +1,11 @@
 ---
 title: How Jupiter VA Works
 sidebar_label: "How VA Works"
-description: Learn how Value Averaging (VA) works on Jupiter
+description: Explore How Jupiter VA enhances strategy with Value Averaging. Master its mechanisms and features for maximum returns.
 ---
 
 <head>
-    <title>How Value Averaging Works on Jupiter</title>
+    <title>How Value Averaging Works on Jupiter: Full Guide</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

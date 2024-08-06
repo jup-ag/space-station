@@ -1,7 +1,7 @@
 ---
 title: How to use Jupiter VA
 sidebar_label: "How to Use VA"
-description: "Learn how to use Value Averaging on Jupiter to get the best price on your trades."
+description: "Learn how to use Value Averaging on Jupiter to get the best price on your trades in. Learn today!"
 ---
 
 <head>

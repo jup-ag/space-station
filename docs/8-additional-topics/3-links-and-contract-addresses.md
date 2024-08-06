@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Links and Contract Addresses"
-description: Access Jupiter SDK & API contract addresses
+description: "Access Jupiter API links and contract addresses for streamlined SDK integration and effective connectivity."
 title: Helpful Links and Contract Addresses
 ---
 
 <head>
-    <title>Jupiter API Links and Contract Addresses</title>
+    <title>Jupiter API Links and Contract Addresses | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

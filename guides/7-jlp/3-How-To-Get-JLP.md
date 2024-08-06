@@ -1,8 +1,13 @@
 ---
 sidebar_label: How To Get JLP
-description: Step by step guide on how to buy the JLP token
+description: Learn how to buy $JLP tokens via Jupiter Swaps and the JLP Page for a hassle-free experience.
 title: How To Get JLP
 ---
+
+<head>
+    <title>How to Get $JLP: Your Complete Guide to Acquiring JLP Tokens</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Purchasing JLP is a very easy process. That being said, there are a couple of methods to purchase it. 
 

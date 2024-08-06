@@ -1,8 +1,13 @@
 ---
 sidebar_label: "Actions & Blinks"
-description: Learn how to use Solana's new Actions & Blinks with Jupiter
+description: Explore Blinks on Jupiter's leap in Solana swapping and boost your trading experience. Seamless integration across platforms. Learn today in our guide!
 title: Jupiter, Action & Blinks
 ---
+
+<head>
+    <title>Blinks on Jupiter: Innovative Solana Swap Actions | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ### Jupiter: Actions & Blinks
 

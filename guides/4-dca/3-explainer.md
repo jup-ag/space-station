@@ -1,11 +1,11 @@
 ---
 sidebar_label: DCA Explainer and Use Cases
-description: Learn the how and why behind Jupiter's Dollar Cost Averaging system.
+description: Learn the how and why behind Jupiter's Dollar Cost Averaging (DCA) system.
 title: DCA Explainer and Use Cases
 ---
 
 <head>
-    <title>Jupiter DCA Explainer and Use Cases</title>
+    <title>Jupiter DCA Explainer and Use Cases | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

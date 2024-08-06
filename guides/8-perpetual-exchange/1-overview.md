@@ -1,7 +1,12 @@
 ---
 sidebar_label: "Perpetual Exchange Overview"
-description: Perpetual Exchange Overview
+description: Explore Jupiter Perps for up to 100x leverage on Solana, seamless swaps, and optimized trading strategies.
 ---
+
+<head>
+    <title>Understanding Jupiter Perps: Trading on Solana</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 # Perpetual Trading Overview
 

@@ -1,11 +1,11 @@
 ---
 sidebar_label: Payments API
-description: Legacy documentation for V4 Payments API
+description: Discover Jupiter's Legacy V4 Payments API for seamless SPL to USDC conversions.
 title: V4 Payments API
 ---
 
 <head>
-    <title>Jupiter V4 Payments API [Legacy]</title>
+    <title>Jupiter V4 Payments API Documentation [Legacy] | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

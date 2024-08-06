@@ -1,7 +1,13 @@
 ---
 slug: jup-start
 title: "Grow The Pie Update #2"
+description: "Explore Jupiter's Grow the Pie Update—igniting Solana with community projects, education, and new trading avenues"
 ---
+
+<head>
+    <title>Grow the Pie on Solana - Update #2 | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Grow The Pie Update #2: Jupiter Start
 

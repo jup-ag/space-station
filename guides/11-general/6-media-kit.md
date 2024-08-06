@@ -1,11 +1,11 @@
 ---
 title: Jupiter Media Kit
 sidebar_label: "Media Kit"
-description: "Get the official Jupiter media kit, including logo and brand materials."
+description: "Get the official Jupiter media kit, including logo, brand materials, and the $JUP token icon. "
 ---
 
 <head>
-    <title>Download the Jupiter Media Kit on Jupiter Station</title>
+    <title>Download the Jupiter Media Kit | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

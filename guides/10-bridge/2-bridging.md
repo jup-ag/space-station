@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Bridging to Solana"
-description: Learn about the Options for Bridging Assets to Solana
+description: Learn how to bridge assets to Solana efficiently. Explore top tools and get expert tips for smooth, secure crypto transfers.
 title: Bridging to Solana
 ---
 
 <head>
-    <title>Bridging to Solana</title>
+    <title>Bridge to Solana: Step-by-Step Asset Transfer Guide | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

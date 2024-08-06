@@ -1,7 +1,13 @@
 ---
 slug: jup-v3-metis-routing-algo
 title: "Jupiter v3: The Metis Routing Algo"
+description: "Explore Jupiter Metis Routing V3 for enhanced DeFi trades on Solana. Enjoy reduced slippage, DCA integrations, and advanced features."
 ---
+
+<head>
+    <title>Jupiter Metis Routing: V3 Crypto Swaps on Solana</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ![Metis1](Metis1.png)
 

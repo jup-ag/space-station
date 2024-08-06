@@ -1,9 +1,15 @@
 ---
 sidebar_label: "API Standard for Partners"
-description: How to get your data integrated.
+description: "Learn to integrate your tokens with Jupiter Station's Partner API. Streamline token tagging for accurate trading. Visit for more details!"
 slug: "/token-api-standard"
 title: API Standard for Partners
 ---
+
+<head>
+    <title>Jupiter Partner API Standards: An Overview</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
 # API Standard for Partners
 ## How to get your protocol's tokens tagged
 

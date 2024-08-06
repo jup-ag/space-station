@@ -2,11 +2,11 @@
 sidebar_label: "Overview"
 title: Welcome to Jupiverse
 sidebar_position: 1
-description: Learn about Jupiverse, Jupiter DAO, Working Groups and more.
+description: Learn about the Jupiverse, Jupiter products, Working Groups and more. Welcome to Jupiter!
 ---
 
 <head>
-    <title>Jupiter DAO: Welcome Catdets!</title>
+    <title>Jupiter Space Station: Welcome Catdets!</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

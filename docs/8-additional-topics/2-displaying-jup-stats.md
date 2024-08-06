@@ -1,6 +1,6 @@
 ---
 sidebar_label: Jupiter Stats
-description: Learn to fetch key stats such as tickers, swap pairs, and more.
+description: Learn to fetch key stats such as tickers, swap pairs, and more. Examples included
 title: Fetch Jupiter Stats
 ---
 

@@ -1,8 +1,13 @@
 ---
 sidebar_label: "Trading"
 title: "Trading on Jupiter Perpetual Exchange"
-description: Trading on Jupiter Perpetual Exchange
+description: "Master Jupiter Perps trading: Open, manage, and close positions efficiently on Jupiter Station while navigating fees and liquidations."
 ---
+
+<head>
+    <title>Master Trading Jupiter Perps: Complete Guide | Jupiter Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 ## Opening a Position
 

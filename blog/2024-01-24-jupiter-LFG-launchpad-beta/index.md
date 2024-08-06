@@ -1,7 +1,13 @@
 ---
 slug: jupiter-lfg-launchpad
 title: "Jupiter LFG Launchpad"
+description: "Explore Jupiter LFG Launchpad for community-focused, decentralized token launches. Transparent and straightforward, it offers unique liquidity solutions."
 ---
+
+<head>
+    <title>Jupiter LFG Launchpad: Decentralized Token Launch Innovation | Space Station</title>
+    <meta name="twitter:card" content="summary" />
+</head>
 
 Jupiter LFG Launchpad Beta!
 

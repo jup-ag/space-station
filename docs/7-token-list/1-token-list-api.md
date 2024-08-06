@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Ecosystem Token List API"
-description: "Consolidated data for tokens, markets, and ecosystem partners"
+description: "Consolidated data for tokens, markets, and ecosystem partners. Perfect for developers."
 title: "Ecosystem Master Token List"
 ---
 
 <head>
-    <title> Token List API</title>
+    <title>Jupiter Token List API: Your Crypto Data Gateway | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

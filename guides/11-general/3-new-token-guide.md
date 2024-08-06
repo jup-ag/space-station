@@ -1,11 +1,11 @@
 ---
 title: "New Token Guide"
 sidebar_label: "New Token Guide"
-description: "Step-by-step guide of how to start a new token and get it on Jupiter"
+description: "Learn to launch a token on Solana easily with our quick guide. Explore tools, market setup, and verification on Jupiter Station."
 ---
 
 <head>
-    <title>How to Launch a Solana Token | Jupiter Station</title>
+    <title>How to Launch Token on Solana | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

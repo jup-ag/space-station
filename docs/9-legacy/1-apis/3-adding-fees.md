@@ -1,6 +1,6 @@
 ---
 sidebar_label: Adding Fees
-description: Legacy documentation for adding fees in Jupiter Swap V4 API
+description: Legacy documentation for adding fees in Jupiter Swap V4 API. 
 title: V4 Referral Program
 ---
 
