@@ -62,14 +62,3 @@ The maximum allowed leverage is 500x.
 
 Positions where the trader's collateral less fees and less unrealized losses is less than 0.2% of the position size will be liquidated.
 
-### Oracle
-
-Jupiter Perps always use Pyth oracles on the trading prices and chart data. However, there are 2 types of Pyth oracles, the `mainnet-beta` oracle and the `pythnet` oracle.
-
-For position changes, such as opening, closing or liquidating positions, keeper bots utilize Pyth's mainnet-beta prices. In times of congestion, they will use the backup Pythnet oracles. This improves reliability for traders to adjust their positions.
-
-For chart data, we are using the Pyth [Hermes](https://docs.pyth.network/price-feeds/pythnet-price-feeds/hermes) web service. The Hermes web service is using the prices from Pythnet. There might be slight deviations between the chart and your execution prices occasionally, due to the small variation between `mainnet-beta` and `pythnet` prices.
-
-You can check out the SOL/USD mainnet-beta oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta) and the SOL/USD pythnet oracle [here](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet).
-
-You can also utilize [Pyth Benchmarks](https://pyth.network/benchmarks) to check the oracle price for any of Pyth's listed tokens at any timestamp. Use this to independently verify historical oracle prices.
