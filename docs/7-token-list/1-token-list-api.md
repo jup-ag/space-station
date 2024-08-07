@@ -78,18 +78,7 @@ Example response:
     </div>
   </summary>
 
-Get all tradable tokens that meet jup.ag’s routing and liquidity threshold. 
-</details>
-
-<details>
-  <summary>
-    <div>
-      <div className="api-method-box post">GET all tokens</div>
-      <p className="api-method-path">https://tokens.jup.ag/tokens</p>
-    </div>
-  </summary>
-
-Get full token list, including those not on jup.ag. Warning: The full response is large and takes time to load. Check out the other options above.
+Get all tradable tokens that meet jup.ag’s routing and liquidity threshold. This is a large response, pleae consider fetching tokens by tags instead
 </details>
 
 Usage notes:
