@@ -23,7 +23,7 @@ All tokens with sufficient liquidity can be found by searching with its mint add
 ### Tokens with Sufficient Liquidity and On-Chain Metadata are Automatically Listed
 
 - Your token must exist on-chain and have token metadata conforming to the [Metaplex Token Metadata](https://docs.metaplex.com/programs/token-metadata/token-standard).
-- Your token must have at least $250 liquidity on both buy and sell sides.
+- Your token must have at least $500 liquidity on both buy and sell sides.
 - The buy and sell price impact shouldn't be more than 30% as well. This is to prevent single-sided liquidity markets.
 
 Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address on [https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}](https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}).
