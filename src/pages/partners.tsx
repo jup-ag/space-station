@@ -265,7 +265,7 @@ const sections = [
         link: 'https://mango.markets/',
       },
       {
-        title: 'Marinade Finance',
+        title: 'Marinade',
         logo: marinade,
         link: 'https://marinade.finance/',
       },
@@ -358,11 +358,6 @@ const sections = [
         title: 'Crema',
         logo: crema,
         link: 'https://www.crema.finance/',
-      },
-      {
-        title: 'Marinade',
-        logo: marinade,
-        link: 'https://marinade.finance/',
       },
       {
         title: 'Saber',
