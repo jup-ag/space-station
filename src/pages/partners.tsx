@@ -686,7 +686,7 @@ export default function Home(): JSX.Element {
               Let us know or checkout our docs on{' '}
               <a
                 href="/docs"
-                className="underline text-black dark:text-whitefont-bold"
+                className="underline text-blue dark:text-whitefont-bold"
               >
                 how to get started.
               </a>
