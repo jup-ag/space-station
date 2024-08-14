@@ -265,7 +265,7 @@ const sections = [
         link: 'https://mango.markets/',
       },
       {
-        title: 'Marinade Finance',
+        title: 'Marinade',
         logo: marinade,
         link: 'https://marinade.finance/',
       },
@@ -358,11 +358,6 @@ const sections = [
         title: 'Crema',
         logo: crema,
         link: 'https://www.crema.finance/',
-      },
-      {
-        title: 'Marinade',
-        logo: marinade,
-        link: 'https://marinade.finance/',
       },
       {
         title: 'Saber',
@@ -686,7 +681,7 @@ export default function Home(): JSX.Element {
               Let us know or checkout our docs on{' '}
               <a
                 href="/docs"
-                className="underline text-black dark:text-whitefont-bold"
+                className="underline text-blue dark:text-whitefont-bold"
               >
                 how to get started.
               </a>
