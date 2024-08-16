@@ -13,12 +13,6 @@ description: Learn how to use Jupiter with these beginner friendly guides and tu
 
 ![Cats](../guides/img/cat_banner.png)
 
-:::info
-
-These are user-oriented guides for the Jupiter products suite created by community members and maintained by the WWG. If you're looking for technical documentation, please refer to the [developer docs](/docs).
-
-:::
-
 ## Getting Started
 Hello, curious cat! We're so glad you're here to learn more about using Jupiter products. These guides were created to get new users up to speed quickly and to explain the settings and advanced features of the Jupiter platform. As with most things, the best way to get started is to try it out for yourself on [Jup.ag](https://jup.ag).
 
