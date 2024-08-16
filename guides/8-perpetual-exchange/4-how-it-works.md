@@ -82,10 +82,9 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 
 ![alt text](image.png)
 
-Key Benefits:
-
-| Benefits    | Old Oracle                                                                                                                             | Signal Oracle                                                                                  |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+Key Benefits
+| Benefits | Old Oracle | Signal Oracle |
+| --- | ----- | ----- |
 | Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
-| Latency     | User makes a request, Keepers have to wait for the oracle before placing the trade.                                                    | User makes a trade, Keepers immediately process the trade with the oracle.                     |
-| Chart       | Discrepancy between trades placed and the chart.                                                                                       | Signal powers the trading view chart and all position requests, no discrepancy.                |
+| Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
+| Chart | Discrepancy between trades placed and the chart. | Signal powers the trading view chart and all position requests, no discrepancy. |
