@@ -88,3 +88,12 @@ Key Benefits
 | Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
 | Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
 | Chart | Discrepancy between trades placed and the chart. | Signal powers the trading view chart and all position requests, no discrepancy. |
+
+### Pyth as a Fallback Oracle
+
+Perp Keepers still use Pyth:
+
+- As a reference price check (sanity check) against the Signal Oracle, ensuring that the deviation is not too big
+- As a fallback price if Signal’s prices are stale.
+
+This way, Jupiter Perps benefits from the new signal oracle while still relying on Pyth as a backup
