@@ -1,27 +1,24 @@
 # Privacy Policy
 
-*Last updated: Feb 24, 2022*
+<!-- *Last updated: August 16, 2024* -->
 
-**Jupiter**, accessible at: https://jup.ag, one of its main priorities is the privacy of participants who are visitors of https://jup.ag and its dApps *(the “Interface”)*. Jupiter does it best to collect as minimum Personal Data as possible. This Privacy Policy document contains types of data that are collected, used, and recorded by Jupiter.
+**Jupiter**, accessible at: https://jup.ag, one of its main priorities is the privacy of participants who are visitors of https://jup.ag and its dApps _(the “Interface”)_. Jupiter does it best to collect as minimum Personal Data as possible. This Privacy Policy document contains types of data that are collected, used, and recorded by Jupiter.
 
-The Jupiter Interface backed by Dynamic Labs Limited located at: 3rd Floor, J & C Building, Road Town, Tortola, British Virgin Islands, VG1110 which is the controller for your Personal Data within the scope of this Privacy Policy. Jupiter decides “why” and “how” your Personal Data is processed in connection with the Interface. If you have additional questions or require more information about this Privacy Policy, do not hesitate to contact `privacy@jup.ag`.
+The Jupiter Interface backed by Block Raccoon S.A., a company incorporated in Panama, which is the controller for your Personal Data within the scope of this Privacy Policy. Jupiter decides “why” and “how” your Personal Data is processed in connection with the Interface. If you have additional questions or require more information about this Privacy Policy, do not hesitate to contact `privacy@jup.ag`.
 
 This Privacy Policy applies only to the Interface activities and is valid for participants who are visitors to the Interface with regards to the Personal Data that they share and/or which is collected within Jupiter Interface. This Privacy Policy is not applicable to any Personal Data collected offline or via channels other than the Interface. Please read this Privacy Policy carefully to understand our policies and practices regarding your data and how it will be treated by the Interface.
 
-IF YOU DO NOT HAVE THE RIGHT, POWER AND AUTHORITY TO ACT ON BEHALF OF AND BIND THE BUSINESS, ORGANIZATION, OR OTHER ENTITY YOU REPRESENT, PLEASE DO NOT ACCESS OR OTHERWISE USE THE INTERFACE.
-IF YOU ARE INTERESTED IN HOW WE USE COOKIES AND YOU CAN CHANGE YOUR COOKIE CHOICE, PLEASE SEE SECTION 5 “COOKIES AND AUTOMATICALLY-COLLECTED DATA”
+IF YOU DO NOT HAVE THE RIGHT, POWER AND AUTHORITY TO ACT ON BEHALF OF AND BIND THE BUSINESS, ORGANIZATION, OR OTHER ENTITY YOU REPRESENT, PLEASE DO NOT ACCESS OR OTHERWISE USE THE INTERFACE. IF YOU ARE INTERESTED IN HOW WE USE COOKIES AND YOU CAN CHANGE YOUR COOKIE CHOICE, PLEASE SEE SECTION 5 “COOKIES AND AUTOMATICALLY-COLLECTED DATA”
 
-### 1. Changes to this Agreement
+### 1. Changes to this Agreement​
 
 If our data processing practices change, we will update this Privacy Policy accordingly to let you know of them upfront and give you a possibility to either provide your consent, object to a particular processing, or undertake other action you are entitled to under the Regulation. Please keep track of any changes we may introduce to this Privacy Policy. Your continued access to and use of the Interface constitutes your awareness of all amendments made to this Privacy Policy as of the date of your accessing and use of the Interface. Therefore, we encourage you to review this Privacy Policy regularly as you shall be bound by it. If, for some reason, you are not satisfied with our personal data processing practices, your immediate recourse is to stop using the Interface. You do not have to inform us of this decision unless you intend to exercise some of the data protection rights stipulated by GDPR and defined below in this Privacy Policy.
 
-
-### 2. Eligibility
+### 2. Eligibility​
 
 Age. By accessing our using the Interface, you represent and warrant that you are at least eighteen (18) years of age. If you are under the age of eighteen (18), you may not, under any circumstances or for any reason, use the Interface. Please report to us any instances involving the use of the Interface by individuals under the age of 18, should they come to your knowledge.
 
-
-### 3. Applicability
+### 3. Applicability​
 
 This Privacy Policy applies to all your interactions with us via the Interface and your interactions with us in connection therewith.
 
@@ -32,8 +29,7 @@ Below are the categories of our processors used on the Interface due to an inter
 3. Communication vendors;
 4. Analytics, statistics, performance, marketing vendors.
 
-
-### 4. Data processing in connection with the Interface
+### 4. Data processing in connection with the Interface​
 
 **Types of Data Collected**
 
@@ -87,8 +83,7 @@ Sometimes legal requirements oblige us to retain certain data, for specific purp
 
 You may contact us by email at the following email address: `privacy@jup.ag`; We use the data that you provide in an email to us, which you may give voluntarily, only in order to answer your question or to reply to your email in the best possible manner.
 
-
-### 5. Cookies and Automatically Collected Data
+### 5. Cookies and Automatically Collected Data​
 
 As you navigate through and interact with our Interface, we may ask your consent to use cookies, which are small files placed on the hard drive/browser of your computer or mobile device, and web beacons, which are small electronic files located on pages of the Interface, to collect certain information about devices you use, browsing actions, and patterns.
 
@@ -103,10 +98,9 @@ You can choose to disable cookies through your individual browser options. To ge
 - For Safari browser please visit: https://support.apple.com/ru-ru/guide/safari/sfri11471/mac
 - For Internet Explorer browser please refer to: https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d
 
+### 6. Your rights under GDPR​
 
-### 6. Your rights under GDPR
-
-Under certain circumstances, you may have a number of privacy rights concerning the use, storage, and processing of your Personal Data *(e.g., the right to delete your data)*. Here is a list of privacy rights:
+Under certain circumstances, you may have a number of privacy rights concerning the use, storage, and processing of your Personal Data (e.g., the right to delete your data). Here is a list of privacy rights:
 
 - right to be informed - we are publishing this Privacy Policy to keep you informed as to what we do with your Personal Data. You can ask us for Personal Data regarding you that we keep at any time. This information concerns, among other things, the data categories we process, for what purposes we process them, the origin of the data if we did not acquire them directly from you and, if applicable, the recipients to who we have sent your data.
 - right of access – You may ask us whether we process your Personal Data and you have the right to request a copy of the data we hold about you.
@@ -120,26 +114,22 @@ Under certain circumstances, you may have a number of privacy rights concerning 
 
 Please email: `privacy@jup.ag` with any questions about exercising any of the above rights. If You wish to learn more about the GDPR and Your rights, the Information Commissioner’s Office website is a reliable source.
 
-
-### 7. Privacy of children
+### 7. Privacy of children​
 
 Our Interface is not directed to collect any data from people under the age of 18. We do not knowingly allow anyone under 18 years old to submit any data to our Interface. If you believe your child may have provided us with their data, you can contact us using the information in this Policy and we will delete the data from our Interface.
 
-
-### 8. Transfer of Personal Data
+### 8. Transfer of Personal Data​
 
 Transfers to third countries shall be made subject to appropriate safeguards, namely Standard Contractual Clauses adopted by the supervisory authority and approved by the Commission. Copy of the foregoing appropriate safeguards may be obtained by you upon a prior written request sent. We may instruct you on further steps to be taken with the purpose of obtaining such a copy, including your obligation to assume confidentiality commitments in connection with being disclosed the Jupiter proprietary and personal information of third parties as well as terms of their relationships with Jupiter.
 
 Keep in mind that the use of the Interface based on public blockchains is intended to immutably record transactions across wide networks of computer systems. Many blockchains are open to forensic analysis which can lead to deanonymization and the unintentional revelation of Personal Data, in particular when blockchain data is combined with other data. Because blockchains are decentralized or third-party networks that are not controlled or operated by us, we are not able to erase, modify, or alter Personal Data from such networks.
 
-
-### 9. Data Integrity & Security of Processing
+### 9. Data Integrity & Security of Processing​
 
 We take data security very seriously. We work hard to protect the Personal Data you provide us from loss, misuse, or unauthorized access. We utilize a variety of safeguards such as encryption, digital and physical access controls, non-disclosure agreements, and other technical and organizational measures to protect the Personal Data submitted to us, both during transmission and once it is at rest.
 
 Please note that no electronic transmission, storage, or processing of Personal Data can be entirely secure. We cannot guarantee that the security measures we have in place to safeguard Personal Data will never be defeated or fail, or that those measures will always be sufficient or effective. Therefore, although we are committed to protecting your privacy, we do not promise, and you should not expect that your Personal Data will always remain private or secure.
 
-
-### 10. Supervisory authority oversight
+### 10. Supervisory authority oversight​
 
 If you are a data subject whose data we process, you may also have the right to lodge a complaint with a data protection regulator in one or more of the European Union member states. Here you can find a list of data protection authorities in Europe: ​​https://edpb.europa.eu/about-edpb/about-edpb/members_en
