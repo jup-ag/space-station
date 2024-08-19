@@ -73,13 +73,7 @@ For **ALL other positions**, check `Token Balance Change` tab
   - wBTC Token Account for wBTC-Long;
   - USDC and USDT Token Account for ALL Short positions.
 
-- Oracle Price Not Reached
-
-  There are two oracles that we are using for TP/SL, the Pyth Mainnet Oracles and the Pyth Pythnet oracles. For full detail, please refer [here](https://station.jup.ag/guides/perpetual-exchange/how-it-works#oracle).
-
-  Our chart data is using the [Pythnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet) and the positions uses the [Mainet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta).
-
-If you are sure that you have an active ATA for the position and check the Mainnet oracle price and confirm that TP/SL is not triggered at the price it is supposed to, please open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
+If you have an active ATA for the position and TP/SL is not triggered when it is supposed to, please open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
 
 ### 4. Why is my liquidation price changing?
 
