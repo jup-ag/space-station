@@ -70,7 +70,7 @@ Positions where the trader's collateral less fees and less unrealized losses is 
 
 ### Oracle
 
-Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be revealed at Breakpoint), and audited by Offside Labs.
+Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be announced at Breakpoint), and audited by Offside Labs.
 
 This new Oracle Network, known as Signal will be announced at Breakpoint.
 
