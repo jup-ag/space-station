@@ -1,8 +1,8 @@
 ---
 sidebar_label: "Overview"
-title: Product Guides Overview
+title: Guides Overview
 sidebar_position: 1
-description: Learn how to use Jupiter with these beginner friendly guides and tutorials.
+description: Learn about Jupiter and how to use Jupiter with these beginner friendly guides.
 ---
 
 <head>
@@ -14,23 +14,36 @@ description: Learn how to use Jupiter with these beginner friendly guides and tu
 ![Cats](../guides/img/cat_banner.png)
 
 ## Getting Started
-Hello, curious cat! We're so glad you're here to learn more about using Jupiter products. These guides were created to get new users up to speed quickly and to explain the settings and advanced features of the Jupiter platform. As with most things, the best way to get started is to try it out for yourself on [Jup.ag](https://jup.ag).
+Hello, curious cat! We're so glad you're here to learn more about Jupiter and our products. These guides were created to get new cats like yourself up to speed and to explain the inner workings of Jupiter products. 
 
-Another great resource to review is this [**How does a DEX Aggregator work?**](https://oneel.notion.site/Jupiter-Aggregation-0ef3149cd3bb485b8e118432e6cf8472) explainer on DEX Aggregators by community member @oneel_d
+Here's a list of all our official links. Please always double check the URL matches these! 
 
-Join the community and engage with us directly by sharing feedback and ideas in our [Discord](https://discord.gg/jup). Also, be sure to follow us on Twitter [@JupiterExchange](https://twitter.com/JupiterExchange) to stay up-to-date with all of our product and community updates! 
+| Platform | Purpose | Official Link |
+| -------- | ------- | ------------- |
+| Website  | Experience all Jupiter products for yourself | [https://jup.ag](https://jup.ag)|
+| Discord  | Engage with the community and us by sharing feedback and ideas | [https://discord.gg/jup](https://discord.gg/jup)|
+| Twitter  | Follow [@JupiterExchange] to stay up-to-date with all updates | [https://twitter.com/JupiterExchange] (https://twitter.com/JupiterExchange)|
+| Documentation | Read all about Jupiter products, for both users and devs | [https://station.jup.ag/](https://station.jup.ag/)|
+| YouTube | Tune in to Planetary Calls and watch tutorials and guides relating to Jupiter and Solana DeFi | [https://www.youtube.com/@JUPecosystem](https://www.youtube.com/@JUPecosystem)|
+| Reddit  | Join our Reddit community to chat with fellow Catdets on all things Jupiter and DeFi | [https://www.reddit.com/r/jupiterexchange/](https://www.reddit.com/r/jupiterexchange/)|
+| Jupresearch  | Participate in forum discussion regarding Jupiter initiatives, ecosystem projects, and broader decentralised meta | [https://www.jupresear.ch/](https://www.jupresear.ch/)|
+| Launchpad  | Discover and participate in token launches by LFG Launchpad | [https://lfg.jup.ag/](https://lfg.jup.ag/)|
+| Governance | Vote with your staked JUP on DAO proposals and earn Active Staker Rewards | [https://vote.jup.ag/](https://vote.jup.ag/)|
+| J.U.P DAO  | Be a part of Jupiter United Planet or Jupiverse and contribute to governance and voting | [https://www.jup.eco/](https://www.jup.eco/)|
+| Token List  | Understand how token verification works on Jupiter and get your token verified| [https://catdetlist.jup.ag/](https://catdetlist.jup.ag/)|
+| Edge  | Test out the latest product changes before they are live on the main website | [https://edge.jup.ag/](https://edge.jup.ag/)|
+| Ape  | Ape into new tokens in a seamless, fast, yet secure manner with secure vault model | [https://ape.jup.ag/](https://ape.jup.ag/)|
+| Welcome to Solana  | Join us to welcome you to Solana every step of the way | [https://welcome.jup.ag/](https://welcome.jup.ag/)|
+
 
 ---
 
-## Navigating the Product Guides
-- **Jupiter Swap:** Get a detailed walkthrough on [How to Swap](/guides/jupiter-swap/swap). Read [How Swap Works](/guides/jupiter-swap/how-swap-works) to make the best of your swap experience.
-- **Limit Order:** Learn [How to Use Limit Orders](/guides/limit-order/limit-order) and see [How Limit Orders Work](/guides/limit-order/how-lo-work)
-- **Automated Strategies:** Learn [How to DCA](/guides/dca/how-to-dca) and [How to VA](/guides/va/how-to-va). Strengthen your trading arsenal and learn the best [Use Cases](/guides/dca/explainer) for these products.
-- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview).
-- **JLP Pool:** Learn about the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
+## Navigating this Guide
+- **Spot:** Read detailed walkthroughs on all Spot features: Swap, Limit Order, Dollar Cost Averaging (DCA), Value Averaging (VA). Deep dive into how each of them work individually and together to provide the best trading experience for you! 
+- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview) and the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
+- **Ape:** Discover how the vault model, auto-retry, and removal of wallet signature enables fast and secure trades. 
 - **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
-- **General Guides:** Find more general guides related to the Solana ecosystem such as: Creating a New Token, the Jupiter Media Kit, Personal Security on Solana and FAQs about the Jupiter Platform.
+- **Bridge Comparator:** If you're coming to Solana for the first time, we care to provide a seamless experience for you. Read our guide on Bridge Comparator, onramp, and CEX transferring.    
+- **General Guides:** Discover general guides relating to the Solana ecosystem such as personal security, using a block explorer to verify swaps, actions & blinks, token guide for creators, the Jupiter Media Kit, and FAQs about the Jupiter Platform.
 
-Happy trading and welcome to the community!
-
-
+Welcome to the community, J4J (JUP 4 JUP)!
