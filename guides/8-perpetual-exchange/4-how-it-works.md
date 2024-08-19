@@ -80,7 +80,7 @@ This oracle was co-designed with Jupiter, with the usage of Jupiter Perps in min
 
 This oracle is extremely compute-efficient, allowing us to update all 5 oracles (SOL, BTC, ETH, USDC, USDT) when opening and closing positions.
 
-![alt text](image.png)
+![Perps Timeline](image-1.png)
 
 Key Benefits
 | Benefits | Old Oracle | Signal Oracle |
