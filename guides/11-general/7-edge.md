@@ -13,7 +13,7 @@ description: "Explore the latest cutting-edge tech features on Edge. Try out new
 
 ## What is Edge?
 
-Edge, or [edge.jup.ag](https://edge.jup.ag/), is Jupiter's innovation testing ground, designed for power users who want to experiment with cutting-edge tech before they are released on jup.ag.
+Edge, or [edge.jup.ag](https://edge.jup.ag/), is Jupiter's innovation testing ground, designed for power users who want to experiment with cutting-edge tech before they are released on [jup.ag](https://jup.ag/).
 
 On Edge, we ship our newest features for Spot and Perpetuals, let users try it out and give us feedback,    then we re-iterate and improve on the features before it lands into the production site.
 
