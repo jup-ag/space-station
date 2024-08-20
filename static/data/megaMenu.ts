@@ -76,6 +76,10 @@ export const guidesLinkItems: LinkGroup[] = [
         title: "Media Kit",
         href: "/guides/general/media-kit",
       },
+      {
+        title: "Edge",
+        href: "/guides/general/edge",
+      },
     ],
   },
 ];
