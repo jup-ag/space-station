@@ -23,9 +23,9 @@ There are no protocol fees on Jupiter. The only fees are transaction fees and DE
 4. Enter the input amount of the selected token that you want to swap from.
 5. Review the swap route and output token amounts. Checkout the full list of supported DEXes for routing [here](https://station.jup.ag/partners?category=DEXes).
 6. Configure additional parameters to help with your trade, including: Priority Fees, Slippage Settings, and Swap Settings.
-7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be sent to the blockchain, to be fianlized.
-8. A notification toast will appear in the lower left corner that will inform user of the current status of their transaction.
-9. You can view your swap history by clicking on the history icon, or clicking on the wallet on the top right corner.
+7. After you have confirmed all the parameters and inputs, click on the 'Swap' button, and you will be prompted with a confirmation from your wallet. If you 'Confirm', your swap will be sent to the blockchain, to be finalized.
+8. A notification toast will appear in the lower left corner that will inform you of the current status of your transaction.
+9. You can view your swap history at the bottom of the page or click on the wallet at the top right corner.
 
 **Let's go through Jupiter Settings in greater detail below.**
 
@@ -35,8 +35,8 @@ There are no protocol fees on Jupiter. The only fees are transaction fees and DE
 
 ![Jup Swap](../img/jup-swap/jup-swap-1.png "Main jupiter swap screen showing basic user settings and configuration options.")
 
-1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab _(the current tab you are in)_ where a user can instantly spot swap for any supported SPL token.
-2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where a user can place limit orders with a specific price and receive tokens directly in their wallet if the order is triggered and filled.
+1. **Jupiter Swap:** [Jupiter Swap](https://jup.ag/) tab _(the current tab you are in)_ where you can instantly spot swap for any supported SPL token.
+2. **Jupiter Limit Order:** [Jupiter Limit Order](https://jup.ag/limit) tab where you can place limit orders at a specific price and receive tokens directly in their wallet if the order is triggered and filled.
 3. **Global Priority Fee:** [Transaction Priority Fees](https://docs.solana.com/proposals/fee_transaction_priority) is a Solana feature that allows users to bid for priority for their transactions in the leader's queue.
 4. **Jupiter Global Settings:** Select your default settings like language, Solana explorer and RPC endpoint.
 5. **Connect Wallet:** Connect to your preferred wallet to interact with Jupiter.
