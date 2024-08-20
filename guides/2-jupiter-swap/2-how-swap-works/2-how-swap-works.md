@@ -82,14 +82,25 @@ Price Warning is an additional layer of protection implemented by Jupiter to ale
 
 ![Price Warning](../../img/price-warning.png)
 
+### Verification Warning
 
-### Authority/Verification warnings
-
-If tokens have things that are common for scams like freeze authority or there already exists a verified token with the same name, you will see warnings for those. There will be other warnings to keep you safe right on the swap interface!
+Verification Warnings are shown for tokens that haven’t been approved by the community and added to the Jupiter Strict List. Scammers often create fake tokens with names identical to legitimate ones, attempting to deceive users into purchasing these fraudulent tokens.
 
 <img src={require('../../img/jup-swap/authority-warning.png').default} alt="Authority Warning" style={{ width: '60%', height: 'auto' }} />
 
+### Freeze Authority
 
+Freeze Authority (FA) is a control mechanism that allows token issuers to temporarily or permanently halt the transfer or trading of a token. This can be used for both legitimate and harmful purposes.
+
+**Valid Uses of FA:** It is common for regulated tokens, such as stablecoins or RWAs, to have FA to comply with legal requirements. It allows stablecoin and RWA issuers to freeze tokens in cases of fraud, money laundering, terrorism financing, or to comply with law enforcement requests.
+
+**Misuse of FA:** However, FA is most commonly used by scam projects. FA is often abused to lock users out of trading or transferring the scam token, leading to significant losses. It’s a red flag for users, as it indicates a potential for market manipulation or outright fraud.
+
+**Freeze Authority Notifications for Unverified vs. Verified Tokens**
+
+Tokens not on the Jupiter Strict List will display a full FA warning. Tokens verified by the community and approved for the Jupiter Strict List will display a less ominous FA notification.
+
+Users should always assess the presence of FA in a project regardless of verification status and understand the intent behind it. While it can be necessary for stablecoin and RWA projects, more often than not it is used to exploit users.
 
 #### Additional Safety Confirmation
 
