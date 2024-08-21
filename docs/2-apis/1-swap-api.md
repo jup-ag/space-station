@@ -11,7 +11,7 @@ title: "V6 Swap API"
 Jupiter APIs is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
 
 :::info Risk Disclaimer
- Usage of the Swap API is **at your own risk**. In the event of any financial losses outside our official platform, we will not be liable for any refunds or damages.
+**Please use Jupiter's Swap API at your own risk**. [Jupiter's Frontend UI](Jup.ag) contains multiple safeguards and warnings when quoting. Jupiter is not liable for losses incurred by users on other platforms.
 :::
 
 ## V6 API Reference
