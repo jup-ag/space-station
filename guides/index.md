@@ -22,7 +22,7 @@ Here's a list of all our official links. Please always double check the URL matc
 | -------- | ------- | ------------- |
 | Website  | Experience all Jupiter products for yourself | [https://jup.ag](https://jup.ag)|
 | Discord  | Engage with the community and us by sharing feedback and ideas | [https://discord.gg/jup](https://discord.gg/jup)|
-| Twitter  | Follow [@JupiterExchange] to stay up-to-date with all updates | [https://twitter.com/JupiterExchange] (https://twitter.com/JupiterExchange)|
+| Twitter  | Follow [@JupiterExchange] to stay up-to-date with all updates | [https://twitter.com/JupiterExchange](https://twitter.com/JupiterExchange)|
 | Documentation | Read all about Jupiter products, for both users and devs | [https://station.jup.ag/](https://station.jup.ag/)|
 | YouTube | Tune in to Planetary Calls and watch tutorials and guides relating to Jupiter and Solana DeFi | [https://www.youtube.com/@JUPecosystem](https://www.youtube.com/@JUPecosystem)|
 | Reddit  | Join our Reddit community to chat with fellow Catdets on all things Jupiter and DeFi | [https://www.reddit.com/r/jupiterexchange/](https://www.reddit.com/r/jupiterexchange/)|
