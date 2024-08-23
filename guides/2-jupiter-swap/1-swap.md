@@ -87,11 +87,12 @@ This is an advanced setting and should be used with caution.
 
 ### Swap Settings
 
-![Jup Swap 2](../img/jup-swap/jup-swap-5.png "General swap settings for wSOL, versioned transactions, and utilizing direct routes.")
+![Jup Swap 2](../img/jup-swap/jup-swap-5.png "General swap settings for direct routes, wSOL, versioned transactions, and AMM exclusion.")
 
 1.  **Direct Route Only:** Using Direct Route Only ensures that the transaction will only be submitted to a single pool. This will limit a lot of intermediate tokens and filter out a lot of other viable routes that use intermediary tokens.
 2.  **Use wSOL:** Using [Wrapped SOL (wSOL)](../general/wrapped-sol) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
 3.  **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction.
+4.  **AMM Exclusion:** Enabling and disabling specific AMMs is useful for troubleshooting or testing specific AMMs and routes. However, you might not have the best price when disabling AMMs and this setting will reset on page reload. 
 
 ---
 
