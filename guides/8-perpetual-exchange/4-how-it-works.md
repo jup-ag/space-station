@@ -68,3 +68,32 @@ The maximum allowed leverage is 500x.
 
 Positions where the trader's collateral less fees and less unrealized losses is less than 0.2% of the position size will be liquidated.
 
+### Oracle
+
+Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be announced at Breakpoint), and audited by Offside Labs.
+
+This new Oracle Network, known as Signal will be announced at Breakpoint.
+
+This oracle is used as the mark price for opening and closing trades, calculating margin requirements, and triggering SL/TP orders and liquidations on the Jupiter platform.
+
+This oracle was co-designed with Jupiter, with the usage of Jupiter Perps in mind, and comes with key benefits while having an independent team provide the price feed.
+
+This oracle is extremely compute-efficient, allowing us to update all 5 oracles (SOL, BTC, ETH, USDC, USDT) when opening and closing positions.
+
+![Perps Timeline](image-2.png)
+
+Key Benefits
+| Benefits | Old Oracle | Signal Oracle |
+| --- | ----- | ----- |
+| Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
+| Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
+| Chart | Discrepancy between trades placed and the chart. | Signal powers the trading view chart and all position requests, no discrepancy. |
+
+### Pyth as a Fallback Oracle
+
+Perp Keepers still use Pyth:
+
+- As a reference price check (sanity check) against the Signal Oracle, ensuring that the deviation is not too big
+- As a fallback price if Signal’s prices are stale.
+
+This way, Jupiter Perps benefits from the new signal oracle while still relying on Pyth as a backup
