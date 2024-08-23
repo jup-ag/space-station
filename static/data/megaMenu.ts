@@ -43,6 +43,10 @@ export const guidesLinkItems: LinkGroup[] = [
         title: "Bridge Comparator",
         href: "/guides/bridge/comparator",
       },
+      {
+        title: "Jupiter Lock",
+        href: "/guides/jupiter-lock/jupiter-lock",
+      },
     ],
   },
   {
