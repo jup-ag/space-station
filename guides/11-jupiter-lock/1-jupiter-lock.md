@@ -5,7 +5,7 @@ description: "Jupiter Lock is an open-sourced, audited, and free ecosystem tool 
 ---
 
 <head>
-    <title>Jupiter Lock Overview</title>
+    <title>Jupiter Lock</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
@@ -22,7 +22,7 @@ Program code is available here: https://github.com/jup-ag/jup-lock
 Mainnet Deployment: `LocpQgucEQHbqNABEYvBvwoxCPsSbG91A1QaQhQQqjn`
 
 :::info Jupiter Lock is in Beta
-Feel free to submit PRs, suggestions, or reach out to us! If you need help with Jupiter Lock or have any feedback on how to improve, let us know on Discord or [Telegram](t.me/xianxlb).
+Feel free to submit PRs, suggestions, or reach out to us! If you need help with Jupiter Lock or have any feedback on how to improve, let us know on Discord or [Telegram](https://t.me/xianxlb).
 :::
 
 ---
@@ -30,7 +30,7 @@ Feel free to submit PRs, suggestions, or reach out to us! If you need help with 
 ### How to Use Jupiter Lock
 
 :::danger Locks are irrevocable
-For beta, all locks are irrevocable and final. Make sure that you check all details before creating the contract to lock your tokens!
+For beta, all locks are irrevocable and final. Make sure that you check all details before depositing into the contract to lock your tokens!
 :::
 
 **Create Token Lock**
