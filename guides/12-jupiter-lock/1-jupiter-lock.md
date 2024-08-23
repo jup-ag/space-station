@@ -36,31 +36,31 @@ For beta, all locks are irrevocable and final. Make sure that you check all deta
 
 ![lock-walkthrough-video](lock-walkthrough.mp4)
 
-1. Navigate to https://lock.jup.ag/. Double check that the URL in your search bar is correct. 
-2. Click `+ Create Token Lock` button to start creating a new token lock. 
+1. Navigate to https://lock.jup.ag/. 
+2. Click `+ Create Token Lock` button. 
 3. Click `Connect Wallet` button. Note that you can only lock the tokens you have in your connected wallet. 
-4. Search for the token you wish to lock via contract address or ticker. 
-5. Add a Lock Title to name this lock e.g. Team Tokens. 
-6. Fill in the required details:
-   1. Lock Amount. You should be able to see the amount of token within your wallet. 
-   2. Recipient Wallet Address. The tokens will be released to this wallet after the defined lock period. 
-   3. Vesting Start Date. You can select any future date and time. This is based on your current timezone.  
-   4. Vesting Duration and intervals. Vesting Duration determines the entire vesting schedule from the Start Date. 
-   5. (Optional) Cliff Period & intervals. Cliff refers to a time period that has to pass before the tokens start vesting. 
-   6.  Unlock Schedule. This determines how much tokens is being vested and unlocked within that regular time interval. 
-7.  (Optional) Add more locks for the same token but with different parameters by clicking `Add Another Lock` button. 
-8.  Press `Proceed` to review the token lock contract. After confirming all the details, click `Create Contract` button.
-9.  Navigate to Jupiter Lock home page is to view the lock that you’ve created!
+4. Search for the token you wish to lock via contract address or ticker.  
+5. Fill in the required details:
+   1. Lock Title. Name this lock e.g. Team Tokens.
+   2. Lock Amount. You can see the amount of token within your wallet. 
+   3. Recipient Wallet Address. The tokens will be released to this wallet after the defined lock period. 
+   4. Vesting Start Date. You can select any future date and time. This is based on your current timezone.  
+   5. Vesting Duration and intervals. Vesting Duration determines the entire vesting schedule from the Start Date. 
+   6. (Optional) Cliff Period & intervals. Cliff refers to a time period that has to pass before the tokens start vesting. 
+   7.  Unlock Schedule. This determines how much tokens is being vested and unlocked within that regular time interval. 
+6.  (Optional) Add more locks for the same token but with different parameters by clicking `Add Another Lock` button. 
+7.  Press `Proceed` to review the token lock contract. After confirming all the details, click `Create Contract` button.
+8.  Navigate to Jupiter Lock home page is to view the lock that you’ve created!
 
 -----
 
 
 **View Locks & Claim Tokens** 
-1. Navigate to https://lock.jup.ag/. Double check that the URL in your search bar is correct. You will be able to see All Locks powered by Jupiter Lock. 
-2. Click `Connect Wallet` button at the upper right corner of site to check Your Locked Tokens and Locks You Created. 
-    1. Your Locked Tokens include tokens that others and yourself have locked and your wallet is a recipient for. 
-    2. Locks You Created shows the locks that you are a creator for. 
-3. Select the token of interest and check all the locks associated with the token powered by Jupiter Lock. The details include:  
+1. Navigate to https://lock.jup.ag/. You will be able to see All Locks powered by Jupiter Lock. 
+2. Click `Connect Wallet` at the upper right corner to check Your Locked Tokens and Locks You Created. 
+    1. Your Locked Tokens include tokens that others and yourself have locked and your wallet is a recipient. 
+    2. Locks You Created shows the locks that you created. 
+3. Select the token of interest and check all locks associated, powered by Jupiter Lock. The details include:  
     1. Mint Address: The contract address of the token.  
     2. Locked Amount: Lifetime amount of token being locked via Jupiter Lock. This includes vested and claimed tokens, on top of the locked ones.  
     3. Total Supply: Total supply of the token. This provides perspective to the locked amount in relation to the total supply.  
