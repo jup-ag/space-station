@@ -34,7 +34,10 @@ For beta, all locks are irrevocable and final. Make sure that you check all deta
 
 **Create Token Lock**
 
-![lock-walkthrough-video](lock-walkthrough.mp4)
+<video controls style={{ maxWidth: '65%', height: 'auto' }}>
+  <source src={require('../../static/media/lock-walkthrough.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 1. Navigate to https://lock.jup.ag/. 
 2. Click `+ Create Token Lock` button. 
