@@ -6,7 +6,8 @@ title: Smart Contracts Security Audits
 
 # Swap
 
-- [Offside Labs](../assets/Jupiter-Aggregator-Apr-2024.pdf)
+- [Offside Labs](../assets/Jupiter-Aggregator-Apr-2024.pdf) (v6)
+- [Sec3](../assets/2022-08-09_Jupiter_Swap_Sec3.pdf) (v4)
 
 # Limit Order
 
