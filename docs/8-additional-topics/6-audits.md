@@ -22,3 +22,7 @@ title: Smart Contracts Security Audits
 - [Offside Labs](../assets/Jupiter-Perpetuals-Feb-2024.pdf)
 - [OtterSec](../assets/ottersec_perpetual_audit_report.pdf)
 - [Sec3](../assets/sec3_perpetual_audit_report.pdf)
+
+# Lock
+
+- [OtterSec](../assets/jupiter_lock_audit_final.pdf)
