@@ -113,7 +113,13 @@ Your dApp does not have a `<WalletProvider />`, or is a plain HTML/JS website.
 window.Jupiter.init({});
 ```
 
+
+
 ### 3. Setup other props
+:::tip Before you start, get a Free/Paid RPC
+Some recommended RPC providers include [Quicknode](https://quicknode.com/), [Helius](https://www.helius.dev/) & [Triton One](https://triton.one/).
+You can then use the RPC endpoint with Terminal.
+:::
 ```tsx
 window.Jupiter.init({
   /** Required
