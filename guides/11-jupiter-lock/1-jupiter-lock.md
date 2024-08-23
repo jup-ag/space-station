@@ -11,7 +11,8 @@ description: "Jupiter Lock is an open-sourced, audited, and free ecosystem tool 
 
 Jupiter Lock (https://lock.jup.ag/) is an [open-sourced](https://github.com/jup-ag/jup-lock), audited and free way to lock and distribute tokens over-time. Lock will be free for all project teams to lock tokens, implement cliff, and vest non-circulating supply in a clear and transparent manner.
 
-**Jupiter Lock Specifications**
+### Jupiter Lock Specifications
+
 Jupiter Lock is currently in Beta, we aim to improve and introduce additional features. Let us know what you are interested in!
 
 Audited Twice by [OtterSec](https://github.com/jup-ag/jup-lock/blob/main/audits/OtterSec_2024_08_15.pdf) & [Sec3](https://github.com/jup-ag/jup-lock/blob/main/audits/jup-lock_report_final.pdf).
@@ -21,7 +22,7 @@ Program code is available here: https://github.com/jup-ag/jup-lock
 Mainnet Deployment: `LocpQgucEQHbqNABEYvBvwoxCPsSbG91A1QaQhQQqjn`
 
 :::info Jupiter Lock is in Beta
-Feel free to submit PRs, suggestions, or reach out to us! If you need help with Jupiter Lock or have any feedback on how to improve, let us know on Discord or Telegram (t.me/xianxlb).
+Feel free to submit PRs, suggestions, or reach out to us! If you need help with Jupiter Lock or have any feedback on how to improve, let us know on Discord or [Telegram](t.me/xianxlb).
 :::
 
 ---
