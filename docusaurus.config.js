@@ -93,15 +93,6 @@ const config = {
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          blogSidebarTitle: "All posts",
-          blogSidebarCount: "ALL",
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -170,6 +161,10 @@ const config = {
           {
             to: '/guides/jlp/How-JLP-Works',
             from: '/labs/perps-faq',
+          },
+          {
+            to: '/blog-redirect',
+            from: '/blog',
           },
         ],
       },
@@ -246,11 +241,6 @@ const config = {
           {
             to: "/stats",
             label: "Stats",
-            position: "left",
-          },
-          {
-            to: "/blog",
-            label: "Blog",
             position: "left",
           },
           {
