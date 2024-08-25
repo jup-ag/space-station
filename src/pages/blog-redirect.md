@@ -3,9 +3,7 @@ title: Blog has been moved to jupresear.ch!
 slug: /blog-redirect
 ---
 
-<script>
-  window.location.href = "https://www.jupresear.ch/c/archived-blogposts";
-</script>
+<meta http-equiv="refresh" content="0;url=https://www.jupresear.ch/c/archived-blogposts" />
 
 ![redirect-image](../../static/img/jupresearch-banner.png)
 
