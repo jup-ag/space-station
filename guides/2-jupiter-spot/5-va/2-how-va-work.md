@@ -2,6 +2,7 @@
 title: How Jupiter VA Works
 sidebar_label: "How VA Works"
 description: Explore How Jupiter VA enhances strategy with Value Averaging. Master its mechanisms and features for maximum returns.
+slug: /va/how-va-work
 ---
 
 <head>

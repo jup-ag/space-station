@@ -2,6 +2,7 @@
 title: How to use Jupiter VA
 sidebar_label: "How to Use VA"
 description: "Learn how to use Value Averaging on Jupiter to get the best price on your trades in. Learn today!"
+slug: /va/how-to-va
 ---
 
 <head>
@@ -34,7 +35,7 @@ VA features the ability to react to market volatility and price action, in short
 
 ## Jupiter VA Settings
 
-![VA-1](../img/va/va-1.png)
+![VA-1](../../img/va/va-1.png)
 
 1. **VA:** Select the VA tab in the product navigation menu to arrive at the VA terminal.
 2. **Amount:** Specify the total value where your portfolio will increase by.
@@ -64,7 +65,7 @@ VA features the ability to react to market volatility and price action, in short
 
 ### Active VAs
 
-![VA-2](../img/va/va-2.png)
+![VA-2](../../img/va/va-2.png)
 
 1. **Active VAs:** This tab lists out all of your active VA orders.
 2. **Individual VA Orders:** Ongoing VAs with your current input token value and a PnL value.
@@ -90,7 +91,7 @@ VA features the ability to react to market volatility and price action, in short
 
 ### Active VA Orders
 
-![VA-3](../img/va/va-3.png)
+![VA-3](../../img/va/va-3.png)
 
 1. **Orders:** Where all VA transactions will display for active orders.
 2. **Transaction Summary:** Shows each VA transaction, along with the from (input token), rate (input per output), to (output token), respective date and transaction id.
@@ -99,7 +100,7 @@ VA features the ability to react to market volatility and price action, in short
 
 ### Past VAs
 
-![VA-4](../img/va/va-4.png)
+![VA-4](../../img/va/va-4.png)
 
 1. **Past VAs:** Here you will find all your VA order history, whether they completed or were cancelled.
 2. **Overview:** The Overview tab opens up to show the order details and balance summary.
@@ -108,7 +109,7 @@ VA features the ability to react to market volatility and price action, in short
 
 ### Past VA Orders
 
-![VA-5](../img/va/va-5.png)
+![VA-5](../../img/va/va-5.png)
 
 1. **Orders:** All the transactions for your VA order are shown here.
 2. **Transaction Summary:** This shows each individual order amount respective to the date and transaction id.
