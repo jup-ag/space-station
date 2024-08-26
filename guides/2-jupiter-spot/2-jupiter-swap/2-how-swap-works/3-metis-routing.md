@@ -2,6 +2,7 @@
 sidebar_label: Metis Routing
 description: Learn how Jupiter Metis Routing boosts Solana swaps using a unique algorithm for quicker trades, lower slippage, and scalable upgrades.
 title: Metis Routing 
+slug: /jupiter-swap/how-swap-works/metis-routing
 ---
 
 <head>
@@ -19,7 +20,7 @@ Metis enhances our industry-leading aggregator by improving route discovery for 
 
 To find the best price, Metis streams the input tokens to incrementally build a route to split and merge at any stage. By generating the routes for each split iteratively one after another, we can also use the same DEX in different splits - allowing us to find routes with better prices with more complex trades.
 
-![Metis2](../../img/jup-swap/Metis-2.png)
+![Metis2](../../../img/jup-swap/Metis-2.png)
 
 ### Combine Route Generation and Quoting
 
@@ -31,12 +32,12 @@ v2 runs fast when the total number of DEXs used is small since Solana limits us 
 
 Metis(v3) is equipped to handle both of these trends, since the algorithm is able to scale to include more DEXs in a route when account lock limits are increased, and can support more DEXs with only a modest increase in running time.
 
-![Metis3](../../img/jup-swap/Metis-3.png)
+![Metis3](../../../img/jup-swap/Metis-3.png)
 
 ### Performance Improvements
 
 Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These imporivements increase sharply based on the trade size.
 
-![Metis4](../../img/jup-swap/Metis-4.jpg)
+![Metis4](../../../img/jup-swap/Metis-4.jpg)
 
-[Read about more awesome features of Jupiter Swap! ->](/guides/jupiter-swap/how-swap-works/)
+[Read about more awesome features of Jupiter Swap! ->](./2-how-swap-works.md)
