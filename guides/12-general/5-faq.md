@@ -72,7 +72,7 @@ A few scenarios or cases where the order is not being fulfill
 ### Will there be any risk of my order getting frontrun?
 
 - Jupiter DCA added some randomness in executing order to prevent potential frontrunning .
-- For more information on how Jupiter DCA works - [How DCA Works](../dca/how-dca-work)
+- For more information on how Jupiter DCA works - [How DCA Works](../../guides/dca/how-dca-work)
 
 ----
 

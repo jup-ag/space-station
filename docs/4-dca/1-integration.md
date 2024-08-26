@@ -42,7 +42,7 @@ Jupiter Dollar Cost Average (DCA) provides users with the quickest and easiest w
 
 This page will serve as a general guide on integrating DCA into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's DCA program will work regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk)
 
-You can learn more about the mechanics of Jupiter's DCA here: [How DCA Works](/guides/dca/how-dca-work)
+You can learn more about the mechanics of Jupiter's DCA here: [How DCA Works](../../guides/dca/how-dca-work)
 
 ## Address
 
