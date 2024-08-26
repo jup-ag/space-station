@@ -52,7 +52,7 @@ Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/ap
 A few scenarios or cases where the order is not being fulfill
 - If the order size is too large *(and there is insufficient liquidity on-chain)* - in this case, Jupiter keeper will attempt to execute your order in a smaller chunk to partially fill your orders and will continue to do so until order is fully executed
 - The price wick happen for a very short period of time, and the liquidity have all been taken up at that price.
-- For more information on how Jupiter Limit Order works - [How Limit Order Works](../limit-order/how-lo-work)
+- For more information on how Jupiter Limit Order works - [How Limit Order Works](/guides/2-jupiter-spot/3-limit-order/2-how-lo-work.md)
 
 <!-- ### What happened if I close my order that has partially filled? Do I get the balance of my original input token and also filled output token? -->
 ### In the Wallet transaction history, of using the Limit order, I see many failed transactions, did I pay for that transaction fees?

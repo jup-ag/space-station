@@ -2,6 +2,7 @@
 sidebar_label: Partners
 title: Limit Order Partners
 description: Learn about Jupiter's limit order partners including Birdeye and TradingView.
+slug: /limit-order/lo-partners
 ---
 
 <head>
@@ -14,7 +15,7 @@ Jupiter's powerful charts data and technology are powered by <b>Birdeye</b> and 
 <div style={{ height: 80 }}>
   <a href="https://birdeye.so" target="_blank">
     <img
-      src={require('../img/limit-order/birdeye.png').default}
+      src={require('../../img/limit-order/birdeye.png').default}
       alt="Example banner"
       width="80"
       height="80"

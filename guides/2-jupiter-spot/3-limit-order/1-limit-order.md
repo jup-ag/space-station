@@ -2,6 +2,7 @@
 sidebar_label: How to Use Limit Order
 title: How to Use Limit Order
 description: Learn how to place a limit order on Jupiter with this step-by-step guide
+slug: /limit-order/limit-order
 ---
 
 <head>
@@ -34,7 +35,7 @@ Global Settings still apply to the Limit Order Functionality, please reference [
 
 ## Jupiter Limit Order Settings
 
-![Limit Order 2](../img/limit-order/limit-order-1.png)
+![Limit Order 2](../../img/limit-order/limit-order-1.png)
 
 1. **Input:** Pick a token from the selector drop-down and specify the amount of tokens that you want to limit sell.
 2. **Rate/ Price:** Here you specify the limit order rate / price that you're buying the output token (Or `Use Market` for the current market price).
@@ -44,7 +45,7 @@ Global Settings still apply to the Limit Order Functionality, please reference [
 
 ### Open Order
 
-![Limit Order 4](../img/limit-order/limit-order-2.png)
+![Limit Order 4](../../img/limit-order/limit-order-2.png)
 
 The Open Orders section is where users will see their open submitted orders that are in the system and have yet to be filled.
 
@@ -56,7 +57,7 @@ The Open Orders section is where users will see their open submitted orders that
 
 ### Order History
 
-![Limit Order 3](../img/limit-order/limit-order-3.png)
+![Limit Order 3](../../img/limit-order/limit-order-3.png)
 
 Order History section is where users keep track of orders that have been completed or cancelled.
 

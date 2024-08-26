@@ -2,6 +2,7 @@
 sidebar_label: How Limit Order Works
 title: How Limit Order Works
 description: "Discover how Jupiter's limit orders utilize Solana's liquidity for seamless, front-running-free trading. Perfect for all traders."
+slug: /limit-order/how-lo-work
 ---
 
 <head>
