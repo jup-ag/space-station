@@ -113,7 +113,9 @@ Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-
 hourly borrow fee = (tokens borrowed / tokens in the pool) x hourly borrow rate x position size
 ```
 
-Hourly Borrow Rate is at 0.008%. Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
+Hourly Borrow Rate is at 0.008% for SOL, ETH and BTC while 0.01% for USDC and USDT.
+
+Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 
 For long positions, the collateral is the token being longed _(e.g., SOL for SOL longs, BTC for BTC longs)_, while short positions are collateralized with supported stablecoins like USDC or USDT.
 
