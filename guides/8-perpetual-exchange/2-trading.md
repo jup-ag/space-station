@@ -113,6 +113,8 @@ Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-
 hourly borrow fee = (tokens borrowed / tokens in the pool) x hourly borrow rate x position size
 ```
 
+Hourly Borrow Rate is at 0.008%. Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
+
 For long positions, the collateral is the token being longed _(e.g., SOL for SOL longs, BTC for BTC longs)_, while short positions are collateralized with supported stablecoins like USDC or USDT.
 
 Jupiter Perpetual Exchange seamlessly integrates Jupiter Swap. Consequently, when a swap is required during the opening or closing of a position, regular DEX fees and slippages are applicable.
