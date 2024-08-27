@@ -2,6 +2,7 @@
 sidebar_label: "How Referral works"
 description: Learn how to setup referral and get started on earning referral fees from Jupiter swap.
 title: How Jupiter Referral Works
+slug: /jupiter-swap/how-referral-works
 ---
 
 ## Jupiter Referral program

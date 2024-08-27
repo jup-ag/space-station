@@ -2,6 +2,7 @@
 sidebar_label: VA Explainer and Use Cases
 description: Explore Jupiter Value Averaging to optimize investment timing. Maximize your returns and reduce market risks effectively.
 title: VA Explainer and Use Cases
+slug: /va/explainer
 ---
 
 <head>

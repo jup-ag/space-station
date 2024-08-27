@@ -2,6 +2,7 @@
 sidebar_label: How Swap Works
 description: Learn how Jupiter Swap uses smart routing and safety features to innovate token trading on Solana. Discover its mechanisms in this beginners guide.
 title: How the Jupiter Swap Works
+slug: /jupiter-swap/how-swap-works/how-swap-works
 ---
 
 <head>
@@ -16,10 +17,10 @@ The Jupiter Swap is a decentralized exchange aggregator designed to provide the 
 Jupiter V3 introduced multiple improvements to the swap experience! 
 
 The Metropolis upgrade introduced Instant Routing, Dynamic Slippage, Smart Token Filtering, Ecosystem Token List and new Safety features.
-[Dive into these new features in detail here! ->](/guides/jupiter-swap/how-swap-works/metropolis)
+[Dive into these new features in detail here! ->](/guides/2-jupiter-spot/2-jupiter-swap/2-how-swap-works/1-metropolis.md)
 
 Metis, a routing protocol, was also introduced to improve route discovery, reducing slippage and scalability in V3.
-[Dive into key features of the Metis routing protocol here! ->](/guides/jupiter-swap/how-swap-works/metis-routing)
+[Dive into key features of the Metis routing protocol here! ->](/guides/2-jupite  r-spot/2-jupiter-swap/2-how-swap-works/3-metis-routing.md)
 
 
 ### Token Ledger For Increased Swap Success Rates
@@ -68,25 +69,25 @@ To reduce price impact, users can split trades into several smaller trades over 
 
 Be sure to check the minimum amount of destination tokens quoted on the Jupiter interface, and set a Slippage amount to protect yourself.
 
-![Price Impact](../../img/price-impact.png)
+![Price Impact](../../../img/price-impact.png)
 
 ### Slippage
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
-![Slippage](../../img/slippage-setting.png)
+![Slippage](../../../img/slippage-setting.png)
 
 ### Price Warning
 
 Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
 
-![Price Warning](../../img/price-warning.png)
+![Price Warning](../../../img/price-warning.png)
 
 ### Verification Warning
 
 Verification Warnings are shown for tokens that haven’t been approved by the community and added to the Jupiter Strict List. Scammers often create fake tokens with names identical to legitimate ones, attempting to deceive users into purchasing these fraudulent tokens.
 
-<img src={require('../../img/jup-swap/authority-warning.png').default} alt="Authority Warning" style={{ width: '60%', height: 'auto' }} />
+<img src={require('../../../img/jup-swap/authority-warning.png').default} alt="Authority Warning" style={{ width: '60%', height: 'auto' }} />
 
 ### Freeze Authority
 
@@ -106,7 +107,7 @@ Users should always assess the presence of FA in a project regardless of verific
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
-![Safety Modal](../../img/safety-modal.png)
+![Safety Modal](../../../img/safety-modal.png)
 
 ---
 

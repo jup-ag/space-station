@@ -25,7 +25,7 @@ description: "Discover FAQs on Jupiter Swap, DCA, and more. Get quick answers an
 - Slippage occurs because of changing market conditions between the moment the transaction is submitted and its verification.
 - Your slippage rate is an important setting, it works as a protection. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
-- Learn more about [slippage and price impact](../jupiter-swap/how-swap-works)
+- Learn more about [slippage and price impact](/guides/2-jupiter-spot/2-jupiter-swap/2-how-swap-works/2-how-swap-works.md)
 
 ### What does it mean when I get the 'some routes failed to load...'
 
@@ -52,7 +52,7 @@ Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/ap
 A few scenarios or cases where the order is not being fulfill
 - If the order size is too large *(and there is insufficient liquidity on-chain)* - in this case, Jupiter keeper will attempt to execute your order in a smaller chunk to partially fill your orders and will continue to do so until order is fully executed
 - The price wick happen for a very short period of time, and the liquidity have all been taken up at that price.
-- For more information on how Jupiter Limit Order works - [How Limit Order Works](../limit-order/how-lo-work)
+- For more information on how Jupiter Limit Order works - [How Limit Order Works](/guides/2-jupiter-spot/3-limit-order/2-how-lo-work.md)
 
 <!-- ### What happened if I close my order that has partially filled? Do I get the balance of my original input token and also filled output token? -->
 ### In the Wallet transaction history, of using the Limit order, I see many failed transactions, did I pay for that transaction fees?
@@ -72,7 +72,7 @@ A few scenarios or cases where the order is not being fulfill
 ### Will there be any risk of my order getting frontrun?
 
 - Jupiter DCA added some randomness in executing order to prevent potential frontrunning .
-- For more information on how Jupiter DCA works - [How DCA Works](../dca/how-dca-work)
+- For more information on how Jupiter DCA works - [How DCA Works](../../guides/dca/how-dca-work)
 
 ----
 

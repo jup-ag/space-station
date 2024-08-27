@@ -2,6 +2,7 @@
 sidebar_label: DCA Explainer and Use Cases
 description: Learn the how and why behind Jupiter's Dollar Cost Averaging (DCA) system.
 title: DCA Explainer and Use Cases
+slug: /dca/explainer
 ---
 
 <head>
@@ -9,7 +10,7 @@ title: DCA Explainer and Use Cases
     <meta name="twitter:card" content="summary" />
 </head>
 
-![DCA1](../img/dca/DCA(1).png)
+![DCA1](../../img/dca/DCA(1).png)
 
 ## What is Dollar Cost Averaging (DCA)?
 Forecasting whether prices have reached their peak or bottomed out in the short term is one of the most challenging aspects of asset investment. Rather than committing a lump sum in a single transaction, which carries the risk of purchasing near the peak, employing a Dollar-Cost Averaging (DCA) strategy allows you to spread out your investment over time. This helps to smooth out your overall cost, consequently lowering your cost basis. This, in turn, reduces potential losses while enhancing your profitability over the long run.
@@ -29,7 +30,7 @@ Here's an example with the oldest cryptocurrency - BTC in the prior (2018~2019) 
 1. Our average price would have been approximately USD 6,000 / BTC
 1. Fast forward to September 2023, we are still up a whopping 4x despite BTC prices dropping from +/- USD 64k
 
-![Bear Market Accumulation](../img/dca/btc-2018-bear-market-accumulation.png)
+![Bear Market Accumulation](../../img/dca/btc-2018-bear-market-accumulation.png)
 \* *The upper candle stick chart indicates price, the lower line chart indicates RSI.*
 
 **Why not perform a market order when RSI < 30?**

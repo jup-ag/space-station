@@ -2,6 +2,7 @@
 title: How to Use Jupiter DCA
 sidebar_label: "How to Use DCA"
 description: "Learn how to use Dollar Cost Averaging on Jupiter to get the best price on your trades."
+slug: /dca/how-to-dca
 ---
 
 <head>
@@ -32,7 +33,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 
 ## Jupiter DCA Settings
 
-![DCA-1](../img/dca/dca-1.png)
+![DCA-1](../../img/dca/dca-1.png)
 
 1. **DCA:** Select the DCA tab in the product navigation menu to arrive at the DCA terminal.
 2. **Input Token Selector:** Select the token you want to spend/ allocate with your DCA orders.
@@ -54,7 +55,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 
 ### Active DCAs
 
-![DCA-2](../img/dca/dca-2.png)
+![DCA-2](../../img/dca/dca-2.png)
 
 1. **Active DCAs:** This tab lists out all of your active DCA orders.
 2. **Individual DCA Orders:** Ongoing DCAs with a progress bar to indicate how much of the DCA has been executed.
@@ -73,7 +74,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 6. **Close and Withdraw:** Use this to cancel and close the DCA. This will halt the progress on the DCA order and withdraw all funds in the order to your wallet. 
 
 ### Active DCA Orders
-![DCA-3](../img/dca/dca-3.png)
+![DCA-3](../../img/dca/dca-3.png)
 
 1. **Orders:** Where all DCA transactions will display for active orders.
 2. **Trade Summary:** Shows each DCA transaction, along with the filled amount with respective date and transaction id.
@@ -82,7 +83,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 
 ### Past DCAs
 
-![DCA-4](../img/dca/dca-4.png)
+![DCA-4](../../img/dca/dca-4.png)
 
 1. **Past DCAs:** Here you will find all your DCA order history, whether they completed or were cancelled.
 2. **Overview:** The Overview tab opens up to show the order details and balance summary.
@@ -90,7 +91,7 @@ The DCA feature has some very powerful use cases, such as interacting with low l
 4. **Order Summary:** This shows all of the details of the past order including all of the details outlined above.
 
 ### Past DCA Orders
-![DCA-5](../img/dca/dca-5.png)
+![DCA-5](../../img/dca/dca-5.png)
 
 1. **Orders:** All the transactions for your DCA order are shown here.
 2. **Trade Summary:** This shows each individual order amount respective to the date and transaction id.
