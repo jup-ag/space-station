@@ -23,7 +23,7 @@ Program code is available here: https://github.com/jup-ag/jup-lock
 
 Mainnet Deployment: `LocpQgucEQHbqNABEYvBvwoxCPsSbG91A1QaQhQQqjn`
 
-The **IDL** for the Jupiter Lock program can be found here: 
+The **IDL** for the Jupiter Lock program can be found on [Solscan](https://solscan.io/account/LocpQgucEQHbqNABEYvBvwoxCPsSbG91A1QaQhQQqjn#anchorProgramIdl), or available here: 
 
 <DownloadBox fileName="locker.json" /> &nbsp;
 
