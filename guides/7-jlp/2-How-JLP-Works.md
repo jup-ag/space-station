@@ -101,6 +101,20 @@ The transactions involving the addition or removal of liquidity have the primary
 
 Transactions that move the token's ratio away from the target incur additional fees while instructions that move it closer to the target get a fee discount. The fee is based on the swap fee.
 
+### Weightage Rebalancing
+
+Liquidity providers are encouraged to rebalance the pool to their **target weightage**, and fees are determined based on **current weightage**.
+
+![jlp-weightage](jlp-weightage.png)
+
+**What if the current weightage of an asset deviates from its target weightage?** An asset’s current weightage can only deviate from its target weightage by a maximum of **20%**.
+
+**Example:**
+
+- If the target weightage of USDC in the JLP pool is **26%,** the current weightage of the asset in the JLP pool can only reach a minimum of **20.8%** (-20%) or above **31.2%** (+20%).
+- This means that USDC cannot be deposited into the pool if the current weightage goes above **31.2%**%, and USDC cannot be withdrawn from the pool if the current weightage goes below **20.8%**.
+
+
 ### Example Yield
 
 To provide an estimated perspective, you can calculate potential revenue by taking the Jupiter Perpetual Exchange's daily or weekly total volume and multiplying it by a fee percentage. For instance:
