@@ -93,29 +93,39 @@ hourly borrow fee = (tokens borrowed / tokens in the pool) x 0.01% x position si
 
 The swap fee for the pool typically ranges between 0% and 2%.
 
-### Target Ratio and Fees
+### Pool Weightage
 
-In the JLP pool, every token has a specific target ratio or weightage.
-
-The transactions involving the addition or removal of liquidity have the primary purpose of adjusting a token's ratio in the pool to align it more closely with the predefined target. These transactions can be JLP deposits, JLP withdrawals, or token swaps from the JLP pool.
-
-Transactions that move the token's ratio away from the target incur additional fees while instructions that move it closer to the target get a fee discount. The fee is based on the swap fee.
-
-### Weightage Rebalancing
-
-Liquidity providers are encouraged to rebalance the pool to their **target weightage**, and fees are determined based on **current weightage**.
+In the JLP Pool, every token has a specific **target weightage**, or allocation of liquidity in the pool.
 
 ![jlp-weightage](jlp-weightage.png)
 
-**What if the current weightage of an asset deviates from its target weightage?** An asset’s current weightage can only deviate from its target weightage by a maximum of **20%**.
+This weightage is advised by experts like [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chaoslabs.xyz/), who conduct regular risk assessments and market analyses in response to the evolving market conditions.
+
+:::tip
+ More details on the risk assessments can be found on **[Jupiter's research forum](https://www.jupresear.ch/tag/risk)**.
+:::
+
+### Weightage Rebalancing
+
+![weightage-rebalancing](weightage-rebalancing.jpg)
+
+The **current weightage** of each asset in the pool determines the swap fee paid by the liquidity provider when depositing, withdrawing or swapping into/out of JLP via Jupiter Swap.
+
+Transactions that shift an asset’s current weightage **further away** from the target weightage incur additional fees while transactions that shift it **closer to** the target weightage will incur close to 0 fees. This is based on the fee incurred when minting or burning JLP during the swap.
+
+## Weightage Deviation
+
+***How far can the current weightage of an asset deviate from its target weightage?***
+
+An asset’s current weightage can deviate from its target weightage by a maximum of **20%** of the target weightage value.
 
 **Example:**
 
-- If the target weightage of USDC in the JLP pool is **26%,** the current weightage of the asset in the JLP pool can only reach a minimum of **20.8%** (-20%) or above **31.2%** (+20%).
+- If the advised target weightage of **USDC** in the JLP pool is **26%,** the current weightage of the asset in the JLP pool can deviate between a range of **20.8%** (-20%) and **31.2%** (+20%).
 - This means that USDC cannot be deposited into the pool if the current weightage goes above **31.2%**%, and USDC cannot be withdrawn from the pool if the current weightage goes below **20.8%**.
 
 
-### Example Yield
+### Estimating Yield
 
 To provide an estimated perspective, you can calculate potential revenue by taking the Jupiter Perpetual Exchange's daily or weekly total volume and multiplying it by a fee percentage. For instance:
 
