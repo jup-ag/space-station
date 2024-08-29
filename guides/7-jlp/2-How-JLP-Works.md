@@ -99,7 +99,7 @@ In JLP, tokens are assigned a **target weight**, which is set by the team.
 
 ![jlp-weightage](jlp-weightage.png)
 
-Experts like [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chaoslabs.xyz/), conduct regular risk assessments and market analyses in response to the evolving market conditions, and discuss with the community before presenting to the team for rollout. 
+Experts like [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chaoslabs.xyz/) conduct regular risk assessments and market analyses in response to the evolving market conditions, and discuss with the community before presenting to the team for rollout. 
 
 :::tip
  The risk assessments can be accessed via **[Jupiter's research forum](https://www.jupresear.ch/tag/risk)**.
