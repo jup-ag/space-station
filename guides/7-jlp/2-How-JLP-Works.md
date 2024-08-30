@@ -95,7 +95,7 @@ The swap fee for the pool typically ranges between 0% and 2%.
 
 ### Pool Weightage
 
-In JLP, tokens are assigned a **target weight**, which is set by the team. 
+In the JLP pool, each asset is assigned a **target weight**, which is set by the team. 
 
 ![jlp-weightage](jlp-weightage.png)
 
