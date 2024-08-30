@@ -111,6 +111,11 @@ The weightages of each asset in the JLP pool will differ based on market activit
 
 To help maintain the Target Weight, JLP dynamically sets a Swap Fee or Mint/Redeem Fee.
 
+**Example: $USDC**
+
+- If the current weightage of USDC is **higher** than its advised target weightage, USDC deposits into the JLP Pool will incur additional fees, while USDC withdrawals will receive a fee discount.
+- If the current weightage of USDC is **lower** than its advised target weightage, USDC deposits into the JLP Pool will receive a fee discount, while USDC withdrawals will incur additional fees.
+
 ![weightage-rebalancing](weightage-rebalancing.jpg)
 
 Simply put: Transactions that shift an asset’s current weightage **further away** from the target weightage incur additional fees while transactions that shift it **closer to** the target weightage will receive a discount on fees. This is based on the fee incurred when minting or burning JLP during the swap. 
