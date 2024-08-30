@@ -113,7 +113,7 @@ To help maintain the Target Weight, JLP dynamically sets a Swap Fee or Mint/Rede
 
 ![weightage-rebalancing](weightage-rebalancing.jpg)
 
-Simply put: Transactions that shift an asset’s current weightage **further away** from the target weightage incur additional fees while transactions that shift it **closer to** the target weightage will incur close to 0 fees. This is based on the fee incurred when minting or burning JLP during the swap. 
+Simply put: Transactions that shift an asset’s current weightage **further away** from the target weightage incur additional fees while transactions that shift it **closer to** the target weightage will receive a discount on fees. This is based on the fee incurred when minting or burning JLP during the swap. 
 
 This allows JLP to maintain its target weight amid the high volume of spot trading or deposit/withdrawal activity.
 
