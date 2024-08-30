@@ -107,7 +107,7 @@ Experts like [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chao
 
 ### Maintaining Target Weight
 
-The weightages of each asset in JLP will differ based on market activity, particularly Spot Trading or Deposit & Withdrawal of assets into JLP.
+The weightages of each asset in the JLP pool will differ based on market activity, particularly Spot Trading or Deposit & Withdrawal of assets into JLP.
 
 To help maintain the Target Weight, JLP dynamically sets a Swap Fee or Mint/Redeem Fee.
 
