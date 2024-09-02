@@ -12,25 +12,27 @@ title: Add Your Token to Jupiter
 
 ![cat_list2](./cat_list2.png)
 
-:::info Unknown tokens
-We list tokens with sufficient liquidity automatically. These new tokens are marked with the 'Unknown' label, to encourage users to double-check that the mint addresses are the right ones that they wish to interact with before proceeding. The default mode on our UI shows validated tokens first, which projects can request to be on.
+There are 2 things you should note when creating a new token - ensuring your token gets **routed on Jupiter**, and getting your token **verified by the community**.
 
-We felt that this is a good balance to allow users to trade newer tokens – which includes many legitimate projects – while encouraging them to be careful. More details are shared in this [tweet](https://twitter.com/JupiterExchange/status/1580217415593443329?s=20&t=xmsYmPnUZfuS6tQpvEQ7Pg)
+## Instant Routing for New Tokens
 
-All tokens with sufficient liquidity can be found by searching with its mint address regardless of whether they are validated.
-:::
+All markets are instantly routed for **14 days** — you can trade any token listed on any of the supported AMMs.
 
-### Tokens with Sufficient Liquidity and On-Chain Metadata are Automatically Listed
+New tokens are marked with a **'⚠️’** label to encourage users to double-check that the mint addresses are the right ones that they wish to interact with before proceeding. The default mode on our UI shows validated tokens first, which projects can request to be on.
 
-- Your token must exist on-chain and have token metadata conforming to the [Metaplex Token Metadata](https://docs.metaplex.com/programs/token-metadata/token-standard).
-- Your token must have at least $500 liquidity on both buy and sell sides.
-- The buy and sell price impact shouldn't be more than 30% as well. This is to prevent single-sided liquidity markets.
+This encourages users to be careful, while providing them accessibility to new tokens.
 
-Once you've met the requirements above, Jupiter will automatically list your token within a few minutes. You can check whether your market has shown up on Jupiter by looking up your market address on [https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}](https://tokens.jup.ag/token/{YOUR_MINT_ADDRESS}).
+## Getting Your Tokens Fully Routed on Jupiter
 
-If you have a important situation that requires you to set up a one sided market (eg: on Openbook), reach out in [Discord](https://discord.gg/jup) to discuss options. Note that for UX and safety reasons, this exception will be rarely given.
+After **14 days**, if your token pool doesn’t fit the criteria to be fully routed on jupiter, your token will automatically be dropped from routing on jupiter.
 
-### Get your token validated
+Your pools must fit the **following criteria**:
 
-- Get a tag from Jupiter's community on the [catdetlist site](https://catdetlist.jup.ag) 
-- More details about the community tag initative in [this post](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
+- **Price Impact on $500**: A user should encounter less than **30%** price impact after buying and selling the token from the same pool. This ensures there is sufficient liquidity, using a position size of **$500**.
+- **Price Difference**: For additional markets, on already supported tokens, there should be a variance of less than **20%** between the new pool and the pool existing in Routing. 
+
+## Get Your Token Verified by Jupiter’s Community
+
+You can get your token verified by the community by submitting your token for review on [catdetlist.jup.ag](http://catdetlist.jup.ag).
+
+More details about the community tag initiative in [this post](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963).
