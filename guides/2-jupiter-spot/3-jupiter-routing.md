@@ -24,8 +24,8 @@ Routing Groups (0-4) is a way to label markets and treat them differently in rou
 
 - RG 0: Markets dropped from Jupiter Routing but still exist on-chain.
 - RG 1: Also known as Simple Routing, Routing without ALTs.
-- RG 2: full liquidity, ALT created, price impact, price difference (either)
-- RG 3: full liquid, intermediate list.
+- RG 2: Full liquidity, ALT created, price impact, price difference (either).
+- RG 3: Full liquid, intermediate list.
 
 Note: We create [Address Lookup Tables (ALTs)](https://solana.com/docs/advanced/lookup-tables) for markets to add them to full routing. ALT creation requires time + SOL, which is why we only promote tokens to full routing after 14 days and a set criteria.
 
