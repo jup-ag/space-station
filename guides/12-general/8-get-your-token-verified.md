@@ -12,9 +12,9 @@ title: Verify Your Token on Jupiter
 
 ![verify-token-banner](../img/verify-token-banner.png)
 
-New tokens are marked with a **'⚠️’** label to encourage users to double-check that the mint addresses are the right ones that they wish to interact with before proceeding. The default mode on our UI shows verified tokens first, which projects can request to be on.
+All unverified tokens are marked with a **'⚠️’** label to encourage users to double-check that the mint addresses are the right ones before trading.
 
-If you've created a token and want to get it verified on Jupiter, you can submit your token for review on [catdetlist.jup.ag](http://catdetlist.jup.ag).
+If you've created a token and want to get it verified on the Jupiter Ecosystem List, you can submit your token for review on [catdetlist.jup.ag](http://catdetlist.jup.ag).
 
 For approval, your project needs to:
 
