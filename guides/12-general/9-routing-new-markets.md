@@ -23,10 +23,12 @@ To ensure your market gets routed on Jupiter after 14 days, your market must fit
 Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact after swapping in AND out of the token from the same pool. 
 
 ```
-Price Impact = ($500 - Final SOL value) / $500
+Price Impact = ($500 - Final USD value) / $500
 ```
 
-For example, a user swaps **$500** worth of SOL into the token, then swaps back into SOL. If the price impact is more than **30%**, it means that there is insufficient liquidity in the pool for the benchmark position size of **$500**.
+For example, a user swaps **$500** worth of SOL into the token, then swaps the same output amount back into SOL. We then use the formula to calculate the price impact percentage.
+
+If the price impact is more than **30%**, it means that there is insufficient liquidity in the pool for the benchmark position size of **$500**.
 
 ![price-impact-criteria](../img/price-impact-criteria.jpg)
 
