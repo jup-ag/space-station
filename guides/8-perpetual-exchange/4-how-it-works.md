@@ -82,7 +82,7 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 
 ![Perps Timeline](image-2.png)
 
-Key Benefits
+#### Key Benefits
 | Benefits | Old Oracle | Signal Oracle |
 | --- | ----- | ----- |
 | Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
