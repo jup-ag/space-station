@@ -109,6 +109,10 @@ export const docsLinkItems: LinkGroup[] = [
         href: "/docs/apis/price-api",
       },
       {
+        title: "Price API V2 (Beta)",
+        href: "/docs/apis/price-api-v2-beta",
+      },
+      {
         title: "Flash Fill",
         href: "/docs/apis/flash-fill",
       },
