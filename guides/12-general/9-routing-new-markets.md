@@ -20,7 +20,7 @@ To ensure your market gets routed on Jupiter after 14 days, your market must fit
 
 1. **Price Impact on $500**
 
-Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact (or a loss of less than **$150**) after swapping in AND out of the token from the same pool. 
+Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact after swapping in AND out of the token from the same pool. 
 
 ```
 Price Impact = ($500 - Final SOL value) / $500
