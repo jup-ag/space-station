@@ -9,6 +9,10 @@ title: "Price API V2 (Beta)"
     <meta name="twitter:card" content="summary" />
 </head>
 
+:::info
+This endpoint is still in beta. This endpoint is subject to change, use of these APIs in production applications is not recommended.
+:::
+
 ## GET /price
 
 This endpoint retrieves price information for specified token IDs.
