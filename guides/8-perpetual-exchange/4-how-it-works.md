@@ -9,9 +9,7 @@ description: Explore how Jupiter Perps enables leveraged trading with a LP-based
     <meta name="twitter:card" content="summary" />
 </head>
 
-# How It Works
-
-## Overview
+### Overview
 
 Jupiter Perps is a LP-based perpetual exchange based on oracle prices.
 
@@ -19,8 +17,6 @@ Our pool consists of 5 tokens, SOL, ETH, WBTC, USDC, and USDT. Users acquire JLP
 
 Traders open leveraged positions by putting up collateral and borrowing
 the rest of the position from the pool.
-
-## For Traders
 
 ### Example Trade
 
