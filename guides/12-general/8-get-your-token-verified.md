@@ -28,4 +28,9 @@ For approval, your project needs to:
 Your token does not have to be verified to be tradable. All new pools are supported for instant routing for **14 days** before pools get re-evaluated. Remind your users to search via your mint address so they can swap safely!
 :::
 
-More details about the community tag initiative in [this post](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963).
+More resources on the community tag initiative can be found here:
+
+- **Community Tag Application Site**: [https://catdetlist.jup.ag/](https://catdetlist.jup.ag/)
+- **Community Tag FAQ**: [https://www.jupresear.ch/t/jupiter-community-tag-faq/19168](https://www.jupresear.ch/t/jupiter-community-tag-faq/19168)
+- **Community Tag Overview**: [https://www.jupresear.ch/t/get-your-token-a-community-tag/18963](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
+- **Master Token List API**: [https://www.jupresear.ch/t/ecosystem-master-token-list/19786](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
