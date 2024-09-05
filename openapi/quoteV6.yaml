@@ -288,6 +288,14 @@ components:
           type: boolean
         quoteResponse:
           $ref: '#/components/schemas/QuoteResponse'
+        dynamicSlippage:
+          description: A dynamic slippage estimation based on a set of heuristics that accounts for the type of token traded and user's max slippage tolerance, providing an optimal value that safeguards the user while ensuring success rate.
+          type: object
+          properties:
+            maxBps:
+              description: The user max slippage, note that jup.ag UI defaults to 300bps (3%).
+              type: integer
+              format: int32
 
     SwapResponse:
       type: object
@@ -298,6 +306,21 @@ components:
           type: number
         prioritizationFeeLamports:
           type: number
+        dynamicSlippageReport:
+          type: object
+          properties:
+            slippageBps:
+              type: integer
+              format: int32
+            otherAmount:
+              type: integer
+              format: int32
+            simulatedIncurredSlippageBps:
+              type: integer
+              format: int32
+            amplificationRatio:
+              type: string
+
       required:
         - swapTransaction
         - lastValidBlockHeight
