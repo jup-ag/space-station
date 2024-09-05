@@ -110,13 +110,9 @@ When price impact or price deviation is too high, we have an additional modal as
 
 ### MEV Protection
 
-Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. 
+Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. Read more about how it works [here](https://www.jupresear.ch/).
 
 ![MEV Protection](../../../img/mev-new.png)
-
-
-Read more about how it works [here](https://www.jupresear.ch/).
-
 
 ## Swap Tips
 
