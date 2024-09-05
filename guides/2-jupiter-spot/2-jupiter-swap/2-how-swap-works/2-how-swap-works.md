@@ -76,6 +76,12 @@ Slippage occurs when market conditions change between transaction submission and
 
 ![Slippage](../../../img/slippage-new.png)
 
+### MEV Protection
+
+Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. Read more about how it works [here](https://www.jupresear.ch/).
+
+![MEV Protection](../../../img/mev-new.png)
+
 ### Price Warning
 
 Price Warning is an additional layer of protection implemented by Jupiter to alert users when the quoted price deviates from the reference price (in this case, CoinGecko's pricing). Price warnings can be caused by various external factors, and Jupiter adds an extra confirmation layer to prevent misclicks or human errors.
@@ -107,12 +113,6 @@ Users should always assess the presence of FA in a project regardless of verific
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
 ![Safety Modal](../../../img/safety-modal.png)
-
-### MEV Protection
-
-Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. Read more about how it works [here](https://www.jupresear.ch/).
-
-![MEV Protection](../../../img/mev-new.png)
 
 ## Swap Tips
 
