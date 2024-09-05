@@ -74,7 +74,7 @@ Be sure to check the minimum amount of destination tokens quoted on the Jupiter 
 
 Slippage occurs when market conditions change between transaction submission and verification. The slippage rate is an important setting to prevent users from receiving fewer tokens than expected. If the price falls below the slippage rate, the transaction fails.
 
-![Slippage](../../../img/slippage-setting.png)
+![Slippage](../../../img/slippage-new.png)
 
 ### Price Warning
 
@@ -108,6 +108,15 @@ When price impact or price deviation is too high, we have an additional modal as
 
 ![Safety Modal](../../../img/safety-modal.png)
 
+### MEV Protection
+
+Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. 
+
+![MEV Protection](../../../img/mev-new.png)
+
+
+Read more about how it works [here](https://www.jupresear.ch/).
+
 
 ## Swap Tips
 
@@ -119,10 +128,3 @@ When price impact or price deviation is too high, we have an additional modal as
 - **Jupiter cannot guess the final spot price or know what is a reasonable price impact for you**. We encourage checking these before the swap:
   - Check the Price Impact. *Price impact varies across the AMM and DEXes that Jupiter uses in each route.*
   - Check against a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or CEX pricing.
-
-
-## MEV Protection
-
-Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. 
-
-Read more about how it works [here](https://www.jupresear.ch/).
