@@ -1,5 +1,5 @@
 ---
-sidebar_label: Price API
+sidebar_label: Price API V1
 description: Get real-time on-chain prices for any token with Jupiter Price API. Supports up to 100 tokens per call. Easy integration for developers.
 title: "Price API: Get On-Chain Price For Any Token"
 ---
