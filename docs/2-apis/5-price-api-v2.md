@@ -21,7 +21,7 @@ This endpoint retrieves price information for specified token IDs.
 
 Query Parameters:
 
-- `ids`: A comma-separated list of token IDs (mint addresses) for which to fetch prices. Maximum of 10 unique IDs allowed.
+- `ids`: A comma-separated list of token IDs (mint addresses) for which to fetch prices. Maximum of 100 unique IDs allowed.
 - `show_extra_info`: (Optional) A boolean flag to indicate whether to include additional information in the response, defaults to false if not specified.
 
 ### Response
@@ -192,15 +192,3 @@ Note: This is flattened, please refer to the JSON [response](https://www.notion.
 | `sellAt` | Epoch seconds of when the sell quote was retrieved. |
 | `confidenceLevel` | A `String` indicating the confidence level (High, Medium, or Low). 
 
-More explained below.
-
-### Differences between PriceV1 & PriceV2
-
-|  | v1 | v2 |
-| --- | --- | --- |
-| `vsTokens` | ✅ | ❌ |
-| `Symbol` | ✅ | ❌ |
-| No. of mints on request | **100** | **10** |
-| `showExtraInfo`  | ❌ | ✅ |
-| `price` | `buyPrice` | `derivedPrice`  using `buyPrice` & `sellPrice` |
-| `confidenceLevel` | ❌ | ✅ |
