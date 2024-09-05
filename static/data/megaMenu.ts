@@ -69,6 +69,14 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/general/new-token-guide",
       },
       {
+        title: "Get Your Token Verified",
+        href: "/guides/general/get-your-token-verified",
+      },
+      {
+        title: "Market Routing Guide",
+        href: "/guides/general/market-routing-guide",
+      },
+      {
         title: "Wrapped SOL",
         href: "/guides/general/wrapped-sol",
       },

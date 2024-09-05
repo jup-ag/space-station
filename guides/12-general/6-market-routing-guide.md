@@ -1,12 +1,11 @@
 ---
-sidebar_label: "Routing for New Markets"
+sidebar_label: "Market Routing Guide"
 description: Learn more about how to get your markets/pools routed on Jupiter.
-slug: "/routing-new-markets"
-title: Routing for New Markets
+title: Market Routing Guide
 ---
 
 <head>
-    <title>How to Get Your Market Fully Routed on Jupiter</title>
+    <title>Guide to Market Routing on Jupiter</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

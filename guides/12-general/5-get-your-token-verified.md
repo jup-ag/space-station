@@ -1,7 +1,6 @@
 ---
 sidebar_label: "Get Your Token Verified"
 description: Learn more about how to get your token the verified badge on Jupiter.
-slug: "/get-your-token-verified"
 title: Verify Your Token on Jupiter
 ---
 
