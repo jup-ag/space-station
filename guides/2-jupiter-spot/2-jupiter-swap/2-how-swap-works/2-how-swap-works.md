@@ -20,7 +20,7 @@ The Metropolis upgrade introduced Instant Routing, Dynamic Slippage, Smart Token
 [Dive into these new features in detail here! ->](/guides/2-jupiter-spot/2-jupiter-swap/2-how-swap-works/1-metropolis.md)
 
 Metis, a routing protocol, was also introduced to improve route discovery, reducing slippage and scalability in V3.
-[Dive into key features of the Metis routing protocol here! ->](/guides/2-jupite  r-spot/2-jupiter-swap/2-how-swap-works/3-metis-routing.md)
+[Dive into key features of the Metis routing protocol here! ->](/guides/2-jupiter-spot/2-jupiter-swap/2-how-swap-works/3-metis-routing.md)
 
 
 ### Token Ledger For Increased Swap Success Rates
@@ -48,7 +48,6 @@ The Token Ledger caters to a wide range of use cases, which include but are not 
 Read more about the Token Ledger:
 https://station.jup.ag/docs/apis/swap-api#using-token-ledger-instruction
 
----
 
 ## Safety Notifications
 
@@ -109,7 +108,6 @@ When price impact or price deviation is too high, we have an additional modal as
 
 ![Safety Modal](../../../img/safety-modal.png)
 
----
 
 ## Swap Tips
 
@@ -121,3 +119,10 @@ When price impact or price deviation is too high, we have an additional modal as
 - **Jupiter cannot guess the final spot price or know what is a reasonable price impact for you**. We encourage checking these before the swap:
   - Check the Price Impact. *Price impact varies across the AMM and DEXes that Jupiter uses in each route.*
   - Check against a price feed like [Coingecko](https://www.coingecko.com/), [Birdeye](https://birdeye.so/), or CEX pricing.
+
+
+## MEV Protection
+
+Jupiter makes it easier for you to protect your swap transactions against MEV and sandwich attacks by turning on the **"MEV Protect"** setting. 
+
+Read more about how it works [here](jupresear.ch).
