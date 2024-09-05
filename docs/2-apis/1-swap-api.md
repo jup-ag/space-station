@@ -507,8 +507,8 @@ If 'auto' is used, Jupiter will automatically set a priority fee for the transac
 
 To understand what Dynamic Slippage is, checkout our [Jupresearch post](https://www.jupresear.ch/t/dynamic-swap-experience-dynamic-slippage/21946/)
 
-Dynamic Slippage is a post-swap click slippage estimation mechanism, hence it occurs at the /swap level. This is useful:
-- Estimate slippage closer to the time of execution.
+Dynamic slippage is a slippage estimation and optimization mechanism during the /swap call, and is useful because:
+- Estimates slippage closer to the time of execution.
 - A set of heuristics that accounts for the type of token traded and user's max slippage tolerance.
 - Safeguards the user while ensuring success rate.
 
