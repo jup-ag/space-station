@@ -17,7 +17,7 @@ After 14 days, markets that fit the criteria will continue to be routed on Jupit
 
 To ensure your market gets routed on Jupiter after 14 days, your market must fit **one of the following criteria**:
 
-1. Less than **30% price impact** on **$500**
+1. **Less than 30% price impact on $500**
 
 Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact after swapping in AND out of the token from the same pool. 
 
@@ -32,6 +32,6 @@ If the price impact is more than **30%**, it means that there is insufficient li
 ![price-impact-criteria](../img/price-impact-criteria.jpg)
 
 
-2. (For additional markets) Less than **20% Price Difference**
+2. *(For additional markets)* **Less than 20% price difference on new pools**
 
 For additional markets on already supported tokens, there should be a variance of less than **20%** between the new pool and the pool existing in routing. 
