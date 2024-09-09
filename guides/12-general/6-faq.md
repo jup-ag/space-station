@@ -94,8 +94,8 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new project token to be available to trade on Jupiter? 
 
-- Check out one of our guide that run through the whole process of minting a new token to setting up a liquidity pool in a permissionless DEXs [here](../general/new-token-guide)
-- Once you have your token and liquidity pool setup, you will need to have a minimum amount of liquidity of **$500** to be able to be picked up by Jupiter. Read more about it here: [Getting Your Token onto Jupiter](/docs/get-your-token-onto-jup)
+- All new tokens on supported AMMs are instantly routed on Jupiter for 14 days, and are marked with a '⚠️’ label to encourage users to double-check that the mint addresses are the right ones before trading.
+- Learn more about how to get your token verified and routed on Jupiter [here](/guides/12-general/4-get-your-token-on-jupiter.md).
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 
