@@ -147,6 +147,10 @@ const config = {
             from: '/labs/faq/faq',
           },
           {
+            to: '/guides/general/get-your-token-on-jupiter',
+            from: '/docs/get-your-token-onto-jup',
+          },
+          {
             to: '/guides/jlp/How-JLP-Works',
             from: '/labs/perps-faq',
           },

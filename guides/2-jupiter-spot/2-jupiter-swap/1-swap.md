@@ -91,7 +91,7 @@ This is an advanced setting and should be used with caution.
 ![Jup Swap 2](../../img/jup-swap/jup-swap-5.png "General swap settings for wSOL, versioned transactions, and utilizing direct routes.")
 
 1.  **Direct Route Only:** Using Direct Route Only ensures that the transaction will only be submitted to a single pool. This will limit a lot of intermediate tokens and filter out a lot of other viable routes that use intermediary tokens.
-2.  **Use wSOL:** Using [Wrapped SOL (wSOL)](../../12-general/7-wrapped-sol.md) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
+2.  **Use wSOL:** Using [Wrapped SOL (wSOL)](../../12-general/5-wrapped-sol.md) makes using Jupiter faster and more convenient for traders who trade frequently with SOL, since it avoids having to wrap/unwrap SOL.
 3.  **Versioned Transaction:** Enabling [Versioned Transaction](/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction.
 
 ---

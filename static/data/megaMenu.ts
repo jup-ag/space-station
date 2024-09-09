@@ -65,16 +65,8 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/general/blinks",
       },
       {
-        title: "New Token Guide",
-        href: "/guides/general/new-token-guide",
-      },
-      {
-        title: "Get Your Token Verified",
-        href: "/guides/general/get-your-token-verified",
-      },
-      {
-        title: "Market Routing Guide",
-        href: "/guides/general/market-routing-guide",
+        title: "Get Your Token On Jupiter",
+        href: "/guides/general/get-your-token-on-jupiter",
       },
       {
         title: "Wrapped SOL",
@@ -204,10 +196,6 @@ export const docsLinkItems: LinkGroup[] = [
       {
         title: "Token List API",
         href: "/docs/token-list/token-list-api",
-      },
-      {
-        title: "Validate Token",
-        href: "/docs/get-your-token-onto-jup",
       },
       {
         title: "API Standard for Partners",
