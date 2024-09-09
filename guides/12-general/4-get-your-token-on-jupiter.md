@@ -43,6 +43,10 @@ To provide users access to new tokens, all new markets on supported AMMs are ins
 
 After 14 days, markets that fit the criteria will continue to be routed on Jupiter.
 
+:::tip Supported AMMs
+We currently support Fluxbeam, Meteora DLMM, 1Intro, Pump.Fun, Raydium CLMM, Raydium CP, Raydium V4, Whirlpools, Stabble and Obric for Instant Routing.
+:::
+
 To ensure your market gets routed on Jupiter after 14 days, your market must fit **one of the following criteria**:
 
 1. **Less than 30% price impact on $500**
