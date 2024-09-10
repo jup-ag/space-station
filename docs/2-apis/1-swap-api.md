@@ -555,7 +555,7 @@ The backend returns a response with a serialized transaction that is already usi
     "dynamicSlippageReport": {
         // the final optimized slippage bps used in the serialized transaction
         "slippageBps": 12,
-        // the out amount after simulated incurred slippage bps
+        // the incurred out amount observed from simulating the transaction
         "otherAmount": 8759842,
         // the simulated incurred slippage during optimization
         // negative integer refers to the loss in bps while positive refers to the gain
