@@ -225,3 +225,18 @@ Note: This is flattened, please refer to the JSON response.
 | `sellPrice` | An `Option<String>` representing the quoted sell price. |
 | `sellAt` | Epoch seconds of when the sell quote was retrieved. |
 | `confidenceLevel` | A `String` indicating the confidence level (High, Medium, or Low). 
+
+### Caching Mechanism
+
+Price data from both buy side and sell side is cached for up to **15 seconds** - it is not meaningful to spam this endpoint 
+
+Another point to note is that when the price is revalidated, the revalidated price will be cached so that all users get as fresh data as possible. 
+
+### Price Revalidation Criteria
+
+In the Price V2 API, we implement a process called ***price revalidation*** to deliver the freshest and most accurate data to users with every request. Price revalidation involves refreshing the cached price data before serving it, and it is triggered when the following criteria are met:
+
+1. The token is among the top **200** most traded tokens of the day.
+2. The price discrepancy between buy and sell prices exceeds 2% (`| buyPrice - sellPrice | > 2%`).
+
+By revalidating, we ensure users receive the most current data, improving freshness and ensuring that previously covered arbitrage opportunities are updated accordingly.
