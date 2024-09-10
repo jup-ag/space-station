@@ -503,6 +503,70 @@ const transaction = await (
 
 If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
 
+## Using Dynamic Slippage
+
+To understand what Dynamic Slippage is, checkout our [Jupresearch post](https://www.jupresear.ch/t/dynamic-swap-experience-dynamic-slippage/21946/)
+
+Dynamic slippage is a slippage estimation and optimization mechanism during the /swap call, and is useful because:
+- Estimates slippage closer to the time of execution.
+- A set of heuristics that accounts for the type of token traded and user's max slippage tolerance.
+- Safeguards the user while ensuring success rate.
+
+The frontend sends a payload to the backend with an additional `dynamicSlippage` field with `maxBps` set as the user's max slippage **(this is important to respect the user's max, the jup.ag UI sets the default to 300bps (3%))**.
+
+```js
+// get serialized transactions for the swap
+const { swapTransaction } = await (
+  await fetch('https://quote-api.jup.ag/v6/swap', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      // quoteResponse from /quote api
+      quoteResponse,
+      // user public key to be used for the swap
+      userPublicKey: wallet.publicKey.toString(),
+      // auto wrap and unwrap SOL. default is true
+      wrapAndUnwrapSol: true,
+      // jup.ag frontend default max for user
+      dynamicSlippage: { "maxBps": 300 },
+      // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
+      // feeAccount: "fee_account_public_key"
+    })
+  })
+).json();
+```
+
+The backend returns a response with a serialized transaction that is already using the final optimized slippage and a `dynamicSlippageReport` for visibility/error catching.
+
+```json
+{
+    "swapTransaction": "// serialized transaction",
+    "lastValidBlockHeight": 266691690,
+    "prioritizationFeeLamports": 384,
+    "computeUnitLimit": 107468,
+    "prioritizationType": {
+        "computeBudget": {
+            "microLamports": 3577,
+            "estimatedMicroLamports": 3577
+        }
+    },
+    "dynamicSlippageReport": {
+        // the final optimized slippage bps used in the serialized transaction
+        "slippageBps": 12,
+        // the incurred out amount observed from simulating the transaction
+        "otherAmount": 8759842,
+        // the simulated incurred slippage during optimization
+        // negative integer refers to the loss in bps while positive refers to the gain
+        "simulatedIncurredSlippageBps": -8,
+        // an amplifcation ratio we use to add a buffer to the estimated slippage
+        "amplificationRatio": "1.5"
+    },
+    "simulationError": null
+}
+```
+
 ## Examples
  For more example scripts please visit the [jupiter-quote-api-node public Git repository](https://github.com/jup-ag/jupiter-quote-api-node). The repository has some further scripts and instructions for you to explore!
 * Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
