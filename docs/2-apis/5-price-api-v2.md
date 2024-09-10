@@ -5,7 +5,7 @@ title: "Price API V2: Improved On-Chain Price For Any Token"
 ---
 
 <head>
-    <title>Jupiter Price API V2: Real-Time On-Chain Pricing for Any Token</title>
+    <title>Jupiter Price API V2: Improved On-Chain Pricing for Any Token</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
