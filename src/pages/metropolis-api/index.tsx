@@ -71,9 +71,6 @@ const Home = () => {
   }, [partnersWidth, screenWidth]);
   
   useEffect(() => {
-    // console.log(translateCount);
-    // console.log(partnersWidth);
-    // console.log(partnersWidth-offset);
     if(translateCount <= (-partnersWidth)+offset) {
       setTransition("transition-none");
     }
