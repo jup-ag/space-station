@@ -213,7 +213,7 @@ If the price for a token **cannot** be found, it is either because
 
 ### `extraInfo` Fields
 
-Note: This is flattened, please refer to the JSON [response](https://www.notion.so/Introducing-the-Price-V2-API-89dec1b1db0f4b2bb34abe7833ce887f?pvs=21) 
+Note: This is flattened, please refer to the JSON response. 
 
 | `lastJupiterSellAt` | Epoch seconds of the `lastJupiterSellPrice`. |
 | --- | --- |
