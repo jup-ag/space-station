@@ -1,10 +1,7 @@
-// import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import React from "react";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 const SELECTED_PARTNERS = [
   {
@@ -50,18 +47,27 @@ const Home = () => {
   const [partnersCopyReadyToJump, setPartnersCopyReadyToJump] = useState(false);
   const [translateCount, setTranslateCount] = useState(0);
   const [translateCountCopy, setTranslateCountCopy] = useState(0);
-  const [transition, setTransition] = useState("transition-transform ease-linear");
-  const [transitionCopy, setTransitionCopy] = useState("transition-transform ease-linear");
+  const [transition, setTransition] = useState(
+    "transition-transform ease-linear"
+  );
+  const [transitionCopy, setTransitionCopy] = useState(
+    "transition-transform ease-linear"
+  );
   const [partnersWidth, setPartnersWidth] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const offset = 10;
 
   useEffect(() => {
-    setPartnersWidth(document.getElementById('partners')?.offsetWidth ?? 0);
+    setPartnersWidth(document.getElementById("partners")?.offsetWidth ?? 0);
     setScreenWidth(window.innerWidth ?? 0);
   }, []);
 
   useEffect(() => {
+    setTranslateCount(0);
+    if (partnersWidth != 0 && translateCountCopy == 0) {
+      setTranslateCountCopy(partnersWidth);
+    }
+
     const interval = setInterval(() => {
       setTranslateCount((oldCount) => oldCount - offset);
       setTranslateCountCopy((oldCount) => oldCount - offset);
@@ -71,20 +77,21 @@ const Home = () => {
       clearInterval(interval);
     };
   }, [partnersWidth, screenWidth]);
-  
+
   useEffect(() => {
-    if(partnersWidth != 0) {
-      if(translateCount <= (-partnersWidth)+offset) {
+    console.log(translateCount);
+    console.log(-partnersWidth + offset);
+    if (partnersWidth != 0) {
+      if (translateCount <= -partnersWidth + offset) {
         setPartnersReadyToJump(true);
-      }
-      else if(translateCount <= partnersWidth) {
+      } else if (translateCount < partnersWidth) {
         setPartnersReadyToJump(false);
       }
     }
   }, [translateCount]);
 
   useEffect(() => {
-    if(partnersReadyToJump) {
+    if (partnersReadyToJump) {
       setTransition("transition-none");
     } else {
       setTransition("transition-transform ease-linear");
@@ -92,24 +99,24 @@ const Home = () => {
   }, [partnersReadyToJump]);
 
   useEffect(() => {
-    if(partnersReadyToJump) {
-      setTranslateCount(partnersWidth);
+    if (partnersReadyToJump) {
+      console.log(partnersWidth + offset);
+      setTranslateCount(0);
     }
   }, [transition]);
-  
+
   useEffect(() => {
-    if(partnersWidth != 0) {
-      if(translateCountCopy <= (-partnersWidth)+offset) {
+    if (partnersWidth != 0) {
+      if (translateCountCopy <= -partnersWidth + offset) {
         setPartnersCopyReadyToJump(true);
-      }
-      else if(translateCountCopy <= partnersWidth) {
+      } else if (translateCountCopy < partnersWidth) {
         setPartnersReadyToJump(false);
       }
     }
   }, [translateCountCopy]);
 
   useEffect(() => {
-    if(partnersCopyReadyToJump) {
+    if (partnersCopyReadyToJump) {
       setTransitionCopy("transition-none");
     } else {
       setTransitionCopy("transition-transform ease-linear");
@@ -117,7 +124,7 @@ const Home = () => {
   }, [partnersCopyReadyToJump]);
 
   useEffect(() => {
-    if(partnersCopyReadyToJump) {
+    if (partnersCopyReadyToJump) {
       setTranslateCountCopy(partnersWidth);
     }
   }, [transitionCopy]);
@@ -126,7 +133,7 @@ const Home = () => {
     <div className={"text-black dark:text-white"}>
       <main className={"bg-[#131C25] relative min-h-screen"}>
         <div className="px-3 py-4 md:py-12 overflow-hidden bg-[#131C25]/80 relative">
-          <div className="bg-gradient-to-br from-cyan-950 via-40% via-cyan-700 to-cyan-500 absolute top-0 right-0 left-0 bottom-0 z-50 h-full w-full"></div>          
+          <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-50 h-full w-full"></div>
           <div className="max-w-[900px] mx-auto relative z-50">
             {/* Masthead */}
             <div className="text-center relative flex place-items-center min-h-[36rem]">
@@ -169,10 +176,7 @@ const Home = () => {
                   className="mt-3 hover:no-underline hover:text-[#c7f284] hover:scale-105 bg-[#c7f284]/20 text-[#c7f284] min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
                 >
                   <span className="text-base md:text-xl mr-2">Get Started</span>
-                  <span
-                    className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block"
-                    // className={`${inter.className} self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block`}
-                  >
+                  <span className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block">
                     -&gt;
                   </span>
                 </a>
@@ -182,8 +186,17 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative">
-          <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-12 md:text-left py-16 md:py-24">
+        <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative overflow-hidden">
+          <img
+            src="/img/metropolis-api/api-img.jpg"
+            alt="api-img"
+            className="absolute top-0 bottom-0 left-[55%] h-full max-w-none"
+          />
+          <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 left-0 w-full bg-gradient-to-r from-[#131C25] from-60% to-90% to-[#223345]/80 z-30"></div>
+          <span className="absolute right-5 bottom-5 text-xs text-[#0b121a] z-30">
+            Designed by Freepik
+          </span>
+          <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-12 md:text-left py-16 md:py-24 relative z-40">
             <h4 className="text-white/75 text-center md:text-left text-4xl md:text-6xl font-semibold mb-14 md:mb-12">
               Most Trusted
               <br />
@@ -376,8 +389,9 @@ const Home = () => {
                 Suite
               </span>
             </h4>
+
             {/* Products */}
-            <div className="grid text-center mx-auto max-w-xs md:max-w-5xl md:w-full md:grid-cols-3 gap-y-5">
+            <div className="grid text-center mx-auto max-w-xs md:max-w-7xl md:w-full md:grid-cols-4 gap-y-5">
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
                 <svg
                   viewBox="-1.5 -1.5 64 64"
@@ -431,7 +445,7 @@ const Home = () => {
                         "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
                     }}
                   >
-                    Quote/Swap API
+                    Swap API
                   </span>
                 </h2>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
@@ -525,7 +539,7 @@ const Home = () => {
                         "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
                     }}
                   >
-                    Tokens API
+                    Token API
                   </span>
                 </h2>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
@@ -537,8 +551,8 @@ const Home = () => {
                   viewBox="-1.5 -1.5 75 75"
                   xmlns="http://www.w3.org/2000/svg"
                   id="File-Code-Cash-1--Streamline-Ultimate"
-                  height="75"
-                  width="75"
+                  height="64"
+                  width="64"
                 >
                   <desc>
                     File Code Cash 1 Streamline Icon: https://streamlinehq.com
@@ -615,6 +629,42 @@ const Home = () => {
                   Get precise & real time pricing of tokens
                 </p>
               </div>
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-scale blur-[2px]"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#ffffff"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M7 20l10 0" />
+                  <path d="M6 6l6 -1l6 1" />
+                  <path d="M12 3l0 17" />
+                  <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                  <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                </svg>
+                <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">Coming Soon!</span>
+                <h2 className="my-3 text-lg md:text-2xl font-semibold">
+                  <span
+                    className="text-transparent bg-clip-text"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
+                    }}
+                  >
+                    Perp API
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                  Coming soon!
+                </p>
+              </div>
             </div>
 
             {/* Buttons */}
@@ -634,14 +684,12 @@ const Home = () => {
                 className="hover:scale-105 bg-[#c7f284]/20 text-[#c7f284] min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
               >
                 <span className="text-base md:text-xl mr-2">Get Started</span>
-                <span
-                  className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block"
-                >
+                <span className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block">
                   -&gt;
                 </span>
               </a>
             </div>
-            
+
             {/* Partners */}
             <div className="mt-16 md:mt-32">
               <p className="text-white/75 text-xl text-center md:text-3xl font-semibold flex-1 mb-7">
@@ -652,11 +700,15 @@ const Home = () => {
 
           <div className="max-w-[950px] mx-auto">
             <div className="w-full overflow-hidden relative">
-              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-50"></div>
-              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-50"></div>
+              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-40"></div>
+              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-40"></div>
               {/* Social Proof */}
               <div className="relative w-[300%]">
-                <div id="partners" className={`${transition} w-1/2 flex justify-between`} style={{ transform: `translateX(${translateCount}px)` }}>
+                <div
+                  id="partners"
+                  className={`${transition} w-1/2 flex justify-around`}
+                  style={{ transform: `translateX(${translateCount}px)` }}
+                >
                   {SELECTED_PARTNERS.map((partner, index) => {
                     return (
                       <a
@@ -683,10 +735,14 @@ const Home = () => {
                           {partner.label}
                         </p>
                       </a>
-                    )
+                    );
                   })}
                 </div>
-                <div id="partners_copy" className={`${transitionCopy} w-1/2 flex justify-between absolute top-0 left-0`} style={{ transform: `translateX(${translateCountCopy}px)` }}>
+                <div
+                  id="partners_copy"
+                  className={`${transitionCopy} w-1/2 flex justify-around absolute top-0 left-0`}
+                  style={{ transform: `translateX(${translateCountCopy}px)` }}
+                >
                   {SELECTED_PARTNERS.map((partner, index) => {
                     return (
                       <a
@@ -713,7 +769,7 @@ const Home = () => {
                           {partner.label}
                         </p>
                       </a>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -737,9 +793,7 @@ const Home = () => {
                 >
                   On-Chain
                 </span>
-                <span className="text-white">
-                  Exchange
-                </span>
+                <span className="text-white">Exchange</span>
               </h4>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-5">
@@ -871,6 +925,6 @@ const Home = () => {
       </main>
     </div>
   );
-}
+};
 
 export default Home;
