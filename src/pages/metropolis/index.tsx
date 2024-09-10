@@ -46,6 +46,8 @@ const SELECTED_PARTNERS = [
 ];
 
 const Home = () => {
+  const [partnersReadyToJump, setPartnersReadyToJump] = useState(false);
+  const [partnersCopyReadyToJump, setPartnersCopyReadyToJump] = useState(false);
   const [translateCount, setTranslateCount] = useState(0);
   const [translateCountCopy, setTranslateCountCopy] = useState(0);
   const [transition, setTransition] = useState("transition-transform ease-linear");
@@ -71,36 +73,52 @@ const Home = () => {
   }, [partnersWidth, screenWidth]);
   
   useEffect(() => {
-    if(translateCount <= (-partnersWidth)+offset) {
-      setTransition("transition-none");
-    }
-    else if(translateCount >= partnersWidth-offset) {
-      setTransition("transition-transform ease-linear");
+    if(partnersWidth != 0) {
+      if(translateCount <= (-partnersWidth)+offset) {
+        setPartnersReadyToJump(true);
+      }
+      else if(translateCount <= partnersWidth) {
+        setPartnersReadyToJump(false);
+      }
     }
   }, [translateCount]);
+
+  useEffect(() => {
+    if(partnersReadyToJump) {
+      setTransition("transition-none");
+    } else {
+      setTransition("transition-transform ease-linear");
+    }
+  }, [partnersReadyToJump]);
+
+  useEffect(() => {
+    if(partnersReadyToJump) {
+      setTranslateCount(partnersWidth);
+    }
+  }, [transition]);
   
   useEffect(() => {
-    if(translateCountCopy <= (-partnersWidth)+offset) {
-      setTransitionCopy("transition-none");
-    }
-    else if(translateCountCopy >= partnersWidth-offset) {
-      setTransitionCopy("transition-transform ease-linear");
+    if(partnersWidth != 0) {
+      if(translateCountCopy <= (-partnersWidth)+offset) {
+        setPartnersCopyReadyToJump(true);
+      }
+      else if(translateCountCopy <= partnersWidth) {
+        setPartnersReadyToJump(false);
+      }
     }
   }, [translateCountCopy]);
 
   useEffect(() => {
-    if(translateCount <= (-partnersWidth)+offset) {
-      setTranslateCount(partnersWidth);
-    } else if (translateCount == 0) {
-      setTranslateCount(screenWidth);
+    if(partnersCopyReadyToJump) {
+      setTransitionCopy("transition-none");
+    } else {
+      setTransitionCopy("transition-transform ease-linear");
     }
-  }, [transition]);
+  }, [partnersCopyReadyToJump]);
 
   useEffect(() => {
-    if(translateCountCopy <= (-partnersWidth)+offset) {
+    if(partnersCopyReadyToJump) {
       setTranslateCountCopy(partnersWidth);
-    } else if (translateCountCopy == 0) {
-      setTranslateCountCopy((partnersWidth+screenWidth));
     }
   }, [transitionCopy]);
 
@@ -626,7 +644,7 @@ const Home = () => {
             
             {/* Partners */}
             <div className="mt-16 md:mt-32">
-              <p className="text-white/40 text-xl text-center md:text-3xl font-semibold flex-1 mb-7">
+              <p className="text-white/75 text-xl text-center md:text-3xl font-semibold flex-1 mb-7">
                 Our Partners
               </p>
             </div>
