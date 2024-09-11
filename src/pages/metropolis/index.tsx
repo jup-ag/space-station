@@ -82,7 +82,7 @@ const Home = () => {
         settings: {
           slidesToShow: 3,
         }
-      },
+      }
     ]
   };
 
