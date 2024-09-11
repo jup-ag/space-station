@@ -308,3 +308,10 @@
   /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
 }
+
+.bm-menu-wrap {
+  top:0;
+  left:0;
+  min-width:300px;
+  max-width:350px;
+}

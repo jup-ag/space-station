@@ -8,9 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SELECTED_PARTNERS = [
   {
-    label: "Crypto.com",
-    link: "https://crypto.com/defi-wallet/",
-    imgSrc: "/crypto.png",
+    label: "Birdeye",
+    link: "https://birdeye.so/",
+    imgSrc: "/birdeye.png",
   },
   {
     label: "Phantom",
@@ -19,29 +19,19 @@ const SELECTED_PARTNERS = [
     category: "Wallets",
   },
   {
+    label: "Solflare",
+    link: "https://solflare.com/",
+    imgSrc: "/solflare.svg",
+  },
+  {
     label: "Backpack",
     link: "https://backpack.app/",
     imgSrc: "/backpack.svg",
   },
   {
-    label: "Birdeye",
-    link: "https://birdeye.so/",
-    imgSrc: "/birdeye.png",
-  },
-  {
-    label: "Orca",
-    link: "https://www.orca.so/",
-    imgSrc: "/orca.png",
-  },
-  {
-    label: "Meteora",
-    link: "https://meteora.ag/",
-    imgSrc: "/meteora.png",
-  },
-  {
-    label: "Wormhole",
-    link: "https://wormhole.com/",
-    imgSrc: "/wormhole.svg",
+    label: "Step Finance",
+    link: "https://www.step.finance/",
+    imgSrc: "/stepfinance.png",
   },
 ];
 
@@ -93,7 +83,7 @@ const Home = () => {
           <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-50 h-full w-full"></div>
           <div className="max-w-[900px] mx-auto relative z-50">
             {/* Masthead */}
-            <div className="text-center relative flex place-items-center min-h-[36rem]">
+            <div className="text-center relative flex place-items-center min-h-[30rem] md:min-h-[36rem]">
               <div className="w-full flex flex-col gap-3 md:gap-5 items-center">
                 <h1 className="md:max-w-2xl lg:max-w-full text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold m-0">
                   <span className="inline-block">Jupiter</span>
@@ -107,7 +97,7 @@ const Home = () => {
                 </h1>
                 <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
                   The most powerful set of liquidity APIs{" "}
-                  <span className="font-semibold text-teal-300">anywhere</span>.
+                  <span className="font-semibold text-[#c7f284]">anywhere</span>.
                 </p>
                 <a
                   href="/docs"
@@ -125,7 +115,7 @@ const Home = () => {
 
         <div className="px-3">
           <div className="max-w-6xl mx-auto mt-[60px]">
-            <h4 className="text-white/75 text-center text-3xl md:text-4xl font-semibold mb-5 sm:mb-8 md:mb-12">
+            <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-5 sm:mb-8 md:mb-12">
               The Most Comprehensive
               <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
                 Crypto API Suite
@@ -149,7 +139,7 @@ const Home = () => {
                   <path
                     d="m32.40625 40.03125 26.6875 -26.6875"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -157,7 +147,7 @@ const Home = () => {
                   <path
                     d="m59.09375 24.78125 0 -11.4375 -11.4375 0"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -165,7 +155,7 @@ const Home = () => {
                   <path
                     d="M28.59375 20.96875 1.90625 47.65625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -173,13 +163,13 @@ const Home = () => {
                   <path
                     d="m1.90625 36.21875 0 11.4375 11.4375 0"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
                   ></path>
                 </svg>
-                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span
                     className="text-[#c7f284]">
                     Swap API
@@ -206,7 +196,7 @@ const Home = () => {
                   <path
                     d="M19.0625 47.65625H45.75s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H19.0625s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -214,7 +204,7 @@ const Home = () => {
                   <path
                     d="M22.875 36.21875h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H22.875s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -222,7 +212,7 @@ const Home = () => {
                   <path
                     d="M11.4375 24.78125H38.125s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H11.4375s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -230,7 +220,7 @@ const Home = () => {
                   <path
                     d="M15.25 13.34375h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H15.25s-1.90625 0 -1.90625 -1.90625V15.25s0 -1.90625 1.90625 -1.90625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -238,7 +228,7 @@ const Home = () => {
                   <path
                     d="m55.28125 19.0625 0 7.625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -246,7 +236,7 @@ const Home = () => {
                   <path
                     d="m51.46875 22.875 7.625 0"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -254,7 +244,7 @@ const Home = () => {
                   <path
                     d="m5.71875 1.90625 0 7.625"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -262,13 +252,13 @@ const Home = () => {
                   <path
                     d="m1.90625 5.71875 7.625 0"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
                   ></path>
                 </svg>
-                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">
                     Token API
                   </span>
@@ -291,7 +281,7 @@ const Home = () => {
                   <path
                     d="M56.214 42.762H50.099999999999994a4.026 4.026 0 0 0 -1.5 7.761000000000001l6.189 2.4749999999999996a4.026 4.026 0 0 1 -1.5 7.764h-6.074999999999999"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -299,7 +289,7 @@ const Home = () => {
                   <path
                     d="m51.714 42.762 0 -2.25"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -307,7 +297,7 @@ const Home = () => {
                   <path
                     d="m51.714 63.012 0 -2.25"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -315,7 +305,7 @@ const Home = () => {
                   <path
                     d="M33.714 51.762a18 18 0 1 0 36 0 18 18 0 1 0 -36 0Z"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -323,7 +313,7 @@ const Home = () => {
                   <path
                     d="M24.714 60.762h-18a4.5 4.5 0 0 1 -4.5 -4.5v-49.5a4.5 4.5 0 0 1 4.5 -4.5h31.884a4.5 4.5 0 0 1 3.183 1.317L50.400000000000006 12.192a4.5 4.5 0 0 1 1.32 3.183v9.387"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -331,7 +321,7 @@ const Home = () => {
                   <path
                     d="m26.964 18.012 6.75 6.75 -6.75 6.75"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
@@ -339,13 +329,13 @@ const Home = () => {
                   <path
                     d="m17.964000000000002 18.012 -6.75 6.75 6.75 6.75"
                     fill="none"
-                    stroke="#5eead4"
+                    stroke="#c7f284"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="3"
                   ></path>
                 </svg>
-                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">
                     Price API
                   </span>
@@ -362,7 +352,7 @@ const Home = () => {
                   height="64"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
-                  stroke="#5eead4"
+                  stroke="#c7f284"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -375,7 +365,7 @@ const Home = () => {
                   <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
                 </svg>
                 <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">Coming Soon!</span>
-                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">
                     Perp API
                   </span>
@@ -419,7 +409,7 @@ const Home = () => {
           />
           <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
           <div className="w-full max-w-5xl mx-auto text-center mb-7 md:mb-12 md:text-left py-16 md:py-24 relative z-40">
-            <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white/75 text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
+            <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
               The Most Trusted
               <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
                 Crypto API Solution
@@ -430,12 +420,12 @@ const Home = () => {
               <div className="flex gap-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="shrink-0 icon icon-tabler icon-tabler-topology-star-ring-3 opacity-50 rounded-2xl border-2 border-solid border-cyan-400 bg-cyan-400/15 px-2 py-1 mt-1"
+                  className="shrink-0 icon icon-tabler icon-tabler-topology-star-ring-3 opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
                   width="50"
                   height="50"
                   viewBox="0 0 24 24"
                   strokeWidth="1"
-                  stroke="#5eead4"
+                  stroke="#c7f284"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -481,11 +471,11 @@ const Home = () => {
                   height="50"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5eead4"
+                  stroke="#c7f284"
                   strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="shrink-0 lucide lucide-blocks opacity-50 rounded-2xl border-2 border-solid border-cyan-400 bg-cyan-400/15 px-2 py-1 mt-1"
+                  className="shrink-0 lucide lucide-blocks opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
                 >
                   <rect width="7" height="7" x="14" y="3" rx="1" />
                   <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" />
@@ -509,11 +499,11 @@ const Home = () => {
                   height="50"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#5eead4"
+                  stroke="#c7f284"
                   strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="shrink-0 lucide lucide-bug opacity-50 rounded-2xl border-2 border-solid border-cyan-400 bg-cyan-400/15 px-2 py-1 mt-1"
+                  className="shrink-0 lucide lucide-bug opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
                 >
                   <path d="m8 2 1.88 1.88" />
                   <path d="M14.12 3.88 16 2" />
@@ -539,7 +529,7 @@ const Home = () => {
                       href="https://discord.gg/jup"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#5eead4] underline-offset-4 hover:underline"
+                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
                     >
                       discord
                     </a>{" "}
@@ -548,7 +538,7 @@ const Home = () => {
                       href="https://t.me/jup_dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#5eead4] underline-offset-4 hover:underline"
+                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
                     >
                       telegram
                     </a>{" "}
@@ -563,7 +553,7 @@ const Home = () => {
         <div className="px-3">
           <div className="max-w-6xl mx-auto mt-[60px]">
             {/* Partners */}
-            <p className="text-white/75 text-center text-3xl md:text-4xl font-semibold flex-1 mb-8">
+            <p className="text-white text-center text-3xl md:text-4xl font-semibold flex-1 mb-8">
               Our Partners
             </p>
             
@@ -611,7 +601,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto mt-[60px]">
             {/* Testimonials */}
             <div className="mt-16 md:mt-24">
-              <h4 className="text-white/75 text-center text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
+              <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
                 The Best
                 <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
                   On-Chain Exchange
