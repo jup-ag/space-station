@@ -193,8 +193,8 @@ If the price for a token **cannot** be found, it is either because
  `sellPrice`, `sellAt` & `lastSwappedPrice` might be `null` in cases
 
 1. `sellPrice` & `sellAt` is not cached and cannot be retrieved (in these cases `type` will be `buyPrice`, same as PriceV1).
-2. `lastSwappedPrice` might be null if the token has not been traded recently or cannot be retrieved
-    1. Tokens that have not been traded via USDC in the last 3 days (more info available [here](https://www.notion.so/Introducing-the-Price-V2-API-89dec1b1db0f4b2bb34abe7833ce887f?pvs=21)).
+2. `lastSwappedPrice` might be null if the token has not been traded recently or cannot be retrieved:
+    1. Tokens that have not been traded via USDC in the last 3 days.
     2. Note that this is only for swaps done via Jupiter, it will not show for swaps done e.g. directly on Raydium’s platform.
 
 ---
@@ -205,7 +205,7 @@ If the price for a token **cannot** be found, it is either because
 | --- | --- |
 | `type`  | `derivedPrice` is the midpoint between `buyPrice` and `sellPrice`. |
 | `price`   | based on the `type`  above |
-| `extraInfo` | [`extraInfo` Fields](https://www.notion.so/extraInfo-Fields-ceeddf73111c428891a16915aa9dba0c?pvs=21)  |
+| `extraInfo` | `extraInfo` Fields (More info below)
 | `buyPrice` | An `Option<String>` representing the quoted buy price. |
 | `sellPrice` | An `Option<String>` representing the quoted sell price. |
 | `timeTaken` | A `f32` representing the time taken for the request. |
