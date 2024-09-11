@@ -10,7 +10,7 @@ title: "Price API V2: Improved On-Chain Price For Any Token"
 </head>
 
 :::info
-This endpoint is still in beta. This endpoint is subject to change, use of these APIs in production applications is not recommended.
+This endpoint is still in beta.
 :::
 
 ## GET /price
@@ -26,7 +26,7 @@ Query Parameters:
 
 **Rate Limits** 
 
-This endpoint is rate limited to **100 requests/min**
+This endpoint is rate limited to **100 requests/min**.
 
 ### Response
 
@@ -193,9 +193,9 @@ If the price for a token **cannot** be found, it is either because
  `sellPrice`, `sellAt` & `lastSwappedPrice` might be `null` in cases
 
 1. `sellPrice` & `sellAt` is not cached and cannot be retrieved (in these cases `type` will be `buyPrice`, same as PriceV1).
-2. `lastSwappedPrice` might be null if the token has not been traded recently or cannot be retrieved w
+2. `lastSwappedPrice` might be null if the token has not been traded recently or cannot be retrieved
     1. Tokens that have not been traded via USDC in the last 3 days (more info available [here](https://www.notion.so/Introducing-the-Price-V2-API-89dec1b1db0f4b2bb34abe7833ce887f?pvs=21)).
-    2. Note that this is only for swaps done via Jupiter, it will not be done for swaps done e.g. directly on Raydium’s platform
+    2. Note that this is only for swaps done via Jupiter, it will not show for swaps done e.g. directly on Raydium’s platform.
 
 ---
 
@@ -228,7 +228,7 @@ Note: This is flattened, please refer to the JSON response.
 
 ### Caching Mechanism
 
-Price data from both buy side and sell side is cached for up to **15 seconds** - it is not meaningful to spam this endpoint 
+Price data from both buy side and sell side is cached for up to **15 seconds** - it is not meaningful to spam this endpoint.
 
 Another point to note is that when the price is revalidated, the revalidated price will be cached so that all users get as fresh data as possible. 
 
@@ -239,4 +239,4 @@ In the Price V2 API, we implement a process called ***price revalidation*** to d
 1. The token is among the top **200** most traded tokens of the day.
 2. The price discrepancy between buy and sell prices exceeds 2% (`| buyPrice - sellPrice | > 2%`).
 
-By revalidating, we ensure users receive the most current data, improving freshness and ensuring that previously covered arbitrage opportunities are updated accordingly.
+By revalidating, we ensure users receive the most current data, improving freshness and ensuring that previously covered arbitrage opportunities (price blip) are updated accordingly.
