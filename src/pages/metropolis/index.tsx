@@ -1,7 +1,10 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
 import React from "react";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const SELECTED_PARTNERS = [
   {
@@ -43,91 +46,45 @@ const SELECTED_PARTNERS = [
 ];
 
 const Home = () => {
-  const [partnersReadyToJump, setPartnersReadyToJump] = useState(false);
-  const [partnersCopyReadyToJump, setPartnersCopyReadyToJump] = useState(false);
-  const [translateCount, setTranslateCount] = useState(0);
-  const [translateCountCopy, setTranslateCountCopy] = useState(0);
-  const [transition, setTransition] = useState(
-    "transition-transform ease-linear"
-  );
-  const [transitionCopy, setTransitionCopy] = useState(
-    "transition-transform ease-linear"
-  );
-  const [partnersWidth, setPartnersWidth] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(0);
-  const offset = 10;
-
-  useEffect(() => {
-    setPartnersWidth(document.getElementById("partners")?.offsetWidth ?? 0);
-    setScreenWidth(window.innerWidth ?? 0);
-  }, []);
-
-  useEffect(() => {
-    setTranslateCount(0);
-    if (partnersWidth != 0 && translateCountCopy == 0) {
-      setTranslateCountCopy(partnersWidth);
-    }
-
-    const interval = setInterval(() => {
-      setTranslateCount((oldCount) => oldCount - offset);
-      setTranslateCountCopy((oldCount) => oldCount - offset);
-    }, 100);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [partnersWidth, screenWidth]);
-
-  useEffect(() => {
-    console.log(translateCount);
-    console.log(-partnersWidth + offset);
-    if (partnersWidth != 0) {
-      if (translateCount <= -partnersWidth + offset) {
-        setPartnersReadyToJump(true);
-      } else if (translateCount < partnersWidth) {
-        setPartnersReadyToJump(false);
-      }
-    }
-  }, [translateCount]);
-
-  useEffect(() => {
-    if (partnersReadyToJump) {
-      setTransition("transition-none");
-    } else {
-      setTransition("transition-transform ease-linear");
-    }
-  }, [partnersReadyToJump]);
-
-  useEffect(() => {
-    if (partnersReadyToJump) {
-      console.log(partnersWidth + offset);
-      setTranslateCount(0);
-    }
-  }, [transition]);
-
-  useEffect(() => {
-    if (partnersWidth != 0) {
-      if (translateCountCopy <= -partnersWidth + offset) {
-        setPartnersCopyReadyToJump(true);
-      } else if (translateCountCopy < partnersWidth) {
-        setPartnersReadyToJump(false);
-      }
-    }
-  }, [translateCountCopy]);
-
-  useEffect(() => {
-    if (partnersCopyReadyToJump) {
-      setTransitionCopy("transition-none");
-    } else {
-      setTransitionCopy("transition-transform ease-linear");
-    }
-  }, [partnersCopyReadyToJump]);
-
-  useEffect(() => {
-    if (partnersCopyReadyToJump) {
-      setTranslateCountCopy(partnersWidth);
-    }
-  }, [transitionCopy]);
+  const partnerSettings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      },
+      {
+        breakpoint: 490,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2.5,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ]
+  };
 
   return (
     <div className={"text-black dark:text-white"}>
@@ -137,48 +94,28 @@ const Home = () => {
           <div className="max-w-[900px] mx-auto relative z-50">
             {/* Masthead */}
             <div className="text-center relative flex place-items-center min-h-[36rem]">
-              <div className="w-full flex flex-col gap-5 items-center">
-                <h1 className="text-[30px] md:text-7xl font-bold m-0">
-                  <span className="relative">
-                    Jupi
-                    <span className="absolute -top-9 right-0 text-[#c7f284]">
-                      .
+              <div className="w-full flex flex-col gap-3 md:gap-5 items-center">
+                <h1 className="md:max-w-2xl lg:max-w-full text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold m-0">
+                  <span className="inline-block">Jupiter</span>
+                  {" "}
+                  <span className="inline-block">
+                    <span className="text-[#c7f284] relative font-bold">
+                      Metropolis
                     </span>
-                  </span>
-                  <span className="relative">ter </span>
-                  <span
-                    className="text-transparent bg-clip-text relative font-bold"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                    }}
-                  >
-                    Metropolis
-                  </span>
-                  <span className="relative">
-                    {" "}
-                    APi
-                    <span className="absolute -top-9 right-0 text-[#c7f284]">
-                      .
-                    </span>
+                    {" "}API
                   </span>
                 </h1>
-                <p className="max-w-[547px] mx-auto text-xl text-white/70">
-                  The most{" "}
-                  <span className="font-semibold text-white/85">powerful</span>{" "}
-                  set of liquidity API in{" "}
-                  <span className="font-semibold text-teal-300">Solana</span>.
+                <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
+                  The most powerful set of liquidity APIs{" "}
+                  <span className="font-semibold text-teal-300">anywhere</span>.
                 </p>
                 <a
                   href="/docs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 hover:no-underline hover:text-[#c7f284] hover:scale-105 bg-[#c7f284]/20 text-[#c7f284] min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
+                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#c7f284]/30 text-[#c7f284] min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
                 >
-                  <span className="text-base md:text-xl mr-2">Get Started</span>
-                  <span className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block">
-                    -&gt;
-                  </span>
+                  <span className="text-base md:text-xl font-semibold">Get Started</span>
                 </a>
               </div>
               <Header></Header>
@@ -186,36 +123,310 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative overflow-hidden">
+        <div className="px-3">
+          <div className="max-w-6xl mx-auto mt-[60px]">
+            <h4 className="text-white/75 text-center text-3xl md:text-4xl font-semibold mb-5 sm:mb-8 md:mb-12">
+              The Most Comprehensive
+              <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
+                Crypto API Suite
+              </span>
+            </h4>
+
+            {/* Products */}
+            <div className="grid text-center mx-auto max-w-xs sm:max-w-md md:max-w-5xl w-full sm:grid-cols-2 md:grid-cols-4 gap-y-2">
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+                <svg
+                  viewBox="-1.5 -1.5 64 64"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Data-Transfer-Diagonal--Streamline-Ultimate"
+                  height="64"
+                  width="64"
+                >
+                  <desc>
+                    Data Transfer Diagonal Streamline Icon:
+                    https://streamlinehq.com
+                  </desc>
+                  <path
+                    d="m32.40625 40.03125 26.6875 -26.6875"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m59.09375 24.78125 0 -11.4375 -11.4375 0"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M28.59375 20.96875 1.90625 47.65625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m1.90625 36.21875 0 11.4375 11.4375 0"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                </svg>
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                  <span
+                    className="text-[#c7f284]">
+                    Swap API
+                  </span>
+                </h2>
+                <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
+                  Get the best price quote, always
+                </p>
+              </div>
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="-1.5 -1.5 64 64"
+                  id="Accounting-Coins-Stack-1--Streamline-Ultimate"
+                  height="64"
+                  width="64"
+                >
+                  <desc>
+                    Accounting Coins Stack 1 Streamline Icon:
+                    https://streamlinehq.com
+                  </desc>
+                  <defs></defs>
+                  <title>accounting-coins-stack-1</title>
+                  <path
+                    d="M19.0625 47.65625H45.75s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H19.0625s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M22.875 36.21875h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H22.875s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M11.4375 24.78125H38.125s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H11.4375s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M15.25 13.34375h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H15.25s-1.90625 0 -1.90625 -1.90625V15.25s0 -1.90625 1.90625 -1.90625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m55.28125 19.0625 0 7.625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m51.46875 22.875 7.625 0"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m5.71875 1.90625 0 7.625"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m1.90625 5.71875 7.625 0"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                </svg>
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                  <span className="text-[#c7f284]">
+                    Token API
+                  </span>
+                </h2>
+                <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
+                  Find any tokens on-chain
+                </p>
+              </div>
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+                <svg
+                  viewBox="-1.5 -1.5 75 75"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="File-Code-Cash-1--Streamline-Ultimate"
+                  height="64"
+                  width="64"
+                >
+                  <desc>
+                    File Code Cash 1 Streamline Icon: https://streamlinehq.com
+                  </desc>
+                  <path
+                    d="M56.214 42.762H50.099999999999994a4.026 4.026 0 0 0 -1.5 7.761000000000001l6.189 2.4749999999999996a4.026 4.026 0 0 1 -1.5 7.764h-6.074999999999999"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m51.714 42.762 0 -2.25"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m51.714 63.012 0 -2.25"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M33.714 51.762a18 18 0 1 0 36 0 18 18 0 1 0 -36 0Z"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="M24.714 60.762h-18a4.5 4.5 0 0 1 -4.5 -4.5v-49.5a4.5 4.5 0 0 1 4.5 -4.5h31.884a4.5 4.5 0 0 1 3.183 1.317L50.400000000000006 12.192a4.5 4.5 0 0 1 1.32 3.183v9.387"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m26.964 18.012 6.75 6.75 -6.75 6.75"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                  <path
+                    d="m17.964000000000002 18.012 -6.75 6.75 6.75 6.75"
+                    fill="none"
+                    stroke="#5eead4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="3"
+                  ></path>
+                </svg>
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                  <span className="text-[#c7f284]">
+                    Price API
+                  </span>
+                </h2>
+                <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
+                  Get precise & real time pricing of tokens
+                </p>
+              </div>
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-scale blur-[2px]"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#5eead4"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M7 20l10 0" />
+                  <path d="M6 6l6 -1l6 1" />
+                  <path d="M12 3l0 17" />
+                  <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                  <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                </svg>
+                <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">Coming Soon!</span>
+                <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-semibold">
+                  <span className="text-[#c7f284]">
+                    Perp API
+                  </span>
+                </h2>
+                <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
+                  Coming soon!
+                </p>
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="md:max-w-4xl lg:max-w-5xl md:mx-auto flex items-center justify-around flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 px-20 sm:px-28 md:px-36 lg:px-40">
+              <a
+                href="/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 text-white/80 min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
+              >
+                <span className="text-base lg:text-lg">Docs</span>
+              </a>
+              <a
+                href="/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#c7f284]/30 text-[#c7f284] font-bold min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+              >
+                <span className="text-base lg:text-xl mr-2">Get Started</span>
+                <span className="self-end text-lg lg:text-2xl font-semibold -mt-0.5 inline-block">
+                  -&gt;
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative overflow-hidden mt-[60px]">
           <img
             src="/img/metropolis-api/api-img.jpg"
             alt="api-img"
-            className="absolute top-0 bottom-0 left-[55%] h-full max-w-none"
+            className="absolute top-0 bottom-0 right-[-10%] h-full max-w-none"
           />
-          <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 left-0 w-full bg-gradient-to-r from-[#131C25] from-60% to-90% to-[#223345]/80 z-30"></div>
-          <span className="absolute right-5 bottom-5 text-xs text-[#0b121a] z-30">
-            Designed by Freepik
-          </span>
-          <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-12 md:text-left py-16 md:py-24 relative z-40">
-            <h4 className="text-white/75 text-center md:text-left text-4xl md:text-6xl font-semibold mb-14 md:mb-12">
-              Most Trusted
-              <br />
-              <span className="text-white">
-                Crypto{" "}
-                <span
-                  className="text-transparent bg-clip-text"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                  }}
-                >
-                  API
-                </span>{" "}
-                Solution
+          <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
+          <div className="w-full max-w-5xl mx-auto text-center mb-7 md:mb-12 md:text-left py-16 md:py-24 relative z-40">
+            <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white/75 text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
+              The Most Trusted
+              <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
+                Crypto API Solution
               </span>
             </h4>
             {/* USP */}
-            <div className="grid text-left mx-auto max-w-sm md:max-w-5xl md:w-full gap-y-5">
+            <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5">
               <div className="flex gap-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +435,7 @@ const Home = () => {
                   height="50"
                   viewBox="0 0 24 24"
                   strokeWidth="1"
-                  stroke="#22d3ee"
+                  stroke="#5eead4"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -250,20 +461,13 @@ const Home = () => {
                   <path d="M7 7l-2 3" />
                   <path d="M5 14l2 3" />
                 </svg>
-                <div className="mb-3 flex flex-col gap-2">
+                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    {" "}
-                    <span
-                      className="text-transparent bg-clip-text"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                      }}
-                    >
+                    <span className="text-[#c7f284]">
                       Best Defi Experience
                     </span>
                   </h2>
-                  <p className="m-0 text-base opacity-50">
+                  <p className="text-white m-0 text-base opacity-60">
                     Providing a full suite of world class trading product &
                     tools.
                   </p>
@@ -277,7 +481,7 @@ const Home = () => {
                   height="50"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#22d3ee"
+                  stroke="#5eead4"
                   strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -286,20 +490,13 @@ const Home = () => {
                   <rect width="7" height="7" x="14" y="3" rx="1" />
                   <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" />
                 </svg>
-                <div className="mb-3 flex flex-col gap-2">
+                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    {" "}
-                    <span
-                      className="text-transparent bg-clip-text"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                      }}
-                    >
-                      Built your Application
+                    <span className="text-[#c7f284]">
+                      Build your Application
                     </span>
                   </h2>
-                  <p className="m-0 text-base opacity-50">
+                  <p className="text-white m-0 text-base opacity-60">
                     Actionable defi date data at your finger tips.
                   </p>
                 </div>
@@ -312,7 +509,7 @@ const Home = () => {
                   height="50"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#22d3ee"
+                  stroke="#5eead4"
                   strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -330,39 +527,32 @@ const Home = () => {
                   <path d="M22 13h-4" />
                   <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" />
                 </svg>
-                <div className="mb-3 flex flex-col gap-2">
+                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    {" "}
-                    <span
-                      className="text-transparent bg-clip-text"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                      }}
-                    >
+                    <span className="text-[#c7f284]">
                       Developer Focused
                     </span>
                   </h2>
-                  <p className="m-0 text-base opacity-50">
-                    Join our{" "}
+                  <p className="text-white m-0 text-base">
+                    <span className="opacity-60">Join our{" "}</span>
                     <a
                       href="https://discord.gg/jup"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
+                      className="hover:text-[#c7f284] text-[#5eead4] underline-offset-4 hover:underline"
                     >
                       discord
                     </a>{" "}
-                    and{" "}
+                    <span className="opacity-60">and{" "}</span>
                     <a
                       href="https://t.me/jup_dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
+                      className="hover:text-[#c7f284] text-[#5eead4] underline-offset-4 hover:underline"
                     >
                       telegram
                     </a>{" "}
-                    for your queries.
+                    <span className="opacity-60">for your queries.</span>
                   </p>
                 </div>
               </div>
@@ -371,354 +561,28 @@ const Home = () => {
         </div>
 
         <div className="px-3">
-          <div className="max-w-[900px] mx-auto mt-[60px]">
-            <h4 className="text-white/75 text-center text-4xl md:text-6xl font-semibold mb-12">
-              Comprehensive
-              <br />
-              <span className="text-white">
-                Crypto
-                <span
-                  className="text-transparent bg-clip-text px-3"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                  }}
-                >
-                  API
-                </span>
-                Suite
-              </span>
-            </h4>
-
-            {/* Products */}
-            <div className="grid text-center mx-auto max-w-xs md:max-w-7xl md:w-full md:grid-cols-4 gap-y-5">
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  viewBox="-1.5 -1.5 64 64"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="Data-Transfer-Diagonal--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    Data Transfer Diagonal Streamline Icon:
-                    https://streamlinehq.com
-                  </desc>
-                  <path
-                    d="m32.40625 40.03125 26.6875 -26.6875"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m59.09375 24.78125 0 -11.4375 -11.4375 0"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M28.59375 20.96875 1.90625 47.65625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m1.90625 36.21875 0 11.4375 11.4375 0"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
-                <h2 className="my-3 text-lg md:text-2xl font-semibold">
-                  <span
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                    }}
-                  >
-                    Swap API
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                  Get the best price quote, always
-                </p>
-              </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="-1.5 -1.5 64 64"
-                  id="Accounting-Coins-Stack-1--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    Accounting Coins Stack 1 Streamline Icon:
-                    https://streamlinehq.com
-                  </desc>
-                  <defs></defs>
-                  <title>accounting-coins-stack-1</title>
-                  <path
-                    d="M19.0625 47.65625H45.75s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H19.0625s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M22.875 36.21875h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H22.875s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M11.4375 24.78125H38.125s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H11.4375s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M15.25 13.34375h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H15.25s-1.90625 0 -1.90625 -1.90625V15.25s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m55.28125 19.0625 0 7.625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.46875 22.875 7.625 0"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m5.71875 1.90625 0 7.625"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m1.90625 5.71875 7.625 0"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
-                <h2 className="my-3 text-lg md:text-2xl font-semibold">
-                  <span
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                    }}
-                  >
-                    Token API
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                  Find any tokens on-chain
-                </p>
-              </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  viewBox="-1.5 -1.5 75 75"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="File-Code-Cash-1--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    File Code Cash 1 Streamline Icon: https://streamlinehq.com
-                  </desc>
-                  <path
-                    d="M56.214 42.762H50.099999999999994a4.026 4.026 0 0 0 -1.5 7.761000000000001l6.189 2.4749999999999996a4.026 4.026 0 0 1 -1.5 7.764h-6.074999999999999"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.714 42.762 0 -2.25"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.714 63.012 0 -2.25"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M33.714 51.762a18 18 0 1 0 36 0 18 18 0 1 0 -36 0Z"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M24.714 60.762h-18a4.5 4.5 0 0 1 -4.5 -4.5v-49.5a4.5 4.5 0 0 1 4.5 -4.5h31.884a4.5 4.5 0 0 1 3.183 1.317L50.400000000000006 12.192a4.5 4.5 0 0 1 1.32 3.183v9.387"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m26.964 18.012 6.75 6.75 -6.75 6.75"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m17.964000000000002 18.012 -6.75 6.75 6.75 6.75"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
-                <h2 className="my-3 text-lg md:text-2xl font-semibold">
-                  <span
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                    }}
-                  >
-                    Price API
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                  Get precise & real time pricing of tokens
-                </p>
-              </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-scale blur-[2px]"
-                  width="64"
-                  height="64"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#ffffff"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M7 20l10 0" />
-                  <path d="M6 6l6 -1l6 1" />
-                  <path d="M12 3l0 17" />
-                  <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
-                  <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
-                </svg>
-                <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">Coming Soon!</span>
-                <h2 className="my-3 text-lg md:text-2xl font-semibold">
-                  <span
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                    }}
-                  >
-                    Perp API
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                  Coming soon!
-                </p>
-              </div>
-            </div>
-
-            {/* Buttons */}
-            <div className="flex items-center justify-around flex-col space-y-6 mt-14 md:mt-10 sm:flex-row sm:space-y-0 px-20 sm:px-28 md:px-36 lg:px-40">
-              <a
-                href="/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-w-32 md:min-w-40 py-2 md:py-3 text-center bg-white/5 rounded-2xl border border-solid border-transparent text-white/80 hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-colors"
-              >
-                <span className="text-base md:text-lg">Docs</span>
-              </a>
-              <a
-                href="/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-105 bg-[#c7f284]/20 text-[#c7f284] min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
-              >
-                <span className="text-base md:text-xl mr-2">Get Started</span>
-                <span className="self-end text-lg md:text-2xl font-semibold -mt-0.5 inline-block">
-                  -&gt;
-                </span>
-              </a>
-            </div>
-
+          <div className="max-w-6xl mx-auto mt-[60px]">
             {/* Partners */}
-            <div className="mt-16 md:mt-32">
-              <p className="text-white/75 text-xl text-center md:text-3xl font-semibold flex-1 mb-7">
-                Our Partners
-              </p>
-            </div>
-          </div>
-
-          <div className="max-w-[950px] mx-auto">
+            <p className="text-white/75 text-center text-3xl md:text-4xl font-semibold flex-1 mb-8">
+              Our Partners
+            </p>
+            
             <div className="w-full overflow-hidden relative">
               <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-40"></div>
               <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-40"></div>
               {/* Social Proof */}
-              <div className="relative w-[300%]">
-                <div
-                  id="partners"
-                  className={`${transition} w-1/2 flex justify-around`}
-                  style={{ transform: `translateX(${translateCount}px)` }}
-                >
-                  {SELECTED_PARTNERS.map((partner, index) => {
-                    return (
-                      <a
-                        key={index}
-                        href={partner.link}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="flex flex-col items-center p-4 pb-5 opacity-50 hover:opacity-100 hover:scale-110 hover:no-underline transition-all"
-                      >
-                        <div className="w-full h-20 flex items-center justify-center">
+              <Slider {...partnerSettings}>
+                {SELECTED_PARTNERS.map((partner, index) => {
+                  return (
+                    <a
+                      key={index}
+                      href={partner.link}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="flex flex-col items-center p-4 pb-5 opacity-50 hover:opacity-100 hover:scale-110 hover:no-underline transition-all"
+                    >
+                      <div className="w-44 lg:w-60 py-3 border border-[#c7f284] bg-slate-100/15 rounded-xl">
+                        <div className="h-20 flex items-center justify-center">
                           <img
                             alt="dp"
                             loading="lazy"
@@ -734,45 +598,11 @@ const Home = () => {
                         <p className="text-center text-[#c7f284]/70 font-semibold text-sm pt-1 leading-none">
                           {partner.label}
                         </p>
-                      </a>
-                    );
-                  })}
-                </div>
-                <div
-                  id="partners_copy"
-                  className={`${transitionCopy} w-1/2 flex justify-around absolute top-0 left-0`}
-                  style={{ transform: `translateX(${translateCountCopy}px)` }}
-                >
-                  {SELECTED_PARTNERS.map((partner, index) => {
-                    return (
-                      <a
-                        key={index}
-                        href={partner.link}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className="flex flex-col items-center p-4 pb-5 opacity-50 hover:opacity-100 hover:scale-110 hover:no-underline transition-all"
-                      >
-                        <div className="w-full h-20 flex items-center justify-center">
-                          <img
-                            alt="dp"
-                            loading="lazy"
-                            width="80"
-                            height="80"
-                            decoding="async"
-                            data-nimg="1"
-                            src={`img/metropolis-api/${partner.imgSrc}`}
-                            style={{ color: "transparent" }}
-                            className="max-h-16 max-w-full h-auto w-auto"
-                          />
-                        </div>
-                        <p className="text-center text-[#c7f284]/70 font-semibold text-sm pt-1 leading-none">
-                          {partner.label}
-                        </p>
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
+                    </div>
+                    </a>
+                  );
+                })}
+              </Slider>
             </div>
           </div>
         </div>
@@ -781,19 +611,11 @@ const Home = () => {
           <div className="max-w-7xl mx-auto mt-[60px]">
             {/* Testimonials */}
             <div className="mt-16 md:mt-24">
-              <h4 className="text-white/75 text-center text-4xl md:text-6xl font-semibold mb-12">
+              <h4 className="text-white/75 text-center text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
                 The Best
-                <br />
-                <span
-                  className="text-transparent bg-clip-text px-3"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                  }}
-                >
-                  On-Chain
+                <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
+                  On-Chain Exchange
                 </span>
-                <span className="text-white">Exchange</span>
               </h4>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-5">
@@ -801,7 +623,7 @@ const Home = () => {
                   href="https://twitter.com/jerallaire/status/1724718929447371174"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-500/10"
+                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
@@ -815,15 +637,15 @@ const Home = () => {
                       style={{ color: "transparent" }}
                     />
                     <div className="flex flex-col">
-                      <h6 className="text-[#c7f284] font-semibold m-0">
+                      <h6 className="text-base text-[#c7f284] font-semibold m-0">
                         Jeremy Allaire (@jerallaire)
                       </h6>
-                      <p className="text-xs text-[#c7f284] font-extralight m-0 pt-1">
+                      <p className="text-xs text-white/30 font-extralight m-0 pt-1">
                         5:20 PM · Nov 15, 2023
                       </p>
                     </div>
                   </div>
-                  <p className="text-white/60">
+                  <p className="text-white/60 text-base">
                     I am super impressed with @JupiterExchangeon@solana. Truly
                     excellent UX and features. An example of maturation in a
                     range of infrastructure -- wallets, usdc on solana liquidity
@@ -834,7 +656,7 @@ const Home = () => {
                   href="https://twitter.com/TopoGigio_sol/status/1737844551317147964"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-500/10"
+                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
@@ -848,15 +670,15 @@ const Home = () => {
                       style={{ color: "transparent" }}
                     />
                     <div className="flex flex-col">
-                      <h6 className="text-[#c7f284] font-semibold m-0">
+                      <h6 className="text-base text-[#c7f284] font-semibold m-0">
                         Topo Gigio (@TopoGigio_sol)
                       </h6>
-                      <p className="text-xs text-[#c7f284] font-extralight m-0 pt-1">
+                      <p className="text-xs text-white/30 font-extralight m-0 pt-1">
                         10:36 PM · Dec 21, 2023
                       </p>
                     </div>
                   </div>
-                  <p className="text-white/60">
+                  <p className="text-white/60 text-base">
                     <span className="pb-2 block">
                       Did you know?: @JupiterExchange has a bridge feature?
                       Where it will compare rates and find you the most
@@ -874,7 +696,7 @@ const Home = () => {
                   href="https://twitter.com/Abbasshaikh42/status/1735940030865277244"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-500/10"
+                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
@@ -888,15 +710,15 @@ const Home = () => {
                       style={{ color: "transparent" }}
                     />
                     <div className="flex flex-col">
-                      <h6 className="text-[#c7f284] font-semibold m-0">
+                      <h6 className="text-base text-[#c7f284] font-semibold m-0">
                         Abbas (@abbassshaikh42)
                       </h6>
-                      <p className="text-xs text-[#c7f284] font-extralight m-0 pt-1">
+                      <p className="text-xs text-white/30 font-extralight m-0 pt-1">
                         4:28 PM · Dec 16, 2023
                       </p>
                     </div>
                   </div>
-                  <p className="text-white/60">
+                  <p className="text-white/60 text-base">
                     <span className="pb-2 block">
                       Tell me this isn't a gorgeous fucking product by
                       @JupiterExchange

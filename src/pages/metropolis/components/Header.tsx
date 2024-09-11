@@ -59,7 +59,7 @@ const Header = () => {
     }, [scrolled]);
 
     return (
-        <header className={(scrolled ? "bg-[#131C25]" : "bg-transparent") + " flex justify-center px-5 py-3 fixed z-50 top-0 left-0 right-0 transition-all duration-500"}>
+        <header className={(scrolled ? "bg-[#131C25]" : "bg-transparent") + " flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500"}>
             <div className="xl:max-w-6xl w-full flex items-center justify-between">
                 <a href="/" rel="noopener noreferrer" className='hover:no-underline'>
                     <span className="flex flex-row items-center space-x-2.5">
@@ -82,14 +82,8 @@ const Header = () => {
                     {LINKS.map((link) => {
                         if (link.style === 'button') {
                             return (
-                                <a href={link.path} key={link.label} rel="noopener noreferrer" className={(scrolled ? "bg-[#192531]" : "bg-[#131C25]/60") + " border border-solid border-transparent rounded-full text-center py-3 px-10 m-0 hover:bg-[#c7f284]/10 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200"}>
-                                    <span
-                                        className="-m-1 text-sm font-semibold text-transparent bg-clip-text inline-block"
-                                        style={{
-                                        backgroundImage:
-                                            "linear-gradient(89deg, rgb(28, 197, 225) 0.21%, rgb(199, 242, 132) 115.96%)",
-                                        }}
-                                    >
+                                <a href={link.path} key={link.label} rel="noopener noreferrer" className="bg-[#c7f284]/30 border border-solid border-transparent rounded-2xl text-center py-1.5 px-6 m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
+                                    <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
                                         {link.label}
                                     </span>
                                 </a>
