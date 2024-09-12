@@ -35,18 +35,14 @@ const SELECTED_PARTNERS = [
   },
 ];
 
-const Home = () => {
+const Metropolis = () => {
   const partnerSettings = {
     arrows: true,
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: false,
     speed: 400,
-    // autoplaySpeed: 0,
-    // cssEase: "linear",
-    // pauseOnHover: true,
     initialSlide: 0,
     responsive: [
       {
@@ -146,9 +142,9 @@ const Home = () => {
                   href="/docs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
+                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] px-4 py-2.5 text-center rounded-full border border-solid border-transparent hover:border-[#c7f284] transition-all"
                 >
-                  <span className="text-base md:text-xl font-semibold">
+                  <span className="text-base md:text-lg font-semibold">
                     Start Building
                   </span>
                 </a>
@@ -415,12 +411,12 @@ const Home = () => {
             </div>
 
             {/* Buttons */}
-            <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-12 px-20 sm:px-28 md:px-36 lg:px-40">
+            <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-6 px-20 sm:px-28 md:px-36 lg:px-40">
               <a
                 href="/docs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/5 text-white/80 min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-[1.12rem] text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
+                className="bg-white/5 text-white/80 min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
               >
                 <span className="text-base lg:text-lg">Docs</span>
               </a>
@@ -428,9 +424,9 @@ const Home = () => {
                 href="/docs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4A5C41]/90 text-[#c7f284] font-bold min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                className="bg-[#4A5C41]/90 text-[#c7f284] font-bold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
               >
-                <span className="text-base lg:text-xl mr-2">Get Started</span>
+                <span className="text-base lg:text-lg mr-2">Get Started</span>
                 <span className="self-end text-lg lg:text-2xl font-semibold -mt-0.5 inline-block">
                   -&gt;
                 </span>
@@ -592,8 +588,29 @@ const Home = () => {
             </p>
 
             <div className="w-full overflow-hidden relative">
-              <div className="hidden md:block shadow-2xl blur-md absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-40"></div>
-              <div className="hidden md:block shadow-2xl blur-md absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-40"></div>
+              <div className="shadow-2xl blur-md absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-30"></div>
+              <div className="shadow-2xl blur-md absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-30"></div>
+              <button
+                  className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer absolute top-[50%] left-0 lg:left-12 -translate-y-1/2 z-40"
+                  onClick={() => slider?.current?.slickPrev()}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c7f284"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100 text-center"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M16 12H8" />
+                    <path d="m12 8-4 4 4 4" />
+                  </svg>
+                </button>
               {/* Social Proof */}
               <Slider ref={slider} {...partnerSettings}>
                 {SELECTED_PARTNERS.map((partner, index) => {
@@ -627,53 +644,27 @@ const Home = () => {
                   );
                 })}
               </Slider>
-              <div
-                className="flex gap-3 justify-center"
-                style={{ textAlign: "center" }}
+              <button
+                className="text-white/80 font-semibold text-sm bg-transparent border-0 cursor-pointer absolute top-[50%] right-0 lg:right-12 -translate-y-1/2 z-40"
+                onClick={() => slider?.current?.slickNext()}
               >
-                <button
-                  className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer"
-                  onClick={() => slider?.current?.slickPrev()}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#c7f284"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-circle-arrow-right opacity-80 hover:opacity-100 text-center"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M16 12H8" />
-                    <path d="m12 8-4 4 4 4" />
-                  </svg>
-                </button>
-                <button
-                  className="text-white/80 font-semibold text-sm bg-transparent border-0 cursor-pointer"
-                  onClick={() => slider?.current?.slickNext()}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-circle-arrow-right opacity-80 hover:opacity-100"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M8 12h8" />
-                    <path d="m12 16 4-4-4-4" />
-                  </svg>
-                </button>
-              </div>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 12h8" />
+                  <path d="m12 16 4-4-4-4" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -820,4 +811,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Metropolis;
