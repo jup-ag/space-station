@@ -68,7 +68,7 @@ Positions where the trader's collateral less fees and less unrealized losses is 
 
 Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be announced at Breakpoint), and audited by Offside Labs.
 
-This new Oracle Network, known as Signal will be announced at Breakpoint.
+This new Oracle Network, relying on [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778), will be unveiled at Breakpoint.
 
 This oracle is used as the mark price for opening and closing trades, calculating margin requirements, and triggering SL/TP orders and liquidations on the Jupiter platform.
 
@@ -79,11 +79,12 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 ![Perps Timeline](image-2.png)
 
 #### Key Benefits
-| Benefits | Old Oracle | Signal Oracle |
-| --- | ----- | ----- |
+
+| Benefits    | Old Oracle                                                                                                                             | Signal Oracle                                                                                  |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
-| Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
-| Chart | Discrepancy between trades placed and the chart. | Signal powers the trading view chart and all position requests, no discrepancy. |
+| Latency     | User makes a request, Keepers have to wait for the oracle before placing the trade.                                                    | User makes a trade, Keepers immediately process the trade with the oracle.                     |
+| Chart       | Discrepancy between trades placed and the chart.                                                                                       | Signal powers the trading view chart and all position requests, no discrepancy.                |
 
 ### Pyth as a Fallback Oracle
 
