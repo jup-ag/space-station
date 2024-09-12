@@ -124,6 +124,7 @@ Traders' PnL from perpetual trading impacts the JLP pool. If a trader incurs a n
 **Short Trade Scenario:** If the trader profits on the short, the JLP pool will lose some of the stablecoins but the shorted token will remain the same. This causes a net USD loss on the Pool.
 
 ![image](jlp-short-scenarios.png)
+
 *This [research article](https://skribr.io/app/article/exploring-jupiters-perpetual-futures-a-comprehensive-research-analysis/) from LeeWay provides more detail on how this works.*
 
 3. **Token Price Fluctuations:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens can be worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
