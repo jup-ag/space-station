@@ -127,11 +127,15 @@ const config = {
             from: '/labs/perpetual-exchange/overview',
           },
           {
+            to: '/guides/perpetual-exchange/how-it-works',
+            from: '/guides/perpetual-exchange/trading',
+          },
+          {
             to: '/guides/perpetual-exchange/overview',
             from: '/labs',
           },
           {
-            to: '/guides/perpetual-exchange/trading',
+            to: '/guides/perpetual-exchange/how-it-works',
             from: '/labs/perpetual-exchange/trading',
           },
           {
