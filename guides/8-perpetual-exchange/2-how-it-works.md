@@ -17,20 +17,20 @@ Our pool consists of 5 tokens, **SOL**, **ETH**, **WBTC**, **USDC**, and **USDT*
 Traders open leveraged positions by putting up collateral and borrowing
 the rest of the position from the pool.
 
-## Position management
+## Position Management
 
 ### Longs
 
 Traders can open long positions or increase the size for existing positions for SOL, ETH, and wBTC with up to 100x leverage based on the initial margin (collateral).
 
-#### Collateral management
+#### Collateral Management
 
 Traders can deposit or withdraw collateral from the position to manage the position's margin.
 
 - When traders deposit collateral, the liquidation price and leverage for the long position decreases as the maintenance margin increases.
 - When traders withdraw collateral, the liquidation price and leverage for the long position increases as the maintenance margin decreases.
 
-#### Underlying collateral
+#### Underlying Collateral
 
 The underlying collateral for a long position is the token for the open position, as shown below:
 
@@ -48,14 +48,14 @@ For example, a trader with a profit long SOL position will receive SOL when they
 
 Traders can open short positions or decrease the size for existing positions for SOL, ETH, and wBTC with up to 100x leverage based on the initial margin (collateral).
 
-#### Collateral management
+#### Collateral Management
 
 Traders can deposit or withdraw collateral from the position to manage the position's margin.
 
 - When traders deposit collateral, the liquidation price and leverage for the short position increases as the maintenance margin increases.&#x20;
 - When traders withdraw collateral, the liquidation price and leverage for the short position decreases as the maintenance margin decreases.
 
-#### Underlying collateral
+#### Underlying Collateral
 
 The underlying collateral for a short position is either one of the USDC or USDT stablecoin, depending on the stablecoins' **utilization rates** at the time when the position is opened:
 
