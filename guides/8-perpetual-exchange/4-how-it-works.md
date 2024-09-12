@@ -68,7 +68,7 @@ Positions where the trader's collateral less fees and less unrealized losses is 
 
 Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be announced at Breakpoint), and audited by Offside Labs.
 
-This new Oracle Network, relying on [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778), will be unveiled at Breakpoint.
+The Dove Oracle, relying on [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778), will be unveiled at Breakpoint, and anyone will be able to use it on Solana.
 
 This oracle is used as the mark price for opening and closing trades, calculating margin requirements, and triggering SL/TP orders and liquidations on the Jupiter platform.
 
