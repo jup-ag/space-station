@@ -3,7 +3,7 @@ sidebar_label: "Frequently Asked Questions"
 description: Frequently Asked Questions
 ---
 
-# FAQ - Frequently Asked Questions
+# Frequently Asked Questions
 
 ### 1. I tried opening a position/adding collateral and it was not successful. Where are my funds?
 
