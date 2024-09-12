@@ -22,7 +22,7 @@ The JLP pool manages several custodies (tokens) for liquidity providers:
 * USDC: [G18jKKXQwBbrHeiK3C9MRXhkHsLHf7XgCSisykV46EZa](https://solscan.io/account/G18jKKXQwBbrHeiK3C9MRXhkHsLHf7XgCSisykV46EZa)
 * USDT: [4vkNeXiYEUizLdrpdPS1eC2mccyM4NUPRtERrk6ZETkk](https://solscan.io/account/4vkNeXiYEUizLdrpdPS1eC2mccyM4NUPRtERrk6ZETkk)
 
-More info on the `Custody` account is explained in [Onchain Account Types](../8-perpetual-exchange/6-onchain-accounts.md).
+More info on the `Custody` account is explained in [Onchain Account Types](../8-perpetual-exchange/3-onchain-accounts.md).
 
 ### Assets Under Management
 

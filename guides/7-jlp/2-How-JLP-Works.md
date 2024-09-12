@@ -54,7 +54,7 @@ It is essential to note that pool earnings and losses (index token appreciation/
 | ------------------ | -------------------------------------------------------------------------- |
 | Opening a Position | 6 BPS                                                                     |
 | Closing a Position | 6 BPS                                                                     |
-| Price Impact Fee   | Variable (see [reference](../perpetual-exchange/trading#price-impact-fee)) |
+| Price Impact Fee   | Variable (see [reference](../8-perpetual-exchange/2-how-it-works.md#price-impact-fee)) |
 | Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
 | Borrow Rate        | 1 BPS/hour x token utilization percentage                                  |
 
