@@ -84,7 +84,7 @@ const Header = () => {
                         {LINKS.map((link) => {
                             if (link.style === 'button') {
                                 return (
-                                    <a href={link.path} key={link.label} rel="noopener noreferrer" className="bg-[#c7f284]/30 border border-solid border-transparent rounded-2xl text-center py-1.5 px-6 m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
+                                    <a href={link.path} key={link.label} rel="noopener noreferrer" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-6 m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
                                         <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
                                             {link.label}
                                         </span>

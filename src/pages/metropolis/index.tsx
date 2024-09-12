@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -26,7 +26,7 @@ const SELECTED_PARTNERS = [
   {
     label: "Backpack",
     link: "https://backpack.app/",
-    imgSrc: "/backpack.svg",
+    imgSrc: "/backpack.png",
   },
   {
     label: "Step Finance",
@@ -37,75 +37,120 @@ const SELECTED_PARTNERS = [
 
 const Home = () => {
   const partnerSettings = {
-    arrows: false,
+    arrows: true,
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    pauseOnHover: true,
+    // autoplay: false,
+    speed: 400,
+    // autoplaySpeed: 0,
+    // cssEase: "linear",
+    // pauseOnHover: true,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 380,
+        breakpoint: 1050,
         settings: {
-          slidesToShow: 1.5,
-        }
+          slidesToShow: 3.8,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3.5,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 2.8,
+        },
+      },
+      {
+        breakpoint: 560,
+        settings: {
+          slidesToShow: 2.5,
+        },
       },
       {
         breakpoint: 490,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
-        breakpoint: 640,
+        breakpoint: 400,
         settings: {
-          slidesToShow: 2.5,
-        }
+          slidesToShow: 1.8,
+        },
       },
       {
-        breakpoint: 768,
+        breakpoint: 360,
         settings: {
-          slidesToShow: 3,
-        }
-      }
-    ]
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1.3,
+        },
+      },
+    ],
   };
+
+  const slider = useRef<Slider>(null);
 
   return (
     <div className={"text-black dark:text-white"}>
       <main className={"bg-[#131C25] relative min-h-screen"}>
         <div className="px-3 py-4 md:py-12 overflow-hidden bg-[#131C25]/80 relative">
-          <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-50 h-full w-full"></div>
+          <div className="bg-top bg-no-repeat bg-cover absolute top-0 bottom-0 right-0 left-0 z-30 h-full w-full"
+          style={{
+            backgroundImage: `url(/img/metropolis-api/masthead.png)`
+          }}>
+          </div>
+          <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-40 h-full w-full opacity-90"></div>
           <div className="max-w-[900px] mx-auto relative z-50">
             {/* Masthead */}
             <div className="text-center relative flex place-items-center min-h-[30rem] md:min-h-[36rem]">
-              <div className="w-full flex flex-col gap-3 md:gap-5 items-center">
+              <div className="w-full flex flex-col gap-3 md:gap-5 items-center relative z-40">
                 <h1 className="md:max-w-2xl lg:max-w-full text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold m-0">
-                  <span className="inline-block">Jupiter</span>
-                  {" "}
+                  <span className="inline-block">Jupiter</span>{" "}
                   <span className="inline-block">
                     <span className="text-[#c7f284] relative font-bold">
                       Metropolis
-                    </span>
-                    {" "}API
+                    </span>{" "}
+                    API
                   </span>
                 </h1>
                 <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
                   The most powerful set of liquidity APIs{" "}
-                  <span className="font-semibold text-[#c7f284]">anywhere</span>.
+                  <span className="font-semibold text-[#c7f284]">anywhere</span>
+                  .
                 </p>
                 <a
                   href="/docs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#c7f284]/30 text-[#c7f284] min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
+                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:border-[#c7f284] transition-all"
                 >
-                  <span className="text-base md:text-xl font-semibold">Get Started</span>
+                  <span className="text-base md:text-xl font-semibold">
+                    Start Building
+                  </span>
                 </a>
               </div>
               <Header></Header>
@@ -114,7 +159,7 @@ const Home = () => {
         </div>
 
         <div className="px-3">
-          <div className="max-w-6xl mx-auto mt-[60px]">
+          <div className="max-w-6xl mx-auto mt-[60px] pt-4 pb-5 md:pb-4">
             <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-5 sm:mb-8 md:mb-12">
               The Most Comprehensive
               <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
@@ -170,10 +215,7 @@ const Home = () => {
                   ></path>
                 </svg>
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
-                  <span
-                    className="text-[#c7f284]">
-                    Swap API
-                  </span>
+                  <span className="text-[#c7f284]">Swap API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
                   Get the best price quote, always
@@ -259,9 +301,7 @@ const Home = () => {
                   ></path>
                 </svg>
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
-                  <span className="text-[#c7f284]">
-                    Token API
-                  </span>
+                  <span className="text-[#c7f284]">Token API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
                   Find any tokens on-chain
@@ -336,9 +376,7 @@ const Home = () => {
                   ></path>
                 </svg>
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
-                  <span className="text-[#c7f284]">
-                    Price API
-                  </span>
+                  <span className="text-[#c7f284]">Price API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
                   Get precise & real time pricing of tokens
@@ -364,11 +402,11 @@ const Home = () => {
                   <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
                   <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
                 </svg>
-                <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">Coming Soon!</span>
+                <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
+                  Coming Soon!
+                </span>
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
-                  <span className="text-[#c7f284]">
-                    Perp API
-                  </span>
+                  <span className="text-[#c7f284]">Perp API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
                   Coming soon!
@@ -377,12 +415,12 @@ const Home = () => {
             </div>
 
             {/* Buttons */}
-            <div className="md:max-w-4xl lg:max-w-5xl md:mx-auto flex items-center justify-around flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 px-20 sm:px-28 md:px-36 lg:px-40">
+            <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-12 px-20 sm:px-28 md:px-36 lg:px-40">
               <a
                 href="/docs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/5 text-white/80 min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
+                className="bg-white/5 text-white/80 min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-[1.12rem] text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
               >
                 <span className="text-base lg:text-lg">Docs</span>
               </a>
@@ -390,7 +428,7 @@ const Home = () => {
                 href="/docs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#c7f284]/30 text-[#c7f284] font-bold min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                className="bg-[#4A5C41]/90 text-[#c7f284] font-bold min-w-40 md:min-w-52 lg:min-w-60 py-3 md:py-4 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
               >
                 <span className="text-base lg:text-xl mr-2">Get Started</span>
                 <span className="self-end text-lg lg:text-2xl font-semibold -mt-0.5 inline-block">
@@ -403,12 +441,12 @@ const Home = () => {
 
         <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative overflow-hidden mt-[60px]">
           <img
-            src="/img/metropolis-api/api-img.jpg"
+            src="/img/metropolis-api/api-img.png"
             alt="api-img"
-            className="absolute top-0 bottom-0 right-[-10%] h-full max-w-none"
+            className="absolute top-0 bottom-0 right-0 h-full max-w-none"
           />
           <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
-          <div className="w-full max-w-5xl mx-auto text-center mb-7 md:mb-12 md:text-left py-16 md:py-24 relative z-40">
+          <div className="w-full max-w-5xl mx-auto text-center md:text-left py-[60px] mt-3.5 relative z-40">
             <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
               The Most Trusted
               <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
@@ -416,7 +454,7 @@ const Home = () => {
               </span>
             </h4>
             {/* USP */}
-            <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5">
+            <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5 pb-1.5">
               <div className="flex gap-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -453,9 +491,7 @@ const Home = () => {
                 </svg>
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">
-                      Best Defi Experience
-                    </span>
+                    <span className="text-[#c7f284]">Best Defi Experience</span>
                   </h2>
                   <p className="text-white m-0 text-base opacity-60">
                     Providing a full suite of world class trading product &
@@ -519,12 +555,10 @@ const Home = () => {
                 </svg>
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">
-                      Developer Focused
-                    </span>
+                    <span className="text-[#c7f284]">Developer Focused</span>
                   </h2>
                   <p className="text-white m-0 text-base">
-                    <span className="opacity-60">Join our{" "}</span>
+                    <span className="opacity-60">Join our </span>
                     <a
                       href="https://discord.gg/jup"
                       target="_blank"
@@ -533,7 +567,7 @@ const Home = () => {
                     >
                       discord
                     </a>{" "}
-                    <span className="opacity-60">and{" "}</span>
+                    <span className="opacity-60">and </span>
                     <a
                       href="https://t.me/jup_dev"
                       target="_blank"
@@ -553,15 +587,15 @@ const Home = () => {
         <div className="px-3">
           <div className="max-w-6xl mx-auto mt-[60px]">
             {/* Partners */}
-            <p className="text-white text-center text-3xl md:text-4xl font-semibold flex-1 mb-8">
+            <p className="text-white text-center text-3xl md:text-4xl font-semibold flex-1 mb-8 pt-3.5">
               Our Partners
             </p>
-            
+
             <div className="w-full overflow-hidden relative">
-              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-40"></div>
-              <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-40"></div>
+              <div className="hidden md:block shadow-2xl blur-md absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-40"></div>
+              <div className="hidden md:block shadow-2xl blur-md absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-40"></div>
               {/* Social Proof */}
-              <Slider {...partnerSettings}>
+              <Slider ref={slider} {...partnerSettings}>
                 {SELECTED_PARTNERS.map((partner, index) => {
                   return (
                     <a
@@ -569,9 +603,9 @@ const Home = () => {
                       href={partner.link}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="flex flex-col items-center p-4 pb-5 opacity-50 hover:opacity-100 hover:scale-110 hover:no-underline transition-all"
+                      className="flex flex-col items-center p-4 pb-5 hover:scale-110 hover:no-underline transition-all"
                     >
-                      <div className="w-44 lg:w-60 py-3 border border-[#c7f284] bg-slate-100/15 rounded-xl">
+                      <div className="w-44 lg:w-60 py-3 bg-slate-100/5 rounded-xl">
                         <div className="h-20 flex items-center justify-center">
                           <img
                             alt="dp"
@@ -588,11 +622,58 @@ const Home = () => {
                         <p className="text-center text-[#c7f284]/70 font-semibold text-sm pt-1 leading-none">
                           {partner.label}
                         </p>
-                    </div>
+                      </div>
                     </a>
                   );
                 })}
               </Slider>
+              <div
+                className="flex gap-3 justify-center"
+                style={{ textAlign: "center" }}
+              >
+                <button
+                  className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer"
+                  onClick={() => slider?.current?.slickPrev()}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c7f284"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M16 12H8" />
+                    <path d="m12 8-4 4 4 4" />
+                  </svg>
+                </button>
+                <button
+                  className="text-white/80 font-semibold text-sm bg-transparent border-0 cursor-pointer"
+                  onClick={() => slider?.current?.slickNext()}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c7f284"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-circle-arrow-right opacity-80 hover:opacity-100"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 12h8" />
+                    <path d="m12 16 4-4-4-4" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -600,7 +681,7 @@ const Home = () => {
         <div className="px-3 pb-20">
           <div className="max-w-7xl mx-auto mt-[60px]">
             {/* Testimonials */}
-            <div className="mt-16 md:mt-24">
+            <div className="mt-16 pt-1">
               <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
                 The Best
                 <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">

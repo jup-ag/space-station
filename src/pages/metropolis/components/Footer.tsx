@@ -39,7 +39,7 @@ const CONTACT = [
 
 const Footer = () => {
     return (
-        <footer className="max-w-screen-xl mx-auto px-5 pt-8 pb-20 bg-[#131C25] lg:flex lg:items-center">
+        <footer className="max-w-screen-xl mx-auto px-5 pt-1 pb-20 bg-[#131C25] lg:flex lg:items-center">
             <div className="w-full lg:pl-12 lg:pb-8 flex items-center justify-center lg:justify-start">
                 <a href="/" rel="noopener noreferrer" className='hover:no-underline'>
                     <div className="flex flex-row items-center space-x-2.5">
