@@ -3,13 +3,13 @@ sidebar_label: "Request Fulfillment Model"
 description: "Request Fulfillment Model"
 ---
 
-# Request fulfilment model and offchain keepers
+# Request Fulfillment model & Off-Chain Keepers
 
 ## Request fulfilment model
 
 The Jupiter Perpetuals exchange uses an onchain request fulfilment model to create and execute trade requests.
 
-<img src="https://raw.githubusercontent.com/julianfssen/dsa/main/.gitbook/assets/image%20(7).png?token=GHSAT0AAAAAACUT6LUWD5VZ4P44ZHXJIZVGZW7VMKQ" alt=""/>
+![request-fulfillment-model](./request-fulfillment-model.png)
 
 ### Create trade request
 
@@ -45,7 +45,7 @@ Keepers are offchain services that listen to onchain events and perform actions 
 Jupiter Perpetuals' keepers listen to the trade requests listed above and execute them by verifying the requests and submitting transactions that contain the actual program instructions for the trade request.
 :::
 
-## FAQs
+## Frequently Asked Questions
 
 ### Is the keeper code open-source?
 
@@ -58,7 +58,7 @@ Keepers may fail to execute requests due to a variety of reasons (network conges
 A trade request that has not been executed after 45 seconds is considered stale and will be rejected. Tokens deposited by the trader for the trade request will be returned to the trader. Tokens will be returned to the position for collateral withdrawals or close position requests.
 
 :::info
-Please open a support ticket on the [Jupiter Discord support channel](../) if your trade request was not executed or if you face any issues creating trade requests.
+Please open a support ticket on the [Jupiter Discord support channel](https://discord.gg/jup) if your trade request was not executed or if you face any issues creating trade requests.
 :::
 
 ### Can I host my own keeper?
@@ -68,7 +68,5 @@ We do not allow community members to run their own keepers at the moment. As men
 ### Where do I see the keeper accounts?
 
 We currently run two keepers:
-
-[A2rCQdCqQB4wu72x9Q7iq1QugtdZmcyWsiSPfgfZzu2u](https://solscan.io/account/A2rCQdCqQB4wu72x9Q7iq1QugtdZmcyWsiSPfgfZzu2u)
-
-[DFZcDnmEYNUK1khquZzx5dQYiEyjJ3N5STqaDVLZ88ZU](https://solscan.io/account/DFZcDnmEYNUK1khquZzx5dQYiEyjJ3N5STqaDVLZ88ZU)&#x20;
+1. [https://solscan.io/account/A2rCQdCqQB4wu72x9Q7iq1QugtdZmcyWsiSPfgfZzu2u](https://solscan.io/account/A2rCQdCqQB4wu72x9Q7iq1QugtdZmcyWsiSPfgfZzu2u)
+2. [https://solscan.io/account/DFZcDnmEYNUK1khquZzx5dQYiEyjJ3N5STqaDVLZ88ZU](https://solscan.io/account/DFZcDnmEYNUK1khquZzx5dQYiEyjJ3N5STqaDVLZ88ZU)

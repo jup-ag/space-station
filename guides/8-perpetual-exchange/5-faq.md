@@ -113,3 +113,64 @@ Both positions will be combined into one position, where
 - Size = initial collateral \* leverage level.
 
 The TP/SL you have set earlier will remain the same after the positions are combined.
+
+### 7. Why are my collateral sizes fixed?
+
+When providing the initial margin or depositing collateral, the exchange records the position's collateral value in USD. The recorded USD value remains constant, even if the collateral token's price fluctuates.
+
+For example, if a trader deposits $100 USD worth of SOL to open a position, their collateral will always be valued at $100 for this position. Even if the price of SOL changes by 50% in either direction, the trader's collateral size for this position remains fixed at $100.
+
+### 8. Why do long and short positions use different collateral tokens?
+
+Traders can deposit any [SPL token supported by Jupiter Swap](https://station.jup.ag/docs/token-list) as the initial margin to open a position or to deposit collateral for an existing open position.&#x20;
+
+The deposited tokens will then be converted to the collateral tokens for the position (SOL / wETH / wBTC for long positions, USDC / USDT stablecoin for short positions).
+
+:::info
+The platform will automatically swap the deposited tokens to the right collateral token so traders don't need to swap tokens manually before opening a position or increasing their collateral.
+:::
+
+The underlying collateral for long positions are the tokens themselves (SOL, wBTC, wETH) and stablecoins (USDC, USDT) for short positions.
+
+This is to protect the pool from scenarios that might put the pool at risk, for example a series of ongoing profitable trades that deplete the pool's reserves.
+
+For more information on this, consult the [JLP pool documentation](https://station.jup.ag/guides/jlp/How-JLP-Works#risks-associated-with-holding-jlp) which describes the dynamics between traders and the liquidity pool for long and short scenarios.
+
+### 9. How are token prices determined?
+
+Token prices for SOL, wETH, wBTC, USDC, and USDT are determined by onchain price oracles.&#x20;
+
+The prices sourced from the oracles are used as the mark price for:
+
+* Opening and closing positions
+* Increasing or reducing position sizes
+* Depositing or withdrawing collateral
+* Calculating PNL
+* Calculating liquidation prices
+* Triggering TP / SL requests
+* Price charts
+
+Jupiter works with trusted oracle providers that provide fast, accurate, and reliable price data for the supported tokens on the Jupiter Perpetuals exchange. All of our oracle providers are audited and go through extensive integration tests.
+
+:::info
+Price data used in the Jupiter Perpetuals exchange may differ from other onchain and offchain price aggregators. Traders should use the Jupiter Perpetuals price chart and historical prices as the source of truth when making trade decisions.
+:::
+
+### 10. How many positions can be opened at one time?
+
+Traders can open up to 9 positions at one time:
+
+* Long SOL
+* Long wETH
+* Long wBTC
+* Short SOL (USDC)
+* Short SOL (USDT)
+* Short wETH (USDC)
+* Short wETH (USDT)
+* Short wBTC (USDC)
+* Short wBTC (USDT)
+
+When a trader opens multiple positions for the same side (long / short) and token:
+
+1. Open positions: Price and fee calculations are based on the existing open position. This is essentially increasing or decreasing the size of an open position.
+2. Deposits, withdrawals, and closing: Price, PNL, and fee calculations are also based on the existing open position.
