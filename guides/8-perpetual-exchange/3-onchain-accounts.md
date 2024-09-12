@@ -3,7 +3,7 @@ sidebar_label: "Onchain Account Types"
 description: Onchain Account Types
 ---
 
-# Onchain account types
+# Onchain Account Types
 
 This page contains an overview of all the **Solana account types** used in the Jupiter Perpetuals decentralized exchange.
 
