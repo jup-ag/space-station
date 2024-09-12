@@ -76,20 +76,20 @@ This oracle was co-designed with Jupiter, with the usage of Jupiter Perps in min
 
 This oracle is extremely compute-efficient, allowing us to update all 5 oracles (SOL, BTC, ETH, USDC, USDT) when opening and closing positions.
 
-![Perps Timeline](edge-oracle.png)
+![Perps Timeline](our-oracle.png)
 
 #### Key Benefits
-| Benefits | Old Oracle | Edge Oracle |
+| Benefits | Old Oracle | Our Oracle |
 | --- | ----- | ----- |
 | Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
 | Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
-| Chart | Discrepancy between trades placed and the chart. | Edge powers the trading view chart and all position requests, no discrepancy. |
+| Chart | Discrepancy between trades placed and the chart. | Our oracle powers the trading view chart and all position requests, no discrepancy. |
 
 ### Pyth as a Fallback Oracle
 
 Perp Keepers still use Pyth:
 
-- As a reference price check (sanity check) against the Edge Oracle, ensuring that the deviation is not too big
-- As a fallback price if Edge’s prices are stale.
+- As a reference price check (sanity check) against our oracle, ensuring that the deviation is not too big
+- As a fallback price if our oracle’s prices are stale.
 
-This way, Jupiter Perps benefits from the new Edge oracle while still relying on Pyth as a backup
+This way, Jupiter Perps benefits from the new oracle while still relying on Pyth as a backup
