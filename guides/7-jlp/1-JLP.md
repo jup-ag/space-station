@@ -83,4 +83,4 @@ More details on how JLP generates yield in [How JLP Works](../jlp/How-JLP-Works)
 
 10. **Estimations and Fees:** The user is shown the estimated fee for trading the token they pick and the estimated JLP to be received.
 
-11. **JLP Price & Total Supply:** Here, you can find the current `JLP Price` and `Total Supply` displayed. The Price is obtained by dividing `TVL` by `Total Supply`.
+11. **JLP Price & Total Supply:** Here, you can find the current virtual `JLP Price` and `Total Supply` displayed. The virtual price is obtained by dividing `TVL` by `Total Supply`.
