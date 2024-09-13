@@ -11,7 +11,38 @@ title: Get Your Token on Jupiter
 
 ![full-routing-banner](../img/full-routing-banner.png)
 
-## How to Get Your Token Verified
+## Getting Your Token Tradable on Jupiter
+
+To provide users access to new tokens, all new tokens launched on **supported AMMs** will be tradable for **14 days**.
+
+After 14 days, tokens with pools that fit the criteria will continue to be tradable on Jupiter.
+
+:::tip Supported AMMs
+We currently support Fluxbeam, Meteora DLMM, 1Intro, Pump.Fun, Raydium CLMM, Raydium CP, Raydium V4 and Whirlpools for Instant Routing.
+:::
+
+To ensure the pool continues to be routed on Jupiter after 14 days, your market must fit **one of the following criteria**:
+
+1. **Less than 30% price impact on $500**
+
+Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact after swapping in AND out of the token from the same pool. 
+
+```
+Price Impact = ($500 - Final USD value) / $500
+```
+
+For example, a user swaps **$500** worth of SOL into the token, then swaps the same output amount back into SOL. We then use the formula to calculate the price impact percentage.
+
+If the price impact is more than **30%**, it means that there is insufficient liquidity in the pool for the benchmark position size of **$500**.
+
+![price-impact-criteria](../img/price-impact-criteria.jpg)
+
+
+2. *(For additional markets)* **Less than 20% price difference on new pools**
+
+For additional markets on already supported tokens, there should be a variance of less than **20%** between the new pool and the pool existing in routing. 
+
+## Getting Your Token Verified on Jupiter
 
 All unverified tokens are marked with a **'⚠️’** label to encourage users to double-check that the mint addresses are the right ones before trading.
 
@@ -35,35 +66,3 @@ More resources on the community tag initiative can be found here:
 - **Community Tag FAQ**: [https://www.jupresear.ch/t/jupiter-community-tag-faq/19168](https://www.jupresear.ch/t/jupiter-community-tag-faq/19168)
 - **Community Tag Overview**: [https://www.jupresear.ch/t/get-your-token-a-community-tag/18963](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
 - **Master Token List API**: [https://www.jupresear.ch/t/ecosystem-master-token-list/19786](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
-
-
-## How to Get Your Pool Routed on Jupiter
-
-To provide users access to new tokens, all new markets on supported AMMs are instantly routed for **14 days**.
-
-After 14 days, markets that fit the criteria will continue to be routed on Jupiter.
-
-:::tip Supported AMMs
-We currently support Fluxbeam, Meteora DLMM, 1Intro, Pump.Fun, Raydium CLMM, Raydium CP, Raydium V4 and Whirlpools for Instant Routing.
-:::
-
-To ensure your market gets routed on Jupiter after 14 days, your market must fit **one of the following criteria**:
-
-1. **Less than 30% price impact on $500**
-
-Using a benchmark position size of **$500**, a user should encounter less than **30%** price impact after swapping in AND out of the token from the same pool. 
-
-```
-Price Impact = ($500 - Final USD value) / $500
-```
-
-For example, a user swaps **$500** worth of SOL into the token, then swaps the same output amount back into SOL. We then use the formula to calculate the price impact percentage.
-
-If the price impact is more than **30%**, it means that there is insufficient liquidity in the pool for the benchmark position size of **$500**.
-
-![price-impact-criteria](../img/price-impact-criteria.jpg)
-
-
-2. *(For additional markets)* **Less than 20% price difference on new pools**
-
-For additional markets on already supported tokens, there should be a variance of less than **20%** between the new pool and the pool existing in routing. 
