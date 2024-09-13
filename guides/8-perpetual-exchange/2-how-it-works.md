@@ -220,7 +220,7 @@ The formula for the hourly borrow fee is:
 
 > * `Tokens Borrowed`: The amount of tokens borrowed from the pool for the leveraged position
 > * `Total Tokens in Pool`: The amount of tokens deposited into the pool for the position's underlying token
-> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (**0.01%** at the time of writing)
+> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (**0.008%** at the time of writing)
 > * `Position Size`: The size (USD) of the leveraged position
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
@@ -237,7 +237,7 @@ For example, assume the price of SOL is $100. The SOL liquidity pool has 1,000 S
 
 * `Tokens Borrowed`: `$9,000 (amount to borrow) / $100 (SOL price) =` 90 SOL
 * `Total Tokens in Pool`: 1,000 SOL
-* `Hourly Borrow Rate`:  0.01% (0.0001 in decimal format / 1 BPS)
+* `Hourly Borrow Rate`:  0.008% (0.00008 in decimal format / 0.8 BPS)
 * `Position Size`: $10,000
 
 Calculation:
