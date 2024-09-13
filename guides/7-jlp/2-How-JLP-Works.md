@@ -56,7 +56,7 @@ It is essential to note that pool earnings and losses (index token appreciation/
 | Closing a Position | 6 BPS                                                                     |
 | Price Impact Fee   | Variable (see [reference](../8-perpetual-exchange/2-how-it-works.md#price-impact-fee)) |
 | Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
-| Borrow Rate        | 1 BPS/hour x token utilization percentage                                  |
+| Borrow Rate        | 0.8 BPS/hour x token utilization percentage                                  |
 
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.06%.
 
@@ -65,7 +65,7 @@ The price impact fee from larger trades are then added. More analytics on this t
 The borrowing fee, often termed the hourly borrow fee, is computed as follows:
 
 ```
-hourly borrow fee = (tokens borrowed / tokens in the pool) x 0.01% x position size
+hourly borrow fee = (tokens borrowed / tokens in the pool) x 0.008% x position size
 ```
 
 The swap fee for the pool typically ranges between 0% and 2%.
