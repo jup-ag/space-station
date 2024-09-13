@@ -36,6 +36,8 @@ const config = {
     locales: ["en"],
   },
 
+  clientModules: [require.resolve('./src/pages/metropolis/myClientModule.ts')],
+
   stylesheets: [
     {
       href: "https://fonts.googleapis.com",

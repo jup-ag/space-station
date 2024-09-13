@@ -102,12 +102,11 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            <div className="fixed top-4 left-7 z-50 block md:hidden">
+            <div className="fixed top-[1.3rem] right-7 z-50 block md:hidden">
                 <Menu
                     overlayClassName={ "top-0 left-0 right-0 bottom-0" }
-                    outerContainerId={ "header" }
                     customBurgerIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M4 6l16 0" />
                             <path d="M4 12l16 0" />
@@ -117,9 +116,8 @@ const Header = () => {
                     customCrossIcon={
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                     }
-                    crossClassName={ "top-10 right-10" }
                     width={ "65%" }
-                    left
+                    right
                 >
                     <div className='w-full'>
                         <div className="w-full h-screen flex flex-col overflow-auto gap-2 items-center pt-6 bg-gradient-to-b from-[#223345] to-[#131C25] md:bg-transparent md:from-transparent md:to-transparent">

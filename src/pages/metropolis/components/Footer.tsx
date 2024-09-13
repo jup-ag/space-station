@@ -39,7 +39,7 @@ const CONTACT = [
 
 const Footer = () => {
     return (
-        <footer className="max-w-screen-xl mx-auto px-5 pt-1 pb-20 bg-[#131C25] lg:flex lg:items-center">
+        <footer className="max-w-screen-xl mx-auto px-5 pt-1 pb-14 min-[450px]:pb-20 bg-[#131C25] lg:flex lg:items-center">
             <div className="w-full lg:pl-12 lg:pb-8 flex items-center justify-center lg:justify-start">
                 <a href="/" rel="noopener noreferrer" className='hover:no-underline'>
                     <div className="flex flex-row items-center space-x-2.5">
@@ -58,7 +58,7 @@ const Footer = () => {
                 </a>
             </div>
 
-            <div className="mx-auto lg:mr-0 lg:ml-auto mt-12 lg:mt-0 sm:max-w-2xl w-full flex flex-col min-[450px]:flex-row gap-5 md:gap-10 justify-around text-center min-[450px]:text-left">
+            <div className="mx-auto lg:mr-0 lg:ml-auto mt-12 lg:mt-0 sm:max-w-2xl w-full flex flex-row min-[450px]:flex-row gap-2 min-[450px]:gap-5 md:gap-10 justify-around text-center min-[450px]:text-left">
                 <div className="mx-4">
                     <h6 className='font-semibold text-white/70 text-xs mb-2'>Products</h6>
                     <ul className='list-none p-0'>
