@@ -15,7 +15,7 @@ The Jupiter Perpetuals exchange is a trader-to-LP exchange which means traders b
 
 Instead of periodic funding payments between long and short traders, Jupiter Perpetuals implements an hourly borrow fee mechanism. 
 
-Traders pay these fees to the pool based on two key factors: the size of their position and the amount of tokens they've borrowed. This mechanism helps secure the balance of the pool's assets and compensates liquidity providers for the use of their tokens.
+Traders pay these fees to the pool based on the amount of tokens they've borrowed. This mechanism helps secure the balance of the pool's assets and compensates liquidity providers for the use of their tokens.
 
 ### Add/Remove Liquidity into JLP
 
