@@ -51,7 +51,7 @@ If `current_price` > `global_short_average_prices`, traders are losing on short 
 `nav += guaranteed_usd`
 
 :::info
-The `guaranteed_usd` value in each `Custody` account represents an estimate of the total size of all long positions. It is only an estimate as `guaranteed_usd` is only updated when positions are updated (i.e. opening / closing positions, updating collateral). It does update in real-time when asset prices change. 
+The `guaranteed_usd` value in each `Custody` account represents an estimate of the total size of all long positions. It is only an estimate as `guaranteed_usd` is only updated when positions are updated (i.e. opening / closing positions, updating collateral). It does not update in real-time when asset prices change. 
 
 `guaranteed_usd` is used to calculate the pool's AUM as well as the overall PnL for all long positions efficiently.
 :::
