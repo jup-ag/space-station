@@ -318,4 +318,5 @@ If the price for a token **cannot** be found, it is either because
     1. It could be because the token’s liquidity does not have enough liquidity for larger values
 2. We cannot find the sell quote for the respective token and the buy/sell values
 
-**More info on Price V2: [https://www.jupresear.ch/t/introducing-the-price-v2-api/22175](https://www.jupresear.ch/t/introducing-the-price-v2-api/22175)**
+Want to find out more about how we derive `confidenceLevel` or `depth`? 
+Read our [**research article**](https://www.jupresear.ch/t/introducing-the-price-v2-api/22175) on the **Price V2 API**.
