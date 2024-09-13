@@ -36,7 +36,7 @@ The AUM for each `Custody` account in the pool is calculated as follows:
 
 1. Calculate the global short position profit/loss (Unrealized PnL in USD):
 
-`unrealized_pnl = global_short_sizes * (global_short_average_prices - current_price)`
+`unrealized_pnl = (global_short_sizes * (|global_short_average_prices - current_price|)) / global_short_average_prices)`
 
 :::tip
 If `current_price` > `global_short_average_prices`, traders are losing on short positions.
