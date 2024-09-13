@@ -283,7 +283,7 @@ curl -X 'GET' 'https://api.jup.ag/price/v2?ids=So1111111111111111111111111111111
 
 ### `extraInfo` Fields
 
-Note: This is flattened, please refer to the JSON response. 
+Note: This is flattened, please refer to the JSON response.
 
 | `lastJupiterSellAt` | Epoch seconds of the `lastJupiterSellPrice`. |
 | --- | --- |
@@ -294,7 +294,9 @@ Note: This is flattened, please refer to the JSON response.
 | `buyAt` | Epoch seconds of when the buy quote was retrieved. |
 | `sellPrice` | An `Option<String>` representing the quoted sell price. |
 | `sellAt` | Epoch seconds of when the sell quote was retrieved. |
-| `confidenceLevel` | A `String` indicating the confidence level (High, Medium, or Low). 
+| `confidenceLevel` | A `String` indicating the confidence level (High, Medium, or Low). |
+| `buyPriceImpactRatio` | A `Map` broken down into 3 key-value pairs: 10, 100 & 1000 (SOL). The value is expressed as a ***percentage***. |
+| `sellPriceImpactRatio`  | A `Map` broken down into 3 key-value pairs: 10, 100 & 1000 (SOL). The value is expressed as a ***percentage***. |
 
 ## Limitations
 
