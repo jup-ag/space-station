@@ -58,6 +58,10 @@ It is essential to note that pool earnings and losses (index token appreciation/
 | Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
 | Borrow Rate        | 0.8 BPS/hour x token utilization percentage                                  |
 
+:::info
+**Hourly Borrow Rate** is at 0.008% for SOL, ETH and BTC while 0.01% for USDC and USDT.
+:::
+
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.06%.
 
 The price impact fee from larger trades are then added. More analytics on this to follow.
