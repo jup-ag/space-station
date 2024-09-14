@@ -267,7 +267,7 @@ curl -X 'GET' 'https://api.jup.ag/price/v2?ids=So1111111111111111111111111111111
 </details>
 </details>
 
-**Rate Limits:** This endpoint is rate limited to **100 requests/min**.
+**Rate Limits:** This endpoint is rate limited to **600 requests/min**.
 
 ## Making sense of the data
 
