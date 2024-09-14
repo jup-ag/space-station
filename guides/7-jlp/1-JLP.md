@@ -53,7 +53,7 @@ JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the gov
 
 The **APY** of JLP is calculated based on 75% of fees generated from perps trading activities (not including assets appreciation and traders PnL). 
 
-The generated fees are distributed back to liquidity providers by redepositing the fees into the pool hourly.
+The generated fees are distributed back to liquidity providers
 
 More details on how JLP generates yield in [How JLP Works](../jlp/How-JLP-Works).
 
