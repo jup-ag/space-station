@@ -97,7 +97,7 @@ You may sell your JLP for the Market Price at any time. If the Market Price is b
 
 You can view the current TVL and AUM Limit on the [JLP UI](https://jup.ag/perps-earn).
 
-Every Monday, at ~UTC 18:00, the estimated APY figure is updated with the above calculation, by using the previous week's fees and estimating an APR and APY for users.
+Every Monday, the estimated APY figure is updated with the above calculation by using the previous week's fees.
 
 ## Yield
 

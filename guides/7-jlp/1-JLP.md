@@ -9,7 +9,7 @@ title: "JLP Overview"
     <meta name="twitter:card" content="summary" />
 </head>
 
-The **Jupiter Liquidity Provider (JLP)** Pool is a liquidity pool that acts as a counterparty to traders on [Jupiter Perps](https://jup.ag/perps). When traders open leveraged positions, they will borrow tokens from the pool.
+The **Jupiter Liquidity Provider (JLP)** Pool is a liquidity pool that acts as a counterparty to traders on [Jupiter Perps](https://jup.ag/perps). Traders borrow tokens from the pool to open leveraged positions on the Jupiter Perpetuals exchange.
 
 The JLP token derives its value from:
 

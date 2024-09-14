@@ -33,14 +33,14 @@ For example, if the trader created an open position request, the transaction wou
 
 Jupiter hosts two keepers that continuously poll the Solana blockchain for trade requests.&#x20;
 
-Once a trade request is fetched by a keeper, it verifies the trade request before creating and submitting another transaction to execute the trade.&#x20;
+Once a trade request is fetched by a keeper, it verifies the trade request before creating and submitting another transaction to execute the trade.
 
 The trade is executed when the transaction succeeds and is confirmed by the Solana blockchain, thus updating the position or TP / SL request.
 
 This means there are two transactions required to complete a trade request: one for the trade request and another one to fulfil the trade request.
 
 :::info
-Keepers are offchain services that listen to onchain events and perform actions corresponding to the event. They enables automatic and timely execution of trade requests without manual intervention.
+Keepers are offchain services that listen to onchain events and perform actions corresponding to the event. They enable automatic and timely execution of trade requests without manual intervention.
 
 Jupiter Perpetuals' keepers listen to the trade requests listed above and execute them by verifying the requests and submitting transactions that contain the actual program instructions for the trade request.
 :::
