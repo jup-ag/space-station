@@ -15,7 +15,7 @@ For a detailed breakdown of swaps, check out [How to Swap](https://station.jup.a
 
 1. Go to the [USDC-JLP](https://jup.ag/swap/USDC-JLP) pair on Jupiter Swap
 2. Make sure your wallet is connected. There should be an icon on the top right showing your connection status.
-3. Choose the token you'd like to trade for JLP in the "You're Selling" section with the token selector, or stick with USDC.
+3. Choose the token you'd like to trade for JLP in the "You're Selling" section with the token selector.
 4. JLP should already be selected as the token in the "You're Buying" section.
 6. Decide the amount you'd like to swap. An estimate of the quantity of JLP you will receive will appear in the "You're Buying" section.
 7. Click on the `Swap` button found near the bottom of the page.

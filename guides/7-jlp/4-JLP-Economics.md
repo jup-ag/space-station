@@ -83,15 +83,15 @@ This simplified representation on the Earn page provides a quick overview of the
 
 `Virtual Price = Sum of all JLP Assets (in USD) / Total Quantity of JLP in circulation`
 
-When AUM limit is hit:
+When the AUM limit is hit:
 
 `Market Price = Virtual Price + Market-assigned Premium`
 
-Usually, users can mint new JLP or redeem (burn) them at the Virtual Price. However, when AUM Limits are hit, new minting of JLP is disabled to cap the amount of TVL in the pool.
+Usually, users can mint new JLP or redeem (burn) them at the Virtual Price. However, when the AUM limit is hit, new minting of JLP is disabled to cap the amount of TVL in the pool.
 
 When this happens, the demand for JLP on the market usually leads to a premium for JLP compared to the virtual price.
 
-You may sell your JLP for the Market Price at any time. If the Market Price is below the Virtual Price, your JLP tokens are redeemed (burned) at the virtual price instead of sold at the market price.
+You may sell your JLP for the Market Price at any time. If the Market Price is below the Virtual Price, your JLP tokens are redeemed (burned) at the virtual price instead of the market price.
 
 ![image](../img/jlp/jlp-TVL.png)
 
