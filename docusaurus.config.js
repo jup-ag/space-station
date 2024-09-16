@@ -119,6 +119,18 @@ const config = {
       }),
     ],
     [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "features",
+        path: "features",
+        routeBasePath: "features",
+        sidebarPath: require.resolve("./sidebars-features.js"),
+        sidebarCollapsed: true,
+        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+      }),
+    ],
+    [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
@@ -162,6 +174,22 @@ const config = {
             to: '/blog-redirect',
             from: '/blog',
           },
+          {
+            to: '/features',
+            from: '/guides/how-swap-works',
+          },
+          {
+            to: '/features',
+            from: '/guides/jupiter-swap/how-swap-works/metropolis',
+          },
+          {
+            to: '/features',
+            from: '/guides/jupiter-swap/how-swap-works/how-swap-works',
+          },
+          {
+            to: '/features',
+            from: '/guides/jupiter-swap/how-swap-works/metis-routing',
+          }
         ],
       },
     ],

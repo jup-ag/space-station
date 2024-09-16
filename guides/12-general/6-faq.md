@@ -25,7 +25,7 @@ description: "Discover FAQs on Jupiter Swap, DCA, and more. Get quick answers an
 - Slippage occurs because of changing market conditions between the moment the transaction is submitted and its verification.
 - Your slippage rate is an important setting, it works as a protection. If the price falls below your slippage rate, then the transaction will fail in order to prevent you from getting less tokens than you want.
 - You can adjust your slippage. By default, slippage is set to 0.5%, meaning if the price slips more than 0.5% of your quote, the trade will not be completed.
-- Learn more about [slippage and price impact](/guides/2-jupiter-spot/2-jupiter-swap/2-how-swap-works/2-how-swap-works.md)
+- Learn more about [slippage and price impact](/features/magic/slippage)
 
 ### What does it mean when I get the 'some routes failed to load...'
 
