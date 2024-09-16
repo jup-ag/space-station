@@ -1,5 +1,8 @@
+import { cn } from '@site/src/utils';
 import React, { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import BurgerIcon from './BurgerIcon';
+import CrossIcon from './CrossIcon';
 
 const LINKS = [
     {
@@ -34,10 +37,6 @@ const Header = () => {
     const threshold = 50;
 
     useEffect(() => {
-        setScrolled(scrollY > threshold ? 1 : 0);
-    }, []);
-
-    useEffect(() => {
         let ticking = false;
 
         const updateScrolled = () => {
@@ -61,7 +60,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className={(scrolled ? "bg-[#131C25]" : "bg-transparent") + " flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500"}>
+            <header className={cn(scrolled ? "bg-[#131C25]" : "bg-transparent", "flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500")}>
                 <div className="xl:max-w-6xl w-full flex items-center justify-between">
                     <a href="/" target="_blank" rel="noopener noreferrer" className='hover:no-underline m-0'>
                         <span className="flex flex-row items-center space-x-2.5">
@@ -84,7 +83,7 @@ const Header = () => {
                         {LINKS.map((link) => {
                             if (link.style === 'button') {
                                 return (
-                                    <a href={link.path} key={link.label} target="_blank" rel="noopener noreferrer" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
+                                    <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
                                         <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
                                             {link.label}
                                         </span>
@@ -93,7 +92,7 @@ const Header = () => {
                             }
                             else {
                                 return (
-                                    <a href={link.path} key={link.label} target="_blank" rel="noopener noreferrer" className='hover:no-underline'>
+                                    <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
                                         <span className="px-3 py-1 text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
                                     </a>
                                 );
@@ -105,23 +104,14 @@ const Header = () => {
             <div className="fixed top-[1.3rem] right-7 z-50 block md:hidden">
                 <Menu
                     overlayClassName={ "top-0 left-0 right-0 bottom-0" }
-                    customBurgerIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M4 6l16 0" />
-                            <path d="M4 12l16 0" />
-                            <path d="M4 18l16 0" />
-                        </svg>
-                    }
-                    customCrossIcon={
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    }
+                    customBurgerIcon={<BurgerIcon width={30} height={30} />}
+                    customCrossIcon={<CrossIcon width={24} height={24} />}
                     width={ "65%" }
                     right
                 >
                     <div className='w-full'>
                         <div className="w-full h-screen flex flex-col overflow-auto gap-2 items-center pt-6 bg-gradient-to-b from-[#223345] to-[#131C25] md:bg-transparent md:from-transparent md:to-transparent">
-                            <a href="/" target="_blank" rel="noopener noreferrer" className='hover:no-underline mx-auto mb-4 mt-4'>
+                            <a href="/" target="_blank" className='hover:no-underline mx-auto mb-4 mt-4'>
                                 <span className="flex flex-row items-center space-x-2.5">
                                     <img
                                         alt="logo"
@@ -142,7 +132,7 @@ const Header = () => {
                             {LINKS.map((link) => {
                                 if (link.style === 'button') {
                                     return (
-                                        <a href={link.path} key={link.label} target="_blank" rel="noopener noreferrer" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 mt-4 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
+                                        <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 mt-4 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
                                             <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
                                                 {link.label}
                                             </span>
@@ -151,7 +141,7 @@ const Header = () => {
                                 }
                                 else {
                                     return (
-                                        <a href={link.path} key={link.label} target="_blank" rel="noopener noreferrer" className='hover:no-underline'>
+                                        <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
                                             <span className="text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
                                         </a>
                                     );

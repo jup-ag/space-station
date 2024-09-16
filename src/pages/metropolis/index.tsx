@@ -5,6 +5,16 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import LeftArrowIcon from "./components/LeftArrowIcon";
+import RightArrowIcon from "./components/RightArrowIcon";
+import SwapApiIcon from "./components/SwapApiIcon";
+import PerpApiIcon from "./components/PerpApiIcon";
+import PriceApiIcon from "./components/PriceApiIcon";
+import TokenApiIcon from "./components/TokenApiIcon";
+import ExperiencedIcon from "./components/ExperiencedIcon";
+import BuildersIcon from "./components/BuildersIcon";
+import PPPIcon from "./components/PPPIcon";
+import DeveloperIcon from "./components/DeveloperIcon";
 
 const SELECTED_PARTNERS = [
   {
@@ -36,7 +46,7 @@ const SELECTED_PARTNERS = [
 ];
 
 const Metropolis = () => {
-  const partnerSettings = {
+  const partnerSliderSettings = {
     arrows: true,
     dots: false,
     infinite: true,
@@ -166,50 +176,7 @@ const Metropolis = () => {
             {/* Products */}
             <div className="grid text-center mx-auto max-w-xs sm:max-w-md md:max-w-5xl w-full sm:grid-cols-2 md:grid-cols-4 gap-y-2">
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  viewBox="-1.5 -1.5 64 64"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="Data-Transfer-Diagonal--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    Data Transfer Diagonal Streamline Icon:
-                    https://streamlinehq.com
-                  </desc>
-                  <path
-                    d="m32.40625 40.03125 26.6875 -26.6875"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m59.09375 24.78125 0 -11.4375 -11.4375 0"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M28.59375 20.96875 1.90625 47.65625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m1.90625 36.21875 0 11.4375 11.4375 0"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
+                <SwapApiIcon height={64} width={64} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Swap API</span>
                 </h2>
@@ -218,84 +185,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="-1.5 -1.5 64 64"
-                  id="Accounting-Coins-Stack-1--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    Accounting Coins Stack 1 Streamline Icon:
-                    https://streamlinehq.com
-                  </desc>
-                  <defs></defs>
-                  <title>accounting-coins-stack-1</title>
-                  <path
-                    d="M19.0625 47.65625H45.75s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H19.0625s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M22.875 36.21875h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H22.875s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M11.4375 24.78125H38.125s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H11.4375s-1.90625 0 -1.90625 -1.90625v-7.625s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M15.25 13.34375h26.6875s1.90625 0 1.90625 1.90625v7.625s0 1.90625 -1.90625 1.90625H15.25s-1.90625 0 -1.90625 -1.90625V15.25s0 -1.90625 1.90625 -1.90625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m55.28125 19.0625 0 7.625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.46875 22.875 7.625 0"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m5.71875 1.90625 0 7.625"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m1.90625 5.71875 7.625 0"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
+                <TokenApiIcon height={64} width={64} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
@@ -304,73 +194,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <svg
-                  viewBox="-1.5 -1.5 75 75"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="File-Code-Cash-1--Streamline-Ultimate"
-                  height="64"
-                  width="64"
-                >
-                  <desc>
-                    File Code Cash 1 Streamline Icon: https://streamlinehq.com
-                  </desc>
-                  <path
-                    d="M56.214 42.762H50.099999999999994a4.026 4.026 0 0 0 -1.5 7.761000000000001l6.189 2.4749999999999996a4.026 4.026 0 0 1 -1.5 7.764h-6.074999999999999"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.714 42.762 0 -2.25"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m51.714 63.012 0 -2.25"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M33.714 51.762a18 18 0 1 0 36 0 18 18 0 1 0 -36 0Z"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="M24.714 60.762h-18a4.5 4.5 0 0 1 -4.5 -4.5v-49.5a4.5 4.5 0 0 1 4.5 -4.5h31.884a4.5 4.5 0 0 1 3.183 1.317L50.400000000000006 12.192a4.5 4.5 0 0 1 1.32 3.183v9.387"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m26.964 18.012 6.75 6.75 -6.75 6.75"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                  <path
-                    d="m17.964000000000002 18.012 -6.75 6.75 6.75 6.75"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="3"
-                  ></path>
-                </svg>
+                <PriceApiIcon height={64} width={64} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Price API</span>
                 </h2>
@@ -379,25 +203,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-scale blur-[2px]"
-                  width="64"
-                  height="64"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#c7f284"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M7 20l10 0" />
-                  <path d="M6 6l6 -1l6 1" />
-                  <path d="M12 3l0 17" />
-                  <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
-                  <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
-                </svg>
+                <PerpApiIcon height={64} width={64} />
                 <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
                   Coming Soon!
                 </span>
@@ -452,39 +258,7 @@ const Metropolis = () => {
             {/* USP */}
             <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5 pb-1.5">
               <div className="flex gap-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="shrink-0 icon icon-tabler icon-tabler-topology-star-ring-3 opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1"
-                  stroke="#c7f284"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M18 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M10 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M6 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M18 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M14 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M22 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
-                  <path d="M6 12h4" />
-                  <path d="M14 12h4" />
-                  <path d="M15 7l-2 3" />
-                  <path d="M9 7l2 3" />
-                  <path d="M11 14l-2 3" />
-                  <path d="M13 14l2 3" />
-                  <path d="M10 5h4" />
-                  <path d="M10 19h4" />
-                  <path d="M17 17l2 -3" />
-                  <path d="M19 10l-2 -3" />
-                  <path d="M7 7l-2 3" />
-                  <path d="M5 14l2 3" />
-                </svg>
+                <ExperiencedIcon height={50} width={50} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Experienced Focused</span>
@@ -496,21 +270,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c7f284"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0 lucide lucide-blocks opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
-                >
-                  <rect width="7" height="7" x="14" y="3" rx="1" />
-                  <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" />
-                </svg>
+                <BuildersIcon height={50} width={50} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Builders Focused</span>
@@ -522,24 +282,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c7f284"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0 lucide lucide-handshake opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 pt-1 pb-0.5 mt-1"
-                >
-                  <path d="m11 17 2 2a1 1 0 1 0 3-3" />
-                  <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
-                  <path d="m21 3 1 11h-2" />
-                  <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
-                  <path d="M3 4h8" />
-                </svg>
+                <PPPIcon height={50} width={50} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">PPP Focused</span>
@@ -551,30 +294,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c7f284"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0 lucide lucide-bug opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 py-1 mt-1"
-                >
-                  <path d="m8 2 1.88 1.88" />
-                  <path d="M14.12 3.88 16 2" />
-                  <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" />
-                  <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6" />
-                  <path d="M12 20v-9" />
-                  <path d="M6.53 9C4.6 8.8 3 7.1 3 5" />
-                  <path d="M6 13H2" />
-                  <path d="M3 21c0-2.1 1.7-3.9 3.8-4" />
-                  <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4" />
-                  <path d="M22 13h-4" />
-                  <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4" />
-                </svg>
+                <DeveloperIcon height={50} width={50} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Developer Focused</span>
@@ -622,25 +342,10 @@ const Metropolis = () => {
                 className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer absolute top-[50%] left-0 lg:left-12 -translate-y-1/2 z-40"
                 onClick={() => slider?.current?.slickPrev()}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c7f284"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100 text-center"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M16 12H8" />
-                  <path d="m12 8-4 4 4 4" />
-                </svg>
+                <LeftArrowIcon width={20} height={20}/>
               </button>
               {/* Social Proof */}
-              <Slider ref={slider} {...partnerSettings}>
+              <Slider ref={slider} {...partnerSliderSettings}>
                 {SELECTED_PARTNERS.map((partner, index) => {
                   return (
                     <a
@@ -676,22 +381,7 @@ const Metropolis = () => {
                 className="text-white/80 font-semibold text-sm bg-transparent border-0 cursor-pointer absolute top-[50%] right-0 lg:right-12 -translate-y-1/2 z-40"
                 onClick={() => slider?.current?.slickNext()}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#c7f284"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-arrow-right opacity-80 hover:opacity-100 text-center"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M8 12h8" />
-                  <path d="m12 16 4-4-4-4" />
-                </svg>
+                <RightArrowIcon width={20} height={20}/>
               </button>
             </div>
           </div>
