@@ -1,6 +1,6 @@
 import React from "react";
 
-const TelegramIcon = ({ width = 18, height = 18 }) => {
+const TelegramIcon = ({ width = 18, height = 18, color="#ffffff" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const TelegramIcon = ({ width = 18, height = 18 }) => {
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="#ffffff"
+      stroke={color}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"

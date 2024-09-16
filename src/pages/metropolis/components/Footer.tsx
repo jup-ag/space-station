@@ -1,7 +1,7 @@
 import React from 'react';
-import TwitterIcon from './TwitterIcon';
-import TelegramIcon from './TelegramIcon';
-import DiscordIcon from './DiscordIcon';
+import TwitterIcon from './icons/TwitterIcon';
+import TelegramIcon from './icons/TelegramIcon';
+import DiscordIcon from './icons/DiscordIcon';
 
 const PRODUCTS = [
     {
@@ -30,17 +30,17 @@ const Socials = () => {
         <ul className='list-none p-0 mb-0 pb-9 mt-9 md:mt-14 flex gap-4 items-center justify-center'>
             <li>
                 <a href="https://discord.gg/jup" target="_blank" rel="noopener noreferrer" className="py-1 text-sm font-semibold text-white hover:text-[#c7f284] hover:no-underline transition-colors ease-in duration-200">
-                    <DiscordIcon height={18} width={18} />
+                    <DiscordIcon height={18} width={18} color={"#ffffff"} />
                 </a>
             </li>
             <li>
                 <a href="https://t.me/jup_dev" target="_blank" rel="noopener noreferrer" className="py-1 text-sm font-semibold text-white hover:text-[#c7f284] hover:no-underline transition-colors ease-in duration-200">
-                    <TelegramIcon height={18} width={18} />
+                    <TelegramIcon height={18} width={18} color={"#ffffff"} />
                 </a>
             </li>
             <li>
                 <a href="https://twitter.com/JupiterExchange" target="_blank" rel="noopener noreferrer" className="py-1 text-sm font-semibold text-white hover:text-[#c7f284] hover:no-underline transition-colors ease-in duration-200">
-                    <TwitterIcon height={18} width={18} />
+                    <TwitterIcon height={18} width={18} color={"#ffffff"} />
                 </a>
             </li>
         </ul>

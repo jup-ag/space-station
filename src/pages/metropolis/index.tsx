@@ -5,16 +5,16 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LeftArrowIcon from "./components/LeftArrowIcon";
-import RightArrowIcon from "./components/RightArrowIcon";
-import SwapApiIcon from "./components/SwapApiIcon";
-import PerpApiIcon from "./components/PerpApiIcon";
-import PriceApiIcon from "./components/PriceApiIcon";
-import TokenApiIcon from "./components/TokenApiIcon";
-import ExperiencedIcon from "./components/ExperiencedIcon";
-import BuildersIcon from "./components/BuildersIcon";
-import PPPIcon from "./components/PPPIcon";
-import DeveloperIcon from "./components/DeveloperIcon";
+import LeftArrowIcon from "./components/icons/LeftArrowIcon";
+import RightArrowIcon from "./components/icons/RightArrowIcon";
+import SwapApiIcon from "./components/icons/SwapApiIcon";
+import PerpApiIcon from "./components/icons/PerpApiIcon";
+import PriceApiIcon from "./components/icons/PriceApiIcon";
+import TokenApiIcon from "./components/icons/TokenApiIcon";
+import ExperiencedIcon from "./components/icons/ExperiencedIcon";
+import BuildersIcon from "./components/icons/BuildersIcon";
+import PPPIcon from "./components/icons/PPPIcon";
+import DeveloperIcon from "./components/icons/DeveloperIcon";
 
 const SELECTED_PARTNERS = [
   {
@@ -159,7 +159,7 @@ const Metropolis = () => {
                   </span>
                 </a>
               </div>
-              <Header></Header>
+              <Header />
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ const Metropolis = () => {
             {/* Products */}
             <div className="grid text-center mx-auto max-w-xs sm:max-w-md md:max-w-5xl w-full sm:grid-cols-2 md:grid-cols-4 gap-y-2">
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <SwapApiIcon height={64} width={64} />
+                <SwapApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Swap API</span>
                 </h2>
@@ -185,7 +185,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <TokenApiIcon height={64} width={64} />
+                <TokenApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
@@ -194,7 +194,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
-                <PriceApiIcon height={64} width={64} />
+                <PriceApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Price API</span>
                 </h2>
@@ -203,7 +203,7 @@ const Metropolis = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
-                <PerpApiIcon height={64} width={64} />
+                <PerpApiIcon height={64} width={64} color={"#c7f284"} />
                 <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
                   Coming Soon!
                 </span>
@@ -258,7 +258,7 @@ const Metropolis = () => {
             {/* USP */}
             <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5 pb-1.5">
               <div className="flex gap-5">
-                <ExperiencedIcon height={50} width={50} />
+                <ExperiencedIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Experienced Focused</span>
@@ -270,7 +270,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <BuildersIcon height={50} width={50} />
+                <BuildersIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Builders Focused</span>
@@ -282,7 +282,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <PPPIcon height={50} width={50} />
+                <PPPIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">PPP Focused</span>
@@ -294,7 +294,7 @@ const Metropolis = () => {
               </div>
 
               <div className="flex gap-5">
-                <DeveloperIcon height={50} width={50} />
+                <DeveloperIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Developer Focused</span>
@@ -342,7 +342,7 @@ const Metropolis = () => {
                 className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer absolute top-[50%] left-0 lg:left-12 -translate-y-1/2 z-40"
                 onClick={() => slider?.current?.slickPrev()}
               >
-                <LeftArrowIcon width={20} height={20}/>
+                <LeftArrowIcon width={20} height={20} color={"#c7f284"} />
               </button>
               {/* Social Proof */}
               <Slider ref={slider} {...partnerSliderSettings}>
@@ -381,7 +381,7 @@ const Metropolis = () => {
                 className="text-white/80 font-semibold text-sm bg-transparent border-0 cursor-pointer absolute top-[50%] right-0 lg:right-12 -translate-y-1/2 z-40"
                 onClick={() => slider?.current?.slickNext()}
               >
-                <RightArrowIcon width={20} height={20}/>
+                <RightArrowIcon width={20} height={20} color={"#c7f284"} />
               </button>
             </div>
           </div>
@@ -522,7 +522,7 @@ const Metropolis = () => {
           </div>
         </div>
         <div className="px-3 bg-[#131C25]">
-          <Footer></Footer>
+          <Footer />
         </div>
       </main>
     </div>

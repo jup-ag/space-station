@@ -1,6 +1,6 @@
 import React from "react";
 
-const BuildersIcon = ({ width = 50, height = 50 }) => {
+const BuildersIcon = ({ width = 50, height = 50, color= "#c7f284" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,7 @@ const BuildersIcon = ({ width = 50, height = 50 }) => {
       height={height}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#c7f284"
+      stroke={color}
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"

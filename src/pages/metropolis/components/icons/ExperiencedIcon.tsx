@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExperiencedIcon = ({ width = 50, height = 50 }) => {
+const ExperiencedIcon = ({ width = 50, height = 50, color="#c7f284" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const ExperiencedIcon = ({ width = 50, height = 50 }) => {
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="1"
-      stroke="#c7f284"
+      stroke={color}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"

@@ -1,6 +1,6 @@
 import React from "react";
 
-const PerpApiIcon = ({ width = 64, height = 64 }) => {
+const PerpApiIcon = ({ width = 64, height = 64, color="#c7f284" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ const PerpApiIcon = ({ width = 64, height = 64 }) => {
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="#c7f284"
+      stroke={color}
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"

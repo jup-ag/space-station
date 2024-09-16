@@ -1,8 +1,8 @@
 import { cn } from '@site/src/utils';
 import React, { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import BurgerIcon from './BurgerIcon';
-import CrossIcon from './CrossIcon';
+import BurgerIcon from './icons/BurgerIcon';
+import CrossIcon from './icons/CrossIcon';
 
 const LINKS = [
     {
@@ -104,8 +104,8 @@ const Header = () => {
             <div className="fixed top-[1.3rem] right-7 z-50 block md:hidden">
                 <Menu
                     overlayClassName={ "top-0 left-0 right-0 bottom-0" }
-                    customBurgerIcon={<BurgerIcon width={30} height={30} />}
-                    customCrossIcon={<CrossIcon width={24} height={24} />}
+                    customBurgerIcon={<BurgerIcon width={30} height={30} color={"#ffffff"} />}
+                    customCrossIcon={<CrossIcon width={24} height={24} color={"#ffffff"} />}
                     width={ "65%" }
                     right
                 >
