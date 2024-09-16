@@ -1,8 +1,8 @@
 ---
-sidebar_label: Metropolis
+sidebar_label: Metropolis Features
 description: "Explore Jupiter V3 Metropolis: better token discovery, improved slippage, and seamless trading. Enhance safety and efficiency."
-title: Metropolis
-slug: /jupiter-swap/how-swap-works/metropolis
+title: Metropolis Features
+slug: /jupiter-swap/how-swap-works/metropolis-features
 ---
 
 <head>

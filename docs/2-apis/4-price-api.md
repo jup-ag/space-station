@@ -246,6 +246,8 @@ curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
 </details>
 </details>
 
+**Rate Limits:** This endpoint is rate limited to **600 requests/min**.
+
 ## HTTP Status Codes
 
 |Code|Error Message|
