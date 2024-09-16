@@ -21,8 +21,7 @@ The JLP token derives its value from:
 
 Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem by supplying the necessary liquidity for perpetual traders. 
 
-Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders to test their perpetual trading strategies. As a result, Jupiter can offer its trading service without needing to hold huge amounts of liquidity, and LPs are rewarded with the majority of the fees.
-
+Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders to test their perpetual trading strategies. As a result, Jupiter connects LPs with traders, allowing the traders to access the liquidity provided by the LPs, and in turn allowing LPs to earn the majority of fees generated from trading activity.
 
 ### How to Become a Liquidity Provider (LP)
 
@@ -51,9 +50,9 @@ JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the gov
 
 ### Rewards and Earnings
 
-The **APY** of JLP is calculated based on 75% of fees generated from perps trading activities (not including assets appreciation and traders PnL). 
+The **APY** of JLP is calculated based on 75% of fees generated from perps trading activities (not including assets appreciation and traders PnL).
 
-The generated fees are distributed back to liquidity providers by redepositing the fees into the pool weekly (at the same time APY is updated).
+The generated fees are distributed back to liquidity providers by redepositing the fees into the pool hourly.
 
 More details on how JLP generates yield in [How JLP Works](../jlp/How-JLP-Works).
 
