@@ -127,6 +127,10 @@ const config = {
             from: '/labs/perpetual-exchange/overview',
           },
           {
+            to: '/guides/jupiter-swap/how-swap-works/metropolis-features',
+            from: '/guides/jupiter-swap/how-swap-works/metropolis',
+          },
+          {
             to: '/guides/perpetual-exchange/overview',
             from: '/labs',
           },
