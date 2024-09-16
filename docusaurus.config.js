@@ -131,6 +131,10 @@ const config = {
             from: '/guides/perpetual-exchange/trading',
           },
           {
+            to: '/guides/jupiter-swap/how-swap-works/metropolis-features',
+            from: '/guides/jupiter-swap/how-swap-works/metropolis',
+          },
+          {
             to: '/guides/perpetual-exchange/overview',
             from: '/labs',
           },
