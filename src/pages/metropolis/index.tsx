@@ -1,21 +1,22 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+
+import Header from "@site/src/components/Metropolis/components/Header";
+import Footer from "@site/src/components/Metropolis/components/Footer";
 import React, { useRef } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LeftArrowIcon from "./components/icons/LeftArrowIcon";
-import RightArrowIcon from "./components/icons/RightArrowIcon";
-import SwapApiIcon from "./components/icons/SwapApiIcon";
-import PerpApiIcon from "./components/icons/PerpApiIcon";
-import PriceApiIcon from "./components/icons/PriceApiIcon";
-import TokenApiIcon from "./components/icons/TokenApiIcon";
-import ExperiencedIcon from "./components/icons/ExperiencedIcon";
-import BuildersIcon from "./components/icons/BuildersIcon";
-import PPPIcon from "./components/icons/PPPIcon";
-import DeveloperIcon from "./components/icons/DeveloperIcon";
-import { DOCS_URL } from "./constants";
+import SwapApiIcon from "@site/src/components/Metropolis/components/icons/SwapApiIcon";
+import TokenApiIcon from "@site/src/components/Metropolis/components/icons/TokenApiIcon";
+import PriceApiIcon from "@site/src/components/Metropolis/components/icons/PriceApiIcon";
+import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
+import { DOCS_URL } from "@site/src/components/Metropolis/constants";
+import BuildersIcon from "@site/src/components/Metropolis/components/icons/BuildersIcon";
+import PPPIcon from "@site/src/components/Metropolis/components/icons/PPPIcon";
+import ExperiencedIcon from "@site/src/components/Metropolis/components/icons/ExperiencedIcon";
+import DeveloperIcon from "@site/src/components/Metropolis/components/icons/DeveloperIcon";
+import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
+import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
 
 const SELECTED_PARTNERS = [
   {
