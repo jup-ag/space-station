@@ -2,11 +2,12 @@ import React from 'react';
 import TwitterIcon from './icons/TwitterIcon';
 import TelegramIcon from './icons/TelegramIcon';
 import DiscordIcon from './icons/DiscordIcon';
+import { DOCS_URL } from '../constants';
 
 const PRODUCTS = [
     {
         label: 'APIs',
-        link: '/readme',
+        link: DOCS_URL,
     },
     {
         label: 'Jup Terminal',
@@ -17,7 +18,7 @@ const PRODUCTS = [
 const RESOURCES = [
     {
         label: 'Docs',
-        link: '/readme',
+        link: DOCS_URL,
     },
     {
         label: 'Blogs',

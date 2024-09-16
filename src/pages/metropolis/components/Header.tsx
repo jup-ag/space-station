@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import BurgerIcon from './icons/BurgerIcon';
 import CrossIcon from './icons/CrossIcon';
+import { DOCS_URL } from '../constants';
 
 const LINKS = [
     {
         label: 'Docs',
-        path: '/readme',
+        path: DOCS_URL,
         style: 'link',
     },
     {
@@ -22,12 +23,12 @@ const LINKS = [
     },
     {
         label: 'FAQs',
-        path: 'https://discord.gg/jup',
+        path: 'https://discord.com/channels/897540204506775583/910250162402779146',
         style: 'link',
     },
     {
         label: 'Start Building',
-        path: '/readme',
+        path: DOCS_URL,
         style: 'button',
     },
 ];
