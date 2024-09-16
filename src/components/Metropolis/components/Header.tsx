@@ -63,7 +63,7 @@ const Header = () => {
         <div>
             <header className={cn(scrolled ? "bg-[#131C25]" : "bg-transparent", "flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500")}>
                 <div className="xl:max-w-6xl w-full flex items-center justify-between">
-                    <a href="/" target="_blank" rel="noopener noreferrer" className='hover:no-underline m-0'>
+                    <a href="/metropolis" target="_blank" rel="noopener noreferrer" className='hover:no-underline m-0'>
                         <span className="flex flex-row items-center space-x-2.5">
                             <img
                                 alt="logo"
