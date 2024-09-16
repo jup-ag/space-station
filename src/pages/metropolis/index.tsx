@@ -139,10 +139,10 @@ const Metropolis = () => {
                   .
                 </p>
                 <a
-                  href="/docs"
+                  href="/readme"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] px-4 py-2.5 text-center rounded-full border border-solid border-transparent hover:border-[#c7f284] transition-all"
+                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] px-5 py-2.5 text-center rounded-full border border-solid border-transparent hover:border-[#c7f284] transition-all"
                 >
                   <span className="text-base md:text-lg font-semibold">
                     Start Building
@@ -413,21 +413,21 @@ const Metropolis = () => {
             {/* Buttons */}
             <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-6 px-20 sm:px-28 md:px-36 lg:px-40">
               <a
-                href="/docs"
+                href="/readme"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/5 text-white/80 min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
+                className="bg-white/5 text-white/80 font-semibold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
               >
                 <span className="text-base lg:text-lg">Docs</span>
               </a>
               <a
-                href="/docs"
+                href="/readme"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4A5C41]/90 text-[#c7f284] font-bold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                className="bg-[#4A5C41]/90 text-[#c7f284] font-semibold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
               >
-                <span className="text-base lg:text-lg mr-2">Get Started</span>
-                <span className="self-end text-lg lg:text-2xl font-semibold -mt-0.5 inline-block">
+                <span className="lg:text-lg mr-2">Get Started</span>
+                <span className="self-end text-lg lg:text-xl font-normal -mt-0.5 inline-block">
                   -&gt;
                 </span>
               </a>

@@ -3,7 +3,7 @@ import React from 'react';
 const PRODUCTS = [
     {
         label: 'APIs',
-        link: '/docs',
+        link: '/readme',
     },
     {
         label: 'Jup Terminal',
@@ -14,11 +14,11 @@ const PRODUCTS = [
 const RESOURCES = [
     {
         label: 'Docs',
-        link: '/docs',
+        link: '/readme',
     },
     {
         label: 'Blogs',
-        link: '/resources',
+        link: 'https://www.jupresear.ch/c/developers/40',
     },
 ];
 
