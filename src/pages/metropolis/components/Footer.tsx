@@ -24,7 +24,7 @@ const RESOURCES = [
 
 const Socials = () => {
     return (
-        <ul className='list-none p-0 mt-9 md:mt-14 flex gap-4 items-center justify-center'>
+        <ul className='list-none p-0 mb-0 pb-9 mt-9 md:mt-14 flex gap-4 items-center justify-center'>
             <li>
                 <a href="https://discord.gg/jup" target="_blank" rel="noopener noreferrer" className="py-1 text-sm font-semibold text-white hover:text-[#c7f284] hover:no-underline transition-colors ease-in duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-discord opacity-80 hover:opacity-100" width="18" height="18" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">

@@ -90,19 +90,19 @@ const Metropolis = () => {
       {
         breakpoint: 400,
         settings: {
-          slidesToShow: 1.8,
+          slidesToShow: 1.64,
         },
       },
       {
         breakpoint: 360,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1.68,
         },
       },
       {
-        breakpoint: 300,
+        breakpoint: 335,
         settings: {
-          slidesToShow: 1.3,
+          slidesToShow: 0.86,
         },
       },
     ],
@@ -114,11 +114,12 @@ const Metropolis = () => {
     <div className={"text-black dark:text-white"}>
       <main className={"bg-[#131C25] relative min-h-screen"}>
         <div className="px-3 py-4 md:py-12 overflow-hidden bg-[#131C25]/80 relative">
-          <div className="bg-top bg-no-repeat bg-cover absolute top-0 bottom-0 right-0 left-0 z-30 h-full w-full"
-          style={{
-            backgroundImage: `url(/img/metropolis-api/masthead.png)`
-          }}>
-          </div>
+          <div
+            className="bg-top bg-no-repeat bg-cover absolute top-0 bottom-0 right-0 left-0 z-30 h-full w-full"
+            style={{
+              backgroundImage: `url(/img/metropolis-api/masthead.png)`,
+            }}
+          ></div>
           <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-40 h-full w-full opacity-90"></div>
           <div className="max-w-[900px] mx-auto relative z-50">
             {/* Masthead */}
@@ -134,9 +135,8 @@ const Metropolis = () => {
                   </span>
                 </h1>
                 <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
-                  The most powerful set of liquidity APIs{" "}
-                  <span className="font-semibold text-[#c7f284]">anywhere</span>
-                  .
+                  The most powerful, robust and comprehensive set of API in{" "}
+                  <span className="font-semibold text-[#c7f284]">crypto</span>.
                 </p>
                 <a
                   href="/readme"
@@ -214,7 +214,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Swap API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Get the best price quote, always
+                  Seamlessly integrate token swaps into your application
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
@@ -300,7 +300,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Find any tokens on-chain
+                  Comprehensive range of token information and metadata
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
@@ -375,7 +375,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Price API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Get precise & real time pricing of tokens
+                  Get real time price data for all token in DeFi
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
@@ -487,11 +487,10 @@ const Metropolis = () => {
                 </svg>
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">Best Defi Experience</span>
+                    <span className="text-[#c7f284]">Experienced Focused</span>
                   </h2>
                   <p className="text-white m-0 text-base opacity-60">
-                    Providing a full suite of world class trading product &
-                    tools.
+                    We provide a full suite of the best trading product & tools.
                   </p>
                 </div>
               </div>
@@ -514,12 +513,39 @@ const Metropolis = () => {
                 </svg>
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">
-                      Build your Application
-                    </span>
+                    <span className="text-[#c7f284]">Builders Focused</span>
                   </h2>
                   <p className="text-white m-0 text-base opacity-60">
-                    Actionable defi date data at your finger tips.
+                    Empowering our partners to build anything they want.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#c7f284"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="shrink-0 lucide lucide-handshake opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 px-2 pt-1 pb-0.5 mt-1"
+                >
+                  <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                  <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                  <path d="m21 3 1 11h-2" />
+                  <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                  <path d="M3 4h8" />
+                </svg>
+                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
+                  <h2 className="text-lg md:text-2xl font-semibold m-0">
+                    <span className="text-[#c7f284]">PPP Focused</span>
+                  </h2>
+                  <p className="text-white m-0 text-base opacity-60">
+                    We want our partners to win, so we do the work for you.
                   </p>
                 </div>
               </div>
@@ -561,7 +587,7 @@ const Metropolis = () => {
                       rel="noopener noreferrer"
                       className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
                     >
-                      discord
+                      Discord
                     </a>{" "}
                     <span className="opacity-60">and </span>
                     <a
@@ -570,12 +596,14 @@ const Metropolis = () => {
                       rel="noopener noreferrer"
                       className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
                     >
-                      telegram
+                      Telegram
                     </a>{" "}
                     <span className="opacity-60">for your queries.</span>
                   </p>
                 </div>
               </div>
+
+              <p className="p-0 m-0 opacity-60 text-white text-base">Start building with Metropolis like no other.</p>
             </div>
           </div>
         </div>
@@ -591,26 +619,26 @@ const Metropolis = () => {
               <div className="shadow-2xl blur-md absolute -top-20 -bottom-20 -left-20 w-1/5 bg-[#131C25] z-30"></div>
               <div className="shadow-2xl blur-md absolute -top-20 -bottom-20 -right-20 w-1/5 bg-[#131C25] z-30"></div>
               <button
-                  className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer absolute top-[50%] left-0 lg:left-12 -translate-y-1/2 z-40"
-                  onClick={() => slider?.current?.slickPrev()}
+                className="text-white/80 font-semibold bg-transparent border-0 cursor-pointer absolute top-[50%] left-0 lg:left-12 -translate-y-1/2 z-40"
+                onClick={() => slider?.current?.slickPrev()}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#c7f284"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100 text-center"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#c7f284"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-circle-arrow-left opacity-80 hover:opacity-100 text-center"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M16 12H8" />
-                    <path d="m12 8-4 4 4 4" />
-                  </svg>
-                </button>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M16 12H8" />
+                  <path d="m12 8-4 4 4 4" />
+                </svg>
+              </button>
               {/* Social Proof */}
               <Slider ref={slider} {...partnerSettings}>
                 {SELECTED_PARTNERS.map((partner, index) => {
