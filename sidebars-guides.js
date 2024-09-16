@@ -4,6 +4,11 @@
 const sidebars = {
   guides: [
     {
+      type: "doc",
+      label: "Overview",
+      id: "index",
+    },
+    {
       type: "category",
       label: "Jupiter Spot",
       items: [
