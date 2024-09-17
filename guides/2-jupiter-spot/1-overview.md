@@ -23,7 +23,7 @@ Let's go through them in this overview.
 ## 1. Swap
 
 **Swap between any token on Solana, with the best prices and 0 fees with a single click.**
-- Jupiter also automatically minimizes [slippage](https://station.jup.ag/guides/jupiter-swap/how-swap-works/metropolis#dynamic-slippage) and set [priority fees](https://station.jup.ag/guides/jupiter-swap/swap#transaction-priority-fees) for you, while [flagging potential concerns](https://station.jup.ag/guides/jupiter-swap/how-swap-works/#safety-notifications).
+- Jupiter also automatically minimizes [slippage](https://station.jup.ag/guides/jupiter-swap/how-swap-works/metropolis-features#dynamic-slippage) and set [priority fees](https://station.jup.ag/guides/jupiter-swap/swap#transaction-priority-fees) for you, while [flagging potential concerns](https://station.jup.ag/guides/jupiter-swap/how-swap-works/#safety-notifications).
 - All you have to do is to set the max slippage & priority fees you are willing to pay, before swapping without worry.
 - Detailed walkthrough on how to swap on Jupiter & UI features: [How to Swap](https://station.jup.ag/guides/jupiter-swap/swap)
 
