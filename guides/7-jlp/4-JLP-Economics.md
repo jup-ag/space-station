@@ -73,10 +73,7 @@ The Total AUM is then calculated as the sum of all the custodies' AUM:
 `total_aum = Σ(aum)`
 
 :::note
-The pool sizes displayed on the [Earn page](https://jup.ag/perps-earn) do not add up to the pool's AUM. This discrepancy occurs because the Earn page shows each custody's `owned` value in USD without accounting for:
-
-1. Traders' unrealized PnL
-2. The `locked` amount reserved for potential profit payouts on open positions
+The pool sizes displayed on the [Earn page](https://jup.ag/perps-earn) do not add up to the pool's AUM. This discrepancy occurs because the Earn page shows each custody's `owned` value in USD without accounting for the **traders' unrealized PnL**.
 
 This simplified representation on the Earn page provides a quick overview of the pool's holdings but doesn't reflect the JLP pool's true AUM.
 :::
