@@ -216,9 +216,10 @@ The borrow fees are reinvested back into the JLP pool to increase the pool's yie
 
 The formula for the hourly borrow fee is:
 
-`Hourly Borrow Fee = Tokens Borrowed/Tokens in the Pool * Hourly Borrow Rate * Position Size`
+`Hourly Borrow Fee = Total Tokens Locked/Tokens in the Pool (i.e. Utilization) * Hourly Borrow Rate * Position Size`
 
-> * `Tokens Borrowed`: The amount of tokens borrowed from the pool for the leveraged position
+> * `Utilization`: `Total Tokens Locked / Total Tokens in Pool`  
+> * `Total Tokens Locked`: The amount of tokens locked across all open positions
 > * `Total Tokens in Pool`: The amount of tokens deposited into the pool for the position's underlying token
 > * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (**0.008%** at the time of writing)
 > * `Position Size`: The size (USD) of the leveraged position
@@ -226,27 +227,26 @@ The formula for the hourly borrow fee is:
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
 :::info
-The utilization level **(Tokens Borrowed/Total Tokens in Pool)** of the liquidity pool is dynamic and changes over time, which directly impacts the hourly borrow fee.
-
 **Hourly Borrow Rate** is at 0.008% for SOL, ETH and BTC while 0.01% for USDC and USDT.
 
 Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
 
-For example, assume the price of SOL is $100. The SOL liquidity pool has 1,000 SOL under custody, and has not lent out any SOL yet (i.e. it's utilization is 0%). A trader opens a $10,000 position with an initial margin of $1,000. The remaining $9,000 is borrowed from the pool to open the leveraged position.
+For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody, and has lent out **100 SOL** (i.e. it's utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position.
 
-* `Tokens Borrowed`: `$9,000 (amount to borrow) / $100 (SOL price) =` 90 SOL
-* `Total Tokens in Pool`: 1,000 SOL
+* `Position Size in SOL`: 100 SOL
+* `Total Tokens Locked`: ` 100 SOL (position size) + 100 SOL (utilized SOL in pool) = 200 SOL
+* `Total Tokens in Pool`: 1,000 SOL (existing custody) + 10 SOL (user collateral) = 1,010 SOL
+* `Utilization`: 200 SOL / 1,010 SOL = 19.8%
 * `Hourly Borrow Rate`:  0.008% (0.00008 in decimal format / 0.8 BPS)
-* `Position Size`: $10,000
 
 Calculation:
 
 ```
-Hourly Borrow Fee = (90 / 1000) * 0.0001 * 10000 = 0.09
+Hourly Borrow Fee = (200 / 1010) * 0.00008 * 10000 = 0.158
 ```
 
-This means your position will accrue a borrow fee of $0.09 every hour it remains open.
+This means your position will accrue a borrow fee of $0.158 every hour it remains open.
 
 :::info
 Borrow fees are continuously accrued and deducted from your collateral. This ongoing deduction has two important consequences:
