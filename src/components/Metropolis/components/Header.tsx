@@ -82,22 +82,16 @@ const Header = () => {
                     </a>
                     <div className="items-center space-x-4 ml-8 overflow-auto hidden md:flex">
                         {LINKS.map((link) => {
-                            if (link.style === 'button') {
-                                return (
-                                    <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
-                                        <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
-                                            {link.label}
-                                        </span>
-                                    </a>
-                                );
-                            }
-                            else {
-                                return (
-                                    <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
-                                        <span className="px-3 py-1 text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
-                                    </a>
-                                );
-                            }
+                            return (
+                                <a href={link.path} key={link.label} target="_blank"
+                                    className={cn("text-sm font-semibold transition-colors duration-200 hover:no-underline hover:text-[#c7f284]",
+                                        link.style === 'button' && 'bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center text-[#c7f284] py-[0.6rem] px-[0.95rem] hover:border-[#c7f284] ease-out',
+                                        link.style === 'link' && 'px-3 text-white ease-in'
+                                    )}
+                                >
+                                    {link.label}
+                                </a>
+                            );
                         })}
                     </div>
                 </div>
@@ -131,22 +125,16 @@ const Header = () => {
                             </a>
                             
                             {LINKS.map((link) => {
-                                if (link.style === 'button') {
-                                    return (
-                                        <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 mt-4 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
-                                            <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
-                                                {link.label}
-                                            </span>
-                                        </a>
-                                    );
-                                }
-                                else {
-                                    return (
-                                        <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
-                                            <span className="text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
-                                        </a>
-                                    );
-                                }
+                                return (
+                                    <a href={link.path} key={link.label} target="_blank"
+                                        className={cn("text-sm font-semibold transition-colors duration-200 hover:no-underline hover:text-[#c7f284]",
+                                            link.style === 'button' && 'bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center text-[#c7f284] py-[0.6rem] px-[0.95rem] mt-4 hover:border-[#c7f284] ease-out',
+                                            link.style === 'link' && 'py-[0.22rem] text-white ease-in'
+                                        )}
+                                    >
+                                        {link.label}
+                                    </a>
+                                )
                             })}
                         </div>
                     </div>
