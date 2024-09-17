@@ -52,7 +52,7 @@ const Footer = () => {
     return (
         <footer className="max-w-screen-xl mx-auto px-5 pt-1 bg-[#131C25] md:flex md:items-center md:flex-wrap">
             <div className="w-full md:w-auto md:pl-12 md:pb-8 flex items-center justify-center md:justify-start">
-                <a href="/" className='hover:no-underline'>
+                <a href="/metropolis" className='hover:no-underline'>
                     <div className="flex flex-row items-center space-x-2.5">
                         <img
                             alt="logo"

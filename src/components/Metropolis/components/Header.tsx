@@ -112,7 +112,7 @@ const Header = () => {
                 >
                     <div className='w-full'>
                         <div className="w-full h-screen flex flex-col overflow-auto gap-2 items-center pt-6 bg-gradient-to-b from-[#223345] to-[#131C25] md:bg-transparent md:from-transparent md:to-transparent">
-                            <a href="/" target="_blank" className='hover:no-underline mx-auto mb-4 mt-4'>
+                            <a href="/metropolis" className='hover:no-underline mx-auto mb-4 mt-4'>
                                 <span className="flex flex-row items-center space-x-2.5">
                                     <img
                                         alt="logo"
