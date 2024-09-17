@@ -9,41 +9,56 @@ title: "JLP Overview"
     <meta name="twitter:card" content="summary" />
 </head>
 
-Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem by supplying the necessary liquidity for perpetual traders. Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders to test their perpetual trading strategies. As a result, Jupiter can offer its trading service without needing to hold huge amounts of liquidity, and LPs are rewarded with the majority of the fees.
+The **Jupiter Liquidity Provider (JLP)** Pool is a liquidity pool that acts as a counterparty to traders on [Jupiter Perps](https://jup.ag/perps). Traders borrow tokens from the pool to open leveraged positions on the Jupiter Perpetuals exchange.
 
+The JLP token derives its value from:
 
-### Becoming a Liquidity Provider (LP):
+- An index fund of **SOL, ETH, WBTC, USDC, USDT**.
+- Trader's **profit and loss**.
+- **75%** of the generated fees from **opening** and **closing** fees, **price impact**, **borrowing fees**, and **trading fees** of the pool.
 
- - Contribute assets or tokens to the Jupiter Liquidity Provider Pool (JLP Pool).
+### Jupiter Liquidity Providers (JLPs)
+
+Jupiter Liquidity Providers (JLPs) play a crucial role in the trading ecosystem by supplying the necessary liquidity for perpetual traders. 
+
+Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders to test their perpetual trading strategies. As a result, Jupiter connects LPs with traders, allowing the traders to access the liquidity provided by the LPs, and in turn allowing LPs to earn the majority of fees generated from trading activity.
+
+### How to Become a Liquidity Provider (LP)
+
+Anyone can become a Liquidity Provider by contributing assets or tokens to the Jupiter Liquidity Provider Pool (JLP Pool).
  - JLP tokens represent your share of the pool.
  - Any asset traded on JUP can be used to buy into JLP.
  - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../jlp/How-JLP-Works#target-ratio-and-fees)).
- - More on how to get the token in [How To Get JLP](../jlp/How-To-Get-JLP).
 
-### Rewards and Earnings:
+More details on how to get the token in [How To Get JLP](../jlp/How-To-Get-JLP).
 
- - 75% of all perpetual trading fees are deposited into the JLP pool to be distributed among JLP holders (reflected as an increase in the JLP token price).
- - Forms an Annual Percentage Rate (APR).
- - Higher trading volume generally leads to higher earnings for JLP holders.
- - More on how it works in [How JLP Works](../jlp/How-JLP-Works).
+:::tip
+The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
+:::
 
-### Advantages of the JLP System:
+ ### Advantages of the JLP System
 
- - No need to actively "stake" tokens or "harvest" yields.
- - APR earnings are embedded within each JLP token and accumulate automatically.
- - The JLP token is an SPL token, making it easily transferable and tradable like other SPL tokens within the Solana ecosystem.
- - AMM pools can be established for trading JLP tokens.
+ The JLP system offers a user-friendly method for participants to earn passive income while contributing to the liquidity and stability of the trading environment:
 
+- LPs do not need to actively "stake" tokens or "harvest" yields - APR earnings are embedded within each JLP token and accumulate automatically (reflected as an increase in the JLP token price).
+- The JLP token is also an SPL token, making it easily transferable and tradable like other SPL tokens within the Solana ecosystem.
+- AMM pools can be established for trading JLP tokens.
 
-Overall, the JLP system offers a user-friendly method for participants to earn passive income while contributing to the liquidity and stability of the trading environment.
+:::info
+JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the governance token of the JUP DAO.
+:::
 
-**Note**: JLP is a liquidity token for the Jupiter Perpetuals platform, and JUP is the governance token of the JUP DAO.
+### Rewards and Earnings
 
-#### The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
+The **APY** of JLP is calculated based on 75% of fees generated from perps trading activities (not including assets appreciation and traders PnL).
+
+The generated fees are distributed back to liquidity providers by redepositing the fees into the pool hourly.
+
+More details on how JLP generates yield in [How JLP Works](../jlp/How-JLP-Works).
 
 ---
 
-## The JLP UI
+### JLP UI Walkthrough
 ![jlp](../img/jlp/jlp-1.png)
 
 
@@ -67,7 +82,5 @@ Overall, the JLP system offers a user-friendly method for participants to earn p
 
 10. **Estimations and Fees:** The user is shown the estimated fee for trading the token they pick and the estimated JLP to be received.
 
-11. **JLP Price & Total Supply:** Here, you can find the current `JLP Price` and `Total Supply` displayed. The Price is obtained by dividing `TVL` by `Total Supply`.
-
-
-
+11. **JLP Price & Total Supply:** Here, you can find the current virtual `JLP Price` and `Total Supply` displayed. The virtual price is obtained by dividing `TVL` by `Total Supply`.
+    - More information on the **Virtual Price** and **Market Price** of JLP [here](./4-JLP-Economics.md#virtual-price-market-price-and-aum-limit).
