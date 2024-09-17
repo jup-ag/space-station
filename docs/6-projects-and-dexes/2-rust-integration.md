@@ -14,7 +14,7 @@ To facilitate integration of your DEX into the Jupiter Core Engine, you will nee
 ```rust
 pub trait Amm {
     // Maybe trait was made too restrictive?
-    fn from_keyed_account(keyed_account: &KeyedAccount) -> Result<Self>
+    fn from_keyed_account(keyed_account: &KeyedAccount, amm_context: &AmmContext) -> Result<Self>
     where
         Self: Sized;
     /// A human readable label of the underlying DEX
@@ -40,6 +40,16 @@ pub trait Amm {
         false
     }
 
+    /// Indicates whether `update` needs to be called before `get_reserve_mints`
+    fn requires_update_for_reserve_mints(&self) -> bool {
+        false
+    }
+
+    // Indicates that whether ExactOut mode is supported
+    fn supports_exact_out(&self) -> bool {
+        false
+    }
+
     fn get_user_setup(&self) -> Option<AmmUserSetup> {
         None
     }
@@ -58,6 +68,21 @@ pub trait Amm {
 
     fn get_accounts_len(&self) -> usize {
         32 // Default to a near whole legacy transaction to penalize no implementation
+    }
+
+    /// The identifier of the underlying liquidity
+    ///
+    /// Example:
+    /// For RaydiumAmm uses Openbook market A this will return Some(A)
+    /// For Openbook market A, it will also return Some(A)
+    fn underlying_liquidities(&self) -> Option<HashSet<Pubkey>> {
+        None
+    }
+
+    /// Provides a shortcut to establish if the AMM can be used for trading
+    /// If the market is active at all
+    fn is_active(&self) -> bool {
+        true
     }
 }
 ```
