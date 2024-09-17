@@ -9,28 +9,19 @@ const LINKS = [
     {
         label: 'Docs',
         path: DOCS_URL,
-        style: 'link',
     },
     {
         label: 'Resources',
         path: 'https://www.jupresear.ch/c/developers/40',
-        style: 'link',
     },
     {
         label: 'Changelog',
         path: 'https://t.me/jup_dev',
-        style: 'link',
     },
     {
         label: 'FAQs',
         path: 'https://discord.com/channels/897540204506775583/910250162402779146',
-        style: 'link',
-    },
-    {
-        label: 'Start Building',
-        path: DOCS_URL,
-        style: 'button',
-    },
+    }
 ];
 
 const Header = () => {
@@ -83,16 +74,14 @@ const Header = () => {
                     <div className="items-center space-x-4 ml-8 overflow-auto hidden md:flex">
                         {LINKS.map((link) => {
                             return (
-                                <a href={link.path} key={link.label} target="_blank"
-                                    className={cn("text-sm font-semibold transition-colors duration-200 hover:no-underline hover:text-[#c7f284]",
-                                        link.style === 'button' && 'bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center text-[#c7f284] py-[0.6rem] px-[0.95rem] hover:border-[#c7f284] ease-out',
-                                        link.style === 'link' && 'px-3 text-white ease-in'
-                                    )}
-                                >
+                                <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold px-3 text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
                                     {link.label}
                                 </a>
                             );
                         })}
+                        <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                            Start Building
+                        </a>
                     </div>
                 </div>
             </header>
@@ -126,16 +115,14 @@ const Header = () => {
                             
                             {LINKS.map((link) => {
                                 return (
-                                    <a href={link.path} key={link.label} target="_blank"
-                                        className={cn("text-sm font-semibold transition-colors duration-200 hover:no-underline hover:text-[#c7f284]",
-                                            link.style === 'button' && 'bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center text-[#c7f284] py-[0.6rem] px-[0.95rem] mt-4 hover:border-[#c7f284] ease-out',
-                                            link.style === 'link' && 'py-[0.22rem] text-white ease-in'
-                                        )}
-                                    >
+                                    <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold py-[0.22rem] text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
                                         {link.label}
                                     </a>
                                 )
                             })}
+                            <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] mt-4 transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                                Start Building
+                            </a>
                         </div>
                     </div>
                 </Menu>
