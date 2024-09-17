@@ -48,6 +48,8 @@ If `current_price` > `global_short_average_prices`, traders are losing on short 
 
 `nav = available_tokens * current_token_price`
 
+`guaranteed_usd = size of all trades (USD) - collateral of all trades (USD)`
+
 `nav += guaranteed_usd`
 
 :::info
