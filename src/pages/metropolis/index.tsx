@@ -41,9 +41,14 @@ const SELECTED_PARTNERS = [
     imgSrc: "/backpack.png",
   },
   {
-    label: "Step Finance",
-    link: "https://www.step.finance/",
-    imgSrc: "/stepfinance.png",
+    label: "DEX Screener",
+    link: "https://dexscreener.com/",
+    imgSrc: "/dexscreener.svg",
+  },
+  {
+    label: "BONKBot",
+    link: "https://bonkbot.io/",
+    imgSrc: "/bonkbot.jpg",
   },
 ];
 
@@ -147,7 +152,7 @@ const Metropolis = () => {
                   </span>
                 </h1>
                 <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
-                  The most powerful, robust and comprehensive set of API in{" "}
+                  The most powerful set of Liquidity APIs in all of{" "}
                   <span className="font-semibold text-[#c7f284]">crypto</span>.
                 </p>
                 <a
@@ -167,12 +172,9 @@ const Metropolis = () => {
         </div>
 
         <div className="px-3">
-          <div className="max-w-6xl mx-auto mt-[60px] pt-4 pb-5 md:pb-4">
-            <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-5 sm:mb-8 md:mb-12">
-              The Most Comprehensive
-              <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
-                Crypto API Suite
-              </span>
+          <div className="max-w-6xl mx-auto mt-[60px] pt-2 pb-5 md:pb-4">
+            <h4 className="text-center text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3 font-semibold mb-5 sm:mb-8 md:mb-12">
+              Our Liquidity APIs
             </h4>
 
             {/* Products */}
@@ -183,7 +185,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Swap API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Seamlessly integrate token swaps into your application
+                  Access all of Solana's liquidity with a single API.
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
@@ -191,8 +193,15 @@ const Metropolis = () => {
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
-                <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Comprehensive range of token information and metadata
+                <p className="text-white m-0 max-w-[30ch] text-sm font-medium">
+                  <span className="opacity-50">Access Jupiter’s comprehensive list of tokens, powered by community and partner token lists. More info{" "}</span>
+                  <a
+                    target="_blank"
+                    href="https://www.jupresear.ch/t/ecosystem-master-token-list/19786"
+                    className="underline-offset-4 hover:underline hover:text-[#c7f284] text-[#c7f284]">
+                      here
+                  </a>
+                  <span className="opacity-50">.</span>
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
@@ -201,7 +210,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Price API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Get real time price data for all token in DeFi
+                  Retrieve real-time aggregate prices of any tradable token on Solana.
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
@@ -252,75 +261,21 @@ const Metropolis = () => {
           <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
           <div className="w-full max-w-5xl mx-auto text-center md:text-left py-[60px] mt-3.5 relative z-40">
             <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
-              The Most Trusted
-              <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
-                Crypto API Solution
+              Built by Jupiter
+              <span className="block text-[#c7f284] text-4xl md:text-6xl pt-0.5 md:pt-2.5 pb-3">
+                For All Builders
               </span>
             </h4>
             {/* USP */}
             <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5 pb-1.5">
               <div className="flex gap-5">
-                <ExperiencedIcon height={50} width={50} color={"#c7f284"} />
-                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
-                  <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">Experienced Focused</span>
-                  </h2>
-                  <p className="text-white m-0 text-base opacity-60">
-                    We provide a full suite of the best trading product & tools.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
                 <BuildersIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">Builders Focused</span>
+                    <span className="text-[#c7f284]">Ecosystem-First</span>
                   </h2>
                   <p className="text-white m-0 text-base opacity-60">
-                    Empowering our partners to build anything they want.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <PPPIcon height={50} width={50} color={"#c7f284"} />
-                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
-                  <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">PPP Focused</span>
-                  </h2>
-                  <p className="text-white m-0 text-base opacity-60">
-                    We want our partners to win, so we do the work for you.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <DeveloperIcon height={50} width={50} color={"#c7f284"} />
-                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
-                  <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">Developer Focused</span>
-                  </h2>
-                  <p className="text-white m-0 text-base">
-                    <span className="opacity-60">Join our </span>
-                    <a
-                      href="https://discord.gg/jup"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
-                    >
-                      Discord
-                    </a>{" "}
-                    <span className="opacity-60">and </span>
-                    <a
-                      href="https://t.me/jup_dev"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#c7f284] text-[#c7f284] underline-offset-4 hover:underline"
-                    >
-                      Telegram
-                    </a>{" "}
-                    <span className="opacity-60">for your queries.</span>
+                    Empowering builders to build sustainable businesses.
                   </p>
                 </div>
               </div>
@@ -335,6 +290,7 @@ const Metropolis = () => {
             {/* Partners */}
             <p className="text-white text-center text-3xl md:text-4xl font-semibold flex-1 mb-8 pt-3.5">
               Our Partners
+              <p className="p-0 pt-2 m-0 opacity-60 text-white text-base">Generating over $100M in Revenue</p>
             </p>
 
             <div className="w-full overflow-hidden relative">
@@ -368,7 +324,7 @@ const Metropolis = () => {
                             data-nimg="1"
                             src={`img/metropolis-api/${partner.imgSrc}`}
                             style={{ color: "transparent" }}
-                            className="max-h-16 max-w-full h-auto w-auto"
+                            className="max-h-16 max-w-full h-auto w-auto rounded-lg"
                           />
                         </div>
                         <p className="text-center text-[#c7f284]/70 font-semibold text-sm pt-1 leading-none">
@@ -394,9 +350,9 @@ const Metropolis = () => {
             {/* Testimonials */}
             <div className="mt-16 pt-1">
               <h4 className="text-white text-center text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
-                The Best
+                Used by Jupiter:
                 <span className="block text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3">
-                  On-Chain Exchange
+                  Solana's Liquidity Layer
                 </span>
               </h4>
 
