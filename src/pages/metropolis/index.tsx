@@ -12,9 +12,6 @@ import PriceApiIcon from "@site/src/components/Metropolis/components/icons/Price
 import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
 import { DOCS_URL } from "@site/src/components/Metropolis/constants";
 import BuildersIcon from "@site/src/components/Metropolis/components/icons/BuildersIcon";
-import PPPIcon from "@site/src/components/Metropolis/components/icons/PPPIcon";
-import ExperiencedIcon from "@site/src/components/Metropolis/components/icons/ExperiencedIcon";
-import DeveloperIcon from "@site/src/components/Metropolis/components/icons/DeveloperIcon";
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
 
@@ -179,7 +176,7 @@ const Metropolis = () => {
 
             {/* Products */}
             <div className="grid text-center mx-auto max-w-xs sm:max-w-md md:max-w-5xl w-full sm:grid-cols-2 md:grid-cols-4 gap-y-2">
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors">
                 <SwapApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Swap API</span>
@@ -188,7 +185,7 @@ const Metropolis = () => {
                   Access all of Solana's liquidity with a single API.
                 </p>
               </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors">
                 <TokenApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Token API</span>
@@ -204,7 +201,7 @@ const Metropolis = () => {
                   <span className="opacity-50">.</span>
                 </p>
               </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors">
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors">
                 <PriceApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                   <span className="text-[#c7f284]">Price API</span>
@@ -213,7 +210,7 @@ const Metropolis = () => {
                   Retrieve real-time aggregate prices of any tradable token on Solana.
                 </p>
               </div>
-              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-5 py-4 transition-colors relative">
+              <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
                 <PerpApiIcon height={64} width={64} color={"#c7f284"} />
                 <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
                   Coming Soon!
@@ -229,14 +226,6 @@ const Metropolis = () => {
 
             {/* Buttons */}
             <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-6 px-20 sm:px-28 md:px-36 lg:px-40">
-              <a
-                href={DOCS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/5 text-white/80 font-semibold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]/40 transition-all"
-              >
-                <span className="text-base lg:text-lg">Docs</span>
-              </a>
               <a
                 href={DOCS_URL}
                 target="_blank"
