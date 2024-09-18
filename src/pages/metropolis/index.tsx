@@ -248,15 +248,15 @@ const Metropolis = () => {
             className="absolute top-0 bottom-0 right-0 h-full max-w-none"
           />
           <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
-          <div className="w-full max-w-5xl mx-auto text-center md:text-left py-[60px] mt-3.5 relative z-40">
-            <h4 className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] text-white text-center md:text-left text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
+          <div className="w-full max-w-5xl mx-auto text-center py-[60px] mt-3.5 relative z-40">
+            <h4 className="max-w-md mx-auto md:max-w-xl text-white text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
               Built by Jupiter
               <span className="block text-[#c7f284] text-4xl md:text-6xl pt-0.5 md:pt-2.5 pb-3">
                 For All Builders
               </span>
             </h4>
             {/* USP */}
-            <div className="max-w-md mx-auto md:mx-0 md:max-w-xl lg:max-w-[60%] grid text-left gap-y-5 pb-1.5">
+            <div className="max-w-md mx-auto md:max-w-lg grid text-left gap-y-5 pb-1.5">
               <div className="flex gap-5">
                 <BuildersIcon height={50} width={50} color={"#c7f284"} />
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
@@ -269,7 +269,7 @@ const Metropolis = () => {
                 </div>
               </div>
 
-              <p className="p-0 m-0 opacity-60 text-white text-base">Start building with Metropolis like no other.</p>
+              <p className="p-0 m-0 opacity-60 text-white text-base text-center">Start building with Metropolis like no other.</p>
             </div>
           </div>
         </div>
