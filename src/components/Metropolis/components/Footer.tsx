@@ -21,7 +21,7 @@ const RESOURCES = [
         link: DOCS_URL,
     },
     {
-        label: 'Blogs',
+        label: 'Resources',
         link: 'https://www.jupresear.ch/c/developers/40',
     },
 ];

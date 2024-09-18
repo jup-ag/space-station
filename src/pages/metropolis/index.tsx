@@ -241,37 +241,39 @@ const Metropolis = () => {
           </div>
         </div>
 
-        <div className="px-8 bg-gradient-to-br from-[#131C25] to-[#223345] relative overflow-hidden mt-[60px]">
-          <img
-            src="/img/metropolis-api/api-img.png"
-            alt="api-img"
-            className="absolute top-0 bottom-0 right-0 h-full max-w-none"
-          />
-          <div className="shadow-2xl blur-xl absolute -top-20 -bottom-20 -left-20 w-[120%] bg-gradient-to-r from-[#131C25] from-45% to-90% to-[#223345]/80 z-30"></div>
+        <div className="px-8 relative overflow-hidden mt-[60px] min-h-[28rem] flex place-items-center">
+          <div
+            className="bg-bottom bg-no-repeat bg-cover absolute top-0 bottom-0 right-0 left-0 z-30 h-[105%] md:h-[108%] lg:h-[112%] xl:h-[120%] 2xl:h-[122%] w-full"
+            style={{
+              backgroundImage: `url(/img/metropolis-api/api-img.png)`,
+            }}
+          ></div>
+          <div className="bg-gradient-to-br from-[#223345] to-[#131C25] absolute top-0 right-0 left-0 bottom-0 z-40 h-full w-full opacity-90"></div>
           <div className="w-full max-w-5xl mx-auto text-center py-[60px] mt-3.5 relative z-40">
-            <h4 className="max-w-md mx-auto md:max-w-xl text-white text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
+            <h4 className="max-w-md mx-auto text-white text-3xl md:text-4xl font-semibold mb-7 md:mb-12">
               Built by Jupiter
               <span className="block text-[#c7f284] text-4xl md:text-6xl pt-0.5 md:pt-2.5 pb-3">
                 For All Builders
               </span>
             </h4>
             {/* USP */}
-            <div className="max-w-md mx-auto md:max-w-lg grid text-left gap-y-5 pb-1.5">
-              <div className="flex gap-5 items-start">
-                <div className="flex items-center shrink-0 opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 p-1 mt-1 h-auto w-auto">
-                  <SolanaIcon height={40} width={40} color={"#c7f284"} />
-                </div>
-                <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
-                  <h2 className="text-lg md:text-2xl font-semibold m-0">
-                    <span className="text-[#c7f284]">Ecosystem-First</span>
-                  </h2>
-                  <p className="text-white m-0 text-base opacity-60">
-                    Empowering builders to build sustainable businesses.
-                  </p>
-                </div>
+            <div className="max-w-md mx-auto grid text-left gap-y-3 pb-1.5">
+              <div className="flex gap-4 items-center mx-auto">
+                <img
+                  alt="dp"
+                  loading="lazy"
+                  width="25"
+                  height="25"
+                  decoding="async"
+                  data-nimg="1"
+                  src="img/metropolis-api/solana.svg"
+                />
+                <h2 className="text-lg md:text-2xl font-semibold m-0 text-[#c7f284]">
+                  Ecosystem-First
+                </h2>
               </div>
 
-              <p className="p-0 m-0 opacity-60 text-white text-base text-center">Start building with Metropolis like no other.</p>
+              <p className="p-0 m-0 opacity-60 text-white text-base text-center">Empowering builders to build sustainable businesses.</p>
             </div>
           </div>
         </div>
