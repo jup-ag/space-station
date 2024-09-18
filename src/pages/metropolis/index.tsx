@@ -11,7 +11,7 @@ import TokenApiIcon from "@site/src/components/Metropolis/components/icons/Token
 import PriceApiIcon from "@site/src/components/Metropolis/components/icons/PriceApiIcon";
 import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
 import { DOCS_URL } from "@site/src/components/Metropolis/constants";
-import BuildersIcon from "@site/src/components/Metropolis/components/icons/BuildersIcon";
+import SolanaIcon from "@site/src/components/Metropolis/components/icons/SolanaIcon";
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
 
@@ -257,8 +257,10 @@ const Metropolis = () => {
             </h4>
             {/* USP */}
             <div className="max-w-md mx-auto md:max-w-lg grid text-left gap-y-5 pb-1.5">
-              <div className="flex gap-5">
-                <BuildersIcon height={50} width={50} color={"#c7f284"} />
+              <div className="flex gap-5 items-start">
+                <div className="flex items-center shrink-0 opacity-50 rounded-2xl border-2 border-solid border-[#c7f284] bg-[#c7f284]/15 p-1 mt-1 h-auto w-auto">
+                  <SolanaIcon height={40} width={40} color={"#c7f284"} />
+                </div>
                 <div className="mb-3 flex flex-col md:gap-1 lg:gap-2">
                   <h2 className="text-lg md:text-2xl font-semibold m-0">
                     <span className="text-[#c7f284]">Ecosystem-First</span>
