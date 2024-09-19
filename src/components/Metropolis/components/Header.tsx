@@ -115,12 +115,12 @@ const Header = () => {
                             
                             {LINKS.map((link) => {
                                 return (
-                                    <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold py-[0.22rem] text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
+                                    <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold py-1 text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
                                         {link.label}
                                     </a>
                                 )
                             })}
-                            <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] mt-4 transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                            <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[10px] px-4 mt-4 transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
                                 Start Building
                             </a>
                         </div>
