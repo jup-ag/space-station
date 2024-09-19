@@ -54,7 +54,7 @@ const Header = () => {
         <div>
             <header className={cn(scrolled ? "bg-[#131C25]" : "bg-transparent", "flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500")}>
                 <div className="xl:max-w-6xl w-full flex items-center justify-between">
-                    <a href="/metropolis" className='hover:no-underline m-0'>
+                    <a href="/" className='hover:no-underline m-0'>
                         <span className="flex flex-row items-center space-x-2.5">
                             <img
                                 alt="logo"
@@ -95,7 +95,7 @@ const Header = () => {
                 >
                     <div className='w-full'>
                         <div className="w-full h-screen flex flex-col overflow-auto gap-2 items-center pt-6 bg-gradient-to-b from-[#223345] to-[#131C25] md:bg-transparent md:from-transparent md:to-transparent">
-                            <a href="/metropolis" className='hover:no-underline mx-auto mb-4 mt-4'>
+                            <a href="/" className='hover:no-underline mx-auto mb-4 mt-4'>
                                 <span className="flex flex-row items-center space-x-2.5">
                                     <img
                                         alt="logo"

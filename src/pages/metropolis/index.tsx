@@ -11,7 +11,6 @@ import TokenApiIcon from "@site/src/components/Metropolis/components/icons/Token
 import PriceApiIcon from "@site/src/components/Metropolis/components/icons/PriceApiIcon";
 import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
 import { DOCS_URL } from "@site/src/components/Metropolis/constants";
-import SolanaIcon from "@site/src/components/Metropolis/components/icons/SolanaIcon";
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
 
@@ -24,13 +23,13 @@ const SELECTED_PARTNERS = [
   {
     label: "Phantom",
     link: "https://phantom.app/",
-    imgSrc: "/phantom.svg",
+    imgSrc: "/phantom.png",
     category: "Wallets",
   },
   {
     label: "Solflare",
     link: "https://solflare.com/",
-    imgSrc: "/solflare.svg",
+    imgSrc: "/solflare.png",
   },
   {
     label: "Backpack",
@@ -40,7 +39,7 @@ const SELECTED_PARTNERS = [
   {
     label: "DEX Screener",
     link: "https://dexscreener.com/",
-    imgSrc: "/dexscreener.svg",
+    imgSrc: "/dexscreener.png",
   },
   {
     label: "BONKBot",
@@ -266,7 +265,7 @@ const Metropolis = () => {
                   height="25"
                   decoding="async"
                   data-nimg="1"
-                  src="img/metropolis-api/solana.svg"
+                  src="img/metropolis-api/solana.png"
                 />
                 <h2 className="text-lg md:text-2xl font-semibold m-0 text-[#c7f284]">
                   Ecosystem-First
@@ -349,12 +348,12 @@ const Metropolis = () => {
                 </span>
               </h4>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-5">
+              <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-3 mx-5">
                 <a
                   href="https://twitter.com/jerallaire/status/1724718929447371174"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                  className="md:col-span-2 lg:col-span-1 flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
@@ -387,7 +386,7 @@ const Metropolis = () => {
                   href="https://twitter.com/TopoGigio_sol/status/1737844551317147964"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                  className="md:col-span-2 lg:col-span-1 flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
@@ -427,7 +426,7 @@ const Metropolis = () => {
                   href="https://twitter.com/Abbasshaikh42/status/1735940030865277244"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                  className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
                 >
                   <div className="flex space-x-3 items-center">
                     <img
