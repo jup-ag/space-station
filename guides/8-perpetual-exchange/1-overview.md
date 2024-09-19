@@ -1,5 +1,6 @@
 ---
 sidebar_label: "Perpetual Exchange Overview"
+title: "Perpetual Exchange Overview"
 description: Explore Jupiter Perps for up to 100x leverage on Solana, seamless swaps, and optimized trading strategies.
 ---
 
@@ -8,19 +9,22 @@ description: Explore Jupiter Perps for up to 100x leverage on Solana, seamless s
     <meta name="twitter:card" content="summary" />
 </head>
 
-# Perpetual Trading Overview
+The **Jupiter Perpetuals** decentralized exchange allows traders to open leveraged (up to 100x) long and short positions for the following tokens:
 
-Our perpetual exchange is a novel LP-to-trader perpetual exchange on Solana, offering up to 100x leverage. Utilizing LP pool liquidity and oracles, it ensures zero price impact, zero slippage, and deep liquidity. Oracles enable stable market operations during liquidations and stop-loss events, removing risks of position bankruptcy and LP pool fund loss. Users can open and close positions in one simple step, eliminating the need for additional accounts or deposits. With the Jupiter Swap integration, any Solana token can be used to open positions.
+* [**SOL**](https://jup.ag/perps/long/SOL-SOL)
+* [**ETH**](https://jup.ag/perps/long/SOL-ETH)
+* [**wBTC**](https://jup.ag/perps/long/SOL-WBTC)
 
-The LP pool is also integrated into Jupiter to provide liquidity to the overall Solana ecosystem. Jupiter users can swap using the liquidity from the LP pool.
+Traders can deposit or withdraw collateral to manage their position, and close their positions fully or partially. The Jupiter Perpetuals exchange uses price oracles for token prices. So, large trades will not incur price impact like traditional derivatives platforms.
 
-## Jupiter Perpetual Exchange Statistics Dashboard
+Liquidity for the Jupiter Perpetuals exchange is provided by the [JLP Pool](https://jup.ag/perps-earn), which holds **SOL**, **ETH**, **wBTC**, **USDC**, and **USDT** as the underlying tokens. The pool provides attractive returns for liquidity providers, while providing ample liquidity for traders to open highly-leveraged positions.
 
-| Jupiter Perpetual Exchange Dashboard                                                 |
-| ------------------------------------------------------------------------------------ |
-| [Chaos Labs Dashboard](https://community.chaoslabs.xyz/jupiter/risk/overview)        |
-| [Gauntlet Dashboard](https://app.gauntlet.xyz/protocols/jupiter)                     |
-| [Dune Analytics](https://dune.com/jupiterexchange/jupiter-perps)                     |
+:::info Statistics Dashboards
+You can find various metrics on Jupiter Perpetuals on the following dashboards:
+1. [Chaos Labs Dashboard](https://community.chaoslabs.xyz/jupiter/risk/overview)
+2. [Gauntlet Dashboard](https://app.gauntlet.xyz/protocols/jupiter)
+3. [Dune Analytics](https://dune.com/jupiterexchange/jupiter-perps)
+:::
 
 ## Perpetual Trading Interface
 
