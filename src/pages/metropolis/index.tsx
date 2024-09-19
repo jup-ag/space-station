@@ -190,7 +190,7 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm font-medium">
-                  <span className="opacity-50">Access Jupiter’s comprehensive list of tokens, powered by community and partner token lists. More info{" "}</span>
+                  <span className="opacity-50">Access Jupiter's comprehensive token list, curated by community and partners. More info{" "}</span>
                   <a
                     target="_blank"
                     href="https://www.jupresear.ch/t/ecosystem-master-token-list/19786"
