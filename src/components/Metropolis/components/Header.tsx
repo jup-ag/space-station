@@ -11,7 +11,7 @@ const LINKS = [
         path: DOCS_URL,
     },
     {
-        label: 'Resources',
+        label: 'Blog',
         path: 'https://www.jupresear.ch/c/developers/40',
     },
     {
