@@ -9,28 +9,19 @@ const LINKS = [
     {
         label: 'Docs',
         path: DOCS_URL,
-        style: 'link',
     },
     {
-        label: 'Resources',
+        label: 'Blog',
         path: 'https://www.jupresear.ch/c/developers/40',
-        style: 'link',
     },
     {
         label: 'Changelog',
         path: 'https://t.me/jup_dev',
-        style: 'link',
     },
     {
         label: 'FAQs',
         path: 'https://discord.com/channels/897540204506775583/910250162402779146',
-        style: 'link',
-    },
-    {
-        label: 'Start Building',
-        path: DOCS_URL,
-        style: 'button',
-    },
+    }
 ];
 
 const Header = () => {
@@ -63,7 +54,7 @@ const Header = () => {
         <div>
             <header className={cn(scrolled ? "bg-[#131C25]" : "bg-transparent", "flex justify-center px-5 py-5 fixed z-50 top-0 left-0 right-0 transition-all duration-500")}>
                 <div className="xl:max-w-6xl w-full flex items-center justify-between">
-                    <a href="/metropolis" className='hover:no-underline m-0'>
+                    <a href="/" className='hover:no-underline m-0'>
                         <span className="flex flex-row items-center space-x-2.5">
                             <img
                                 alt="logo"
@@ -82,23 +73,15 @@ const Header = () => {
                     </a>
                     <div className="items-center space-x-4 ml-8 overflow-auto hidden md:flex">
                         {LINKS.map((link) => {
-                            if (link.style === 'button') {
-                                return (
-                                    <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
-                                        <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
-                                            {link.label}
-                                        </span>
-                                    </a>
-                                );
-                            }
-                            else {
-                                return (
-                                    <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
-                                        <span className="px-3 py-1 text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
-                                    </a>
-                                );
-                            }
+                            return (
+                                <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold px-3 text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
+                                    {link.label}
+                                </a>
+                            );
                         })}
+                        <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                            Start Building
+                        </a>
                     </div>
                 </div>
             </header>
@@ -112,7 +95,7 @@ const Header = () => {
                 >
                     <div className='w-full'>
                         <div className="w-full h-screen flex flex-col overflow-auto gap-2 items-center pt-6 bg-gradient-to-b from-[#223345] to-[#131C25] md:bg-transparent md:from-transparent md:to-transparent">
-                            <a href="/" target="_blank" className='hover:no-underline mx-auto mb-4 mt-4'>
+                            <a href="/" className='hover:no-underline mx-auto mb-4 mt-4'>
                                 <span className="flex flex-row items-center space-x-2.5">
                                     <img
                                         alt="logo"
@@ -131,23 +114,15 @@ const Header = () => {
                             </a>
                             
                             {LINKS.map((link) => {
-                                if (link.style === 'button') {
-                                    return (
-                                        <a href={link.path} key={link.label} target="_blank" className="bg-[#4A5C41]/90 border border-solid border-transparent rounded-full text-center py-1.5 px-[1.15rem] m-0 mt-4 hover:border-[#c7f284] hover:no-underline transition-colors ease-out duration-200">
-                                            <span className="-m-1 text-sm font-semibold inline-block text-[#c7f284]">
-                                                {link.label}
-                                            </span>
-                                        </a>
-                                    );
-                                }
-                                else {
-                                    return (
-                                        <a href={link.path} key={link.label} target="_blank" className='hover:no-underline'>
-                                            <span className="text-sm font-semibold text-white hover:text-[#c7f284] transition-colors ease-in duration-200">{link.label}</span>
-                                        </a>
-                                    );
-                                }
+                                return (
+                                    <a href={link.path} key={link.label} target="_blank" className="text-sm font-semibold py-[0.22rem] text-white transition-colors duration-200 ease-in hover:no-underline hover:text-[#c7f284]">
+                                        {link.label}
+                                    </a>
+                                )
                             })}
+                            <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] mt-4 transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                                Start Building
+                            </a>
                         </div>
                     </div>
                 </Menu>
