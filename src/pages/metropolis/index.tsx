@@ -1,18 +1,19 @@
-
+import React, { useRef } from "react";
 import Header from "@site/src/components/Metropolis/components/Header";
 import Footer from "@site/src/components/Metropolis/components/Footer";
-import React, { useRef } from "react";
-import Slider from "react-slick";
+import { cn } from "@site/src/utils";
 
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import SwapApiIcon from "@site/src/components/Metropolis/components/icons/SwapApiIcon";
 import TokenApiIcon from "@site/src/components/Metropolis/components/icons/TokenApiIcon";
 import PriceApiIcon from "@site/src/components/Metropolis/components/icons/PriceApiIcon";
 import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
-import { DOCS_URL } from "@site/src/components/Metropolis/constants";
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
+import { DOCS_URL } from "@site/src/components/Metropolis/constants";
 
 const SELECTED_PARTNERS = [
   {
@@ -155,7 +156,11 @@ const Metropolis = () => {
                   href={DOCS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 hover:no-underline hover:text-[#c7f284] bg-[#4A5C41]/90 text-[#c7f284] px-5 py-2.5 text-center rounded-full border border-solid border-transparent hover:border-[#c7f284] transition-all"
+                  className={cn(
+                    "mt-3 px-5 py-2.5 bg-[#4A5C41]/90 text-[#c7f284] text-center",
+                    "rounded-full border border-solid border-transparent",
+                    "hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                  )}
                 >
                   <span className="text-base md:text-lg font-semibold">
                     Start Building
@@ -174,7 +179,14 @@ const Metropolis = () => {
             </h4>
 
             {/* Products */}
-            <div className="grid text-center mx-auto max-w-xs sm:max-w-md md:max-w-5xl w-full sm:grid-cols-2 md:grid-cols-4 gap-y-2">
+            <div
+              className={cn(
+                "w-full mx-auto text-center",
+                "grid gap-y-2",
+                "sm:max-w-md sm:grid-cols-2",
+                "md:max-w-5xl md:grid-cols-4"
+              )}
+            >
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors">
                 <SwapApiIcon height={64} width={64} color={"#c7f284"} />
                 <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
@@ -190,12 +202,16 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Token API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm font-medium">
-                  <span className="opacity-50">Access Jupiter's comprehensive token list, curated by community and partners. More info{" "}</span>
+                  <span className="opacity-50">
+                    Access Jupiter's comprehensive token list, curated by
+                    community and partners. More info{" "}
+                  </span>
                   <a
                     target="_blank"
                     href="https://www.jupresear.ch/t/ecosystem-master-token-list/19786"
-                    className="underline-offset-4 hover:underline hover:text-[#c7f284] text-[#c7f284]">
-                      here
+                    className="underline-offset-4 hover:underline hover:text-[#c7f284] text-[#c7f284]"
+                  >
+                    here
                   </a>
                   <span className="opacity-50">.</span>
                 </p>
@@ -206,7 +222,8 @@ const Metropolis = () => {
                   <span className="text-[#c7f284]">Price API</span>
                 </h2>
                 <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                  Retrieve real-time aggregate prices of any tradable token on Solana.
+                  Retrieve real-time aggregate prices of any tradable token on
+                  Solana.
                 </p>
               </div>
               <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
@@ -224,12 +241,24 @@ const Metropolis = () => {
             </div>
 
             {/* Buttons */}
-            <div className="md:mx-auto flex justify-center items-center flex-col space-y-6 mt-10 sm:flex-row sm:space-y-0 sm:space-x-6 px-20 sm:px-28 md:px-36 lg:px-40">
+            <div
+              className={cn(
+                "flex justify-center items-center flex-col space-y-6 mt-10 px-20",
+                "sm:flex-row sm:space-y-0 sm:space-x-6 sm:px-28",
+                "md:mx-auto md:px-36",
+                "lg:px-40"
+              )}
+            >
               <a
                 href={DOCS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4A5C41]/90 text-[#c7f284] font-semibold min-w-40 md:min-w-[180px] py-3 text-center rounded-2xl border border-solid border-transparent hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                className={cn(
+                  "min-w-40 md:min-w-[180px] py-3 bg-[#4A5C41]/90",
+                  "text-[#c7f284] font-semibold text-center",
+                  "rounded-2xl border border-solid border-transparent",
+                  "hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284] transition-all"
+                )}
               >
                 <span className="lg:text-lg mr-2">Get Started</span>
                 <span className="self-end text-lg lg:text-xl font-normal -mt-0.5 inline-block">
@@ -272,7 +301,9 @@ const Metropolis = () => {
                 </h2>
               </div>
 
-              <p className="p-0 m-0 opacity-60 text-white text-base text-center">Empowering builders to build sustainable businesses.</p>
+              <p className="p-0 m-0 opacity-60 text-white text-base text-center">
+                Empowering builders to build sustainable businesses.
+              </p>
             </div>
           </div>
         </div>
@@ -282,7 +313,9 @@ const Metropolis = () => {
             {/* Partners */}
             <p className="text-white text-center text-3xl md:text-4xl font-semibold flex-1 mb-8 pt-3.5">
               Our Partners
-              <p className="p-0 pt-2 m-0 opacity-60 text-white text-base">Generating over $100M in Revenue</p>
+              <p className="p-0 pt-2 m-0 opacity-60 text-white text-base">
+                Generating over $100M in Revenue
+              </p>
             </p>
 
             <div className="w-full overflow-hidden relative">
