@@ -79,13 +79,13 @@ const Header = () => {
                                 </a>
                             );
                         })}
-                        <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[0.6rem] px-[0.93rem] transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
+                        <a href={DOCS_URL} target="_blank" className="text-sm font-semibold text-center text-[#c7f284] bg-[#4A5C41]/90 border border-solid border-transparent rounded-full py-[10px] px-[15px] transition-colors duration-200 ease-out hover:no-underline hover:text-[#c7f284] hover:border-[#c7f284]">
                             Start Building
                         </a>
                     </div>
                 </div>
             </header>
-            <div className="fixed top-[1.3rem] right-7 z-50 block md:hidden">
+            <div className="fixed top-[20px] right-7 z-50 block md:hidden">
                 <Menu
                     overlayClassName={ "top-0 left-0 right-0 bottom-0" }
                     customBurgerIcon={<BurgerIcon width={30} height={30} color={"#ffffff"} />}
