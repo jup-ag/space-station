@@ -127,8 +127,11 @@ const Metropolis = () => {
   const slider = useRef<Slider>(null);
 
   return (
-    <Layout title="Jupiter Metropolis API" description="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more.">
+    <>
       <Head>
+        <title>Jupiter Metropolis API</title>
+        <meta property="og:title" content="Jupiter Metropolis API" />
+        <meta property="og:description" content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more." />
         <meta property="og:image" content="https://jupiter-space-station-git-fork-jiawendh-metropolis-api-wowcats.vercel.app/img/metropolis-api/api-jup_2.jpg" />
       </Head>
       <div className={"text-black dark:text-white"}>
@@ -515,7 +518,7 @@ const Metropolis = () => {
           </div>
         </main>
       </div>
-    </Layout>
+    </>
   );
 };
 
