@@ -127,21 +127,9 @@ const Metropolis = () => {
   const slider = useRef<Slider>(null);
 
   return (
-    <Layout title="Page" description="A React page demo">
+    <Layout title="Jupiter Metropolis API" description="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more.">
       <Head>
-        <title>Jupiter Metropolis API2</title>
-        <meta name="og:title" content="Jupiter Metropolis API" />
-        <meta name="description" content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more." />
         <meta property="og:image" content="https://jupiter-space-station-git-fork-jiawendh-metropolis-api-wowcats.vercel.app/img/metropolis-api/api-jup_2.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org/',
-            '@type': 'Organization',
-            name: 'Meta Open Source',
-            url: 'https://opensource.fb.com/',
-            logo: 'https://opensource.fb.com/img/logos/Meta-Open-Source.svg',
-          })}
-        </script>
       </Head>
       <div className={"text-black dark:text-white"}>
         <main className={"bg-[#131C25] relative min-h-screen"}>
