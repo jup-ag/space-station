@@ -196,7 +196,8 @@ const config = {
         },
         {
           property: "og:image",
-          content: "https://og.jup.ag/api/jupiter-station",
+          content: "https://station.jup.ag/img/metropolis-api/api-jup_2.jpg",
+          // content: "https://og.jup.ag/api/jupiter-station",
         },
         {
           name: "theme-color",
