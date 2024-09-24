@@ -3,6 +3,7 @@ import Header from "@site/src/components/Metropolis/components/Header";
 import Footer from "@site/src/components/Metropolis/components/Footer";
 import { cn } from "@site/src/utils";
 
+import Head from '@docusaurus/Head';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -126,6 +127,12 @@ const Metropolis = () => {
 
   return (
     <div className={"text-black dark:text-white"}>
+      <Head>
+        <title>Jupiter Metropolis API</title>
+        <meta name="og:title" content="Jupiter Metropolis API" />
+        <meta name="description" content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more." />
+        <meta property="og:image" content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg" />
+      </Head>
       <main className={"bg-[#131C25] relative min-h-screen"}>
         <div className="px-3 py-4 md:py-12 overflow-hidden bg-[#131C25]/80 relative">
           <div

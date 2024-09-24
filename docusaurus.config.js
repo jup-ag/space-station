@@ -7,7 +7,7 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Jupiter Metropolis API",
+  title: "Jupiter Station",
   staticDirectories: ["static"],
   tagline: "The Key Liquidity Aggregator and Swap Infrastructure for Solana",
   favicon: "img/favicon.ico",
@@ -192,12 +192,11 @@ const config = {
         {
           property: "description",
           content:
-          "Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more.",
+            "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
         },
         {
           property: "og:image",
-          content: "https://station.jup.ag/img/metropolis-api/api-jup_2.jpg",
-          // content: "https://og.jup.ag/api/jupiter-station",
+          content: "https://og.jup.ag/api/jupiter-station",
         },
         {
           name: "theme-color",
