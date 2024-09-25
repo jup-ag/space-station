@@ -3,7 +3,7 @@ import Header from "@site/src/components/Metropolis/components/Header";
 import Footer from "@site/src/components/Metropolis/components/Footer";
 import { cn } from "@site/src/utils";
 
-import Head from '@docusaurus/Head';
+import Head from "@docusaurus/Head";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -131,8 +131,14 @@ const Metropolis = () => {
       <Head>
         <title>Jupiter Metropolis API</title>
         <meta property="og:title" content="Jupiter Metropolis API" />
-        <meta property="og:description" content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more." />
-        <meta property="og:image" content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg" />
+        <meta
+          property="og:description"
+          content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more."
+        />
+        <meta
+          property="og:image"
+          content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg"
+        />
       </Head>
       <div className={"text-black dark:text-white"}>
         <main className={"bg-[#131C25] relative min-h-screen"}>
@@ -159,7 +165,8 @@ const Metropolis = () => {
                   </h1>
                   <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
                     The most powerful set of Liquidity APIs in all of{" "}
-                    <span className="font-semibold text-[#c7f284]">crypto</span>.
+                    <span className="font-semibold text-[#c7f284]">crypto</span>
+                    .
                   </p>
                   <a
                     href={DOCS_URL}
@@ -418,10 +425,28 @@ const Metropolis = () => {
                       </div>
                     </div>
                     <p className="text-white/60 text-base">
-                      I am super impressed with @JupiterExchangeon@solana. Truly
-                      excellent UX and features. An example of maturation in a
-                      range of infrastructure -- wallets, usdc on solana liquidity
-                      and availability, and product execution.
+                      I am super impressed with{" "}
+                      <a
+                        className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                        href="https://x.com/JupiterExchange"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        @JupiterExchange
+                      </a>{" "}
+                      on{" "}
+                      <a
+                        className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                        href="https://x.com/solana"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        @solana
+                      </a>
+                      . Truly excellent UX and features. An example of
+                      maturation in a range of infrastructure -- wallets, usdc
+                      on solana liquidity and availability, and product
+                      execution.
                     </p>
                   </a>
                   <a
@@ -452,10 +477,18 @@ const Metropolis = () => {
                     </div>
                     <p className="text-white/60 text-base">
                       <span className="pb-2 block">
-                        Did you know?: @JupiterExchange has a bridge feature?
-                        Where it will compare rates and find you the most
-                        efficient path to $SOL Jupiter, for me, is the single most
-                        important app on $SOL
+                        Did you know?:{" "}
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/JupiterExchange"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @JupiterExchange
+                        </a>{" "}
+                        has a bridge feature? Where it will compare rates and
+                        find you the most efficient path to $SOL Jupiter, for
+                        me, is the single most important app on $SOL
                       </span>
                       <span className="py-2 block">
                         It is our Grand Central Station.
@@ -492,20 +525,27 @@ const Metropolis = () => {
                     </div>
                     <p className="text-white/60 text-base">
                       <span className="pb-2 block">
-                        Tell me this isn't a gorgeous fucking product by
-                        @JupiterExchange
+                        Tell me this isn't a gorgeous fucking product by{" "}
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/JupiterExchange"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @JupiterExchange
+                        </a>
                       </span>
                       <span className="py-2 block">
                         This would previously require me to use a slow, redacted
-                        CEX that requires KYC and requires me to handover custody
-                        of my assets.
+                        CEX that requires KYC and requires me to handover
+                        custody of my assets.
                       </span>
                       <span className="pt-2 block">
                         The performant chain thesis is simple: When your base
                         layer does not require weeks and months of development
-                        efforts purely directed towards gas/fee optimizations, you
-                        allow your builders to innovate and focus purely on the
-                        product & they make the magic happen
+                        efforts purely directed towards gas/fee optimizations,
+                        you allow your builders to innovate and focus purely on
+                        the product & they make the magic happen
                       </span>
                     </p>
                   </a>
