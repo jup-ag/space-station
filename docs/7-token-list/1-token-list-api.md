@@ -78,7 +78,7 @@ Example response:
     </div>
   </summary>
 
-Get all tradable tokens that meet jup.ag’s routing and liquidity threshold. This is a large response, pleae consider fetching tokens by tags instead
+Get all tradable tokens that meet jup.ag’s routing and liquidity threshold. This is a large response, please consider fetching tokens by tags instead
 </details>
 
 Usage notes:
