@@ -3,7 +3,6 @@ import Header from "@site/src/components/Metropolis/components/Header";
 import Footer from "@site/src/components/Metropolis/components/Footer";
 import { cn } from "@site/src/utils";
 
-import Head from '@docusaurus/Head';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,7 +14,8 @@ import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpAp
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
 import { DOCS_URL } from "@site/src/components/Metropolis/constants";
-import Layout from "@theme/Layout";
+import Metadata from "@site/src/components/Metropolis/components/Metadata";
+import Testimonial from "@site/src/components/Metropolis/components/Testimonial";
 
 const SELECTED_PARTNERS = [
   {
@@ -128,12 +128,7 @@ const Metropolis = () => {
 
   return (
     <>
-      <Head>
-        <title>Jupiter Metropolis API</title>
-        <meta property="og:title" content="Jupiter Metropolis API" />
-        <meta property="og:description" content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more." />
-        <meta property="og:image" content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg" />
-      </Head>
+      <Metadata />
       <div className={"text-black dark:text-white"}>
         <main className={"bg-[#131C25] relative min-h-screen"}>
           <div className="px-3 py-4 md:py-12 overflow-hidden bg-[#131C25]/80 relative">
@@ -159,7 +154,8 @@ const Metropolis = () => {
                   </h1>
                   <p className="mx-auto text-base px-5 md:px-0 sm:text-lg md:text-xl text-white/70">
                     The most powerful set of Liquidity APIs in all of{" "}
-                    <span className="font-semibold text-[#c7f284]">crypto</span>.
+                    <span className="font-semibold text-[#c7f284]">crypto</span>
+                    .
                   </p>
                   <a
                     href={DOCS_URL}
@@ -391,124 +387,117 @@ const Metropolis = () => {
                 </h4>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-3 mx-5">
-                  <a
-                    href="https://twitter.com/jerallaire/status/1724718929447371174"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="md:col-span-2 lg:col-span-1 flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                  <Testimonial
+                    source="https://twitter.com/jerallaire/status/1724718929447371174"
+                    dpSrc="/img/metropolis-api/credit-avatar-1.png"
+                    author="Jeremy Allaire (@jerallaire)"
+                    time="5:20 PM · Nov 15, 2023"
+                    className="md:col-span-2 lg:col-span-1"
                   >
-                    <div className="flex space-x-3 items-center">
-                      <img
-                        alt="dp"
-                        loading="lazy"
-                        width="36"
-                        height="36"
-                        decoding="async"
-                        data-nimg="1"
-                        src="/img/metropolis-api/credit-avatar-1.png"
-                        style={{ color: "transparent" }}
-                      />
-                      <div className="flex flex-col">
-                        <h6 className="text-base text-[#c7f284] font-semibold m-0">
-                          Jeremy Allaire (@jerallaire)
-                        </h6>
-                        <p className="text-xs text-white/30 font-extralight m-0 pt-1">
-                          5:20 PM · Nov 15, 2023
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-white/60 text-base">
-                      I am super impressed with @JupiterExchangeon@solana. Truly
-                      excellent UX and features. An example of maturation in a
-                      range of infrastructure -- wallets, usdc on solana liquidity
-                      and availability, and product execution.
-                    </p>
-                  </a>
-                  <a
-                    href="https://twitter.com/TopoGigio_sol/status/1737844551317147964"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="md:col-span-2 lg:col-span-1 flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                    I am super impressed with{" "}
+                    <a
+                      className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                      href="https://x.com/JupiterExchange"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      @JupiterExchange
+                    </a>{" "}
+                    on{" "}
+                    <a
+                      className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                      href="https://x.com/solana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      @solana
+                    </a>
+                    . Truly excellent UX and features. An example of maturation
+                    in a range of infrastructure -- wallets, usdc on solana
+                    liquidity and availability, and product execution.
+                  </Testimonial>
+                  <Testimonial
+                    source="https://twitter.com/TopoGigio_sol/status/1737844551317147964"
+                    dpSrc="/img/metropolis-api/credit-avatar-2.png"
+                    author="Topo Gigio (@TopoGigio_sol)"
+                    time="10:36 PM · Dec 21, 2023"
+                    className="md:col-span-2 lg:col-span-1"
                   >
-                    <div className="flex space-x-3 items-center">
-                      <img
-                        alt="dp"
-                        loading="lazy"
-                        width="36"
-                        height="36"
-                        decoding="async"
-                        data-nimg="1"
-                        src="/img/metropolis-api//credit-avatar-2.png"
-                        style={{ color: "transparent" }}
-                      />
-                      <div className="flex flex-col">
-                        <h6 className="text-base text-[#c7f284] font-semibold m-0">
-                          Topo Gigio (@TopoGigio_sol)
-                        </h6>
-                        <p className="text-xs text-white/30 font-extralight m-0 pt-1">
-                          10:36 PM · Dec 21, 2023
-                        </p>
-                      </div>
-                    </div>
                     <p className="text-white/60 text-base">
+                      <span className="pb-2 block">Did you know?:</span>
                       <span className="pb-2 block">
-                        Did you know?: @JupiterExchange has a bridge feature?
-                        Where it will compare rates and find you the most
-                        efficient path to $SOL Jupiter, for me, is the single most
-                        important app on $SOL
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/JupiterExchange"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @JupiterExchange
+                        </a>{" "}
+                        has a bridge feature? Where it will compare rates and
+                        find you the most efficient path to{" "}
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/search?q=%24SOL&src=cashtag_click"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          $SOL
+                        </a>
+                      </span>
+                      <span className="py-2 block">
+                        Jupiter, for me, is the single most important app on{" "}
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/search?q=%24SOL&src=cashtag_click"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          $SOL
+                        </a>
                       </span>
                       <span className="py-2 block">
                         It is our Grand Central Station.
                       </span>
-                      <span className="py-2 block">ILove at first swap</span>
-                      <span className="pt-2 block">IGM</span>
+                      <span className="py-2 block">Love at first swap</span>
+                      <span className="pt-2 block">GM</span>
                     </p>
-                  </a>
-                  <a
-                    href="https://twitter.com/Abbasshaikh42/status/1735940030865277244"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto flex flex-col space-y-5 bg-slate-400/10 rounded-xl p-7 hover:no-underline hover:bg-slate-300/10"
+                  </Testimonial>
+                  <Testimonial
+                    source="https://twitter.com/Abbasshaikh42/status/1735940030865277244"
+                    dpSrc="/img/metropolis-api/credit-avatar-3.png"
+                    author="Abbas (@abbassshaikh42)"
+                    time="4:28 PM · Dec 16, 2023"
+                    className="md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto"
                   >
-                    <div className="flex space-x-3 items-center">
-                      <img
-                        alt="dp"
-                        loading="lazy"
-                        width="36"
-                        height="36"
-                        decoding="async"
-                        data-nimg="1"
-                        src="/img/metropolis-api//credit-avatar-3.png"
-                        style={{ color: "transparent" }}
-                      />
-                      <div className="flex flex-col">
-                        <h6 className="text-base text-[#c7f284] font-semibold m-0">
-                          Abbas (@abbassshaikh42)
-                        </h6>
-                        <p className="text-xs text-white/30 font-extralight m-0 pt-1">
-                          4:28 PM · Dec 16, 2023
-                        </p>
-                      </div>
-                    </div>
                     <p className="text-white/60 text-base">
                       <span className="pb-2 block">
-                        Tell me this isn't a gorgeous fucking product by
-                        @JupiterExchange
+                        Tell me this isn't a gorgeous fucking product by{" "}
+                        <a
+                          className="underline underline-offset-4 text-white/60 hover:text-white/80"
+                          href="https://x.com/JupiterExchange"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          @JupiterExchange
+                        </a>
                       </span>
                       <span className="py-2 block">
                         This would previously require me to use a slow, redacted
-                        CEX that requires KYC and requires me to handover custody
-                        of my assets.
+                        CEX that requires KYC and requires me to handover
+                        custody of my assets.
                       </span>
-                      <span className="pt-2 block">
-                        The performant chain thesis is simple: When your base
-                        layer does not require weeks and months of development
-                        efforts purely directed towards gas/fee optimizations, you
-                        allow your builders to innovate and focus purely on the
-                        product & they make the magic happen
+                      <span className="pt-2 block font-semibold">
+                        The performant chain thesis is simple:
+                      </span>
+                      <span className="block">
+                        When your base layer does not require weeks and months
+                        of development efforts purely directed towards gas/fee
+                        optimizations, you allow your builders to innovate and
+                        focus purely on the product & they make the magic happen
                       </span>
                     </p>
-                  </a>
+                  </Testimonial>
                 </div>
               </div>
             </div>
