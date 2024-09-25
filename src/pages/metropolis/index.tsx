@@ -139,6 +139,33 @@ const Metropolis = () => {
           property="og:image"
           content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg"
         />
+        <meta property="twitter:title" content="Jupiter Metropolis API" />
+        <meta
+          property="twitter:description"
+          content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more."
+        />
+        <meta
+          property="twitter:image"
+          content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg"
+        />
+        <meta property="telegram:title" content="Jupiter Metropolis API" />
+        <meta
+          property="telegram:description"
+          content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more."
+        />
+        <meta
+          property="telegram:image"
+          content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg"
+        />
+        <meta property="telegram:title" content="Jupiter Metropolis API" />
+        <meta
+          property="telegram:description"
+          content="Jupiter Metropolis API is the hub for the most powerful set of liquidity APIs in crypto. Unlock seamless access to liquidity and data with Metropolis and find all the API endpoints needed to build a winning business, ranging from Swap API, Token API, Price API, and more."
+        />
+        <meta
+          property="telegram:image"
+          content="https://station.jup.ag/img/metropolis-api/api-jup_2.jpg"
+        />
       </Head>
       <div className={"text-black dark:text-white"}>
         <main className={"bg-[#131C25] relative min-h-screen"}>
