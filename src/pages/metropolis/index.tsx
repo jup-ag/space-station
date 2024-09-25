@@ -183,7 +183,7 @@ const Metropolis = () => {
 
           <div className="px-3">
             <div className="max-w-6xl mx-auto mt-[60px] pt-2 pb-5 md:pb-4">
-              <h4 className="text-center text-[#c7f284] text-4xl md:text-6xl md:pt-2.5 pb-3 font-semibold mb-5 sm:mb-8 md:mb-12">
+              <h4 className="text-center text-white text-4xl md:text-6xl md:pt-2.5 pb-3 font-semibold mb-5 sm:mb-8 md:mb-12">
                 Our Liquidity APIs
               </h4>
 
