@@ -29,15 +29,6 @@ Any Liquidity providers (LPs) can acquire JLP by swapping for it on Jupiter Swap
 
 JLP can also be sold via Jupiter Swap. Simply swap JLP for your desired asset. The JLP token could either be transferred to another trader or may be redeemed by the JLP pool, burning the JLP token, and releasing some of the currency contained in the pool.
 
-:::tip
-The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
-:::
-
-:::info
-When using Jupiter Swap or programs that integrate Jupiter Swap, the minting and burning of JLP tokens occur automatically. If you're swapping any token for JLP, the system will mint JLP at the virtual price, which increases the overall JLP supply. Conversely, when you swap JLP for other tokens, the system burns the amount of JLP you provided, thereby decreasing the JLP supply. This automatic minting and burning functionality is integrated directly into the Jupiter Swap program.
-
-However, it's important to note that this behavior is unique to Jupiter Swap and programs that use Jupiter Swap under the hood. If you're interacting with a different program or aggregator that doesn't integrate the Jupiter Swap program, this automatic minting and burning doesn't apply. In such cases, you would be trading JLP at whatever price is offered by that particular platform, rather than at the virtual price. Additionally, these transactions would not affect the overall JLP supply, as only the Jupiter Swap program has the authority to mint and burn JLP tokens.
-:::
 **Purchasing/Exiting JLP** 
 
 The best way to purchase or exit JLP is via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
@@ -135,7 +126,7 @@ Fee distribution for Jupiter LP (JLP) tokens occurs at the start of every hour U
 
 ##### 2) Weekly APR Updates
 
-The pool maintains a ```pool_apr.last_updated``` field, which stores a UNIX timestamp to track when the last APR update occurred. During each hourly fee withdrawal, the system performs a check to determine if a full week has elapsed since the last update. If a week has indeed passed, the system initiates the APR update process. This process involves calculating the new APR, updating the ```pool_apr.last_updated``` timestamp to reflect the current time, and adjusting the ```pool_apr.fee_apr_bps``` value accordingly. This weekly update schedule allows for regular recalibration of the APR while maintaining operational efficiency.
+The pool maintains a ```pool_apr.last_updated``` field, which stores a UNIX timestamp to track when the last APR update occurred. During each hourly fee withdrawal, the system performs a check to determine if a full week has elapsed since the last update. If a week has indeed passed, the system initiates the APR update process. This process involves calculating the new APR, updating the ```pool_apr.last_updated``` timestamp to reflect the current time, and adjusting the ```pool_apr.fee_apr_bps``` value accordingly.
 
 **APR Calculation**
 
