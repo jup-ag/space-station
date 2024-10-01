@@ -147,6 +147,29 @@ if current_time > (last_updated_time + 1_WEEK):
     // 10_000 represents the scaling factor used to calculate the BPS for the pool's APR
     apr_bps = (realized_fee_usd * YEAR_IN_SECONDS * 10_000) / (pool_amount_usd * time_diff)
 ```
+### JLP Fee Distribution and APR Calculation
+
+#### Fee Distribution
+
+##### 1) Hourly Fee Distribution
+
+Fee distribution into the JLP token occurs at the start of every hour, in UTC time (e.g. `00:00 UTC`, `01:00 UTC`, `02:00 UTC` and so on). 
+
+During this process, 75% of realized fees are systematically withdrawn from each custody account's ```assets.fees_reserves``` and deposited back into the pool, while the remaining 25% is sent to Jupiter as a protocol fee.
+
+:::tip
+Learn more about the on-chain accounts associated with JLP & Jupiter Perpetuals [here](../8-perpetual-exchange/3-onchain-accounts.md).
+:::
+
+##### 2) Weekly APR Updates
+
+The JLP pool maintains a ```pool_apr.last_updated``` field, which records a UNIX timestamp of the latest APR update. After a **consecutive week** of hourly fee distributions have passed, Jupiter calculates the new APR and updates the ```pool_apr.fee_apr_bps``` value accordingly.
+
+This weekly update schedule allows for regular recalibration of APR for the JLP pool while maintaining operational efficiency.
+
+**APR Calculation**
+
+APR for the JLP pool is updated weekly, and can be calculated using the following formula:
 
 ### Risks Associated with Holding JLP
 
