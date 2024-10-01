@@ -33,6 +33,12 @@ JLP can also be sold via Jupiter Swap. Simply swap JLP for your desired asset. T
 The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
 :::
 
+:::info
+When using Jupiter Swap or programs that integrate Jupiter Swap, the minting and burning of JLP tokens occur automatically. If you're swapping any token for JLP, the system will mint JLP at the virtual price, which increases the overall JLP supply. Conversely, when you swap JLP for other tokens, the system burns the amount of JLP you provided, thereby decreasing the JLP supply. This automatic minting and burning functionality is integrated directly into the Jupiter Swap program.
+
+However, it's important to note that this behavior is unique to Jupiter Swap and programs that use Jupiter Swap under the hood. If you're interacting with a different program or aggregator that doesn't integrate the Jupiter Swap program, this automatic minting and burning doesn't apply. In such cases, you would be trading JLP at whatever price is offered by that particular platform, rather than at the virtual price. Additionally, these transactions would not affect the overall JLP supply, as only the Jupiter Swap program has the authority to mint and burn JLP tokens.
+:::
+
 ### Yield Generation
 
 The exchange generates fees and yields in various ways:
@@ -107,6 +113,29 @@ Finally, you can calculate your estimated generated revenue share by multiplying
 
 ```
 estimated revenue share you generate = $22,500 x 0.025% = $5.625
+```
+
+### JLP Fee Distribution and APR Calculation
+
+#### Fee Distribution
+
+##### 1) Hourly Fee Distribution
+
+Fee distribution for Jupiter LP (JLP) tokens occurs at the start of every hour UTC at 00:00, 01:00, 02:00, and so on. During this process, fees are systematically withdrawn from each custody (this value is stored in each custody accounts' ```assets.fees_reserves```). 75% of the realized fees are deposited back into the pool while the remaining 25% is sent to Jupiter as the protocol fee.
+
+##### 2) Weekly APR Updates
+
+The pool maintains a ```pool_apr.last_updated``` field, which stores a UNIX timestamp to track when the last APR update occurred. During each hourly fee withdrawal, the system performs a check to determine if a full week has elapsed since the last update. If a week has indeed passed, the system initiates the APR update process. This process involves calculating the new APR, updating the ```pool_apr.last_updated``` timestamp to reflect the current time, and adjusting the ```pool_apr.fee_apr_bps``` value accordingly. This weekly update schedule allows for regular recalibration of the APR while maintaining operational efficiency.
+
+**APR Calculation**
+
+The APR is calculated when a week has passed since the last APR update. The simplified formula to calculate the weekly APR is shown below:
+
+```
+if current_time > (last_updated_time + 1_WEEK):
+    time_diff = current_time - last_updated_time
+    // 10_000 represents the scaling factor used to calculate the BPS for the pool's APR
+    apr_bps = (realized_fee_usd * YEAR_IN_SECONDS * 10_000) / (pool_amount_usd * time_diff)
 ```
 
 ### Risks Associated with Holding JLP
