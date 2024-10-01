@@ -52,13 +52,13 @@ Usage: You can pass in a single tag or multiple:
   <summary>
     <div>
       <div className="api-method-box post">GET token by mint</div>
-      <p className="api-method-path">https://tokens.jup.ag/token/So11111111111111111111111111111111111111112</p>
+      <p className="api-method-path">https://tokens.jup.ag/token/FKzRHGy9NNBseoxbK7SY4LVanDJJhjWf2qSTShG5vp94</p>
     </div>
   </summary>
 
 | Parameter   | Description                        |
 |-------------|------------------------------------|
-| `mint_address` |  Pass the mint address of the token you want like this https://tokens.jup.ag/token/So11111111111111111111111111111111111111112          |
+| `mint_address` |  Pass the mint address of the token you want like this https://tokens.jup.ag/token/FKzRHGy9NNBseoxbK7SY4LVanDJJhjWf2qSTShG5vp94          |
 
 We only support filtering for 1 token at a time right now.
 
