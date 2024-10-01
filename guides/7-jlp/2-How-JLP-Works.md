@@ -122,28 +122,6 @@ estimated revenue share you generate = $22,500 x 0.025% = $5.625
 
 ##### 1) Hourly Fee Distribution
 
-Fee distribution for Jupiter LP (JLP) tokens occurs at the start of every hour UTC at 00:00, 01:00, 02:00, and so on. During this process, fees are systematically withdrawn from each custody (this value is stored in each custody accounts' ```assets.fees_reserves```). 75% of the realized fees are deposited back into the pool while the remaining 25% is sent to Jupiter as the protocol fee.
-
-##### 2) Weekly APR Updates
-
-The pool maintains a ```pool_apr.last_updated``` field, which stores a UNIX timestamp to track when the last APR update occurred. During each hourly fee withdrawal, the system performs a check to determine if a full week has elapsed since the last update. If a week has indeed passed, the system initiates the APR update process. This process involves calculating the new APR, updating the ```pool_apr.last_updated``` timestamp to reflect the current time, and adjusting the ```pool_apr.fee_apr_bps``` value accordingly.
-
-**APR Calculation**
-
-The APR is calculated when a week has passed since the last APR update. The simplified formula to calculate the weekly APR is shown below:
-
-```
-if current_time > (last_updated_time + 1_WEEK):
-    time_diff = current_time - last_updated_time
-    // 10_000 represents the scaling factor used to calculate the BPS for the pool's APR
-    apr_bps = (realized_fee_usd * YEAR_IN_SECONDS * 10_000) / (pool_amount_usd * time_diff)
-```
-### JLP Fee Distribution and APR Calculation
-
-#### Fee Distribution
-
-##### 1) Hourly Fee Distribution
-
 Fee distribution into the JLP token occurs at the start of every hour, in UTC time (e.g. `00:00 UTC`, `01:00 UTC`, `02:00 UTC` and so on). 
 
 During this process, 75% of realized fees are systematically withdrawn from each custody account's ```assets.fees_reserves``` and deposited back into the pool, while the remaining 25% is sent to Jupiter as a protocol fee.
@@ -161,6 +139,13 @@ This weekly update schedule allows for regular recalibration of APR for the JLP 
 **APR Calculation**
 
 APR for the JLP pool is updated weekly, and can be calculated using the following formula:
+
+```
+if current_time > (last_updated_time + 1_WEEK):
+    time_diff = current_time - last_updated_time
+    // 10_000 represents the scaling factor used to calculate the BPS for the pool's APR
+    apr_bps = (realized_fee_usd * YEAR_IN_SECONDS * 10_000) / (pool_amount_usd * time_diff)
+```
 
 ### Risks Associated with Holding JLP
 
