@@ -135,15 +135,6 @@ export const docsLinkItems: LinkGroup[] = [
     ],
   },
   {
-    heading: "Limit Order",
-    children: [
-      {
-        title: "Limit Order with SDK",
-        href: "/docs/limit-order/limit-order-with-sdk",
-      },
-    ],
-  },
-  {
     heading: "DCA",
     children: [
       {

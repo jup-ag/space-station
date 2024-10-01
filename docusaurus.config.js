@@ -163,6 +163,10 @@ const config = {
             from: '/docs/limit-order/limit-order-api',
           },
           {
+            to: '/docs/limit-order',
+            from: '/docs/limit-order/limit-order-with-sdk',
+          },
+          {
             to: '/guides/general/get-your-token-on-jupiter',
             from: '/guides/general/new-token-guide',
           },
