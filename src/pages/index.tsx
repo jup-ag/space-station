@@ -425,7 +425,7 @@ const JupiterDevelopers = () => {
           <span>Payments API</span>
           <ChevronRight />
         </a>
-        <a
+        {/* <a
           href="https://station.jup.ag/docs/limit-order/limit-order-api"
           target="_blank"
           className={cn(
@@ -435,7 +435,7 @@ const JupiterDevelopers = () => {
         >
           <span>Limit Orders API</span>
           <ChevronRight />
-        </a>
+        </a> */}
         <a
           href="https://terminal.jup.ag"
           target="_blank"
