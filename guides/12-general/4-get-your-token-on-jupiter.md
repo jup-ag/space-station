@@ -44,7 +44,7 @@ To provide users access to new tokens, all new markets on supported AMMs are ins
 After 14 days, markets that fit the criteria will continue to be routed on Jupiter.
 
 :::tip Supported AMMs
-We currently support Fluxbeam, Meteora DLMM, 1Intro, Pump.Fun, Raydium CLMM, Raydium CP, Raydium V4 and Whirlpools for Instant Routing.
+We currently support Fluxbeam, Meteora DLMM, 1Intro, Pump.Fun, Moonshot, Raydium CLMM, Raydium CP, Raydium V4 and Whirlpools for Instant Routing.
 :::
 
 To ensure your market gets routed on Jupiter after 14 days, your market must fit **one of the following criteria**:
@@ -67,3 +67,9 @@ If the price impact is more than **30%**, it means that there is insufficient li
 2. *(For additional markets)* **Less than 20% price difference on new pools**
 
 For additional markets on already supported tokens, there should be a variance of less than **20%** between the new pool and the pool existing in routing. 
+
+## Tokens Yet to Graduate
+
+For tokens on pump.fun or Moonshot that have not graduated after 14 days since creation and do not meet one of the two criteria shown above, the token pool will not be routed and hence not tradable on jup.ag.
+
+For your token to be routable, sufficient liquidity must be added to the pool in order to meet the above criteria.
