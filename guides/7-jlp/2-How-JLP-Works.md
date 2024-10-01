@@ -38,7 +38,17 @@ When using Jupiter Swap or programs that integrate Jupiter Swap, the minting and
 
 However, it's important to note that this behavior is unique to Jupiter Swap and programs that use Jupiter Swap under the hood. If you're interacting with a different program or aggregator that doesn't integrate the Jupiter Swap program, this automatic minting and burning doesn't apply. In such cases, you would be trading JLP at whatever price is offered by that particular platform, rather than at the virtual price. Additionally, these transactions would not affect the overall JLP supply, as only the Jupiter Swap program has the authority to mint and burn JLP tokens.
 :::
+**Purchasing/Exiting JLP** 
 
+The best way to purchase or exit JLP is via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
+
+When using Jupiter Swap or programs that integrate Jupiter Swap, the minting and burning of JLP tokens occur automatically. When you swap in and out of JLP, Jupiter Swap will find the best route to mint/burn JLP automatically, or swap through other DEXes if the route offered is better.
+
+:::info
+This automatic minting/burning mechanism is unique to Jupiter Swap and programs that route via Jupiter Swap. If you're interacting directly on a different DEX, you will trade JLP at the price offered by the DEX instead of the virtual price of JLP.
+
+These transactions would also not affect the overall JLP supply - only the Jupiter Swap program has the authority to mint and burn JLP tokens.
+:::
 ### Yield Generation
 
 The exchange generates fees and yields in various ways:
