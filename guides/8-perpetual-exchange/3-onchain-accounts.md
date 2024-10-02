@@ -9,6 +9,10 @@ This page contains an overview of all the **Solana account types** used in the J
 
 This information is useful for developers looking to integrate or interact the Jupiter Perpetuals program and transactions.
 
+:::info
+This [repository](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing) contains `typescript` code samples on interacting with the Jupiter Perpetuals program IDL with `anchor` and `@solana/web3.js`
+:::
+
 ## `Position` account
 
 The `Position` account contains the trade position data for a given token. The following is an example of a `Position` account:

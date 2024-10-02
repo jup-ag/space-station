@@ -29,10 +29,17 @@ Any Liquidity providers (LPs) can acquire JLP by swapping for it on Jupiter Swap
 
 JLP can also be sold via Jupiter Swap. Simply swap JLP for your desired asset. The JLP token could either be transferred to another trader or may be redeemed by the JLP pool, burning the JLP token, and releasing some of the currency contained in the pool.
 
-:::tip
-The best way to purchase or exit JLP is always via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
-:::
+**Purchasing/Exiting JLP** 
 
+The best way to purchase or exit JLP is via [Jupiter Swap](https://jup.ag/swap/USDC-JLP).
+
+When using Jupiter Swap or programs that integrate Jupiter Swap, the minting and burning of JLP tokens occur automatically. When you swap in and out of JLP, Jupiter Swap will find the best route to mint/burn JLP automatically, or swap through other DEXes if the route offered is better.
+
+:::info
+This automatic minting/burning mechanism is unique to Jupiter Swap and programs that route via Jupiter Swap. If you're interacting directly on a different DEX, you will trade JLP at the price offered by the DEX instead of the virtual price of JLP.
+
+**Only the Jupiter Perpetuals program (which is integrated in Jupiter Swap) has the authority to mint and burn JLP tokens.**
+:::
 ### Yield Generation
 
 The exchange generates fees and yields in various ways:
@@ -107,6 +114,35 @@ Finally, you can calculate your estimated generated revenue share by multiplying
 
 ```
 estimated revenue share you generate = $22,500 x 0.025% = $5.625
+```
+
+### JLP Fee Distribution and APR Calculation
+
+#### Fee Distribution
+
+##### 1) Hourly Fee Distribution
+
+Fee distribution into the JLP token occurs at the start of every hour, in UTC time (e.g. `00:00 UTC`, `01:00 UTC`, `02:00 UTC` and so on). 
+
+During this process, 75% of realized fees are withdrawn from each custody account's ```assets.fees_reserves``` and deposited back into the pool, while the remaining 25% is sent to Jupiter as a protocol fee.
+
+:::tip
+Learn more about the on-chain accounts associated with JLP & Jupiter Perpetuals [here](../8-perpetual-exchange/3-onchain-accounts.md).
+:::
+
+##### 2) Weekly APR Updates
+
+The JLP pool maintains a ```pool_apr.last_updated``` field, which records a UNIX timestamp of the latest APR update. After a **consecutive week** of hourly fee distributions have passed, Jupiter calculates the new APR and updates the ```pool_apr.fee_apr_bps``` value accordingly.
+
+**APR Calculation**
+
+APR for the JLP pool is updated weekly, and can be calculated using the following formula:
+
+```
+if current_time > (last_updated_time + 1_WEEK):
+    time_diff = current_time - last_updated_time
+    // 10_000 represents the scaling factor used to calculate the BPS for the pool's APR
+    apr_bps = (realized_fee_usd * YEAR_IN_SECONDS * 10_000) / (pool_amount_usd * time_diff)
 ```
 
 ### Risks Associated with Holding JLP
