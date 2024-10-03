@@ -32,7 +32,7 @@ Your token does not have to be verified to be tradable. All new pools are suppor
 More resources on the community tag initiative can be found here:
 
 - **Community Tag Application Site**: [https://catdetlist.jup.ag/](https://catdetlist.jup.ag/)
-- **Community Tag FAQ**: [https://www.jupresear.ch/t/jupiter-community-tag-faq/19168](https://www.jupresear.ch/t/faq-jupiter-community-tag/23074)](https://www.jupresear.ch/t/faq-jupiter-community-tag/23074)
+- **Community Tag FAQ**: [https://www.jupresear.ch/t/faq-jupiter-community-tag/23074](https://www.jupresear.ch/t/faq-jupiter-community-tag/23074)
 - **Community Tag Overview**: [https://www.jupresear.ch/t/get-your-token-a-community-tag/18963](https://www.jupresear.ch/t/get-your-token-a-community-tag/18963)
 - **Master Token List API**: [https://www.jupresear.ch/t/ecosystem-master-token-list/19786](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
 
