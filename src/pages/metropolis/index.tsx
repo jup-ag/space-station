@@ -11,8 +11,10 @@ import SwapApiIcon from "@site/src/components/Metropolis/components/icons/SwapAp
 import TokenApiIcon from "@site/src/components/Metropolis/components/icons/TokenApiIcon";
 import PriceApiIcon from "@site/src/components/Metropolis/components/icons/PriceApiIcon";
 import PerpApiIcon from "@site/src/components/Metropolis/components/icons/PerpApiIcon";
+import LimitOrderIcon from "@site/src/components/Metropolis/components/icons/LimitOrderIcon";
 import LeftArrowIcon from "@site/src/components/Metropolis/components/icons/LeftArrowIcon";
 import RightArrowIcon from "@site/src/components/Metropolis/components/icons/RightArrowIcon";
+
 import { DOCS_URL } from "@site/src/components/Metropolis/constants";
 import Metadata from "@site/src/components/Metropolis/components/Metadata";
 import Testimonial from "@site/src/components/Metropolis/components/Testimonial";
@@ -189,7 +191,8 @@ const Metropolis = () => {
                   "w-full mx-auto text-center",
                   "grid gap-y-2",
                   "sm:max-w-md sm:grid-cols-2",
-                  "md:max-w-5xl md:grid-cols-4"
+                  "md:max-w-5xl md:grid-cols-3",
+                  "lg:max-w-6xl lg:grid-cols-5"
                 )}
               >
                 <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors">
@@ -229,6 +232,18 @@ const Metropolis = () => {
                   <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
                     Retrieve real-time aggregate prices of any tradable token on
                     Solana.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
+                  <LimitOrderIcon height={64} width={64} color={"#c7f284"} />
+                  <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
+                    Coming Soon!
+                  </span>
+                  <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
+                    <span className="text-[#c7f284]">Limit Order API</span>
+                  </h2>
+                  <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
+                    Coming soon!
                   </p>
                 </div>
                 <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
