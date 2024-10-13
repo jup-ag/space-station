@@ -138,7 +138,7 @@ The liquidation price for open positions represent the price at which the positi
 
 The liquidation price can be calculated with the following formulas.
 
-> * `price`: The current price (USD) of the asset
+> * `price`: The average price (USD) of the position
 > * `collateral_size`: The collateral size (USD) for the position
 > * `close_fee`: The fee (USD) charged for closing the position
 > * `borrow_fee`: The accumulated borrowing fees (USD) for maintaining a leveraged position
@@ -227,7 +227,12 @@ The formula for the hourly borrow fee is:
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
 :::info
-**Hourly Borrow Rate** is at 0.008% for SOL, ETH and BTC while 0.01% for USDC and USDT.
+The hourly borrow rates for the JLP assets are as follows:
+
+SOL, ETH, and BTC: 0.008%
+USDC and USDT: 0.01%
+
+These rates represent the maximum charged at 100% utilization. In practice, the actual hourly borrow rates are often lower, as the tokens rarely reach full utilization.
 
 Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
