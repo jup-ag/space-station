@@ -94,9 +94,22 @@ Verification Warnings are shown for tokens that haven’t been approved by the c
 
 <img src={require('../../../img/jup-swap/authority-warning.png').default} alt="Authority Warning" style={{ width: '60%', height: 'auto' }} />
 
+### Permanent Delegate Extension
+Token-2022 tokens can be created with a `PermanentDelegate` extension, which allows for another wallet address to be the designated Permanent Delegate for that token.
+
+![Permanent Delegate](../../../img/token-permissions.png)
+
+It is very important for users to be aware if this extension is enabled, as this means the user does not actually have full ownership of the token, and the delegate address can burn or transfer these tokens without any limitation.
+
+**Valid use of `PermanentDelegate`:** Developers have the ability to retrieve tokens that have been mistakenly transferred or drained out of a user’s wallet.
+
+**Misuse of `PermanentDelegate`:** Bad actors can create a new token, get users to buy the token, then proceed to burn the tokens bought by the user. Many bad actors do this to prevent users from selling these tokens, thus allowing only the delegate wallet to sell these tokens.
+
 ### Freeze Authority
 
 Freeze Authority (FA) is a control mechanism that allows token issuers to temporarily or permanently halt the transfer or trading of a token. This can be used for both legitimate and harmful purposes.
+
+![Safety Modal](../../../img/safety-modal.png)
 
 **Valid Uses of FA:** It is common for regulated tokens, such as stablecoins or RWAs, to have FA to comply with legal requirements. It allows stablecoin and RWA issuers to freeze tokens in cases of fraud, money laundering, terrorism financing, or to comply with law enforcement requests.
 
@@ -108,7 +121,7 @@ Tokens not on the Jupiter Strict List will display a full FA warning. Tokens ver
 
 Users should always assess the presence of FA in a project regardless of verification status and understand the intent behind it. While it can be necessary for stablecoin and RWA projects, more often than not it is used to exploit users.
 
-#### Additional Safety Confirmation
+### Additional Safety Confirmation
 
 When price impact or price deviation is too high, we have an additional modal asking you to confirm the trade.
 
