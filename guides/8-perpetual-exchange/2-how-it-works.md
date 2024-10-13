@@ -221,7 +221,7 @@ The formula for the hourly borrow fee is:
 > * `Utilization`: `Total Tokens Locked / Total Tokens in Pool`  
 > * `Total Tokens Locked`: The amount of tokens locked across all open positions
 > * `Total Tokens in Pool`: The amount of tokens deposited into the pool for the position's underlying token
-> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (**0.008%** at the time of writing)
+> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (calculation shown below)
 > * `Position Size`: The size (USD) of the leveraged position
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
@@ -235,7 +235,7 @@ USDC and USDT: 0.01%
 These rates represent the maximum charged at 100% utilization. In practice, the actual hourly borrow rates are often lower, as the tokens rarely reach full utilization.
 
 
-To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts))and apply the following calculation:
+To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts)) and apply the following calculation:
 
 ```
 // Calculate utilization percentage
@@ -251,7 +251,7 @@ hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
 hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
 ```
 
-Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
+Read more about how the base rate for each token is decided from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
 
 For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody, and has lent out **100 SOL** (i.e. it's utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position.
