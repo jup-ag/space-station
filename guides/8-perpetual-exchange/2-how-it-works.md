@@ -234,6 +234,23 @@ USDC and USDT: 0.01%
 
 These rates represent the maximum charged at 100% utilization. In practice, the actual hourly borrow rates are often lower, as the tokens rarely reach full utilization.
 
+
+To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts))and apply the following calculation:
+
+```
+// Calculate utilization percentage
+if (custody.assets.owned > 0 AND custody.assets.locked > 0) then
+    utilizationPct = custody.assets.locked / custody.assets.owned
+else
+    utilizationPct = 0
+
+// Get hourly funding rate in basis points
+hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
+
+// Convert basis points to percentage and apply utilization
+hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
+```
+
 Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
 
