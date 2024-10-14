@@ -226,14 +226,14 @@ The formula for the hourly borrow fee is:
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
-:::info
 The hourly borrow rates for the JLP assets are as follows:
 
-SOL, ETH, and BTC: 0.008%
-USDC and USDT: 0.01%
+- SOL, ETH, and BTC: 0.008%
+- USDC and USDT: 0.01%
 
-These rates represent the maximum charged at 100% utilization. In practice, the actual hourly borrow rates are often lower, as the tokens rarely reach full utilization.
+These rates represent the maximum charged at **100% utilization**. In practice, as utilization for the tokens are usually below 100%, the actual hourly borrow rates are often **lower**.
 
+#### Calculating Utilization Rate
 
 To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts)) and apply the following calculation:
 
@@ -251,8 +251,11 @@ hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
 hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
 ```
 
+:::info
 Read more about how the base rate for each token is decided from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
+
+#### Worked Example
 
 For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody, and has lent out **100 SOL** (i.e. it's utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position.
 
