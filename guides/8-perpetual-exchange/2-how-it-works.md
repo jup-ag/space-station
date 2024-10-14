@@ -138,7 +138,7 @@ The liquidation price for open positions represent the price at which the positi
 
 The liquidation price can be calculated with the following formulas.
 
-> * `price`: The current price (USD) of the asset
+> * `price`: The average price (USD) of the position
 > * `collateral_size`: The collateral size (USD) for the position
 > * `close_fee`: The fee (USD) charged for closing the position
 > * `borrow_fee`: The accumulated borrowing fees (USD) for maintaining a leveraged position
@@ -221,16 +221,41 @@ The formula for the hourly borrow fee is:
 > * `Utilization`: `Total Tokens Locked / Total Tokens in Pool`  
 > * `Total Tokens Locked`: The amount of tokens locked across all open positions
 > * `Total Tokens in Pool`: The amount of tokens deposited into the pool for the position's underlying token
-> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (**0.008%** at the time of writing)
+> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (calculation shown below)
 > * `Position Size`: The size (USD) of the leveraged position
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
-:::info
-**Hourly Borrow Rate** is at 0.008% for SOL, ETH and BTC while 0.01% for USDC and USDT.
+The hourly borrow rates for the JLP assets are as follows:
 
-Read more from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
+- SOL, ETH, and BTC: 0.008%
+- USDC and USDT: 0.01%
+
+These rates represent the maximum charged at **100% utilization**. In practice, as utilization for the tokens are usually below 100%, the actual hourly borrow rates are often **lower**.
+
+#### Calculating Utilization Rate
+
+To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts)) and apply the following calculation:
+
+```
+// Calculate utilization percentage
+if (custody.assets.owned > 0 AND custody.assets.locked > 0) then
+    utilizationPct = custody.assets.locked / custody.assets.owned
+else
+    utilizationPct = 0
+
+// Get hourly funding rate in basis points
+hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
+
+// Convert basis points to percentage and apply utilization
+hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
+```
+
+:::info
+Read more about how the base rate for each token is decided from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
 :::
+
+#### Worked Example
 
 For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody, and has lent out **100 SOL** (i.e. it's utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position.
 
