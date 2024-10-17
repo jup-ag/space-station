@@ -328,9 +328,9 @@ The trader gets a final profit of **$96.82 USD** after this trade.
 
 ## Oracle
 
-Jupiter Perps uses a new Oracle Network, co-designed by Jupiter and another key ecosystem player (to be announced at Breakpoint), and audited by Offside Labs.
+Jupiter Perps uses a new Oracle Network, Dove Oracle, co-designed by Jupiter and Chaos Labs and audited by Offside Labs.
 
-The Dove Oracle, relying on [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778), will be unveiled at Breakpoint, and anyone will be able to use it on Solana.
+The Dove Oracle relies on [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778) and anyone will be able to use it on Solana.
 
 This oracle was co-designed with Jupiter, with the usage of Jupiter Perps in mind, and comes with key benefits while having an independent team provide the price feed.
 
@@ -346,11 +346,11 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 | Chart | Discrepancy between trades placed and the chart. | Our oracle powers the trading view chart and all position requests, no discrepancy. |
 
 
-### Pyth as a Fallback Oracle
+### Working Together With Pyth Oracle
 
 Perp Keepers also utilize Pyth:
 
-- As a reference price check (sanity check) against our Oracle, ensuring that the deviation is not too big.
+- As a reference price check (sanity check) against our the Dove Oracle, ensuring that the deviation is not too big.
 - As a fallback price if our oracle's prices are stale.
 
 This way, Jupiter Perps benefits from our oracle while still being able to rely on Pyth as a supporting oracle.
