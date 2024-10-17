@@ -9,12 +9,19 @@ description: Trade meme coins safely with Ape's unique vault technology. Enjoy l
     <meta name="twitter:card" content="summary" />
 </head>
 
+:::info
+Station Guides for Ape are currently being updated.
+
+We've launched **[Ape Pro](https://ape.pro)**, a new version of Ape. **[ape.jup.ag](https://ape.jup.ag)** will be deprecated slowly over the next 2 months.
+:::
+
 Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses a secure vault that only your wallet can access. Simply deposit SOL into the vault to trade on [Ape](https://ape.jup.ag) - Ape Safer and Faster.
 
 ## Ape UX Sneak Peak
   <video width="240" height="320" controls>
     <source src="/videos/ape-video1.mp4" type="video/mp4" />
   </video>
+
 
 :::info Ape Fees
 Ape fees will be 0.069% during the promotional period.
