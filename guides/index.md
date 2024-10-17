@@ -32,7 +32,7 @@ Here's a list of all our official links. Please always double check the URL matc
 | J.U.P DAO  | Be a part of Jupiter United Planet or Jupiverse and contribute to governance and voting | [https://www.jup.eco/](https://www.jup.eco/)|
 | Token List  | Understand how token verification works on Jupiter and get your token verified| [https://catdetlist.jup.ag/](https://catdetlist.jup.ag/)|
 | Edge  | Test out the latest product changes before they are live on the main website | [https://edge.jup.ag/](https://edge.jup.ag/)|
-| Ape  | Ape into new tokens in a seamless, fast, yet secure manner with secure vault model | [https://ape.jup.ag/](https://ape.jup.ag/)|
+| Ape Pro  | Ape into new tokens in a seamless, fast, yet secure manner with secure vault model | [https://ape.pro/](https://ape.pro/)|
 | Welcome to Solana  | Join us to welcome you to Solana every step of the way | [https://welcome.jup.ag/](https://welcome.jup.ag/)|
 
 
