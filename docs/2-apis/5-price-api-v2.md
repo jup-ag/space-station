@@ -38,10 +38,6 @@ title: "Price API V2: Improved On-Chain Price For Any Token"
   }
 `}</style>
 
-:::info
-This endpoint is still in beta.
-:::
-
 Jupiter Price API V2 is an improved version of the Price API, aiming to enhance accuracy by incorporating both **buy** and **sell-side liquidity** to derive the **average price** of the two. This provides more reliable real-time data for SPL tokens.
 
 :::info Support
