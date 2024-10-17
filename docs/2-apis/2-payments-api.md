@@ -210,10 +210,10 @@ console.log("feeAccount:", feeAccount.toBase58());
 console.log("trackingAccount:", trackingAccount.toBase58());
 
 // Get the associated token account for Bob's wallet
-async function getBobUSDCTokenAccount(bobWalletKeypair) {
+async function getBobUSDCTokenAccount(bobWalletPublicKey) {
   const bobUSDCTokenAccount = await getAssociatedTokenAddress(
     USDC_MINT,
-    bobWalletKeypair.publicKey,
+    bobWalletPublicKey,
     true,
     TOKEN_PROGRAM_ID,
     ASSOCIATED_TOKEN_PROGRAM_ID
@@ -263,8 +263,7 @@ async function fetchSwapTransaction(swapUserKeypair, bobUSDCTokenAccount, swapIn
 
 // Step 3: Send the transaction to the Solana blockchain
 async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockHeight) {
-  const versionedMessage = VersionedMessage.deserialize(Buffer.from(swapTransaction, 'base64'));
-  const transaction = new VersionedTransaction(versionedMessage);
+  const transaction = VersionedTransaction.deserialize(Buffer.from(swapTransaction, 'base64'));
 
   // Get the recent blockhash
   // Using 'finalized' commitment to ensure the blockhash is final and secure
@@ -273,9 +272,6 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
   const bhInfo = await connection.getLatestBlockhashAndContext({ commitment: "finalized" });
   transaction.recentBlockhash = bhInfo.value.blockhash;
   transaction.feePayer = swapUserKeypair.publicKey;
-
-  // Print keys involved in the transaction to diagnose issues
-  console.log("Keys in Transaction:", transaction.instructions.flatMap(instr => instr.keys.map(k => k.pubkey.toBase58())));
 
   // Sign the transaction with the swap user's keypair
   transaction.sign([swapUserKeypair]);
@@ -325,10 +321,9 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
   try {
     // Generate keypairs for swap user and Bob's wallet, replace with actual keypairs for real usage
     const swapUserKeypair = Keypair.generate();
-    const bobWalletKeypair = Keypair.generate();  // Replace this with Bob's actual keypair
 
     // Ensure the bobUSDCTokenAccount is correct
-    const bobUSDCTokenAccount = await getBobUSDCTokenAccount(bobWalletKeypair);
+    const bobUSDCTokenAccount = await getBobUSDCTokenAccount(bobWalletPublicKey);
 
     // Step 1: Fetch swap info
     const swapInfo = await fetchSwapInfo();
