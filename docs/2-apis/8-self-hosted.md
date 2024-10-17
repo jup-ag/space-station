@@ -111,4 +111,3 @@ We are working with some Solana RPC partners in the ecosystem as well so that yo
 
 - QuickNode: https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api
 - Reach out to Triton: [Triton](https://t.me/SteveCleanBrook)
-- Solana Tracker: [Solana Tracker](https://www.solanatracker.io/solana-rpc)
