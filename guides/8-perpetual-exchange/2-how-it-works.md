@@ -353,7 +353,7 @@ Perp Keepers also utilize Pyth:
 - As a reference price check (sanity check) against the Dove Oracle, ensuring that the deviation is not too big.
 - As a fallback price if our oracle's prices are stale.
 
-This way, Jupiter Perps benefits from our oracle while still being able to rely on Pyth as a supporting oracle.
+This way, Jupiter Perps benefits from the Dove oracle while still being able to rely on the Pyth oracle.
 
 ## Keepers
 
