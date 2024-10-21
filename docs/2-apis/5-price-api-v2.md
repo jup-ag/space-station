@@ -38,10 +38,6 @@ title: "Price API V2: Improved On-Chain Price For Any Token"
   }
 `}</style>
 
-:::info
-This endpoint is still in beta.
-:::
-
 Jupiter Price API V2 is an improved version of the Price API, aiming to enhance accuracy by incorporating both **buy** and **sell-side liquidity** to derive the **average price** of the two. This provides more reliable real-time data for SPL tokens.
 
 :::info Support
@@ -161,6 +157,37 @@ https://api.jup.ag/price/v2?ids=JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN,So11
         }
     },
     "timeTaken": 0.00388851
+}
+```
+
+If you include a `vsToken`, the buy token can be specified.
+
+For example, this call will return the unit price for *1 JUP, based on the buy amount of Bonk*. 
+
+Simply put, the `vsToken` argument tells you how much of the `vsToken` (Bonk in this case) you will need to buy the target token (JUP). For every one JUP we want to buy, we will need ~40,560 Bonk.
+
+:::note
+`vsToken` cannot be used with `showExtraInfo` when it's true. A `response 400: Bad request` would be returned.
+:::
+
+```json
+# Unit price of 1 JUP based on the buy amount of Bonk
+https: //'https://api.jup.ag/price/v2?vsToken=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&showExtraInfo=false'
+
+{
+  "data": {
+    "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN": {
+      "id": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "type": "derivedPrice",
+      "price": "40560.32136735473"
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "id": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "type": "derivedPrice",
+      "price": "1"
+    }
+  },
+  "timeTaken": 0.003043602
 }
 ```
 
