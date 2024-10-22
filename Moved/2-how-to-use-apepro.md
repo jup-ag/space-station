@@ -37,21 +37,3 @@ description: Learn the basics of how to use Ape Pro.
 ### Token Checklist
 
 - Before trading, use the token checklist to assess tokens for potential risks
-
-### Mobile Optimisation
-
-- Use ApePro on mobile devices with optimised UI/UX
-- You can add the ApePro web app to your home screen for an app-like experience
-    - **For iOS (Safari Browser)**:
-        1. Open [ape.pro](http://ape.pro/) in Safari.
-        2. Tap the **Share** icon at the bottom of the screen.
-        3. Scroll down and select **Add to Home Screen**.
-        4. Tap **Add** in the upper-right corner.
-
-    - **For Android (Chrome Browser)**:
-        1. Open [ape.pro](http://ape.pro/) in Chrome.
-        2. Tap the **Menu** icon (three dots) in the upper-right corner.
-        3. Select **Add to Home screen**.
-        4. Tap **Add**.
-    
-By adding ApePro to your home screen, you can access it with a single tap, just like a native app. This Progressive Web App (PWA) provides an immersive, full-screen experience.

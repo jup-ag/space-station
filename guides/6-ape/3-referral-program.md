@@ -2,6 +2,7 @@
 sidebar_label: Referral Program
 title: Ape Pro Referral Program
 description: Learn more about Ape Pro's referral program.
+slug: /apepro/referral
 ---
 
 <head>

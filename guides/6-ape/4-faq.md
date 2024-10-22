@@ -2,6 +2,7 @@
 sidebar_label: FAQ
 title: Ape Pro Frequently Asked Questions
 description: Have any questions about Ape Pro? This page might have just the answer!
+slug: /apepro/faq
 ---
 
 <head>
@@ -18,11 +19,11 @@ description: Have any questions about Ape Pro? This page might have just the ans
 - **A**: Your Web3 login acts like a key to generate and access your Ape vault which is an entirely separate wallet address.
 
 **Q: Can I import an existing Phantom account into ApePro?**
-- **A**: No. Refer to #Ape Account Program to learn more.
+- **A**: No. Refer to the [Ape Account Program](./1-overview.md#ape-account-program) to learn more.
 
 **Q: Can I export my private key?**
 
-- **A**: Not at the moment. ApePro uses a smart wallet program that differs from traditional wallets like Phantom. Refer to #Ape Account Program to learn more.
+- **A**: Not at the moment. ApePro uses a smart wallet program that differs from traditional wallets like Phantom. Refer to the [Ape Account Program](./1-overview.md#ape-account-program) to learn more.
 
 **Q: How do I access my referral link?**
 
@@ -39,7 +40,7 @@ description: Have any questions about Ape Pro? This page might have just the ans
 
 **Q: Is there an ApePro mobile app?**
 
-- **A**: Currently, there is no dedicated Ape.Pro mobile app. However, you can add the ApePro web app to your home screen for an app-like experience. Refer to #Mobile Optimisation to learn more.
+- **A**: Currently, there is no dedicated Ape.Pro mobile app. However, you can add the ApePro web app to your home screen for an app-like experience. Refer to the [Mobile Optimisation Hack](./1-overview.md#mobile-optimization) to learn more.
 
 **Q: What is the Safety Checklist?**
 
