@@ -1,43 +1,104 @@
 ---
-sidebar_label: Ape Overview
-title: Ape Overview
+sidebar_label: Ape Pro Overview
+title: Ape Pro Overview
 description: Trade meme coins safely with Ape's unique vault technology. Enjoy low fees and dynamic slippage for secure, uninterrupted transactions. Ape in today!.
+slug: /apepro/overview
 ---
 
 <head>
-    <title>Jupiter Ape Overview: Trade Meme Coins Securely | Jupiter Station</title>
+    <title>Ape Pro Overview: Ape Memes, Ape Pro</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-:::info
-Station Guides for Ape are currently being updated.
+ApePro is Solana’s Memecoin Terminal, bringing traders pro-performance while having superior mobile optimisations, featuring: 
 
-We've launched **[Ape Pro](https://ape.pro)**, a new version of Ape. **[ape.jup.ag](https://ape.jup.ag)** will be deprecated slowly over the next 2 months.
-:::
+🍌 **MPC based AA program with social logins (powered by Web3Auth)**
 
-Ape is a secure meme coin platform built to trade meme coins instantly. Ape uses a secure vault that only your wallet can access. Simply deposit SOL into the vault to trade on [Ape](https://ape.jup.ag) - Ape Safer and Faster.
+🍌 **Best price swaps with the lowest platform fees (0.5%) on top of intelligent fee optimisations (powered by Jupiter)**
 
-## Ape UX Sneak Peak
-  <video width="240" height="320" controls>
-    <source src="/videos/ape-video1.mp4" type="video/mp4" />
-  </video>
+🍌 **Signless MEV protected swaps (powered by Jito)**
+
+🍌 **Real-time charts, transactions, data, everything!**
+
+## Features
+
+### Ape Account Program
+
+- **Seamless Logins**: Both social logins and Web3 methods are supported; Goodbye seed phrases.
+- **Secure Accounts**: ApePro uses Multiparty Computation (MPC) for securing accounts, ensuring security without compromising usability.
+- **Smart Wallet Program**: ApePro operates on a proprietary Solana program, which differs from your typical Externally Owned Account (EOA) that you access via wallet providers like Phantom and Solflare. The ApePro program allows the platform to implement advanced functionalities such as instant signless transactions, intelligent fee optimisations and automatic transaction retries. While you own the private key, the platform is currently restricting access to exporting the private key as current wallet providers like Phantom and Solflare do not support this, and this otherwise will cause more user confusion
+- **Easy Account Activation**: Simply deposit at least 0.1 SOL to activate your Ape Vault and you can get started
+- **Withdrawals**: Ape currently only supports withdrawal of SOL and not other tokens
+
+### New Tokens Feed
+
+- **Real-Time Token Feed**: View tokens launched in the past 24 hours to discover new opportunities.
+- **Quick Buys & Sells:** Trade tokens quickly directly from the feed without the need to sign wallet transactions for each trade.
+- **Filters**: Customise the token feed by applying filters such as:
+    - **Show Pump.fun**: Show tokens created via Pump.fun.
+    - **Dev Mints**: No. of tokens minted by token dev.
+    - **Token Checklist**: Mint Authority Disabled, Freeze Authority Disabled, LP locked/ burned, Top 10 holders.
+    - **At least one social**: Tokens with at least one social link.
+    - **Metric Ranges**: Set minimum and maximum values for 24h Volume, Market Cap, Bonding Curve %, Liquidity, 24h Transactions, Buys, and Sells.
+
+### Hunt Gems Feed
+
+- Real-time feed of new and emerging tokens, categorised into three sections:
+    1. **New Creations**: Newly created tokens with at least one liquidity pool.
+    2. **Graduating Soon**: Pump.fun tokens with bonding curve progress above 50%.
+    3. **Graduated**: Pump.fun tokens that have migrated liquidity to Raydium.
+- **Quick Buys & Sells:** Trade tokens quickly directly from the feed without the need to sign wallet transactions for each trade.
+
+### Signless MEV-Protected Swaps
+
+- **MEV Protection**: Execute accelerated swaps without signing wallet transactions, protected from Miner Extractable Value (MEV) attacks, powered by Jito.
+- **Intelligent Fee Optimisations**: Benefit from automatic fee adjustments to minimise swap costs.
+- **Best-Price Swaps:** Access best-price swaps through integration with the Jupiter router, ensuring competitive rates across liquidity pools.
+- **Near-Instant Trading**: Trade tokens FAST without the need to sign wallet transactions
+
+### Managing Positions and PnL
+
+- **Positions Management**: Monitor all your open positions and track profit and loss (PnL)
+- **Portfolio balances**: View your net worth and token balances
+- **Trade History**: View past trades with their relative time labels (e.g. 4h), token amounts traded and a link to the block explorer
+
+### Realtime Charts and Transaction
+
+- **Realtime Charts**: Access realtime charts to view token prices and market cap
+    - **Quote Denomination**: On the TradingView chart widget, users can switch between denominating token prices or marketcap in **SOL** or **USD**
+    - **Show price or marketcap**: You can switch between viewing p**rice** or m**arketcap** on the chart
+    - **Dev Trades**: You can visualise buy and sell labels of the token deployer on the chart
+- **Transaction History**: Monitor trades for a token and view your transaction history
+
+### Token Checklist
+
+- **Risk Indicators**: Assess risks by checking if liquidity pools are burned or locked, monitoring top 10 holders, and detecting developer mints.
+    - **Mint Authority**: Ability for devs to mint new tokens
+    - **Freeze Authority**: Ability for devs to freeze token accounts
+    - **LP burned/Locked**: % of liquidity pool burned. Green check if
+    more than 50% burned
+    - **Top 10 Holders**: % owned by top 10 holders. Green check if
+    top 10 holders owns less than 15%
+    - **Dev Mints**: Number of tokens minted by token dev
 
 
-:::info Ape Fees
-Ape fees will be 0.069% during the promotional period.
-:::
+### Mobile Optimization
+<details>
+  <summary>🍌 <b>Mobile UX Hack</b></summary>
 
-## Benefits of Using Ape
+- Use ApePro on mobile devices with optimised UI/UX
+- You can add the ApePro web app to your home screen for an app-like experience
+    - **For iOS (Safari Browser)**:
+        1. Open [ape.pro](http://ape.pro/) in Safari.
+        2. Tap the **Share** icon at the bottom of the screen.
+        3. Scroll down and select **Add to Home Screen**.
+        4. Tap **Add** in the upper-right corner.
 
-- Uses vault technology to ensure your wallet won't be compromised apeing into tokens while connecting to untrustworthy sites.
-- Utilizes Jupiters instant-routing feature to find a direct route for liquidity to each coin launched.
-- Safety Check is powered by Rug Check. This helps with an initial check for basic requirements from projects to detect potential scams.
-- Dynamic Slippage with Auto Transaction Retry making sure your trades always go through.
-
-## Basic Authentication FAQs
-
-1. Your password is used to encrypt your vault and a emphermal Keypair.
-2. The vault&rsquo;s session is unique to the web3 wallet that it&rsquo;s currently connected to.
-3. If the wallet is disconnected, the vault&rsquo;s session will NOT be terminated.
-4. If you change your wallet, your vault's session stays the same. You will not be able to withdraw funds from the vault unless the same wallet is connected.
-5. The vault's session will only be terminated if you click sign out manually or if you've logged in somewhere else with the same wallet.
+    - **For Android (Chrome Browser)**:
+        1. Open [ape.pro](http://ape.pro/) in Chrome.
+        2. Tap the **Menu** icon (three dots) in the upper-right corner.
+        3. Select **Add to Home screen**.
+        4. Tap **Add**.
+    
+By adding ApePro to your home screen, you can access it with a single tap, just like a native app. This Progressive Web App (PWA) provides an immersive, full-screen experience.
+</details>
