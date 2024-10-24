@@ -236,14 +236,11 @@ const Metropolis = () => {
                 </div>
                 <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
                   <LimitOrderIcon height={64} width={64} color={"#c7f284"} />
-                  <span className="absolute top-[38px] left-0 right-0 text-sm font-semibold text-[#c7f284] bg-[#131C25] inline-block p-1">
-                    Coming Soon!
-                  </span>
                   <h2 className="mt-3 mb-1.5 md:mb-3 text-lg md:text-2xl font-bold">
                     <span className="text-[#c7f284]">Limit Order API</span>
                   </h2>
                   <p className="text-white m-0 max-w-[30ch] text-sm opacity-50 font-medium">
-                    Coming soon!
+                  Create, cancel, and manage limit orders for tokens including Token 2022 without Transfer Tax function.
                   </p>
                 </div>
                 <div className="flex flex-col items-center group rounded-lg border border-solid border-transparent px-3 py-4 transition-colors relative">
