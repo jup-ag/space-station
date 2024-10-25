@@ -286,16 +286,20 @@ components:
         skipUserAccountsRpcCalls:
           description: When enabled, it will not do any rpc calls check on user's accounts. Enable it only when you already setup all the accounts needed for the trasaction, like wrapping or unwrapping sol, destination account is already created.
           type: boolean
-        quoteResponse:
-          $ref: '#/components/schemas/QuoteResponse'
         dynamicSlippage:
           description: A dynamic slippage estimation based on a set of heuristics that accounts for the type of token traded and user's max slippage tolerance, providing an optimal value that safeguards the user while ensuring success rate.
           type: object
           properties:
+            minBps:
+              description: The user min slippage.
+              type: integer
+              format: int32
             maxBps:
               description: The user max slippage, note that jup.ag UI defaults to 300bps (3%).
               type: integer
               format: int32
+        quoteResponse:
+          $ref: '#/components/schemas/QuoteResponse'
 
     SwapResponse:
       type: object

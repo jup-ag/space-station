@@ -132,6 +132,10 @@ export const docsLinkItems: LinkGroup[] = [
         title: "Troubleshooting",
         href: "/docs/apis/troubleshooting",
       },
+      {
+        title: "Landing Transactions",
+        href: "/docs/apis/landing-transactions",
+      },
     ],
   },
   {
