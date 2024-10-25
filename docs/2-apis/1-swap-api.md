@@ -8,6 +8,10 @@ title: "V6 Swap API"
     <meta name="twitter:card" content="summary" />
 </head>
 
+:::info
+If you have problems landing transactions, read [Landing Transactions on Solana](/docs/apis/landing-transactions).
+:::
+
 Jupiter APIs is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
 
 :::info Risk Disclaimer
