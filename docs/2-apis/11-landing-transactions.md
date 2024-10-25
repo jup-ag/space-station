@@ -78,6 +78,8 @@ fetch(`https://worker.jup.ag/send-transaction`, {
 
 Do note that this endpoint only works with Jupiter transactions.
 
+Lastly, make sure that you submit your transaction using the [transactionSender](https://github.com/jup-ag/jupiter-quote-api-node/blob/main/example/utils/transactionSender.ts).
+
 ## On a High Level
 
 You want to optimise your transaction landing rates by:
