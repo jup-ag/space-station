@@ -63,6 +63,21 @@ When you are submitting the transaction, make sure that you are using one of the
 
 Yes, RPC matters. Use one of the above.
 
+Bonus point, you can also submit your Jupiter transactions to the Jupiter transaction endpoint:
+
+```js
+fetch(`https://worker.jup.ag/send-transaction`, {
+  method: 'POST',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(transactionPayload),
+});
+```
+
+Do note that this endpoint only works with Jupiter transactions.
+
 ## On a High Level
 
 You want to optimise your transaction landing rates by:
