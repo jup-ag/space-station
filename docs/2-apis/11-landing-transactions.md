@@ -349,6 +349,3 @@ const { swapTransaction } = await (
 ```
 
 Please make sure that you are only submitting your transactions to Jito endpoints if you have Jito tips attached. If not, it will not work.
-
-```
-</rewritten_chunk>
