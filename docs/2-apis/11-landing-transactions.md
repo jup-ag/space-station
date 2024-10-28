@@ -164,6 +164,32 @@ const { swapTransaction } = await (
 `priorityLevel` is only available with Jupiter official API and Trition. Self-hosted binary that are not using Trition will not be able to use `priorityLevel`.
 :::
 
+### Using Helius Priority Fee API
+
+Alternatively, you can use Helius's `getPriorityFeeEstimate` RPC method which provides fee recommendations based on both global and local fee markets. The API analyzes fee data of the past 150 blocks by default to suggest optimal priority fees.
+
+```js
+const response = await fetch(HELIUS_URL, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    jsonrpc: '2.0',
+    id: '1',
+    method: 'getPriorityFeeEstimate',
+    params: [{
+      transaction: serializedTransaction, // Base58 encoded transaction
+      options: {
+        recommended: true // Defaults to medium(50th percentile)
+      }
+    }]
+  })
+});
+```
+
+The API returns priority fee estimates in micro-lamports per compute unit. You can also provide account keys instead of a serialized transaction to get fee estimates.
+
+For detailed implementation and advanced options, see the [Helius Priority Fee API documentation](https://docs.helius.dev/solana-rpc-nodes/priority-fee-api).
+
 ---
 
 ## Dynamic Slippage
@@ -323,3 +349,6 @@ const { swapTransaction } = await (
 ```
 
 Please make sure that you are only submitting your transactions to Jito endpoints if you have Jito tips attached. If not, it will not work.
+
+```
+</rewritten_chunk>
