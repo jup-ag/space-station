@@ -4,7 +4,7 @@ const LimitOrderIcon = ({ width = 64, height = 64, color = "#c7f284" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-table-down blur-[2px]"
+      className="icon icon-tabler icon-tabler-table-down"
       width={width}
       height={height}
       viewBox="0 0 24 24"
