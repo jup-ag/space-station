@@ -55,7 +55,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 - `orders`: The public keys for orders that are intended to be cancelled. If not specified, this will generate the transaction(s) to close all orders associated to the `maker`.
 
 
-### Example response
+### Cancel order(s) request body and response
 ```typescript
 type CancelOrders = {
   maker: string;
