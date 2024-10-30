@@ -156,8 +156,8 @@ Returns a list of all orders and the trades that filled them. The paginated resp
 
 **Parameters in use in the below code example:**
 
-- `wallet`: 
-- `page`: 
+- `wallet`: The wallet address to filter open orders by.
+- `page`: Results are paginated in groups of 10, starting from page 1.
 
 ### Example response
 ```json
