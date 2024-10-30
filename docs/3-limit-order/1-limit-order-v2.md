@@ -6,7 +6,7 @@ This page will serve as a general guide on integrating LO into your use case. wh
 
 Learn more about the mechanics of Jupiter's LO [here](https://station.jup.ag/guides/limit-order/how-lo-work)
 
-Start using Limit Order APIsL: here
+Start using Limit Order APIs: [here]()
 
 ---
 
