@@ -108,7 +108,7 @@ This proxies the `[getProgramAccounts]``(https://solana.com/docs/rpc/http/getpro
 
 **Parameters in use in the below code example:**
 
-- `publicKey`: 
+- `wallet`: The wallet address to filter open orders by.
 - `inputMint`: The mint address of the input token.
 - `outputMint`: The mint address of the output token.
 
