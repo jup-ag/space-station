@@ -172,7 +172,7 @@ Simply put, the `vsToken` argument tells you how much of the `vsToken` (Bonk in 
 
 ```json
 # Unit price of 1 JUP based on the buy amount of Bonk
-https: //'https://api.jup.ag/price/v2?vsToken=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&showExtraInfo=false'
+https://api.jup.ag/price/v2?ids=JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN&vsToken=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263&showExtraInfo=true
 
 {
   "data": {
