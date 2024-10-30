@@ -60,9 +60,9 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 **Parameters in use in the below code example:**
 
-- `maker`: 
-- `computeUnitPrice`: Defaults to auto
-- `orders`: 
+- `maker`: The wallet address of the user associated to the order(s) that are being cancelled.
+- `computeUnitPrice`: Used to determine a transaction's prioritization fee. Defaults to `auto`.
+- `orders`: The public keys for orders that are intended to be cancelled. If not specified, this will generate the transaction(s) to close all orders associated to the `maker`.
 
 
 ### Example response
