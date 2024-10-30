@@ -9,9 +9,11 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
       <p className="api-method-path">https://api.jup.ag/limit/v2/createOrder</p>
     </div>
   </summary>
+  
+  ### Create limit order request body and response
+  
 
 **Parameters in use in the below code example:**
-
 - `inputMint`: The mint address of the input token (required).
 - `outputMint`: The mint address of the output token (required).
 - `maker`: 
@@ -25,6 +27,39 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 - `inputTokenProgram`
 - `outputTokenProgram`
 - `wrapAndUnwrapSol`
+
+```typescript
+type CreateOrder = {
+  inputMint: string;
+  outputMint: string;
+  maker: string;
+  payer: string;
+  params: {
+    makingAmount: string;
+    takingAmount: string;
+    // In unix seconds (e.g. Date.now()/1_000)
+    expiredAt?: string | undefined;
+    
+    // Requires `referral`
+    feeBps?: string | undefined;
+  };
+  computeUnitPrice: string | "auto";
+  referral?: string | undefined;
+
+  // Default: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+  inputTokenProgram?: string | undefined;
+  outputTokenProgram?: string | undefined;
+  
+  // Default: true
+  // Determines if SOL needs to be wrapped and unwrapped
+  wrapAndUnwrapSol?: boolean | undefined;
+};
+
+type CreateOrderResponse = {
+  order: string;
+  tx: string;
+};
+```
 
 ### Example response
 ```typescript
