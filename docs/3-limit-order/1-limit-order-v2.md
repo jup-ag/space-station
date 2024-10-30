@@ -1,6 +1,6 @@
 # Integrating Jupiter Limit Order v2 
 
-Jupiter Limit Order V2 (LO) provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled.
+Jupiter Limit Order v2 (LO) provides users with the simplest way to place limit orders on Solana and receive tokens directly in your wallet when the order is filled.
 
 This page will serve as a general guide on integrating LO into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's LO program will work regardless of programming language used.
 
@@ -12,7 +12,7 @@ Start using Limit Order APIsL: here
 
 ## Program Address
 
-LOv2 Program (mainnet-beta):`j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X`
+LO v2 Program (mainnet-beta):`j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X`
 
 ---
 
