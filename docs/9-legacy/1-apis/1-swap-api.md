@@ -48,7 +48,7 @@ All Jupiter swaps are now only a single transaction. Not all wallets support Ver
 To run this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). In your command line terminal, install the libraries.
 
 ```shell
-npm i @solana/web3.js
+npm i @solana/web3.js@1
 npm i cross-fetch
 npm i bs58
 ```
