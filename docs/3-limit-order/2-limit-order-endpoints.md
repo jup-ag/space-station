@@ -6,7 +6,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
   <summary>
     <div>
       <div className="api-method-box post">POST</div>
-      <p className="api-method-path">https://api.jup.ag/limit/v1/createOrder</p>
+      <p className="api-method-path">https://api.jup.ag/limit/v2/createOrder</p>
     </div>
   </summary>
 
@@ -14,9 +14,9 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 - `inputMint`: The mint address of the input token (required).
 - `outputMint`: The mint address of the output token (required).
-- `maker`: Auto wrap and unwrap SOL. Default is true.
-- `payer`: The fee account associated with the swap.
-- `makingAmount`: Basis points of the fee to be added.
+- `maker`: 
+- `payer`: 
+- `makingAmount`: 
 - `takingAmount`
 - `expiredAt`
 - `feeBps`
@@ -54,7 +54,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
   <summary>
     <div>
       <div className="api-method-box post">POST</div>
-      <p className="api-method-path">https://api.jup.ag/limit/v1/cancelOrders</p>
+      <p className="api-method-path">https://api.jup.ag/limit/v2/cancelOrders</p>
     </div>
   </summary>
 
@@ -62,7 +62,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 - `maker`: 
 - `computeUnitPrice`: Defaults to auto
-- `orders`: Auto wrap and unwrap SOL. Default is true.
+- `orders`: 
 
 
 ### Example response
@@ -102,14 +102,14 @@ This proxies the `[getProgramAccounts]``(https://solana.com/docs/rpc/http/getpro
   <summary>
     <div>
       <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://api.jup.ag/limit/v1/openOrders</p>
+      <p className="api-method-path">https://api.jup.ag/limit/v2/openOrders</p>
     </div>
   </summary>
 
 **Parameters in use in the below code example:**
 
 - `publicKey`: 
-`inputMint`: The mint address of the input token.
+- `inputMint`: The mint address of the input token.
 - `outputMint`: The mint address of the output token.
 
 ### Example response
@@ -150,13 +150,13 @@ Returns a list of all orders and the trades that filled them. The paginated resp
   <summary>
     <div>
       <div className="api-method-box get">GET</div>
-      <p className="api-method-path">https://api.jup.ag/limit/v1/orderHistory</p>
+      <p className="api-method-path">https://api.jup.ag/limit/v2/orderHistory</p>
     </div>
   </summary>
 
 **Parameters in use in the below code example:**
 
-- `wallet`: The response object from the `/quote` API.
+- `wallet`: 
 - `page`: 
 
 ### Example response
