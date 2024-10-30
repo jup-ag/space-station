@@ -28,20 +28,10 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 ### Example response
 ```typescript
-type CancelOrders = {
-  maker: string;
-
-  // "auto" sets the priority fee based on network congestion
-  // and it will be capped at 500,000
-  computeUnitPrice: string | "auto";
-
-  // Specific order account public keys to cancel/close
-  orders?: string[] | undefined;
-};
-
-type CancelOrdersResponse = {
-  txs: string[];
-};
+{
+  "order": "EWxFUCUAzvo2siM9gYVPWkaouvCfemwnwkfdVw2ib7JH",
+  "tx": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAJDgljyvLecNltZyLKJwcNk/0wjQipK4AUImvf2FZSxHIzDYJ0JdiFdLKUD0/uyu862mvKMrRGcmeB0hacZldr91rI1D6IwBADhxzCinLz0WuLrIJDCWIg/AajAnWXFcf8wi6Dlq1U1ClYCNsR8Xj0JlqSi9FGU0GP64HMzvBB8o/7Pc01wNmmSKitJONFP3gmdGbtde+pcSLhy7GOlMkI03UDBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAIyXJY9OJInxuz0QKRSODYMLWhOZ2v8QhASOe9jb6fhZBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpCsNKlsFmcVpgwSM+yiWKDfMLHshY4HRcc2oSYmZjSyIQiYnNzGGPBnZ0rGd+KZqtsSj+INnM2CjlCMnxv5sw68b6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11hkn9sh+xDEAWX2S7IDh4PwuUsi7/8dQ+DB2YEV+4zsuGS8LiUcikk5FUuAM3vpZjsAmrMZL3FPOcH2v4SeX3/fwQFAAUCoAMCAAUACQNd9AgAAAAAAAYGAAEABwgJAQEKDwAAAgMECwoMBwkJCAYNCiKFbkqvcJ/1n9vKKe2gGX+OAOH1BQAAAACA8PoCAAAAAAAAAA=="
+}
 ```
 </details>
 
