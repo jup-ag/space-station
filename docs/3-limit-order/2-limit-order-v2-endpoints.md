@@ -10,7 +10,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
     </div>
   </summary>
   
-  ### Create limit order request body and response
+### Create limit order request body and response
   
 **Parameters in use in the below code example:**
 - `inputMint`: The mint address of the input token (required).
