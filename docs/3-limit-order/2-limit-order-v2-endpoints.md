@@ -12,21 +12,21 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
   
   ### Create limit order request body and response
   
-
 **Parameters in use in the below code example:**
 - `inputMint`: The mint address of the input token (required).
 - `outputMint`: The mint address of the output token (required).
-- `maker`: 
-- `payer`: 
-- `makingAmount`: 
-- `takingAmount`
-- `expiredAt`
-- `feeBps`
-- `computeUnitPrice`
-- `referral`
-- `inputTokenProgram`
-- `outputTokenProgram`
-- `wrapAndUnwrapSol`
+- `maker`: The wallet address of the user who wants to create an order (required).
+- `payer`: The wallet address of who is paying to open an order (usually `maker`) (required).
+- `makingAmount`: Amount of input mint to sell (required).
+- `takingAmount`: Amount of output mint to buy (required).
+- `expiredAt`: Unix time in seconds that determines when an order should automatically close.
+- `feeBps`: Amount of fee that the `referral` collects. (Requires `referral`).
+- `computeUnitPrice`: Used to determine a transaction's prioritization fee. Defaults to `auto`.
+- `referral`: The public key where fees get sent to (Requires `feeBps`).
+- `inputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+- `outputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+- `wrapAndUnwrapSol`: Defaults to `true`, if either input or output mints are raw SOL
+
 
 ```typescript
 type CreateOrder = {
@@ -85,7 +85,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 **Parameters in use in the below code example:**
 
-- `maker`: The wallet address of the user associated to the order(s) that are being cancelled.
+- `maker`: The wallet address of the user associated to the order(s) that are being cancelled (required)`. 
 - `computeUnitPrice`: Used to determine a transaction's prioritization fee. Defaults to `auto`.
 - `orders`: The public keys for orders that are intended to be cancelled. If not specified, this will generate the transaction(s) to close all orders associated to the `maker`.
 
@@ -133,7 +133,7 @@ This proxies the `[getProgramAccounts]``(https://solana.com/docs/rpc/http/getpro
 
 **Parameters in use in the below code example:**
 
-- `wallet`: The wallet address to filter open orders by.
+- `wallet`: The wallet address to filter open orders by (required).
 - `inputMint`: The mint address of the input token.
 - `outputMint`: The mint address of the output token.
 
@@ -181,7 +181,7 @@ Returns a list of all orders and the trades that filled them. The paginated resp
 
 **Parameters in use in the below code example:**
 
-- `wallet`: The wallet address to filter open orders by.
+- `wallet`: The wallet address to filter open orders by (required).
 - `page`: Results are paginated in groups of 10, starting from page 1.
 
 ### Example response
