@@ -27,7 +27,6 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 - `outputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
 - `wrapAndUnwrapSol`: Defaults to `true`, if either input or output mints are raw SOL
 
-
 ```typescript
 type CreateOrder = {
   inputMint: string;
