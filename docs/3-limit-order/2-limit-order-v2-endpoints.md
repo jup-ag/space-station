@@ -9,56 +9,56 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
       <p className="api-method-path">https://api.jup.ag/limit/v2/createOrder</p>
     </div>
   </summary>
-    
-**Parameters in use in the below code example:**
-- `inputMint`: The mint address of the input token (required).
-- `outputMint`: The mint address of the output token (required).
-- `maker`: The wallet address of the user who wants to create an order (required).
-- `payer`: The wallet address of who is paying to open an order (usually `maker`) (required).
-- `makingAmount`: Amount of input mint to sell (required).
-- `takingAmount`: Amount of output mint to buy (required).
-- `expiredAt`: Unix time in seconds that determines when an order should automatically close.
-- `feeBps`: Amount of fee that the `referral` collects. (Requires `referral`).
-- `computeUnitPrice`: Used to determine a transaction's prioritization fee. Defaults to `auto`.
-- `referral`: The public key where fees get sent to (Requires `feeBps`).
-- `inputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
-- `outputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
-- `wrapAndUnwrapSol`: Defaults to `true`, if either input or output mints are raw SOL
-
-### Create limit order request body and response
-
-```typescript
-type CreateOrder = {
-  inputMint: string;
-  outputMint: string;
-  maker: string;
-  payer: string;
-  params: {
-    makingAmount: string;
-    takingAmount: string;
-    // In unix seconds (e.g. Date.now()/1_000)
-    expiredAt?: string | undefined;
-    
-    // Requires `referral`
-    feeBps?: string | undefined;
-  };
-  computeUnitPrice: string | "auto";
-  referral?: string | undefined;
-
-  // Default: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
-  inputTokenProgram?: string | undefined;
-  outputTokenProgram?: string | undefined;
   
-  // Default: true
-  // Determines if SOL needs to be wrapped and unwrapped
-  wrapAndUnwrapSol?: boolean | undefined;
-};
+  **Parameters in use in the below code example:**
 
-type CreateOrderResponse = {
-  order: string;
-  tx: string;
-};
-```
+  - `inputMint`: The mint address of the input token (required).
+  - `outputMint`: The mint address of the output token (required).
+  - `maker`: The wallet address of the user who wants to create an order (required).
+  - `payer`: The wallet address of who is paying to open an order (usually `maker`) (required).
+  - `makingAmount`: Amount of input mint to sell (required).
+  - `takingAmount`: Amount of output mint to buy (required).
+  - `expiredAt`: Unix time in seconds that determines when an order should automatically close.
+  - `feeBps`: Amount of fee that the `referral` collects. (Requires `referral`).
+  - `computeUnitPrice`: Used to determine a transaction's prioritization fee. Defaults to `auto`.
+  - `referral`: The public key where fees get sent to (Requires `feeBps`).
+  - `inputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+  - `outputTokenProgram`: Defaults to `TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`
+  - `wrapAndUnwrapSol`: Defaults to `true`, if either input or output mints are raw SOL
+
+  ### Create limit order request body and response
+  ```typescript
+  type CreateOrder = {
+    inputMint: string;
+    outputMint: string;
+    maker: string;
+    payer: string;
+    params: {
+      makingAmount: string;
+      takingAmount: string;
+      // In unix seconds (e.g. Date.now()/1_000)
+      expiredAt?: string | undefined;
+      
+      // Requires `referral`
+      feeBps?: string | undefined;
+    };
+    computeUnitPrice: string | "auto";
+    referral?: string | undefined;
+  
+    // Default: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+    inputTokenProgram?: string | undefined;
+    outputTokenProgram?: string | undefined;
+    
+    // Default: true
+    // Determines if SOL needs to be wrapped and unwrapped
+    wrapAndUnwrapSol?: boolean | undefined;
+  };
+  
+  type CreateOrderResponse = {
+    order: string;
+    tx: string;
+  };
+  ```
 
 ### Example response
 ```typescript
