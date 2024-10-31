@@ -27,7 +27,7 @@ Code example and description as comments in-line:
 mkdir dca-bot
 cd dca-bot
 npm init -y
-npm i @solana/web3.js @jup-ag/dca-sdk@2.3.5 dotenv
+npm i @solana/web3.js@1 @jup-ag/dca-sdk@2.3.5 dotenv
 ```
 
 2. Create a Typescript file with the following:

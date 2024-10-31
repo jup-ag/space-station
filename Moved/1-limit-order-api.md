@@ -339,7 +339,7 @@ curl -X GET "https://jup.ag/api/limit/v1/tradeHistory?wallet=TVeKgyTMp3DjwVFRYC9
 Running this example requires a minimum of [NodeJS 16](https://nodejs.org/en). In your command line terminal, install the libraries.
 
 ```bash
-npm i @solana/web3.js
+npm i @solana/web3.js@1
 npm i cross-fetch
 npm i @project-serum/anchor
 npm i bs58
