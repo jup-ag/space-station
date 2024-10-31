@@ -11,8 +11,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
     </div>
   </summary>
   
-  **Parameters in use in the below code example:**
-
+**Parameters in use in the below code example:**
   - `inputMint`: The mint address of the input token (required).
   - `outputMint`: The mint address of the output token (required).
   - `maker`: The wallet address of the user who wants to create an order (required).
