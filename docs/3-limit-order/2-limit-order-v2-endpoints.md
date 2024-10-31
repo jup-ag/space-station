@@ -1,7 +1,6 @@
-#Limit order endpoints
----
+# Limit order endpoints
 
-# Create limit order
+## Create limit order
 Sends a POST request to the Jupiter Limit Order API to get the unsigned transactions needed to create an order.
 
 <details>
@@ -73,7 +72,7 @@ Sends a POST request to the Jupiter Limit Order API to get the unsigned transact
 
 
 
-# Cancel limit order
+## Cancel limit order
 Sends a POST request to the Jupiter Limit Order API to get the unsigned transactions needed to cancel order(s).
 
 <details>
@@ -123,7 +122,7 @@ If no orders are specified, the API would return the unsigned transactions to ca
 
 </details>
 
-# View open orders
+## View open orders
 This proxies the `[getProgramAccounts]``(https://solana.com/docs/rpc/http/getprogramaccounts)` RPC method and returns all order (accounts) associated to the specified wallet.
 
 <details>
@@ -170,7 +169,7 @@ This proxies the `[getProgramAccounts]``(https://solana.com/docs/rpc/http/getpro
 ```
 </details>
 
-# View order history
+## View order history
 Returns a list of all orders and the trades that filled them. The paginated response returns 10 orders at a time and indicates if there are more orders via `hasMoreData` boolean and the current page via `page` in the response.
 
 
