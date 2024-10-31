@@ -1,4 +1,4 @@
-# Limit order endpoints
+# Limit order v2 endpoint
 
 ## Create limit order
 Sends a POST request to the Jupiter Limit Order API to get the unsigned transactions needed to create an order.
