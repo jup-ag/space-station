@@ -27,7 +27,7 @@ const quoteResponse = await (
 ).json();
 ```
 
-- `restrictIntermediateTokens`: Mkae sure that you set this to `true`, if your route is routed through random intermediate tokens, it will fail more frequently. With this, we make sure that your route is only routed through highly liquid intermediate tokens to give you the best price and more stable route.
+- `restrictIntermediateTokens`: Make sure that you set this to `true`, if your route is routed through random intermediate tokens, it will fail more frequently. With this, we make sure that your route is only routed through highly liquid intermediate tokens to give you the best price and more stable route.
 
 When you are getting a transaction from the API:
 
