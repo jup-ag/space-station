@@ -38,6 +38,10 @@ title: "Price API: Get On-Chain Price For Any Token"
   }
 `}</style>
 
+:::warning
+This endpoint is no longer maintained. Use [Pricing API V2](/docs/apis/price-api-v2) instead.
+:::
+
 Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
 
 The Jupiter Price API comes with the option to specify another token as the base unit ([see "vsToken"](#vstoken)).
@@ -226,7 +230,7 @@ curl -X 'GET' 'https://price.jup.ag/v6/price?ids=SOL&vsToken=mSOL'
       </span>
     </summary>
 
-    
+
 ```json
 
 {
