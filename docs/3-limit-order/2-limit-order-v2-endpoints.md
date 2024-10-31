@@ -107,7 +107,9 @@ type CancelOrdersResponse = {
   txs: string[];
 };
 ```
-:::warning If no orders are specified, the API would return the unsigned transactions to cancel ALL open orders, batched in groups of 5 orders. :::
+:::warning
+If no orders are specified, the API would return the unsigned transactions to cancel ALL open orders, batched in groups of 5 orders.
+:::
 ### Example response
 ```json
 {
