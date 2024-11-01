@@ -1,11 +1,11 @@
 ---
-sidebar_label: Price API
+sidebar_label: (Deprecated) Price API V1
 description: Get real-time on-chain prices for any token with Jupiter Price API. Supports up to 100 tokens per call. Easy integration for developers.
-title: "Price API: Get On-Chain Price For Any Token"
+title: "(Deprecated) Price API: Get On-Chain Price For Any Token"
 ---
 
 <head>
-    <title>Jupiter Price API: Unlock Real-Time On-Chain Pricing for Any Token</title>
+    <title> (Deprecated) Jupiter Price API v1: Unlock Real-Time On-Chain Pricing for Any Token</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
