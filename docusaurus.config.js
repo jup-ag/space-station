@@ -119,64 +119,64 @@ const config = {
       }),
     ],
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
-            to: '/guides/perpetual-exchange/overview',
-            from: '/labs/perpetual-exchange/overview',
+            to: "/guides/perpetual-exchange/overview",
+            from: "/labs/perpetual-exchange/overview",
           },
           {
-            to: '/guides/perpetual-exchange/how-it-works',
-            from: '/guides/perpetual-exchange/trading',
+            to: "/guides/perpetual-exchange/how-it-works",
+            from: "/guides/perpetual-exchange/trading",
           },
           {
-            to: '/guides/jupiter-swap/how-swap-works/metropolis-features',
-            from: '/guides/jupiter-swap/how-swap-works/metropolis',
+            to: "/guides/jupiter-swap/how-swap-works/metropolis-features",
+            from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
-            to: '/guides/perpetual-exchange/overview',
-            from: '/labs',
+            to: "/guides/perpetual-exchange/overview",
+            from: "/labs",
           },
           {
-            to: '/guides/perpetual-exchange/how-it-works',
-            from: '/labs/perpetual-exchange/trading',
+            to: "/guides/perpetual-exchange/how-it-works",
+            from: "/labs/perpetual-exchange/trading",
           },
           {
-            to: '/guides/jlp/JLP',
-            from: '/labs/perpetual-exchange/jlp-pool',
+            to: "/guides/jlp/JLP",
+            from: "/labs/perpetual-exchange/jlp-pool",
           },
           {
-            to: '/guides/jlp/How-JLP-Works',
-            from: '/labs/perpetual-exchange/how-it-works',
+            to: "/guides/jlp/How-JLP-Works",
+            from: "/labs/perpetual-exchange/how-it-works",
           },
           {
-            to: '/guides/jlp/How-JLP-Works',
-            from: '/labs/faq/faq',
+            to: "/guides/jlp/How-JLP-Works",
+            from: "/labs/faq/faq",
           },
           {
-            to: '/guides/general/get-your-token-on-jupiter',
-            from: '/docs/get-your-token-onto-jup',
+            to: "/guides/general/get-your-token-on-jupiter",
+            from: "/docs/get-your-token-onto-jup",
           },
           {
-            to: '/docs/limit-order',
-            from: '/docs/limit-order/limit-order-api',
+            to: "/docs/limit-order",
+            from: "/docs/limit-order/limit-order-api",
           },
           {
-            to: '/docs/limit-order',
-            from: '/docs/limit-order/limit-order-with-sdk',
+            to: "/docs/limit-order",
+            from: "/docs/limit-order/limit-order-with-sdk",
           },
           {
-            to: '/guides/general/get-your-token-on-jupiter',
-            from: '/guides/general/new-token-guide',
+            to: "/guides/general/get-your-token-on-jupiter",
+            from: "/guides/general/new-token-guide",
           },
           {
-            to: '/guides/jlp/How-JLP-Works',
-            from: '/labs/perps-faq',
+            to: "/guides/jlp/How-JLP-Works",
+            from: "/labs/perps-faq",
           },
           {
-            to: '/blog-redirect',
-            from: '/blog',
+            to: "/blog-redirect",
+            from: "/blog",
           },
         ],
       },
@@ -246,7 +246,7 @@ const config = {
             position: "left",
           },
           {
-            to: "/stats",
+            to: "https://dune.com/ilemi/jupiter-aggregator-solana",
             label: "Stats",
             position: "left",
           },
