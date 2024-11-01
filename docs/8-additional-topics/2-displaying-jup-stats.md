@@ -9,13 +9,9 @@ title: Fetch Jupiter Stats
     <meta name="twitter:card" content="summary" />
 </head>
 
-- Get all tickers (*cached for every 2-5 mins*):  https://stats.jup.ag/coingecko/tickers
-
-- Get all swap pairs: https://stats.jup.ag/coingecko/pairs
-
-- For each pair: https://stats.jup.ag/coingecko/tickers?ticker_id=So11111111111111111111111111111111111111112_EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-
-- For token stats by date: https://stats.jup.ag/token-ledger/B5mW68TkDewnKvWNc2trkmmdSRxcCjZz3Yd9BWxQTSRU/2022-04-1
+:::warning
+These endpoints are no longer maintained.
+:::
 
 - Last 24 hrs: https://stats.jup.ag/info/day
 
