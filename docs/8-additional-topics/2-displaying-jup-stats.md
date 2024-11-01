@@ -9,7 +9,7 @@ title: Fetch Jupiter Stats
     <meta name="twitter:card" content="summary" />
 </head>
 
-:::warnig
+:::warning
 These endpoints are no longer maintained.
 :::
 
