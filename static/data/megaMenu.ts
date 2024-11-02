@@ -105,11 +105,11 @@ export const docsLinkItems: LinkGroup[] = [
         href: "/docs/apis/adding-fees",
       },
       {
-        title: "Price API",
+        title: "(Deprecated) Price API v1",
         href: "/docs/apis/price-api",
       },
       {
-        title: "Price API V2",
+        title: "Price API v2",
         href: "/docs/apis/price-api-v2",
       },
       {

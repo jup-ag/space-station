@@ -13,16 +13,10 @@ const JupiterTopics = () => {
         Quick Start
       </div>
 
-      <div className="mt-4 w-full grid grid-cols-2 md:grid-cols-3 justify-center gap-2 text-sm xl:text-base font-bold whitespace-nowrap flex-wrap px-2 lg:px-0">
+      <div className="mt-4 w-full grid grid-cols-2 md:grid-cols-2 justify-center gap-2 text-sm xl:text-base font-bold whitespace-nowrap flex-wrap px-2 lg:px-0">
         {/* <a href="" className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline">
           Welcome to Solana
         </a> */}
-        <a
-          href="#section-lfg-launchpad"
-          className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
-        >
-          LFG Launchpad
-        </a>
 
         <a
           href="https://www.jupresear.ch"
@@ -359,41 +353,41 @@ const ChevronRight = ({ width = 14, height = 14 }) => {
   );
 };
 
-const JupiterProjects = () => {
-  return (
-    <div className="w-full">
-      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
-        Projects
-      </div>
+// const JupiterProjects = () => {
+//   return (
+//     <div className="w-full">
+//       <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
+//         Projects
+//       </div>
 
-      <div className="mt-5 grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-2 gap-2">
-        <a
-          href="https://station.jup.ag/docs/get-your-token-onto-jup"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Get Listed on Jupiter</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://www.jupresear.ch/t/lfg-launchpad-introducing-your-project-to-the-community/5234/2"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Apply to LFG</span>
-          <ChevronRight />
-        </a>
-      </div>
-    </div>
-  );
-};
+//       <div className="mt-5 grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-2 gap-2">
+//         <a
+//           href="https://station.jup.ag/docs/get-your-token-onto-jup"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>Get Listed on Jupiter</span>
+//           <ChevronRight />
+//         </a>
+//         <a
+//           href="https://www.jupresear.ch/t/lfg-launchpad-introducing-your-project-to-the-community/5234/2"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>Apply to LFG</span>
+//           <ChevronRight />
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
 
 const JupiterDevelopers = () => {
   return (
@@ -474,63 +468,7 @@ const JupiterDevelopers = () => {
   );
 };
 
-const JupiterLFGLaunchpad = () => {
-  return (
-    <div className="w-full text-v2-lily/[.03]">
-      <div className="text-3xl xl:text-4xl text-center lg:text-start font-semibold !text-[#00BEF0]">
-        LFG Launchpad
-      </div>
 
-      <div className="mt-5 flex flex-col gap-2">
-        <a
-          href="https://twitter.com/weremeow/status/1749577177333645770"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>What is LFG</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://www.jupresear.ch/t/jupiter-lfg-launchpad-beta/31"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Project Introductions</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://www.youtube.com/@jupecosystem/featured"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Youtube AMAs/Resources</span>
-          <ChevronRight />
-        </a>
-        {/* <a
-          href=""
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`
-          )}
-        >
-          <span>Vote</span>
-          <ChevronRight />
-        </a> */}
-      </div>
-    </div>
-  );
-};
 
 const JupiterJupAcronym = () => {
   return (
@@ -573,6 +511,18 @@ const JupiterJupAcronym = () => {
           )}
         >
           <span>Working Groups</span>
+          <ChevronRight />
+        </a>
+        <a
+          href="https://station.jup.ag/docs/get-your-token-onto-jup"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+            `transition-all hover:gap-3`,
+          )}
+        >
+          <span>Get Listed on Jupiter</span>
           <ChevronRight />
         </a>
         {/* <a
@@ -771,8 +721,7 @@ const Content = () => {
             Jupiter Space Station
           </div>
           <div className="self-center text-xs xl:text-[20px] text-v2-lily/50 w-full text-wrap px-4 mt-4">
-            Welcome to the space station — home for catdets curious about
-            Jupiter
+            Welcome to the space station — home for catdets curious about Jupiter
           </div>
         </div>
 
@@ -783,22 +732,14 @@ const Content = () => {
       <div className="w-full bg-[#13181D] flex flex-col items-center">
         <div className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col xl:flex-row justify-center gap-10 py-[60px]">
           <div className="w-full xl:w-1/3">
-            <JupiterProjects />
+          <JupiterJupAcronym />
           </div>
           <div className="w-full xl:w-2/3">
-            <JupiterDevelopers />
+          <JupiterDevelopers />
           </div>
         </div>
 
         <div className="bg-v2-lily/5 w-full h-[1px]" />
-
-        <div
-          id="section-lfg-launchpad"
-          className="text-v2-lily/[.03] max-xl:px-4 xl:max-w-7xl w-full flex flex-col md:flex-row justify-center gap-10 py-[60px]"
-        >
-          <JupiterLFGLaunchpad />
-          <JupiterJupAcronym />
-        </div>
       </div>
 
       <div className="bg-[#0D1114] w-full py-[60px] flex justify-center">
