@@ -98,6 +98,14 @@ You can view the current TVL and AUM Limit on the [JLP UI](https://jup.ag/perps-
 
 Every Monday, the estimated APY figure is updated with the above calculation by using the previous week's fees.
 
+### Fetching AUM and Calculating JLP Virtual Price
+
+The code snippets below show how to to fetch the AUM from the JLP pool onchain account, as well as calculating the JLP virtual price in real time:
+
+[Fetch pool AUM](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-pool-aum.ts)
+
+[Calculate JLP virtual price](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-jlp-virtual-price.ts)
+
 ## Yield
 
 The JLP token adopts a growth-focused approach, similar to accumulating ETFs like VWRA or ARKK. Rather than distributing yield through airdrops or additional token mints, the JLP token's value is designed to appreciate over time. This appreciation is driven by the growth of the JLP pool's AUM, which is used to derive the virtual price as shown above.
