@@ -101,7 +101,7 @@ Profit and loss calculations directly corresponds to the size of your **position
 
 In both cases, the profit or loss is 10% of the **position size**, matching the percentage change in SOL's price.
 
-#### Calculating unrealized PnL
+#### Calculating realized and unrealized PnL
 
 ```
 // 1) Get the current token price / exit price
@@ -120,30 +120,21 @@ ELSE
 
 priceDelta = |exitPrice - positionAvgPrice|
 
-// 4) Calculate the PnL delta for the closed portion of the position: multiply the size being closed (`sizeUsdDelta`) 
+// 4) Calculate the PnL delta for the closed portion of the position: multiply the size being closed (`tradeSizeUsd`) 
 // by the price delta, then divide by the entry price to get the PnL delta
 
-pnlDelta = (sizeUsdDelta * priceDelta) / positionAvgPrice
+pnlDelta = (tradeSizeUsd * priceDelta) / positionAvgPrice
 
-// Step 5: Return unrealized PNL depending on whether the position is profitable or not
+// 5) Calculate the final unrealized PnL depending on whether the position is profitable or not
 
 IF inProfit THEN
     unrealizedPnl = pnlDelta
 ELSE
     unrealizedPnl = -pnlDelta
-```
 
-#### Calculating realized PNL
-
-```
-// 1) Get the unrealized PnL for the position
-// 2) Calculate the closing fee. The closing fee base consists of the base close fee and price impact fee.
-
-bpsPower = 10_000
-priceImpactFeeBps = (sizeUsdDelta * BPS_POWER) / tradeImpactFeeScalar
-baseCloseFee = (sizeUsdDelta * (baseFeeBps + priceImpactFeeBps)) / BPS_POWER
-
-// 3) Calculate the position's outstanding borrow fee. A position's outstanding borrow fees is calculated from the tim
+// 6) Deduct the outstanding fees from the unrealized PnL to get the final realized PnL
+// Read the `Fee` section below to understand how the fee calculations work
+realizedPnl = unrealizedPnl - (closeBaseFee + priceImpactFee + borrowFee)
 ```
 
 :::info
@@ -217,6 +208,25 @@ There are 4 types of fees on Jupiter Perpetual:
 
 A flat rate of **0.06%** of the position amount is charged when opening or closing a position. This base fee is also charged when a position is closed partially.
 
+To calculate the base open or close for a trade:
+
+```
+BPS_POWER = 10^4      // 10_000
+
+Calculate Price Impact Fee:
+
+// 1. Get the base fee (BPS) from the JLP pool account's `fees.increasePositionBps` for open position requests
+// or `fees.decreasePositionBps` for close position requests
+// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account
+   baseFeeBps = pool.fees.increasePositionBps
+
+// 2. Convert `baseFeeBps` to decimals
+   baseFeeBpsDecimals = baseFeeBps / BPS_POWER
+
+// 3. Calculate the final open / close fee in USD by multiplying `baseFeeBpsDecimals` against the trade size
+   openCloseFeeUsd = tradeSizeUsd * baseFeeBpsDecimals
+```
+
 ### Price Impact Fee
 
 Large trades on the Jupiter Perpetuals exchange inherently **incur no price impact** since token prices are sourced from price oracles. While this is favourable for traders, it poses risks to the Jupiter Liquidity Pool (JLP):
@@ -241,10 +251,34 @@ To address these risks, Jupiter Perpetuals implements a price impact fee. This f
 
 This tiered fee structure ensures that costs are more proportional to the potential market impact of each trade, creating a fairer trading environment for both traders and liquidity providers.
 
+To calculate the price impact fee for an open or close trade:
+
+```
+USDC_DECIMALS = 10^6  // 1_000_000
+BPS_POWER = 10^4      // 10_000
+
+Calculate Price Impact Fee:
+
+// 1. Get the trade impact fee scalar from the custody account's `pricing.tradeImpactFeeScalar` constant
+// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
+   tradeImpactFeeScalar = custody.pricing.tradeImpactFeeScalar
+
+// 2. Convert trade size to USDC decimal format
+   tradeSizeUsd = tradeSizeUsd * USDC_DECIMALS
+
+// 3. Scale to BPS format for fee calculation
+   tradeSizeUsdBps = tradeSizeUsd * BPS_POWER
+
+// 4. Calculate price impact fee percentage in BPS
+   priceImpactFeeBps = tradeSizeUsdBps / tradeImpactFeeScalar
+
+// 5. Calculate final price impact fee in USD
+   priceImpactFeeUsd = (tradeSizeUsd * priceImpactFeeBps / BPS_POWER) / USDC_DECIMALS
+```
+
 :::info
 Jupiter works with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
 :::
-
 
 ### Borrow Fee
 
@@ -327,6 +361,66 @@ Borrow fees are continuously accrued and deducted from your collateral. This ong
 It's crucial to regularly monitor your borrow fees and liquidation price. Failure to do so may result in unexpected liquidation, especially during periods of high market volatility or extended position duration.
 :::
 
+### How does the Jupiter Perpetuals contract calculate borrow fees?
+
+Due to Solana's blockchain architecture, calculating funding fees in real-time for each position would be computationally expensive and impractical. Instead, the Jupiter Perpetuals contract uses a counter-based system to calculate borrow fees for open positions.
+
+The [pool](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account) and [position](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#position-account) accounts maintain two key fields:
+
+* The pool account maintains a global cumulative counter through its `fundingRateState.cumulativeInterestRate` field, which accumulates funding rates over time
+* Each position account tracks its own `cumulativeInterestSnapshot` field, which captures the global counter's value whenever a trade is made: when the position is opened, when its size is increased, when collateral is deposited or withdrawn, or when the position is closed
+
+To calculate a position's borrow fee, the contract takes the difference between the current global funding rate counter and the position's snapshot, then multiplies this by the position size. This approach enables efficient on-chain calculation of borrow fees over a given time period without needing real-time updates for each position.
+
+The example below demonstrates the borrow fee calculation:
+
+```
+// Constants:
+BPS_DECIMALS = 4             // 10^4, for basis points
+DBPS_DECIMALS = 5            // 10^5, decimal basis points for precision
+RATE_DECIMALS = 9            // 10^9, for funding rate calculations
+USD_DECIMALS = 6             // 10^6, for USD amounts as per the USDC mint's decimals
+
+// Main calculation:
+1. Get the cumulative funding rate from the pool account:
+   cumulativeFundingRate = pool.cumulative_interest_rate
+
+2. Get the position's funding rate snapshot:
+   fundingRateSnapshot = position.cumulative_interest_snapshot
+
+3. Get the position's funding rate interval:
+   fundingRate = cumulativeFundingRate - fundingRateSnapshot
+
+4. Calculate final borrow fee (USD):
+   borrowFeeUsd = (fundingRate * position.size_usd) / (10^RATE_DECIMALS) / (10^USD_DECIMALS)
+```
+
+#### Calculate funding rate
+
+The Jupiter Perpetuals platform does not behave like a traditional futures platform where longs pay shorts (or vice-versa) based on the funding rate. Instead, the funding rate mechanism takes into account:
+
+* The base hourly funding rate from the custody account
+* The current pool utilization (locked assets / owned assets)
+
+The calculation is shown below:
+
+```
+// Constants:
+DBPS_DECIMALS = 5            // 10^5, decimal basis points for precision
+RATE_DECIMALS = 9            // 10^9, for funding rate calculations
+
+Calculate Funding Rate:
+// 1. Get the base hourly funding rate:
+// Convert from DBPS to rate format using the custody account'`s `hourlyFundingDbps` value
+   hourlyFundingRate = (custody.fundingRateState.hourlyFundingDbps * (10 ^ RATE_DECIMALS)) / (10 ^ DBPS_DECIMALS)
+
+// 2. Calculate pool utilization:
+   utilization = custody.assets.locked / custody.assets.owned
+
+// 3. Calculate final funding rate:
+   fundingRate = utilization * hourlyFundingRate
+```
+
 ### Transaction & Priority Fee
 
 Traders will have to pay SOL for submitting transactions onto the Solana chain. Traders also pay priority fees or Jito bundle tips (or both) depending on their settings.
@@ -390,7 +484,6 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 | Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
 | Chart | Discrepancy between trades placed and the chart. | Our oracle powers the trading view chart and all position requests, no discrepancy. |
 
-
 ### Working Together With Pyth Oracle
 
 Perp Keepers also utilize Pyth:
@@ -399,6 +492,24 @@ Perp Keepers also utilize Pyth:
 - As a fallback price if our oracle's prices are stale.
 
 This way, Jupiter Perps benefits from the Dove oracle while still being able to rely on the Pyth oracle.
+
+### Oracle Price Accounts and Fetching Oracle Prices
+
+The Dove Oracle used by the Jupiter Perpetuals platform stores oracle price data in the following onchain accounts:
+
+| Asset | Oracle Account |
+|-------|----------------|
+| SOL | [39cWjvHrpHNz2SbXv6ME4NPhqBDBd4KsjUYv5JkHEAJU](https://solscan.io/account/39cWjvHrpHNz2SbXv6ME4NPhqBDBd4KsjUYv5JkHEAJU) |
+| ETH | [5URYohbPy32nxK1t3jAHVNfdWY2xTubHiFvLrE3VhXEp](https://solscan.io/account/5URYohbPy32nxK1t3jAHVNfdWY2xTubHiFvLrE3VhXEp) |
+| BTC | [4HBbPx9QJdjJ7GUe6bsiJjGybvfpDhQMMPXP1UEa7VT5](https://solscan.io/account/4HBbPx9QJdjJ7GUe6bsiJjGybvfpDhQMMPXP1UEa7VT5) |
+| USDC | [A28T5pKtscnhDo6C1Sz786Tup88aTjt8uyKewjVvPrGk](https://solscan.io/account/A28T5pKtscnhDo6C1Sz786Tup88aTjt8uyKewjVvPrGk) |
+| USDT | [AGW7q2a3WxCzh5TB2Q6yNde1Nf41g3HLaaXdybz7cbBU](https://solscan.io/account/AGW7q2a3WxCzh5TB2Q6yNde1Nf41g3HLaaXdybz7cbBU) |
+
+:::info
+The code snippet below in the examples repo shows how to fetch and stream onchain price updates from the accounts above:
+
+https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/poll-and-stream-oracle-price-updates.ts
+:::
 
 ## Keepers
 
