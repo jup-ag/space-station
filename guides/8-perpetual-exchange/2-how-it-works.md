@@ -101,8 +101,53 @@ Profit and loss calculations directly corresponds to the size of your **position
 
 In both cases, the profit or loss is 10% of the **position size**, matching the percentage change in SOL's price.
 
+#### Calculating unrealized PnL
+
+```
+// 1) Get the current token price / exit price
+
+exitPrice = currentTokenPrice
+
+// 2) Determine if the position is profitable by checking if the exit price is greater than the position's
+// average price for longs, or if the exit price is less than the position's average price for shorts
+
+IF isLong THEN
+    inProfit = exitPrice > positionAvgPrice
+ELSE
+    inProfit = exitPrice < positionAvgPrice
+
+// 3) Calculate the absolute delta between the exit price and the position's average price
+
+priceDelta = |exitPrice - positionAvgPrice|
+
+// 4) Calculate the PnL delta for the closed portion of the position: multiply the size being closed (`sizeUsdDelta`) 
+// by the price delta, then divide by the entry price to get the PnL delta
+
+pnlDelta = (sizeUsdDelta * priceDelta) / positionAvgPrice
+
+// Step 5: Return unrealized PNL depending on whether the position is profitable or not
+
+IF inProfit THEN
+    unrealizedPnl = pnlDelta
+ELSE
+    unrealizedPnl = -pnlDelta
+```
+
+#### Calculating realized PNL
+
+```
+// 1) Get the unrealized PnL for the position
+// 2) Calculate the closing fee. The closing fee base consists of the base close fee and price impact fee.
+
+bpsPower = 10_000
+priceImpactFeeBps = (sizeUsdDelta * BPS_POWER) / tradeImpactFeeScalar
+baseCloseFee = (sizeUsdDelta * (baseFeeBps + priceImpactFeeBps)) / BPS_POWER
+
+// 3) Calculate the position's outstanding borrow fee. A position's outstanding borrow fees is calculated from the tim
+```
+
 :::info
-This example demonstrates a simplified calculation of PnL without factoring in the fees associated with Jupiter Perps. More info on fees [here](#fees).
+[Read the Jupiter Perpetuals fee breakdown here](#fees) for more info on open / close fees, price impact fees, and borrow fees.
 :::
 
 ## Managing Leverage
