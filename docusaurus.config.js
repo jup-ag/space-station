@@ -131,7 +131,7 @@ const config = {
             from: "/guides/perpetual-exchange/trading",
           },
           {
-            to: "/guides/jupiter-swap/how-swap-works/metropolis-features",
+            to: "/guides/jupiter-swap/quickstart",
             from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
@@ -157,10 +157,6 @@ const config = {
           {
             to: "/guides/general/get-your-token-on-jupiter",
             from: "/docs/get-your-token-onto-jup",
-          },
-          {
-            to: "/docs/limit-order",
-            from: "/docs/limit-order/limit-order-api",
           },
           {
             to: "/docs/limit-order",
