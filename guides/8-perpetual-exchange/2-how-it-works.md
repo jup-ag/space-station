@@ -213,8 +213,6 @@ To calculate the base open or close for a trade:
 ```
 BPS_POWER = 10^4      // 10_000
 
-Calculate Price Impact Fee:
-
 // 1. Get the base fee (BPS) from the JLP pool account's `fees.increasePositionBps` for open position requests
 // or `fees.decreasePositionBps` for close position requests
 // https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account
