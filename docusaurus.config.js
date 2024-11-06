@@ -123,6 +123,26 @@ const config = {
       {
         redirects: [
           {
+            to: "/guides/jupiter-swap/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/metropolis-features",
+          },
+          {
+            to: "/guides/jupiter-swap/how-swap-works",
+            from: "guides/jupiter-swap/how-swap-works/how-swap-works",
+          },
+          {
+            to: "/guides/jupiter-swap/how-swap-works",
+            from: "guides/jupiter-swap/how-swap-works/metis-routing",
+          },
+          {
+            to: "/guides/jupiter-swap/quickstart",
+            from: "/guides/jupiter-swap/swap",
+          },
+          {
+            to: "/guides/jupiter-swap/earn-referral-fees",
+            from: "guides/jupiter-swap/how-referral-works",
+          },
+          {
             to: "/guides/perpetual-exchange/overview",
             from: "/labs/perpetual-exchange/overview",
           },
