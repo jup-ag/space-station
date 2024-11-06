@@ -12,16 +12,22 @@ slug: /jupiter-swap/quickstart
 
 *Last Updated: 4 November 2024*
 
-## Instant Routing for New Tokens
+Solana was built with trading in mind with its blazing speed and affordable transaction fees, resulting in thousands of new tokens and markets being spawned and new use cases and concepts being birthed. 
 
-New tokens from Raydium, Meteora, and Orca are immediately added to Jupiter Routing. This means that newly launched tokens can be utilized across the entire Jupiter suite instantly! This includes features like DCA, Limit Orders, and Value Averaging, or simply swapping at the best prices available.
+Our goal at Jupiter is to provide a seamless experience as your Everyday Exchange. As the Everyday Exchange, you can:
 
+1. **Access best-priced tokens, quickly.**  
 
+You can find newly launched tokens with our Instant Routing feature. New tokens & markets are automatically added to Jupiter Routing. Read: [How to Swap](./2-tutorials/1-how-to-swap.md)
 
-## Dynamic Slippage
+Access these tokens at best prices with our performant routing engine, [Metis](./3-deep-dive.md). We perform the math and give you best prices at Solana speed, at 0 protocol fees. 
 
-Dynamic Slippage offers a seamless swapping experience. You can set a maximum slippage cap and never worry about slippage issues again. By leveraging a combination of backend liquidity computation and frontend inference, the best possible slippage rate is calculated, which is likely to pass while minimizing MEV.
+1. **Access the right tokens, safely.** 
 
-## Intelligent Token Search
+You see all important token information (metadata, authorities, verification) for the swap you’re about to make on [jup.ag](http://jup.ag). Within Search, we also filter out imposter tokens and duplicates, utilise [community verification](https://catdetlist.jup.ag/) of tokens, and intelligent search using real-time info (liquidity, volume). Read: [How to Trade Safely](./2-tutorials/3-how-to-trade-safely.md)
 
-With the rapid growth of tokens on Solana, finding the correct token can be challenging. The token list search feature has been vastly improved, taking into account near real-time information such as liquidity, volume, community verification, and potential dubious tokens. Imposter tokens and duplicates are automatically filtered out, making the search much faster and more accurate.
+1. **Trade frictionlessly, knowing it just works.** 
+
+You get an abstracted swap experience with Auto mode by setting your Max Slippage and MEV protection. Jupiter will do the rest by configuring the best transaction fees and slippage based on your trade, heuristics, and market conditions. 
+
+For folks who wants more fine-tuned control e.g. choosing Fixed Slippage to [Dynamic Slippage](./3-deep-dive.md), we have Manual mode for you. Read: [How to Configure Settings](./2-tutorials/2-how-to-configure-settings.md)
