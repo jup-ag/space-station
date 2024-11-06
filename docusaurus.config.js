@@ -128,11 +128,11 @@ const config = {
           },
           {
             to: "/guides/jupiter-swap/how-swap-works",
-            from: "guides/jupiter-swap/how-swap-works/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/how-swap-works",
           },
           {
             to: "/guides/jupiter-swap/how-swap-works",
-            from: "guides/jupiter-swap/how-swap-works/metis-routing",
+            from: "/guides/jupiter-swap/how-swap-works/metis-routing",
           },
           {
             to: "/guides/jupiter-swap/quickstart",
@@ -140,7 +140,7 @@ const config = {
           },
           {
             to: "/guides/jupiter-swap/earn-referral-fees",
-            from: "guides/jupiter-swap/how-referral-works",
+            from: "/guides/jupiter-swap/how-referral-works",
           },
           {
             to: "/guides/perpetual-exchange/overview",
