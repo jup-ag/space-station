@@ -37,7 +37,7 @@ Feel free to submit PRs, suggestions, or reach out to us! If you need help with 
 
 **Create Token Lock**
 
-<video controls style={{ maxWidth: '85%', height: 'auto' }}>
+<video controls style={{ maxWidth: '50%', height: 'auto' }}>
 
   <source src={require('../static/media/lock-walkthrough.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
