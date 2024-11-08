@@ -1,12 +1,11 @@
 ---
-sidebar_label: "Spot Overview"
-description: Learn about Jupiter Spot, the most powerful way to trade tokens on Solana.
 title: Spot Overview
-slug: /spot-overview
+description: Learn about Jupiter Spot, the most powerful way to trade tokens on Solana.
+slug: /spot
+sidebar_class_name: hidden
 ---
 
 ![spot-overview](../../guides/img/jupiter-spot.png)
-
 
 Welcome to **Jupiter Spot**, the most powerful way to trade tokens on Solana. 
 
@@ -17,6 +16,21 @@ Jupiter Spot is made up of 4 trading methods to help you buy and sell spot asset
 2. **Limit Order (LO)**
 3. **Dollar-Cost Averaging (DCA)**
 4. **Value Averaging (VA)**
+
+---
+
+import SideBySide from '@site/src/components/SideBySide';
+
+<SideBySide imageUrl="/img/spot/spot-banner.png">
+  ## Jupiter Swap
+
+  **Swap between any token on Solana, with the best prices and 0 fees with a single click.**
+  - Jupiter also automatically minimizes [slippage](https://station.jup.ag/guides/jupiter-swap/how-swap-works/metropolis-features#dynamic-slippage) and set [priority fees](https://station.jup.ag/guides/jupiter-swap/swap#transaction-priority-fees) for you, while [flagging potential concerns](https://station.jup.ag/guides/jupiter-swap/how-swap-works/#safety-notifications).
+  - All you have to do is to set the max slippage & priority fees you are willing to pay, before swapping without worry.
+  - Detailed walkthrough on how to swap on Jupiter & UI features: [How to Swap](https://station.jup.ag/guides/jupiter-swap/swap)
+
+</SideBySide>
+
 
 Let's go through them in this overview.
 
@@ -54,5 +68,3 @@ Let's go through them in this overview.
 - When creating a **LO/DCA/VA** order, your tokens will be transferred out from your wallet and delegated to the **Jupiter Program**, where product-specific Jupiter Keepers (bots) will execute the transaction on your behalf.
 - They all charge a 0.1% fee, and have a minimum order size of US$5.
 :::
-
-
