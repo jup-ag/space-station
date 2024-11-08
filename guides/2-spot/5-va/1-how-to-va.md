@@ -12,7 +12,7 @@ slug: /va/how-to-va
 
 Value averaging (VA) is a strategy that works like dollar-cost averaging (DCA). It works similarly by making contributions in a consistent time period but differs by the amount of each contribution. VA focuses on equal growth of the portfolio instead of equal investments.
 
-VA features the ability to react to market volatility and price action, in short, buying more tokens when price is low and buying less tokens when price is high. Check out this [Explainer Page](3-explainer.md) to learn more about VA.
+VA features the ability to react to market volatility and price action, in short, buying more tokens when price is low and buying less tokens when price is high. Check out this [Explainer Page](./3-explainer.md) to learn more about VA.
 
 ## Basic VA User Flow
 

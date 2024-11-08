@@ -115,6 +115,7 @@ const config = {
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: true,
+        // exclude: ['**/index-content'],
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
@@ -123,24 +124,28 @@ const config = {
       {
         redirects: [
           {
-            to: "/guides/jupiter-swap/how-swap-works",
+            to: "/guides/swap/how-swap-works",
             from: "/guides/jupiter-swap/how-swap-works/metropolis-features",
           },
           {
-            to: "/guides/jupiter-swap/how-swap-works",
+            to: "/guides/swap/how-swap-works",
             from: "/guides/jupiter-swap/how-swap-works/how-swap-works",
           },
           {
-            to: "/guides/jupiter-swap/how-swap-works",
+            to: "/guides/swap/how-swap-works",
             from: "/guides/jupiter-swap/how-swap-works/metis-routing",
           },
           {
-            to: "/guides/jupiter-swap/quickstart",
+            to: "/guides/swap/quickstart",
             from: "/guides/jupiter-swap/swap",
           },
           {
-            to: "/guides/jupiter-swap/earn-referral-fees",
+            to: "/guides/swap/tutorials/earn-referral-fees",
             from: "/guides/jupiter-swap/how-referral-works",
+          },
+          {
+            to: "/guides/swap/quickstart",
+            from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
             to: "/guides/perpetual-exchange/overview",
@@ -149,10 +154,6 @@ const config = {
           {
             to: "/guides/perpetual-exchange/how-it-works",
             from: "/guides/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/jupiter-swap/quickstart",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
             to: "/guides/perpetual-exchange/overview",

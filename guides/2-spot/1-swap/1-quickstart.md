@@ -2,7 +2,7 @@
 sidebar_label: "Quickstart"
 description: Learn about the latest features on Jupiter Swap.
 title: Jupiter Swap Feature Quickstart
-slug: /jupiter-swap/quickstart
+slug: /swap/quickstart
 ---
 
 <head>

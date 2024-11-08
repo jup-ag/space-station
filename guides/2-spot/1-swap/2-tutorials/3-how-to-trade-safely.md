@@ -2,7 +2,7 @@
 sidebar_label: How To Trade Safely
 description: Learn more about the ways Jupiter keeps you safe with various safety warnings and notifications.
 title: How to Trade Safely on Jupiter
-slug: /jupiter-swap/trade-safely
+slug: /swap/tutorials/trade-safely
 ---
 
 
@@ -14,7 +14,7 @@ We highlight safety notifications, non-intrusive warnings, key token info, and s
 
 ### Warnings
 
-![warnings](../warnings.png)
+![warnings](../../1-swap/img/warnings.png)
 
 Price impact alert is influenced by the available liquidity and your trade size. A large trade size in an illiquid pool often results in huge price impact, hence you can break up your trade size with [DCA](https://jup.ag/dca/USDC-SOL). 
 
@@ -24,7 +24,7 @@ If your trade shows a large price impact and difference, please trade with cauti
 
 ### Token Information
 
-![token-info](../token-info.png)
+![token-info](../../1-swap/img/token-info.png)
 
 Jupiter shows relevant token information to reduce information asymmetry you may face when trading. Token Verification shows as "Verified ✅" or "Not Verified ⚠️" and Token2022 extensions appears as information pills. 
 
@@ -41,7 +41,7 @@ More on Token2022 extensions below:
 
 ### MEV Protect
 
-![mev-protect](../mev-protect.png)
+![mev-protect](../../1-swap/img/mev-protect.png)
 
 Jupiter introduces [MEV Protect](https://www.jupresear.ch/t/continuing-to-deliver-on-jupiters-best-ux-promise/22230) mode, which will only send your transactions directly to Jito block engines, minimising the risk of sandwiches for you. 
 
@@ -50,12 +50,12 @@ In a sandwich attack, a bot spots your transaction, places a buy order before yo
 
 ### Swap Summary
 
-![swap-summary](../swap-summary.png)
+![swap-summary](../../1-swap/img/swap-summary.png)
 
 The summary shows you the information relating to the trade, such as the minimum received, the transaction fees, and price difference when compared to the market rate. 
 
 ### ExactOut
 
-![exactout](../exactout.png)
+![exactout](../../1-swap/img/exactout.png)
 
 ExactOut gets the exact amount of tokens that you need. We share this alert because liquidity venues and routes are lesser than ExactIn. Transparently, you should know that you might get a worse price. Best practice is to compare the rates between ExactOut and ExactIn before you trade. 

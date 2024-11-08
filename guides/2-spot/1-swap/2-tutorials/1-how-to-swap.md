@@ -2,7 +2,7 @@
 sidebar_label: How to Swap
 description: Learn more about the basics of swapping on Jupiter.
 title: How to Swap on Jupiter
-slug: /jupiter-swap/how-to-swap
+slug: /swap/tutorials/how-to-swap
 ---
 
 <head>
@@ -34,7 +34,7 @@ slug: /jupiter-swap/how-to-swap
 
 ## Swap Details
 
-![SwapDetails](../../2-jupiter-swap/swapdetails.png)
+![SwapDetails](../../1-swap/img/swapdetails.png)
 
 1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected tokens
 2. **Minimum Received:** This takes into account the slippage setting and market liquidity to compute the minimum amount that you will receive even with maximum price fluctuations for a successful swap. 

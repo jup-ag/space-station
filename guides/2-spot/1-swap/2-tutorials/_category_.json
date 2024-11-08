@@ -1,8 +1,8 @@
 {
-    "label": "Jupiter Spot",
+    "label": "Tutorials",
     "link": {
       "type": "generated-index",
-      "slug": "/jupiter-spot"
+      "slug": "./tutorials"
     }
   }
   

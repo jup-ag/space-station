@@ -2,7 +2,7 @@
 sidebar_label: How To Configure Settings On Jupiter
 description: Find out how you can configure your settings on Jupiter to help you land your transactions effectively.
 title: How to Configure Settings
-slug: /jupiter-swap/configure-settings
+slug: /swap/tutorials/configure-settings
 ---
 
 
