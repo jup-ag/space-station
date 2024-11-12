@@ -135,7 +135,7 @@ const config = {
             from: "/guides/jupiter-swap/how-swap-works/metis-routing",
           },
           {
-            to: "/guides/swap/quickstart",
+            to: "/guides/swap/features",
             from: "/guides/jupiter-swap/swap",
           },
           {
@@ -143,7 +143,7 @@ const config = {
             from: "/guides/jupiter-swap/how-referral-works",
           },
           {
-            to: "/guides/swap/quickstart",
+            to: "/guides/swap/features",
             from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
