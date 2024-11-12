@@ -10,8 +10,6 @@ slug: /swap/how-swap-works
     <meta name="twitter:card" content="summary" />
 </head>
 
-*Last Updated: 4 November 2024*
-
 ## Metis: Our Routing Engine
 
 Metis is a heavily modified variant of the [Bellman-Ford algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) catered for the key requirements of offering best price routing at scale in a very dynamic operational space.
@@ -43,3 +41,5 @@ Metis(v3) is equipped to handle both of these trends, since the algorithm is abl
 Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These imporivements increase sharply based on the trade size.
 
 ![Metis4](../1-swap/img/Metis-4.jpg)
+
+*Last Updated: 4 November 2024*

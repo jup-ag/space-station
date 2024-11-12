@@ -5,10 +5,7 @@ title: How to Earn Referral Fees
 slug: /swap/tutorials/earn-referral-fees
 ---
 
-
-*Last Updated: 5 November 2024*
-
-The Jupiter Referral program allows you to earn fees by referring users to the platform. It uses URL parameters to track referrals: https://jup.ag/?referrer=[ReferralKeyAddress]&feeBps=[FeesBps]
+The Jupiter Referral program allows you to earn fees by referring users to the platform. It uses URL parameters to track referrals: `https://jup.ag/?referrer=[ReferralKeyAddress]&feeBps=[FeesBps]`
 
 :::info Important Notes
 - ExactIn swaps support both input and output tokens.
@@ -35,3 +32,5 @@ The Jupiter Referral program allows you to earn fees by referring users to the p
 6. Copy your personalized referral link. Share your link to start earning referral fees for every swap you refer. Example referral link: https://jup.ag/swap/SOL-USDC?referrer=7tme...w4hd&feeBps=50
 
 ![step-6](../../1-swap/img/step-6.png)
+
+*Last Updated: 5 November 2024*
