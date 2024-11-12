@@ -28,6 +28,8 @@ Most bridge applications work in the same way. They require connecting multiple 
 
 ## USDC - CCTP
 
+Try it out [here](https://jup.ag/onboard/cctp)!
+
 The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility that ensures secure USDC transfers between blockchains using a native burn-and-mint process. This bridge is powered by Wormhole and Circle.
 
 ### USDC Bridge UI
@@ -45,6 +47,8 @@ The Cross-Chain Transfer Protocol (CCTP) is a permissionless on-chain utility th
 9. **Approve and Proceed with Transaction:** Once you have reviewed the Route and the Preview, click here to start the bridging process.
 
 ## deBridge
+
+Try it out [here](https://jup.ag/onboard/debridge)!
 
 deBridge is a cross-chain interoperability and liquidity transfer protocol that allows decentralized transfer of data and assets between various blockchains.
 
