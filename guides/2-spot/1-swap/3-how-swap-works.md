@@ -1,5 +1,5 @@
 ---
-sidebar_label: "Deep Dive: How Swap Works"
+sidebar_label: "How Swap Works"
 description: Dive into the concepts behind Jupiter Swap.
 title: How Jupiter Swap Works
 slug: /swap/how-swap-works
@@ -9,6 +9,21 @@ slug: /swap/how-swap-works
     <title>Jupiter Swap | Quickstart</title>
     <meta name="twitter:card" content="summary" />
 </head>
+
+## Overview
+
+Jupiter Swap is an intricate solution that has evolved over time. It began its journey by solving the expansive number of AMMs (Automated Market Makers) in Solana DeFi (Decentralized Finance). This helped users to find the best price across multiple AMMs with the least friction.
+
+However, as Solana grew more popular especially with the inception of Pump.fun and the various memecoin explosions, there were many markets and tokens to be indexed. In 2024, we have improved our infrastructure to support many more markets easily while still safeguarding our users.
+
+A high level overview of how swap works:
+
+1. Token created, market created on any AMMs (we support most!).
+2. Our indexer picks it up immediately, and regardless of liquidity requirements, they are tradable.
+3. After 14 days, the market will be checked for the first time and subsequently checked every 30 minutes for its [liquidity requirements](../general/get-your-token-on-jupiter#how-to-get-your-pool-routed-on-jupiter).
+    - The market will either be dropped or continue to be served
+4. Our routing engine will perform math and algorithms to ensure you achieve the best quote at time of quote.
+5. During swap execution, there are [settings and safeguards](../swap/tutorials) to help you achieve a better user experience.
 
 ## Metis: Our Routing Engine
 
