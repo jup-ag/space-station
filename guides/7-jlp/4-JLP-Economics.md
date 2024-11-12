@@ -108,7 +108,7 @@ The code snippets below show how to to fetch the AUM from the JLP pool onchain a
 
 ### Calculate global unrealized PnL for longs
 
-The most accurate way to calculate the unrealized PnL for all open long positions is to loop through all open positions (by fetching them from onchain accounts) and use the unrealized PnL calculation shown in [calculating unrealized PnL]().
+The most accurate way to calculate the unrealized PnL for all open long positions is to loop through all open positions (by fetching them from onchain accounts) and use the unrealized PnL calculation shown in [calculating unrealized PnL](../8-perpetual-exchange/2-how-it-works.md#pnl).
 
 To get an estimate of the global unrealized PnL for longs, you can use the following calculation:
 
@@ -142,10 +142,6 @@ globalUnrealizedShortPnl = (custody.assets.globalShortSizes * (|custody.assets.g
 ```
 
 The most accurate way is again to loop through all open positions and sum the unrealized PNL, as the calculation above also includes traders' collateral.
-
-### Calculate open interest
-
-TODO
 
 ## Yield
 
