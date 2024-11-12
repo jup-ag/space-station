@@ -2,6 +2,7 @@
 sidebar_label: "Onramp and CEX Transfers"
 description: Learn to convert Fiat to Solana easily with top services like Stripe & Banxa for optimal rates and smooth transfers.
 title: Fiat On-ramps to Solana
+slug: ./onramp
 ---
 
 <head>

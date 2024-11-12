@@ -1,7 +1,8 @@
 ---
 sidebar_label: "Bridging to Solana"
-description: Learn how to bridge assets to Solana efficiently. Explore top tools and get expert tips for smooth, secure crypto transfers.
+description: Learn how to bridge assets to Solana efficiently.
 title: Bridging to Solana
+slug: ./bridge
 ---
 
 <head>

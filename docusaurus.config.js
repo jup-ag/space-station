@@ -178,6 +178,22 @@ const config = {
             to: "/blog-redirect",
             from: "/blog",
           },
+          {
+            to: "/guides/onboard",
+            from: "/guides/bridge-comparator",
+          },
+          {
+            to: "/guides/onboard",
+            from: "/guides/bridge/comparator",
+          },
+          {
+            to: "/guides/onboard/bridge",
+            from: "/guides/bridge/bridging",
+          },
+          {
+            to: "/guides/onboard/onramp",
+            from: "/guides/bridge/onramp",
+          },
         ],
       },
     ],
