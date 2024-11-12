@@ -138,6 +138,10 @@ realizedPnl = unrealizedPnl - (closeBaseFee + priceImpactFee + borrowFee)
 ```
 
 :::info
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-position-pnl.ts) shows an example of calculating a position's PNL programatically.
+:::
+
+:::info
 [Read the Jupiter Perpetuals fee breakdown here](#fees) for more info on open / close fees, price impact fees, and borrow fees.
 :::
 
@@ -225,6 +229,10 @@ BPS_POWER = 10^4      // 10_000
    openCloseFeeUsd = tradeSizeUsd * baseFeeBpsDecimals
 ```
 
+:::info
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-open-close-base-fee.ts) contains an example on calculating open and close base fees programatically.
+:::
+
 ### Price Impact Fee
 
 Large trades on the Jupiter Perpetuals exchange inherently **incur no price impact** since token prices are sourced from price oracles. While this is favourable for traders, it poses risks to the Jupiter Liquidity Pool (JLP):
@@ -273,6 +281,9 @@ Calculate Price Impact Fee:
 // 5. Calculate final price impact fee in USD
    priceImpactFeeUsd = (tradeSizeUsd * priceImpactFeeBps / BPS_POWER) / USDC_DECIMALS
 ```
+:::info
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-price-impact-fee.ts) contains an example on calculating price impact fees programatically.
+:::
 
 :::info
 Jupiter works with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
@@ -393,6 +404,10 @@ USD_DECIMALS = 6             // 10^6, for USD amounts as per the USDC mint's dec
    borrowFeeUsd = (fundingRate * position.size_usd) / (10^RATE_DECIMALS) / (10^USD_DECIMALS)
 ```
 
+:::info
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-borrow-fee.ts) shows an example of calculating a position's borrow fees programatically.
+:::
+
 #### Calculate funding rate
 
 The Jupiter Perpetuals platform does not behave like a traditional futures platform where longs pay shorts (or vice-versa) based on the funding rate. Instead, the funding rate mechanism takes into account:
@@ -418,6 +433,10 @@ Calculate Funding Rate:
 // 3. Calculate final funding rate:
    fundingRate = utilization * hourlyFundingRate
 ```
+
+:::info
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-funding-rate.ts) shows an example of calculating the current funding rate for a custody programatically.
+:::
 
 ### Transaction & Priority Fee
 
