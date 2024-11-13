@@ -22,7 +22,7 @@ Our commitment was met with prolific shipping throughout 2023, as we successfull
 
 
 * Our routing improvements include the launch of Metis – a novel routing algorithm that was customised for Solana’s fast blocktimes.  We also launched instant staked SOL to SOL swaps that gives you the best price across all trade sizes. 
-* Our product portfolio expanded to include Dollar Cost Averaging(DCA), Limit Orders and a Bridge Comparator. 
+* Our product portfolio expanded to include Dollar Cost Averaging(DCA), Limit Orders and a Bridge tool. 
 * Our developer tooling improved with 2 major API Upgrades, Jup for Payments & Games, and the Jupiter Terminal. 
 
 A full list of our products and product announcements can be found on our [documentation website](https://station.jup.ag/docs) and [blog](https://station.jup.ag/blog).  
@@ -47,7 +47,7 @@ These anchors have been instrumental in the development and launch of various pr
 
 It guided us to prioritise the integration of Sanctum,[ facilitating instant staked SOL to SOL conversions at the most favorable rates](https://station.jup.ag/blog/jup-lst-with-sanctum), irrespective of the trade size. This helps to accelerate the adoption of liquid staking tokens (LSTs) within the ecosystem, and paves the way for new composable innovations.
 
-Furthermore, we introduced the bridge comparator, a tool that allows users to seamlessly compare and select the most efficient bridge for transferring tokens from other chains to Solana, so that we can help to bring more capital to Solana.
+Furthermore, we introduced the bridge tool, a tool that allows users to seamlessly compare and select the most efficient bridge for transferring tokens from other chains to Solana, so that we can help to bring more capital to Solana.
 
 Most recently, during the [Jupiter Planetary Developer Week](https://station.jup.ag/blog/jup-plantary-dev-update), we unveiled a plethora of new features, including the V6 Swap API, Jup for Payments, and the upgraded Jupiter Terminal V2.
 

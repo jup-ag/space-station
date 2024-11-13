@@ -9,7 +9,7 @@ export const guidesLinkItems: LinkGroup[] = [
     children: [
       {
         title: "Jupiter Swap",
-        href: "/guides/swap/quickstart",
+        href: "/guides/swap",
       },
       {
         title: "Limit Order",
@@ -40,8 +40,8 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/jupsol/jupsol",
       },
       {
-        title: "Bridge Comparator",
-        href: "/guides/bridge/comparator",
+        title: "Onboard",
+        href: "/guides/onboard",
       },
       {
         title: "Jupiter Lock",
