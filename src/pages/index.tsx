@@ -65,7 +65,7 @@ const JupiterProducts = () => {
                 <div className="text-xs lg:text-sm">Launch Swap</div>
               </a>
               <a
-                href="https://station.jup.ag/guides/jupiter-swap/swap"
+                href="https://station.jup.ag/guides/swap/"
                 target="_blank"
                 className={cn(
                   "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer",
