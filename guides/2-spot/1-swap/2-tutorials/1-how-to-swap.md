@@ -32,7 +32,7 @@ slug: /swap/tutorials/how-to-swap
 9. You can view your swap history in the Activity tab if you click on your connected Wallet.
 
 
-## Swap Details
+### Swap Details
 
 ![SwapDetails](../../1-swap/img/swapdetails.png)
 
@@ -42,3 +42,10 @@ slug: /swap/tutorials/how-to-swap
 4. **Deposit:** If you are transacting assets you have not owned before, Solana may require a small deposit amount to create the ATA account in your wallet to hold that asset. This will only occur with assets you have not owned previously. 
 5. **Price Impact:** Price Impact is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets. 
 6. **Price Difference:** We show the quoted rate (from Jupiter) against the market rate. The price difference can be due to various external factors such as price impact, token tax, etc.
+
+### Route Details
+
+![Routing](../../1-swap/img/routing.png)
+![Routing Map](../../1-swap/img/routing-map.png)
+
+Order routing is like Jupiter's GPS for your tokens. You can find and open the **"1 Market"** or **"2 Routes + 2 Markets"** above the Swap Button. It will show you the exact order routing path for the quote. You can also see the routes and all markets that is used along the route.
