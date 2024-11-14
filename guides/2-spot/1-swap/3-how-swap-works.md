@@ -23,7 +23,7 @@ A high level overview of how swap works:
 3. After 14 days, the market will be checked for the first time and subsequently checked every 30 minutes for its [liquidity requirements](../general/get-your-token-on-jupiter#how-to-get-your-pool-routed-on-jupiter).
     - The market will either be dropped or continue to be served
 4. Our routing engine will perform math and algorithms to ensure you achieve the best quote at time of quote.
-5. During swap execution, there are [settings and safeguards](../swap/tutorials) to help you achieve a better user experience.
+5. During swap execution, there are [settings and safeguards](../1-swap/2-tutorials/3-how-to-trade-safely.md) to help you achieve a better user experience.
 
 ## Metis: Our Routing Engine
 

@@ -25,7 +25,7 @@ If your trade shows a large price impact and difference, please trade with cauti
 
 Jupiter shows relevant token information to reduce information asymmetry you may face when trading. Token Verification shows as "Verified ✅" or "Not Verified ⚠️" and Token2022 extensions appears as information pills. 
 
-More on Token Verification criteria [here](https://station.jup.ag/guides/general/get-your-token-on-jupiter#how-to-get-your-token-verified). 
+More on Token Verification criteria [here](/guides/12-general/4-get-your-token-on-jupiter.md#how-to-get-your-token-verified). 
 
 More on Token2022 extensions below:
 
