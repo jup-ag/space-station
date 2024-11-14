@@ -10,9 +10,6 @@ slug: /swap/tutorials/how-to-swap
     <meta name="twitter:card" content="summary" />
 </head>
 
-*Last Updated: 4 November 2024*
-
-
 <video controls style={{ maxWidth: '100%', height: 'auto' }}>
   <source src={require('../../../static/media/how-to-swap-jupiter.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
@@ -49,3 +46,5 @@ slug: /swap/tutorials/how-to-swap
 ![Routing Map](../../1-swap/img/routing-map.png)
 
 Order routing is like Jupiter's GPS for your tokens. You can find and open the **"1 Market"** or **"2 Routes + 2 Markets"** above the Swap Button. It will show you the exact order routing path for the quote. You can also see the routes and all markets that is used along the route.
+
+*Last Updated: 4 November 2024*
