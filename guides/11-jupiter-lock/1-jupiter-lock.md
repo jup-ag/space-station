@@ -17,7 +17,7 @@ Jupiter Lock (https://lock.jup.ag/) is an [open-sourced](https://github.com/jup-
 
 Jupiter Lock is currently in Beta, we aim to improve and introduce additional features. Let us know what you are interested in!
 
-Audited Twice by [OtterSec](https://github.com/jup-ag/jup-lock/blob/main/audits/OtterSec_2024_08_15.pdf) & [Sec3](https://github.com/jup-ag/jup-lock/blob/main/audits/jup-lock_report_final.pdf).
+Audited Twice by [OtterSec](https://github.com/jup-ag/jup-lock/blob/main/audits/OtterSec_2024_08_15.pdf) & [Sec3](https://github.com/jup-ag/jup-lock/blob/main/audits/Sec3_2024_08_05.pdf).
 
 Program code is available here: https://github.com/jup-ag/jup-lock
 
@@ -35,17 +35,15 @@ Feel free to submit PRs, suggestions, or reach out to us! If you need help with 
 
 ### How to Use Jupiter Lock
 
-:::danger Locks are irrevocable
-For beta, all locks are irrevocable and final. Make sure that you check all details before depositing into the contract to lock your tokens!
-:::
-
 **Create Token Lock**
 
-<video controls style={{ maxWidth: '65%', height: 'auto' }}>
+<video controls style={{ maxWidth: '50%', height: 'auto' }}>
 
   <source src={require('../static/media/lock-walkthrough.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+
+Video credits: [Aremia Vincenzo](https://twitter.com/Arimiyahu1)
 
 1. Navigate to https://lock.jup.ag/.
 2. Click `+ Create Token Lock` button.
@@ -54,11 +52,12 @@ For beta, all locks are irrevocable and final. Make sure that you check all deta
 5. Fill in the required details:
    1. Lock Title. Name this lock e.g. Team Tokens.
    2. Lock Amount. You can see the amount of token within your wallet.
-   3. Recipient Wallet Address. The tokens will be released to this wallet after the defined lock period.
+   3. Recipient Wallet Address. The tokens can be claimable by this wallet after the defined vesting period.
    4. Vesting Start Date. You can select any future date and time. This is based on your current timezone.
    5. Vesting Duration and intervals. Vesting Duration determines the entire vesting schedule from the Start Date.
    6. (Optional) Cliff Period & intervals. Cliff refers to a time period that has to pass before the tokens start vesting.
    7. Unlock Schedule. This determines how much tokens is being vested and unlocked within that regular time interval.
+   8. Who can cancel the contract and who can change the recipient. Choose None, Only Creator, Only Recipient or Either Creator or Recipient
 6. (Optional) Add more locks for the same token but with different parameters by clicking `Add Another Lock` button.
 7. Press `Proceed` to review the token lock contract. After confirming all the details, click `Create Contract` button.
 8. Navigate to Jupiter Lock home page is to view the lock that you’ve created!
@@ -72,18 +71,14 @@ For beta, all locks are irrevocable and final. Make sure that you check all deta
    1. Your Locked Tokens include tokens that others and yourself have locked and your wallet is a recipient.
    2. Locks You Created shows the locks that you created.
 3. Select the token of interest and check all locks associated, powered by Jupiter Lock. The details include:
-   1. Mint Address: The contract address of the token.
-   2. Locked Amount: Lifetime amount of token being locked via Jupiter Lock. This includes vested and claimed tokens, on top of the locked ones.
-   3. Total Supply: Total supply of the token. This provides perspective to the locked amount in relation to the total supply.
-   4. Lock Title: Title describes the lock and the locked quantity is shown right below the title.
-   5. Vesting Schedule: The schedule shows the full vesting period, including date and time.
-   6. Cliff Date: If a cliff date was added to the contract, it will show up here.
-   7. Recipient: The wallet address shown is the recipient wallet address indicated during creation.
-   8. Unlock Rate: The amount of token vested and unlocked will be shown against the time period.
-   9. Accumulated Amount: The amount of tokens unlocked tokens that have not been claimed.
-   10. Claimed: A progress bar to show the tokens claimed against the total tokens locked. A redirection to the explorer button is included to understand the account in greater detail.
-       1. If it hits 100% claimed, ‘All Claimed’ will be displayed.
-       2. If tokens have accumulated, the `Claim` button will light up for you to claim them.
+   1. Lock Title: Title describes the lock. Clicking on this will be directed to the explorer.
+   2. Unlocked/Total: Amounts of token vested and unlocked over the total locked amount.
+   3. Actions: The `Claim` button will light up if there's unlocked tokens to claim.
+   4. Vesting Schedule: The schedule shows the full vesting period, including date and time.
+   5. Cliff Date: If a cliff date was added to the contract, it will show up here.
+   6. Unlock Rate: The amount of token vested and unlocked will be shown against the time period.
+   7. Creator/Recipient: The wallet addresses of Creator and Recipient. 
+   8. Claim Progress: Progress bar showing the tokens claimed against locked amount.
 
 
 <details>
