@@ -148,7 +148,7 @@ There is only one `Pool` account for the JLP pool: [https://solscan.io/account/5
 * `poolApr`: Contains data related to the pool's APR / APY calculations.
   -  `lastUpdated`: The UNIX timestamp when the pool's APR data was last updated.
   -  `feeAprBps`: The pool's APR in BPS format. The APR is calculated weekly by dividing the pool's realized fees (minus the 25% collected by the protocol) by the total pool value, adjusting for the 1 week time period to annualize the rate.
-  -  `realizedFeeUsd`: The fees collected by the pool so far. This fee is reinvested back into the pool and is also used to to calculate the APR as mentioned above. `realizedFeeUsd` resets to zero when the fee is reinvested into the pool hence causing the APR value to fluctuate weekly.
+  -  `realizedFeeUsd`: The fees collected by the pool so far. This fee is reinvested back into the pool and is also used to calculate the APR as mentioned above. `realizedFeeUsd` resets to zero when the fee is reinvested into the pool hence causing the APR value to fluctuate weekly.
 
 ## `Custody` account
 

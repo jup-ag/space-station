@@ -100,7 +100,7 @@ Every Monday, the estimated APY figure is updated with the above calculation by 
 
 ### Fetching AUM and Calculating JLP Virtual Price
 
-The code snippets below show how to to fetch the AUM from the JLP pool onchain account, as well as calculating the JLP virtual price in real time:
+The code snippets below show how to fetch the AUM from the JLP pool onchain account, as well as calculating the JLP virtual price in real time:
 
 [Fetch pool AUM](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-pool-aum.ts)
 
@@ -178,7 +178,7 @@ JLP holders are exposed to risks that can impact their portfolio, such as:
   * Rapid price movements can negatively impact the JLP.
   * Extreme market events or black swan scenarios may cause correlations between assets to break down, potentially amplifying losses instead of mitigating them.
 * **Counterparty risk**
-  * The JLP pool poses a counterparty risk to JLP holders, as smart contract vulnerabilities or platform issues could potentially impact the ability to maintain or close hedge positions. That said, Jupiter works with leading firms in the field to audit and maintain our contracts to protect the Jupiter Perpetuals exchange and JLP holders.
+  * The JLP pool poses a counterparty risk to JLP holders, as smart contract vulnerabilities or platform issues could potentially impact the ability to maintain or close hedge positions. That said, Jupiter is working with leading firms in the field to audit and maintain our contracts to protect the Jupiter Perpetuals exchange and JLP holders.
 * **Opportunity cost**
   * Capital allocated to acquiring JLP could potentially earn higher returns if allocated elsewhere. In bull markets for example, JLP may underperform compared to simply holding the underlying assets.
 

@@ -175,7 +175,7 @@ In the JLP pool, each asset is assigned a **target weight**, which is set by the
 
 ![jlp-weightage](jlp-weightage.png)
 
-Jupiter works with [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chaoslabs.xyz/) to conduct regular risk assessments and market analyses in response to the evolving market conditions. These assessments are also discussed with the community before they are presented to the team for rollout. 
+Jupiter is working with [Gauntlet](https://www.gauntlet.xyz/) and [Chaos Labs](https://chaoslabs.xyz/) to conduct regular risk assessments and market analyses in response to the evolving market conditions. These assessments are also discussed with the community before they are presented to the team for rollout. 
 
 :::tip
  The risk assessments can be accessed via **[Jupiter's research forum](https://www.jupresear.ch/tag/risk)**.

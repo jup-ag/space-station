@@ -286,7 +286,7 @@ This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-pars
 :::
 
 :::info
-Jupiter works with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
+Jupiter is working with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
 :::
 
 ### Borrow Fee
