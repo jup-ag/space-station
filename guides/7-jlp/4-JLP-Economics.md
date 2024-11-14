@@ -98,6 +98,51 @@ You can view the current TVL and AUM Limit on the [JLP UI](https://jup.ag/perps-
 
 Every Monday, the estimated APY figure is updated with the above calculation by using the previous week's fees.
 
+### Fetching AUM and Calculating JLP Virtual Price
+
+The code snippets below show how to fetch the AUM from the JLP pool onchain account, as well as calculating the JLP virtual price in real time:
+
+[Fetch pool AUM](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-pool-aum.ts)
+
+[Calculate JLP virtual price](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-jlp-virtual-price.ts)
+
+### Calculate global unrealized PnL for longs
+
+The most accurate way to calculate the unrealized PnL for all open long positions is to loop through all open positions (by fetching them from onchain accounts) and use the unrealized PnL calculation shown in [calculating unrealized PnL](../8-perpetual-exchange/2-how-it-works.md#pnl).
+
+To get an estimate of the global unrealized PnL for longs, you can use the following calculation:
+
+```
+// 1) Get the custody account you're interested in calculating unrealized PnL for longs
+// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
+
+// 2) Get the `assets.guaranteedUsd` field which stores the value of `position.sizeUsd - position.collateralUsd` for
+// all open long positions for the custody. Note that a position's `sizeUsd` value is only updated when a trade is made, which
+// is the same for `guaranteedUsd` as well. It does *not* update in real-time when the custody's price changes
+
+guaranteedUsd = custody.assets.guaranteedUsd
+
+// 3) Multiply `custody.assets.locked` by the custody's current price to get the USD value of the tokens locked 
+// by the pool to pay off traders' profits
+
+lockedTokensUsd = custody.assets.locked * currentTokenPriceUsd
+
+// 4) Subtract `guaranteedUsd` from `lockedTokensUsd` to get the estimate of unrealized PnL for all open long positions. Note that
+// the final value is greater than the actual unrealized PNL as it includes traders' collateral
+
+globalUnrealizedLongPnl = lockedTokensUsd - guaranteedUsd
+```
+
+### Calculate global unrealized PnL for shorts
+
+The custody accounts store a `global_short_sizes` value that stores the USD value of all open short positions in the platform. The `global_short_average_prices` value stores the average price (USD) for all open short positions and is used together with `global_short_sizes` to get an estimate of the the global unrealized PNL for shorts, as shown below:
+
+```
+globalUnrealizedShortPnl = (custody.assets.globalShortSizes * (|custody.assets.globalShortAveragePrices - currentTokenPriceUsd|)) / custody.assets.globalShortAveragePrices)
+```
+
+The most accurate way is again to loop through all open positions and sum the unrealized PNL, as the calculation above also includes traders' collateral.
+
 ## Yield
 
 The JLP token adopts a growth-focused approach, similar to accumulating ETFs like VWRA or ARKK. Rather than distributing yield through airdrops or additional token mints, the JLP token's value is designed to appreciate over time. This appreciation is driven by the growth of the JLP pool's AUM, which is used to derive the virtual price as shown above.
@@ -133,7 +178,7 @@ JLP holders are exposed to risks that can impact their portfolio, such as:
   * Rapid price movements can negatively impact the JLP.
   * Extreme market events or black swan scenarios may cause correlations between assets to break down, potentially amplifying losses instead of mitigating them.
 * **Counterparty risk**
-  * The JLP pool poses a counterparty risk to JLP holders, as smart contract vulnerabilities or platform issues could potentially impact the ability to maintain or close hedge positions. That said, Jupiter works with leading firms in the field to audit and maintain our contracts to protect the Jupiter Perpetuals exchange and JLP holders.
+  * The JLP pool poses a counterparty risk to JLP holders, as smart contract vulnerabilities or platform issues could potentially impact the ability to maintain or close hedge positions. That said, Jupiter is working with leading firms in the field to audit and maintain our contracts to protect the Jupiter Perpetuals exchange and JLP holders.
 * **Opportunity cost**
   * Capital allocated to acquiring JLP could potentially earn higher returns if allocated elsewhere. In bull markets for example, JLP may underperform compared to simply holding the underlying assets.
 

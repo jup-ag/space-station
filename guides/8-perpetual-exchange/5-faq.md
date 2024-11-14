@@ -150,7 +150,7 @@ The prices sourced from the oracles are used as the mark price for:
 * Triggering TP / SL requests
 * Price charts
 
-Jupiter works with [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778) that provide fast, accurate, and reliable price data for the supported tokens on the Jupiter Perpetuals exchange.
+Jupiter is working with [Chaos' Edge Pricing Data](https://x.com/omeragoldberg/status/1834231003071774778) that provide fast, accurate, and reliable price data for the supported tokens on the Jupiter Perpetuals exchange.
 
 :::info
 Price data used in the Jupiter Perpetuals exchange may differ from other onchain and offchain price aggregators. Traders should use the Jupiter Perpetuals price chart and historical prices as the source of truth when making trade decisions.
