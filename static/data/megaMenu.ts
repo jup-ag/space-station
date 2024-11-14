@@ -40,7 +40,7 @@ export const guidesLinkItems: LinkGroup[] = [
         href: "/guides/jupsol/jupsol",
       },
       {
-        title: "Onboard",
+        title: "Onboard to Solana",
         href: "/guides/onboard",
       },
       {

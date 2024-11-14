@@ -1,7 +1,8 @@
 ---
 sidebar_label: "Onramp and CEX Transfers"
-description: Learn to convert Fiat to Solana easily with top services like Stripe & Banxa for optimal rates and smooth transfers.
+description: Learn to convert Fiat to Solana easily with top aggregated services.
 title: Fiat On-ramps to Solana
+slug: ./onramp
 ---
 
 <head>
@@ -23,6 +24,8 @@ Jupiter will never charge any additional fees for using the Onramp service and O
 
 ## Onramp UI
 
+Try it out [here](https://jup.ag/onboard/onramp)!
+
 ![Onramp UI](../img/bridge/bridge-3.png)
 
 1. **Onramp App Selector:** Selector to navigate to the Onramp application.
@@ -39,4 +42,6 @@ Once you click `Buy Button`, a new tab will open for you to complete the transac
 
 ## CEX Transfers to Solana
 
-Transferring assets to Solana has never been easier. If you are looking to transfer assets from a Centralized Exchange (CEX), please refer to the steps provided [here](https://jup.ag/bridge/cex). Each CEX can have different requirements for external transfers, so please refer to their respective Guide as well.
+Try it out [here](https://jup.ag/onboard/cex)!
+
+Transferring assets to Solana has never been easier. If you are looking to transfer assets from a Centralized Exchange (CEX). Each CEX can have different requirements for external transfers, so please refer to their respective guides.
