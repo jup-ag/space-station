@@ -34,7 +34,7 @@ Read: [How to Trade Safely](./2-tutorials/3-how-to-trade-safely.md)
 
 You get an abstracted swap experience with Auto mode by setting your Max Slippage and MEV protection. Jupiter will do the rest by configuring the best transaction fees and slippage based on your trade, heuristics, and market conditions. 
 
-For folks who wants more fine-tuned control e.g. choosing Fixed Slippage to [Dynamic Slippage](./3-how-swap-works.md), we have Manual mode for you.
+For folks who wants more fine-tuned control e.g. choosing Fixed Slippage to [Dynamic Slippage](https://www.jupresear.ch/t/dynamic-slippage/21946), we have Manual mode for you.
 
 Read: [How to Configure Settings](./2-tutorials/2-how-to-configure-settings.md)
 
