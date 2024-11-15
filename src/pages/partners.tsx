@@ -48,7 +48,7 @@ const vybe = '/img/defi/vybe.svg';
 const coinhall = '/img/defi/coinhall.svg';
 const vaultka = '/img/defi/vaultka.png';
 const adrastea = '/img/defi/adrastea.svg';
-const dextab = 'img/dex_amm/dextab.png';
+const dextab = 'img/defi/dextab.png';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
