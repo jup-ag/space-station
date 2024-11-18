@@ -326,7 +326,7 @@ Jito achieves this through features like low-latency transaction streaming, whic
 
 Jupiter also includes MEV protection on our frontend, sending your transaction directly to the Jito validator.
 
-More info on Jito tip & MEV protection: https://docs.jito.wtf/en/latest/lowlatencytxnsend.html#getting-started.
+More info on Jito tip & MEV protection: https://docs.jito.wtf/.
 
 To automatically include Jito tips in your Jupiter swap transaction:
 
