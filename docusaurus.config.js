@@ -123,16 +123,36 @@ const config = {
       {
         redirects: [
           {
+            to: "/guides/swap/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/metropolis-features",
+          },
+          {
+            to: "/guides/swap/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/how-swap-works",
+          },
+          {
+            to: "/guides/swap/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/metis-routing",
+          },
+          {
+            to: "/guides/swap/how-swap-works",
+            from: "/guides/jupiter-swap/swap",
+          },
+          {
+            to: "/guides/swap/tutorials/earn-referral-fees",
+            from: "/guides/jupiter-swap/how-referral-works",
+          },
+          {
+            to: "/guides/swap/how-swap-works",
+            from: "/guides/jupiter-swap/how-swap-works/metropolis",
+          },
+          {
             to: "/guides/perpetual-exchange/overview",
             from: "/labs/perpetual-exchange/overview",
           },
           {
             to: "/guides/perpetual-exchange/how-it-works",
             from: "/guides/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/jupiter-swap/how-swap-works/metropolis-features",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis",
           },
           {
             to: "/guides/perpetual-exchange/overview",
@@ -157,10 +177,6 @@ const config = {
           {
             to: "/guides/general/get-your-token-on-jupiter",
             from: "/docs/get-your-token-onto-jup",
-          },
-          {
-            to: "/docs/limit-order",
-            from: "/docs/limit-order/limit-order-api",
           },
           {
             to: "/docs/limit-order",

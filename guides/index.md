@@ -43,7 +43,7 @@ Here's a list of all our official links. Please always double check the URL matc
 - **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview) and the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
 - **Ape:** Discover how the vault model, auto-retry, and removal of wallet signature enables fast and secure trades. 
 - **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
-- **Bridge Comparator:** If you're coming to Solana for the first time, we care to provide a seamless experience for you. Read our guide on Bridge Comparator, onramp, and CEX transferring.    
+- **Onboard:** If you're coming to Solana for the first time, we care to provide a seamless experience for you. Read our guide on Bridge, Onramp, and CEX transferring.    
 - **General Guides:** Discover general guides relating to the Solana ecosystem such as personal security, using a block explorer to verify swaps, actions & blinks, token guide for creators, the Jupiter Media Kit, and FAQs about the Jupiter Platform.
 
 Welcome to the community, J4J (JUP 4 JUP)!
