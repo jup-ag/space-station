@@ -10,7 +10,7 @@ slug: /apepro/limit-order
     <meta name="twitter:card" content="summary" />
 </head>
 
-ApePro Limit Order (v1) allows users to set a Target Price/Mcap (to be referred to interchangeably) for a trade to become automatically be executed once specified conditions are met. Once the order is placed, Ape’s Keeper will continuously monitor the target level and execute the swap when the market price reaches your specified price.
+ApePro Limit Order (v1) allows users to set a Target Price/Mcap (to be referred to interchangeably) for a trade to be automatically executed once specified conditions are met. Once the order is placed, Ape’s Keeper will continuously monitor the target level and execute the swap when the market price reaches your specified price.
 
 ## Understanding Limit Orders on ApePro
 
