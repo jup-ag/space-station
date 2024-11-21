@@ -9,6 +9,10 @@ title: "Ecosystem Master Token List"
     <meta name="twitter:card" content="summary" />
 </head>
 
+:::warning
+The current version of Token API will be sunsetted/deprecated, as we are currently working on improvements for it over the next few weeks.
+:::
+
 ### API Endpoints
 
 <details>
