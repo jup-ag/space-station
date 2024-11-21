@@ -22,12 +22,47 @@ Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal prov
 
 Provided with the code are several templates to get you started and auto generated code snippets.
 
+<details>
+  <summary>
+    <div>
+      <div><b>It is as easy as this!</b></div>
+    </div>
+  </summary>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jupiter Terminal Integration</title>
+  <!-- Preload script -->
+  <script src="https://terminal.jup.ag/main-v2.js" data-preload></script>
+</head>
+<body>
+  <!-- Container for the terminal -->
+  <div id="jupiter-terminal"></div>
+
+  <!-- Initialize the widget -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      window.Jupiter.init({
+        containerId: 'jupiter-terminal', // ID of the container div
+        endpoint: 'https://api.mainnet-beta.solana.com', // Solana RPC endpoint
+      });
+    });
+  </script>
+</body>
+</html>
+
+```
+</details>
+
 :::tip Jupiter Terminal Links
 - Demo: https://terminal.jup.ag/
 - Repo: https://github.com/jup-ag/terminal
 - Detailed implementation guide: [Get a step-by-step walkthrough](./terminal-integration-guide)
 :::
-
 
 ## Core Features
 
