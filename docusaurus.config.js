@@ -133,54 +133,6 @@ const config = {
       }),
     ],
     [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "spot",
-        path: "guides-spot",
-        routeBasePath: "guides-spot",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "perps",
-        path: "guides-perps",
-        routeBasePath: "guides-perps",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "ape",
-        path: "guides-ape",
-        routeBasePath: "guides-ape",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "test",
-        path: "guides-test",
-        routeBasePath: "guides-test",
-        sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
-      }),
-    ],
-    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
@@ -337,16 +289,6 @@ const config = {
           {
             to: "/partners",
             label: "Partners",
-            position: "left",
-          },
-          {
-            to: "/guides-test",
-            label: "guides-test",
-            position: "left",
-          },
-          {
-            to: "/guides-test",
-            label: "guides-test",
             position: "left",
           },
           {
