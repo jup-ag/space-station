@@ -85,6 +85,20 @@ const config = {
           routeBasePath: "api-v6",
         },
         docs: {
+          id: 'docs',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Latest',
+              path: '',
+              badge: false,
+            },
+            old: {
+              label: 'Old',
+              path: 'old',
+              banner: 'unmaintained',
+            }
+          },
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
