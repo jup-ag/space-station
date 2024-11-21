@@ -29,6 +29,10 @@ Provided with the code are several templates to get you started and auto generat
     </div>
   </summary>
 
+Copy paste this into a `.html` file and change your directory to that file.
+
+Using for example `npx http-server` and you can view in your localhost
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
