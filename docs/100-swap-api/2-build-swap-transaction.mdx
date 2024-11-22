@@ -1,0 +1,290 @@
+---
+sidebar_label: "Build Swap Transaction"
+description: "Jupiter Swap API helps you to build your swap transaction using the quote."
+title: "Build Swap Transaction"
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<head>
+    <title>Jupiter Swap API helps you to build your swap transaction using the quote.</title>
+    <meta name="twitter:card" content="summary" />
+</head>
+
+The Swap API is one of the ways for you to interact with the Jupiter Swap Aggregator program. Before you send a transaction to the network, you will need to build the transaction that defines the instructions to execute and accounts to read/write to. 
+
+It can be complex to handle this yourself, but good news! Most of our APIs and SDKs just handles it for you, so you get a response with the transaction to be prepared and sent to the network.
+
+:::tip Use Swap API to handle it for you or ...
+
+If you are looking to interact with the Jupiter Swap Aggregator program in a different way, check out the other guides:
+
+To compose with instructions and build your own transaction, [read how to use the `/swap-instructions` in this section](#build-your-own-transaction-with-instructions).
+
+To interact with your own Solana program, [read how to use the **Flash Fill method** or **Cross Program Invocation** in this section](#build-your-own-transaction-with-flash-fill-or-cpi).
+:::
+
+## Let’s Get Started
+
+In this guide, we will pick up from where [**Get Quote** guide](./1-get-quote.md) has left off.
+
+If you have not set up your environment to use the necessary libraries, the RPC connection to the network and successfully get a quote from the Quote API, please get that set up to get started or get a quote.
+
+## Swap API
+
+The root URL of the Swap API is as such.
+
+```markdown
+https://api.jup.ag/swap
+```
+
+From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that can be needs to be prepared and signed before sending to the network.
+
+## Get Serialized Transaction
+
+Using the root URL and parameters to pass in, it is as simple as the example code below!
+
+:::tip Optimizing for Transaction Landing is super super important!
+This code block includes additional parameters that our Swap API supports, such as estimating compute units, priority fees and slippage, to optimize for transaction landing.
+
+To understand how these parameters help, the next step, [Send Swap Transaction guide](./3-send-swap-transaction.md) will discuss them.
+:::
+
+```jsx
+const swapResponse = await (
+await fetch('https://api.jup.ag/swap', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json',
+    // 'x-api-key': '' // enter api key here
+    },
+    body: JSON.stringify({
+    quoteResponse,
+    userPublicKey: wallet.publicKey.toString(),
+    
+    // ADDITIONAL PARAMETERS TO OPTIMIZE FOR TRANSACTION LANDING
+    // See next guide to optimize for transaction landing
+    dynamicComputeUnitLimit: true,
+    dynamicSlippage: true,
+    prioritizationFeeLamports: {
+          priorityLevelWithMaxLamports: {
+            maxLamports: 1000000,
+            priorityLevel: "veryHigh"
+          }
+        }
+    })
+})
+).json();
+
+console.log(swapResponse);
+```
+
+From the above example, you should see this response.
+
+```json
+{
+    swapTransaction: 'AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAGDkS+3LuGTbs......+/oD9qb31dH6i0QZ2IHELXUX3Y1YeW79p9Stkqk12z4yvZFJiQ4GCQwLBwYQBgUEDggNTQ==',
+    lastValidBlockHeight: 279632475,
+    prioritizationFeeLamports: 9999,
+    computeUnitLimit: 388876,
+    prioritizationType: {
+        computeBudget: { 
+            microLamports: 25715,
+            estimatedMicroLamports: 785154 
+        }
+    },
+    dynamicSlippageReport: {
+        slippageBps: 50,
+        otherAmount: 20612318,
+        simulatedIncurredSlippageBps: -18,
+        amplificationRatio: '1.5',
+        categoryName: 'lst',
+        heuristicMaxSlippageBps: 100
+    },
+    simulationError: null
+}
+```
+
+## What’s Next
+
+Now, you are able to get a quote and use our Swap API to build the swap transaction for you. Next steps is to proceed to prepare and sign the transaction and send the signed transaction to the network.
+
+**[Let’s go sign and send!](./3-send-swap-transaction.md)**
+
+---
+
+## Additional Resources
+
+### Build Your Own Transaction With Instructions
+
+If you may prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>/swap-instructions code snippet</b>
+            </div>
+        </div>
+    </summary>
+Example code snippet of using `/swap-instruction`
+
+```jsx
+const instructions = await (
+    await fetch('https://quote-api.jup.ag/v6/swap-instructions', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        quoteResponse,
+        userPublicKey: wallet.publicKey.toString(),
+    })
+    })
+).json();
+
+if (instructions.error) {
+    throw new Error("Failed to get swap instructions: " + instructions.error);
+}
+
+const {
+    tokenLedgerInstruction, // If you are using `useTokenLedger = true`.
+    computeBudgetInstructions, // The necessary instructions to setup the compute budget.
+    setupInstructions, // Setup missing ATA for the users.
+    swapInstruction: swapInstructionPayload, // The actual swap instruction.
+    cleanupInstruction, // Unwrap the SOL if `wrapAndUnwrapSol = true`.
+    addressLookupTableAddresses, // The lookup table addresses that you can use if you are using versioned transaction.
+} = instructions;
+
+const deserializeInstruction = (instruction) => {
+    return new TransactionInstruction({
+    programId: new PublicKey(instruction.programId),
+    keys: instruction.accounts.map((key) => ({
+        pubkey: new PublicKey(key.pubkey),
+        isSigner: key.isSigner,
+        isWritable: key.isWritable,
+    })),
+    data: Buffer.from(instruction.data, "base64"),
+    });
+};
+
+const getAddressLookupTableAccounts = async (
+    keys: string[]
+): Promise<AddressLookupTableAccount[]> => {
+    const addressLookupTableAccountInfos =
+    await connection.getMultipleAccountsInfo(
+        keys.map((key) => new PublicKey(key))
+    );
+
+    return addressLookupTableAccountInfos.reduce((acc, accountInfo, index) => {
+    const addressLookupTableAddress = keys[index];
+    if (accountInfo) {
+        const addressLookupTableAccount = new AddressLookupTableAccount({
+        key: new PublicKey(addressLookupTableAddress),
+        state: AddressLookupTableAccount.deserialize(accountInfo.data),
+        });
+        acc.push(addressLookupTableAccount);
+    }
+
+    return acc;
+    }, new Array<AddressLookupTableAccount>());
+};
+
+const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
+
+addressLookupTableAccounts.push(
+    ...(await getAddressLookupTableAccounts(addressLookupTableAddresses))
+);
+
+const blockhash = (await connection.getLatestBlockhash()).blockhash;
+const messageV0 = new TransactionMessage({
+    payerKey: payerPublicKey,
+    recentBlockhash: blockhash,
+    instructions: [
+    // uncomment if needed: ...setupInstructions.map(deserializeInstruction),
+    deserializeInstruction(swapInstructionPayload),
+    // uncomment if needed: deserializeInstruction(cleanupInstruction),
+    ],
+}).compileToV0Message(addressLookupTableAccounts);
+const transaction = new VersionedTransaction(messageV0);
+```
+</details>
+
+### Build Your Own Transaction With Flash Fill Or CPI
+
+If you may prefer to interact with the Jupiter Swap Aggregator program with your own on-chain program. There are 2 ways to do it, typically on-chain program call **Cross Program Invocation (CPI)** to interact with each other, but we recommend using the **Flash Fill method** built by Jupiter.
+
+:::tip Why Flash Fill?
+
+With Jupiter's complex routing, best prices comes at a cost. It often means more compute resources and accounts are required as it would route across multiple DEXes in one transaction.
+
+Solana transactions are limited to 1232 bytes, Jupiter is using Address Lookup Tables (ALTs) to include more accounts in one transaction. However, the CPI method cannot use ALTs, which means when you add more accounts to a Jupiter Swap transaction, it will likely fail if it exceeds the transaction size limits.
+
+**Flash Fill allows the use of Versioned Transaction and ALTs**, hence, reducing the total accounts used for a Jupiter Swap transaction.
+:::
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Flash Fill and CPI references</b>
+            </div>
+        </div>
+    </summary>
+    <Tabs>
+        <TabItem value="flash-fill" label="Flash Fill" default>
+            <strong>A Flash Fill transaction will be composed of these instructions:</strong>
+            <ol>
+                <li>Borrow enough SOL for opening the wSOL account from this program.</li>
+                <li>Create the wSOL account for the borrower.</li>
+                <li>Swap X token to wSOL.</li>
+                <li>Close the wSOL account and send it to the borrower.</li>
+                <li>Repay the SOL for opening the wSOL account back to this program.</li>
+            </ol>
+            <strong>Links and resources:</strong>
+            <ul>
+                <li><a href="https://github.com/jup-ag/sol-swap-flash-fill">Github repo</a></li>
+                    <ul>
+                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/programs/flash-fill/src/lib.rs">Program code</a></li>
+                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/cli/flash-fill.ts">Client code</a></li>
+                    </ul>
+                <li><a href="https://solscan.io/tx/4psWiUFGdRhKqi1UXSWrpoM3RCJWAXpz6CTpsd5fZwjr8nEpLiZVuiyaERj95hUNnm6dhfxircLgAqCbHV3wCVpT">Example transaction</a></li>
+            </ul>
+        </TabItem>
+        <TabItem value="cross-program-invocation" label="Cross Program Invocation" default>
+            <strong>A CPI transaction will be composed of these instructions:</strong>
+            <ol>
+                <li>Borrow enough SOL from the program to open a wSOL account that the program owns.</li>
+                <li>Swap X token from the user to wSOL on Jupiter via CPI.</li>
+                <li>Close the wSOL account and send it to the program.</li>
+                <li>The program then transfers the SOL back to the user.</li>
+            </ol>
+            <strong>Links and resources:</strong>
+            <ul>
+                <li><a href="https://github.com/jup-ag/sol-swap-cpi">Github repo</a></li>
+                    <ul>
+                        <li><a href="https://github.com/jup-ag/sol-swap-cpi/blob/main/programs/swap-to-sol/src/lib.rs">Program code</a></li>
+                        <li><a href="https://github.com/jup-ag/sol-swap-cpi/blob/main/cli/swap-to-sol.ts">Client code</a></li>
+                    </ul>
+                <li><a href="https://solscan.io/tx/GX1rh9y15mn2jqkQ5mosPqkg8YYFWQZqvihR95aRpPQeEMZhhPqWzMUbN1iCqYkubqyB2fLW3UGR4j5w28srrtm">Example transaction</a></li>
+            </ul>
+            <details>
+                <summary>
+                    <div>
+                        <div>
+                            <b>To ease integration via CPI, you may add the following crate <a href="https://github.com/jup-ag/jupiter-cpi">jupiter-cpi</a> to your program.</b>
+                        </div>
+                    </div>
+                </summary>
+                In cargo.toml:
+                <pre><code>[dependencies]
+                jupiter-cpi = { git = "https://github.com/jup-ag/jupiter-cpi", rev = "5eb8977" }
+                ... other dependencies
+                </code></pre>
+            </details>
+        </TabItem>
+    </Tabs>
+</details>
+
+
