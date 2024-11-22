@@ -110,4 +110,4 @@ This will start the API server without Openbook as part of routing. You can also
 We are working with some Solana RPC partners in the ecosystem as well so that you can get a paid hosted API ran by them.
 
 - QuickNode: https://marketplace.quicknode.com/add-on/metis-jupiter-v6-swap-api
-- Reach out to Triton: [Triton](https://t.me/SteveCleanBrook)
+- Reach out to Triton: [Triton](https://forms.gle/rT6nPbUE4toyPfbb7)
