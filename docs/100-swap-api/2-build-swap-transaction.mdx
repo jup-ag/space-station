@@ -277,11 +277,54 @@ Solana transactions are limited to 1232 bytes, Jupiter is using Address Lookup T
                         </div>
                     </div>
                 </summary>
-                In cargo.toml:
-                <pre><code>[dependencies]
-                jupiter-cpi = { git = "https://github.com/jup-ag/jupiter-cpi", rev = "5eb8977" }
-                ... other dependencies
-                </code></pre>
+                In cargo.toml<br />
+                <pre>
+                    <code className="toml">
+{`[dependencies]
+jupiter-cpi = { git = "https://github.com/jup-ag/jupiter-cpi", rev = "5eb8977" }
+... other dependencies
+`}
+                    </code>
+                </pre>
+                In your code<br />
+                <pre>
+                    <code className="rust">
+{`use jupiter_cpi;\n
+...\n
+let signer_seeds: &[&[&[u8]]] = &[...];\n
+// Pass accounts to context one-by-one and construct accounts here.
+// Or in practise, it may be easier to use remaining_accounts https://book.anchor-lang.com/anchor_in_depth/the_program_module.html\n
+let accounts = jupiter_cpi::cpi::accounts::SharedAccountsRoute {
+    token_program: ,
+    program_authority: ,
+    user_transfer_authority: ,
+    source_token_account: ,
+    program_source_token_account: ,
+    program_destination_token_account: ,
+    destination_token_account: ,
+    source_mint: ,
+    destination_mint: ,
+    platform_fee_account: ,
+    token_2022_program: ,
+};\n
+let cpi_ctx = CpiContext::new_with_signer(
+    ctx.accounts.jup.to_account_info(),
+    accounts,
+    signer_seeds,
+);\n
+jupiter_cpi::cpi::shared_accounts_route(
+    cpi_ctx,
+    id,
+    route_plan,
+    in_amount,
+    quoted_out_amount,
+    slippage_bps,
+    platform_fee_bps,
+)?;\n
+...
+`}
+                    </code>
+                </pre>
             </details>
         </TabItem>
     </Tabs>
