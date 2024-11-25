@@ -9,7 +9,7 @@ title: "V6 Swap API"
 </head>
 
 :::info
-If you have problems landing transactions, read [Landing Transactions on Solana](/docs/apis/landing-transactions).
+If you have problems landing transactions, read [Landing Transactions on Solana](/docs/old/apis/landing-transactions).
 :::
 
 Jupiter APIs is the easiest way for developers to access liquidity on Solana. Simply pass in the desired pairs, amount, and slippage, and the API will return the serialized transactions needed to execute the swap, which can then be passed into the Solana blockchain with the required signatures.
@@ -57,7 +57,7 @@ const connection = new Connection('https://neat-hidden-sanctuary.solana-mainnet.
 ```
 
 :::tip
-Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore. For more information about RPC endpoints see the [official Solana Documentation](https://solana.com/docs/core/clusters) to learn more about their public RPC endpoints.
+Always make sure that you are using your own RPC endpoint. The RPC endpoint used by the connection object in the above example may not work anymore. For more information about RPC endpoints see the [official Solana Documentation](https://solana.com/docs/oldcore/clusters) to learn more about their public RPC endpoints.
 :::
 
 #### 3. Setup your wallet
@@ -576,4 +576,4 @@ The backend returns a response with a serialized transaction that is already usi
 * Javascript/Typescript: [https://github.com/jup-ag/jupiter-quote-api-node](https://github.com/jup-ag/jupiter-quote-api-node)
 * Rust: [https://github.com/jup-ag/jupiter-api-rust-example](https://github.com/jup-ag/jupiter-api-rust-example)
 
-Having issues? Head to the [Troubleshooting](/docs/apis/troubleshooting) section for some help.
+Having issues? Head to the [Troubleshooting](/docs/old/apis/troubleshooting) section for some help.

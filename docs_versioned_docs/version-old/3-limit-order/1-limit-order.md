@@ -37,7 +37,7 @@ We recommend **NodeJS >= 18** for native `fetch` support.
 
 You can use any of these package managers:
 
-- **bun** — [bun automatically reads `.env` files](https://bun.sh/docs/runtime/env)
+- **bun** — [bun automatically reads `.env` files](https://bun.sh/docs/oldruntime/env)
 - **npm**  
 - **pnpm**  
 - **yarn**

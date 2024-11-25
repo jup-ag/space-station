@@ -99,16 +99,18 @@ const config = {
               banner: 'unmaintained',
             }
           },
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebars-docs.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          sidebarCollapsed: true,
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/docs.css"),
+          ],
         },
         proxy: {
           "/proxy": {
@@ -191,10 +193,6 @@ const config = {
           {
             to: "/guides/general/get-your-token-on-jupiter",
             from: "/docs/get-your-token-onto-jup",
-          },
-          {
-            to: "/docs/limit-order",
-            from: "/docs/limit-order/limit-order-with-sdk",
           },
           {
             to: "/guides/general/get-your-token-on-jupiter",

@@ -18,7 +18,7 @@ Using the Solana.Unity-SDK, game developers can effortlessly incorporate Jupiter
 Within the SDK, the Jupiter Payments API is also available, enabling you to utilize Jupiter + SolanaPay for facilitating user payments with any SPL token, allowing pricing in USDC or other tokens.
 
 ## Documentation
-For detailed documentation, please visit: [Solana Unity SDK Jupiter Documentation](https://solana.unity-sdk.gg/docs/jupiter)
+For detailed documentation, please visit: [Solana Unity SDK Jupiter Documentation](https://solana.unity-sdk.gg/docs/oldjupiter)
 
 ## Demos 
 - Explore this demo video showcasing an in-game swap powered by the Jupiter integration: [Watch Demo Video](https://youtu.be/nCceV53thjY)

@@ -211,7 +211,7 @@ Similar to Jupiter, Jupiter Terminal supports fee for integrators.
 
 There are no protocol fees on Jupiter, but integrators can introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. 20 bps for 0.2% of the token output.
 
-Refer to [Adding your own fees](/docs/APIs/adding-fees) docs for more details.
+Refer to [Adding your own fees](/docs/old/APIs/adding-fees) docs for more details.
 
 _Note: You will need to create the Token fee accounts to collect the platform fee._
 
@@ -260,7 +260,7 @@ window.Jupiter.close();
 The Jupiter Token List API is an open, collaborative, and dynamic token list to make trading on Solana more transparent and safer for users and developers.
 It is true by default to ensure that only validated tokens are shown.
 
-Learn more at: https://station.jup.ag/docs/token-list/token-list-api
+Learn more at: https://station.jup.ag/docs/old/token-list/token-list-api
 
 ---
 

@@ -135,7 +135,7 @@ If no orders are specified, the API would return the unsigned transactions to ca
 
 ## View open orders
 
-This proxies the [getProgramAccounts](https://solana.com/docs/rpc/http/getprogramaccounts) RPC method and returns all order (accounts) associated to the specified wallet.
+This proxies the [getProgramAccounts](https://solana.com/docs/oldrpc/http/getprogramaccounts) RPC method and returns all order (accounts) associated to the specified wallet.
 
 <details>
   <summary>

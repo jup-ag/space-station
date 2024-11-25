@@ -46,7 +46,7 @@ The Token Ledger caters to a wide range of use cases, which include but are not 
 - Facilitating the exchange of NFTs for tokens other than SOL.
 
 Read more about the Token Ledger:
-https://station.jup.ag/docs/apis/swap-api#using-token-ledger-instruction
+https://station.jup.ag/docs/old/apis/swap-api#using-token-ledger-instruction
 
 
 ## Safety Notifications

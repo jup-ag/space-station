@@ -34,7 +34,7 @@ description: "Discover FAQs on Jupiter Swap, DCA, and more. Get quick answers an
 
 ### How do I integrate Jupiter swap into my protocol / dApp? 
 
-Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/apis/swap-api), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
+Protocols / Projects are free to integrate Jupiter swap with [Swap API](/docs/old/apis/swap-api), Jupiter operates in a decentralized way. That said, we encourage protocols/ projects to reach out to our team when the integration is done and live, we are happy to work together on co-marketing and getting the words out.
 
 ----
 
@@ -99,7 +99,7 @@ A few scenarios or cases where the order is not being fulfill
 
 ### How do I get my new token to the strict list / remove the unknown tag?
 
-- To get on to the Jupiter Strict Token List/ removing the `unknown` token tag through our public [Token verification](/docs/token-list/token-list-api#community-validation-for-strict-mode-beta) process in [Jupiter Token List Public Repo](https://github.com/jup-ag/token-list).
+- To get on to the Jupiter Strict Token List/ removing the `unknown` token tag through our public [Token verification](/docs/old/token-list/token-list-api#community-validation-for-strict-mode-beta) process in [Jupiter Token List Public Repo](https://github.com/jup-ag/token-list).
 
 ----
 

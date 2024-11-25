@@ -525,4 +525,4 @@ The Jupiter Limit Order's project account for the Referral Program is `45ruCyfdR
 
 ## Referral
 
-Check out the [referral program](/docs/apis/adding-fees) for Limit Order.
+Check out the [referral program](/docs/old//apis/adding-fees) for Limit Order.

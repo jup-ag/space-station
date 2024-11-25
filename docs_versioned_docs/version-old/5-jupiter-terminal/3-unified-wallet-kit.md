@@ -74,7 +74,7 @@ const ExampleBaseOnly = () => {
         },
         notificationCallback: WalletNotification,
         walletlistExplanation: {
-          href: 'https://station.jup.ag/docs/additional-topics/wallet-list',
+          href: 'https://station.jup.ag/docs/old/additional-topics/wallet-list',
         },
       }}
     >

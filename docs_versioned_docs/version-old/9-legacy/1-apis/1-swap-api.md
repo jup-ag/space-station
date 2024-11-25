@@ -10,7 +10,7 @@ title: "V4 Swap API"
 </head>
 
 :::tip
-We recommend checking out our [v6 API](/docs/APIs/swap-api) for more reliability, performance and better pricing.
+We recommend checking out our [v6 API](/docs/old/APIs/swap-api) for more reliability, performance and better pricing.
 :::
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:
@@ -38,7 +38,7 @@ All Jupiter swaps are now only a single transaction. Not all wallets support Ver
 :::
 
 :::info API Documentation
- [Swagger](https://quote-api.jup.ag/v4/docs/static/index.html)
+ [Swagger](https://quote-api.jup.ag/v4/docs/oldstatic/index.html)
 :::
 
 ### Guide
@@ -113,7 +113,7 @@ const swappableOutputForSol = generatedRouteMap['So11111111111111111111111111111
 
  ### Retrieve an indexed route map for the possible token pairs you can swap between.
 
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
+ See Swagger for more details: https://quote-api.jup.ag/v4/docs/oldstatic/index.html
   </details>
 
 
@@ -172,7 +172,7 @@ const routes = data;
   </summary>
 
  ### Get the top 3 swap routes for a token trade pair sorted by largest output token amount
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
+ See Swagger for more details: https://quote-api.jup.ag/v4/docs/oldstatic/index.html
 
 ### Request Parameters
 
@@ -234,7 +234,7 @@ const { swapTransaction } = transactions;
   </summary>
 
  ### Get the serialized swap transactions for the swap route provided.
- See Swagger for more details: https://quote-api.jup.ag/v4/docs/static/index.html
+ See Swagger for more details: https://quote-api.jup.ag/v4/docs/oldstatic/index.html
 
 ### Request Parameters
 

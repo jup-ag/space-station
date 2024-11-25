@@ -122,7 +122,7 @@ For example, if a trader deposits $100 USD worth of SOL to open a position, thei
 
 ### 8. Why do long and short positions use different collateral tokens?
 
-Traders can deposit any [SPL token supported by Jupiter Swap](https://station.jup.ag/docs/token-list) as the initial margin to open a position or to deposit collateral for an existing open position.&#x20;
+Traders can deposit any [SPL token supported by Jupiter Swap](https://station.jup.ag/docs/old/token-list) as the initial margin to open a position or to deposit collateral for an existing open position.&#x20;
 
 The deposited tokens will then be converted to the collateral tokens for the position (SOL / wETH / wBTC for long positions, USDC / USDT stablecoin for short positions).
 

@@ -14,7 +14,7 @@ Jupiter Terminal is an open-sourced, lite version of Jupiter that provides end-t
 
 :::tip Jupiter Terminal Links
 - [Demo](https://terminal.jup.ag/): See all available modes
-- [Developer Docs](/docs/jupiter-terminal/jupiter-terminal): Jupiter Terminal in detail
+- [Developer Docs](/docs/old/jupiter-terminal/jupiter-terminal): Jupiter Terminal in detail
 - [Repo](https://github.com/jup-ag/terminal)
 :::
 

@@ -124,5 +124,5 @@ transaction.message = message.compileToV0Message(addressLookupTableAccounts);
 ```
 
 :::tip
-If you want to add your own fees, check out: [Adding Your Own Fees](/docs/legacy/apis/adding-fees)
+If you want to add your own fees, check out: [Adding Your Own Fees](/docs/old/legacy/apis/adding-fees)
 :::

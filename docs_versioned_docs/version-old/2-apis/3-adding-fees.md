@@ -83,7 +83,7 @@ curl -G "https://quote-api.jup.ag/v6/quote" \
 
 </details>
 
-[See this for a guide on how to get the route for a swap!](/docs/apis/swap-api#5-get-the-route-for-a-swap)
+[See this for a guide on how to get the route for a swap!](/docs/old/apis/swap-api#5-get-the-route-for-a-swap)
 
 ```js
 // Function to swap SOL to USDC with input 0.1 SOL and 0.5% slippage
@@ -173,7 +173,7 @@ curl -X POST "https://quote-api.jup.ag/v6/swap" \
 
 </details>
 
-[Guide for getting the serialized transactions to perform the swap](/docs/apis/swap-api#6-get-the-serialized-transactions-to-perform-the-swap)
+[Guide for getting the serialized transactions to perform the swap](/docs/old/apis/swap-api#6-get-the-serialized-transactions-to-perform-the-swap)
 
 ```js
 // Function to find the fee account and get serialized transactions for the swap

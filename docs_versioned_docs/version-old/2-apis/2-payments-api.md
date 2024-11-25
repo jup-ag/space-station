@@ -268,7 +268,7 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
   // Get the recent blockhash
   // Using 'finalized' commitment to ensure the blockhash is final and secure
   // You may experiment with 'processed' or 'confirmed' for fetching blockhash to increase speed
-  // Reference: https://solana.com/docs/rpc/http/getlatestblockhash
+  // Reference: https://solana.com/docs/oldrpc/http/getlatestblockhash
   const bhInfo = await connection.getLatestBlockhashAndContext({ commitment: "finalized" });
   transaction.recentBlockhash = bhInfo.value.blockhash;
   transaction.feePayer = swapUserKeypair.publicKey;
@@ -279,7 +279,7 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
   // Simulate the transaction to ensure it will succeed
   // Using 'finalized' commitment for the simulation to match the security level of the actual send
   // You may experiment with 'confirmed' or 'processed' to simulate faster, but keep in mind the risks
-  // Reference: https://solana.com/docs/core/transactions#commitment
+  // Reference: https://solana.com/docs/oldcore/transactions#commitment
   const simulation = await connection.simulateTransaction(transaction, { commitment: "finalized" });
   if (simulation.value.err) {
     throw new Error(`Simulation failed: ${simulation.value.err.toString()}`);
@@ -290,7 +290,7 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
     const signature = await connection.sendTransaction(transaction, {
       // NOTE: Adjusting maxRetries to a lower value for trading, as 20 retries can be too much
       // Experiment with different maxRetries values based on your tolerance for slippage and speed
-      // Reference: https://solana.com/docs/core/transactions#retrying-transactions
+      // Reference: https://solana.com/docs/oldcore/transactions#retrying-transactions
       maxRetries: 5,
       skipPreflight: true,
       preflightCommitment: "finalized",
@@ -298,7 +298,7 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
 
     // Confirm the transaction
     // Using 'finalized' commitment to ensure the transaction is fully confirmed
-    // Reference: https://solana.com/docs/core/transactions#confirmation
+    // Reference: https://solana.com/docs/oldcore/transactions#confirmation
     const confirmation = await connection.confirmTransaction({
       signature,
       blockhash: bhInfo.value.blockhash,
@@ -340,5 +340,5 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
 ```
 
 :::tip
-If you want to add your own fees, check out: [Adding Your Own Fees](/docs/APIs/adding-fees)
+If you want to add your own fees, check out: [Adding Your Own Fees](/docs/old/APIs/adding-fees)
 :::

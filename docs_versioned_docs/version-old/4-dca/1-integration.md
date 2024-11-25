@@ -40,7 +40,7 @@ title: Integrating Jupiter DCA
 
 Jupiter Dollar Cost Average (DCA) provides users with the quickest and easiest way to place DCA orders on Solana! DCA allows users to receive tokens directly in their wallet as each order is filled!
 
-This page will serve as a general guide on integrating DCA into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's DCA program will work regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/dca/dca-sdk).
+This page will serve as a general guide on integrating DCA into your use case. whether you are building a bot for yourself or looking to integrate with existing (d)apps, Jupiter's DCA program will work regardless of programming language used. If you are trying to build a DCA bot in Typescript / Javascript, look at [DCA SDK](/docs/old/dca/dca-sdk).
 
 ## Address
 
@@ -57,7 +57,7 @@ There are 2 key instructions that can be executed
 
 ### 1. Setting up a DCA
 
-A DCA Account is a Program Derived Address (PDA) account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. _(if you are not familiar with constructing a transaction on Solana, take a look at using [DCA SDK](/docs/dca/dca-sdk). This guide provides more thorough code examples)_.
+A DCA Account is a Program Derived Address (PDA) account. In order to start dollar cost averaging, you will need to construct and send a Transaction containing an Instruction to open this DCA account. _(if you are not familiar with constructing a transaction on Solana, take a look at using [DCA SDK](/docs/old/dca/dca-sdk). This guide provides more thorough code examples)_.
 
 Each DCA account has unique parameters. If you want to have different parameters, you can create any number of DCA accounts.
 
@@ -92,7 +92,7 @@ pub fn open_dca_v2(
 
 | Accounts               | Description                                                                                                                                                                                                                                                            | isSigner? | isWritable? |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
-| dca                    | You will need to derive a DCA PDA here. The 4 buffers used to generate the PDA are seed -> 'dca', user public key, input token public key, output token public key and a uid (use a unix timestamp). See [code example](/docs/dca/integration#getting-a-dca-pda) below | false     | true        |
+| dca                    | You will need to derive a DCA PDA here. The 4 buffers used to generate the PDA are seed -> 'dca', user public key, input token public key, output token public key and a uid (use a unix timestamp). See [code example](/docs/old/dca/integration#getting-a-dca-pda) below | false     | true        |
 | user                   | This is the user's pubkey. Needs to be a signer of the transaction.                                                                                                                                                                                                    | true      | false       |
 | payer                  | This is the payer's pubkey. Needs to be a signer of the transaction. Pays for the rent to open token accounts needed as well as user's DCA (PDA) account. This can be the same as user.                                                                                | true      | true        |
 | inputMint              | Token to sell                                                                                                                                                                                                                                                          | false     | false       |

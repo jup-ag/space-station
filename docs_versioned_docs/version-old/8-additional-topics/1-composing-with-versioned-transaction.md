@@ -130,7 +130,7 @@ addressLookupTableAccounts.push(yourAddressLookupTableAccounts)
 ```
 
 :::tip Resources for creating and using Address Lookup Tables
-- [Github docs on versioned transactions](https://github.com/solana-labs/solana/blob/master/docs/src/developing/versioned-transactions.md)
-- [Github docs on address lookup tables](https://github.com/solana-labs/solana/blob/master/docs/src/developing/lookup-tables.md)
+- [Github docs on versioned transactions](https://github.com/solana-labs/solana/blob/master/docs/oldsrc/developing/versioned-transactions.md)
+- [Github docs on address lookup tables](https://github.com/solana-labs/solana/blob/master/docs/oldsrc/developing/lookup-tables.md)
 - [Phantom's guide for sending a versioned transaction](https://docs.phantom.app/getting-started-with-solana/sending-a-transaction-1)
 :::
