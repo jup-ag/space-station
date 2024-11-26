@@ -100,8 +100,8 @@ In addition, after sending the transaction, it is always a best practice to chec
 const confirmation = await connection.confirmTransaction({signature,}, "finalized");
 
 if (confirmation.value.err) {
-    throw new Error(`Transaction failed: ${JSON.stringify(confirmation.value.err)}\nhttps://solscan.io/tx/${signature}`);
-} else console.log(`Transaction successful: https://solscan.io/tx/${signature}`);
+    throw new Error(`Transaction failed: ${JSON.stringify(confirmation.value.err)}\nhttps://solscan.io/tx/${signature}/`);
+} else console.log(`Transaction successful: https://solscan.io/tx/${signature}/`);
 ```
 
 ## Swap Transaction Executed!

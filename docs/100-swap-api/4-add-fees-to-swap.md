@@ -33,7 +33,7 @@ If you use our APIs heavily and consider taking fees, please reach out to us.
 
 ### 1. Set up
 
-You will need to complete the prerequisites and understanding of [Get Started](../1-get-started.md) and [Get Quote and Swap](1-get-quote.md) as this is reliant on the Swap API.
+You will need to complete the prerequisites and understanding of [Get Started](../1-get-started.md) and [Get Quote and Swap](1-get-quote.md) guide as this is reliant on the Swap API.
 
 **Obtain `referralAccount` and `referralTokenAccount`**
 
@@ -52,7 +52,7 @@ const referralAccount = new Publickey('ReplaceWithPubkey');
 const mintAccount = new Publickey('So11111111111111111111111111111111111111112');
 ```
 
-### 3. Set your referral fee in `/quote`
+### 3. Set your referral fee in Quote
 
 Setting your referral fee is simple, just add `platformFeeBps` parameter to the `/quote` endpoint.
 
@@ -68,7 +68,7 @@ const quoteResponse = await (
 console.log(JSON.stringify(quoteResponse, null, 2));
 ```
 
-### 3. Set your referral token account in `/swap`
+### 3. Set your referral token account in Swap
 
 In order to refer and receive fees from all types of tokens, you will need to have already initialize `referralTokenAccount`s (owned by your `referralAccount`) for the mint in the swap. By calling the Swap API with the parameter `feeAccount`, which is the `referralTokenAccount`, you will receive the serialized swap transaction that will set a fee to be taken from the referred and sent to that token account.
 

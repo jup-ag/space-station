@@ -31,17 +31,14 @@ const sidebars = {
         {
           type: 'doc',
           id: 'swap-api/get-quote',
-          label: 'Get Quote',
         },
         {
           type: 'doc',
           id: 'swap-api/build-swap-transaction',
-          label: 'Send Swap Transaction',
         },
         {
           type: 'doc',
           id: 'swap-api/send-swap-transaction',
-          label: 'Build Swap Transaction',
         },
       ],
     },
@@ -58,7 +55,10 @@ const sidebars = {
         {
           type: 'doc',
           id: 'swap-api/add-fees-to-swap',
-          label: 'Add Fees To Swap',
+        },
+        {
+          type: 'doc',
+          id: 'swap-api/payments-through-swap',
         },
       ],
     },
