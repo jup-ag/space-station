@@ -316,7 +316,8 @@ The formula for the hourly borrow fee is:
 
 The hourly borrow rates for the JLP assets are as follows:
 
-- SOL, ETH, and BTC: 0.012%
+- SOL and BTC: 0.012%
+- ETH: 0.008%
 - USDC and USDT: 0.01%
 
 These rates represent the maximum charged at **100% utilization**. In practice, as utilization for the tokens are usually below 100%, the actual hourly borrow rates are often **lower**.
