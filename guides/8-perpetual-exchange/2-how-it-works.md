@@ -316,7 +316,7 @@ The formula for the hourly borrow fee is:
 
 The hourly borrow rates for the JLP assets are as follows:
 
-- SOL, ETH, and BTC: 0.008%
+- SOL, ETH, and BTC: 0.012%
 - USDC and USDT: 0.01%
 
 These rates represent the maximum charged at **100% utilization**. In practice, as utilization for the tokens are usually below 100%, the actual hourly borrow rates are often **lower**.
@@ -351,15 +351,15 @@ For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1
 * `Total Tokens Locked`: ` 100 SOL (position size) + 100 SOL (utilized SOL in pool) = 200 SOL
 * `Total Tokens in Pool`: 1,000 SOL (existing custody) + 10 SOL (user collateral) = 1,010 SOL
 * `Utilization`: 200 SOL / 1,010 SOL = 19.8%
-* `Hourly Borrow Rate`:  0.008% (0.00008 in decimal format / 0.8 BPS)
+* `Hourly Borrow Rate`:  0.012% (0.00012 in decimal format / 1.2 BPS)
 
 Calculation:
 
 ```
-Hourly Borrow Fee = (200 / 1010) * 0.00008 * 10000 = 0.158
+Hourly Borrow Fee = (200 / 1010) * 0.00012 * 10000 = 0.238
 ```
 
-This means your position will accrue a borrow fee of $0.158 every hour it remains open.
+This means your position will accrue a borrow fee of $0.238 every hour it remains open.
 
 :::info
 Borrow fees are continuously accrued and deducted from your collateral. This ongoing deduction has two important consequences:
@@ -457,7 +457,7 @@ Suppose a trader wants to open a 2x long SOL position at a position size of $100
 | Leverage | 2x |
 | Initial SOL Price | $100 |
 | Utilization Rate | 50% |
-| Borrow Rate | 0.008% per hour |
+| Borrow Rate | 0.012% per hour |
 | Position Opening Fee | `0.06% * $1000 = $0.6` |
 
 The trader keeps this position open for 2 days, and the price of SOL appreciates by 10%.
@@ -471,15 +471,15 @@ The trader keeps this position open for 2 days, and the price of SOL appreciates
 The borrow fee accumulated throughout this period can be calculated as:
 
 - `Hourly Borrow Fee = Tokens Borrowed/Tokens in the Pool * Borrow Rate * Position Size`
-- `Total Borrow Fee = 50% * 0.008% * 1000 * 48 = $1.92 USD`
+- `Total Borrow Fee = 50% * 0.012% * 1000 * 48 = $2.88 USD`
 
 
 The trader's final profit can be calculated as:
 
 - `Final Profit = Final Position Value - Initial Position Value - Borrow Fee - Opening Fee - Closing Fee`
-- `$1100 - $1000 - $1.92 - $0.6 - $0.66 = $96.82`
+- `$1100 - $1000 - $2.88 - $0.6 - $0.66 = $95.86`
 
-The trader gets a final profit of **$96.82 USD** after this trade.
+The trader gets a final profit of **$95.86 USD** after this trade.
 
 
 ## Oracle
