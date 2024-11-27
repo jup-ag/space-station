@@ -314,7 +314,9 @@ The formula for the hourly borrow fee is:
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
+:::info
 The hourly borrow rates for JLP assets can be retrieved from the `Borrow rate` field of the Jupiter Perpetuals trade form or fetched onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account). Note that these rates represent the maximum charged at **100% utilization**.
+:::
 
 #### Calculating Utilization Rate
 
