@@ -78,7 +78,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'limit-order-api/limit-order-api',
+          id: 'other-tools/price-api',
+        },
+        {
+          type: 'doc',
+          id: 'other-tools/limit-order-api',
         },
       ],
     },

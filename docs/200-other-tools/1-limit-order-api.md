@@ -9,13 +9,11 @@ title: "Limit Order API"
     <meta name="twitter:card" content="summary" />
 </head>
 
-## Let’s Get Started
-
 In this guide, we will walkthrough integrating our Limit Order (LO) program through our Limit Order API. LO can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
 
 Before you get started, you might want to understand how our LO product works in this guide and get yourself set up in [Get Started](../1-get-started.md) guide with the necessary libraries and RPC connection.
 
-## Limit Order API
+## Let’s Get Started
 
 The root URL of the LO API is as such.
 
