@@ -72,6 +72,22 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Perp API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp-api/perp-api',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
+    {
+      type: 'category',
       label: 'Other Tools',
       collapsible: false,
       collapsed: false,
@@ -82,7 +98,15 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'other-tools/token-api',
+        },
+        {
+          type: 'doc',
           id: 'other-tools/limit-order-api',
+        },
+        {
+          type: 'doc',
+          id: 'other-tools/dca-sdk',
         },
       ],
     },

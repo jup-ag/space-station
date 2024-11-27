@@ -5,7 +5,7 @@ title: "Limit Order API"
 ---
 
 <head>
-    <title>Use the Jupiter Limit Order API to create/cancel orders or view open/historical orders.!</title>
+    <title>Use the Jupiter Limit Order API to create/cancel orders or view open/historical orders.</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
