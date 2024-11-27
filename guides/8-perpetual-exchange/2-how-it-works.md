@@ -314,13 +314,9 @@ The formula for the hourly borrow fee is:
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
-The hourly borrow rates for the JLP assets are as follows:
-
-- SOL and BTC: 0.012%
-- ETH: 0.008%
-- USDC and USDT: 0.01%
-
-These rates represent the maximum charged at **100% utilization**. In practice, as utilization for the tokens are usually below 100%, the actual hourly borrow rates are often **lower**.
+:::info
+The hourly borrow rates for JLP assets can be retrieved from the `Borrow rate` field of the Jupiter Perpetuals trade form or fetched onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account). Note that these rates represent the maximum charged at **100% utilization**.
+:::
 
 #### Calculating Utilization Rate
 
@@ -346,7 +342,7 @@ Read more about how the base rate for each token is decided from [Gauntlet's rec
 
 #### Worked Example
 
-For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody, and has lent out **100 SOL** (i.e. it's utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position.
+For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody and has lent out **100 SOL** (i.e, utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position. Assume that the hourly borrow rate for SOL is **0.012%**:
 
 * `Position Size in SOL`: 100 SOL
 * `Total Tokens Locked`: ` 100 SOL (position size) + 100 SOL (utilized SOL in pool) = 200 SOL
@@ -449,7 +445,7 @@ At the same time, a minor SOL amount will be used for rent to create an escrow a
 
 With all these concepts covered, let's go through a worked example.
 
-Suppose a trader wants to open a 2x long SOL position at a position size of $1000 USD by depositing $500 USD worth of SOL as a collateral and borrowing $500 USD worth of SOL from the pool.
+Suppose a trader wants to open a 2x long SOL position at a position size of $1000 USD by depositing $500 USD worth of SOL as a collateral and borrowing $500 USD worth of SOL from the pool. Assume the hourly borrow rate for SOL is **0.012%**.
 
 | Initial Position Value | $1000 |
 | --- | ----- |
