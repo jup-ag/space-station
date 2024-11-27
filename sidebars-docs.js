@@ -72,6 +72,26 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Swap Terminal Widget',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'terminal/overview',
+        },
+        {
+          type: 'doc',
+          id: 'terminal/walkthrough',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
+    {
+      type: 'category',
       label: 'Perp API',
       collapsible: false,
       collapsed: false,
