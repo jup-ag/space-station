@@ -57,16 +57,16 @@ It is essential to note that pool earnings and losses (index token appreciation/
 
 ### Fee Calculations
 
-| Action             | Fee                                                                        |
-| ------------------ | -------------------------------------------------------------------------- |
-| Opening a Position | 6 BPS                                                                      |
-| Closing a Position | 6 BPS                                                                      |
+| Action             | Fee                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------------|
+| Opening a Position | 6 BPS                                                                                  |
+| Closing a Position | 6 BPS                                                                                  |
 | Price Impact Fee   | Variable (see [reference](../8-perpetual-exchange/2-how-it-works.md#price-impact-fee)) |
-| Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
-| Borrow Rate        | 0.8 / 1.0 BPS per hour (see below) x token utilization percentage                    |
+| Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                                   |
+| Borrow Rate        | Dynamically updated based on utilization and market conditions (see below)             |
 
 :::info
-**Hourly Borrow Rate** is set at 0.012% for SOL and BTC, 0.008% for ETH, and 0.01% for USDC and USDT.
+The hourly borrow rate is updated dynamically depending on utilization and market conditions. You can view the current hourly borrow rate in the `Borrow rate` field of the Jupiter Perpetuals trade form or retrieved onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account).
 :::
 
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.06%.
