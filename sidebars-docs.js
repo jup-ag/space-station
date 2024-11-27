@@ -60,6 +60,10 @@ const sidebars = {
           type: 'doc',
           id: 'swap-api/payments-through-swap',
         },
+        {
+          type: 'doc',
+          id: 'swap-api/solana-unity-sdk',
+        },
       ],
     },
   ],
