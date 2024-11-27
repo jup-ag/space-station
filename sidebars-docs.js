@@ -66,6 +66,22 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
+    {
+      type: 'category',
+      label: 'Other Tools',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'limit-order-api/limit-order-api',
+        },
+      ],
+    },
   ],
 };
 
