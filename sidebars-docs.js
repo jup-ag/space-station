@@ -2,7 +2,7 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docs: [
+  swap: [
     {
       type: 'doc',
       id: 'index',
@@ -64,12 +64,37 @@ const sidebars = {
           type: 'doc',
           id: 'swap-api/solana-unity-sdk',
         },
+        {
+          type: 'doc',
+          id: 'tool-kits/swap-terminal',
+          label: 'Integrate Swap Terminal',
+        }
       ],
     },
     {
       type: 'html',
       value: '<li class="sidebar-line-break"></li>',
     },
+  ],
+  perp: [
+    {
+      type: 'category',
+      label: 'Perp API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp-api/perp-api',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
+  ],
+  toolkit: [
     {
       type: 'category',
       label: 'Jupiter Tool Kits',
@@ -94,22 +119,8 @@ const sidebars = {
       type: 'html',
       value: '<li class="sidebar-line-break"></li>',
     },
-    {
-      type: 'category',
-      label: 'Perp API',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'perp-api/perp-api',
-        },
-      ],
-    },
-    {
-      type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
-    },
+  ],
+  other: [
     {
       type: 'category',
       label: 'Other Tools',

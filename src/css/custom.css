@@ -78,67 +78,6 @@
   color: transparent;
 }
 
-.navbar__title {
-  @apply font-bold text-[18px];
-  font-weight: bold;
-  font-size: 18px;
-  display: none;
-}
-
-.navbar__brand:hover {
-  color: #19232d;
-}
-
-@media (min-width: 996px) {
-  .navbar {
-    height: auto;
-    @apply flex justify-center;
-  }
-
-  .navbar__inner {
-    @apply max-w-7xl;
-  }
-
-  .navbar__brand {
-    margin-right: 32px;
-  }
-  .navbar__title {
-    display: block;
-  }
-
-/* These styles are what was breaking dark mode */
-@media  (prefers-color-scheme: light) {
-  .navbar__item.navbar__link {
-      @apply text-sm font-semibold text-[#304256]/40 hover:text-[#304256] hover:no-underline;
-    }
-
-  .navbar__item.navbar__link.navbar__link--active {
-    @apply text-[#304256];
-    }
-
-  .navbar__title {
-    color: #19232d;
-}
-  }
-
-  .navbar__item.navbar__link {
-    margin-right: 16px;
-  }
-
-  .navbar__item.navbar__link.mega_menu {
-    margin-right: 0px;
-  }
-
-  .navbar__items--right .navbar__item {
-    padding: 0;
-  }
-}
-
-.navbar__items--right .navbar__item {
-  display: block;
-  padding: 0;
-}
-
 .home .navbar {
   position: relative;
   box-shadow: none;

@@ -109,6 +109,7 @@ const config = {
         theme: {
           customCss: [
             require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/navbar.css"),
             require.resolve("./src/css/docs.css"),
           ],
         },
@@ -261,56 +262,14 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Jupiter Station",
+        title: "",
         logo: {
           alt: "Jupiter Logo",
           src: "img/jupiter-logo.svg",
-          width: 33,
-          height: 33,
+          width: 28,
+          height: 28,
         },
-        items: [
-          {
-            to: "/guides",
-            label: "Guides",
-            position: "left",
-          },
-          {
-            to: "/docs",
-            position: "left",
-            label: "Docs",
-          },
-          {
-            to: "/api-v6",
-            position: "left",
-            label: "API Playground",
-          },
-          {
-            to: "/partners",
-            label: "Partners",
-            position: "left",
-          },
-          {
-            to: "https://dune.com/ilemi/jupiter-aggregator-solana",
-            label: "Stats",
-            position: "left",
-          },
-          {
-            type: "search",
-            position: "right",
-            className: "search",
-          },
-          {
-            type: "html",
-            position: "right",
-            value: `
-            <a href="https://jup.ag/" target="_blank" class="launch-app">
-              <span>
-                Launch App
-              </span>
-            </a>
-            `,
-          },
-        ],
+        items: [],
       },
       algolia: {
         // The application ID provided by Algolia
