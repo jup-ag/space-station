@@ -72,17 +72,21 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Swap Terminal Widget',
+      label: 'Jupiter Tool Kits',
       collapsible: false,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'terminal/overview',
+          id: 'tool-kits/swap-terminal',
         },
         {
           type: 'doc',
-          id: 'terminal/walkthrough',
+          id: 'tool-kits/terminal-walkthrough',
+        },
+        {
+          type: 'doc',
+          id: 'tool-kits/unified-wallet-kit',
         },
       ],
     },

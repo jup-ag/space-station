@@ -1,7 +1,7 @@
 ---
-sidebar_label: "Overview"
-description: "An overview of Jupiter Swap Terminal Widget and its core features."
-title: "Overview"
+sidebar_label: "Swap Terminal"
+description: "An overview of Jupiter Swap Terminal and its core features."
+title: "Swap Terminal"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 import Highlight from '@theme/CodeBlock';
 
 <head>
-    <title>An overview of Jupiter Swap Terminal Widget and its core features.</title>
+    <title>An overview of Jupiter Swap Terminal and its core features.</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

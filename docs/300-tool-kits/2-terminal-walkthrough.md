@@ -1,7 +1,7 @@
 ---
-sidebar_label: "Walkthrough"
+sidebar_label: "Terminal Walkthrough"
 description: "Step by step walkthrough of integrating Jupiter Swap Terminal into your website with minimal code."
-title: "Walkthrough"
+title: "Terminal Walkthrough"
 ---
 
 <head>
