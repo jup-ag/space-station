@@ -5,7 +5,7 @@ title: "Get Started"
 ---
 
 <head>
-    <title>Get Started with Jupiter API!</title>
+    <title>Get Started</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

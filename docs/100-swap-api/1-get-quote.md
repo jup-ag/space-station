@@ -5,7 +5,7 @@ title: "Get Quote"
 ---
 
 <head>
-    <title>Start using Jupiter Swap API by getting a Quote.</title>
+    <title>Get Quote</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

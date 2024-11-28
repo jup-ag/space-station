@@ -5,7 +5,7 @@ title: "Payments Through Swap"
 ---
 
 <head>
-    <title>Jupiter Swap API allows you to set up payments solutions for your products.</title>
+    <title>Payments Through Swap</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

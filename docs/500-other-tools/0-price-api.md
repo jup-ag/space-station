@@ -5,7 +5,7 @@ title: "Price API"
 ---
 
 <head>
-    <title>Use the Jupiter Price API for all tokens tradable or traded on Jupiter.</title>
+    <title>Price API</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

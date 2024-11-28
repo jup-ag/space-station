@@ -5,7 +5,7 @@ title: "Development Basics"
 ---
 
 <head>
-    <title>Under development basics on Solana to build with Jupiter API!</title>
+    <title>Development Basics</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

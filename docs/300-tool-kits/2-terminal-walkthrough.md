@@ -5,7 +5,7 @@ title: "Terminal Walkthrough"
 ---
 
 <head>
-    <title>Step by step walkthrough of integrating Jupiter Swap Terminal Widget into your website with minimal code.</title>
+    <title>Terminal Walkthrough</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

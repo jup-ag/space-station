@@ -5,7 +5,7 @@ title: "DCA SDK"
 ---
 
 <head>
-    <title>Use the Jupiter DCA SDK to create/cancel orders.</title>
+    <title>DCA SDK</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

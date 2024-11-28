@@ -5,7 +5,7 @@ title: "Token API"
 ---
 
 <head>
-    <title>Use the Jupiter Token API for all tokens tradable or tagged via Jupiter.</title>
+    <title>Token API</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

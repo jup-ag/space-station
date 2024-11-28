@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 import Highlight from '@theme/CodeBlock';
 
 <head>
-    <title>An overview of Jupiter Swap Terminal and its core features.</title>
+    <title>Swap Terminal</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

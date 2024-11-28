@@ -1,11 +1,11 @@
 ---
 sidebar_label: "Perp API"
 description: "Use the Jupiter Perp API to trade or analyze."
-title: "Perp API"
+title: "Coming Soon!"
 ---
 
 <head>
-    <title>Use the Jupiter Perp API to trade or analyze.</title>
+    <title>Coming Soon!</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

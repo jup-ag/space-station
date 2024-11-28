@@ -5,7 +5,7 @@ title: "Add Fees To Swap"
 ---
 
 <head>
-    <title>Jupiter Swap API allows you to add fees.</title>
+    <title>Add Fees To Swap</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

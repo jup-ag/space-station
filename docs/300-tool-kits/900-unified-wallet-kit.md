@@ -5,7 +5,7 @@ title: Unified Wallet Kit
 ---
 
 <head>
-    <title>An open source, streamlined Unified Wallet Kit adapter designed to simplify development on Solana.</title>
+    <title>Unified Wallet Kit</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

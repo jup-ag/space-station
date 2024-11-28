@@ -5,7 +5,7 @@ title: "Swap In Solana Unity SDK (C#)"
 ---
 
 <head>
-    <title>Use Jupiter Swap API with Solana Unity SDK (C#) to add Swap into your game.</title>
+    <title>Solana Unity SDK (C#)</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

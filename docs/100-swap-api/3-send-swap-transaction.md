@@ -5,7 +5,7 @@ title: "Send Swap Transaction"
 ---
 
 <head>
-    <title>Jupiter Swap API helps you to optimize sending transaction to the network.</title>
+    <title>Send Swap Transaction</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
