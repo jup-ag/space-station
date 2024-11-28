@@ -1,14 +1,16 @@
 ---
 sidebar_label: "Welcome"
-description: "Unlock superior trading with Jupiter Documentation. Integrate APIs for swaps, payments, and more effortlessly. Explore robust tools now!"
-title: Welcome
+description: "Welcome to the Jupiter Documentation. Integrate APIs for swaps, payments, and more effortlessly. Explore robust tools now!"
+breadcrumbs: false
+hide_table_of_contents: true
+title: Welcome to Jupiter Developer Documentation
 ---
 
 <head>
-    <title>Jupiter APIs and Documentation</title>
+    <title>Developer Documentation</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-# Welcome Catdet-veloper
+import DocsLanding from '@site/src/components/DocsLanding';
 
-![cat_at_computer.png](../static/img/cat_at_computer.png)
+<DocsLanding />
