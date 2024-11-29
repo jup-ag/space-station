@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useColorMode, useThemeConfig } from '@docusaurus/theme-common';
 import ColorModeToggle from '@theme/ColorModeToggle';
 import type { Props } from '@theme/Navbar/ColorModeToggle';
@@ -10,6 +10,13 @@ export default function NavbarColorModeToggle({
   const navbarStyle = useThemeConfig().navbar.style;
   const disabled = useThemeConfig().colorMode.disableSwitch;
   const { colorMode, setColorMode } = useColorMode();
+
+  // Forcefully apply light theme if disabled
+  useEffect(() => {
+    if (disabled && colorMode !== 'light') {
+      setColorMode('light');
+    }
+  }, [disabled, colorMode, setColorMode]);
 
   if (disabled) {
     return null;
