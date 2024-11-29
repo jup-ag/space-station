@@ -48,6 +48,7 @@ const vybe = '/img/defi/vybe.svg';
 const coinhall = '/img/defi/coinhall.svg';
 const vaultka = '/img/defi/vaultka.png';
 const adrastea = '/img/defi/adrastea.svg';
+const dextab = 'img/defi/dextab.png';
 
 const aldrin = '/img/dex_amm/aldrin.png';
 const balansol = '/img/dex_amm/balansol.svg';
@@ -314,6 +315,11 @@ const sections = [
         title: 'Adrastea',
         logo: adrastea,
         link: 'https://adrastea.fi'
+      },
+      {
+        title: 'DexTab',
+        logo: dextab,
+        link: 'https://www.dextab.io/',
       },
     ],
   },
