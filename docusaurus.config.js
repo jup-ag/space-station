@@ -269,7 +269,10 @@ const config = {
           width: 28,
           height: 28,
         },
-        items: [],
+        items: [
+          { to: 'guides', label: 'Guides', position: 'left' },
+          { to: 'docs', label: 'docs', position: 'left' },
+        ],
       },
       algolia: {
         // The application ID provided by Algolia
