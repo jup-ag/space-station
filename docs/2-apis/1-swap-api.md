@@ -518,6 +518,12 @@ Dynamic slippage is a slippage estimation and optimization mechanism during the 
 
 The frontend sends a payload to the backend with an additional `dynamicSlippage` field with `maxBps` set as the user's max slippage **(this is important to respect the user's max, the jup.ag UI sets the default to 300bps (3%))**.
 
+:::note
+To find out more about how Dynamic Slippage works in detail and the heuristics applied:
+- [Jupresearch](https://www.jupresear.ch/t/dynamic-slippage/21946)
+- [Dynamic Slippage Config Repository](https://github.com/jup-ag/dynamic-slippage-config/)
+:::
+
 ```js
 // get serialized transactions for the swap
 const { swapTransaction } = await (
