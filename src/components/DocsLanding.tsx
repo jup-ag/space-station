@@ -7,7 +7,7 @@ interface ProductCardProps {
 };
 
 const Subtitle = () => (
-    <p style={{ color: 'grey', fontSize: '18px', marginBottom: '2rem' }}>
+    <p style={{ color: 'grey', fontSize: '18px', padding: '10px', }}>
         Learn how to integrate Jupiter in various methods and leverage the power of our products.
     </p>
 );
@@ -24,14 +24,17 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, description, li
             padding: '20px',
             display: 'flex',
             margin: '10px',
-            boxShadow: isHovered ? '0 0 10px darkseagreen' : '0 2px 5px rgba(0, 0, 0, 0.1)', // Change shadow on hover
+            boxShadow: isHovered ? '0 0 10px darkseagreen' : '0 2px 5px rgba(0, 0, 0, 0.1)',
             textAlign: 'left',
+            height: 'auto',
             minHeight: '120px',
             textDecoration: 'none',
             color: 'inherit',
+            flex: '1',
+            alignItems: 'stretch',
             }}
-            onMouseEnter={() => setIsHovered(true)} // Set hover state to true
-            onMouseLeave={() => setIsHovered(false)} // Set hover state to false
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
         <div style={{ marginRight: '10px', alignSelf: 'center' }}>
             <div
@@ -56,47 +59,125 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, description, li
     );
 };
 
-const ProductList = () => {
+const SwapProductList = () => {
     return (
-        <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h2 style={{ marginBottom: '20px' }}>Browse by Product</h2>
+        <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
+            <h2 style={{ marginBottom: '10px', color: 'grey', fontSize: '18px' }}>JUPITER SPOT</h2>
             <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                gap: '10px',
                 width: '100%',
                 maxWidth: '1200px',
+                alignItems: 'stretch',
+                gridAutoRows: 'auto',
             }}>
-                <div style={{ flex: '1 1 calc(50% - 10px)', margin: '5px', minWidth: '300px' }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
                     <ProductCard
-                        image={<img src="/docslanding/swap.svg" alt="Swap" style={{ width: '60px', height: '60px' }} />}
+                        image={<img src="/docslanding/swap.svg" alt="Swap API" style={{ width: '60px', height: '60px' }} />}
                         title="Swap API"
                         description="Integrate Swap to access Solana's deep liquidity."
                         link="/docs/swap-api/get-quote"
                     />
                 </div>
-                <div style={{ flex: '1 1 calc(50% - 10px)', margin: '5px', minWidth: '300px' }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
                     <ProductCard
-                        image={<img src="/docslanding/perp.svg" alt="Perp" style={{ width: '60px', height: '60px' }} />}
-                        title="Perp API"
-                        description="Coming soon!"
-                        link="/docs/perp-api/perp-api"
+                        image={<img src="/docslanding/swap.svg" alt="Payment" style={{ width: '60px', height: '60px' }} />}
+                        title="Payments"
+                        description="Integrate payments by leveraging Swap API."
+                        link="/docs/swap-api/payments-through-swap"
                     />
                 </div>
-                <div style={{ flex: '1 1 calc(50% - 10px)', margin: '5px', minWidth: '300px' }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
                     <ProductCard
-                        image={<img src="/docslanding/kit.svg" alt="Tool Kits" style={{ width: '60px', height: '60px' }} />}
-                        title="Tool Kits"
-                        description="Leverage open source tool kits to develop apps efficiently."
+                        image={<img src="/docslanding/kit.svg" alt="Swap Terminal" style={{ width: '60px', height: '60px' }} />}
+                        title="Swap Terminal"
+                        description="Bring Swap Terminal interface directly into your app."
                         link="/docs/tool-kits/swap-terminal"
                     />
                 </div>
-                <div style={{ flex: '1 1 calc(50% - 10px)', margin: '5px', minWidth: '300px' }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
                     <ProductCard
-                        image={<img src="/docslanding/more.svg" alt="More" style={{ width: '60px', height: '60px' }} />}
-                        title="More"
-                        description="Explore other APIs or SDKs."
+                        image={<img src="/docslanding/more.svg" alt="Limit Order API" style={{ width: '60px', height: '60px' }} />}
+                        title="Limit Order API"
+                        description="Integrate Jupiter Limit Order program built on top of Jupiter Swap."
+                        link="/docs/other-tools/limit-order-api"
+                    />
+                </div>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
+                    <ProductCard
+                        image={<img src="/docslanding/more.svg" alt="DCA SDK" style={{ width: '60px', height: '60px' }} />}
+                        title="DCA SDK"
+                        description="Integrate Dollar Cost Average program built on top of Jupiter Swap."
+                        link="/docs/other-tools/dca-sdk"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const PerpProductList = () => {
+    return (
+        <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
+            <h2 style={{ marginBottom: '10px', color: 'grey', fontSize: '18px' }}>JUPITER PERPETUAL</h2>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                gap: '10px',
+                width: '100%',
+                maxWidth: '1200px',
+                alignItems: 'stretch',
+                gridAutoRows: 'auto',
+            }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
+                    <ProductCard
+                        image={<img src="/docslanding/perp.svg" alt="Perp API" style={{ width: '60px', height: '60px' }} />}
+                        title="Perp API"
+                        description="✨ Coming soon! ✨"
+                        link="/docs/perp-api/perp-api"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const MoreProductList = () => {
+    return (
+        <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'left' }}>
+            <h2 style={{ marginBottom: '10px', color: 'grey', fontSize: '18px' }}>MORE!</h2>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                gap: '10px',
+                width: '100%',
+                maxWidth: '1200px',
+                alignItems: 'stretch',
+                gridAutoRows: 'auto',
+            }}>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
+                    <ProductCard
+                        image={<img src="/docslanding/kit.svg" alt="Unified Wallet Kit" style={{ width: '60px', height: '60px' }} />}
+                        title="Unified Wallet Kit"
+                        description="Leverage our wallet adapter to build efficiently."
+                        link="/docs/tool-kits/unified-wallet-kit"
+                    />
+                </div>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
+                    <ProductCard
+                        image={<img src="/docslanding/price.svg" alt="Price API" style={{ width: '60px', height: '60px' }} />}
+                        title="Price API"
+                        description="Use prices derived from Jupiter Swap in your app."
                         link="/docs/other-tools/price-api"
+                    />
+                </div>
+                <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
+                    <ProductCard
+                        image={<img src="/docslanding/price.svg" alt="Token API" style={{ width: '60px', height: '60px' }} />}
+                        title="Token API"
+                        description="Use all of Solana tokens that are tradable on Jupiter in your app."
+                        link="/docs/other-tools/token-api"
                     />
                 </div>
             </div>
@@ -108,62 +189,11 @@ const DocsLanding = () => {
     return (
         <div>
             <Subtitle />
-            <ProductList />
+            <SwapProductList />
+            <PerpProductList />
+            <MoreProductList />
         </div>
     );
 };
-
-
-
-
-    // <div style={{ padding: '20px', backgroundColor: '#0A0F14', color: '#fff' }}>
-    //   <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>
-    //     Welcome to Jupiter Developer Documentation
-    //   </h1>
-    //   <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
-    //     Tag line
-    //   </p>
-    //   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
-    //     <input
-    //       type="text"
-    //       placeholder="Quick search for anything"
-    //       style={{
-    //         padding: '10px',
-    //         borderRadius: '5px',
-    //         border: 'none',
-    //         width: '90%', // Full width on mobile
-    //         maxWidth: '400px', // Max width for larger screens
-    //         marginBottom: '10px'
-    //       }}
-    //     />
-    //     <button style={{ padding: '10px', borderRadius: '5px', border: 'none', backgroundColor: '#333', color: '#fff', width: '90%', maxWidth: '100px' }}>
-    //       ⌘K
-    //     </button>
-    //   </div>
-    //   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
-    //     <div style={{ backgroundColor: '#AAEB42', color: '#000', padding: '20px', borderRadius: '10px', width: '90%', maxWidth: '300px', marginBottom: '20px' }}>
-    //       <h3>Swap API</h3>
-    //       <p>Utilize to access best routing and pricing of Solana's deep liquidity and trade routes.</p>
-    //       <button style={{ padding: '10px', borderRadius: '5px', border: 'none', backgroundColor: '#333', color: '#fff', width: '100%' }}>
-    //         Get started
-    //       </button>
-    //     </div>
-    //     <div style={{ backgroundColor: '#0BA5EC',  color: '#000', padding: '20px', borderRadius: '10px', width: '90%', maxWidth: '300px', marginBottom: '20px' }}>
-    //       <h3>Perp API</h3>
-    //       <p>An all-in-one customer service platform that helps you balance.</p>
-    //       <button style={{ padding: '10px', borderRadius: '5px', border: 'none', backgroundColor: '#333', color: '#fff', width: '100%' }}>
-    //         Get started
-    //       </button>
-    //     </div>
-    //     <div style={{ backgroundColor: '#6938EF',  color: '#000', padding: '20px', borderRadius: '10px', width: '90%', maxWidth: '300px' }}>
-    //       <h3>Discover</h3>
-    //       <p>An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-    //       <button style={{ padding: '10px', borderRadius: '5px', border: 'none', backgroundColor: '#333', color: '#fff', width: '100%' }}>
-    //         Get started
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-
 
 export default DocsLanding;
