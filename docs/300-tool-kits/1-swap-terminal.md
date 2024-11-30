@@ -15,7 +15,13 @@ import Highlight from '@theme/CodeBlock';
 
 Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal provides end-to-end swap functionality by linking it in your HTML with just a few lines of code.
 
-<video controls width="600">
+:::tip Jupiter Terminal References
+- [Terminal Playground](https://terminal.jup.ag/): To play with different settings,features and styling.
+- [Open Source Repository](https://github.com/jup-ag/terminal): To understand and make use of the Jupiter Terminal better.
+- [API Type Reference](https://github.com/jup-ag/terminal/blob/main/src/types/index.d.ts): To utilize the different references.
+:::
+
+<video controls width="540">
   <source src="/terminal/demo/terminal-marketing.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
