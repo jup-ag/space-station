@@ -88,11 +88,17 @@ It is important to note that overpaying for priority fee can be detrimental in t
 | Compute Budget | How much compute unit the transaction is supposed to consume |
 | Compute Unit Price | Micro lamports per compute unit the transaction will use
 
-When querying the micro-lamport per compute unit for a particular program or account, it will contain both the Global and Local Fee markets. |
+When querying the micro-lamport per compute unit for a particular program or account, it will contain both the Global and Local Fee markets.
 
 ### What is Compute Unit?
 
-tldr; less compute unit = less blockspace needed to fit = more chance to land = less priority fee needed
+Compute Unit (CU) is a standardizded metric for evaluating how much "work" or "resource" is required by the transaction to execute. Different operations on Solana has varying amounts of CUs. In order to keep the blockchain efficient yet fast, each transaction, the Solana runtime has an absolute max compute unit limit of 1.4 million CU and sets a default requested max limit of 200k CU per instruction.
+
+:::tip Set custom Compute Unit Limit
+A transaction can request a more specific and optimal compute unit limit by including a single `SetComputeUnitLimit` instruction. Either a higher or lower limit. But it may never request higher than the absolute max limit per transaction.
+:::
+
+However, we must note that higher CU also means higher Priority Fee it might need to help prioritize it.
 
 ### What are some transaction broadcasting methods?
 1. Typical RPCs

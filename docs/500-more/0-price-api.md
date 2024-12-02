@@ -200,3 +200,24 @@ Notice a few details here:
   "timeTaken": 0.003665979
 }
 ```
+
+## Limitations
+
+#### Query limits
+1. You can query up to 100 `id`s at once.
+
+#### If the price for a token cannot be found, it is either because
+1. The token is not tradable on Jupiter - it does not fit Jupiter’s routing criteria.
+2. There is no route for this token to SOL.
+  1. `sellPrice`, `sellAt` & `lastSwappedPrice` might be null in cases
+3. If `sellPrice` & `sellAt` is not cached and cannot be retrieved the provided information will be `buyPrice`.
+4. `lastSwappedPrice` might be null if the token has not been traded recently or cannot be retrieved.
+  1. Tokens that have not been traded via USDC in the last 3 days.
+  2. Note that this is only for swaps done via Jupiter, it will not be done for swaps done e.g. directly on Raydium’s platform
+
+#### `buyPriceImpactRatio` & `sellPriceImpactRatio` in the depth field might be null in cases
+1. We are to get the respective price impacts for the 10, 100 and 1000 SOL buys or sells
+  1. It could be because the token’s liquidity does not have enough liquidity for larger values
+2. We cannot find the sell quote for the respective token and the buy/sell values
+
+[Read about how we derive confidenceLevel or depth in Price API V2 here.](https://www.jupresear.ch/t/introducing-the-price-v2-api/22175)
