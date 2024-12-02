@@ -123,25 +123,25 @@ const sidebars = {
   other: [
     {
       type: 'category',
-      label: 'Other Tools',
+      label: 'More',
       collapsible: false,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'other-tools/price-api',
+          id: 'more/price-api',
         },
         {
           type: 'doc',
-          id: 'other-tools/token-api',
+          id: 'more/token-api',
         },
         {
           type: 'doc',
-          id: 'other-tools/limit-order-api',
+          id: 'more/limit-order-api',
         },
         {
           type: 'doc',
-          id: 'other-tools/dca-sdk',
+          id: 'more/dca-sdk',
         },
       ],
     },
