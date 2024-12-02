@@ -10,13 +10,15 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'api-usage',
+    },
+    {
+      type: 'doc',
       id: 'get-started',
-      label: 'Get Started',
     },
     {
       type: 'doc',
       id: 'development-basics',
-      label: 'Development Basics',
     },
     {
       type: 'html',
