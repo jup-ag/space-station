@@ -17,7 +17,7 @@ title: Helpful Links and Contract Addresses
 ## SDKs & APIs
 
 - Jupiter API
-    - [v6 API](/api-v6) uses JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 with versioned transactions & address lookup tables so all swap routes take just 1 transaction. Also, no intermediate token accounts and open order accounts are needed anymore.
+    - v6 API uses JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 with versioned transactions & address lookup tables so all swap routes take just 1 transaction. Also, no intermediate token accounts and open order accounts are needed anymore.
     - [v4 API](https://quote-api.jup.ag/v4/docs/oldstatic/index.html) uses JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB with versioned transactions & address lookup tables so all swap routes take just 1 transaction.
     - [v3 API](https://quote-api.jup.ag/v3/docs/oldstatic/index.html) uses JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB which uses legacy transactions so some swap routes can take up to 3 transactions.
 - Jupiter Core Library [NPM](https://www.npmjs.com/package/@jup-ag/core)

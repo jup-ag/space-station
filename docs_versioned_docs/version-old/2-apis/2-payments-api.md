@@ -48,7 +48,7 @@ Payments or interaction with a protocol can require an exact amount of token B. 
 
 Bob is selling a delicious latte for 5 USDC. Alice wants to buy Bob's latte. The problem is, Alice only holds mSOL. Luckily, Bob can use the Jupiter Payments API to let Alice swap for exactly 5 USDC then transfer 5 USDC to his payment wallet. 
 
-First, we need to show Alice how much mSOL she will have to spend for the latte. To do this we use the [`GET /quote`](/api-v6/get-quote) endpoint.
+First, we need to show Alice how much mSOL she will have to spend for the latte. To do this we use the `GET /quote` endpoint.
 
 ### 1. Get Quote
 Retrieve a quote for swapping a specific amount of tokens.
@@ -175,13 +175,13 @@ curl -s 'https://quote-api.jup.ag/v6/quote?inputMint=mSoLzYCxHdYgdzU16g5QSh3i5K3
 Currently, only Orca Whirlpool, Raydium CLMM, and Raydium CPMM support ExactOut mode. All token pairs may not be available in this mode. To see more price options use ExactIn mode.
 :::
 
-Then Bob creates the transaction with the [`POST /swap`](/api-v6/post-swap) endpoint, and adds a 5 USDC token transfer from Alice to his payment wallet using the `destinationTokenAccount` argument, which Alice will verify, sign and send.
+Then Bob creates the transaction with the `POST /swap` endpoint, and adds a 5 USDC token transfer from Alice to his payment wallet using the `destinationTokenAccount` argument, which Alice will verify, sign and send.
 
 ### 2. Post Swap
 Returns a transaction that you can use from the quote you get from `GET /quote`.
 
 **Try it live in the playground:**
-[`POST https://quote-api.jup.ag/v6/swap`](/api-v6/post-swap)
+`POST https://quote-api.jup.ag/v6/swap`
 
 :::info
 In the example below, we assume the associated token account exists on `destinationTokenAccount`.

@@ -54,7 +54,7 @@ Go to the [referral dashboard](https://referral.jup.ag/dashboard) to create your
 
 #### 2. Set your referral fee
 
-Setting your referral fee with the Jupiter API is simple. You just add in the `platformFeeBps` parameter to the [`GET /quote`](/api-v6/get-quote) endpoint:
+Setting your referral fee with the Jupiter API is simple. You just add in the `platformFeeBps` parameter to the `GET /quote` endpoint:
 
 <details>
   <summary>
@@ -141,7 +141,7 @@ getQuote();
 
 #### 3. Set your fee token account
 
-On the [`POST /swap`](/api-v6/post-swap) endpoint, remember to add your `feeAccount` parameter.
+On the `POST /swap` endpoint, remember to add your `feeAccount` parameter.
 
 <details>
   <summary>

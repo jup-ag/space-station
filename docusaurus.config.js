@@ -81,8 +81,10 @@ const config = {
       /** @type {import('docusaurus-preset-openapi').Options} */
       ({
         api: {
-          path: "openapi/quoteV6.yaml",
-          routeBasePath: "api-v6",
+          path: "openapi/api.yaml",
+          routeBasePath: "docs/api",
+          sidebarCollapsible: false,
+          sidebarCollapsed: false,
         },
         docs: {
           id: 'docs',
@@ -139,6 +141,13 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          { to: "/docs/api", from: "/api-v6/introduction" },
+          { to: "/docs/api", from: "/api-v6/get-quote" },
+          { to: "/docs/api", from: "/api-v6/post-swap" },
+          { to: "/docs/api", from: "/api-v6/post-swap-instructions" },
+          { to: "/docs/api", from: "/api-v6/get-program-id-to-label" },
+          { to: "/docs/api", from: "/api-v6/program-id-to-label" },
+          { to: "/docs/api", from: "/api-v6/get-tokens" },
           {
             to: "/guides/swap/how-swap-works",
             from: "/guides/jupiter-swap/how-swap-works/metropolis-features",

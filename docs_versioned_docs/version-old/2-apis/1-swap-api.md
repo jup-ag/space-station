@@ -22,10 +22,10 @@ Jupiter APIs is the easiest way for developers to access liquidity on Solana. Si
 
 All Jupiter swaps are using versioned transactions and address lookup tables. But not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to use the `asLegacyTransaction` parameter.
 
-Learn more about the Jupiter API Documentation at the [OpenAPI documentation](/api-v6). This documentation has a REST request list and a built in API Playground. Use the API Playground to try API calls now!
+Learn more about the Jupiter API Documentation at the OpenAPI documentation. This documentation has a REST request list and a built in API Playground. Use the API Playground to try API calls now!
 
 :::tip API Documentation
- [OpenAPI Documentation](/api-v6)
+OpenAPI Documentation
 :::
 
 ### Guide for V6 Swap API (code example)
