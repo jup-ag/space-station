@@ -141,14 +141,7 @@ const config = {
     ],
     [
       "@docusaurus/plugin-client-redirects",
-      { redirects,
-        createRedirects(existingPath) {
-          if (existingPath.includes('/docs/old')) {
-            return ['/docs'];
-          }
-          return undefined;
-        },
-      }
+      { redirects }
     ],
     async function myPlugin() {
       return {
