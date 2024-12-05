@@ -19,11 +19,16 @@ In this guide, we'll be using the most used library, `web3.js` to get you starte
 
 Running this example requires a minimum of [NodeJS 16](https://nodejs.org/en/). In your command line terminal, install the libraries.
 
+The current documentation walkthrough was developed with
+- `"@solana/web3.js": "^1.95.4"`
+- `"@coral-xyz/anchor": "^0.30.1"`
+- `"@solana/spl-token": "^0.4.9"`
+- `"@jup-ag/referral-sdk": "^0.1.7"`
+
 ```bash
 npm i @solana/web3.js@1
-npm i @
-npm i cross-fetch
 npm i @coral-xyz/anchor
+npm i cross-fetch
 npm i bs58
 ```
 
