@@ -1,5 +1,4 @@
 [
-    { "to": "/docs/", "from": "/docs/old" },
     { "to": "/docs/api", "from": "/api-v6/introduction" },
     { "to": "/docs/api", "from": "/api-v6/get-quote" },
     { "to": "/docs/api", "from": "/api-v6/post-swap" },
