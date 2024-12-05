@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const redirects = require('./redirects.json');
+const { UnfoldHorizontal } = require("lucide-react");
 require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -139,101 +141,14 @@ const config = {
     ],
     [
       "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          { to: "/docs/api", from: "/api-v6/introduction" },
-          { to: "/docs/api", from: "/api-v6/get-quote" },
-          { to: "/docs/api", from: "/api-v6/post-swap" },
-          { to: "/docs/api", from: "/api-v6/post-swap-instructions" },
-          { to: "/docs/api", from: "/api-v6/get-program-id-to-label" },
-          { to: "/docs/api", from: "/api-v6/program-id-to-label" },
-          { to: "/docs/api", from: "/api-v6/get-tokens" },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis-features",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/how-swap-works",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metis-routing",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/swap",
-          },
-          {
-            to: "/guides/swap/tutorials/earn-referral-fees",
-            from: "/guides/jupiter-swap/how-referral-works",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis",
-          },
-          {
-            to: "/guides/perpetual-exchange/overview",
-            from: "/labs/perpetual-exchange/overview",
-          },
-          {
-            to: "/guides/perpetual-exchange/how-it-works",
-            from: "/guides/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/perpetual-exchange/overview",
-            from: "/labs",
-          },
-          {
-            to: "/guides/perpetual-exchange/how-it-works",
-            from: "/labs/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/jlp/JLP",
-            from: "/labs/perpetual-exchange/jlp-pool",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/perpetual-exchange/how-it-works",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/faq/faq",
-          },
-          {
-            to: "/guides/general/get-your-token-on-jupiter",
-            from: "/docs/get-your-token-onto-jup",
-          },
-          {
-            to: "/guides/general/get-your-token-on-jupiter",
-            from: "/guides/general/new-token-guide",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/perps-faq",
-          },
-          {
-            to: "/blog-redirect",
-            from: "/blog",
-          },
-          {
-            to: "/guides/onboard",
-            from: "/guides/bridge-comparator",
-          },
-          {
-            to: "/guides/onboard",
-            from: "/guides/bridge/comparator",
-          },
-          {
-            to: "/guides/onboard/bridge",
-            from: "/guides/bridge/bridging",
-          },
-          {
-            to: "/guides/onboard/onramp",
-            from: "/guides/bridge/onramp",
-          },
-        ],
-      },
+      { redirects,
+        createRedirects(existingPath) {
+          if (existingPath.includes('/docs/old')) {
+            return ['/docs'];
+          }
+          return undefined;
+        },
+      }
     ],
     async function myPlugin() {
       return {
