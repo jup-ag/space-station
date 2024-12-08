@@ -91,7 +91,7 @@ The Token Ledger caters to a wide range of use cases, which include but are not 
 - Facilitating the exchange of NFTs for tokens other than SOL.
 
 Read more about the Token Ledger:
-https://station.jup.ag/docs/apis/swap-api#using-token-ledger-instruction
+https://station.jup.ag/docs/old/apis/swap-api#using-token-ledger-instruction
 
 ### Referral Fees Program to Simplify Fee Collection
 In our pursuit of making life easier for our partners, we've streamlined the process of charging referral fees with the new referral fees program.
@@ -109,9 +109,9 @@ The partner journey is now hyper easy - They head over to Jupiter, create a refe
 
 Give our dashboard a spin here: https://referral.jup.ag
 
-Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/apis/adding-fees
+Read here on how to add your platform fees to Jupiter Swap : https://station.jup.ag/docs/old/apis/adding-fees
 
-More info on Jupiter Referral Program: https://station.jup.ag/docs/additional-topics/referral-program
+More info on Jupiter Referral Program: https://station.jup.ag/docs/old/additional-topics/referral-program
 
 ![Referral](referral1.jpg)
 
@@ -131,7 +131,7 @@ For CPI to work, the transaction will be composed of these instructions:
 4. The program then transfers the SOL back to the user.
 
 
-Read more here: https://station.jup.ag/docs/apis/cpi
+Read more here: https://station.jup.ag/docs/old/apis/cpi
 
 The CPI approach is not without its limitations - because of Solana’s transaction limit of 1232 byte size, lookup tables cannot be used within a CPI call, swaps via CPI can fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. Instead, we recommend taking the “flash-fil” approach to utilizing Jupiter Swap.
 
@@ -149,7 +149,7 @@ For Flash Fill to work, the transaction will be composed of these instructions:
 
 This approach entirely bypasses the need for CPI calls, effectively sidestepping the constraints imposed by CPI.
 
-To delve deeper into these two approaches, check out our documentation here: https://station.jup.ag/docs/apis/flash-fill
+To delve deeper into these two approaches, check out our documentation here: https://station.jup.ag/docs/old/apis/flash-fill
 
 ## Partners Using v6 API
 A big shout out to our key early adopters for running our v6 API and helping us improve our stability and features. Check out how they are using Jupiter to power their use cases.
@@ -194,7 +194,7 @@ ExactOut is particularly useful in scenarios involving the purchase of NFTs, all
 The good news is that since the NFT Marketplace has integrated ExactOut into its interface, you can simply purchase the 40 SOL NFT and Jupiter swap would automatically calculate the most optimal amount of BONK required to purchase the 40 SOL NFT. This is achieved in a single click, eliminating the need to leave the site or perform additional calculations, while ensuring that you receive the best possible price through Jupiter.
 This is extremely important to Solana as payments are a crucial part of bridging crypto with real-life applications, ultimately contributing to the mainstream adoption of the Solana ecosystem.
 
-Read more about ExactOut here: https://station.jup.ag/docs/apis/payments-api
+Read more about ExactOut here: https://station.jup.ag/docs/old/apis/payments-api
 
 ### ExactOut Showcase #1 - Sollinked
 
