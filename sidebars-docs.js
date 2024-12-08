@@ -70,7 +70,27 @@ const sidebars = {
           type: 'doc',
           id: 'tool-kits/swap-terminal',
           label: 'Integrate Swap Terminal',
-        }
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
+    {
+      type: 'category',
+      label: 'Spot Products',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'swap-api/limit-order-api',
+        },
+        {
+          type: 'doc',
+          id: 'swap-api/dca-sdk',
+        },
       ],
     },
     {
@@ -125,27 +145,23 @@ const sidebars = {
   other: [
     {
       type: 'category',
-      label: 'More',
+      label: 'Utility',
       collapsible: false,
       collapsed: false,
       items: [
         {
           type: 'doc',
-          id: 'more/price-api',
+          id: 'utility/price-api',
         },
         {
           type: 'doc',
-          id: 'more/token-api',
-        },
-        {
-          type: 'doc',
-          id: 'more/limit-order-api',
-        },
-        {
-          type: 'doc',
-          id: 'more/dca-sdk',
+          id: 'utility/token-api',
         },
       ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
     },
   ],
 };

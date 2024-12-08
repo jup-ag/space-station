@@ -101,7 +101,7 @@ const SwapProductList = () => {
                         image={<img src="/docslanding/more.svg" alt="Limit Order API" style={{ width: '60px', height: '60px' }} />}
                         title="Limit Order API"
                         description="Integrate Jupiter Limit Order program built on top of Jupiter Swap."
-                        link="/docs/more/limit-order-api"
+                        link="/docs/swap-api/limit-order-api"
                     />
                 </div>
                 <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
@@ -109,7 +109,7 @@ const SwapProductList = () => {
                         image={<img src="/docslanding/more.svg" alt="DCA SDK" style={{ width: '60px', height: '60px' }} />}
                         title="DCA SDK"
                         description="Integrate Dollar Cost Average program built on top of Jupiter Swap."
-                        link="/docs/more/dca-sdk"
+                        link="/docs/swap-api/dca-sdk"
                     />
                 </div>
             </div>
@@ -169,7 +169,7 @@ const MoreProductList = () => {
                         image={<img src="/docslanding/price.svg" alt="Price API" style={{ width: '60px', height: '60px' }} />}
                         title="Price API"
                         description="Use prices derived from Jupiter Swap in your app."
-                        link="/docs/more/price-api"
+                        link="/docs/utility/price-api"
                     />
                 </div>
                 <div style={{ flex: '1 1 calc(33% - 10px)', display: 'flex', margin: '5px', minWidth: '300px' }}>
@@ -177,7 +177,7 @@ const MoreProductList = () => {
                         image={<img src="/docslanding/price.svg" alt="Token API" style={{ width: '60px', height: '60px' }} />}
                         title="Token API"
                         description="Use all of Solana tokens that are tradable on Jupiter in your app."
-                        link="/docs/more/token-api"
+                        link="/docs/utility/token-api"
                     />
                 </div>
             </div>

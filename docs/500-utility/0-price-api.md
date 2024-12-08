@@ -19,7 +19,7 @@ The prices are derived **from Jupiter Swap**, which is an aggregate of most mark
 
 In this guide, we will be going through the simple price responses and the extra help information.
 
-The root URL of the Quote API is as such.
+The root URL of the Price API is as such.
 
 ```
 https://api.jup.ag/price/v2
@@ -39,6 +39,8 @@ const priceResponse = await fetch(
 );
 
 const priceData = await priceResponse.json();
+
+console.log(priceData);
 ```
 
 #### Price vsToken
@@ -55,7 +57,7 @@ const priceDataWithVsToken = await priceResponseWithVsToken.json();
 console.log(JSON.stringify(priceDataWithVsToken, null, 2));
 ```
 
- From the above example, you should see this response.
+From the above example, you should see this response.
 
 Notice 2 details here:
 
