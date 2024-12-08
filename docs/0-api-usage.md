@@ -13,6 +13,7 @@ In 1 December 2024, Jupiter have introduced new hostnames and the usage of our A
 
 ## What's New?
 
+*Last updated: 1 December 2024*
 - API will now be served through new hostnames.
 - API will now be served through API keys.
 - The new service willl comprise of 3 service types.
