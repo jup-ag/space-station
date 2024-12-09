@@ -132,6 +132,19 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
         id: "guides",
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'Latest',
+            path: '',
+            badge: false,
+          },
+          old: {
+            label: 'Old',
+            path: 'old',
+            banner: 'unmaintained',
+          }
+        },
         path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
