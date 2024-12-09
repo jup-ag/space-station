@@ -81,7 +81,7 @@ Take note that this only applies for the Trading View Chart on Jupiter Perpetual
 
 There is an hourly borrow fee on every position, the hourly borrow fee will change the liquidation price over time.
 
-If you want to understand how the hourly borrow rate works, you can check it out [here](https://station.jup.ag/guides/perpetual-exchange/how-it-works#hourly-borrow-rate).
+If you want to understand how the hourly borrow rate works, you can check it out [here](https://station.jup.ag/guides/old/perpetual-exchange/how-it-works#hourly-borrow-rate).
 
 ### 5. I deposited 1 SOL (where 1 SOL = $100) for a 5x leveraged SOL-Long position and profited $50 (where 1 SOL = $110). Why did I get less than the full amount?
 
@@ -134,7 +134,7 @@ The underlying collateral for long positions are the tokens themselves (SOL, wBT
 
 This is to protect the pool from scenarios that might put the pool at risk, for example a series of ongoing profitable trades that deplete the pool's reserves.
 
-For more information on this, consult the [JLP pool documentation](https://station.jup.ag/guides/jlp/How-JLP-Works#risks-associated-with-holding-jlp) which describes the dynamics between traders and the liquidity pool for long and short scenarios.
+For more information on this, consult the [JLP pool documentation](https://station.jup.ag/guides/old/jlp/How-JLP-Works#risks-associated-with-holding-jlp) which describes the dynamics between traders and the liquidity pool for long and short scenarios.
 
 ### 9. How are token prices determined?
 

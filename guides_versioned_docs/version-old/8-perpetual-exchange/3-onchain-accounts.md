@@ -169,7 +169,7 @@ Each `Custody` account contains the following data:
 * `is_stable`: Sets whether the custody is a stablecoin.
 * `oracle`: Contains data for the price oracle used for the custody.
 * `pricing`: Contains data for the custody's price-related logic.
-  * `trade_impact_fee_scalar`: Sets the base value when calculating price impact fees when opening or closing positions. For more info on the price impact fee, read more [here](guides/8-perpetual-exchange/2-how-it-works.md#fees).
+  * `trade_impact_fee_scalar`: Sets the base value when calculating price impact fees when opening or closing positions.
   * `max_leverage`: Sets the max leverage for this custody's positions. The max leverage for all custodies is `500x` at the time of writing.
   * `max_global_long_sizes`: The maximum total position size (USD) for long positions.
   * `max_global_short_sizes`: The maximum total position size (USD) for short positions.

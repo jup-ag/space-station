@@ -30,7 +30,7 @@ The Jupiter Limit Order feature has a minimum order size requirement of $5 (unde
 **Let's go through the Limit Order Settings in more detail below.**
 
 :::info
-Global Settings still apply to the Limit Order Functionality, please reference [global settings](https://station.jup.ag/guides/jupiter-swap/swap#global-settings) for more information.
+Global Settings still apply to the Limit Order Functionality, please reference [global settings](https://station.jup.ag/guides/old/jupiter-swap/swap#global-settings) for more information.
 :::
 
 ## Jupiter Limit Order Settings

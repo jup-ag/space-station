@@ -97,7 +97,7 @@ At the end of your VA orders, you do not need to perform any additional actions.
 
 By default, if your wallet’s ATA remains open, your purchase tokens are automatically transferred to you on every order (the program only allows your tokens to be sent to your wallet and no one else’s).
 
-However, if there are still tokens yet to be transferred to you (ie. if you close your wallet’s token account for your purchase token halfway through the VA cycle as described in [auto-withdrawal section](https://station.jup.ag/guides/va/how-va-work#automatic-transfer-of-purchased-tokens-on-every-order)), the VA program will close the PDA in-token account and utilize the rent recovered to open your wallet's token account.
+However, if there are still tokens yet to be transferred to you (ie. if you close your wallet’s token account for your purchase token halfway through the VA cycle as described in [auto-withdrawal section](https://station.jup.ag/guides/old/va/how-va-work#automatic-transfer-of-purchased-tokens-on-every-order)), the VA program will close the PDA in-token account and utilize the rent recovered to open your wallet's token account.
 
 This allows the program to transfer the remaining purchased tokens to you. As such, you would only receive 2/3 of the rent incurred to initialise your VA account. Having said that, this 1/3 rent is not absorbed by any third-party. This rent will remain recoverable by you if you decide to close your ATA that “holds” your purchased token.
 

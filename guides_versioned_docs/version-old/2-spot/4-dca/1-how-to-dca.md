@@ -12,7 +12,7 @@ slug: /dca/how-to-dca
 
 Jupiter DCA is a dollar cost averaging solution designed to enable users to automate the purchase or sale of any SPL tokens at regular intervals over a specified period of time.
 
-The DCA feature has some very powerful use cases, such as interacting with low liquidity markets, long term accumulation, or consistent profit taking without disrupting the market price too much. Check out this [Explainer Page](https://station.jup.ag/guides/dca/explainer) to learn more about DCA other use cases.
+The DCA feature has some very powerful use cases, such as interacting with low liquidity markets, long term accumulation, or consistent profit taking without disrupting the market price too much. Check out this [Explainer Page](https://station.jup.ag/guides/old/dca/explainer) to learn more about DCA other use cases.
 
 ## Basic DCA User Flow
 

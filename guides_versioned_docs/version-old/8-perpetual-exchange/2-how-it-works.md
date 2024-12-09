@@ -219,7 +219,7 @@ BPS_POWER = 10^4      // 10_000
 
 // 1. Get the base fee (BPS) from the JLP pool account's `fees.increasePositionBps` for open position requests
 // or `fees.decreasePositionBps` for close position requests
-// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account
+// https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts#pool-account
    baseFeeBps = pool.fees.increasePositionBps
 
 // 2. Convert `baseFeeBps` to decimals
@@ -266,7 +266,7 @@ BPS_POWER = 10^4      // 10_000
 Calculate Price Impact Fee:
 
 // 1. Get the trade impact fee scalar from the custody account's `pricing.tradeImpactFeeScalar` constant
-// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
+// https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts#custody-account
    tradeImpactFeeScalar = custody.pricing.tradeImpactFeeScalar
 
 // 2. Convert trade size to USDC decimal format
@@ -323,7 +323,7 @@ These rates represent the maximum charged at **100% utilization**. In practice, 
 
 #### Calculating Utilization Rate
 
-To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts)) and apply the following calculation:
+To determine the current utilization rate, access the asset's on-chain account ([as shown here](https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts)) and apply the following calculation:
 
 ```
 // Calculate utilization percentage
@@ -374,7 +374,7 @@ It's crucial to regularly monitor your borrow fees and liquidation price. Failur
 
 Due to Solana's blockchain architecture, calculating funding fees in real-time for each position would be computationally expensive and impractical. Instead, the Jupiter Perpetuals contract uses a counter-based system to calculate borrow fees for open positions.
 
-The [pool](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account) and [position](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#position-account) accounts maintain two key fields:
+The [pool](https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts#pool-account) and [position](https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts#position-account) accounts maintain two key fields:
 
 * The pool account maintains a global cumulative counter through its `fundingRateState.cumulativeInterestRate` field, which accumulates funding rates over time
 * Each position account tracks its own `cumulativeInterestSnapshot` field, which captures the global counter's value whenever a trade is made: when the position is opened, when its size is increased, when collateral is deposited or withdrawn, or when the position is closed

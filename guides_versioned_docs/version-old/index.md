@@ -37,9 +37,9 @@ Here's a list of all our official links. Please always double check the URL matc
 
 ## Navigating this Guide
 - **Spot:** Read detailed walkthroughs on all Spot features: Swap, Limit Order, Dollar Cost Averaging (DCA), Value Averaging (VA). Deep dive into how each of them work individually and together to provide the best trading experience for you! 
-- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview) and the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
+- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/old/perpetual-exchange/overview) and the [JLP Pool](/guides/old/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
 - **Ape:** Discover how the vault model, auto-retry, and removal of wallet signature enables fast and secure trades. 
-- **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
+- **JupSOL:**  Check out [JupSOL](/guides/old/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
 - **Onboard:** If you're coming to Solana for the first time, we care to provide a seamless experience for you. Read our guide on Bridge, Onramp, and CEX transferring.    
 - **General Guides:** Discover general guides relating to the Solana ecosystem such as personal security, using a block explorer to verify swaps, actions & blinks, token guide for creators, the Jupiter Media Kit, and FAQs about the Jupiter Platform.
 

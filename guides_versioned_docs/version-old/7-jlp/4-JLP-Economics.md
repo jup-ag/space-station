@@ -114,7 +114,7 @@ To get an estimate of the global unrealized PnL for longs, you can use the follo
 
 ```
 // 1) Get the custody account you're interested in calculating unrealized PnL for longs
-// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
+// https://station.jup.ag/guides/old/perpetual-exchange/onchain-accounts#custody-account
 
 // 2) Get the `assets.guaranteedUsd` field which stores the value of `position.sizeUsd - position.collateralUsd` for
 // all open long positions for the custody. Note that a position's `sizeUsd` value is only updated when a trade is made, which

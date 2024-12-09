@@ -11,7 +11,7 @@ title: How To Get JLP
 
 ### Method 1: Jupiter Swap
 
-For a detailed breakdown of swaps, check out [How to Swap](https://station.jup.ag/guides/jupiter-swap/swap).
+For a detailed breakdown of swaps, check out [How to Swap](https://station.jup.ag/guides/old/jupiter-swap/swap).
 
 1. Go to the [USDC-JLP](https://jup.ag/swap/USDC-JLP) pair on Jupiter Swap
 2. Make sure your wallet is connected. There should be an icon on the top right showing your connection status.
