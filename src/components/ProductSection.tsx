@@ -1,7 +1,9 @@
 import React from 'react';
-import styles from './ProductSection.module.css'; // For custom styles
+import styles from './ProductSection.module.css';
+import linkData from '/src/links/links.json'; // Import pre-generated data, safe to ignore
 
-const ProductSection = ({ title, links, linkColor, buttonLink }) => {
+const ProductSection = ({ title, sectionKey, linkColor, buttonLink }) => {
+  const links = linkData[sectionKey] || [];
   const gridLinks = links.slice(0, 8);
   const overflowLinks = links.slice(8);
 

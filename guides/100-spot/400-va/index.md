@@ -10,3 +10,13 @@ description: Learn about Jupiter Value Average and how to use it.
     <meta name="twitter:card" content="summary" />
 </head>
 
+import ProductSection from '/src/components/ProductSection.tsx';
+
+This is the Value Average Overview
+
+<ProductSection 
+    title="Getting Started with VA" 
+    sectionKey="va"
+    linkColor="darkgreen"
+    buttonLink="../"
+/>

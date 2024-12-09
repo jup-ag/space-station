@@ -80,15 +80,15 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-use-price-strategy-with-dca',
+          id: 'spot/dca/how-to-use-dca-price-strategy',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-calculate-actual-cost-and-average-price-of-your-dca',
+          id: 'spot/dca/how-to-calculate-dca-cost-and-average-price',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-safeguard-your-dca-order-and-funds',
+          id: 'spot/dca/how-to-safeguard-dca-order-and-funds',
         },
       ],
     },
