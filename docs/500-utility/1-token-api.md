@@ -17,17 +17,12 @@ Through the Token API, you can query by tags, mints, markets to get a list of to
 - [Background and History](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
 - [Token API and Standard](https://www.jupresear.ch/t/introducing-the-ecosystem-token-api-and-standard/20601)
 - [How to get your token verified](https://www.jupresear.ch/t/get-your-token-a-community-tag-beta/18963)
+- [API Reference](/docs/api/token-information)
 :::
 
 ## Let's Get Started
 
 In this guide, we will be going through a few examples of what Token API endpoints you can call to get the information you need.
-
-:::tip Response with large size
-Do note that some of the endpoints will return a large sized response.
-
-Please refer to the [API Reference](/docs/api/token-information) or a [quick explanation](#response-pagination) in this guide, to utilize `offset` and `limit` to paginate your responses.
-:::
 
 The root URL of the Token API is as such.
 
@@ -98,19 +93,19 @@ From the above example, you should see this response.
 
 ---
 
-## Get Tradable Tokens
+## Get All Tradable Tokens
 
-Using this endpoint, you can get a list token mints that are tradable on Jupiter.
+Using this endpoint, you can get a list of all token mints that are tradable on Jupiter.
 - A new token (before market liquidity checks)
 - Or tokens that has past the market liquidity checks
 - These tokens should return a quote from the `/quote` endpoint and is able to swap.
 
 ```jsx
-const tradableResponse = await (
-    await fetch('https://api.jup.ag/tokens/v1/mints/tradable')
+const allTradableResponse = await (
+    await fetch('https://api.jup.ag/tokens/v1/mints/all')
 ).json();
 
-console.log(tradableResponse);
+console.log(allTradableResponse);
 ```
 
 From the above example, you should see this response.
@@ -137,12 +132,15 @@ Using this endpoint, you can get a list of token mints (with information) that a
 
 :::tip
 A list of useful tags are:
-- verified
-- lst
-- unknown
-- token-2022
-- moonshot
-- pump
+
+| **Token List Name** | **Description** |
+|---|---|
+| **verified** | A list of verified tokens, consisting of community-verified tokens via [catdetlist.jup.ag](https://catdetlist.jup.ag) and the previous standard of Jupiter Strict. |
+| **lst** | A list of liquid staked tokens, maintained with Sanctum. |
+| **token-2022** | A list of all token-2022 tokens. |
+| **moonshot** | A list of tokens minted via Moonshot. |
+| **pump** | A list of tokens minted via Pump.fun. |
+
 
 You can pass in multiple tags using a comma separated list, refer to the API Reference for more details.
 :::
@@ -184,6 +182,16 @@ From the above example, you should see this response.
 ## Get New Tokens
 
 Using this endpoint, you can get a list of token mints (with information) **sorted by `created_at` their timestamps**.
+
+:::tip Paginate Large Response
+The `/new` endpoint will return a large sized payload as response, you can utilize the `limit` and `offset` query parameters to help paginate the responses.
+
+- `limit`: Refers to how many counts of data to be in the output.
+- `offset`: Refers to how many counts of data to offset into the result set.
+    - Used in conjunction with `limit` to page through the data.
+
+Refer to the [API Reference](/docs/api/all) for more information.
+:::
 
 ```jsx
 const newTokensReponse = await (
@@ -230,6 +238,8 @@ Using the endpoint, you can simply query with the `all` resource to get all toke
 
 :::warning
 Do note that calling this endpoint's resource will return **a large payload of 300+MB**, which would introduce some latency in the call. Please use carefully and intentionally, else utilize the other endpoints.
+
+This endpoint does not support `limit` or `offset`.
 :::
 
 :::tip
@@ -282,15 +292,3 @@ From the above example, you should see this response.
 
 ...
 ```
-
-## Response Pagination
-
-Some of the token endpoints will return responses with large sized payloads.
-
-You can utilize the `limit` and `offset` query parameters to help paginate the responses.
-
-- `limit`: Refers to how many counts of data to be in the output.
-- `offset`: Refers to how many counts of data to offset into the result set.
-    - Used in conjunction with `limit` to page through the data.
-
-Refer to the [API Reference](/docs/api/all) for more information.

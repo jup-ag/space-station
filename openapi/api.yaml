@@ -218,56 +218,6 @@ paths:
       - Token
       summary: all
       description: Returns all tokens with all metadata
-      parameters:
-      - name: tags
-        in: query
-        description: comma separated list of tags to include. The list is OR rather
-          than AND on the tag list.
-        required: false
-        schema:
-          type:
-          - string
-          - 'null'
-        example: verified,community
-      - name: sort_by
-        in: query
-        description: field to sort by, can be either `daily_volume` or `created_at`
-        required: false
-        schema:
-          type:
-          - string
-          - 'null'
-        example: created_at
-      - name: symbols
-        in: query
-        description: symbols to return info on
-        required: false
-        schema:
-          type:
-          - string
-          - 'null'
-        example: USDC,SOL
-      - name: limit
-        in: query
-        description: how many records to output in the JSON.
-        required: false
-        schema:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        example: '10'
-      - name: offset
-        in: query
-        description: the offset into the result set. Used in conjunction with `limit`
-          to page through the data.
-        required: false
-        schema:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        example: '20'
       responses:
         '200':
           description: List of tokens which are tradable
