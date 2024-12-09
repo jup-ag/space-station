@@ -7,8 +7,13 @@ export const navbarConfigs = {
       { to: '/docs/api', label: 'API Reference', position: 'left' },
     ],
     '/guides': [
-      { to: '/guides/', label: 'Guides', position: 'left' },
-      { to: '/docs/', label: 'Docs', position: 'left' },
+      { to: '/guides/onboard', label: 'Welcome', position: 'left' },
+      { to: '/guides/swap', label: 'Swap', position: 'left' },
+      { to: '/guides/limit', label: 'Limit', position: 'left' },
+      { to: '/guides/dca', label: 'DCA', position: 'left' },
+      { to: '/guides/va', label: 'VA', position: 'left' },
+      { to: '/guides/perp', label: 'Perp', position: 'left' },
+      { to: '/guides/ape', label: 'Ape', position: 'left' },
     ],
     '/': [
       { to: '/guides/', label: 'Guides', position: 'left' },

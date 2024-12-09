@@ -148,7 +148,7 @@ const config = {
         path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
+        sidebarCollapsed: false,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
