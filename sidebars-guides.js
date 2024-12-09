@@ -8,28 +8,99 @@ const sidebars = {
       id: 'onboard/index',
     }
   ],
+  spot: [
+    {
+      type: 'doc',
+      id: 'spot/index',
+    },
+    {
+      type: 'category',
+      label: 'Categories',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/swap/index',
+        },
+        {
+          type: 'doc',
+          id: 'spot/limit/index',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/index',
+        },
+        {
+          type: 'doc',
+          id: 'spot/va/index',
+        },
+      ],
+    },
+  ],
   swap: [
     {
       type: 'doc',
-      id: 'swap/index',
+      id: 'spot/swap/index',
     }
   ],
   limit: [
     {
       type: 'doc',
-      id: 'limit/index',
+      id: 'spot/limit/index',
     }
   ],
   dca: [
     {
       type: 'doc',
-      id: 'dca/index',
-    }
+      id: 'spot/dca/index',
+      
+    },
+    {
+      type: 'category',
+      label: 'How To',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-create-dca',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-cancel-dca',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-view-active-dca',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-view-dca-history',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-use-price-strategy-with-dca',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-calculate-actual-cost-and-average-price-of-your-dca',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-to-safeguard-your-dca-order-and-funds',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
   ],
   va: [
     {
       type: 'doc',
-      id: 'va/index',
+      id: 'spot/va/index',
     }
   ],
   perp: [

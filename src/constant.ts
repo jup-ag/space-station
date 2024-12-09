@@ -8,10 +8,7 @@ export const navbarConfigs = {
     ],
     '/guides': [
       { to: '/guides/onboard', label: 'Welcome', position: 'left' },
-      { to: '/guides/swap', label: 'Swap', position: 'left' },
-      { to: '/guides/limit', label: 'Limit', position: 'left' },
-      { to: '/guides/dca', label: 'DCA', position: 'left' },
-      { to: '/guides/va', label: 'VA', position: 'left' },
+      { to: '/guides/spot', label: 'Spot', position: 'left' },
       { to: '/guides/perp', label: 'Perp', position: 'left' },
       { to: '/guides/ape', label: 'Ape', position: 'left' },
     ],
