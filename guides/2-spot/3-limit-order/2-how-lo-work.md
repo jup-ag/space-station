@@ -18,7 +18,7 @@ This is not an order book system. The limit order system utilizes a keeper to mo
 
 **Scenario**
 - If a Limit Order is placed to buy 1 $SOL with 10 USDC at a rate of 10 USDC per $SOL.
-- The keeper will monitor the price on-chain using Jupiter [Price API](/docs/apis/price-api).
+- The keeper will monitor the price on-chain using Jupiter [Price API](/docs/old/apis/price-api).
 - If the keeper detects that the on-chain price of $SOL reaches 10 USDC, it will proceed to execute and fulfill the order.
     - If the order size is too large, and there is insufficient liquidity on-chain, the keeper will attempt to execute the order in smaller chunks. It will aim for partial fulfillment to ensure the best price with minimal price impact, continuing until the order is fully filled.
 - The executed order, whether fully or partially fulfilled, will be automatically transferred to your wallet.
