@@ -1,32 +1,32 @@
 {
   "dca": [
     {
-      "text": "How to calculate dca cost and average price",
-      "link": "/guides/spot/dca/how-to-calculate-dca-cost-and-average-price"
+      "text": "How to create dca",
+      "link": "/guides/spot/dca/0-how-to-create-dca"
     },
     {
       "text": "How to cancel dca",
-      "link": "/guides/spot/dca/how-to-cancel-dca"
-    },
-    {
-      "text": "How to create dca",
-      "link": "/guides/spot/dca/how-to-create-dca"
-    },
-    {
-      "text": "How to safeguard dca order and funds",
-      "link": "/guides/spot/dca/how-to-safeguard-dca-order-and-funds"
-    },
-    {
-      "text": "How to use dca price strategy",
-      "link": "/guides/spot/dca/how-to-use-dca-price-strategy"
+      "link": "/guides/spot/dca/1-how-to-cancel-dca"
     },
     {
       "text": "How to view active dca",
-      "link": "/guides/spot/dca/how-to-view-active-dca"
+      "link": "/guides/spot/dca/2-how-to-view-active-dca"
     },
     {
       "text": "How to view dca history",
-      "link": "/guides/spot/dca/how-to-view-dca-history"
+      "link": "/guides/spot/dca/3-how-to-view-dca-history"
+    },
+    {
+      "text": "How to use dca price strategy",
+      "link": "/guides/spot/dca/4-how-to-use-dca-price-strategy"
+    },
+    {
+      "text": "How to calculate dca cost and average price",
+      "link": "/guides/spot/dca/5-how-to-calculate-dca-cost-and-average-price"
+    },
+    {
+      "text": "How to safeguard dca order and funds",
+      "link": "/guides/spot/dca/6-how-to-safeguard-dca-order-and-funds"
     }
   ],
   "va": []
