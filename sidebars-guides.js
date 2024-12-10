@@ -109,10 +109,10 @@ const sidebars = {
       id: 'perp/index',
     }
   ],
-  ape: [
+  apepro: [
     {
       type: 'doc',
-      id: 'ape/index',
+      id: 'apepro/index',
     }
   ],
 };
