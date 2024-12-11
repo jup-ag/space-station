@@ -115,6 +115,34 @@ const sidebars = {
       type: 'html',
       value: '<li class="sidebar-line-break"></li>',
     },
+    {
+      type: 'category',
+      label: 'Perp Program',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp-api/position-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/position-request-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/pool-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/custody-account',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<li class="sidebar-line-break"></li>',
+    },
   ],
   toolkit: [
     {
