@@ -113,7 +113,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
