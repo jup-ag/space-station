@@ -22,7 +22,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
@@ -46,7 +46,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
@@ -75,7 +75,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
@@ -95,7 +95,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   perp: [
@@ -141,7 +141,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   toolkit: [
@@ -167,7 +167,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   other: [
@@ -189,7 +189,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
 };
