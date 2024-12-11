@@ -38,15 +38,15 @@ Each `Custody` account contains the following data:
 
 | Field | Description |
 | --- | --- |
-| `pool`            | **Type:** `publicKey`<br /><br />The public key for the pool that this custody belongs to (i.e. the JLP pool). |
-| `mint`            | **Type:** `publicKey`<br /><br />The public key for the custody's token mint account. |
-| `tokenAccount`    | **Type:** `publicKey`<br /><br />The associated token account of the custody which holds the tokens under management for the pool. |
-| `decimals`        | **Type:** `u8`<br /><br />The number of decimals used for the token which is the same as the number of decimals specified in the token mint account. This is stored for convenience. |
+| `pool`             | **Type:** `publicKey`<br /><br />The public key for the pool that this custody belongs to (i.e. the JLP pool). |
+| `mint`             | **Type:** `publicKey`<br /><br />The public key for the custody's token mint account. |
+| `tokenAccount`     | **Type:** `publicKey`<br /><br />The associated token account of the custody which holds the tokens under management for the pool. |
+| `decimals`         | **Type:** `u8`<br /><br />The number of decimals used for the token which is the same as the number of decimals specified in the token mint account. This is stored for convenience. |
 | `isStable`         | **Type:** `bool`<br /><br />A boolean flag indicating if the token in custody is a stable asset. |
 | `oracle`           | **Type:** `OracleParams`<br /><br />Contains data for the price oracle used for the custody. |
 | `pricing`          | **Type:** [`PricingParams`](#pricingparams)<br /><br />Contains data for the custody's price-related logic. |
 | `permissions`      | **Type:** `Permissions`<br /><br />A set of global flags that can be set by the protocol's administrator to enable or disable trade actions which is useful during program upgrades or black swan events. |
-| `targetRatioBps` | **Type:** `u64`<br /><br />The target weightage (in basis points) for the custody in the JLP pool. |
+| `targetRatioBps`   | **Type:** `u64`<br /><br />The target weightage (in basis points) for the custody in the JLP pool. |
 | `assets`           | **Type:** [`Assets`](#assets)<br /><br />Contains data used to calculate PNL, AUM, and core business logic for the program. |
 | `fundingRateState` | **Type:** [`FundingRateState`](#fundingratestate)<br /><br />Contains data used to calculate borrow fees for open positions. |
 

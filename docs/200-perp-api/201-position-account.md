@@ -43,10 +43,10 @@ Each `Position` account contains the following data:
 
 | Field | Description |
 | --- | --- |
-| `owner`                       | **Type:** `publicKey`<br /><br />The public key for the trader's account. |
-| `pool`                        | **Type:** `publicKey`<br /><br />The public key for the [JLP pool account](./pool-account). |
-| `custody`                     | **Type:** `publicKey`<br /><br />The public key for the position's [`custody` account](./custody-account). |
-| `collateralCustody`           | **Type:** `publicKey`<br /><br />The public key for the position's collateral custody account.<br /><br />Like the `custody` account, a `collateralCustody` account contains information for the token that's used as collateral for the position (SOL / wETH / wBTC for long positions, USDC / USDT for short positions). The borrow rates for the position will also be calculated based on the position's `collateralCustody`. |
+| `owner`                       | **Type:** `publicKey`<br /><br />The public key of the trader's account. |
+| `pool`                        | **Type:** `publicKey`<br /><br />The public key of the [JLP pool account](./pool-account). |
+| `custody`                     | **Type:** `publicKey`<br /><br />The public key of the position's [`custody` account](./custody-account). |
+| `collateralCustody`           | **Type:** `publicKey`<br /><br />The public key of the position's collateral custody account.<br /><br />Like the `custody` account, a `collateralCustody` account contains information for the token that's used as collateral for the position (SOL / wETH / wBTC for long positions, USDC / USDT for short positions). The borrow rates for the position will also be calculated based on the position's `collateralCustody`. |
 | `openTime`                    | **Type:** `i64`<br /><br />The open time of the position in UNIX timestamp format. |
 | `updateTime`                  | **Type:** `i64`<br /><br />The last updated time of the position in UNIX timestamp format. |
 | `side`                        | **Type:** `Side`<br /><br />The position's side, either `long` or `short`. |
