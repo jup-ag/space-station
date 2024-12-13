@@ -396,7 +396,7 @@ components:
           description: "- The referral account's token account of specific mints depending on `SwapMode` to collect fees\n- See [Add Fees](/docs/swap-api/add-fees-to-swap) guide for more details"
           type: string
         trackingAccount:
-          description: "- Specify any public key that belongs to you to track the transactions\n- Useful for integrators to get all the swap transactions from this public key\n- Use this endpoint `https://stats.jup.ag/tracking-account/:public-key/YYYY-MM-DD/HH`"
+          description: "- Specify any public key that belongs to you to track the transactions\n- Useful for integrators to get all the swap transactions from this public key\n- Query the data using a block explorer like Solscan/SolanaFM or query like Dune/Flipside."
           type: string
         prioritizationFeeLamports:
           description: "- To specify a level or amount of additional fees to prioritize the transaction\n- It can be used for both priority fee and jito tip"

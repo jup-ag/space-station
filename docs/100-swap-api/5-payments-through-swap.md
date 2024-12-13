@@ -53,7 +53,7 @@ console.log("customerAccount:", customerAccount.publicKey.toBase58());
 const USDC_MINT = new PublicKey('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'); // Your preferred token payment
 
 const merchantAccount = new PublicKey('ReplaceWithMerchantPubkey');
-// const trackingAccount = new PublicKey('ReplaceWithPubkey');
+// const Account = new PublicKey('ReplaceWithPubkey');
 
 console.log("USDC_MINT:", USDC_MINT.toBase58());
 console.log("merchantAccount:", merchantAccount.toBase58());
