@@ -273,11 +273,6 @@ const config = {
             label: "API Playground",
           },
           {
-            to: "/partners",
-            label: "Partners",
-            position: "left",
-          },
-          {
             to: "https://dune.com/ilemi/jupiter-aggregator-solana",
             label: "Stats",
             position: "left",
