@@ -58,6 +58,26 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Get Started',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/dca/im-a-beginner',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/how-dca-works',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
       label: 'How To',
       collapsible: false,
       collapsed: false,
@@ -68,15 +88,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-cancel-dca',
-        },
-        {
-          type: 'doc',
-          id: 'spot/dca/how-to-view-active-dca',
-        },
-        {
-          type: 'doc',
-          id: 'spot/dca/how-to-view-dca-history',
+          id: 'spot/dca/how-to-manage-dca',
         },
         {
           type: 'doc',
@@ -84,11 +96,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-calculate-dca-cost-and-average-price',
-        },
-        {
-          type: 'doc',
-          id: 'spot/dca/how-to-safeguard-dca-order-and-funds',
+          id: 'spot/dca/how-to-optimize-dca',
         },
       ],
     },

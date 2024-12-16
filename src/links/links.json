@@ -1,32 +1,28 @@
 {
   "dca": [
     {
+      "text": "Im a beginner",
+      "link": "/guides/spot/dca/0-im-a-beginner"
+    },
+    {
+      "text": "How dca works",
+      "link": "/guides/spot/dca/1-how-dca-works"
+    },
+    {
       "text": "How to create dca",
-      "link": "/guides/spot/dca/0-how-to-create-dca"
+      "link": "/guides/spot/dca/100-how-to-create-dca"
     },
     {
-      "text": "How to cancel dca",
-      "link": "/guides/spot/dca/1-how-to-cancel-dca"
-    },
-    {
-      "text": "How to view active dca",
-      "link": "/guides/spot/dca/2-how-to-view-active-dca"
-    },
-    {
-      "text": "How to view dca history",
-      "link": "/guides/spot/dca/3-how-to-view-dca-history"
+      "text": "How to manage dca",
+      "link": "/guides/spot/dca/101-how-to-manage-dca"
     },
     {
       "text": "How to use dca price strategy",
-      "link": "/guides/spot/dca/4-how-to-use-dca-price-strategy"
+      "link": "/guides/spot/dca/102-how-to-use-dca-price-strategy"
     },
     {
-      "text": "How to calculate dca cost and average price",
-      "link": "/guides/spot/dca/5-how-to-calculate-dca-cost-and-average-price"
-    },
-    {
-      "text": "How to safeguard dca order and funds",
-      "link": "/guides/spot/dca/6-how-to-safeguard-dca-order-and-funds"
+      "text": "How to optimize dca",
+      "link": "/guides/spot/dca/103-how-to-optimize-dca"
     }
   ],
   "va": []
