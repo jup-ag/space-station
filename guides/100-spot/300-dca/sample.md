@@ -1,5 +1,5 @@
 ---
-sidebar_label: Dollar Cost Average
+sidebar_label: sample directory menu
 title: Dollar Cost Average
 sidebar_position: 1
 description: Learn about Jupiter Dollar Cost Average and how to use it.

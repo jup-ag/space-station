@@ -11,8 +11,8 @@ description: Introduction to how DCA works
 
 Creating a DCA order is like setting up a reliable machine that processes your trades in the intervals you set them at, here’s how it works in a nutshell, let’s break it down into:
 
-- How DCAs are created
-- How their order mechanism works
+- How the orders are created
+- How your tokens are bought
 - How tokens are transferred after each order
 - How the DCA is (auto) closed
 
@@ -54,13 +54,13 @@ Using the same example as above:
 
 **Day 3:** Your final $100 USDC order wraps things up with another **0.554 JupSOL** (net of fees) delivered to your wallet.
 
-:::warning **Caveat to Auto-Withdrawal: Keep Your ATAs Open**
+:::caution **Caveat to Auto-Withdrawal: Keep Your ATAs Open**
 If your purchased token isn’t SOL, automatic transfers only work if you have the correct **Associated Token Account (ATA)** set up. But don’t worry—Jupiter DCA creates the necessary ATA when you set up your account.
-:::
+::: 
 
-### What if you closed your ATA?
+**HWhat if you closed your ATA?**
 
-**Heads-Up:** If you manually close your purchased token’s ATA (via a wallet or a 3rd-party tool), auto-transfers after every order won’t work. Instead, tokens will stay in your DCA vault safely and only transfer as a lump sum at the end of your DCA cycle.
+If you manually close your purchased token’s ATA (via a wallet or a 3rd-party tool), auto-transfers after every order won’t work. Instead, tokens will stay in your DCA vault safely and only transfer as a lump sum at the end of your DCA cycle.
 
 :::tip **Pro Tip:** Manual withdraw
 If you don’t want to wait, you can manually withdraw your tokens from the DCA vault anytime through our user-friendly UI.
@@ -77,6 +77,6 @@ At the end of your DCA cycle, Jupiter takes care of everything for you. Here’s
 
 By default, **2/3 of the rent** from your DCA account is sent back to you. The remaining **1/3 of the rent** isn’t taken by Jupiter or anyone else—it’s recoverable by you if you decide to close your ATA that holds your tokens later.
 
-:::warning **Do NOT close your ATA**
+:::caution **Do NOT close your ATA**
 Do not clsoe your ATA, before withdrawing or swapping your tokens! If you do, it could result in token loss. This isn’t just a Jupiter thing, it’s how Solana wallets and accounts operate.
 :::

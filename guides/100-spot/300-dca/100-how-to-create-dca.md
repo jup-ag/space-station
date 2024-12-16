@@ -21,7 +21,7 @@ Before anything else, you’ll need to connect your wallet to Jupiter.
 2. Click on the **“Connect Wallet”** button at the top right or using one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
 3. Approve the connection request in your wallet.
 
-![Connect Wallet](./img/dca-1.png)
+![Connect Wallet](./img/dca-100-1.png)
 
 ## Step 2: Choose Your Tokens
 
@@ -35,7 +35,7 @@ Now it’s time to decide which tokens you want to allocate and buy.
 Choose tokens that align with your investment goals. If you’re unsure, start with popular ones like SOL or LSTs (Liquid Staking Tokens) like JupSOL.
 :::
 
-![Choose Tokens](./img/dca-2.png)
+![Choose Tokens](./img/dca-100-2.png)
 
 ## Step 3: Set Your DCA Plan
 
@@ -51,7 +51,7 @@ This is where the magic happens!
 [Read this guide for more information!](./102-how-to-use-dca-price-strategy.md)
 :::
 
-![DCA Plan](./img/dca-3.png)
+![DCA Plan](./img/dca-100-3.png)
 
 ## Step 4: Review and Start DCA
 
@@ -63,7 +63,7 @@ Before confirming, double-check the details:
 
 Have a look at the DCA Summary for a thorough overview. If everything looks good, click on **"Start DCA"**.
 
-![DCA Summary](./img/dca-4.png)
+![DCA Summary](./img/dca-100-4.png)
 
 ## Step 5: Approve the Transaction in Your Wallet
 
@@ -76,7 +76,7 @@ Your wallet will prompt you to approve the transaction to set up the DCA plan.
 
 Once approved, Jupiter will handle all future transactions for you automatically.
 
-![DCA Created](./img/dca-5.png)
+![DCA Created](./img/dca-100-5.png)
 
 ## Step 6: Track Your DCA Plan
 
@@ -90,7 +90,7 @@ Congratulations! Your first DCA is now active.
     - To learn more about what each stat means, read here [interlink].
 3. You can also [close/cancel your plan](./101-how-to-manage-dca.md) at any time.
 
-![DCA Active](./img/dca-6.png)
+![DCA Active](./img/dca-100-6.png)
 
 ## Tips for Success
 

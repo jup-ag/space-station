@@ -30,6 +30,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'spot/dca/index',
+          label: 'Dollar Cost Average',
         },
         {
           type: 'doc',
@@ -52,11 +53,6 @@ const sidebars = {
   ],
   dca: [
     {
-      type: 'doc',
-      id: 'spot/dca/index',
-      
-    },
-    {
       type: 'category',
       label: 'Get Started',
       collapsible: false,
@@ -64,11 +60,19 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/dca/im-a-beginner',
+          id: 'spot/dca/index',
         },
         {
           type: 'doc',
           id: 'spot/dca/how-dca-works',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/dca-interface',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/security',
         },
       ],
     },
@@ -103,6 +107,10 @@ const sidebars = {
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'doc',
+      id: 'spot/dca/sample',
     },
   ],
   va: [
