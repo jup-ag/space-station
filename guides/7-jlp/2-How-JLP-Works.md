@@ -57,16 +57,16 @@ It is essential to note that pool earnings and losses (index token appreciation/
 
 ### Fee Calculations
 
-| Action             | Fee                                                                        |
-| ------------------ | -------------------------------------------------------------------------- |
-| Opening a Position | 6 BPS                                                                      |
-| Closing a Position | 6 BPS                                                                      |
+| Action             | Fee                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------------------|
+| Opening a Position | 6 BPS                                                                                  |
+| Closing a Position | 6 BPS                                                                                  |
 | Price Impact Fee   | Variable (see [reference](../8-perpetual-exchange/2-how-it-works.md#price-impact-fee)) |
-| Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                       |
-| Borrow Rate        | 0.8 / 1.0 BPS per hour (see below) x token utilization percentage                    |
+| Swap Fee           | Between 0 BPS to 150 BPS depending on pool weightage                                   |
+| Borrow Rate        | Dynamically updated based on utilization and market conditions (see below)             |
 
 :::info
-**Hourly Borrow Rate** is set at 0.008% for SOL, ETH and BTC, while the rate for USDC and USDT is set at 0.01%.
+The hourly borrow rate is updated dynamically depending on utilization and market conditions. You can view the current hourly borrow rate in the `Borrow rate` field of the Jupiter Perpetuals trade form or retrieved onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account).
 :::
 
 Fee calculation for opening and closing positions involves the volume of these transactions, multiplied by the fee percentage of 0.06%.
@@ -76,7 +76,7 @@ The price impact fee from larger trades are then added. More analytics on this t
 The borrowing fee, often termed the hourly borrow fee, is computed as follows:
 
 ```
-hourly borrow fee = (tokens borrowed / tokens in the pool) x 0.008% x position size
+hourly borrow fee = (tokens borrowed / tokens in the pool) x (hourly borrow rate) x (position size)
 ```
 
 The swap fee for the pool typically ranges between 0% and 2%.
