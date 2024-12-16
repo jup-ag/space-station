@@ -25,11 +25,10 @@ tags:
     description: Endpoints related to Quote and Swap API
   - name: Token
     description: Endpoints related to Tokens
-  - name: Utility
-    description: Utility endpoints
-
+  - name: Price
+    description: Endpoints related to Price
 paths:
-  /quote:
+  /quote/v1:
     get:
       tags:
         - Swap
@@ -55,7 +54,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/QuoteResponse'
-  /swap:
+  /swap/v1:
     post:
       tags:
         - Swap
@@ -74,7 +73,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SwapResponse'
-  /swap-instructions:
+  /swap-instructions/v1:
     post:
       tags:
         - Swap
@@ -93,7 +92,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SwapInstructionsResponse'
-  "/tokens/v1/token/{mint_address}":
+  /program-id-to-label:
+    get:
+      tags:
+        - Swap
+      summary: program-id-to-label
+      description: Returns a hash, which key is the program id and value is the label. This is used to help map error from transaction by identifying the fault program id. With that, we can use the `excludeDexes` or `dexes` parameter.
+      responses:
+        '200':
+          description: Default response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+  /tokens/v1/token/{mint_address}:
     get:
       tags:
       - Token
@@ -114,7 +128,7 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
-  "/tokens/v1/market/{mareket_address}/mints":
+  /tokens/v1/market/{mareket_address}/mints:
     get:
       tags:
       - Token
@@ -137,7 +151,7 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/Mint"
-  "/tokens/v1/mints/tradable":
+  /tokens/v1/mints/tradable:
     get:
       tags:
       - Token
@@ -152,7 +166,7 @@ paths:
                 type: array
                 items:
                   type: string
-  "/tokens/v1/tagged/{tag}":
+  /tokens/v1/tagged/{tag}:
     get:
       tags:
       - Token
@@ -174,7 +188,7 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
-  "/tokens/v1/new":
+  /tokens/v1/new:
     get:
       tags:
       - Token
@@ -212,7 +226,7 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/MintWithCreationTimeAndMarkets"
-  "/tokens/v1/all":
+  /tokens/v1/all:
     get:
       tags:
       - Token
@@ -227,21 +241,35 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/Mint"
-  /program-id-to-label:
+  /price/v2/ids:
     get:
       tags:
-        - Utility
-      summary: program-id-to-label
-      description: Returns a hash, which key is the program id and value is the label. This is used to help map error from transaction by identifying the fault program id. With that, we can use the `excludeDexes` or `dexes` parameter.
-      responses:
-        '200':
-          description: Default response
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: string
+      - Price
+      summary: price
+      description: Returns prices of specified tokens
+      parameters:
+      - name: ids
+        in: query
+        description: "- The token mint address(es) to get price(s) on\n- Comma separate to pass in multiple"
+        required: true
+        schema:
+          type:
+          - string
+        example: 'So11111111111111111111111111111111111111112'
+      - name: vsToken
+        in: query
+        description: "- A token mint address to compare the prices against\n- By default, prices are denominated by USD\n- If parameter is used with SOL mint address, denominates in the price in SOL"
+        required: false
+        schema:
+          type:
+          - string
+      - name: showExtraInfo
+        in: query
+        description: "- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter"
+        required: false
+        schema:
+          type:
+            - string
 
 components:
   schemas:
