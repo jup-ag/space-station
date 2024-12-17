@@ -324,8 +324,8 @@ const config = {
       communityId: "0e700188-8410-431a-b2de-b23cc4ba7308",
       config: JSON.stringify({
         theme: "dark",
-        widgetTitle: "Station Chatbot",
-        firstMessage: "Hello there, how can we help you?\n\nWe appreciate your patience! If you require further assistance, please use the buttons below.",
+        widgetTitle: "Jupiter Station Chatbot",
+        firstMessage: "Welcome to JM Cadets! We're here to help and support you. 😊 Have a question? Feel free to use the buttons below - we're looking forward to assisting you!",
         primaryColor: "#20b2aa",
         disclaimer: "We are experimenting with the AI Chatbot and it will do its best to answer.",
         actions:
