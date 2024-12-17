@@ -54,7 +54,7 @@ const sidebars = {
   dca: [
     {
       type: 'category',
-      label: 'Get Started',
+      label: 'Getting Started',
       collapsible: false,
       collapsed: false,
       items: [
@@ -66,18 +66,6 @@ const sidebars = {
           type: 'doc',
           id: 'spot/dca/how-dca-works',
         },
-        {
-          type: 'doc',
-          id: 'spot/dca/dca-interface',
-        },
-        {
-          type: 'doc',
-          id: 'spot/dca/dca-security',
-        },
-        {
-          type: 'doc',
-          id: 'spot/dca/dca-faq',
-        },
       ],
     },
     {
@@ -86,7 +74,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'How To',
+      label: "How To's",
       collapsible: false,
       collapsed: false,
       items: [
@@ -107,6 +95,22 @@ const sidebars = {
           id: 'spot/dca/how-to-optimize-dca',
         },
       ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'doc',
+      id: 'spot/dca/dca-interface',
+    },
+    {
+      type: 'doc',
+      id: 'spot/dca/dca-security',
+    },
+    {
+      type: 'doc',
+      id: 'spot/dca/dca-faq',
     },
     {
       type: 'html',

@@ -1,10 +1,10 @@
 ---
-title: Why use DCA
+title: DCA Quickstart
 description: Introduction to Jupiter Dollar Cost Average
 ---
 
 <head>
-    <title>DCA Guide: Get Started</title>
+    <title>DCA Quickstart</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
