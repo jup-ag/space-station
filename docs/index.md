@@ -53,3 +53,12 @@ Do note that they are not live yet.
 |https://tokens.jup.ag/token/:mint|https://api.jup.ag/tokens/v1/token/:mint|
 |https://tokens.jup.ag/tokens?tags=:tags|https://api.jup.ag/tokens/v1/tagged/:tag|
 |https://tokens.jup.ag/tokens_with_markets|https://api.jup.ag/tokens/v1/mints/tradable|
+
+## What's Old?
+
+- Old hostnames will be deprecated in the next 6 months, by **1 June 2025**.
+- Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
+- This set of documentation will be versioned as `Old` for a new refactored set to take place.
+
+## Help us help you
+- If you need further assistance or have questions, please reach out to us on [Discord](https://discord.gg/jup).
