@@ -1,6 +1,6 @@
 ---
-sidebar_label: "Welcome"
-title: Welcome
+sidebar_label: "Onboard"
+title: Onboard
 sidebar_position: 1
 description: Learn about Jupiter and how to use the products.
 ---

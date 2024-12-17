@@ -100,7 +100,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-use-dca-price-strategy',
+          id: 'spot/dca/how-to-use-dca-price-range',
         },
         {
           type: 'doc',
