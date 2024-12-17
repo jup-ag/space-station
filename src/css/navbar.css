@@ -22,7 +22,6 @@
 
 .navbar__item.navbar__link {
     margin-right: 16px;
-    font-size: 2px;
 }
 
 .navbar__item.navbar__link.navbar__link--active {
