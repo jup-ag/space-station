@@ -310,6 +310,33 @@ const config = {
         additionalLanguages: ["rust"],
       },
     }),
+
+  scripts: [
+    {
+      id: "awesomeqa-chat-widget-script",
+      src: "https://awesomeqa.xyz/web-support/chat-widget.js",
+      async: true,
+      communityId: "0e700188-8410-431a-b2de-b23cc4ba7308",
+      config: JSON.stringify({
+        theme: "dark",
+        widgetTitle: "Jupiter Station Chatbot",
+        firstMessage: "Welcome to JM Cadets! We're here to help and support you. 😊 Have a question? Feel free to use the buttons below - we're looking forward to assisting you!",
+        primaryColor: "#20b2aa",
+        disclaimer: "We are experimenting with the AI Chatbot and it will do its best to answer.",
+        actions:
+          {
+            contactSupport: {
+              title: "Ticket Support",
+              response: "Thanks for choosing to contact our support, please sit tight and we'll be with you soon.",
+            },
+            thanks: {
+              title: "Thanks",
+              response: "Thanks for your patience and understanding, hope you enjoy using Jupiter and looking forward to more feedback! Test [Discord](https://discord.gg/jup)"
+            }
+          }
+      }),
+    },
+  ],
 };
 
 module.exports = config;
