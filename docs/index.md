@@ -44,7 +44,7 @@ Do note that they are not live yet.
 
 | Old Hostnames | New Hostnames |
 |---|---|
-|https://price.jup.ag/v4 or /v6|https://api.jup.ag/price/v2|
+|https://price.jup.ag/v6|https://api.jup.ag/price/v2|
 
 #### Token
 
