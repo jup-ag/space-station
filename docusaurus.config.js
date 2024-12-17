@@ -322,18 +322,18 @@ const config = {
         widgetTitle: "Jupiter Station Chatbot",
         firstMessage: "Welcome to JM Cadets! We're here to help and support you. 😊 Have a question? Feel free to use the buttons below - we're looking forward to assisting you!",
         primaryColor: "#20b2aa",
-        disclaimer: "We are experimenting with the AI Chatbot and it will do its best to answer.",
+        disclaimer: "Our AI assistant is currently in early beta and learning to help you better. While it will do its best to assist, please connect with our support team if you need detailed help or if the AI's response isn't what you're looking for.",
         actions:
           {
             contactSupport: {
-              title: "Ticket Support",
-              response: "Thanks for choosing to contact our support, please sit tight and we'll be with you soon.",
+              title: "Connecting with a Support Agent",
+              response: "Thanks for reaching out! One of our friendly support team members will be with you shortly. We appreciate your patience and look forward to helping you.",
             },
             thanks: {
-              title: "Thanks",
-              response: "Thanks for your patience and understanding, hope you enjoy using Jupiter and looking forward to more feedback! Test [Discord](https://discord.gg/jup)"
-            }
-          }
+              title: "Thank You for Your Support",
+              response: "We truly appreciate you taking the time to reach out! Your feedback helps make Jupiter better for everyone. Have more questions? Join our vibrant community on [Discord](https://discord.gg/jup) - we'd love to see you there! 🚀",
+            },
+          },
       }),
     },
   ],
