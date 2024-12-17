@@ -42,6 +42,13 @@ Say you’re DCA-ing $300 USDC into JupSOL over 3 days. Your order will be split
 
 At the end of the example DCA, you can see that the price of JupSOL has fluctuated and the average cost of your DCA is $196.666.
 
+#### Backfills
+:::note Missed DCA Purchases
+Do note that, if your DCA order misses multiple purchases, it will backlog these purchases. When it is available to fill, it attempts to backfill all missed purchases immediately (with some buffer between each purchase).
+
+Currently, it is not an option to backfill immediately or not. This is part of the current design of DCA.
+:::
+
 ## How tokens are transferred after each order
 
 Every time an order executes, the purchased tokens will show up in your wallet within the same transaction. No extra steps required! Let’s break it down:
@@ -58,7 +65,7 @@ Using the same example as above:
 If your purchased token isn’t SOL, automatic transfers only work if you have the correct **Associated Token Account (ATA)** set up. But don’t worry—Jupiter DCA creates the necessary ATA when you set up your account.
 ::: 
 
-**HWhat if you closed your ATA?**
+**What if you closed your ATA?**
 
 If you manually close your purchased token’s ATA (via a wallet or a 3rd-party tool), auto-transfers after every order won’t work. Instead, tokens will stay in your DCA vault safely and only transfer as a lump sum at the end of your DCA cycle.
 

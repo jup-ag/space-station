@@ -72,7 +72,11 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/security',
+          id: 'spot/dca/dca-security',
+        },
+        {
+          type: 'doc',
+          id: 'spot/dca/dca-faq',
         },
       ],
     },
