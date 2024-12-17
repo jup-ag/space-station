@@ -326,11 +326,11 @@ const config = {
         actions:
           {
             contactSupport: {
-              title: "Connecting with a Support Agent",
+              title: "Open Support Ticket",
               response: "Thanks for reaching out! One of our friendly support team members will be with you shortly. We appreciate your patience and look forward to helping you.",
             },
             thanks: {
-              title: "Thank You for Your Support",
+              title: "Send Thanks",
               response: "We truly appreciate you taking the time to reach out! Your feedback helps make Jupiter better for everyone. Have more questions? Join our vibrant community on [Discord](https://discord.gg/jup) - we'd love to see you there! 🚀",
             },
           },
