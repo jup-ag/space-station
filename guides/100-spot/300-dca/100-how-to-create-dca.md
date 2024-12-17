@@ -48,7 +48,7 @@ This is where the magic happens!
 :::tip **Pro Tip:** Price Strategy
 4. This is an optional setting, you can provide a minimum or maximum price range for your order.
 
-[Read this guide for more information!](./102-how-to-use-dca-price-strategy.md)
+[Read this guide for more information!](./102-how-to-use-dca-price-range.md)
 :::
 
 ![DCA Plan](./img/dca-100-3.png)

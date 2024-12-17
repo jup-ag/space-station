@@ -13,8 +13,12 @@
       "link": "/guides/spot/dca/2-dca-interface"
     },
     {
-      "text": "Security",
-      "link": "/guides/spot/dca/3-security"
+      "text": "Dca security",
+      "link": "/guides/spot/dca/3-dca-security"
+    },
+    {
+      "text": "Dca faq",
+      "link": "/guides/spot/dca/4-dca-faq"
     },
     {
       "text": "How to create dca",
@@ -25,8 +29,8 @@
       "link": "/guides/spot/dca/101-how-to-manage-dca"
     },
     {
-      "text": "How to use dca price strategy",
-      "link": "/guides/spot/dca/102-how-to-use-dca-price-strategy"
+      "text": "How to use dca price range",
+      "link": "/guides/spot/dca/102-how-to-use-dca-price-range"
     },
     {
       "text": "How to optimize dca",
