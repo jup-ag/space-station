@@ -5,13 +5,12 @@
 
 /* Styling for each sidebar link */
 .theme-doc-sidebar-menu .menu__link {
-  font-weight: 100 !important;
-  font-size: 16px !important;
+  font-weight: 400 !important;
 }
 
 /* Highlight the active link */
 .theme-doc-sidebar-menu .menu__link--active {
-  color: darkseagreen !important;
+  color:rgb(0, 180, 90) !important;
   font-weight: 700 !important;
   background-color: ghostwhite;
   width: 99.5%;
@@ -33,7 +32,7 @@
 /* Custom styling for collapsible category labels */
 .theme-doc-sidebar-menu .menu__list-item-collapsible .menu__link {
   color: black !important;
-  font-weight: 900 !important;
+  font-weight: 700 !important;
   
 }
 
