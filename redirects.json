@@ -1,6 +1,4 @@
 [
-    {"to":"/guides/spot/swap","from":"/guides/swap"},
-
     {"to":"/guides/old/apepro/faq","from":"/guides/apepro/faq"},
     {"to":"/guides/old/apepro/limit-order","from":"/guides/apepro/limit-order"},
     {"to":"/guides/old/apepro/overview","from":"/guides/apepro/overview"},

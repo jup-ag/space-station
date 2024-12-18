@@ -21,7 +21,8 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/swap/index',
+          id: 'spot/swap/quickstart',
+          label: 'Swap',
         },
         {
           type: 'doc',
@@ -29,8 +30,8 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/dca/index',
-          label: 'Dollar Cost Average',
+          id: 'spot/dca/quickstart',
+          label: 'Dollar Cost Average (DCA)',
         },
         {
           type: 'doc',
@@ -41,9 +42,61 @@ const sidebars = {
   ],
   swap: [
     {
+      type: 'category',
+      label: 'Getting Started',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/swap/quickstart',
+        },
+        {
+          type: 'doc',
+          id: 'spot/swap/how-swap-works',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: "How To's",
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/swap/how-to-swap',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
       type: 'doc',
-      id: 'spot/swap/index',
-    }
+      id: 'spot/swap/interface',
+    },
+    {
+      type: 'doc',
+      id: 'spot/swap/security',
+    },
+    {
+      type: 'doc',
+      id: 'spot/swap/faq',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a href="http://localhost:3000">Reach out on Discord</a>',
+    },
   ],
   limit: [
     {
@@ -60,7 +113,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/dca/index',
+          id: 'spot/dca/quickstart',
         },
         {
           type: 'doc',
@@ -102,15 +155,15 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'spot/dca/dca-interface',
+      id: 'spot/dca/interface',
     },
     {
       type: 'doc',
-      id: 'spot/dca/dca-security',
+      id: 'spot/dca/security',
     },
     {
       type: 'doc',
-      id: 'spot/dca/dca-faq',
+      id: 'spot/dca/faq',
     },
     {
       type: 'html',
