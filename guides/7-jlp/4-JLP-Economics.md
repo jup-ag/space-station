@@ -135,7 +135,7 @@ globalUnrealizedLongPnl = lockedTokensUsd - guaranteedUsd
 
 ### Calculate global unrealized PnL for shorts
 
-The custody accounts store a `global_short_sizes` value that stores the USD value of all open short positions in the platform. The `global_short_average_prices` value stores the average price (USD) for all open short positions and is used together with `global_short_sizes` to get an estimate of the the global unrealized PNL for shorts, as shown below:
+The custody accounts store a `global_short_sizes` value that stores the USD value of all open short positions in the platform. The `global_short_average_prices` value stores the average price (USD) for all open short positions and is used together with `global_short_sizes` to get an estimate of the global unrealized PNL for shorts, as shown below:
 
 ```
 globalUnrealizedShortPnl = (custody.assets.globalShortSizes * (|custody.assets.globalShortAveragePrices - currentTokenPriceUsd|)) / custody.assets.globalShortAveragePrices)

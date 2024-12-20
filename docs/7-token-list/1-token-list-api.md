@@ -30,7 +30,7 @@ For most people, these 2 tags are all you need. All tokens would either be verif
 | Parameter   | Description                        |
 |-------------|------------------------------------|
 | `verified`  | Tokens that we display as verified on jup.ag. Today, this is a superset consisting of tokens tagged “community” and “lst”. You can use this setting to automatically receive jupiter’s settings when we update our allowlist.
-| `unknown`  | Untagged tokens that we display a warning on on jup.ag.                                |
+| `unknown`  | Untagged tokens that we display a warning on jup.ag.                                |
 
 ### Other Tags Available
 
