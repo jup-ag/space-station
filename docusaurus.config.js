@@ -322,7 +322,7 @@ const config = {
         widgetTitle: "Jupiter Station Chatbot",
         firstMessage: "Welcome to JM Cadets! We're here to help and support you. 😊 Have a question? Feel free to use the buttons below - we're looking forward to assisting you!",
         primaryColor: "#20b2aa",
-        disclaimer: "Our AI assistant is currently in early beta and learning to help you better. While it will do its best to assist, please connect with our support team if you need detailed help or if the AI's response isn't what you're looking for.",
+        disclaimer: "Our AI assistant is in beta and only provides general information (not financial advice).\n\nAvoid sharing sensitive information like private keys, and contact our support team for unresolved issues.",
         actions:
           {
             contactSupport: {
