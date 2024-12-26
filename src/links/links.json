@@ -1,24 +1,24 @@
 {
   "dca": [
     {
-      "text": "Index",
-      "link": "/guides/spot/dca/0-index"
+      "text": "Quickstart",
+      "link": "/guides/spot/dca/0-quickstart"
     },
     {
       "text": "How dca works",
       "link": "/guides/spot/dca/1-how-dca-works"
     },
     {
-      "text": "Dca interface",
-      "link": "/guides/spot/dca/2-dca-interface"
+      "text": "Interface",
+      "link": "/guides/spot/dca/2-interface"
     },
     {
-      "text": "Dca security",
-      "link": "/guides/spot/dca/3-dca-security"
+      "text": "Security",
+      "link": "/guides/spot/dca/3-security"
     },
     {
-      "text": "Dca faq",
-      "link": "/guides/spot/dca/4-dca-faq"
+      "text": "Faq",
+      "link": "/guides/spot/dca/4-faq"
     },
     {
       "text": "How to create dca",
