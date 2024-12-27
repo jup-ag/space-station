@@ -302,7 +302,11 @@ Unlike other perpetuals exchanges, the Jupiter Perpetuals exchange does not char
 
 The borrow fees are reinvested back into the JLP pool to increase the pool's yield and available liquidity. It also acts as an incentive for the token mark price to align with it's market spot price.
 
-The formula for the hourly borrow fee is:
+Jupiter's hourly borrow fee is calculated using a dual slope model that adjusts based on the custody's utilization rates. For each custody, the model defines a target utilization level. When utilization is below the target level, the borrow rate is lower which incentivizes traders to borrow from the pool, thus increasing utilization and yield for the JLP. 
+
+Once utilization exceeds the target level, the borrow rate increases aggressively. This higher rate serves two purposes: it incentivizes additional liquidity providers to enter the market, and it drives traders to reduce their positions as the higher borrowing costs outweigh potential returns. This dynamic approach ensures efficient liquidity allocation while preventing excessive leverage and overutilization of the JLP's assets.
+
+![dual-slope-borrow-rate](./dual-slope-borrow-rate.png)
 
 `Hourly Borrow Fee = Total Tokens Locked/Tokens in the Pool (i.e. Utilization) * Hourly Borrow Rate * Position Size`
 
@@ -314,9 +318,38 @@ The formula for the hourly borrow fee is:
 
 ![hourly-borrow-fee](./hourly-borrow-fee.png)
 
+#### Calculating Borrow Rate
+
+The dual slope borrow rate model uses four parameters to calculate the borrow rate:
+
+* Minimum rate: The lowest borrow rate, applied at 0% utilization
+* Maximum rate: The highest borrow rate, applied at 100% utilization
+* Target rate: The borrow rate when utilization reaches its target level
+* Target utilization: The optimal utilization level for the custody
+
 :::info
-The hourly borrow rates for JLP assets can be retrieved from the `Borrow rate` field of the Jupiter Perpetuals trade form or fetched onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account). Note that these rates represent the maximum charged at **100% utilization**.
+Jupiter works with partners like Chaos Labs and Gauntlet to set and optimize the parameters above. The parameters may be adjusted over time as market conditions change.
 :::
+
+:::info
+The parameters above can be fetched onchain from the `min_rate_bps`, `max_rate_bps`, `target_rate_bps`, and `target_utilization_rate` fields via the [custody account's `jump_rate_state` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account).
+:::
+
+The borrow rate is then calculated based on the current utilization level:
+
+```
+# First, calculate the slopes for both curves
+lower_slope = (target_rate - min_rate) / target_utilization
+upper_slope = (max_rate - target_rate) / (1 - target_utilization)
+
+# Calculate the borrow rate based on current utilization
+if utilization < target_utilization:
+    # Below target: Use gentler slope starting from min_rate
+    borrow_rate = min_rate + (lower_slope * utilization)
+else:
+    # Above target: Use steeper slope starting from target_rate
+    borrow_rate = target_rate + (upper_slope * (utilization - target_utilization))
+```
 
 #### Calculating Utilization Rate
 
@@ -328,12 +361,6 @@ if (custody.assets.owned > 0 AND custody.assets.locked > 0) then
     utilizationPct = custody.assets.locked / custody.assets.owned
 else
     utilizationPct = 0
-
-// Get hourly funding rate in basis points
-hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
-
-// Convert basis points to percentage and apply utilization
-hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
 ```
 
 :::info
