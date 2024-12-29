@@ -159,7 +159,7 @@ This means actual leverage for a position will be slightly lower as the calculat
 
 The maximum allowed leverage is 500x.
 
-Positions where the trader's **collateral less fees and less unrealized losses** is less than **0.2%** of the position size will be liquidated.
+Positions will be liquidated if the trader's collateral, after subtracting fees, adding unrealized profits and subtracting unrealized losses, is less than 0.2% of the position size.
 
 :::info
 When reducing the size of a position, the collateral amount is reduced as well to maintain the leverage for the position. For example, if a position has a 10x leverage, and reduces its size by 50%, the same amount of collateral will be withdrawed from the position to maintain the 10x leverage.
