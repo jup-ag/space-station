@@ -286,7 +286,7 @@ This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-pars
 :::
 
 :::info
-Jupiter is working with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
+Jupiter works with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
 :::
 
 ### Borrow Fee
@@ -308,24 +308,14 @@ Once utilization exceeds the target level, the borrow rate increases aggressivel
 
 ![dual-slope-borrow-rate](./dual-slope-borrow-rate.png)
 
-`Hourly Borrow Fee = Total Tokens Locked/Tokens in the Pool (i.e. Utilization) * Hourly Borrow Rate * Position Size`
-
-> * `Utilization`: `Total Tokens Locked / Total Tokens in Pool`  
-> * `Total Tokens Locked`: The amount of tokens locked across all open positions
-> * `Total Tokens in Pool`: The amount of tokens deposited into the pool for the position's underlying token
-> * `Hourly Borrow Rate`: The base rate for the hourly borrow fees (calculation shown below)
-> * `Position Size`: The size (USD) of the leveraged position
-
-![hourly-borrow-fee](./hourly-borrow-fee.png)
-
 #### Calculating Borrow Rate
 
-The dual slope borrow rate model uses four parameters to calculate the borrow rate:
+The dual slope model uses four parameters to calculate the borrow rate:
 
-* Minimum rate: The lowest borrow rate, applied at 0% utilization
-* Maximum rate: The highest borrow rate, applied at 100% utilization
-* Target rate: The borrow rate when utilization reaches its target level
-* Target utilization: The optimal utilization level for the custody
+* **Minimum rate**: The lowest borrow rate, applied at 0% utilization
+* **Maximum rate**: The highest borrow rate, applied at 100% utilization
+* **Target rate**: The borrow rate when utilization reaches its target level
+* **Target utilization**: The optimal utilization level for the custody
 
 :::info
 Jupiter works with partners like Chaos Labs and Gauntlet to set and optimize the parameters above. The parameters may be adjusted over time as market conditions change.
@@ -333,23 +323,32 @@ Jupiter works with partners like Chaos Labs and Gauntlet to set and optimize the
 
 :::info
 The parameters above can be fetched onchain from the `min_rate_bps`, `max_rate_bps`, `target_rate_bps`, and `target_utilization_rate` fields via the [custody account's `jump_rate_state` field](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account).
+
+The following research posts dive deeper into the methodology and technical details of the dual slope borrow rate model:
+
+* https://www.jupresear.ch/t/gauntlet-dual-slope-borrowing-rate-model-implementation-and-recommendations-12-19-24/29072
+* https://www.jupresear.ch/t/chaos-labs-borrowing-rate-jump-rate-model-recommendations/29203
 :::
 
-The borrow rate is then calculated based on the current utilization level:
+The borrow rate calculation depends on the current utilization level:
 
 ```
 # First, calculate the slopes for both curves
-lower_slope = (target_rate - min_rate) / target_utilization
-upper_slope = (max_rate - target_rate) / (1 - target_utilization)
+lower_slope = (target_rate - minimum_rate) / target_utilization
+upper_slope = (maximum_rate - target_rate) / (1 - target_utilization)
 
 # Calculate the borrow rate based on current utilization
 if utilization < target_utilization:
-    # Below target: Use gentler slope starting from min_rate
-    borrow_rate = min_rate + (lower_slope * utilization)
+    # Below target utilization: Use gentler slope starting from minimum_rate
+    borrow_rate = minimum_rate + (lower_slope * utilization)
 else:
-    # Above target: Use steeper slope starting from target_rate
+    # Above target utilization: Use steeper slope starting from target_rate
     borrow_rate = target_rate + (upper_slope * (utilization - target_utilization))
 ```
+
+:::info
+The borrow rate is calculated above is expressed as the annual rate (APR). To get the hourly borrow rate, divide the APR by 8,760 hours.
+:::
 
 #### Calculating Utilization Rate
 
@@ -363,27 +362,43 @@ else
     utilizationPct = 0
 ```
 
-:::info
-Read more about how the base rate for each token is decided from [Gauntlet's recommendations](https://www.jupresear.ch/t/gauntlet-jupiter-perpetuals-optimization-borrowing-rate-reduction-and-competitive-analysis-vs-okx-and-bybit/21580).
-:::
-
 #### Worked Example
 
-For example, assume the price of SOL is **$100**. The SOL liquidity pool has **1,000 SOL** under custody and has lent out **100 SOL** (i.e, utilization is 10%). A trader opens a **100 SOL** position with an initial margin of **10 SOL**. The remaining **90 SOL** is borrowed from the pool to open the leveraged position. Assume that the hourly borrow rate for SOL is **0.012%**:
+Assume the borrow rate parameters are as below:
 
-* `Position Size in SOL`: 100 SOL
-* `Total Tokens Locked`: ` 100 SOL (position size) + 100 SOL (utilized SOL in pool) = 200 SOL
-* `Total Tokens in Pool`: 1,000 SOL (existing custody) + 10 SOL (user collateral) = 1,010 SOL
-* `Utilization`: 200 SOL / 1,010 SOL = 19.8%
-* `Hourly Borrow Rate`:  0.012% (0.00012 in decimal format / 1.2 BPS)
+* `Minimum Rate`: 10%
+* `Max Rate`: 230%
+* `Target Rate`: 60%
+* `Target Utilization`: 80%
 
-Calculation:
+Based on the formula above, we can obtain the upper slope and lower slope values for the dual slope borrow rate curve:
 
-```
-Hourly Borrow Fee = (200 / 1010) * 0.00012 * 10000 = 0.238
-```
+* `Lower Slope` = (60% - 10%) / 80% = 62.5%
+* `Upper Slope` = (230% - 60%) / 20% = 850%
 
-This means your position will accrue a borrow fee of $0.238 every hour it remains open.
+Assume the trader is opening a position with size **$10,000**.
+
+#### Scenario 1: 40% Utilization (below target level)
+
+* `Borrow Rate` = 10% + (62.5% × 40%) = 10% + 25% = 35%
+
+The hourly borrow rate is calculated by dividing the borrow rate by the number of hours in a year:
+
+* `Hourly Borrow Rate` = 35% / 8760 = ~0.004%
+
+This means the position will accrue a borrow fee of `0.004% * $10,000 = $0.40` every hour.
+
+#### Scenario 2: 90% Utilization (above target level)
+
+Assume the current utilization rate is 85% which is above the target utilization level of 80% from the example above, the calculation is as follows:
+
+* `Borrow Rate` = 60% + (850% × 10%) = 60% + 85% = 145%
+
+The hourly borrow rate is calculated by dividing the borrow rate by the number of hours in a year:
+
+* `Hourly Borrow Rate` = 145% / 8760 = ~0.0166%
+
+This means the position will accrue a borrow fee of `0.0166% * $10,000 = $1.66` every hour.
 
 :::info
 Borrow fees are continuously accrued and deducted from your collateral. This ongoing deduction has two important consequences:
@@ -400,10 +415,10 @@ Due to Solana's blockchain architecture, calculating funding fees in real-time f
 
 The [pool](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account) and [position](https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#position-account) accounts maintain two key fields:
 
-* The pool account maintains a global cumulative counter through its `fundingRateState.cumulativeInterestRate` field, which accumulates funding rates over time
+* The pool account maintains a global cumulative counter through its `fundingRateState.cumulativeInterestRate` field, which accumulates interest rates over time
 * Each position account tracks its own `cumulativeInterestSnapshot` field, which captures the global counter's value whenever a trade is made: when the position is opened, when its size is increased, when collateral is deposited or withdrawn, or when the position is closed
 
-To calculate a position's borrow fee, the contract takes the difference between the current global funding rate counter and the position's snapshot, then multiplies this by the position size. This approach enables efficient on-chain calculation of borrow fees over a given time period without needing real-time updates for each position.
+To calculate a position's borrow fee, the contract takes the difference between the current global interest rate counter and the position's snapshot, then multiplies this by the position size. This approach enables efficient on-chain calculation of borrow fees over a given time period without needing real-time updates for each position.
 
 The example below demonstrates the borrow fee calculation:
 
@@ -415,52 +430,26 @@ RATE_DECIMALS = 9            // 10^9, for funding rate calculations
 USD_DECIMALS = 6             // 10^6, for USD amounts as per the USDC mint's decimals
 
 // Main calculation:
-1. Get the cumulative funding rate from the pool account:
-   cumulativeFundingRate = pool.cumulative_interest_rate
+1. Get the cumulative interest rate from the pool account:
+   cumulativeInterestRate = pool.cumulative_interest_rate
 
-2. Get the position's funding rate snapshot:
-   fundingRateSnapshot = position.cumulative_interest_snapshot
+2. Get the position's borrow rate snapshot:
+   borrowRateSnapshot = position.cumulative_interest_snapshot
 
-3. Get the position's funding rate interval:
-   fundingRate = cumulativeFundingRate - fundingRateSnapshot
+3. Get the position's borrow rate interval:
+   borrowRate = cumulativeInterestRate - borrowRateSnapshot
 
 4. Calculate final borrow fee (USD):
-   borrowFeeUsd = (fundingRate * position.size_usd) / (10^RATE_DECIMALS) / (10^USD_DECIMALS)
+   borrowFeeUsd = (borrowRate * position.size_usd) / (10 ^ RATE_DECIMALS) / (10 ^ USD_DECIMALS)
 ```
 
 :::info
 This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-borrow-fee.ts) shows an example of calculating a position's borrow fees programatically.
 :::
 
-#### Calculate funding rate
+#### Funding rate
 
-The Jupiter Perpetuals platform does not behave like a traditional futures platform where longs pay shorts (or vice-versa) based on the funding rate. Instead, the funding rate mechanism takes into account:
-
-* The base hourly funding rate from the custody account
-* The current pool utilization (locked assets / owned assets)
-
-The calculation is shown below:
-
-```
-// Constants:
-DBPS_DECIMALS = 5            // 10^5, decimal basis points for precision
-RATE_DECIMALS = 9            // 10^9, for funding rate calculations
-
-Calculate Funding Rate:
-// 1. Get the base hourly funding rate:
-// Convert from DBPS to rate format using the custody account'`s `hourlyFundingDbps` value
-   hourlyFundingRate = (custody.fundingRateState.hourlyFundingDbps * (10 ^ RATE_DECIMALS)) / (10 ^ DBPS_DECIMALS)
-
-// 2. Calculate pool utilization:
-   utilization = custody.assets.locked / custody.assets.owned
-
-// 3. Calculate final funding rate:
-   fundingRate = utilization * hourlyFundingRate
-```
-
-:::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-funding-rate.ts) shows an example of calculating the current funding rate for a custody programatically.
-:::
+**There is no funding rate for Jupiter Perpetuals**. The Jupiter Perpetuals platform does not behave like a standard futures platform where longs pay shorts (or vice-versa) based on the funding rate, since traders borrow from the JLP which incurs a [borrow fee](#borrow-fee).
 
 ### Transaction & Priority Fee
 
@@ -469,8 +458,6 @@ Traders will have to pay SOL for submitting transactions onto the Solana chain. 
 At the same time, a minor SOL amount will be used for rent to create an escrow account ([PDA](https://solanacookbook.com/core-concepts/pdas.html#facts)). The SOL rent will be returned to you once you close your position.
 
 ## Example Trade
-
-With all these concepts covered, let's go through a worked example.
 
 Suppose a trader wants to open a 2x long SOL position at a position size of $1000 USD by depositing $500 USD worth of SOL as a collateral and borrowing $500 USD worth of SOL from the pool. Assume the hourly borrow rate for SOL is **0.012%**.
 
@@ -481,7 +468,7 @@ Suppose a trader wants to open a 2x long SOL position at a position size of $100
 | Leverage | 2x |
 | Initial SOL Price | $100 |
 | Utilization Rate | 50% |
-| Borrow Rate | 0.012% per hour |
+| Hourly Borrow Rate | 0.012% per hour |
 | Position Opening Fee | `0.06% * $1000 = $0.6` |
 
 The trader keeps this position open for 2 days, and the price of SOL appreciates by 10%.
@@ -494,9 +481,8 @@ The trader keeps this position open for 2 days, and the price of SOL appreciates
 
 The borrow fee accumulated throughout this period can be calculated as:
 
-- `Hourly Borrow Fee = Tokens Borrowed/Tokens in the Pool * Borrow Rate * Position Size`
+- `Hourly Borrow Fee = Tokens Borrowed/Tokens in the Pool * Hourly Borrow Rate * Position Size`
 - `Total Borrow Fee = 50% * 0.012% * 1000 * 48 = $2.88 USD`
-
 
 The trader's final profit can be calculated as:
 
@@ -504,7 +490,6 @@ The trader's final profit can be calculated as:
 - `$1100 - $1000 - $2.88 - $0.6 - $0.66 = $95.86`
 
 The trader gets a final profit of **$95.86 USD** after this trade.
-
 
 ## Oracle
 
