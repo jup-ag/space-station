@@ -28,7 +28,7 @@ Join the community discussions on Discord, Twitter and the Research Forum to edu
 :::note
 The official voting site is here: https://vote.jup.ag/
 
-[The step-by-step voting guide is here](./voting-guide).
+[The step-by-step voting guide is here](./voting).
 :::
 
 ## Resources and Links
