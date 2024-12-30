@@ -185,4 +185,9 @@ Each `Custody` account contains the following data:
 * `funding_rate_state`: Contains data used to calculate borrow fees for open positions.
   * `cumulative_interest_rate`: Traders are required to pay hourly borrow fees for opening leveraged positions. This fee is calculated based on two primary factors: the size of the trader's position and the current utilization of the pool for the custody. To calculate borrow fees more efficiently, each custody account contains a value called `cumulative_interest_rate`. Correspondingly, each position account stores a `cumulative_interest_snapshot`. This snapshot captures the value of `cumulative_interest_rate` at the time of the position's last update. Whenever there's a change in either the borrowed assets or the total assets within a custody, the `cumulative_interest_rate` for the custody is updated. The difference between the custody's `cumulative_interest_rate` and the position's `cumulative_interest_snapshot` is then used to calculate the position's borrow fees.
   * `last_updated`: The UNIX timestamp for when the custody's borrow fee data was last updated.
-  * `hourly_funding_dbps`: A constant used to calculate the hourly borrow fees for the custody. The Jupiter Perpetuals exchange works with Gauntlet and Chaos Labs to update and fine tune the `hourly_funding_dbps` to respond to traders' feedback and market conditions.
+  * `hourly_funding_dbps`: **NOTE: This will be deprecated in the near future.** A constant used to calculate the hourly borrow fees for the custody. The Jupiter Perpetuals exchange works with Gauntlet and Chaos Labs to update and fine tune the `hourly_funding_dbps` to respond to traders' feedback and market conditions.
+* `jump_rate_state`: Contains data used to calculate the [dual slope borrow rate model](guides/8-perpetual-exchange/2-how-it-works.md#borrow-fee).
+  * `min_rate_bps`: The lowest borrow rate, applied at 0% utilization.
+  * `max_rate_bps`: The highest borrow rate, applied at 100% utilization.
+  * `target_rate_bps`: The borrow rate when utilization reaches its target level.
+  * `target_utilization_rate`: The optimal utilization level for the custody.
