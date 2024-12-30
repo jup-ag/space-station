@@ -71,6 +71,18 @@ const sidebars = {
           type: 'doc',
           id: 'spot/swap/how-to-swap',
         },
+        {
+          type: 'doc',
+          id: 'spot/swap/how-to-swap-safely',
+        },
+        {
+          type: 'doc',
+          id: 'spot/swap/how-to-configure-swap-settings',
+        },
+        {
+          type: 'doc',
+          id: 'spot/swap/how-to-verify-token',
+        },
       ],
     },
     {

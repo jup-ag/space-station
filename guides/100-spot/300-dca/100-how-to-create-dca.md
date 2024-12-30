@@ -5,7 +5,7 @@ description: Guide to set up your first DCA with Jupiter
 ---
 
 <head>
-    <title>DCA Guide: Set Up</title>
+    <title>DCA Guide: Create Orders</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
