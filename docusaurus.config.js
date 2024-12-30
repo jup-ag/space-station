@@ -153,6 +153,31 @@ const config = {
       }),
     ],
     [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "jupiverse",
+        // lastVersion: 'current',
+        // versions: {
+        //   current: {
+        //     label: 'Latest',
+        //     path: '',
+        //     badge: false,
+        //   },
+        //   old: {
+        //     label: 'Old',
+        //     path: 'old',
+        //     banner: 'unmaintained',
+        //   }
+        // },
+        path: "jupiverse",
+        routeBasePath: "jupiverse",
+        sidebarPath: require.resolve("./sidebars-jupiverse.js"),
+        sidebarCollapsed: false,
+        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+      }),
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       { redirects }
     ],
@@ -201,7 +226,8 @@ const config = {
         },
         items: [
           { to: 'guides', label: 'Guides', position: 'left' },
-          { to: 'docs', label: 'docs', position: 'left' },
+          { to: 'docs', label: 'Docs', position: 'left' },
+          { to: 'jupiverse', label: 'Jupiverse', position: 'left' },
         ],
       },
       algolia: {

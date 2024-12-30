@@ -12,8 +12,14 @@ export const navbarConfigs = {
       { to: '/guides/perp', label: 'Perp', position: 'left' },
       { to: '/guides/apepro', label: 'Ape Pro', position: 'left' },
     ],
-    '/': [
+    '/jupiverse': [
       { to: '/guides/spot', label: 'Guides', position: 'left' },
       { to: '/docs/', label: 'Docs', position: 'left' },
+      { to: '/jupiverse/', label: 'Jupiverse', position: 'left' },
+    ],
+    '/': [
+      { to: '/guides/spot', label: 'Guides', position: 'left' }, // to do, or yet to fix, navbar as mobile sidebar does not respect this, only follows docusaurus.config.js navbar config
+      { to: '/docs/', label: 'Docs', position: 'left' },
+      { to: '/jupiverse/', label: 'Jupiverse', position: 'left' },
     ],
 };
