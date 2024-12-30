@@ -19,7 +19,7 @@ Before voting, you will need to buy JUP and stake it at https://vote.jup.ag/.
 2. Choose the amount to stake and click on the button **“Stake”**.
 3. Your specified amount of JUP tokens will sent to an escrow account.
 
-:::note No Mimum To Vote
+:::note No Minimum To Vote
 There is no minimum JUP needed to be eligible to participate in the voting process. You can vote even if you have staked 1 JUP.
 :::
 
