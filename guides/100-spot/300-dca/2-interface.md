@@ -18,7 +18,7 @@ In this section we go through what each setting on the DCA dashboard means.
 
 ## DCA Order Form
 
-![DCA Order Form](./img/dca-2-1.png)
+![DCA Order Form](../../../static/spot/dca/dca-2-1.png)
 
 | Field | Description |
 |---|---|
@@ -34,7 +34,7 @@ In this section we go through what each setting on the DCA dashboard means.
 
 ## Active/Historical DCA
 
-![Active/Historical DCA Overview](./img/dca-2-2.png)
+![Active/Historical DCA Overview](../../../static/spot/dca/dca-2-2.png)
 
 | Field | Description |
 |---|---|
@@ -47,7 +47,7 @@ In this section we go through what each setting on the DCA dashboard means.
 
 ## DCA Orders
 
-![Active/Historical DCA Orders](./img/dca-2-3.png)
+![Active/Historical DCA Orders](../../../static/spot/dca/dca-2-3.png)
 
 | Fields | Description |
 |--------|-------------|

@@ -22,7 +22,7 @@ Before anything else, you’ll need to connect your wallet to Jupiter.
 3. Click on the **“Connect Wallet”** button at the top right or using one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
 4. Approve the connection request in your wallet.
 
-![Connect Wallet](./img/dca-100-1.png)
+![Connect Wallet](../../../static/spot/dca/dca-100-1.png)
 
 ## Step 2: Choose Your Tokens
 
@@ -36,7 +36,7 @@ Now it’s time to decide which tokens you want to allocate and buy.
 Choose tokens that align with your investment goals. If you’re unsure, start with popular ones like SOL or LSTs (Liquid Staking Tokens) like JupSOL.
 :::
 
-![Choose Tokens](./img/dca-100-2.png)
+![Choose Tokens](../../../static/spot/dca/dca-100-2.png)
 
 ## Step 3: Set Your DCA Plan
 
@@ -49,10 +49,10 @@ This is where the magic happens!
 :::tip **Pro Tip:** Price Strategy
 4. This is an optional setting, you can provide a minimum or maximum price range for your order.
 
-[Read this guide for more information!](./102-how-to-use-dca-price-range.md)
+[Read this guide for more information!](./how-to-use-dca-price-range)
 :::
 
-![DCA Plan](./img/dca-100-3.png)
+![DCA Plan](../../../static/spot/dca/dca-100-3.png)
 
 ## Step 4: Review and Start DCA
 
@@ -64,7 +64,7 @@ Before confirming, double-check the details:
 
 Have a look at the DCA Summary for a thorough overview. If everything looks good, click on **"Start DCA"** button.
 
-![DCA Summary](./img/dca-100-4.png)
+![DCA Summary](../../../static/spot/dca/dca-100-4.png)
 
 ## Step 5: Approve the Transaction in Your Wallet
 
@@ -79,7 +79,7 @@ Once approved, Jupiter will handle all future transactions for you automatically
 
 A notification toast will appear that will notify you once the transaction has been sent and has completed.
 
-![DCA Created](./img/dca-100-5.png)
+![DCA Created](../../../static/spot/dca/dca-100-5.png)
 
 ## Step 6: Track Your DCA Plan
 
@@ -93,4 +93,4 @@ Congratulations! Your first DCA is now active.
     - To learn more about what each detail means, [read here](./interface).
 3. You can also [close/cancel your plan](./how-to-manage-dca) at any time.
 
-![DCA Active](./img/dca-100-6.png)
+![DCA Active](../../../static/spot/dca/dca-100-6.png)

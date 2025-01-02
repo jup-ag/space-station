@@ -15,7 +15,7 @@ Jupiter makes it easy to manage multiple Limit Orders seamlessly, whether you tr
 
 ## Create New Limit Order
 
-Simply create a new DCA just like you did before! If you’re starting out, head over to this [guide](./how-to-create-limit-order)!
+Simply create a new order just like you did before! If you’re starting out, head over to this [guide](./how-to-create-limit-order)!
 
 ## View Open Orders
 
@@ -26,7 +26,7 @@ Once you have created your order, it will automatically populate on the dashboar
 
 This section shows the orders which are submitted to the system but they are yet to be executed as the target price is not yet reached.
 
-![Manage Active Limit Orders](./img/limit-order-manage-active.png)
+![Manage Active Limit Orders](../../../static/spot/limit-order/limit-order-manage-active.png)
 
 ### Understand The Details
 
@@ -44,4 +44,4 @@ If you have multiple active orders, you can use the `Cancel All` button to close
 
 Orders that are **Completed** or **Cancelled** (either partially filled or not filled at all) are shown here.
 
-![Manage Historical Limit Orders](./img/limit-order-manage-history.png)
+![Manage Historical Limit Orders](../../../static/spot/limit-order/limit-order-manage-history.png)

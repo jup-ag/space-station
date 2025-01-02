@@ -18,7 +18,7 @@ In this section we go through what each setting on the Limit Order dashboard mea
 
 ## Limit Order Form
 
-![Limit Order Form](./img/limit-order-form.png)
+![Limit Order Form](../../../static/spot/limit-order/limit-order-form.png)
 
 | Field | Description |
 |---|---|
@@ -34,7 +34,7 @@ In this section we go through what each setting on the Limit Order dashboard mea
 
 ## Open Orders
 
-![Limit Order Active](./img/limit-order-active.png)
+![Limit Order Active](../../../static/spot/limit-order/limit-order-active.png)
 
 | Field | Description |
 |---|---|
@@ -50,7 +50,7 @@ In this section we go through what each setting on the Limit Order dashboard mea
 
 ## Historical Orders
 
-![Limit Order History](./img/limit-order-history.png)
+![Limit Order History](../../../static/spot/limit-order/limit-order-history.png)
 
 | Field | Description |
 |---|---|
@@ -63,7 +63,7 @@ In this section we go through what each setting on the Limit Order dashboard mea
 
 ## Transactions
 
-![Limit Order Transactions](./img/limit-order-transactions.png)
+![Limit Order Transactions](../../../static/spot/limit-order/limit-order-transactions.png)
 
 | Fields | Description |
 |--------|-------------|

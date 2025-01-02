@@ -9,7 +9,7 @@ description: Introduction to how Limit Order works
     <meta name="twitter:card" content="summary" />
 </head>
 
-Creating a DCA order is like setting up a reliable machine that processes your trades in the intervals you set them at, here’s how it works in a nutshell, let’s break it down into:
+Creating a Limit Order is like setting up a reliable machine that monitors price conditions and execute your orders at the exact price, here’s how it works in a nutshell, let’s break it down into:
 
 - How the orders are created
 - How your tokens are bought

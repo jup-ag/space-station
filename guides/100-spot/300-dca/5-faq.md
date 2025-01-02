@@ -23,7 +23,7 @@ You can track your DCA plans' history and past transactions by connecting your w
 
 ### 2. Does my DCA plan automatically retry?
 
-Yes, if a DCA purchase fails due to network issues, slippage thresholds met, or other reasons, Jupiter's DCA program automatically retries the order. This ensures minimal disruption to your DCA strategy. [(Do take note of **backfills** if the DCA misses multiple orders.)](./1-how-dca-works.md#backfills)
+Yes, if a DCA purchase fails due to network issues, slippage thresholds met, or other reasons, Jupiter's DCA program automatically retries the order. This ensures minimal disruption to your DCA strategy. [(Do take note of **backfills** if the DCA misses multiple orders.)](./how-dca-works#backfills)
 
 ### 3. Can I get notified when a purchase is made?
 

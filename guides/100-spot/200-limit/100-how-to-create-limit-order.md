@@ -22,7 +22,7 @@ Before anything else, you’ll need to connect your wallet to Jupiter.
 3. Click on the **“Connect Wallet”** button at the top right or use one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
 4. Approve the connection request in your wallet.
 
-![Limit Order Connect Wallet](./img/limit-order-connect.png)
+![Limit Order Connect Wallet](../../../static/spot/limit-order/limit-order-connect.png)
 
 ## Step 2: Choose Your Tokens
 
@@ -32,7 +32,7 @@ Now it’s time to decide which tokens you want to sell and buy.
 2. Select the token you want to sell in the top selector, **“I Want To Allocate”**.
 3. Select the token you want to buy in the bottom selector, **"To Buy”**.
 
-![Limit Order Token Selector](./img/limit-order-tokens.png)
+![Limit Order Token Selector](../../../static/spot/limit-order/limit-order-tokens.png)
 
 ## Step 3: Set Your Limit Order
 
@@ -46,7 +46,7 @@ Now it’s time to decide which tokens you want to sell and buy.
     It can be 10 minutes or by default it is set to never expire. The expiry option ensures that if the order is not executed in your specific time then it will cancel.
     :::
 
-![Limit Order Form Set Up](./img/limit-order-form-setup.png)
+![Limit Order Form Set Up](../../../static/spot/limit-order/limit-order-form-setup.png)
 
 ## Step 4: Review and Place Limit Order
 
@@ -58,7 +58,7 @@ Before placing the order, double-check the details:
 
 Have a look at the Limit Order Summary thoroughly. If everything looks good, click on the **“Place Limit Order”** button.
 
-![Limit Order Summary](./img/limit-order-summary.png)
+![Limit Order Summary](../../../static/spot/limit-order/limit-order-summary.png)
 
 ## Step 5: Approve the Transaction in Your Wallet
 

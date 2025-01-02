@@ -23,7 +23,7 @@ This feature ensures your orders align with your desired price range, offering b
 2. **Enable Price Range**  
    Look for the fields just above the `Start DCA` button. To enable the Price Range, simply set your desired Minimum Price or Maximum Price.
 
-![DCA Price Range](./img/dca-102-1.png)
+![DCA Price Range](../../../static/spot/dca/dca-102-1.png)
 
 3. **Set Your Minimum and/or Maximum Price**  
    - **Min Price:** Set the lowest price at which you want the DCA order to execute.

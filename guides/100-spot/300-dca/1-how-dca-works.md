@@ -21,7 +21,7 @@ Creating a DCA order is like setting up a reliable machine that processes your t
 ## How the orders are created
 
 1. When you start a DCA order, the total allocated tokens you’re selling, say USDC, will be transferred from your wallet into an order account owned by the Jupiter DCA Program. This also includes other information like order interval, buying amount, etc.
-2. Once you [create your first DCA position](./100-how-to-create-dca.md), your first order is processed right away! For example, if you're DCA-ing USDC into JupSOL, the full USDC amount you chose will be stored in your vault, and the first trade will happen immediately.
+2. Once you [create your first DCA position](./how-to-create-dca), your first order is processed right away! For example, if you're DCA-ing USDC into JupSOL, the full USDC amount you chose will be stored in your vault, and the first trade will happen immediately.
 3. The remaining trades follow at regular intervals, based on the schedule you pick.
 
 :::tip **Heads-Up! Keep It Up with Randomness**

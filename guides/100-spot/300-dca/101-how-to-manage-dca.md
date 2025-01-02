@@ -15,7 +15,7 @@ Jupiter makes it easy to manage multiple DCA plans seamlessly, whether you’re 
 
 ## Create New DCA
 
-Simply create a new DCA just like you did before! If you’re starting out, head over to this [guide](./100-how-to-create-dca.md)!
+Simply create a new DCA just like you did before! If you’re starting out, head over to this [guide](./how-to-create-dca)!
 
 ## View Active DCA
 
@@ -24,11 +24,11 @@ Right on the dashboard you can view all your active DCAs.
 1. Navigate to the “Active DCAs” section.
 2. Here, you’ll see a list of all your active DCA plans.
 
-![View Active DCA](./img/dca-101-1.png)
+![View Active DCA](../../../static/spot/dca/dca-101-1.png)
 
 ### Understanding The Details
 
-Each plan in the “Active DCA” section will display key details to help you track progress. [Refer to DCA Interface guide to see the full breakdown of the details](./2-interface.md#activehistorical-dca).
+Each plan in the “Active DCA” section will display key details to help you track progress. [Refer to DCA Interface guide to see the full breakdown of the details](./interface#activehistorical-dca).
 
 1. **Active DCAs:** This tab lists out all of your active DCA orders.
 2. **Individual DCA Orders:** Ongoing DCAs with a percentage to indicate how much of the DCA has been executed.
@@ -55,8 +55,8 @@ Once you select a Past DCA, you can view all the transactions for your DCA order
 
 ## View DCA Transactions
 
-A DCA plan can be made up of multiple transactions, such as the order creation transaction, multiple purchase transactions and the order close transaction. [Refer to DCA Interface guide to see the full breakdown of the details](./2-interface.md#dca-orders).
+A DCA plan can be made up of multiple transactions, such as the order creation transaction, multiple purchase transactions and the order close transaction. [Refer to DCA Interface guide to see the full breakdown of the details](./interface#dca-orders).
 
 In order to view each order's transactions, click on one of your orders and head over to the **"Orders"** tab.
 
-![View DCA Transactions](./img/dca-101-2.png)
+![View DCA Transactions](../../../static/spot/dca/dca-101-2.png)

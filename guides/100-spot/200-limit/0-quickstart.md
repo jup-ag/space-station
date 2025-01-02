@@ -8,6 +8,13 @@ description: Introduction to Jupiter Limit Order
     <meta name="twitter:card" content="summary" />
 </head>
 
+<video controls className="responsive-video">
+  <source src="/spot/limit-order/limit-order-education-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+*By DeFi Jup & Jam*
+
 Limit Order lets you buy or sell assets at a specified price, an alternative financial tool to market orders. Unlike market orders, limit orders are not executed immediately at the current market price. They execute at a specific price at which you are willing to buy or sell.
 
 This allows you to have more control over your price instead of being at the mercy of the market.
