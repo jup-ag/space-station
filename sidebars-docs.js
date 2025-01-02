@@ -2,15 +2,18 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  swap: [
+  docs: [
     {
       type: 'doc',
       id: 'index',
-      label: 'welcome',
     },
     {
       type: 'doc',
-      id: 'api-usage',
+      id: 'api-setup',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'doc',
@@ -24,6 +27,8 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
+  ],
+  swap: [
     {
       type: 'category',
       label: 'Swap API',

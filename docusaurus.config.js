@@ -114,7 +114,7 @@ const config = {
           customCss: [
             require.resolve("./src/css/custom.css"),
             require.resolve("./src/css/navbar.css"),
-            require.resolve("./src/css/docs.css"),
+            require.resolve("./src/css/sidebar.css"),
           ],
         },
         proxy: {
@@ -188,7 +188,7 @@ const config = {
         },
         items: [
           { to: 'guides', label: 'Guides', position: 'left' },
-          { to: 'docs', label: 'docs', position: 'left' },
+          { to: 'docs/index', label: 'Docs', position: 'left' },
         ],
       },
       algolia: {
