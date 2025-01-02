@@ -9,10 +9,10 @@ export const navbarConfigs = {
     ],
     '/guides': [
       { to: '/guides/', label: 'Guides', position: 'left' },
-      { to: '/docs/index', label: 'Docs', position: 'left' },
+      { to: '/docs/', label: 'Docs', position: 'left' },
     ],
     '/': [
       { to: '/guides/', label: 'Guides', position: 'left' },
-      { to: '/docs/index', label: 'Docs', position: 'left' },
+      { to: '/docs/', label: 'Docs', position: 'left' },
     ],
 };
