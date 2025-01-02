@@ -5,7 +5,7 @@ description: Guide to use price range with Jupiter DCA
 ---
 
 <head>
-    <title>DCA Guide: Price Range</title>
+    <title>DCA Price Range</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

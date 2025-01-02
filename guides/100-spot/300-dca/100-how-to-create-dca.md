@@ -5,7 +5,7 @@ description: Guide to set up your first DCA with Jupiter
 ---
 
 <head>
-    <title>DCA Guide: Create Orders</title>
+    <title>Create DCA Orders</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
@@ -17,9 +17,10 @@ Setting up a Dollar-Cost Averaging (DCA) plan on Jupiter is quick, simple, and d
 
 Before anything else, you’ll need to connect your wallet to Jupiter.
 
-1. Visit the **Jupiter [DCA](https://jup.ag/dca/) page**.
-2. Click on the **“Connect Wallet”** button at the top right or using one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
-3. Approve the connection request in your wallet.
+1. Visit the [**Jupiter DCA page**](https://jup.ag/dca/).
+2. Double-check that the URL is correct at https://jup.ag/dca and "DCA Tab is selected.
+3. Click on the **“Connect Wallet”** button at the top right or using one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
+4. Approve the connection request in your wallet.
 
 ![Connect Wallet](./img/dca-100-1.png)
 
@@ -27,9 +28,9 @@ Before anything else, you’ll need to connect your wallet to Jupiter.
 
 Now it’s time to decide which tokens you want to allocate and buy.
 
-1. On the DCA page, upon clicking on the token you want to allocate, a list will open up.
-2. Choose your preferred token.
-3. Repeat the steps to select the token you want to buy.
+1. Upon clicking on the token selector to choose what token to allocate and buy, the token list will open up.
+2. Select the token you want to sell/allocate in the top selector, **“You’re Selling”**.
+3. Select the token you want to buy in the bottom selector, **“You’re Buying”**.
 
 :::tip **Pro Tip:**
 Choose tokens that align with your investment goals. If you’re unsure, start with popular ones like SOL or LSTs (Liquid Staking Tokens) like JupSOL.
@@ -61,7 +62,7 @@ Before confirming, double-check the details:
 - The frequency, total amount being used, amount per order.
 - The price range, if necessary.
 
-Have a look at the DCA Summary for a thorough overview. If everything looks good, click on **"Start DCA"**.
+Have a look at the DCA Summary for a thorough overview. If everything looks good, click on **"Start DCA"** button.
 
 ![DCA Summary](./img/dca-100-4.png)
 
@@ -76,6 +77,8 @@ Your wallet will prompt you to approve the transaction to set up the DCA plan.
 
 Once approved, Jupiter will handle all future transactions for you automatically.
 
+A notification toast will appear that will notify you once the transaction has been sent and has completed.
+
 ![DCA Created](./img/dca-100-5.png)
 
 ## Step 6: Track Your DCA Plan
@@ -87,13 +90,7 @@ Congratulations! Your first DCA is now active.
     - Tokens purchased.
     - Average purchase price.
     - Next scheduled transaction, and more.
-    - To learn more about what each stat means, read here [interlink].
-3. You can also [close/cancel your plan](./101-how-to-manage-dca.md) at any time.
+    - To learn more about what each detail means, [read here](./interface).
+3. You can also [close/cancel your plan](./how-to-manage-dca) at any time.
 
 ![DCA Active](./img/dca-100-6.png)
-
-## Tips for Success
-
-- **Start small:** Experiment with a small amount until you’re comfortable.
-- **Stay consistent:** DCA works best when you stick to your plan over time.
-- **Diversify:** Consider setting up multiple DCA plans for different tokens.

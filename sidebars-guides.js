@@ -26,7 +26,8 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/limit/index',
+          id: 'spot/limit/quickstart',
+          label: 'Limit Order'
         },
         {
           type: 'doc',
@@ -112,9 +113,57 @@ const sidebars = {
   ],
   limit: [
     {
+      type: 'category',
+      label: 'Getting Started',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/limit/quickstart',
+        },
+        {
+          type: 'doc',
+          id: 'spot/limit/how-limit-order-works',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: "How To's",
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'spot/limit/how-to-create-limit-order',
+        },
+        {
+          type: 'doc',
+          id: 'spot/limit/how-to-manage-limit-orders',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
       type: 'doc',
-      id: 'spot/limit/index',
-    }
+      id: 'spot/limit/interface',
+    },
+    {
+      type: 'doc',
+      id: 'spot/limit/security',
+    },
+    {
+      type: 'doc',
+      id: 'spot/limit/faq',
+    },
   ],
   dca: [
     {

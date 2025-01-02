@@ -5,11 +5,11 @@ description: Guide to manage your DCA orders
 ---
 
 <head>
-    <title>DCA Guide: Manage Orders</title>
+    <title>Manage DCA Orders</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-Jupiter makes it easy to manage multiple DCA plans seamlessly, whether you’re diversifying your portfolio or optimizing investments for different tokens. This guide will walk you through the process step-by-step.
+Jupiter makes it easy to manage multiple DCA plans seamlessly, whether you’re diversifying your portfolio or optimizing investments for different tokens. This guide will walk you throughhow to manage them and the interface.
 
 ---
 

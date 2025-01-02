@@ -5,7 +5,7 @@ description: Guide to optimize your strategy with Jupiter DCA
 ---
 
 <head>
-    <title>DCA Guide: Optimize DCA</title>
+    <title>Optimize DCA</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

@@ -17,8 +17,12 @@
       "link": "/guides/spot/dca/3-security"
     },
     {
+      "text": "Fee",
+      "link": "/guides/spot/dca/4-fee"
+    },
+    {
       "text": "Faq",
-      "link": "/guides/spot/dca/4-faq"
+      "link": "/guides/spot/dca/5-faq"
     },
     {
       "text": "How to create dca",

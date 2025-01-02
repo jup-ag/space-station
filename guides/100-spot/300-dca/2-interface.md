@@ -22,7 +22,7 @@ In this section we go through what each setting on the DCA dashboard means.
 
 | Field | Description |
 |---|---|
-| **(1) DCA** | Select the DCA tab in the Spot navigation menu to arrive at the DCA terminal. |
+| **(1) DCA** | Select the DCA tab in the Spot navigation menu to arrive at the DCA form. |
 | **(2) Input Token Selector** | Select the token you want to spend/allocate with your DCA orders. |
 | **(3) Input Token Amount** | Enter the amount of the input tokens that you are looking to spend/allocate **in total** with your DCA orders. |
 | **(4) Output Token Selector** | Select the token that you are looking to DCA into or Buy. |
