@@ -91,7 +91,7 @@ You can decide 3 levels of settings:
 
 1. **Language:** Pick your preferred language to navigate [jup.ag](http://jup.ag).
 2. **Preferred Explorer:** Pick your preferred explorer from Solscan, SolanaFM, Solana Beach, Solana Explorer, XRAY, and OKLink.
-3. **Versioned Transaction:** Enabling [Versioned Transaction](https://station.jup.ag/docs/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction. 
+3. **Versioned Transaction:** Enabling [Versioned Transaction](https://station.jup.ag/docs/old/additional-topics/composing-with-versioned-transaction) improves composability so Jupiter will be able to fit in more routes and get even better pricing all in a single transaction. 
 4. **RPC Endpoint:** Pick your preferred public RPC endpoint or use your own custom RPC endpoint. Each RPC Endpoint displays its active end-point latency. 
     1. Due to network traffic loads, RPC endpoints can get overloaded, which can lead to latency issues that will directly impact your trade executions. Selecting the lowest latency option is a best practice to ensure the fastest trade execution.
 

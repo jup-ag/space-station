@@ -1,36 +1,38 @@
 ---
-sidebar_position: 1
-title: Welcome
-description: "Unlock superior trading with Jupiter Documentation. Integrate APIs for swaps, payments, and more effortlessly. Explore robust tools now!"
+sidebar_label: "API Usage"
+description: "Introduction to Jupiter APIs"
+title: "API Usage"
 ---
 
 <head>
-    <title>Jupiter APIs and Documentation</title>
+    <title>API Usage</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-# Welcome Catdet-veloper!
+Since beginning of 2025, Jupiter have introduced new hostnames and the usage of our APIs through API keys to facilitate better developer support.
 
-![cat_at_computer.png](../static/img/cat_at_computer.png)
+## What's New?
 
-## Build World Class Swap Experiences Now!
+*Last updated: 1 December 2024*
+- API will now be served through new hostnames.
+- API will now be served through API keys.
+- API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](./api-setup) to get started).
 
-Jupiter's goal is simple: Help you provide world class experiences for your users. We aim to do this with as little work as possible on your end, regardless of use case or need.
+| Service Types | Description |
+| --- | --- |
+| Free with no API key | Decreased rate limits to only accommodate for testing. |
+| Paid plan with API key | Fixed rate limits, self served through an API dashboard. |
+| Custom with API key | Custom rate limits, mainly for partner usage. |
 
-**Jupiter offers a wide range of tools to make your life easy. Some of these tools include:**
+## What's Old?
 
-- [Swaps](/docs/APIs/swap-api): One of the Fastest Swap APIs on Solana. Simply put in your desired pairs, amount, and slippage and receive your serialized transaction from the API to execute your swap.<br/>
-- [Payments API](/docs/APIs/payments-api): Quickly swap any token to USDC. Using this, you can specify an exact output token amount in any token (not just USDC).<br/>
-- [Limit Orders](/docs/limit-order/): Place limit orders quickly and easily with Jupiter Limit Orders. <br/>
-- [DCA](/docs/dca/): DCA into any SPL token with Jupiter's DCA program. Integrating into your use case is fast and simple!
+- Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
+- Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
+- Self hosted API will not be maintained moving forward.
 
-For DEXes looking to integrate with Jupiter products, check out these resources:
-- [Jupiter Terminal](/docs/jupiter-terminal/jupiter-terminal) Jupiter Terminal provides an easy way to integrate an open-source and easy-to-use terminal in your app.
+## Help us help you
 
-For projects who wants to make your token visible on the Strict list, see:
-
-- [Get your Token onto Jupiter](/docs/get-your-token-onto-jup)
-
-Learn how to use Jupiter products with our in-depth [User guides.](/guides)
-
-For technical questions or partnership requests, please reach out to us in our discord: https://discord.gg/jup.
+Please reach out to us
+- If you need have increasing demand and growth in your app.
+- If you have questions or need support.
+- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subsribe to updates.
