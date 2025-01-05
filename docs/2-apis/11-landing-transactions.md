@@ -244,7 +244,7 @@ The backend returns a response with a serialised transaction that is already usi
         // the simulated incurred slippage during optimization
         // negative integer refers to the loss in bps while positive refers to the gain
         "simulatedIncurredSlippageBps": -8,
-        // an amplifcation ratio we use to add a buffer to the estimated slippage
+        // an amplification ratio we use to add a buffer to the estimated slippage
         "amplificationRatio": "1.5"
     },
     "simulationError": null

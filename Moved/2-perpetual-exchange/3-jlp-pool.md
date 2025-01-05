@@ -40,7 +40,7 @@ Now, let's explore some of the risks associated with holding JLP:
 
 JLP pool will lose in token value but not in USD value because the underlying token value in the pool appreciate in value as well.
 ![image](jlp-long-scenarios.png)
-Read more about a reasearch from community member on how this work. https://skribr.io/app/article/exploring-jupiters-perpetual-futures-a-comprehensive-research-analysis/
+Read more about a research from community member on how this work. https://skribr.io/app/article/exploring-jupiters-perpetual-futures-a-comprehensive-research-analysis/
 
 **Impermanent Loss:** The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens are worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
 
