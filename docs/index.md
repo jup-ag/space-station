@@ -24,6 +24,29 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 | Paid plan with API key | Fixed rate limits, self served through an API dashboard. |
 | Custom with API key | Custom rate limits, mainly for partner usage. |
 
+#### Swap
+
+| Old Hostnames | New Hostnames |
+|---|---|
+|`https://quote-api.jup.ag/v6/quote`|`https://api.jup.ag/quote/v1`|
+|`https://quote-api.jup.ag/v6/swap`|`https://api.jup.ag/swap/v1`|
+|`https://quote-api.jup.ag/v6/swap-instructions`|`https://api.jup.ag/swap-instructions/v1`|
+|`https://quote-api.jup.ag/v6/program-id-to-label`|`https://api.jup.ag/program-id-to-label`|
+
+#### Price
+
+| Old Hostnames | New Hostnames |
+|---|---|
+|`https://price.jup.ag/v6`|`https://api.jup.ag/price/v2`|
+
+#### Token
+
+| Old Hostnames | New Hostnames |
+|---|---|
+|`https://tokens.jup.ag/token/:mint`|`https://api.jup.ag/tokens/v1/token/:mint`|
+|`https://tokens.jup.ag/tokens?tags=:tags`|`https://api.jup.ag/tokens/v1/tagged/:tag`|
+|`https://tokens.jup.ag/tokens_with_markets`|`https://api.jup.ag/tokens/v1/mints/tradable`|
+
 ## What's Old?
 
 - Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
