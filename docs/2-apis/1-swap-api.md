@@ -444,7 +444,7 @@ const swapInstruction = new TransactionInstruction({
   data: Buffer.from(swapInstructionPayload.data, "base64"),
 });
 
-const getAdressLookupTableAccounts = async (
+const getAddressLookupTableAccounts = async (
   keys: string[]
 ): Promise<AddressLookupTableAccount[]> => {
   const addressLookupTableAccountInfos =
@@ -469,7 +469,7 @@ const getAdressLookupTableAccounts = async (
 const addressLookupTableAccounts: AddressLookupTableAccount[] = [];
 
 addressLookupTableAccounts.push(
-  ...(await getAdressLookupTableAccounts(addressLookupTableAddresses))
+  ...(await getAddressLookupTableAccounts(addressLookupTableAddresses))
 );
 
 const messageV0 = new TransactionMessage({
@@ -564,7 +564,7 @@ The backend returns a response with a serialized transaction that is already usi
         // the simulated incurred slippage during optimization
         // negative integer refers to the loss in bps while positive refers to the gain
         "simulatedIncurredSlippageBps": -8,
-        // an amplifcation ratio we use to add a buffer to the estimated slippage
+        // an amplification ratio we use to add a buffer to the estimated slippage
         "amplificationRatio": "1.5"
     },
     "simulationError": null

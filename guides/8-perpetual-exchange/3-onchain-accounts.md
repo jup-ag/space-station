@@ -89,7 +89,7 @@ The `PositionRequest` account contains the following data:
 * `sizeUsdDelta`: The USD amount to increase or decrease the position size by. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. For example, a position request to increase an open position's size by 10 USDC will have a `sizeUsdDelta = 10000000.`
 * `collateralDelta`: For opening positions and collateral deposits,`collateralDelta` is the token amount to increase or decrease the position collateral size by. The token amount is an integer that corresponds to the decimal places used by the token specified in `mint`. 
   - For example, a position request to increase a position's collateral size by 1 SOL will have `collateralDelta = 1000000000`. 
-  - For closing positions and collateral withdrawals, `collateralDelta` is the USD value of the collateral to be withdrawed from the position. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. 
+  - For closing positions and collateral withdrawals, `collateralDelta` is the USD value of the collateral to be withdrew from the position. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. 
   - For example, a position request to withdraw $100 from the position's collateral will have a `sizeUsdDelta = 100000000` .
 * `requestChange`: `requestChange` will be equal to `Increase` for open position and collateral deposit requests, and `Decrease` for close position and collateral withdrawal requests.
 * `requestType`: `Market` for all position requests except for TP / SL requests, which have a `Trigger` `requestType`.

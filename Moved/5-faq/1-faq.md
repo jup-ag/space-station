@@ -21,7 +21,7 @@ You will receive the underlying asset for LONG-position, i.e. SOL for SOL-Long, 
 
 You will receive either USDC or USDT for all SHORT-positions.
 
-Check out this [link](3-returned-fund-after-position-is-closed.md) on how to check for fund from closed positons.
+Check out this [link](3-returned-fund-after-position-is-closed.md) on how to check for fund from closed positions.
 
 ### 3. The price has reached my TP/SL price on the chart. Why is my TP/SL not triggered?
 
@@ -37,7 +37,7 @@ Check out this [link](3-returned-fund-after-position-is-closed.md) on how to che
 
   There are two oracles that we are using for TP/SL, the Pyth Mainnet Oracles and the Pyth Pythnet oracles. For full detail, please refer [here](https://station.jup.ag/labs/perpetual-exchange/how-it-works#oracle).
 
-  Our chart data is using the [Pythnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet) and the positions uses the [Mainet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta).
+  Our chart data is using the [Pythnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=pythnet) and the positions uses the [Mainnet oracles](https://pyth.network/price-feeds/crypto-sol-usd?cluster=solana-mainnet-beta).
 
 If you are sure that you have an active ATA for the position and check the Mainnet oracle price and confirm that TP/SL is not triggered at the price it is supposed to, please open a [Perp-ticket](https://discord.com/channels/897540204506775583/1197460751556804608).
 

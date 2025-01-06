@@ -138,7 +138,7 @@ realizedPnl = unrealizedPnl - (closeBaseFee + priceImpactFee + borrowFee)
 ```
 
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-position-pnl.ts) shows an example of calculating a position's PNL programatically.
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-position-pnl.ts) shows an example of calculating a position's PNL programmatically.
 :::
 
 :::info
@@ -162,7 +162,7 @@ The maximum allowed leverage is 500x.
 Positions will be liquidated if the trader's collateral, after subtracting fees, adding unrealized profits and subtracting unrealized losses, is less than 0.2% of the position size.
 
 :::info
-When reducing the size of a position, the collateral amount is reduced as well to maintain the leverage for the position. For example, if a position has a 10x leverage, and reduces its size by 50%, the same amount of collateral will be withdrawed from the position to maintain the 10x leverage.
+When reducing the size of a position, the collateral amount is reduced as well to maintain the leverage for the position. For example, if a position has a 10x leverage, and reduces its size by 50%, the same amount of collateral will be withdrew from the position to maintain the 10x leverage.
 :::
 
 ### Liquidation
@@ -230,7 +230,7 @@ BPS_POWER = 10^4      // 10_000
 ```
 
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-open-close-base-fee.ts) contains an example on calculating open and close base fees programatically.
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-open-close-base-fee.ts) contains an example on calculating open and close base fees programmatically.
 :::
 
 ### Price Impact Fee
@@ -282,7 +282,7 @@ Calculate Price Impact Fee:
    priceImpactFeeUsd = (tradeSizeUsd * priceImpactFeeBps / BPS_POWER) / USDC_DECIMALS
 ```
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-price-impact-fee.ts) contains an example on calculating price impact fees programatically.
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-price-impact-fee.ts) contains an example on calculating price impact fees programmatically.
 :::
 
 :::info
@@ -402,7 +402,7 @@ USD_DECIMALS = 6             // 10^6, for USD amounts as per the USDC mint's dec
 ```
 
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-borrow-fee.ts) shows an example of calculating a position's borrow fees programatically.
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-borrow-fee.ts) shows an example of calculating a position's borrow fees programmatically.
 :::
 
 #### Calculate funding rate
@@ -432,7 +432,7 @@ Calculate Funding Rate:
 ```
 
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-funding-rate.ts) shows an example of calculating the current funding rate for a custody programatically.
+This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-funding-rate.ts) shows an example of calculating the current funding rate for a custody programmatically.
 :::
 
 ### Transaction & Priority Fee
@@ -494,7 +494,7 @@ This oracle is extremely compute-efficient, allowing us to update all 5 oracles 
 ### Key Benefits
 | Benefits | Old Oracle | Our Oracle |
 | --- | ----- | ----- |
-| Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesnt update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
+| Reliability | User makes a position request, Keepers wait for 45s for the oracle to update, if the oracle doesn't update, the position request fails. | User makes a trade, Keepers update the oracle and open the position with the same transaction. |
 | Latency | User makes a request, Keepers have to wait for the oracle before placing the trade. | User makes a trade, Keepers immediately process the trade with the oracle. |
 | Chart | Discrepancy between trades placed and the chart. | Our oracle powers the trading view chart and all position requests, no discrepancy. |
 
