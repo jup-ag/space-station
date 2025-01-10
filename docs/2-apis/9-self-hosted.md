@@ -95,7 +95,7 @@ If a set of AMMs is never needed for routing, they can be removed before startin
 Create a market-cache excluding the program you want to remove, Openbook for this example:
 
 ```shell
-curl "https://cache.jup.ag/markets?v=3" -o market-cache.json
+curl "https://cache.jup.ag/markets?v=4" -o market-cache.json
 jq 'map(select(.owner != "srmqPvymJeFKQ4zGQed1GFppgkRHL9kaELCbyksJtPX"))' market-cache.json > market-cache-no-openbook.json
 ```
 
