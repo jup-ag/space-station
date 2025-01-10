@@ -108,7 +108,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<a href="http://localhost:3000">Reach out on Discord</a>',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
     },
   ],
   limit: [
@@ -163,6 +163,14 @@ const sidebars = {
     {
       type: 'doc',
       id: 'spot/limit/faq',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
     },
   ],
   dca: [
@@ -234,24 +242,56 @@ const sidebars = {
       type: 'doc',
       id: 'spot/dca/sample',
     },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
+    },
   ],
   va: [
     {
       type: 'doc',
       id: 'spot/va/index',
-    }
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
+    },
   ],
   perp: [
     {
       type: 'doc',
       id: 'perp/index',
-    }
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
+    },
   ],
   apepro: [
     {
       type: 'doc',
       id: 'apepro/index',
-    }
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'html',
+      value: '<a class="sidebar-reach-out-link" href="http://discord.gg/jup">Reach out on Discord</a>',
+    },
   ],
 };
 

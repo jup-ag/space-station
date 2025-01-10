@@ -270,3 +270,8 @@
     max-width: 100%;
   }
 }
+
+.theme-doc-markdown.markdown {
+  max-width: 768px;
+}
+
