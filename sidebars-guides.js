@@ -82,7 +82,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'spot/swap/how-to-verify-token',
+          id: 'spot/swap/how-to-get-your-token-on-jupiter',
         },
       ],
     },

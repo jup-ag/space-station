@@ -32,6 +32,10 @@ Now it’s time to decide which tokens you want to sell and buy.
 2. Select the token you want to sell in the top selector, **“I Want To Allocate”**.
 3. Select the token you want to buy in the bottom selector, **"To Buy”**.
 
+:::caution tokens not supported
+Tokens with transfer fee extension enabled are not supported.
+:::
+
 ![Limit Order Token Selector](../../../static/spot/limit-order/limit-order-tokens.png)
 
 ## Step 3: Set Your Limit Order

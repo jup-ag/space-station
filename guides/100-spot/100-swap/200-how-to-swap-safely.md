@@ -28,8 +28,12 @@ Jupiter provides key token details to help bridge any information gaps you might
     :::note Jupiter Community Verification
     [Learn about how Jupiter Community verifies tokens in the Solana ecosystem.](./)
     :::
+
+2. **Token Shield:** (revisit)
+
+    Based on price and liquidity checks of the token you are buying, we are able to detect if the token can be sold. If the token cannot be sold, we will display a warning to help you make an informed decision.
     
-2. **Token Features or Extensions:** 
+3. **Token Features or Extensions:** 
 
     Additionally, some tokens retain features or extensions which is displayed as easy-to-spot information pills for added clarity.
 
