@@ -51,7 +51,7 @@ Today, the Ecosystem List is run by a group of contributors from various parts o
 
 [Read about the community verification process](https://www.jupresear.ch/t/get-your-token-a-community-tag-beta/18963).
 
-To verify your token, [check out this guide](./how-to-verify-token) or [head over to the site now](https://catdetlist.jup.ag/).
+To verify your token, [check out this guide](./how-to-get-your-token-on-jupiter) or [head over to the site now](https://catdetlist.jup.ag/).
 
 Do note that this process will continue to improve/evolve and might have changes in the future.
 :::
