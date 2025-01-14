@@ -28,7 +28,7 @@ Navigate to https://portal.jup.ag
 
 To enter the portal, simply connect via email account. This allows us to keep track of your account tagged to your API Keys.
 
-![Connect](./img/connect.png)
+![Connect](../static/portal/connect.png)
 
 ## 3. Browse and Select Plan
 
@@ -40,7 +40,7 @@ You can always change your plans later.
 Plan changing by yourself is a work in progress. Please reach out to the team in the meantime.
 :::
 
-![Plans](./img/plans.png)
+![Plans](../static/portal/plans.png)
 
 ## 4. Payment
 
@@ -67,13 +67,13 @@ For example, in the image, 2.4 USDC is total billable which will mean your walle
 If your delegated wallet has insufficient funds to pay for the new month, your API Key will be disregarded, and your requests will fallback as a typical call via the free plan.
 :::
 
-![Payment](./img/payment.png)
+![Payment](../static/portal/payment.png)
 
 ## 5. Processing Screen
 
 Yes, please wait.
 
-![Processing](./img/processing.png)
+![Processing](../static/portal/processing.png)
 
 ## 6. Setup API Keys
 
@@ -85,7 +85,7 @@ The rate limits are imposed on a **PER ACCOUNT** basis, not per API Key.
 If you need more requests, you can upgrade the plan, or create a completely new account and subscribe to a plan, (this means you will have 2 separate accounts, each has its own plans).
 :::
 
-![Generate](./img/generate.png)
+![Generate](../static/portal/generate.png)
 
 ## 7. Have a Question?
 
