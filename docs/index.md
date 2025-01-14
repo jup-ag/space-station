@@ -1,7 +1,8 @@
 ---
-sidebar_label: "API Usage"
+sidebar_position: 1
+sidebar_label: "⚠️ New API Usage"
 description: "Introduction to Jupiter APIs"
-title: "API Usage"
+title: "New API Usage"
 ---
 
 <head>
@@ -9,11 +10,11 @@ title: "API Usage"
     <meta name="twitter:card" content="summary" />
 </head>
 
-Since beginning of 2025, Jupiter have introduced new hostnames and the usage of our APIs through API keys to facilitate better developer support.
+Since beginning of 2025, Jupiter have introduced new hostnames and the usage of our APIs through API keys to facilitate better infrastructure and developer support.
 
 ## What's New?
 
-*Last updated: 1 December 2024*
+*Last updated: 1 January 2025*
 - API will now be served through new hostnames.
 - API will now be served through API keys.
 - API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](./api-setup) to get started).
@@ -22,7 +23,6 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 | --- | --- |
 | Free with no API key | Decreased rate limits to only accommodate for testing. |
 | Paid plan with API key | Fixed rate limits, self served through an API dashboard. |
-| Custom with API key | Custom rate limits, mainly for partner usage. |
 
 #### Swap
 
@@ -51,7 +51,6 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 
 - Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
 - Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
-- Self hosted API will not be maintained moving forward.
 
 ## Help us help you
 

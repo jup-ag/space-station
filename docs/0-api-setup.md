@@ -1,7 +1,8 @@
 ---
-sidebar_label: "API Setup"
+sidebar_position: 2
+sidebar_label: "⚠️ New API Setup"
 description: "Guide to setting up API Keys to access Jupiter APIs."
-title: "API Setup"
+title: "New API Setup"
 ---
 
 <head>
@@ -28,7 +29,7 @@ Navigate to https://portal.jup.ag
 
 To enter the portal, simply connect via email account. This allows us to keep track of your account tagged to your API Keys.
 
-![Connect](./img/connect.png)
+![Connect](../static/portal/connect.png)
 
 ## 3. Browse and Select Plan
 
@@ -37,10 +38,10 @@ To decide on a suitable plan by gauging requests required by your project size a
 :::note Change of plans
 You can always change your plans later.
 
-Plan changing by yourself is a work in progress. Please reach out to the team in the meantime.
+Please reach out to the team for any plans change requests.
 :::
 
-![Plans](./img/plans.png)
+![Plans](../static/portal/plans.png)
 
 ## 4. Payment
 
@@ -48,7 +49,7 @@ Before you set up your keys, you will need to make the payment upfront via Spher
 
 1. Redirected to Sphere payment page.
 2. Enter the required details.
-3. Connect wallet to pay via Solana blockchain
+3. Connect wallet to pay via Solana blockchain.
 4. Click the **Subscribe** button to proceed.
 
 :::note other payment methods
@@ -67,13 +68,13 @@ For example, in the image, 2.4 USDC is total billable which will mean your walle
 If your delegated wallet has insufficient funds to pay for the new month, your API Key will be disregarded, and your requests will fallback as a typical call via the free plan.
 :::
 
-![Payment](./img/payment.png)
+![Payment](../static/portal/payment.png)
 
 ## 5. Processing Screen
 
 Yes, please wait.
 
-![Processing](./img/processing.png)
+![Processing](../static/portal/processing.png)
 
 ## 6. Setup API Keys
 
@@ -85,7 +86,7 @@ The rate limits are imposed on a **PER ACCOUNT** basis, not per API Key.
 If you need more requests, you can upgrade the plan, or create a completely new account and subscribe to a plan, (this means you will have 2 separate accounts, each has its own plans).
 :::
 
-![Generate](./img/generate.png)
+![Generate](../static/portal/generate.png)
 
 ## 7. Have a Question?
 
@@ -96,14 +97,4 @@ Please reach out to us.
 
 ## 8. Get Started!
 
-With your API Key, you can gain higher request access to `/quote`, `/swap` and other endpoints to build world class applications.
-
-If you are new to development, do take a look at
-- [Get Started](./get-started)
-- [Development Basics](./development-basics)
-
-Dive right in!
-- [Swap API](./swap-api/get-quote)
-- [Price API](./utility/price-api)
-- [Token API](./utility/token-api)
-- [API Reference](./api)
+With your API Key, you can gain higher request access to `/quote`, `/swap` and other endpoints to build world class applications. Refer to the rest of the documentation to get started, we will be releasing more developer content in the future.
