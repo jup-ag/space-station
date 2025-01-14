@@ -133,7 +133,7 @@ const { swapTransaction } = await (
       userPublicKey: wallet.publicKey.toString(),
       // auto wrap and unwrap SOL. default is true
       wrapAndUnwrapSol: true,
-      // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
+      // Optional, use if you want to charge a fee.  feeBps must have been passed in /quote API.
       // feeAccount: "fee_account_public_key"
     })
   })
@@ -219,7 +219,7 @@ const { swapTransaction } = await (
       userPublicKey: wallet.publicKey.toString(),
       // auto wrap and unwrap SOL. default is true
       wrapAndUnwrapSol: true,
-      // feeAccount is optional. Use if you want to charge a fee.  feeBps must have been passed in /quote API.
+      // Optional, use if you want to charge a fee.  feeBps must have been passed in /quote API.
       // feeAccount: "fee_account_public_key"
     })
   })
@@ -483,7 +483,7 @@ This can be useful if you want to withdraw from Solend and immediately convert y
 
 ## Setting Priority Fee for Your Transaction
 
-If transactions are expiring without confirmation on-chain, this might mean that you have to pay additional fees to prioritize your transaction. To do so, you can set the `computeUnitPriceMicroLamports` parameter.
+If transactions are expiring without confirmation on-chain, this might mean that you have to pay additional fees to prioritize your transaction. To do so, you can set the `computeUnitPriceMicroLamports` parameter. [Refer to Landing Transactions guide for more tips](./landing-transactions).
 
 ```js
 const transaction = await (
@@ -499,13 +499,16 @@ const transaction = await (
       userPublicKey: wallet.publicKey.toString(),
       dynamicComputeUnitLimit: true, // allow dynamic compute limit instead of max 1,400,000
       // custom priority fee
-      prioritizationFeeLamports: 'auto' // or custom lamports: 1000
+	    prioritizationFeeLamports: {
+        priorityLevelWithMaxLamports: {
+          maxLamports: 10000000,
+          priorityLevel: "veryHigh" // If you want to land transaction fast, set this to use `veryHigh`. You will pay on average higher priority fee.
+        }
+      }
     })
   })
 ).json();
 ```
-
-If 'auto' is used, Jupiter will automatically set a priority fee for the transaction, it will be capped at 5,000,000 lamports / 0.005 SOL.
 
 ## Using Dynamic Slippage
 
