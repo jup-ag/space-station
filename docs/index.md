@@ -30,8 +30,8 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 |---|---|
 |`https://quote-api.jup.ag/v6/quote`|`https://api.jup.ag/swap/v1/quote`|
 |`https://quote-api.jup.ag/v6/swap`|`https://api.jup.ag/swap/v1/swap`|
-|`https://quote-api.jup.ag/v6/swap-instructions`|`https://api.jup.ag/swap-instructions/v1`|
-|`https://quote-api.jup.ag/v6/program-id-to-label`|`https://api.jup.ag/program-id-to-label`|
+|`https://quote-api.jup.ag/v6/swap-instructions`|`https://api.jup.ag/swap/v1/swap-instructions`|
+|`https://quote-api.jup.ag/v6/program-id-to-label`|`https://api.jup.ag/swap/v1/program-id-to-label`|
 
 #### Price
 
