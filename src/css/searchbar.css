@@ -1,10 +1,11 @@
 .homeSearchContainer .DocSearch-Button {
-    width: 100% !important;
+    width: 80% !important;
     height: 60px !important;
     border-radius: 9999px !important;
     background: rgba(199, 242, 132, 0.05) !important;
     border: 4px solid rgba(170, 235, 66, 0.4) !important;
     transition: all 0.2s ease !important;
+    margin: 0 auto !important;
 }
 
 .homeSearchContainer .DocSearch-Button:active,

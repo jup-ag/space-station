@@ -10,7 +10,7 @@ import styles from '../components/JupiterSearch.module.css';
 
 const JupiterSearch = () => {
   return (
-    <div className="mt-10 xl:mt-16 max-w-3xl mx-auto w-full px-4">
+    <div className="mt-10 xl:mt-12 max-w-3xl mx-auto w-full px-4">
       <div className={`relative w-full homeSearchContainer`}>
         <SearchBar />
       </div>
@@ -20,11 +20,11 @@ const JupiterSearch = () => {
 
 const JupiterProducts = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-16 xl:mt-[100px] max-w-screen-xl max-md:mt-10 max-md:max-w-full">
-      <div className="text-2xl font-semibold  text-center max-md:max-w-full">
+    <div className="flex flex-col justify-center items-center mt-16 xl:mt-[100px] mb-16 max-w-screen-xl max-md:mt-10 max-md:max-w-full bg-[#13181D]">
+      <div className="text-2xl font-semibold mt-6 text-center max-md:max-w-full">
         Directory
       </div>
-      <div className="mt-4 w-full">
+      <div className="mt-6 w-full">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
           <div className="flex flex-col flex-1">
             <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
@@ -269,7 +269,6 @@ const JupiterProducts = () => {
               </a>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -650,7 +649,7 @@ const JupiterCredits = () => {
 
 const Content = () => {
   return (
-    <div className="w-full min-h-screen text-white flex flex-col items-center">
+    <div className="w-full min-h-screen text-white flex flex-col items-center bg-[#131C25]">
       <div className="bg-v2-lily/5 w-full h-[1px]" />
 
       <div className="w-full max-xl:px-2 xl:max-w-7xl flex flex-col mb-[80px]">
