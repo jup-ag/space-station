@@ -5,39 +5,14 @@ import Layout from "@theme/Layout";
 import { TweetCardProps } from "react-tweet-card";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import { cn } from "../utils";
+import SearchBar from '@theme/SearchBar';
+import styles from '../components/JupiterSearch.module.css';
 
-const JupiterTopics = () => {
+const JupiterSearch = () => {
   return (
-    <div className="mt-10 xl:mt-24">
-      <div className="text-2xl font-semibold tracking-tighter  text-center max-md:max-w-full">
-        Quick Start
-      </div>
-
-      <div className="mt-4 w-full grid grid-cols-2 md:grid-cols-2 justify-center gap-2 text-sm xl:text-base font-bold whitespace-nowrap flex-wrap px-2 lg:px-0">
-        {/* <a href="" className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline">
-          Welcome to Solana
-        </a> */}
-
-        <a
-          href="https://www.jupresear.ch"
-          target="_blank"
-          className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
-        >
-          Jup Research
-        </a>
-        <a
-          href="https://vote.jup.ag"
-          target="_blank"
-          className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline"
-        >
-          Governance
-        </a>
-        {/* <a href="" className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline">
-          J.U.P Governance
-        </a> */}
-        {/* <a href="" className="p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 max-md:text-center !text-lime-200 hover:!no-underline">
-          Ecosystem Token List
-        </a> */}
+    <div className="mt-10 xl:mt-16 max-w-3xl mx-auto w-full px-4">
+      <div className={`relative w-full homeSearchContainer`}>
+        <SearchBar />
       </div>
     </div>
   );
@@ -47,7 +22,7 @@ const JupiterProducts = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-16 xl:mt-[100px] max-w-screen-xl max-md:mt-10 max-md:max-w-full">
       <div className="text-2xl font-semibold  text-center max-md:max-w-full">
-        Jupiter Products
+        Directory
       </div>
       <div className="mt-4 w-full">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 gap-y-2 lg:gap-5 lg:gap-y-14">
@@ -233,38 +208,6 @@ const JupiterProducts = () => {
                 )}
               >
                 <img src="img/home/icon-guide.svg" />
-                <div className="text-xs lg:text-sm">User Guide</div>
-              </a>
-            </div>
-          </div>
-          <div className="flex flex-col flex-1">
-            <div className="relative flex-1 flex flex-col justify-center p-4 lg:p-6 mx-auto w-full rounded-2xl bg-[#71E5EC]/[0.05] bg-opacity-10 max-md:px-1 max-md:pb-2">
-              <div className="text-lg font-bold  text-center">
-                Onboard
-              </div>
-              <a
-                href="https://jup.ag/onboard"
-                target="_blank"
-                className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-3 lg:mt-4 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer",
-                )}
-              >
-                <img src="img/home/icon-launch.svg" />
-                <div className="text-xs lg:text-sm">
-                  Launch Onboard
-                </div>
-              </a>
-              <a
-                href="https://station.jup.ag/guides/bridge/comparator"
-                target="_blank"
-                className={cn(
-                  "flex gap-3 px-3.5 py-2.5 mt-2 text-sm font-semibold hover:no-underline !text-[#00BCF0] rounded-lg bg-[#00BCF0] bg-opacity-10 outline outline-1 outline-[rgba(0,190,240,0.5)] hover:bg-opacity-20 cursor-pointer",
-                )}
-              >
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7111a82941aa614d6513ab0b6fd9fe5fafe5d1a46c07d49684acb29ccdb98c52?"
-                  className="my-auto w-4 aspect-square"
-                />
                 <div className="text-xs lg:text-sm">User Guide</div>
               </a>
             </div>
@@ -714,18 +657,18 @@ const Content = () => {
         <div className="flex flex-col justify-center self-center px-20 mt-12 text-center max-md:px-5 max-md:mt-10 w-full">
           <div
             className={cn(
-              "font-bold max-md:max-w-full text-3xl xl:text-7xl",
+              "font-bold max-md:max-w-full text-6xl xl:text-7xl leading-[1] py-2",
               "bg-gradient-to-r from-[rgba(0,190,240,1)] to-[rgba(199,242,132,1)] text-transparent bg-clip-text",
             )}
           >
-            Jupiter Space Station
+            Getting Started on Jupiter
           </div>
-          <div className="self-center text-xs xl:text-[20px] text-v2-lily/50 w-full text-wrap px-4 mt-4">
-            Welcome to the space station — home for catdets curious about Jupiter
+          <div className="self-center text-s xl:text-[20px] text-v2-lily/50 w-full text-wrap px-4 mt-4 xl:mt-8">
+            Home for Catdets curious about Jupiter
           </div>
         </div>
 
-        <JupiterTopics />
+        <JupiterSearch />
         <JupiterProducts />
       </div>
 

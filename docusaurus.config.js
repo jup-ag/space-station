@@ -115,6 +115,7 @@ const config = {
             require.resolve("./src/css/custom.css"),
             require.resolve("./src/css/navbar.css"),
             require.resolve("./src/css/sidebar.css"),
+            require.resolve("./src/css/searchbar.css"),
           ],
         },
         proxy: {
@@ -228,6 +229,7 @@ const config = {
           { to: 'guides', label: 'Guides', position: 'left' },
           { to: 'docs', label: 'Docs', position: 'left' },
           { to: 'jupiverse', label: 'Jupiverse', position: 'left' },
+          { type: 'search', position: 'right' },
         ],
       },
       algolia: {

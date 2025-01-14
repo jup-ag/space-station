@@ -16,7 +16,6 @@ export const navbarConfigs = {
           { to: '/guides/spot/swap/quickstart', label: 'Swap', position: 'left' },
           { to: '/guides/spot/limit/quickstart', label: 'Limit Order', position: 'left' },
           { to: '/guides/spot/dca/quickstart', label: 'Dollar Cost Average (DCA)', position: 'left' },
-          { to: '/guides/spot/va/quickstart', label: 'Value Average (VA)', position: 'left' },
         ]
       },
       { to: '/guides/perp', label: 'Perp', position: 'left' },
