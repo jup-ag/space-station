@@ -284,7 +284,7 @@ const sidebars = {
             },
             {
               type: 'doc',
-              id: 'perp/execution',
+              id: 'perp/keeper',
             },
           ],
         },
