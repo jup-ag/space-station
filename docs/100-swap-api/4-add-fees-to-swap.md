@@ -61,7 +61,7 @@ In this example, we set `platformFeeBps` to `20` which equates to 0.2%.
 ```jsx
 const quoteResponse = await (
     await fetch(
-        'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&platformFeeBps=20'
+        'https://api.jup.ag/quote/v1?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&platformFeeBps=20'
     )
   ).json();
   
@@ -118,7 +118,7 @@ Using the above, we will now know the `feeAccount` to be passed in as the parame
 
 ```jsx
 const swapResponse = await (
-    await fetch('https://quote-api.jup.ag/v6/swap', {
+    await fetch('https://api.jup.ag/swap/v1', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'

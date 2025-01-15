@@ -33,7 +33,7 @@ To fully utilize the Quote API, check out the [Quote API Reference](/docs/api/qu
 The root URL of the Quote API is as such.
 
 ```
-https://api.jup.ag/quote
+https://api.jup.ag/quote/v1
 ```
 
 The most common trading pair on Solana is SOL and USDC, in order to get a quote for this specific token pair, you need to pass in the required parameters such as:
@@ -52,7 +52,7 @@ Using the root URL and parameters to pass in, it is as simple as the example cod
 ```jsx
 const quoteResponse = await (
     await fetch(
-        'https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000000&slippageBps=50&restrictIntermediateTokens=true'
+        'https://api.jup.ag/quote/v1?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000000&slippageBps=50&restrictIntermediateTokens=true'
     )
   ).json();
   

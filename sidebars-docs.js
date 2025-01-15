@@ -2,15 +2,18 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  swap: [
+  docs: [
     {
       type: 'doc',
       id: 'index',
-      label: 'welcome',
     },
     {
       type: 'doc',
-      id: 'api-usage',
+      id: 'api-setup',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'doc',
@@ -22,8 +25,10 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
+  ],
+  swap: [
     {
       type: 'category',
       label: 'Swap API',
@@ -46,7 +51,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
@@ -75,7 +80,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
     {
       type: 'category',
@@ -95,7 +100,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   perp: [
@@ -113,7 +118,35 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Perp Program',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp-api/position-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/position-request-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/pool-account',
+        },
+        {
+          type: 'doc',
+          id: 'perp-api/custody-account',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   toolkit: [
@@ -139,7 +172,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
   other: [
@@ -161,7 +194,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<li class="sidebar-line-break"></li>',
+      value: '<div class="sidebar-line-break"></div>',
     },
   ],
 };

@@ -42,7 +42,7 @@ To fully utilize the Swap API, check out the [Swap API Reference](/docs/api/swap
 The root URL of the Swap API is as such.
 
 ```markdown
-https://api.jup.ag/swap
+https://api.jup.ag/swap/v1
 ```
 
 From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that can be needs to be prepared and signed before sending to the network.
@@ -59,7 +59,7 @@ To understand how these parameters help, the next step, [Send Swap Transaction g
 
 ```jsx
 const swapResponse = await (
-await fetch('https://api.jup.ag/swap', {
+await fetch('https://api.jup.ag/swap/v1', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ Example code snippet of using `/swap-instruction`
 
 ```jsx
 const instructions = await (
-    await fetch('https://quote-api.jup.ag/v6/swap-instructions', {
+    await fetch('https://api.jup.ag/swap-instructions/v1', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
