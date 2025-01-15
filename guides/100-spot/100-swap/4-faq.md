@@ -55,7 +55,7 @@ If it is failing due to slippage or transaction fees, refer to 4. and 5. above, 
 
 ### 8. Why is my token frozen?
 
-If your token is frozen, this means that you have bought or received a token that retains its freeze authority functionality. Freeze authority allows the token owner to prevent a token account from selling or transferring the tokens out of the account. This can be useful is various situations, but can also be misused, [refer to this section to find out more](./200-how-to-swap-safely.md#common-token-features-or-extensions-on-solana).
+If your token is frozen, this means that you have bought or received a token that retains its freeze authority functionality. Freeze authority allows the token owner to prevent a token account from selling or transferring the tokens out of the account. This can be useful is various situations, but can also be misused, [refer to this section to find out more](./how-to-swap-safely#common-token-features-or-extensions-on-solana).
 
 ### 9. Can I swap any token pair?
 

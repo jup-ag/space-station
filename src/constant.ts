@@ -18,7 +18,7 @@ export const navbarConfigs = {
           { to: '/guides/spot/dca/quickstart', label: 'Dollar Cost Average (DCA)', position: 'left' },
         ]
       },
-      { to: '/guides/perp', label: 'Perp', position: 'left' },
+      { to: '/guides/perp/quickstart', label: 'Perps', position: 'left' },
       { to: '/guides/apepro', label: 'Ape Pro', position: 'left' },
     ],
     '/jupiverse': [

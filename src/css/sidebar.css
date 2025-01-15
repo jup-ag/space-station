@@ -54,3 +54,7 @@
   color: var(--ifm-menu-color);
   margin-left: 0.75rem;
 }
+
+.sidebar-subcategory > .menu__list-item-collapsible > .menu__link {
+  font-weight: 400 !important;
+}

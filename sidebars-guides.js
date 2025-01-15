@@ -34,10 +34,6 @@ const sidebars = {
           id: 'spot/dca/quickstart',
           label: 'Dollar Cost Average (DCA)',
         },
-        {
-          type: 'doc',
-          id: 'spot/va/index',
-        },
       ],
     },
   ],
@@ -239,8 +235,88 @@ const sidebars = {
   ],
   perp: [
     {
-      type: 'doc',
-      id: 'perp/index',
+      type: 'category',
+      label: 'Getting Started',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp/quickstart',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: "Trader",
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: "How Trading Works",
+          collapsible: false,
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'perp/position-management',
+            },
+            {
+              type: 'doc',
+              id: 'perp/leverage-management',
+            },
+            {
+              type: 'doc',
+              id: 'perp/liquidation',
+            },
+            {
+              type: 'doc',
+              id: 'perp/fees',
+            },
+            {
+              type: 'doc',
+              id: 'perp/oracle',
+            },
+            {
+              type: 'doc',
+              id: 'perp/execution',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: "How To's",
+          collapsible: false,
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'perp/how-to-open-position',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: "Liquidity Provider",
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'perp/how-jlp-works',
+        },
+      ],
     },
     {
       type: 'html',
