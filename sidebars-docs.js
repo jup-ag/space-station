@@ -142,6 +142,10 @@ const sidebars = {
           type: 'doc',
           id: 'perp-api/custody-account',
         },
+        {
+          type: 'doc',
+          id: 'perp-api/price-feed-account',
+        },
       ],
     },
     {

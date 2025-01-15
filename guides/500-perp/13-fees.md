@@ -26,6 +26,32 @@ A flat rate of **0.06%** of the position amount is charged when opening or clo
 
 Position size * 0.06% = Base Fee
 
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Price Impact Fee Example</b>
+            </div>
+        </div>
+    </summary>
+
+```
+BPS_POWER = 10^4      // 10_000
+
+// 1. Get the base fee (BPS) from the JLP pool account's `fees.increasePositionBps` for open position requests
+// or `fees.decreasePositionBps` for close position requests
+// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#pool-account
+baseFeeBps = pool.fees.increasePositionBps
+
+// 2. Convert `baseFeeBps` to decimals
+baseFeeBpsDecimals = baseFeeBps / BPS_POWER
+
+// 3. Calculate the final open / close fee in USD by multiplying `baseFeeBpsDecimals` against the trade size
+openCloseFeeUsd = tradeSizeUsd * baseFeeBpsDecimals
+```
+
+</details>
+
 ---
 
 ## Price Impact Fees
@@ -54,7 +80,42 @@ To address these risks, Jupiter Perpetuals implements a **price impact fee**. Th
     The fee structure mimics traditional order book dynamics, where the fee is proportional to the impact a trade might have on the market, making the environment fairer for both traders and liquidity providers.
 
 ### Calculating Price Impact Fees
-(revisit)
+
+![Price Impact Fee Calculation](../../static/perps/price-impact-fee-formula.png)
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Price Impact Fee Example</b>
+            </div>
+        </div>
+    </summary>
+
+```
+USDC_DECIMALS = 10^6  // 1_000_000
+BPS_POWER = 10^4      // 10_000
+
+Calculate Price Impact Fee:
+
+// 1. Get the trade impact fee scalar from the custody account's `pricing.tradeImpactFeeScalar` constant
+// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
+tradeImpactFeeScalar = custody.pricing.tradeImpactFeeScalar
+
+// 2. Convert trade size to USDC decimal format
+tradeSizeUsd = tradeSizeUsd * USDC_DECIMALS
+
+// 3. Scale to BPS format for fee calculation
+tradeSizeUsdBps = tradeSizeUsd * BPS_POWER
+
+// 4. Calculate price impact fee percentage in BPS
+priceImpactFeeBps = tradeSizeUsdBps / tradeImpactFeeScalar
+
+// 5. Calculate final price impact fee in USD
+priceImpactFeeUsd = (tradeSizeUsd * priceImpactFeeBps / BPS_POWER) / USDC_DECIMALS
+```
+
+</details>
 
 ---
 
@@ -72,7 +133,7 @@ It's crucial to regularly monitor your borrow fees and liquidation price. Failur
 :::
 
 :::tip
-The hourly borrow rate for assets can be found in the `Borrow Rate` section of the trade form.
+The hourly borrow rates for JLP assets can be retrieved from the Borrow rate field of the Jupiter Perpetuals trade form or fetched onchain via the [custody account's `funding_rate_state.hourly_funding_dbps` field](../../docs/perp-api/custody-account#fundingratestate). Note that these rates represent the maximum charged at 100% utilization.
 :::
 
 ### Benefits of Borrow Fees
@@ -107,7 +168,34 @@ The hourly borrow fee is calculated using the following formula:
     <summary>
         <div>
             <div>
-                <b>Example</b>
+                <b>Calculating Utilization Rate</b>
+            </div>
+        </div>
+    </summary>
+
+To determine the current utilization rate, access the asset's [on-chain account](../../docs/perp-api/custody-account) and apply the following calculation:
+
+```
+// Calculate utilization percentage
+if (custody.assets.owned > 0 AND custody.assets.locked > 0) then
+    utilizationPct = custody.assets.locked / custody.assets.owned
+else
+    utilizationPct = 0
+
+// Get hourly funding rate in basis points
+hourlyFundingDbps = custody.fundingRateState.hourlyFundingDbps
+
+// Convert basis points to percentage and apply utilization
+hourlyBorrowRate = (hourlyFundingDbps / 1000) * utilizationPct
+```
+
+</details>
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Hourly Borrow Fee Example</b>
             </div>
         </div>
     </summary>
