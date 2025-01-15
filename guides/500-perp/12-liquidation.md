@@ -15,6 +15,14 @@ If you face any issues, please reach out to us on [Discord](https://discord.gg/j
 
 ---
 
+:::caution Fluctuating Liquidation Price
+It's crucial to note that the liquidation price is subject to change over time, particularly positions with leverage exceeding 10x and positions held across a long period of time, accumulating borrow fees.
+
+To mitigate the risk of liquidation:
+1. Collateral adjustments and leverage fine-tuning can be performed through the `Edit` button in the position row.
+2. Regularly monitor your liquidation price.
+:::
+
 ## Long
 
 Liquidation for long positions occurs when the current token price falls below the liquidation price.
@@ -31,22 +39,19 @@ For example, if the liquidation price is $110, the short position will be closed
 
 The liquidation price can be calculated with the following formula.
 
-- `price`: The average price (USD) of the position
-- `collateral_size`: The collateral size (USD) for the position
-- `close_fee`: The fee (USD) charged for closing the position
-- `borrow_fee`: The accumulated borrowing fees (USD) for maintaining a leveraged position
-- `size`: The size (USD) of the position
-- `max_lev`: The maximum allowed leverage (**500x** is the maximum allowed leverage in the Jupiter Perpetuals exchange for now)
+| Variable | Description |
+|----------|-------------|
+| `price` | The average price (USD) of the position |
+| `collateral_size` | The collateral size (USD) for the position |
+| `close_fee` | The fee (USD) charged for closing the position |
+| `borrow_fee` | The accumulated borrowing fees (USD) for maintaining a leveraged position |
+| `size` | The size (USD) of the position |
+| `max_lev` | The maximum allowed leverage (**500x** is the maximum allowed leverage in the Jupiter Perpetuals exchange for now) |
 
 **For long positions**
 
-
+![Long Position Calculation](../../static/perps/long-formula.png)
 
 **For short positions**
 
-
-:::info
-It's crucial to note that the liquidation price is subject to change over time, particularly with leverage exceeding 10x and the accumulation of borrow fees over extended position durations. Regularly monitoring your liquidation price is essential. 
-
-To mitigate the risk of liquidation, collateral adjustments and leverage fine-tuning can be performed through the `Edit` button in the position row, offering an avenue to add collateral and enhance the liquidation price.
-:::
+![Short Position Calculation](../../static/perps/short-formula.png)
