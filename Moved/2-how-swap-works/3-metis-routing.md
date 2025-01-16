@@ -36,7 +36,7 @@ Metis(v3) is equipped to handle both of these trends, since the algorithm is abl
 
 ### Performance Improvements
 
-Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These imporivements increase sharply based on the trade size.
+Metis is able to refresh quotes in parallel and in real time. Compared to v2, metis on average quotes prices that are 5.22% better. These improvements increase sharply based on the trade size.
 
 ![Metis4](../../../img/jup-swap/Metis-4.jpg)
 

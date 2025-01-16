@@ -89,7 +89,7 @@ The `PositionRequest` account contains the following data:
 * `sizeUsdDelta`: The USD amount to increase or decrease the position size by. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. For example, a position request to increase an open position's size by 10 USDC will have a `sizeUsdDelta = 10000000.`
 * `collateralDelta`: For opening positions and collateral deposits,`collateralDelta` is the token amount to increase or decrease the position collateral size by. The token amount is an integer that corresponds to the decimal places used by the token specified in `mint`. 
   - For example, a position request to increase a position's collateral size by 1 SOL will have `collateralDelta = 1000000000`. 
-  - For closing positions and collateral withdrawals, `collateralDelta` is the USD value of the collateral to be withdrawed from the position. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. 
+  - For closing positions and collateral withdrawals, `collateralDelta` is the USD value of the collateral to be withdrew from the position. The amount is an integer that uses 6 decimal places as specified by the USDC / USDT mints. 
   - For example, a position request to withdraw $100 from the position's collateral will have a `sizeUsdDelta = 100000000` .
 * `requestChange`: `requestChange` will be equal to `Increase` for open position and collateral deposit requests, and `Decrease` for close position and collateral withdrawal requests.
 * `requestType`: `Market` for all position requests except for TP / SL requests, which have a `Trigger` `requestType`.
@@ -132,7 +132,7 @@ There is only one `Pool` account for the JLP pool: [https://solscan.io/account/5
 * `limit`:  Contains values for the pool's limits.
 
   -  `maxAumUsd`: The max AUM for the JLP pool. This acts as a max cap / ceiling as the JLP will not accept deposits when the cap is hit.
-  -  `tokenWeightageBufferBps`: The token weightage buffer (in BPS) to calculate the token's maximum or minimum current weightage based on the target weightage. Currently, `tokenWeightageBufferBps` is set to `2000` which means the the current weightage cannot be lower of higher than + / - 20% of the token's target weightage. For example, if SOL's target weightage for the JLP pool is 50%, the current weightage cannot be less than 40% or exceed 60%. The pool will not allow deposits or withdrawals if the action causes the token to exceed its target weightage.
+  -  `tokenWeightageBufferBps`: The token weightage buffer (in BPS) to calculate the token's maximum or minimum current weightage based on the target weightage. Currently, `tokenWeightageBufferBps` is set to `2000` which means the current weightage cannot be lower of higher than + / - 20% of the token's target weightage. For example, if SOL's target weightage for the JLP pool is 50%, the current weightage cannot be less than 40% or exceed 60%. The pool will not allow deposits or withdrawals if the action causes the token to exceed its target weightage.
   -  `maxPositionUsd`: Sets the maximum position size for the Jupiter Perpetuals exchange. The current `maxPositionUsd` value is `2500000000000` which means a position's max size is $2,500,000.
 * `fees`: Sets the fee amounts or percentages for the Jupiter Perpetuals exchange.
   -  `increasePositionBps`: A fixed fee of 6 BPS (0.06%) is charged for opening or increasing a position.

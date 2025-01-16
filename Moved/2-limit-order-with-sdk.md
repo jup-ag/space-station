@@ -39,7 +39,7 @@ const connection = new Connection($SOLANA_RPC_ENDPOINT);
 
 const limitOrder = new LimitOrderProvider(
   connection,
-  // referralPubKey and referalName are both optional.
+  // referralPubKey and referralName are both optional.
   // Please provide both to get referral fees.
   // More details in the section below.
   // referralPubKey,

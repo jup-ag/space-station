@@ -13,7 +13,7 @@ There are 2 settings that you should take note of when trading on a blockchain. 
 
 In Solana, you need to pay a base fee of 0.000005 SOL for every transaction you attempt to make. However, as the Solana network receives more usage and traffic, more transactions will attempt to compete for the same amount of space.
 
-This led to the introducion to Priority Fees. It is an optinal fee that you can pay to boost the prioritization of your transaction, allowing it to process earlier, resulting in faster execution times.
+This led to the introduction to Priority Fees. It is an optimal fee that you can pay to boost the prioritization of your transaction, allowing it to process earlier, resulting in faster execution times.
 
 ### Slippage
 
@@ -24,7 +24,7 @@ Hence, in most DeFi apps, you will be able configure your slippage thresholds in
 :::note This seems daunting
 We agree with you, it can be daunting to think about these settings.
 
-At Jupiter, we do our best to continously improve your experience, we have designed a few iterations starting from just a simple configuration which slowly evolved into a dynamic mechanism where you **configure less, and swap with more confidence**.
+At Jupiter, we do our best to continuously improve your experience, we have designed a few iterations starting from just a simple configuration which slowly evolved into a dynamic mechanism where you **configure less, and swap with more confidence**.
 
 Check out how to use the Auto / Manual Settings below!
 :::
@@ -60,7 +60,7 @@ You can decide 3 levels of settings:
     | Slippage Mode | Description |
     |------|-------------|
     | Dynamic Slippage | [Dynamic Slippage](https://www.jupresear.ch/t/dynamic-slippage/21946) estimates based on a few factors, especially the types of tokens you are trading. |
-    | Fixed Slippage | Whereas for **Fixed**, we adhere to your specificed slippage threshold percentage for your swaps. |
+    | Fixed Slippage | Whereas for **Fixed**, we adhere to your specified slippage threshold percentage for your swaps. |
 
 2. Transaction Broadcasting
     1. **Broadcast Mode**: Choose from between these.

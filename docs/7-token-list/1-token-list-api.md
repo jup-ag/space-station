@@ -30,7 +30,7 @@ For most people, these 2 tags are all you need. All tokens would either be verif
 | Parameter   | Description                        |
 |-------------|------------------------------------|
 | `verified`  | Tokens that we display as verified on jup.ag. Today, this is a superset consisting of tokens tagged “community” and “lst”. You can use this setting to automatically receive jupiter’s settings when we update our allowlist.
-| `unknown`  | Untagged tokens that we display a warning on on jup.ag.                                |
+| `unknown`  | Untagged tokens that we display a warning on jup.ag.                                |
 
 ### Other Tags Available
 
@@ -86,7 +86,7 @@ Get all tradable tokens that meet jup.ag’s routing and liquidity threshold. Th
 </details>
 
 Usage notes:
-- There is a rate limit of 30 requests per minute. Please pass a referer / origin in your request header
+- There is a rate limit of 30 requests per minute. Please pass a referrer / origin in your request header
 - Enhanced metadata: We added daily volume, freeze authority and mint authority for your convenience. More fields will be available over time such as coingecko id.
 - If you see a token.jup.ag (without the s, the new one is tokens.jup.ag) in your codebase, that's our deprecated old API.
 

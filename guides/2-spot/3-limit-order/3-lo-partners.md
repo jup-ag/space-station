@@ -6,7 +6,7 @@ slug: /limit-order/lo-partners
 ---
 
 <head>
-    <title>Limit Order Parters | Jupiter Station</title>
+    <title>Limit Order Partners | Jupiter Station</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
