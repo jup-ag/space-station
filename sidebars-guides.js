@@ -233,7 +233,7 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
-  perp: [
+  perps: [
     {
       type: 'category',
       label: 'Getting Started',
@@ -242,7 +242,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'perp/quickstart',
+          id: 'perps/quickstart',
         },
       ],
     },
@@ -264,27 +264,27 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              id: 'perp/position-management',
+              id: 'perps/position-management',
             },
             {
               type: 'doc',
-              id: 'perp/leverage-management',
+              id: 'perps/leverage-management',
             },
             {
               type: 'doc',
-              id: 'perp/liquidation',
+              id: 'perps/liquidation',
             },
             {
               type: 'doc',
-              id: 'perp/fees',
+              id: 'perps/fees',
             },
             {
               type: 'doc',
-              id: 'perp/oracle',
+              id: 'perps/oracle',
             },
             {
               type: 'doc',
-              id: 'perp/keeper',
+              id: 'perps/keeper',
             },
           ],
         },
@@ -296,7 +296,15 @@ const sidebars = {
           items: [
             {
               type: 'doc',
-              id: 'perp/how-to-open-position',
+              id: 'perps/how-to-open-position',
+            },
+            {
+              type: 'doc',
+              id: 'perps/how-to-manage-position',
+            },
+            {
+              type: 'doc',
+              id: 'perps/how-to-close-position',
             },
           ],
         },
@@ -314,7 +322,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'perp/how-jlp-works',
+          id: 'perps/how-jlp-works',
         },
       ],
     },

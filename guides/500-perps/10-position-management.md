@@ -91,7 +91,7 @@ Either manually close the position or reopen the required ATA (you can do so by 
 :::
 
 :::info
-When TP/SL is set, keepers will monitor the mark price, when reaching the specified price level, TP/SL will close the whole position. More info on the keeper execution of TP/SL [here](./execution).
+When TP/SL is set, keepers will monitor the mark price, when reaching the specified price level, TP/SL will close the whole position. More info on the keeper execution of TP/SL [here](./keeper).
 :::
 
 | Position Type | Required ATA |
