@@ -316,13 +316,29 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Liquidity Provider",
+      label: "JLP",
       collapsible: false,
       collapsed: false,
       items: [
         {
-          type: 'doc',
-          id: 'perps/how-jlp-works',
+          type: 'category',
+          label: "How JLP Works",
+          collapsible: false,
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'perps/jlp-pool-and-token',
+            },
+            {
+              type: 'doc',
+              id: 'perps/pool-weightage',
+            },
+            {
+              type: 'doc',
+              id: 'perps/risks',
+            },
+          ],
         },
       ],
     },
