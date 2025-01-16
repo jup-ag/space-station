@@ -332,11 +332,19 @@ const sidebars = {
             },
             {
               type: 'doc',
-              id: 'perps/pool-weightage',
+              id: 'perps/jlp-fee-distribution',
             },
             {
               type: 'doc',
-              id: 'perps/risks',
+              id: 'perps/jlp-pool-weightage',
+            },
+            {
+              type: 'doc',
+              id: 'perps/jlp-risks',
+            },
+            {
+              type: 'doc',
+              id: 'perps/jlp-economics',
             },
           ],
         },

@@ -40,7 +40,31 @@ The JLP token is an SPL token that represents a share of the JLP Pool. The value
     - Price impact fees.
     - Borrow fees.
 
+### Adding Liquidity
+
+JLP can be acquired by swapping directly on Jupiter Swap to achieve the best price, which can be either purchasing it off the open market (like from other AMMs) or swapping it to one of JLP's underlying tokens and depositing that into JLP directly.
+
+While JLP is still being minted, your assets may be deposited into the relevant token pool increasing the current weightage. At the point of depositing assets into the JLP pool, the protocol will re-price the TVL in the USD value.
+
+### Removing Liquidity
+
+JLP can also be sold via Jupiter Swap to any tradable token. It can be either transferred to another trader or redeemed by the JLP Pool, which the JLP token will be burned and releasing some of the currency contained in the pool.
+
+:::info
+This automatic minting/burning mechanism is unique to Jupiter Swap and programs that route via Jupiter Swap. If you're interacting directly on a different DEX, you will trade JLP at the price offered by the DEX instead of the virtual price of JLP.
+
+**Only the Jupiter Perpetuals program (which is integrated in Jupiter Swap) has the authority to mint and burn JLP tokens.**
+:::
+
 ---
+
+## Advantages of the JLP System
+
+The JLP system offers a user-friendly method for participants to earn passive income while contributing to the liquidity and stability of the trading environment:
+
+- LPs do not need to actively "stake" tokens or "harvest" yields - APR earnings are embedded within each JLP token and accumulate automatically (reflected as an increase in the JLP token price).
+- The JLP token is also an SPL token, making it easily transferable and tradable like other SPL tokens within the Solana ecosystem.
+- AMM pools can be established for trading JLP tokens.
 
 ## How to Become a Liquidity Provider
 

@@ -5,7 +5,7 @@ description: How the JLP Pool Weightage works
 ---
 
 <head>
-    <title>Pool Weightage</title>
+    <title>JLP Pool Weightage</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

@@ -5,7 +5,7 @@ description: Risks associated with holding JLP
 ---
 
 <head>
-    <title>Risks</title>
+    <title>JLP Risks</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
@@ -13,9 +13,9 @@ There are risks associated with holding JLP and in this section, we will discuss
 
 ---
 
-## Bull Market Risks
+## Opportunity Cost
 
-During a bull market, JLP may not outperform SOL, ETH, or BTC. This is because the pool is made of a mix of stable and non-stable tokens.
+Capital allocated to acquiring JLP could potentially earn higher returns if allocated elsewhere. In bull markets for example, JLP may underperform compared to simply holding the underlying assets.
 
 ---
 
@@ -39,7 +39,7 @@ Traders' PnL from perpetual trading impacts the JLP pool. If a trader incurs a n
 
 ---
 
-## Token Price Fluctuations
+## Market Volatility
 
 The JLP pool consists of both stable and non-stable tokens. Fluctuations in token prices can affect the value of JLP. As a result, users may find that their withdrawn tokens can be worth less compared to their initial deposit. Additionally, deposit and withdrawal fees for the JLP Pool may further reduce the number of tokens withdrawn, particularly for shorter holding periods.
 
@@ -47,4 +47,4 @@ The JLP pool consists of both stable and non-stable tokens. Fluctuations in toke
 
 ## Can JLP go down?
 
-Yes. As shown in the trader profiting on a short trade, JLP in USD value will go down when the fees generated are lower than depreciation of assets and payout from traders' profit.
+Yes. Extreme market events or black swan scenarios may cause correlations between assets to break down, potentially amplifying losses instead of mitigating them. Additionally, as shown in the trader profiting on a short trade, JLP in USD value will go down when the fees generated are lower than depreciation of assets and payout from traders' profit.
