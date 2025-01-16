@@ -1,60 +1,36 @@
 ---
 sidebar_position: 1
-sidebar_label: "⚠️ New API Usage"
-description: "Introduction to Jupiter APIs"
-title: "New API Usage"
+title: Welcome
+description: "Unlock superior trading with Jupiter Documentation. Integrate APIs for swaps, payments, and more effortlessly. Explore robust tools now!"
 ---
 
 <head>
-    <title>API Usage</title>
+    <title>Jupiter APIs and Documentation</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-Since beginning of 2025, Jupiter have introduced new hostnames and the usage of our APIs through API keys to facilitate better infrastructure and developer support.
+# Welcome Catdet-veloper!
 
-## What's New?
+![cat_at_computer.png](../static/img/cat_at_computer.png)
 
-*Last updated: 1 January 2025*
-- API will now be served through new hostnames.
-- API will now be served through API keys.
-- API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](./api-setup) to get started).
+## Build World Class Swap Experiences Now!
 
-| Service Types | Description |
-| --- | --- |
-| Free with no API key | Decreased rate limits to only accommodate for testing. |
-| Paid plan with API key | Fixed rate limits, self served through an API dashboard. |
+Jupiter's goal is simple: Help you provide world class experiences for your users. We aim to do this with as little work as possible on your end, regardless of use case or need.
 
-#### Swap
+**Jupiter offers a wide range of tools to make your life easy. Some of these tools include:**
 
-| Old Hostnames | New Hostnames |
-|---|---|
-|`https://quote-api.jup.ag/v6/quote`|`https://api.jup.ag/swap/v1/quote`|
-|`https://quote-api.jup.ag/v6/swap`|`https://api.jup.ag/swap/v1/swap`|
-|`https://quote-api.jup.ag/v6/swap-instructions`|`https://api.jup.ag/swap/v1/swap-instructions`|
-|`https://quote-api.jup.ag/v6/program-id-to-label`|`https://api.jup.ag/swap/v1/program-id-to-label`|
+- [Swaps](/docs/APIs/swap-api): One of the Fastest Swap APIs on Solana. Simply put in your desired pairs, amount, and slippage and receive your serialized transaction from the API to execute your swap.<br/>
+- [Payments API](/docs/APIs/payments-api): Quickly swap any token to USDC. Using this, you can specify an exact output token amount in any token (not just USDC).<br/>
+- [Limit Orders](/docs/limit-order/): Place limit orders quickly and easily with Jupiter Limit Orders. <br/>
+- [DCA](/docs/dca/): DCA into any SPL token with Jupiter's DCA program. Integrating into your use case is fast and simple!
 
-#### Price
+For DEXes looking to integrate with Jupiter products, check out these resources:
+- [Jupiter Terminal](/docs/jupiter-terminal/jupiter-terminal) Jupiter Terminal provides an easy way to integrate an open-source and easy-to-use terminal in your app.
 
-| Old Hostnames | New Hostnames |
-|---|---|
-|`https://price.jup.ag/v6`|`https://api.jup.ag/price/v2`|
+For projects who wants to make your token visible on the Strict list, see:
 
-#### Token
+- [Get your Token onto Jupiter](/docs/get-your-token-onto-jup)
 
-| Old Hostnames | New Hostnames |
-|---|---|
-|`https://tokens.jup.ag/token/:mint`|`https://api.jup.ag/tokens/v1/token/:mint`|
-|`https://tokens.jup.ag/tokens?tags=:tags`|`https://api.jup.ag/tokens/v1/tagged/:tag`|
-|`https://tokens.jup.ag/tokens_with_markets`|`https://api.jup.ag/tokens/v1/mints/tradable`|
+Learn how to use Jupiter products with our in-depth [User guides.](/guides)
 
-## What's Old?
-
-- Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
-- Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
-
-## Help us help you
-
-Please reach out to us
-- If you need have increasing demand and growth in your app.
-- If you have questions or need support.
-- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subsribe to updates.
+For technical questions or partnership requests, please reach out to us in our discord: https://discord.gg/jup.
