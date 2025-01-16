@@ -33,13 +33,13 @@ The Jupiter Perpetuals exchange is a trader-to-LP exchange which means liquidity
 
     Liquidity for the Jupiter Perpetuals exchange is provided by the JLP Pool, which holds SOL, ETH, wBTC, USDC, and USDT as the underlying tokens. The pool provides ample liquidity for traders to open highly-leveraged positions, while earning an attractive return on a portion of the trading fees.
 
-    [Learn more about how the JLP Pool works here](./20-how-jlp-works.md).
+    [Learn more about how the JLP Pool works here](./jlp-pool-and-token).
 
 2. **Traders**
 
     Traders can deposit collateral to enter positions and borrowing the rest of the position from the pool. Subsequently, they can manage their positions by withdrawing collateral to close their positions fully or partially. The Jupiter Perpetuals Exchange features a simple interface and underlying trading mechanisms to provide a safe and seamless trading experience.
 
-    [Learn more about how trading works here](./10-position-management.md).
+    [Learn more about how trading works here](./position-management).
 
 ---
 
