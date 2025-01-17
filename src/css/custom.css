@@ -35,10 +35,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); */
 }
 
-.home {
-  background-color: #131c25;
-}
-
 @layer base {
   .stats :where(*) {
     margin: 0;
@@ -81,7 +77,7 @@
 .home .navbar {
   position: relative;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #111A22;
 }
 
 .home .navbar__toggle {

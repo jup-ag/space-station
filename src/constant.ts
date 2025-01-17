@@ -33,3 +33,70 @@ export const navbarConfigs = {
       { to: '/jupiverse/', label: 'Jupiverse', position: 'left' },
     ],
 };
+
+// used in home page /src/pages/index.tsx
+export const PRODUCT_CARDS = [
+  {
+    title: "Onboard",
+    links: [
+      { text: "Guide", href: "/guides/onboard" },
+      { text: "Launch", href: "https://jup.ag/onboard" }
+    ]
+  },
+  {
+    title: "Spot - Instant",
+    links: [
+      { text: "Guide", href: "/guides/spot/swap/quickstart" },
+      { text: "Launch", href: "https://jup.ag/swap" }
+    ]
+  },
+  {
+    title: "Spot - Trigger",
+    links: [
+      { text: "Guide", href: "/guides/spot/limit/quickstart" },
+      { text: "Launch", href: "https://jup.ag/limit" }
+    ]
+  },
+  {
+    title: "Spot - Recurring",
+    links: [
+      { text: "Guide", href: "/guides/spot/dca/quickstart" },
+      { text: "Launch", href: "https://jup.ag/dca" }
+    ]
+  },
+  {
+    title: "Trade Perps",
+    links: [
+      { text: "Guide", href: "/guides/perps/quickstart" },
+      { text: "Launch", href: "https://jup.ag/perps-v2" }
+    ]
+  },
+  {
+    title: "JLP Pool",
+    links: [
+      { text: "Guide", href: "/guides/perps/jlp-pool-and-token" },
+      { text: "Launch", href: "https://jup.ag/perps-earn" }
+    ]
+  },
+  {
+    title: "Mobile",
+    links: [
+      { text: "iOS", href: "https://apps.apple.com/us/app/jupiter-mobile/id6484069059" },
+      { text: "Android", href: "https://play.google.com/store/apps/details?id=ag.jup.jupiter.android" }
+    ]
+  },
+  {
+    title: "Ape Pro",
+    links: [
+      { text: "Guide", href: "/guides/apepro" },
+      { text: "Launch", href: "https://jup.ag/apepro" }
+    ]
+  },
+  {
+    title: "Lock",
+    links: [
+      { text: "Guide", href: "/guides/" },
+      { text: "Launch", href: "https://lock.jup.ag/" }
+    ]
+  },
+];
