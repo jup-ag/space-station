@@ -80,6 +80,10 @@
   background-color: #111A22;
 }
 
+.navbar {
+  padding: 16px 16px;
+}
+
 .home .navbar__toggle {
   color: rgba(255, 255, 255, 0.7);
 }

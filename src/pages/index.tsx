@@ -93,77 +93,77 @@ const JupiterExplore = () => {
   );
 };
 
-const JupiterDevelopers = () => {
-  return (
-    <div className="w-full">
-      <div className="text-3xl xl:text-4xl text-center lg:text-start font-bold !text-[#00BEF0]">
-        Developers
-      </div>
+// const JupiterDevelopers = () => {
+//   return (
+//     <div className="w-full">
+//       <div className="text-3xl xl:text-4xl text-center lg:text-start font-bold !text-[#00BEF0]">
+//         Developers
+//       </div>
 
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <a
-          href="https://station.jup.ag/docs/apis/swap-api"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>v6 Swap API</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://station.jup.ag/docs/apis/payments-api"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Payments API</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://terminal.jup.ag"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Jupiter Terminal</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://station.jup.ag/docs/dca/dca-sdk"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>DCA with SDK</span>
-          <ChevronRight />
-        </a>
-        <a
-          href="https://station.jup.ag/docs/apis/adding-fees"
-          target="_blank"
-          className={cn(
-            "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
-            `transition-all hover:gap-3`,
-          )}
-        >
-          <span>Referral Program</span>
-          <ChevronRight />
-        </a>
-      </div>
-    </div>
-  );
-};
+//       <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+//         <a
+//           href="https://station.jup.ag/docs/apis/swap-api"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>v6 Swap API</span>
+//           <ChevronRight />
+//         </a>
+//         <a
+//           href="https://station.jup.ag/docs/apis/payments-api"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>Payments API</span>
+//           <ChevronRight />
+//         </a>
+//         <a
+//           href="https://terminal.jup.ag"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>Jupiter Terminal</span>
+//           <ChevronRight />
+//         </a>
+//         <a
+//           href="https://station.jup.ag/docs/dca/dca-sdk"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>DCA with SDK</span>
+//           <ChevronRight />
+//         </a>
+//         <a
+//           href="https://station.jup.ag/docs/apis/adding-fees"
+//           target="_blank"
+//           className={cn(
+//             "py-3 px-6 font-semibold !text-[#00BEF0] rounded-xl items-center flex gap-2 bg-[#00BEF0]/[.03] hover:bg-[#00BEF0]/[.1] !no-underline",
+//             `transition-all hover:gap-3`,
+//           )}
+//         >
+//           <span>Referral Program</span>
+//           <ChevronRight />
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
 
 const JupiterDirectory = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 pb-32">
+    <div className="w-full max-w-7xl mx-auto px-4 pb-16 md:pb-32">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {PRODUCT_CARDS.map((card, index) => (
           <div key={index} className="bg-[#17212C] rounded-xl p-6 flex flex-col">
@@ -181,6 +181,49 @@ const JupiterDirectory = () => {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+const JupiterCommunity = () => {
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 pb-16 md:pb-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="https://discord.gg/jup" target="_blank" className="bg-[#17212C] rounded-xl p-6 flex items-center gap-4 hover:bg-[#17212C]/80 transition-colors">
+          <div className="bg-[#131C25] p-3 rounded-xl w-12 h-12 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-[#5865F2]">
+              <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">Get Support</h3>
+            <p className="text-gray-400">Join our Discord Community</p>
+          </div>
+        </a>
+
+        <a href="https://jupresear.ch" target="_blank" className="bg-[#17212C] rounded-xl p-6 flex items-center gap-4 hover:bg-[#17212C]/80 transition-colors">
+          <div className="bg-[#131C25] p-3 rounded-xl w-12 h-12 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+            <path d="M12 3C6.5 3 2 6.9 2 11.8c0 2.5 1.2 4.7 3 6.3-.1.5-.4 1.6-1.7 3.1-.2.2-.2.5 0 .7.1.1.2.1.4.1 2.3 0 4.1-1.4 4.9-2.1.9.2 2 .4 3.4.4 5.5 0 10-3.9 10-8.5S17.5 3 12 3zm0 15c-1.2 0-2.3-.2-3.3-.5-.2-.1-.4 0-.6.1-.6.4-1.8 1.3-3.2 1.7.5-.9.8-1.7 1-2.3.1-.3 0-.6-.2-.8C4.1 15 3 13.5 3 11.8 3 7.4 7 4 12 4s9 3.4 9 7.8-4 7.2-9 7.2z"/>            </svg>
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">Discuss Topics</h3>
+            <p className="text-gray-400">Learn more in Jupresear.ch</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/jup-ag/space-station/issues" target="_blank" className="bg-[#17212C] rounded-xl p-6 flex items-center gap-4 hover:bg-[#17212C]/80 transition-colors">
+          <div className="bg-[#131C25] p-3 rounded-xl w-12 h-12 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-white">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-white text-xl font-semibold">Feedback & Contribute</h3>
+            <p className="text-gray-400">Share your suggestions on GitHub</p>
+          </div>
+        </a>
       </div>
     </div>
   );
@@ -713,6 +756,10 @@ const Content = () => {
           <h2 className="text-3xl font-semibold text-white mb-8">Browse by product</h2>
         </div>
         <JupiterDirectory />
+        <div className="w-full max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-white mb-8">We'd love to hear from you!</h2>
+        </div>
+        <JupiterCommunity />
       </div>
     </div>
   );
