@@ -1,10 +1,8 @@
-# SDK & API License Agreement
-
 <!---
 *Last updated: January 17, 2025*
 -->
 
-## **Jupiter API & SDK License Agreement**
+# **Jupiter API & SDK License Agreement**
 
 **IMPORTANT:** This Jupiter API & SDK License Agreement ("Agreement") is a legally binding contract between you, as Licensee ("You", "Your" or "Licensee") and Block Raccoon S.A., an entity incorporated in Panama ("Jupiter," "we" or "our") and applies to your use of the Jupiter API or SDK, as defined herein, available through https://portal.jup.ag (collectively the "Service"). The Service includes an Application Programming Interface ("API") and a Software Development Kit (“SDK”), which is further discussed and defined below. If you do not agree to be bound by the terms and conditions of this Agreement, please do not proceed with the use of Service, the API, or the SDK.
 
