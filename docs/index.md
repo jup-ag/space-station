@@ -27,12 +27,12 @@ _Last updated: 1 January 2025_
 
 #### Swap
 
-| Old Hostnames                                     | New Hostnames                             |
-| ------------------------------------------------- | ----------------------------------------- |
-| `https://quote-api.jup.ag/v6/quote`               | `https://api.jup.ag/quote/v1`             |
-| `https://quote-api.jup.ag/v6/swap`                | `https://api.jup.ag/swap/v1`              |
-| `https://quote-api.jup.ag/v6/swap-instructions`   | `https://api.jup.ag/swap-instructions/v1` |
-| `https://quote-api.jup.ag/v6/program-id-to-label` | `https://api.jup.ag/program-id-to-label`  |
+| Old Hostnames                                     | New Hostnames                                    |
+| ------------------------------------------------- | ------------------------------------------------ |
+| `https://quote-api.jup.ag/v6/quote`               | `https://api.jup.ag/swap/v1/quote`               |
+| `https://quote-api.jup.ag/v6/swap`                | `https://api.jup.ag/swap/v1/swap`                |
+| `https://quote-api.jup.ag/v6/swap-instructions`   | `https://api.jup.ag/swap/v1/swap-instructions`   |
+| `https://quote-api.jup.ag/v6/program-id-to-label` | `https://api.jup.ag/swap/v1/program-id-to-label` |
 
 #### Price
 
