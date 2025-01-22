@@ -56,10 +56,6 @@ Before you set up your keys, you will need to make the payment upfront via Helio
 New payment methods is a work in progress.
 :::
 
-:::caution Out of funds
-If your delegated wallet has insufficient funds to pay for the new month, your API Key will be disregarded, and your requests will fallback as a typical call via the free plan.
-:::
-
 ![Payment](../static/portal/payment.png)
 
 ## 5. Processing Screen
