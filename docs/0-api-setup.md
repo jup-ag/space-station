@@ -56,14 +56,6 @@ Before you set up your keys, you will need to make the payment upfront via Helio
 New payment methods is a work in progress.
 :::
 
-<!-- :::caution Payment delegation
-Do note that the Sphere payment is set up as a [delegation payment method](https://docs.spherepay.co/api/subscription).
-
-This means that you have delegated the total billable to be deducted/withdrawn from your wallet automatically per month.
-
-For example, in the image, 2.4 USDC is total billable which will mean your wallet will be delegated to be billed every month, while 0.2 USDC is to be paid upfront upon signing.
-::: -->
-
 :::caution Out of funds
 If your delegated wallet has insufficient funds to pay for the new month, your API Key will be disregarded, and your requests will fallback as a typical call via the free plan.
 :::
