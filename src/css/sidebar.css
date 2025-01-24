@@ -33,6 +33,13 @@
 .theme-doc-sidebar-menu .menu__list-item-collapsible .menu__link {
   color: black !important;
   font-weight: 700 !important;
+  background: none !important;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible:hover {
+  color: black !important;
+  font-weight: 700 !important;
+  background: none !important;
 }
 
 .theme-doc-sidebar-menu .menu__link:hover {

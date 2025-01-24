@@ -20,7 +20,7 @@ export const navbarConfigs = {
         ]
       },
       { to: '/guides/perps/quickstart', label: 'Perps', position: 'left' },
-      { to: '/guides/apepro', label: 'Ape Pro', position: 'left' },
+      { to: '/guides/apepro/quickstart', label: 'Ape Pro', position: 'left' },
     ],
     '/jupiverse': [
       { to: '/guides/spot', label: 'Guides', position: 'left' },
@@ -88,8 +88,8 @@ export const PRODUCT_CARDS = [
   {
     title: "Ape Pro",
     links: [
-      { text: "Guide", href: "/guides/apepro" },
-      { text: "Launch", href: "https://jup.ag/apepro" }
+      { text: "Guide", href: "/guides/apepro/quickstart" },
+      { text: "Launch", href: "https://ape.pro/" }
     ]
   },
   {

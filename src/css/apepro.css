@@ -1,0 +1,293 @@
+#__docusaurus:has([data-section-id="apepro"]) {
+    background-color: #09090b !important;
+    color: white !important;
+    --ifm-breadcrumb-separator-filter: invert(100%) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar {
+    background-color: #09090b !important;
+    color: #fbbf24 !important;
+    box-shadow: 0 0 0 1px #71717A !important;
+}
+
+/* Hide the default title/logo when in Ape Pro section */
+#__docusaurus:has([data-section-id="apepro"]) .navbar__title {
+    display: none;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__brand .navbar__logo {
+    content: url('../../static/apepro/apepro-logo.svg');
+    display: inline-block;
+    color: #fbbf24 !important;
+    padding: 0 0 0 2rem;
+}
+
+/* small screen size */
+@media (max-width: 768px) {
+    #__docusaurus:has([data-section-id="apepro"]) .navbar__brand .navbar__logo {
+        padding: 0 0 0 0;
+    }
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__toggle {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__toggle:hover {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__link {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__link.navbar__link--active,
+#__docusaurus:has([data-section-id="apepro"]) .navbar__link.navbar__link--active:hover {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar__link:hover {
+    color: white !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .dropdown__menu {
+    background: #09090b !important;
+    border: 1px solid #fbbf24 !important;
+    border-radius: var(--ifm-border-radius);
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .dropdown__trigger::after {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .dropdown__trigger:hover::after {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .dropdown__link {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .dropdown__link:hover {
+    color: white !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .breadcrumbs__link {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .breadcrumbs__item--active .breadcrumbs__link {
+    color: #fbbf24 !important;
+    background: #1B110D !important;
+    border: 0.1rem solid #fbbf24 !important;
+}
+
+
+/* navbar search */
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Button {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: #1B110D !important;
+    border: 1px solid #fbbf24 !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Button-Placeholder,
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Button-Keys {
+    display: none !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Search-Icon {
+    margin: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    color: #fbbf24 !important;
+    stroke-width: 2px !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Button:hover {
+    background: #1B110D !important;
+    border-color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbarSearchContainer .DocSearch-Button:hover .DocSearch-Search-Icon {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu {
+    padding: 0.2rem 0 0.2rem 0.2rem;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu .menu__list-item-collapsible .menu__link {
+    color: white !important;
+    font-weight: 700 !important;
+    background: none !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu .menu__list-item-collapsible:hover .menu__link {
+    color: white !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu .menu__link--active {
+    color: #fbbf24 !important;
+    background-color: #18181b !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu .menu__link:hover {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-menu .menu__link--active:hover {
+    color: #fbbf24 !important;
+    background-color: #18181b !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-sidebar-container {
+    border-right: 1px solid #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar-sidebar {
+    background-color: #09090b !important;
+    box-shadow: 0 1px 2px 0 rgb(113, 113, 122, 0.5) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar-sidebar__backdrop {
+    background-color: #09090b 80% !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .navbar-sidebar__brand {
+    box-shadow: 0 1px 2px 0 rgb(113, 113, 122, 0.5) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .sidebar-line-break {
+    border-top: 1px solid #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .table-of-contents__left-border {
+    border-left: 1px solid rgb(113, 113, 122, 0.5) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .table-of-contents__link--active {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) h1,
+#__docusaurus:has([data-section-id="apepro"]) h2,
+#__docusaurus:has([data-section-id="apepro"]) h3,
+#__docusaurus:has([data-section-id="apepro"]) h4,
+#__docusaurus:has([data-section-id="apepro"]) h5,
+#__docusaurus:has([data-section-id="apepro"]) h6 {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-edit-this-page,
+#__docusaurus:has([data-section-id="apepro"]) .pagination-nav__label
+{
+    color: #71717A !important;
+    border-color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .pagination-nav__link:hover {
+    border-color: #fbbf24 !important;
+    text-decoration: none !important;
+}
+
+/* Mobile TOC styling for Ape Pro theme */
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile {
+    background-color: #18181b !important;
+    /* padding: 0.4rem 0.8rem; */
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .table-of-contents {
+    border-left: 0 !important;
+    border-top: 1px solid rgb(113, 113, 122, 0.5) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .clean-btn {
+    color: #71717A !important;
+    width: 100%;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .clean-btn::after {
+    background-color: #fbbf24 !important;
+    mask-image: var(--ifm-menu-link-sublist-icon);
+    -webkit-mask-image: var(--ifm-menu-link-sublist-icon);
+    mask-position: 50% 50%;
+    -webkit-mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 2rem 2rem;
+    -webkit-mask-size: 2rem 2rem;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .table-of-contents__link {
+    color: #71717A !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .table-of-contents__link:hover {
+    color: white !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-toc-mobile .table-of-contents__link--active {
+    color: #fbbf24 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) table th {
+  color: #fbbf24;
+  border-color: #71717A;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) table td {
+  color: white;
+  border-color: #71717A;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) table tr {
+  background-color: #09090b;
+}
+
+/* Admonition styling for Ape Pro theme */
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition {
+    border-left-width: 6px !important;
+    border-left-width: var(--ifm-alert-border-radius) !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition-note {
+    border-left-color: #fbbf24 !important;
+    background-color: #fffbeb !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition-info {
+    border-left-color: #60a5fa !important;
+    background-color: #eff6ff !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition-tip {
+    border-left-color: #34d399 !important;
+    background-color: #ecfdf5 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition-warning {
+    border-left-color: #f87171 !important;
+    background-color: #fef2f2 !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-admonition-caution {
+    border-left-color: #fb923c !important;
+    background-color: #fff7ed !important;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-markdown a[href]:not(.theme-admonition a):hover {
+    color: #b45309 !important;
+    text-decoration: underline;
+}
+
+#__docusaurus:has([data-section-id="apepro"]) .theme-doc-markdown a[href]:not(.theme-admonition a):visited {
+    color: #b45309 !important;
+}

@@ -357,8 +357,96 @@ const sidebars = {
   ],
   apepro: [
     {
-      type: 'doc',
-      id: 'apepro/index',
+      type: 'category',
+      label: 'Getting Started',
+      className: 'ape',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'apepro/quickstart',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/how-to-set-up-account',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/faq',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Discovery',
+      className: 'ape',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'apepro/feeds',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/filters',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/token-profile-and-chart',
+        },
+      ]
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Trading',
+      className: 'ape',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'apepro/buying',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/portfolio',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/mobile',
+        },
+      ]
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Ape Friends',
+      className: 'ape',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'apepro/leaderboard',
+        },
+        {
+          type: 'doc',
+          id: 'apepro/referral',
+        },
+      ]
     },
     {
       type: 'html',
