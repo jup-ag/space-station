@@ -45,7 +45,7 @@ The root URL of the Swap API is as such.
 https://api.jup.ag/swap/v1
 ```
 
-From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that can be needs to be prepared and signed before sending to the network.
+From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that needs to be prepared and signed before sending to the network.
 
 ## Get Serialized Transaction
 
@@ -124,7 +124,7 @@ Now, you are able to get a quote and use our Swap API to build the swap transact
 
 ### Build Your Own Transaction With Instructions
 
-If you may prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
+If you prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
 
 <details>
     <summary>
@@ -219,7 +219,7 @@ const transaction = new VersionedTransaction(messageV0);
 
 ### Build Your Own Transaction With Flash Fill Or CPI
 
-If you may prefer to interact with the Jupiter Swap Aggregator program with your own on-chain program. There are 2 ways to do it, typically on-chain program call **Cross Program Invocation (CPI)** to interact with each other, but we recommend using the **Flash Fill method** built by Jupiter.
+If you prefer to interact with the Jupiter Swap Aggregator program with your own on-chain program. There are 2 ways to do it, typically on-chain program call **Cross Program Invocation (CPI)** to interact with each other, but we recommend using the **Flash Fill method** built by Jupiter.
 
 :::tip Why Flash Fill?
 

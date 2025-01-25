@@ -110,7 +110,7 @@ If you have followed the guides step by step without missing a beat, your transa
 
 ## Oh? Transaction Not Landing?
 
-As the Solana network grew and increased in activty over the years, it has become more challenging to land transactions. There are several factors that can drastically affect the success of your transaction:
+As the Solana network grew and increased in activity over the years, it has become more challenging to land transactions. There are several factors that can drastically affect the success of your transaction:
 
 - Setting competitive priority fee
 - Setting accurate amount of compute units
@@ -129,7 +129,7 @@ We are using [Triton’s `getRecentPrioritizationFees`](https://docs.triton.one/
 | Parameters | Description |
 |------------|-------------|
 | `maxLamports` | A maximum cap applied if the estimated priority fee is too high. This is helpful when you have users using your application and can be a safety measure to prevent overpaying. |
-| `global` | A boolean to decide between to use global or local fee market to estimate. If `global` is set to `false`, the estimation focuses on fees relevant to the **writable accounts** involved in the instruction. |
+| `global` | A boolean to choose between using a global or local fee market to estimate. If `global` is set to `false`, the estimation focuses on fees relevant to the **writable accounts** involved in the instruction. |
 | `priorityLevel` | A setting to choose between the different percentile levels. Higher percentile will have better transaction landing but also incur higher fees.<br /><br /><ul><li>`medium`: 25th percentile</li><li>`high`: 50th percentile</li><li>`veryHigh`: 75th percentile</li></ul> |
 
 ```jsx
