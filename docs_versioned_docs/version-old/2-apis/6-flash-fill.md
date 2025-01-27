@@ -15,6 +15,10 @@ Use Flash Fill to integrate your program with Jupiter Swap. This allows you to a
 
 The Jupiter team engineered "flash-fill" to allow developers and integrators to utilize the full potential of Jupiter swap with their programs.
 
+:::note CPI is recommended
+As of January 2025, [Jupiter Swap via CPI](./cpi) is recommended for most users.
+:::
+
 :::info Why Flash-Fill?
 To achieve the best prices and highest returns on swaps, Jupiter divides and routes an order across multiple DEXes in a single transaction, minimizing price impact by prioritizing the lowest-cost routes. Solana transactions are limited to 1232 bytes of storage. By using lookup tables, Jupiter can include more accounts (32 bytes per account) in one transaction. However, the CPI method cannot use lookup tables to reduce the size of each account, so CPI calls to swap via Jupiter typically fail.
 

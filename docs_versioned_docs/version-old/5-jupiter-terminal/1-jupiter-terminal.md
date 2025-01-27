@@ -173,7 +173,7 @@ window.Jupiter.init({
 ### 4. Finishing touches
 Terminals are light but full of features, such as customizing form behavior, fees, styling, and much more.
 
-[Go to our Demo](https://terminal.jup.ag) to explore all these features, with automagically generated integration code.
+[Go to our Demo](https://terminal.jup.ag) to explore all these features, with automatically generated integration code.
 
 Or, [check out our fully typed API reference](https://github.com/jup-ag/terminal/blob/main/src/types/index.d.ts) for more details.
 

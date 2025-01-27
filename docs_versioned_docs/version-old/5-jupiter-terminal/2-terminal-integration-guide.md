@@ -5,7 +5,7 @@ description: "Quickly integrate Jupiter Terminal with our guide. Enhance your So
 ---
 
 <head>
-    <title>Jupiter Terminal Walkthough: Streamlined Integrations</title>
+    <title>Jupiter Terminal Walkthrough: Streamlined Integrations</title>
     <meta name="twitter:card" content="summary" />
 </head>
 

@@ -3,9 +3,13 @@ sidebar_position: 1
 sidebar_label: "⚠️ New API Usage"
 description: "Introduction to Jupiter APIs"
 title: "New API Usage"
+sidebar_label: "⚠️ New API Usage"
+description: "Introduction to Jupiter APIs"
+title: "New API Usage"
 ---
 
 <head>
+    <title>API Usage</title>
     <title>API Usage</title>
     <meta name="twitter:card" content="summary" />
 </head>
