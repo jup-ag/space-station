@@ -52,7 +52,7 @@ const referralAccount = new Publickey('ReplaceWithPubkey');
 const mintAccount = new Publickey('So11111111111111111111111111111111111111112');
 ```
 
-### 3. Set your referral fee in Quote
+### 2. Set your referral fee in Quote
 
 Setting your referral fee is simple, just add `platformFeeBps` parameter to the `/quote` endpoint.
 
@@ -136,7 +136,7 @@ console.log(swapResponse);
 
 ### 4. Sign and send transaction
 
-Finally, the referred can sign the transaction and it can be submitted to the network to be executed. You can refer to the [Send Swap Transaction](3-send-swap-transaction.md) guide to complete this step.
+Finally, the referred user can sign the transaction and it can be submitted to the network to be executed. You can refer to the [Send Swap Transaction](3-send-swap-transaction.md) guide to complete this step.
 
 ## Additional Resources
 

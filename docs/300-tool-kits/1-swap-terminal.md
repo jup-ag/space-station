@@ -30,7 +30,7 @@ Jupiter Terminal is an open-sourced, lite version of Jupiter. This terminal prov
 
 | **Feature** | **Details** |
 |---|---|
-| **Lightweight**      | -`main-v3.js` bundle (~70KB gzippped)<br />- App bundle (~1.1 MB gzipped) loads on-demand when `init()` is called.<br />- Preload app bundle with `data-preload` attributes. |
+| **Lightweight**      | -`main-v3.js` bundle (~70KB gzipped)<br />- App bundle (~1.1 MB gzipped) loads on-demand when `init()` is called.<br />- Preload app bundle with `data-preload` attributes. |
 | **Agnostic**         | - Works with any application in Integrated, Widget, or Modal format.<br />- Compatible with frameworks like React, Plain HTML, etc.<br />- Responsive to all screen sizes. |
 | **Customization** | - Supports Swap, Payment, or Ape tokens use cases.<br />- Allows fixed input/output amounts or mint.<br />- Offers ExactIn or ExactOut swap modes. |
 | **Built-in Wallets** | - Wallet Standard support, powered by Unified Wallet Kit.<br />- Passthrough wallet from your app. |

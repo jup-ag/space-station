@@ -9,7 +9,7 @@ title: "API Setup"
     <meta name="twitter:card" content="summary" />
 </head>
 
-Get started by setting up an account on the dashboard to generate API Keys and managing payments via Sphere.
+Get started by setting up an account on the dashboard to generate API Keys and manage payments via Sphere.
 
 Then, to use the API Key in our APIs, simply add the key to the header.
 
@@ -92,7 +92,7 @@ If you need more requests, you can upgrade the plan, or create a completely new 
 Please reach out to us.
 - If you have increasing demand and growth in your app, and need additional support.
 - If you have questions or need support.
-- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subsribe to updates.
+- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subscribe to updates.
 
 ## 8. Get Started!
 

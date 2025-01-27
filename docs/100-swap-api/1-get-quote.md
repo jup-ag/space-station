@@ -11,7 +11,7 @@ title: "Get Quote"
 
 :::warning Please use the Swap API at your own discretion.
 
-The Jupiter UI at https://jup.ag/ contains multiple safeguards, warnings and default settings to guide our users to trade safer. Jupiter is not liable for lesses incurred by users on other platforms.
+The Jupiter UI at https://jup.ag/ contains multiple safeguards, warnings and default settings to guide our users to trade safer. Jupiter is not liable for losses incurred by users on other platforms.
 
 If you need clarification or support, please reach out to us in [Discord](https://discord.gg/jup).
 :::
@@ -36,7 +36,7 @@ The root URL of the Quote API is as such.
 https://api.jup.ag/quote/v1
 ```
 
-The most common trading pair on Solana is SOL and USDC, in order to get a quote for this specific token pair, you need to pass in the required parameters such as:
+The most common trading pair on Solana is SOL and USDC, to get a quote for this specific token pair, you need to pass in the required parameters such as:
 
 | Parameters | Description |
 | --- | --- |
@@ -59,7 +59,7 @@ const quoteResponse = await (
 console.log(JSON.stringify(quoteResponse, null, 2));
 ```
 
-From the above example, you should see this response.
+Example response:
 
 ```json
 {
