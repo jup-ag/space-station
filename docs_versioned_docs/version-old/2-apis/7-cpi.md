@@ -11,7 +11,7 @@ title: Jupiter Swap via CPI
 
 
 
-To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](/docs/APIs/flash-fill) or you can utilize Cross Program Invocation (CPI). 
+To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](./flash-fill) or you can utilize Cross Program Invocation (CPI). 
 
 :::note CPI is recommended
 As of January 2025, Jupiter Swap via CPI is recommended for most users.
