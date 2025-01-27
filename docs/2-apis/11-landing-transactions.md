@@ -45,11 +45,9 @@ const { swapTransaction } = await (
       dynamicSlippage: { // This will set an optimized slippage to ensure high success rate
         maxBps: 300 // Make sure to set a reasonable cap here to prevent MEV
       },
-	    prioritizationFeeLamports: {
-        priorityLevelWithMaxLamports: {
-          maxLamports: 10000000,
-          priorityLevel: "veryHigh" // If you want to land transaction fast, set this to use `veryHigh`. You will pay on average higher priority fee.
-        }
+      priorityLevelWithMaxLamports: {
+        maxLamports: 10000000,
+        priorityLevel: "veryHigh" // If you want to land transaction fast, set this to use `veryHigh`. You will pay on average higher priority fee.
       }
     })
   })
@@ -129,12 +127,10 @@ const { swapTransaction } = await (
     body: JSON.stringify({
       quoteResponse,
       userPublicKey: wallet.publicKey.toString(),
-      prioritizationFeeLamports: {
-        priorityLevelWithMaxLamports: {
-          maxLamports: 4000000,
-          global: false,
-          priorityLevel: "veryHigh"
-        }
+      priorityLevelWithMaxLamports: {
+        maxLamports: 4000000,
+        global: false,
+        priorityLevel: "veryHigh"
       }
     })
   })

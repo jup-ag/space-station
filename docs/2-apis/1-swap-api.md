@@ -499,11 +499,9 @@ const transaction = await (
       userPublicKey: wallet.publicKey.toString(),
       dynamicComputeUnitLimit: true, // allow dynamic compute limit instead of max 1,400,000
       // custom priority fee
-	    prioritizationFeeLamports: {
-        priorityLevelWithMaxLamports: {
-          maxLamports: 10000000,
-          priorityLevel: "veryHigh" // If you want to land transaction fast, set this to use `veryHigh`. You will pay on average higher priority fee.
-        }
+      priorityLevelWithMaxLamports: {
+        maxLamports: 10000000,
+        priorityLevel: "veryHigh" // If you want to land transaction fast, set this to use `veryHigh`. You will pay on average higher priority fee.
       }
     })
   })
