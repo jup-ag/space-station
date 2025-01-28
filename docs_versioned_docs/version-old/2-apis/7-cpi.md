@@ -11,7 +11,7 @@ title: Jupiter Swap via CPI
 
 
 
-To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](./flash-fill) or you can utilize Cross Program Invocation (CPI). 
+To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](/docs/old/APIs/flash-fill) or you can utilize Cross Program Invocation (CPI). 
 
 :::note CPI is recommended
 As of January 2025, Jupiter Swap via CPI is recommended for most users.
@@ -26,7 +26,7 @@ _Note: when using Jupiter's API, you can set [maxAccounts](/docs/old/APIs/swap-a
 :::
 
 :::info Use Flash-Fill
-An alternative method is to use the [flash-fill](/docs/APIs/flash-fill) approach. The flash-fill approach takes advantage of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables) to allow for more accounts per transaction while keeping within the 1232 bytes limit.
+An alternative method is to use the [flash-fill](/docs/old/APIs/flash-fill) approach. The flash-fill approach takes advantage of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables) to allow for more accounts per transaction while keeping within the 1232 bytes limit.
 :::
 
 ## Example
