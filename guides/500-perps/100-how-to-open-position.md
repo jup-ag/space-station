@@ -13,10 +13,6 @@ Welcome to the world of Jupiter Perps, where trading gets fast, exciting, and pa
 
 ---
 
-:::tip Jupiter Perps V2
-Check out the Jupiter Perps V2 at https://jup.ag/perps-v2 to trade with new features like Limit Orders, Gasless Orders and more!
-:::
-
 ### Step 1: Connect Your Wallet
 
 To begin trading on Jupiter Perps, head to the Jupiter Perps platform at https://jup.ag/perps and click on the **“Connect Wallet”** button in the top-right corner. From there, select your preferred Solana wallet, such as Phantom or Solflare, and approve the connection. Once connected, you’re ready to dive into the trading interface!

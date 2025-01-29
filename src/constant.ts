@@ -8,7 +8,7 @@ export const navbarConfigs = {
       { to: '/docs/api', label: 'API Reference', position: 'left' },
     ],
     '/guides': [
-      { to: '/guides/onboard', label: 'Onboard', position: 'left' },
+      { to: '/guides/', label: 'General', position: 'left' },
       {
         to: '/guides/spot',
         label: 'Spot',
@@ -22,15 +22,10 @@ export const navbarConfigs = {
       { to: '/guides/perps/quickstart', label: 'Perps', position: 'left' },
       { to: '/guides/apepro/quickstart', label: 'Ape Pro', position: 'left' },
     ],
-    '/jupiverse': [
-      { to: '/guides/spot', label: 'Guides', position: 'left' },
-      { to: '/docs/', label: 'Docs', position: 'left' },
-      { to: '/jupiverse/', label: 'Jupiverse', position: 'left' },
-    ],
     '/': [
-      { to: '/guides/spot', label: 'Guides', position: 'left' }, // to do, or yet to fix, navbar as mobile sidebar does not respect this, only follows docusaurus.config.js navbar config
+      { to: '/guides/', label: 'Guides', position: 'left' }, // to do, or yet to fix, navbar as mobile sidebar does not respect this, only follows docusaurus.config.js navbar config
       { to: '/docs/', label: 'Docs', position: 'left' },
-      { to: '/jupiverse/', label: 'Jupiverse', position: 'left' },
+      { to: 'https://jup.com', label: 'Jupiverse', position: 'left' },
     ],
 };
 
@@ -68,7 +63,7 @@ export const PRODUCT_CARDS = [
     title: "Trade Perps",
     links: [
       { text: "Guide", href: "/guides/perps/quickstart" },
-      { text: "Launch", href: "https://jup.ag/perps-v2" }
+      { text: "Launch", href: "https://jup.ag/perps" }
     ]
   },
   {

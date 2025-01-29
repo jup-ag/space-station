@@ -5,7 +5,55 @@ const sidebars = {
   welcome: [
     {
       type: 'doc',
-      id: 'onboard/index',
+      id: 'index',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Getting Started',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'onboard/index',
+        },
+        {
+          type: 'doc',
+          id: 'onboard/adding-funds',
+        },
+        {
+          type: 'doc',
+          id: 'onboard/bridging-funds',
+        },
+        {
+          type: 'doc',
+          id: 'onboard/security',
+        },
+      ]
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'General',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'jupsol',
+        },
+        {
+          type: 'doc',
+          id: 'lock',
+        },
+      ]
     }
   ],
   spot: [

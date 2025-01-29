@@ -16,10 +16,6 @@ Apart from Spot products like Swap or DCA, Jupiter has its own Perpetual Exchang
 
 Welcome to Jupiter Perpetuals, a perpetual exchange where you can trade with leverage (**up to 100x!**) on popular tokens like **SOL**, **ETH**, **wBTC**.
 
-:::tip Perps V2!
-Try out the new Perps UI at **https://jup.ag/perps-v2**, featuring a new design and other features like Limit Orders, Gasless Orders and more!
-:::
-
 :::info Statistics Dashboards
 You can find various metrics on Jupiter Perpetuals on the following dashboards:
 1. [Chaos Labs Dashboard](https://community.chaoslabs.xyz/jupiter/risk/overview)
@@ -75,10 +71,10 @@ The Jupiter Perpetuals exchange is a trader-to-LP exchange which means liquidity
 
     Jupiter Perps is working closely with different economic and risk teams to ensure a stable, fair yet competitive trading environment. Refer to the assessments at https://www.jupresear.ch/tag/risk.
 
-- **Limit Orders ([New in Perps V2](https://jup.ag/perps-v2))**
+- **Limit Orders**
 
     Traders can place limit orders to enter their long or short positions at a specific price. This allows for more control over the entry price of their positions.
 
-- **Gasless Orders ([New in Perps V2](https://jup.ag/perps-v2))**
+- **Gasless Orders**
 
     Traders can place orders without paying for transaction fees. This is powered by a new keeper execution model where you submit a request to execute an order (direct to keepers instead of a transaction on-chain), and the keeper will execute the order for you.

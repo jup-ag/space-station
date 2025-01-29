@@ -13,10 +13,6 @@ Now that you have [opened a position](./how-to-open-position), in this guide, we
 
 ---
 
-:::tip Jupiter Perps V2
-Check out the Jupiter Perps V2 at https://jup.ag/perps-v2 to trade with new features like Limit Orders, Gasless Orders and more!
-:::
-
 ## Position Details
 
 After you have opened a position, you can view the details of your position by opening the Positions tab. In this tab, you can see the details of your position.
