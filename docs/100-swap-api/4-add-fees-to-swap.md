@@ -9,25 +9,47 @@ title: "Add Fees To Swap"
     <meta name="twitter:card" content="summary" />
 </head>
 
+:::info
+As of January 2025, you no longer need to use the Referral Program to set up a `referralAccount` and `referralTokenAccount` to collect fees from the swaps you provide to the end users.
+
+Simply, just pass in any valid token account as the `feeAccount` parameter in the Swap API.
+:::
+
+:::note
+You can still find information about the Referral Program.
+
 The Referral Program is an open source program by Jupiter to provide referral fees for integrators who are integrating Jupiter Swap and Jupiter Limit Order. You can check out the code [here](https://github.com/TeamRaccoons/referral) to gain a better understanding of how it works.
+:::
 
 ## Use Case
 
-By default, there are **zero** protocol fees on Jupiter Swap. Integrators have the option to introduce a platform fee denoted in basis points, e.g. **20 bps** for **0.2%** of the token input or output. If a platform fee is set by an integrator, Jupiter will **take 2.5%** of the platform fee charged by the integrators.
+By default, there are **zero** protocol fees on Jupiter Swap. Integrators have the option to introduce a platform fee denoted in basis points, e.g. **20 bps** for **0.2%** of the token input or output.
 
 :::note
-If you use our APIs heavily and consider taking fees, please reach out to us.
+If you use our APIs heavily and consider taking fees, [please reach out to us](https://t.me/Yankee0x).
 :::
 
 ### Important Notes
 
 - This is useful if you are an end user application such as wallets, payments, merchants, etc.
+- It does not support Token2022 tokens.
+- Referral Program is no longer required.
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Via Referral Program (No longer required)</b>
+            </div>
+        </div>
+    </summary>
+
+### Important Notes
 - The Jupiter Swap project account for the Referral Program is `45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp`.
 - The `referralTokenAccount` can either be:
     - **Input mint or the output mint** on the swap for ExactIn.
     - **Input mint ONLY** on the swap for ExactOut.
 - You can use the [Dashboard](https://referral.jup.ag/dashboard), [SDK](https://github.com/TeamRaccoons/referral/blob/main/example/src/createReferralAccount.ts) or [API](https://referral.jup.ag/api) to set up the `referralAccount` and `referralTokenAccount` in this guide.
-- It does not support Token2022 tokens.
 
 ## Let’s Get Started
 
@@ -52,7 +74,7 @@ const referralAccount = new Publickey('ReplaceWithPubkey');
 const mintAccount = new Publickey('So11111111111111111111111111111111111111112');
 ```
 
-### 3. Set your referral fee in Quote
+### 2. Set your referral fee in Quote
 
 Setting your referral fee is simple, just add `platformFeeBps` parameter to the `/quote` endpoint.
 
@@ -61,7 +83,7 @@ In this example, we set `platformFeeBps` to `20` which equates to 0.2%.
 ```jsx
 const quoteResponse = await (
     await fetch(
-        'https://api.jup.ag/quote/v1?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&platformFeeBps=20'
+        'https://api.jup.ag/swap/v1/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&platformFeeBps=20'
     )
   ).json();
   
@@ -118,7 +140,7 @@ Using the above, we will now know the `feeAccount` to be passed in as the parame
 
 ```jsx
 const swapResponse = await (
-    await fetch('https://api.jup.ag/swap/v1', {
+    await fetch('https://api.jup.ag/swap/v1/swap', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -134,10 +156,48 @@ const swapResponse = await (
 console.log(swapResponse);
 ```
 
+</details>
+
+### 1. Set up
+
+You will need to complete the prerequisites and understanding of [Get Started](../1-get-started.md) and [Get Quote and Swap](1-get-quote.md) guide as this is reliant on the Swap API.
+
+### 2. Set your fee in Quote
+
+Setting your fee is simple, just add `platformFeeBps` parameter to the `/quote` endpoint.
+
+In this example, we set `platformFeeBps` to `20` which equates to 0.2%.
+
+```jsx
+const quoteResponse = await (
+    await fetch(
+        'https://api.jup.ag/swap/v1/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&platformFeeBps=20'
+    )
+  ).json();
+  
+console.log(JSON.stringify(quoteResponse, null, 2));
+```
+
+### 3. Set your feeAccount in Swap
+
+In the `/swap` endpoint, you will need to pass in the `feeAccount` parameter. The `feeAccount` is any token account that will receive the fees from the swap. Do ensure that the token account is initialized and is the correct mint to receive the fees in.
+
+```jsx
+const swapResponse = await (
+    await fetch('https://api.jup.ag/swap/v1/swap', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            quoteResponse,
+            userPublicKey: wallet.publicKey.toBase58(), // Pass in actual referred user in production
+            feeAccount: feeAccount,
+        })
+    })
+).json();
+```
+
 ### 4. Sign and send transaction
 
-Finally, the referred can sign the transaction and it can be submitted to the network to be executed. You can refer to the [Send Swap Transaction](3-send-swap-transaction.md) guide to complete this step.
-
-## Additional Resources
-
-Now you have set up and added fees to the swaps you provide to the end users. The fees are collected and stored in the `referralTokenAccount`. In order to claim them, you can use the SDK or API to claim them all at once.
+Finally, the user can sign the transaction and it can be submitted to the network to be executed. You can refer to the [Send Swap Transaction](3-send-swap-transaction.md) guide to complete this step.

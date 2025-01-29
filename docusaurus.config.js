@@ -4,7 +4,6 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const redirects = require('./redirects.json');
-const { UnfoldHorizontal } = require("lucide-react");
 require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -87,8 +86,27 @@ const config = {
           routeBasePath: "docs/api",
           sidebarCollapsible: false,
           sidebarCollapsed: false,
+          path: "openapi/api.yaml",
+          routeBasePath: "docs/api",
+          sidebarCollapsible: false,
+          sidebarCollapsed: false,
         },
         docs: {
+          id: 'docs',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Latest',
+              path: '',
+              badge: false,
+            },
+            old: {
+              label: 'Old',
+              path: 'old',
+              banner: 'unmaintained',
+            }
+          },
+          sidebarPath: require.resolve("./sidebars-docs.js"),
           id: 'docs',
           lastVersion: 'current',
           versions: {
@@ -248,6 +266,33 @@ const config = {
         additionalLanguages: ["rust"],
       },
     }),
+
+  scripts: [
+    {
+      id: "awesomeqa-chat-widget-script",
+      src: "https://awesomeqa.xyz/web-support/chat-widget.js",
+      async: true,
+      communityId: "0e700188-8410-431a-b2de-b23cc4ba7308",
+      config: JSON.stringify({
+        theme: "dark",
+        widgetTitle: "Jupiter Station Chatbot",
+        firstMessage: "Welcome to JM Cadets! We're here to help and support you. 😊 Have a question? Feel free to use the buttons below - we're looking forward to assisting you!",
+        primaryColor: "#20b2aa",
+        disclaimer: "Our AI assistant is in beta and only provides general information (not financial advice).\n\nAvoid sharing sensitive information like private keys, and contact our support team for unresolved issues.",
+        actions:
+          {
+            contactSupport: {
+              title: "Open Support Ticket",
+              response: "Thanks for reaching out! One of our friendly support team members will be with you shortly. We appreciate your patience and look forward to helping you.",
+            },
+            thanks: {
+              title: "Send Thanks",
+              response: "We truly appreciate you taking the time to reach out! Your feedback helps make Jupiter better for everyone. Have more questions? Join our vibrant community on [Discord](https://discord.gg/jup) - we'd love to see you there! 🚀",
+            },
+          },
+      }),
+    },
+  ],
 };
 
 module.exports = config;

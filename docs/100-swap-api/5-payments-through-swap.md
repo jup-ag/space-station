@@ -41,7 +41,7 @@ Before we start getting a quote and swap transaction, for example sake, we will 
 
 Do note that you will need to have already set up:
 - A wallet in your machine to simulate yourself as the customer as the customer is the signer of the transaction (similar to how we set up in [Get Started - Set Up Your Wallet](../1-get-started.md#4-set-up-your-wallet)).
-- `trackingAccount` is basically an additional Solana Account you can pass in to track only Jupiter transactions easily.
+- `trackingAccount` is an additional Solana Account you can pass in to track only Jupiter transactions easily.
 
 #### Set Up Accounts
 
@@ -92,7 +92,7 @@ Currently, there are some limitations as `ExactOut` is not widely supported acro
 ```jsx
 const quoteResponse = await (
     await fetch(
-        'https://api.jup.ag/quote/v1?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&swapMode=ExactOut'
+        'https://api.jup.ag/swap/v1/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&amount=100000&slippageBps=50&restrictIntermediateTokens=true&swapMode=ExactOut'
     )
   ).json();
   
@@ -121,7 +121,7 @@ The `destinationTokenAccount` should be the merchant’s token account to receiv
 
 ```jsx
 const swapResponse = await (
-    await fetch('https://api.jup.ag/swap/v1', {
+    await fetch('https://api.jup.ag/swap/v1/swap', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -172,7 +172,7 @@ if (confirmation.value.err) {
 } else console.log(`Transaction successful: https://solscan.io/tx/${signature}/`);
 ```
 
-The suceeded Swap Transaction should show:
+The succeeded Swap Transaction should show:
 - Token A swaps from the customer's token account
 - Token A swap to Token B
 - Token B sends to the merchant's token account

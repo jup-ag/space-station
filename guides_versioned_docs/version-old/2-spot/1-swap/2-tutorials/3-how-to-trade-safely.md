@@ -15,7 +15,7 @@ We highlight safety notifications, non-intrusive warnings, key token info, and s
 
 Price impact alert is influenced by the available liquidity and your trade size. A large trade size in an illiquid pool often results in huge price impact, hence you can break up your trade size with [DCA](https://jup.ag/dca/USDC-SOL). 
 
-We also show the quoted rate (from Jupiter) against the market rate. The price difference can be due to various external factors such as price impact, token tax, stale market price (usuaully derived using last traded price), etc. 
+We also show the quoted rate (from Jupiter) against the market rate. The price difference can be due to various external factors such as price impact, token tax, stale market price (usually derived using last traded price), etc. 
 
 If your trade shows a large price impact and difference, please trade with caution and feel free to seek clarity in our [Discord](https://discord.gg/jup).
 

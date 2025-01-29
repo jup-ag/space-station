@@ -75,7 +75,7 @@ Slippage occurs when market conditions change between transaction submission and
 
 ### MEV Protection
 
-Jupiter makes it easier for you to protect and hide your swap transactions against MEV and sandwich attacks also known as transaction front-running, by sending your transaction directly to a Jito validator. Note that MEV Protect minimzes loss of funds due to front-running but [slippage](../2-how-swap-works/2-how-swap-works.md/#slippage) still may occur when market conditions change during swap execution.
+Jupiter makes it easier for you to protect and hide your swap transactions against MEV and sandwich attacks also known as transaction front-running, by sending your transaction directly to a Jito validator. Note that MEV Protect minimizes loss of funds due to front-running but [slippage](../2-how-swap-works/2-how-swap-works.md/#slippage) still may occur when market conditions change during swap execution.
 
 ![MEV Protection](../../../img/mev-new.png)
 

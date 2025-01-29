@@ -83,7 +83,7 @@ This is an advanced setting and should be used with caution.
 
 ![Jup Swap 3](../../img/jup-swap/jup-swap-4.png "Slippage settings allow you to change mode: Dynamic, Auto, Fixed and set the percentage.")
 
-1.  **Mode:** Select the slippage mode you want to utilize. Dynamic mode optimises slippage between success rate, and sandwich protection through a series of simulations. Auto slippage will utilize Jupiters internal slippage calculations for the best setting. Fixed will adhere to your specificed slippage amount.
+1.  **Mode:** Select the slippage mode you want to utilize. Dynamic mode optimises slippage between success rate, and sandwich protection through a series of simulations. Auto slippage will utilize Jupiters internal slippage calculations for the best setting. Fixed will adhere to your specified slippage amount.
 2.  **Slippage:** Enter the maximum acceptable slippage rate for your swaps.
 
 ### Swap Settings
@@ -122,7 +122,7 @@ Clicking on the area marked number 9 from the Swap terminal above will show you 
 
 ## Swap Details / Price Info
 
-![Jup Swap 10](../../img/jup-swap/jup-swap-8.png 'The collapsable "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
+![Jup Swap 10](../../img/jup-swap/jup-swap-8.png 'The collapsible "Price Info" menu shows granular details for price impact, transaction fee, and deposit amount.')
 
 1. **Exchange Rate for the Selected Tokens:** This is the current exchange rate, based on the on-chain prices for the selected input and output tokens, along with a comparison against Coingecko Price API.
 2. **Price Impact:** Price Impact is influenced by the available liquidity to settle the trade. The larger the trade the larger the price impact on the selected assets.

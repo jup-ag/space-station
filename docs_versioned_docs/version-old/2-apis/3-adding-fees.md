@@ -40,6 +40,16 @@ title: Adding Your Own Fee To Jupiter Swap
 
 ![cat_flying](./cat_flying_money.png)
 
+:::caution No need to use referral program
+As of January 2025, you do not need to use the Referral program to add fees to your Jupiter Swap.
+
+You can simply pass in **any** token account to the `feeAccount` parameter in `/swap` endpoint to indicate which mint and token account to send the fees to. (You still need to add `platformFeeBps` in `/quote`)
+
+- For Exact In, both input or output mint of the swap can be used to take fees.
+- For Exact Out, only the input mint can be used to take fees.
+- It does not support Token2022.
+:::
+
 The Referral Program is an open source program by Jupiter to provide referral fees for integrators who are integrating Jupiter Swap and Jupiter Limit Order. You can check out the code [here](https://github.com/TeamRaccoons/referral) to gain a better understanding of how it works.
 
 By default, there are no protocol fees on Jupiter. Integrators have the option to introduce a platform fee on swaps. The platform fee is provided in basis points, e.g. **20 bps** for **0.2%** of the token input or output. If a platform fee is set by an integrator, Jupiter **will take 2.5%** of the platform fee charged by the integrators. It doesn't support Token2022 tokens.

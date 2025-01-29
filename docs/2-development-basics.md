@@ -16,7 +16,7 @@ Jupiter is built on Solana MAINNET only!
 Solana uses an account-based architecture where data are stored in accounts. However, Solana keeps Programs (also known as smart contracts on other blockchains) and Accounts distinct. In order to mutate the data in Accounts, you will need to send transactions to the network which execute Instructions defined by Programs.
 
 - [Programs](https://solana.com/docs/core/programs) on Solana are executable code deployed on-chain. They are designed to execute instructions, process transactions and interact with accounts.
-- [Instructions](https://solana.com/docs/core/transactions#instruction) on Solana are defined by the Program, similar to API endpoints exposesd by a program.
+- [Instructions](https://solana.com/docs/core/transactions#instruction) on Solana are defined by the Program, similar to API endpoints exposed by a program.
 - [Accounts](https://solana.com/docs/core/accounts) store data and are mutable, meaning they can be updated by the program who interacts with them.
 - [Transactions](https://solana.com/docs/core/transactions#transaction) is what we send to interact with the network which can include one or more instructions to execute what is needed.
 
@@ -92,7 +92,7 @@ When querying the micro-lamport per compute unit for a particular program or acc
 
 ### What is Compute Unit?
 
-Compute Unit (CU) is a standardizded metric for evaluating how much "work" or "resource" is required by the transaction to execute. Different operations on Solana has varying amounts of CUs. In order to keep the blockchain efficient yet fast, each transaction, the Solana runtime has an absolute max compute unit limit of 1.4 million CU and sets a default requested max limit of 200k CU per instruction.
+Compute Unit (CU) is a standardized metric for evaluating how much "work" or "resource" is required by the transaction to execute. Different operations on Solana has varying amounts of CUs. In order to keep the blockchain efficient yet fast, each transaction, the Solana runtime has an absolute max compute unit limit of 1.4 million CU and sets a default requested max limit of 200k CU per instruction.
 
 :::tip Set custom Compute Unit Limit
 A transaction can request a more specific and optimal compute unit limit by including a single `SetComputeUnitLimit` instruction. Either a higher or lower limit. But it may never request higher than the absolute max limit per transaction.

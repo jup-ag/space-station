@@ -27,6 +27,22 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
+    {
+      type: 'doc',
+      id: 'sdk-api-license-agreement',
+    },
+    {
+      type: 'doc',
+      id: 'terms-of-use',
+    },
+    {
+      type: 'doc',
+      id: 'privacy-policy',
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
   ],
   swap: [
     {
@@ -141,10 +157,6 @@ const sidebars = {
         {
           type: 'doc',
           id: 'perp-api/custody-account',
-        },
-        {
-          type: 'doc',
-          id: 'perp-api/price-feed-account',
         },
       ],
     },

@@ -42,10 +42,10 @@ To fully utilize the Swap API, check out the [Swap API Reference](/docs/api/swap
 The root URL of the Swap API is as such.
 
 ```markdown
-https://api.jup.ag/swap/v1
+https://api.jup.ag/swap/v1/swap
 ```
 
-From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that can be needs to be prepared and signed before sending to the network.
+From the previous guide on getting a quote, now using the quote response and your wallet, you can receive a **serialized swap transaction** that needs to be prepared and signed before sending to the network.
 
 ## Get Serialized Transaction
 
@@ -59,7 +59,7 @@ To understand how these parameters help, the next step, [Send Swap Transaction g
 
 ```jsx
 const swapResponse = await (
-await fetch('https://api.jup.ag/swap/v1', {
+await fetch('https://api.jup.ag/swap/v1/swap', {
     method: 'POST',
     headers: {
     'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ Now, you are able to get a quote and use our Swap API to build the swap transact
 
 ### Build Your Own Transaction With Instructions
 
-If you may prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
+If you prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
 
 <details>
     <summary>
@@ -138,7 +138,7 @@ Example code snippet of using `/swap-instruction`
 
 ```jsx
 const instructions = await (
-    await fetch('https://api.jup.ag/swap-instructions/v1', {
+    await fetch('https://api.jup.ag/swap/v1/swap-instructions', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -219,7 +219,13 @@ const transaction = new VersionedTransaction(messageV0);
 
 ### Build Your Own Transaction With Flash Fill Or CPI
 
-If you may prefer to interact with the Jupiter Swap Aggregator program with your own on-chain program. There are 2 ways to do it, typically on-chain program call **Cross Program Invocation (CPI)** to interact with each other, but we recommend using the **Flash Fill method** built by Jupiter.
+If you prefer to interact with the Jupiter Swap Aggregator program with your own on-chain program. There are 2 ways to do it, typically on-chain program call **Cross Program Invocation (CPI)** to interact with each other, we also have another method called **Flash Fill** built by Jupiter (due to limitations of CPI in the past).
+
+:::info CPI is now recommended!
+As of January 2025, Jupiter Swap via CPI is recommended for most users.
+
+[The `Loosen CPI restriction` feature has been deployed on Solana, you can read more here](https://github.com/solana-labs/solana/issues/26641).
+:::
 
 :::tip Why Flash Fill?
 
@@ -234,30 +240,11 @@ Solana transactions are limited to 1232 bytes, Jupiter is using Address Lookup T
     <summary>
         <div>
             <div>
-                <b>Flash Fill and CPI references</b>
+                <b>CPI and Flash Fill references</b>
             </div>
         </div>
     </summary>
     <Tabs>
-        <TabItem value="flash-fill" label="Flash Fill" default>
-            <strong>A Flash Fill transaction will be composed of these instructions:</strong>
-            <ol>
-                <li>Borrow enough SOL for opening the wSOL account from this program.</li>
-                <li>Create the wSOL account for the borrower.</li>
-                <li>Swap X token to wSOL.</li>
-                <li>Close the wSOL account and send it to the borrower.</li>
-                <li>Repay the SOL for opening the wSOL account back to this program.</li>
-            </ol>
-            <strong>Links and resources:</strong>
-            <ul>
-                <li><a href="https://github.com/jup-ag/sol-swap-flash-fill">Github repo</a></li>
-                    <ul>
-                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/programs/flash-fill/src/lib.rs">Program code</a></li>
-                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/cli/flash-fill.ts">Client code</a></li>
-                    </ul>
-                <li><a href="https://solscan.io/tx/4psWiUFGdRhKqi1UXSWrpoM3RCJWAXpz6CTpsd5fZwjr8nEpLiZVuiyaERj95hUNnm6dhfxircLgAqCbHV3wCVpT">Example transaction</a></li>
-            </ul>
-        </TabItem>
         <TabItem value="cross-program-invocation" label="Cross Program Invocation" default>
             <strong>A CPI transaction will be composed of these instructions:</strong>
             <ol>
@@ -332,6 +319,26 @@ jupiter_cpi::cpi::shared_accounts_route(
                     </code>
                 </pre>
             </details>
+        </TabItem>
+        
+        <TabItem value="flash-fill" label="Flash Fill" default>
+            <strong>A Flash Fill transaction will be composed of these instructions:</strong>
+            <ol>
+                <li>Borrow enough SOL for opening the wSOL account from this program.</li>
+                <li>Create the wSOL account for the borrower.</li>
+                <li>Swap X token to wSOL.</li>
+                <li>Close the wSOL account and send it to the borrower.</li>
+                <li>Repay the SOL for opening the wSOL account back to this program.</li>
+            </ol>
+            <strong>Links and resources:</strong>
+            <ul>
+                <li><a href="https://github.com/jup-ag/sol-swap-flash-fill">Github repo</a></li>
+                    <ul>
+                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/programs/flash-fill/src/lib.rs">Program code</a></li>
+                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/cli/flash-fill.ts">Client code</a></li>
+                    </ul>
+                <li><a href="https://solscan.io/tx/4psWiUFGdRhKqi1UXSWrpoM3RCJWAXpz6CTpsd5fZwjr8nEpLiZVuiyaERj95hUNnm6dhfxircLgAqCbHV3wCVpT">Example transaction</a></li>
+            </ul>
         </TabItem>
     </Tabs>
 </details>

@@ -28,7 +28,7 @@ tags:
   - name: Price
     description: Endpoints related to Price
 paths:
-  /quote/v1:
+  /swap/v1/quote:
     get:
       tags:
         - Swap
@@ -54,7 +54,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/QuoteResponse'
-  /swap/v1:
+  /swap/v1/swap:
     post:
       tags:
         - Swap
@@ -73,7 +73,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SwapResponse'
-  /swap-instructions/v1:
+  /swap/v1/swap-instructions:
     post:
       tags:
         - Swap
@@ -92,7 +92,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SwapInstructionsResponse'
-  /program-id-to-label:
+  /swap/v1/program-id-to-label:
     get:
       tags:
         - Swap
