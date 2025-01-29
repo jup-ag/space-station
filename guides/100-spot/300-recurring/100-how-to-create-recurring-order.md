@@ -1,15 +1,15 @@
 ---
-sidebar_label: How to create a DCA order
-title: How to create a DCA order
-description: Guide to set up your first DCA with Jupiter
+sidebar_label: How to create a Recurring Order
+title: How to create a Recurring Order
+description: Guide to set up your first Recurring Order with Jupiter
 ---
 
 <head>
-    <title>Create DCA Orders</title>
+    <title>Create Recurring Orders</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-Setting up a Dollar-Cost Averaging (DCA) plan on Jupiter is quick, simple, and designed to help you build your portfolio without the anxiety of timing the market. Let’s dive into the steps to get started.
+Setting up a Recurring Order on Jupiter is quick, simple, and designed to help you build your portfolio without the anxiety of timing the market. Let’s dive into the steps to get started.
 
 ---
 
@@ -17,8 +17,8 @@ Setting up a Dollar-Cost Averaging (DCA) plan on Jupiter is quick, simple, and d
 
 Before anything else, you’ll need to connect your wallet to Jupiter.
 
-1. Visit the [**Jupiter DCA page**](https://jup.ag/dca/).
-2. Double-check that the URL is correct at https://jup.ag/dca and "DCA Tab is selected.
+1. Visit the [**Jupiter Recurring Order page**](https://jup.ag/dca/).
+2. Double-check that the URL is correct at https://jup.ag/dca and **"Recurring Tab"** is selected.
 3. Click on the **“Connect Wallet”** button at the top right or using one of the other "Connect Wallet" buttons on the dashboard: Select your preferred wallet from the list (e.g., Phantom, Solflare, or any other supported wallet).
 4. Approve the connection request in your wallet.
 
@@ -38,23 +38,23 @@ Choose tokens that align with your investment goals. If you’re unsure, start w
 
 ![Choose Tokens](../../../static/spot/dca/dca-100-2.png)
 
-## Step 3: Set Your DCA Plan
+## Step 3: Set Your Recurring Order
 
 This is where the magic happens!
 
-1. **Enter the amount** you want to allocate to the entire DCA plan (e.g., $100 worth of JupSOL).
+1. **Enter the amount** you want to allocate to the entire Recurring Order (e.g., $100 worth of JupSOL).
 2. Choose the **frequency** of your purchases: in minutes, hours, days, weeks or months.
-3. Enter the number of orders you want your DCA to be processed in.
+3. Enter the number of orders you want your Recurring Order to be processed in.
 
 :::tip **Pro Tip:** Price Strategy
 4. This is an optional setting, you can provide a minimum or maximum price range for your order.
 
-[Read this guide for more information!](./how-to-use-dca-price-range)
+[Read this guide for more information!](./how-to-use-recurring-order-price-range)
 :::
 
-![DCA Plan](../../../static/spot/dca/dca-100-3.png)
+![Recurring Order](../../../static/spot/dca/dca-100-3.png)
 
-## Step 4: Review and Start DCA
+## Step 4: Review and Start Recurring Order
 
 Before confirming, double-check the details:
 
@@ -62,13 +62,13 @@ Before confirming, double-check the details:
 - The frequency, total amount being used, amount per order.
 - The price range, if necessary.
 
-Have a look at the DCA Summary for a thorough overview. If everything looks good, click on **"Start DCA"** button.
+Have a look at the Recurring Order Summary for a thorough overview. If everything looks good, click on **"Start Recurring Order"** button.
 
-![DCA Summary](../../../static/spot/dca/dca-100-4.png)
+![Recurring Order Summary](../../../static/spot/dca/dca-100-4.png)
 
 ## Step 5: Approve the Transaction in Your Wallet
 
-Your wallet will prompt you to approve the transaction to set up the DCA plan.
+Your wallet will prompt you to approve the transaction to set up the Recurring Order.
 
 1. Check the transaction details in your wallet.
     - The allocation amount
@@ -79,18 +79,18 @@ Once approved, Jupiter will handle all future transactions for you automatically
 
 A notification toast will appear that will notify you once the transaction has been sent and has completed.
 
-![DCA Created](../../../static/spot/dca/dca-100-5.png)
+![Recurring Order Created](../../../static/spot/dca/dca-100-5.png)
 
-## Step 6: Track Your DCA Plan
+## Step 6: Track Your Recurring Order
 
-Congratulations! Your first DCA is now active.
+Congratulations! Your first Recurring Order is now active.
 
-1. Navigate to the Active DCAs section to monitor your active DCAs.
+1. Navigate to the Active Recurring Orders section to monitor your active Recurring Orders.
 2. See details like:
     - Tokens purchased.
     - Average purchase price.
     - Next scheduled transaction, and more.
     - To learn more about what each detail means, [read here](./interface).
-3. You can also [close/cancel your plan](./how-to-manage-dca) at any time.
+3. You can also [close/cancel your plan](./how-to-manage-recurring-order) at any time.
 
-![DCA Active](../../../static/spot/dca/dca-100-6.png)
+![Recurring Order Active](../../../static/spot/dca/dca-100-6.png)

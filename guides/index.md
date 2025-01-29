@@ -42,10 +42,10 @@ Check out [Spot guides](/guides/spot), or launch [Spot](https://jup.ag/).
 
 Ape Pro is tailored for advanced traders and provides enhanced analytics and charting tools, real-time insights for high-volume or frequent trading, and exclusive features to optimize trading strategies.
 
-Check out [Ape Pro guides](/guides/ape-pro), or launch [Ape Pro](https://ape.pro/).
+Check out [Ape Pro guides](/guides/apepro/quickstart), or launch [Ape Pro](https://ape.pro/).
 
 ### Perps
 
 Perpetual trading enables users to trade futures contracts with no expiration date. It offers leveraged trading for higher exposure to market movements, risk management tools to hedge against market volatility, and access to a variety of perpetual pairs on Solana.
 
-Check out [Perps guides](/guides/perps), or launch [Perps](https://jup.ag/perps).
+Check out [Perps guides](/guides/perps/quickstart), or launch [Perps](https://jup.ag/perps).

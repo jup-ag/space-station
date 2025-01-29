@@ -14,9 +14,9 @@ export const navbarConfigs = {
         label: 'Spot',
         position: 'left',
         items: [
-          { to: '/guides/spot/swap/quickstart', label: 'Swap', position: 'left' },
-          { to: '/guides/spot/limit/quickstart', label: 'Limit Order', position: 'left' },
-          { to: '/guides/spot/dca/quickstart', label: 'Dollar Cost Average (DCA)', position: 'left' },
+          { to: '/guides/spot/instant/quickstart', label: 'Instant', position: 'left' },
+          { to: '/guides/spot/trigger/quickstart', label: 'Trigger', position: 'left' },
+          { to: '/guides/spot/recurring/quickstart', label: 'Recurring', position: 'left' },
         ]
       },
       { to: '/guides/perps/quickstart', label: 'Perps', position: 'left' },

@@ -30,8 +30,9 @@ function generateLinks(directory, baseUrl) {
 
 // Directories to generate links for
 const directories = {
-  dca: { path: path.resolve(__dirname, '../guides/100-spot/300-dca'), baseUrl: '/guides/spot/dca' },
-  va: { path: path.resolve(__dirname, '../guides/100-spot/400-va'), baseUrl: '/guides/spot/va' },
+  instant: { path: path.resolve(__dirname, '../guides/100-spot/100-instant'), baseUrl: '/guides/spot/instant' },
+  trigger: { path: path.resolve(__dirname, '../guides/100-spot/200-trigger'), baseUrl: '/guides/spot/trigger' },
+  recurring: { path: path.resolve(__dirname, '../guides/100-spot/300-recurring'), baseUrl: '/guides/spot/recurring' },
 };
 
 const linkData = {};

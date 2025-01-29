@@ -69,23 +69,23 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/swap/quickstart',
-          label: 'Swap',
+          id: 'spot/instant/quickstart',
+          label: 'Instant',
         },
         {
           type: 'doc',
-          id: 'spot/limit/quickstart',
-          label: 'Limit Order'
+          id: 'spot/trigger/quickstart',
+          label: 'Trigger'
         },
         {
           type: 'doc',
-          id: 'spot/dca/quickstart',
-          label: 'Dollar Cost Average (DCA)',
+          id: 'spot/recurring/quickstart',
+          label: 'Recurring',
         },
       ],
     },
   ],
-  swap: [
+  instant: [
     {
       type: 'category',
       label: 'Getting Started',
@@ -94,11 +94,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/swap/quickstart',
+          id: 'spot/instant/quickstart',
         },
         {
           type: 'doc',
-          id: 'spot/swap/how-swap-works',
+          id: 'spot/instant/how-swap-works',
         },
       ],
     },
@@ -114,19 +114,19 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/swap/how-to-swap',
+          id: 'spot/instant/how-to-swap',
         },
         {
           type: 'doc',
-          id: 'spot/swap/how-to-swap-safely',
+          id: 'spot/instant/how-to-swap-safely',
         },
         {
           type: 'doc',
-          id: 'spot/swap/how-to-configure-swap-settings',
+          id: 'spot/instant/how-to-configure-swap-settings',
         },
         {
           type: 'doc',
-          id: 'spot/swap/how-to-get-your-token-on-jupiter',
+          id: 'spot/instant/how-to-get-your-token-on-jupiter',
         },
       ],
     },
@@ -136,21 +136,17 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'spot/swap/interface',
+      id: 'spot/instant/interface',
     },
     {
       type: 'doc',
-      id: 'spot/swap/security',
-    },
-    {
-      type: 'doc',
-      id: 'spot/swap/faq',
+      id: 'spot/instant/faq',
     },
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },],
-  limit: [
+  trigger: [
     {
       type: 'category',
       label: 'Getting Started',
@@ -159,11 +155,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/limit/quickstart',
+          id: 'spot/trigger/quickstart',
         },
         {
           type: 'doc',
-          id: 'spot/limit/how-limit-order-works',
+          id: 'spot/trigger/how-trigger-order-works',
         },
       ],
     },
@@ -179,11 +175,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/limit/how-to-create-limit-order',
+          id: 'spot/trigger/how-to-create-trigger-order',
         },
         {
           type: 'doc',
-          id: 'spot/limit/how-to-manage-limit-orders',
+          id: 'spot/trigger/how-to-manage-trigger-orders',
         },
       ],
     },
@@ -193,21 +189,17 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'spot/limit/interface',
+      id: 'spot/trigger/interface',
     },
     {
       type: 'doc',
-      id: 'spot/limit/security',
-    },
-    {
-      type: 'doc',
-      id: 'spot/limit/faq',
+      id: 'spot/trigger/faq',
     },
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },],
-  dca: [
+  recurring: [
     {
       type: 'category',
       label: 'Getting Started',
@@ -216,11 +208,11 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/dca/quickstart',
+          id: 'spot/recurring/quickstart',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-dca-works',
+          id: 'spot/recurring/how-recurring-order-works',
         },
       ],
     },
@@ -236,19 +228,19 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'spot/dca/how-to-create-dca',
+          id: 'spot/recurring/how-to-create-recurring-order',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-manage-dca',
+          id: 'spot/recurring/how-to-manage-recurring-order',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-use-dca-price-range',
+          id: 'spot/recurring/how-to-use-recurring-order-price-range',
         },
         {
           type: 'doc',
-          id: 'spot/dca/how-to-optimize-dca',
+          id: 'spot/recurring/how-to-optimize-recurring-order',
         },
       ],
     },
@@ -258,23 +250,11 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'spot/dca/interface',
+      id: 'spot/recurring/interface',
     },
     {
       type: 'doc',
-      id: 'spot/dca/security',
-    },
-    {
-      type: 'doc',
-      id: 'spot/dca/faq',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'doc',
-      id: 'spot/dca/sample',
+      id: 'spot/recurring/faq',
     },
     {
       type: 'html',
