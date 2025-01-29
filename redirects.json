@@ -1,0 +1,121 @@
+[
+    {"to":"/docs/old/additional-topics/audits","from":"/docs/additional-topics/audits"},
+    {"to":"/docs/old/additional-topics/builder-tips","from":"/docs/additional-topics/builder-tips"},
+    {"to":"/docs/old/additional-topics/composing-with-versioned-transaction","from":"/docs/additional-topics/composing-with-versioned-transaction"},
+    {"to":"/docs/old/additional-topics/displaying-jup-stats","from":"/docs/additional-topics/displaying-jup-stats"},
+    {"to":"/docs/old/additional-topics/links-and-contract-addresses","from":"/docs/additional-topics/links-and-contract-addresses"},
+    {"to":"/docs/old/additional-topics/wallet-list","from":"/docs/additional-topics/wallet-list"},
+    {"to":"/docs/old/apis/adding-fees","from":"/docs/apis/adding-fees"},
+    {"to":"/docs/old/apis/c-sharp-example","from":"/docs/apis/c-sharp-example"},
+    {"to":"/docs/old/apis/cpi","from":"/docs/apis/cpi"},
+    {"to":"/docs/old/apis/flash-fill","from":"/docs/apis/flash-fill"},
+    {"to":"/docs/old/apis/landing-transactions","from":"/docs/apis/landing-transactions"},
+    {"to":"/docs/old/apis/payments-api","from":"/docs/apis/payments-api"},
+    {"to":"/docs/old/apis/price-api","from":"/docs/apis/price-api"},
+    {"to":"/docs/old/apis/price-api-v2","from":"/docs/apis/price-api-v2"},
+    {"to":"/docs/old/apis/self-hosted","from":"/docs/apis/self-hosted"},
+    {"to":"/docs/old/apis/swap-api","from":"/docs/apis/swap-api"},
+    {"to":"/docs/old/apis/troubleshooting","from":"/docs/apis/troubleshooting"},
+    {"to":"/docs/old/dca/dca-sdk","from":"/docs/dca/dca-sdk"},
+    {"to":"/docs/old/dca/integration","from":"/docs/dca/integration"},
+    {"to":"/docs/old/dca/lock-dca-campaign","from":"/docs/dca/lock-dca-campaign"},
+    {"to":"/docs/old/jupiter-terminal/jupiter-terminal","from":"/docs/jupiter-terminal/jupiter-terminal"},
+    {"to":"/docs/old/jupiter-terminal/terminal-integration-guide","from":"/docs/jupiter-terminal/terminal-integration-guide"},
+    {"to":"/docs/old/jupiter-terminal/unified-wallet-kit","from":"/docs/jupiter-terminal/unified-wallet-kit"},
+    {"to":"/docs/old/legacy/apis/adding-fees","from":"/docs/legacy/apis/adding-fees"},
+    {"to":"/docs/old/legacy/apis/payments-api","from":"/docs/legacy/apis/payments-api"},
+    {"to":"/docs/old/legacy/apis/swap-api","from":"/docs/legacy/apis/swap-api"},
+    {"to":"/docs/old/legal/privacy-policy","from":"/docs/legal/privacy-policy"},
+    {"to":"/docs/old/legal/sdk-api-license-agreement","from":"/docs/legal/sdk-api-license-agreement"},
+    {"to":"/docs/old/legal/terms-of-use","from":"/docs/legal/terms-of-use"},
+    {"to":"/docs/old/limit-order/limit-order","from":"/docs/limit-order/limit-order"},
+    {"to":"/docs/old/limit-order/limit-order-api","from":"/docs/limit-order/limit-order-api"},
+    {"to":"/docs/old/projects-and-dexes/integration-guidelines","from":"/docs/projects-and-dexes/integration-guidelines"},
+    {"to":"/docs/old/projects-and-dexes/rust-integration","from":"/docs/projects-and-dexes/rust-integration"},
+    {"to":"/docs/old/token-api-standard","from":"/docs/token-api-standard"},
+    {"to":"/docs/old/token-list/token-list-api","from":"/docs/token-list/token-list-api"},
+    {
+        "to": "/guides/swap/how-swap-works",
+        "from": "/guides/jupiter-swap/how-swap-works/metropolis-features"
+    },
+    {
+        "to": "/guides/swap/how-swap-works",
+        "from": "/guides/jupiter-swap/how-swap-works/how-swap-works"
+    },
+    {
+        "to": "/guides/swap/how-swap-works",
+        "from": "/guides/jupiter-swap/how-swap-works/metis-routing"
+    },
+    {
+        "to": "/guides/swap/how-swap-works",
+        "from": "/guides/jupiter-swap/swap"
+    },
+    {
+        "to": "/guides/swap/tutorials/earn-referral-fees",
+        "from": "/guides/jupiter-swap/how-referral-works"
+    },
+    {
+        "to": "/guides/swap/how-swap-works",
+        "from": "/guides/jupiter-swap/how-swap-works/metropolis"
+    },
+    {
+        "to": "/guides/perpetual-exchange/overview",
+        "from": "/labs/perpetual-exchange/overview"
+    },
+    {
+        "to": "/guides/perpetual-exchange/how-it-works",
+        "from": "/guides/perpetual-exchange/trading"
+    },
+    {
+        "to": "/guides/perpetual-exchange/overview",
+        "from": "/labs"
+    },
+    {
+        "to": "/guides/perpetual-exchange/how-it-works",
+        "from": "/labs/perpetual-exchange/trading"
+    },
+    {
+        "to": "/guides/jlp/JLP",
+        "from": "/labs/perpetual-exchange/jlp-pool"
+    },
+    {
+        "to": "/guides/jlp/How-JLP-Works",
+        "from": "/labs/perpetual-exchange/how-it-works"
+    },
+    {
+        "to": "/guides/jlp/How-JLP-Works",
+        "from": "/labs/faq/faq"
+    },
+    {
+        "to": "/guides/general/get-your-token-on-jupiter",
+        "from": "/docs/get-your-token-onto-jup"
+    },
+    {
+        "to": "/guides/general/get-your-token-on-jupiter",
+        "from": "/guides/general/new-token-guide"
+    },
+    {
+        "to": "/guides/jlp/How-JLP-Works",
+        "from": "/labs/perps-faq"
+    },
+    {
+        "to": "/blog-redirect",
+        "from": "/blog"
+    },
+    {
+        "to": "/guides/onboard",
+        "from": "/guides/bridge-comparator"
+    },
+    {
+        "to": "/guides/onboard",
+        "from": "/guides/bridge/comparator"
+    },
+    {
+        "to": "/guides/onboard/bridge",
+        "from": "/guides/bridge/bridging"
+    },
+    {
+        "to": "/guides/onboard/onramp",
+        "from": "/guides/bridge/onramp"
+    }
+]

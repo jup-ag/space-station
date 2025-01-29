@@ -60,7 +60,7 @@ So in this scenario, if the **SOL price is within $19-$20**, the DCA will execut
 
 ## Expanded Tradable Token Selection
 
-Additionally, we've significantly broadened our range of supported tokens, expanding from the **top 20 traded tokens on Jupiter's list to encompass over 600 tokens**. This expansion is backed by the community-verified [Jupiter Strict Token List](/docs/token-list/token-list-api).
+Additionally, we've significantly broadened our range of supported tokens, expanding from the **top 20 traded tokens on Jupiter's list to encompass over 600 tokens**. This expansion is backed by the community-verified [Jupiter Strict Token List](/docs/old//token-list/token-list-api).
 
 ![DCAcomment4](DCAcomment4.jpg)
 

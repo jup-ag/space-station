@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const redirects = require('./redirects.json');
+const { UnfoldHorizontal } = require("lucide-react");
 require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -81,20 +83,39 @@ const config = {
       /** @type {import('docusaurus-preset-openapi').Options} */
       ({
         api: {
-          path: "openapi/quoteV6.yaml",
-          routeBasePath: "api-v6",
+          path: "openapi/api.yaml",
+          routeBasePath: "docs/api",
+          sidebarCollapsible: false,
+          sidebarCollapsed: false,
         },
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          id: 'docs',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Latest',
+              path: '',
+              badge: false,
+            },
+            old: {
+              label: 'Old',
+              path: 'old',
+              banner: 'unmaintained',
+            }
+          },
+          sidebarPath: require.resolve("./sidebars-docs.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          sidebarCollapsed: true,
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
           // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/navbar.css"),
+            require.resolve("./src/css/sidebar.css"),
+          ],
         },
         proxy: {
           "/proxy": {
@@ -120,98 +141,7 @@ const config = {
     ],
     [
       "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis-features",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/how-swap-works",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metis-routing",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/swap",
-          },
-          {
-            to: "/guides/swap/tutorials/earn-referral-fees",
-            from: "/guides/jupiter-swap/how-referral-works",
-          },
-          {
-            to: "/guides/swap/how-swap-works",
-            from: "/guides/jupiter-swap/how-swap-works/metropolis",
-          },
-          {
-            to: "/guides/perpetual-exchange/overview",
-            from: "/labs/perpetual-exchange/overview",
-          },
-          {
-            to: "/guides/perpetual-exchange/how-it-works",
-            from: "/guides/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/perpetual-exchange/overview",
-            from: "/labs",
-          },
-          {
-            to: "/guides/perpetual-exchange/how-it-works",
-            from: "/labs/perpetual-exchange/trading",
-          },
-          {
-            to: "/guides/jlp/JLP",
-            from: "/labs/perpetual-exchange/jlp-pool",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/perpetual-exchange/how-it-works",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/faq/faq",
-          },
-          {
-            to: "/guides/general/get-your-token-on-jupiter",
-            from: "/docs/get-your-token-onto-jup",
-          },
-          {
-            to: "/docs/limit-order",
-            from: "/docs/limit-order/limit-order-with-sdk",
-          },
-          {
-            to: "/guides/general/get-your-token-on-jupiter",
-            from: "/guides/general/new-token-guide",
-          },
-          {
-            to: "/guides/jlp/How-JLP-Works",
-            from: "/labs/perps-faq",
-          },
-          {
-            to: "/blog-redirect",
-            from: "/blog",
-          },
-          {
-            to: "/guides/onboard",
-            from: "/guides/bridge-comparator",
-          },
-          {
-            to: "/guides/onboard",
-            from: "/guides/bridge/comparator",
-          },
-          {
-            to: "/guides/onboard/bridge",
-            from: "/guides/bridge/bridging",
-          },
-          {
-            to: "/guides/onboard/onramp",
-            from: "/guides/bridge/onramp",
-          },
-        ],
-      },
+      { redirects }
     ],
     async function myPlugin() {
       return {
@@ -246,53 +176,19 @@ const config = {
       colorMode: {
         defaultMode: "light",
         disableSwitch: true,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
-        title: "Jupiter Station",
+        title: "",
         logo: {
           alt: "Jupiter Logo",
           src: "img/jupiter-logo.svg",
-          width: 33,
-          height: 33,
+          width: 28,
+          height: 28,
         },
         items: [
-          {
-            to: "/guides",
-            label: "Guides",
-            position: "left",
-          },
-          {
-            to: "/docs",
-            position: "left",
-            label: "Docs",
-          },
-          {
-            to: "/api-v6",
-            position: "left",
-            label: "API Playground",
-          },
-          {
-            to: "https://dune.com/ilemi/jupiter-aggregator-solana",
-            label: "Stats",
-            position: "left",
-          },
-          {
-            type: "search",
-            position: "right",
-            className: "search",
-          },
-          {
-            type: "html",
-            position: "right",
-            value: `
-            <a href="https://jup.ag/" target="_blank" class="launch-app">
-              <span>
-                Launch App
-              </span>
-            </a>
-            `,
-          },
+          { to: 'guides', label: 'Guides', position: 'left' },
+          { to: 'docs/index', label: 'Docs', position: 'left' },
         ],
       },
       algolia: {

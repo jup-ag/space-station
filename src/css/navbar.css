@@ -1,0 +1,98 @@
+.navbar__logo {
+    flex: 0 0 auto;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.navbar__title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar__title:hover {
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar__brand:hover {
+    color: black;
+}
+
+.navbar__item.navbar__link {
+    margin-right: 16px;
+}
+
+.navbar__item.navbar__link.navbar__link--active {
+    margin-right: 16px;
+    font-weight: 900;
+    color: black !important;
+}
+
+/* Hide the title on mobile */
+@media (max-width: 768px) {
+    .mobile-hidden {
+      display: none;
+    }
+  
+    .navbar__brand {
+      display: flex;
+      align-items: center;
+    }
+  
+    .navbar__toggle {
+      margin-left: auto;
+    }
+}
+  
+@media (min-width: 996px) {
+    .navbar {
+        height: auto;
+        @apply flex justify-center;
+    }
+
+    .navbar__inner {
+        @apply max-w-7xl;
+    }
+
+    .navbar__brand {
+        margin-right: 32px;
+    }
+    .navbar__title {
+        display: block;
+    }
+    
+
+    /* These styles are what was breaking dark mode */
+    @media  (prefers-color-scheme: light) {
+        .navbar__item.navbar__link {
+            @apply text-sm font-semibold text-[#304256]/40 hover:text-[#304256] hover:no-underline;
+            }
+
+        .navbar__item.navbar__link.navbar__link--active {
+            @apply text-[#304256];
+            }
+
+        .navbar__title {
+            color: #19232d;
+        }
+    }
+
+    .navbar__item.navbar__link {
+        margin-right: 16px;
+    }
+
+    .navbar__item.navbar__link.mega_menu {
+        margin-right: 0px;
+    }
+
+    .navbar__items--right .navbar__item {
+        padding: 0;
+    }
+}
+
+.navbar__items--right .navbar__item {
+    display: block;
+    padding: 0;
+}

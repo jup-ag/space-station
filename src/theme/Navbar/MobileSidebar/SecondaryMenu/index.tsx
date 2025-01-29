@@ -1,29 +1,46 @@
-import React, {type ComponentProps} from 'react';
-import {useThemeConfig} from '@docusaurus/theme-common';
-import {useNavbarSecondaryMenu} from '@docusaurus/theme-common/internal';
+import React from 'react';
+import { useNavbarSecondaryMenu } from '@docusaurus/theme-common/internal';
+import { useLocation } from '@docusaurus/router';
 import Translate from '@docusaurus/Translate';
+import { navbarConfigs } from '../../../../constant';
 
-function SecondaryMenuBackButton(props: ComponentProps<'button'>) {
+function hasPrimaryMenuItems(locationPath: string) {
+  const items = Object.keys(navbarConfigs).reduce((acc, path) => {
+    if (path === '/' && locationPath === '/') {
+      return navbarConfigs[path];
+    } else if (locationPath.startsWith(path) && path !== '/') {
+      return navbarConfigs[path];
+    }
+    return acc;
+  }, []);
+  return items.length > 0;
+}
+
+function SecondaryMenuBackButton({ onClick }: { onClick: () => void }) {
   return (
-    <button {...props} type="button" className="clean-btn navbar-sidebar__back">
+    <button
+      type="button"
+      className="clean-btn navbar-sidebar__back"
+      onClick={onClick}
+    >
       <Translate
         id="theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel"
-        description="The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)">
+        description="The label of the back button to return to main menu"
+      >
         ← Back to main menu
       </Translate>
     </button>
   );
 }
 
-// The secondary menu slides from the right and shows contextual information
-// such as the docs sidebar
 export default function NavbarMobileSidebarSecondaryMenu(): JSX.Element | null {
-  const isPrimaryMenuEmpty = useThemeConfig().navbar.items.length === 0;
+  const location = useLocation();
   const secondaryMenu = useNavbarSecondaryMenu();
+  const primaryMenuExists = hasPrimaryMenuItems(location.pathname);
+
   return (
     <>
-      {/* edge-case: prevent returning to the primaryMenu when it's empty */}
-      {!isPrimaryMenuEmpty && (
+      {primaryMenuExists && (
         <SecondaryMenuBackButton onClick={() => secondaryMenu.hide()} />
       )}
       {secondaryMenu.content}

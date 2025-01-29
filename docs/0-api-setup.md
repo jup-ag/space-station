@@ -35,6 +35,10 @@ To enter the portal, simply connect via email account. This allows us to keep tr
 
 To decide on a suitable plan by gauging requests required by your project size and user needs.
 
+:::note Free Plan
+Do note that you **do not** need an API Key to use the free plan. Simply just call the endpoints without the API Key.
+:::
+
 :::note Change of plans
 You can always change your plans later.
 
@@ -51,6 +55,10 @@ Before you set up your keys, you will need to make the payment upfront via Helio
 2. Enter the required details.
 3. Connect wallet to pay via Solana blockchain.
 4. Click the **Subscribe** button to proceed.
+
+:::info
+If you have any issues with the payment, [please reach out here](https://t.me/Yankee0x).
+:::
 
 :::note other payment methods
 New payment methods is a work in progress.
