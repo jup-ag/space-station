@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, description, li
             padding: '20px',
             display: 'flex',
             margin: '10px',
-            boxShadow: isHovered ? '0 0 10px darkseagreen' : '0 2px 5px rgba(0, 0, 0, 0.1)',
+            boxShadow: isHovered ? '0 0 10px rgb(0, 180, 90)' : '0 2px 5px rgba(0, 0, 0, 0.1)',
             textAlign: 'left',
             height: 'auto',
             minHeight: '120px',
