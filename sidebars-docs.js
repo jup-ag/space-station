@@ -12,6 +12,10 @@ const sidebars = {
       id: 'api-setup',
     },
     {
+      type: 'doc',
+      id: 'dex-integration',
+    },
+    {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
@@ -91,6 +95,10 @@ const sidebars = {
           type: 'doc',
           id: 'tool-kits/swap-terminal',
           label: 'Integrate Swap Terminal',
+        },
+        {
+          type: 'doc',
+          id: 'dex-integration',
         },
       ],
     },
