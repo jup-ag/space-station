@@ -41,8 +41,8 @@ Now it’s decision time! Use the **Long/Short Selector** to choose your positio
 
 After deciding your position, it’s time to set your collateral. In the **Input Token Selector**, choose the token you want to use as collateral for your trade and specify the amount you wish to use.
 
-:::tip Any Solana Token
-You can use any Solana token as collateral for your trade.
+:::tip Top Verified Solana Tokens
+You can use any Solana token that is verified and top 100 in terms of volume as collateral for your trade.
 
 For example, you are opening a long position on SOL, you can use JUP as collateral for your trade.
 
@@ -64,6 +64,10 @@ With your collateral in place, use the **Leverage Slider** to set your desired l
 ### Step 6: Review Position
 
 Before opening your position, you can make use of details such as the borrow rate, available liquidity above the order form, or confirm your entry price, liquidation price and fees information. This will help you make an informed trading decision.
+
+:::caution Liquidation Price on Order Form
+The Liquidation Price shown on the form is the simulated liquidation price based on the position requested. If you have an existing position, the liquidation price on the form will be the new liquidation price of your position after the new position is opened and combined with your existing position.
+:::
 
 ![Review Position](../../static/perps/trade-review-position.png)
 

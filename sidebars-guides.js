@@ -100,6 +100,10 @@ const sidebars = {
           type: 'doc',
           id: 'spot/instant/how-swap-works',
         },
+        {
+          type: 'doc',
+          id: 'spot/instant/faq',
+        },
       ],
     },
     {
@@ -134,18 +138,7 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
-    {
-      type: 'doc',
-      id: 'spot/instant/interface',
-    },
-    {
-      type: 'doc',
-      id: 'spot/instant/faq',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },],
+  ],
   trigger: [
     {
       type: 'category',
@@ -160,6 +153,10 @@ const sidebars = {
         {
           type: 'doc',
           id: 'spot/trigger/how-trigger-order-works',
+        },
+        {
+          type: 'doc',
+          id: 'spot/trigger/faq',
         },
       ],
     },
@@ -187,18 +184,7 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
-    {
-      type: 'doc',
-      id: 'spot/trigger/interface',
-    },
-    {
-      type: 'doc',
-      id: 'spot/trigger/faq',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },],
+  ],
   recurring: [
     {
       type: 'category',
@@ -213,6 +199,10 @@ const sidebars = {
         {
           type: 'doc',
           id: 'spot/recurring/how-recurring-order-works',
+        },
+        {
+          type: 'doc',
+          id: 'spot/recurring/faq',
         },
       ],
     },
@@ -243,18 +233,6 @@ const sidebars = {
           id: 'spot/recurring/how-to-optimize-recurring-order',
         },
       ],
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'doc',
-      id: 'spot/recurring/interface',
-    },
-    {
-      type: 'doc',
-      id: 'spot/recurring/faq',
     },
     {
       type: 'html',
@@ -333,6 +311,10 @@ const sidebars = {
             {
               type: 'doc',
               id: 'perps/how-to-close-position',
+            },
+            {
+              type: 'doc',
+              id: 'perps/how-to-use-limit-order',
             },
           ],
         },

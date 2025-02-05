@@ -36,6 +36,27 @@ Refering to the simple flowchart below, the sequence of events are as follows:
 
 ![Overview](../../../static/spot/swap/Overview.png)
 
+
+## Best Experience
+
+Financial tools on blockchains can become complicated, actions such as handling slippage, preventing MEV, adjusting priority fees can become cumbersome to seasoned veterans and remain daunting for beginners. Solana trading environment is like nothing we have seen before, demanding a different level of execution. The Jupiter Swap interface is simple yet powerful, allowing you to swap with confidence, using token, price information and settings to ensure your swap works.
+
+### Ultra Mode
+
+Ultra Mode ⚡ is the best DeFi experience.
+- It takes care of the entire execution flow and settings.
+- 0 transaction fees (we pay all on your behalf even failed transactions).
+- 0.1% swap fee applies (to help us help you land transactions effectively).
+- Real Time Slippage Estimator (RTSE) uses real time historical data to estimate the slippage of your trade.
+- Optimised transaction landing to ensure your transaction is paying sufficient priority fees without overpaying.
+
+### Manual Mode
+
+Switch to Manual Mode ⚙️, if you're a seasoned user and prefers to customise your settings with precision.
+- You control your own exact slippage threshold and priority fees.
+- You pay your own transaction fees but no additional swap fee applies.
+- You get to utilise the full suite of swap settings (offered no where else) which includes AMM exclusions, custom transaction broadcast methods, etc.
+
 ## Best Token Selection
 
 Since late 2023 and onwards, we see a gigantic surge in the number of tokens being minted and actively traded on Solana. Through this period, Jupiter has rebuilt and strengthen its infrastructure to scale with the big growing demand of trading new tokens.
@@ -67,6 +88,26 @@ With the Ecosystem List, there are still tens of thousands of tokens out in the 
     - Tokens with name or symbol including a potential token address of another token.
     - Tokens with freeze authority, transfer tax, permanent delegate, etc.
 
+### Organic Index
+
+Metrics like holders, volume and TVL can be easily gameable, we've built an organic index by using real time transactions from real user wallets to determine the organic score of tokens.
+
+
+You can also [watch the workshop on YouTube](https://youtu.be/ieVMQPIVLe0?feature=shared)!
+
+<div className="responsive-video">
+    <iframe 
+        width="100%" 
+        height="400" 
+        src="https://www.youtube.com/embed/ieVMQPIVLe0?si=TntBNlVMySOws0n6" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+        allowfullscreen
+        style={{ display: 'block', margin: 'auto' }}>
+    </iframe>
+</div>
+
 ## Best Price
 
 By default, Jupiter ensures you are getting the best price by comparing the Routing Engine results to the RFQ results. The following explains further of how each mechanism works to provide you with the best price.
@@ -83,12 +124,12 @@ Over time, Jupiter went through a few iterations of its routing engine and have 
 
 ![Metis Routing Engine](../../../static/spot/swap/Metis.png)
 
-You can also [watch the workshop on YouTube](https://youtu.be/m29UNEFYWUE?si=wTWi-pfg9EwE4Wuz)!
+You can also [watch it on YouTube](https://youtu.be/m29UNEFYWUE?si=wTWi-pfg9EwE4Wuz)!
 
 <div className="responsive-video">
     <iframe 
         width="100%" 
-        height="600" 
+        height="400" 
         src="https://www.youtube.com/embed/m29UNEFYWUE?si=_Rlc-vRuPwKtL97r" 
         title="YouTube video player" 
         frameborder="0" 
@@ -98,9 +139,9 @@ You can also [watch the workshop on YouTube](https://youtu.be/m29UNEFYWUE?si=wTW
     </iframe>
 </div>
 
-### RFQ
+### JupiterZ
 
-RFQ, also known as Request For Quote, is a pricing mechanism where users request a quote for a specific trade from a permissioned set of off-chain market makers, who then fulfil your swap request on-chain if you choose to accept.
+JupiterZ, also known as Request For Quote (RFQ), is a pricing mechanism where users request a quote for a specific trade from a permissioned set of off-chain market makers, who then fulfil your swap request on-chain if you choose to accept.
 
 On-chain AMMs and DEXes continue to be complicated and volatile, Jupiter aggregates them to achieve the best price derived on-chain, however, with off-chain market makers, we can greatly improve user experience.
 
@@ -111,32 +152,3 @@ On-chain AMMs and DEXes continue to be complicated and volatile, Jupiter aggrega
 
 2. Market makers execute the swap for you.
     - **0 transaction fees**
-
-## Best Experience
-
-Financial tools on blockchains can become complicated, actions such as handling slippage, preventing MEV, adjusting priority fees can become cumbersome to seasoned veterans and remain daunting for beginners.
-
-### Simple Yet Powerful Interface
-
-Solana trading environment is like nothing we have seen before, demanding a different level of execution. The Swap interface is simple yet powerful, allowing you to swap with confidence, using token, price information and settings to ensure your swap works.
-
-#### Ultra Mode
-(revisit)
-
-Ultra Mode takes care of the entire execution flow and settings pay the fees when txn fails, we align incentives fully with users.
-- 0 transaction fees (we pay all on your behalf even failed transactions).
-- 0.1% swap fee applies (to help us help you land transactions effectively).
-
-#### Manual Mode
-
-If you're a seasoned user and prefers to customize your settings with precision, switch to Manual Mode.
-- You control your own exact slippage threshold, broadcast method, priority fees, etc.
-- You pay your own transaction fees but no additional swap fee applies.
-
-#### Other Information
-
-The Swap interface also displays other crucial information such as chart, token details and price warnings, to help you make an informed swap decision.
-
-### Building Your Feedback
-
-We build upon your feedback and experiences to continue to improve our products. Share them on [Discord](https://discord.gg/jup) and we look forward to work along side you!

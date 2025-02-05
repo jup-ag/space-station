@@ -77,6 +77,6 @@ Your swap is by default in **Auto Mode** where, Jupiter handles it for you by op
 
 *[Screenshot: Settings menu with slippage and transaction speed options highlighted]*
 
-## Troubleshooting? We’ve Got Your Back!
+## Troubleshooting
 
-[Refer to this guide on the common troubleshooting tips](./).
+We've got your back! Reach out to us on [Discord](https://discord.gg/jup).

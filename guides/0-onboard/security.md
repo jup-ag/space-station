@@ -17,7 +17,7 @@ Anyone can contribute a guide to Jupiter Station! Simply send us a PR.
 
 Personal security on Solana can be understood in two parts - **private key security** and **transaction security**.
 
-## 1 - Private Key Security
+## Private Key Security
 
 Private key security is about ensuring that your private keys stay private and only known to you.
 :::info
@@ -70,7 +70,7 @@ Closely related to the private key is the concept of a seed phrase/passphrase. T
 - Avoid installing any fake/pirated software as these often contain malware.
 - Install all wallet software from official sites only, double-check they are the correct URL before downloading as there are many fake wallet sites.
 
-## 2 - Transaction Security
+## Transaction Security
 
 The second aspect of personal on-chain security is transaction security. This is different from private key security in that attackers do not need to get hold of your private key in order to steal your funds from you. All they need to do is to trick you to sign a transaction that does a malicious transfer of assets.
 

@@ -48,14 +48,14 @@ export const PRODUCT_CARDS = [
   {
     title: "Spot - Trigger",
     links: [
-      { text: "Guide", href: "/guides/spot/limit/quickstart" },
+      { text: "Guide", href: "/guides/spot/trigger/quickstart" },
       { text: "Launch", href: "https://jup.ag/limit" }
     ]
   },
   {
     title: "Spot - Recurring",
     links: [
-      { text: "Guide", href: "/guides/spot/dca/quickstart" },
+      { text: "Guide", href: "/guides/spot/recurring/quickstart" },
       { text: "Launch", href: "https://jup.ag/dca" }
     ]
   },

@@ -49,3 +49,9 @@ Check out [Ape Pro guides](/guides/apepro/quickstart), or launch [Ape Pro](https
 Perpetual trading enables users to trade futures contracts with no expiration date. It offers leveraged trading for higher exposure to market movements, risk management tools to hedge against market volatility, and access to a variety of perpetual pairs on Solana.
 
 Check out [Perps guides](/guides/perps/quickstart), or launch [Perps](https://jup.ag/perps).
+
+## Developers
+
+For developers, we have a dedicated section to get you started with the Jupiter APIs and tool kits to build world class applications.
+
+Check out the [Developer Documentation](/docs) to get started.
