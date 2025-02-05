@@ -241,7 +241,7 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/Mint"
-  /price/v2/ids:
+  /price/v2:
     get:
       tags:
       - Price
@@ -265,7 +265,7 @@ paths:
           - string
       - name: showExtraInfo
         in: query
-        description: "- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter"
+        description: "To use, pass in `=true`\n- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter"
         required: false
         schema:
           type:
