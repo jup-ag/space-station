@@ -42,7 +42,12 @@
     {"to":"/guides/old/va/explainer","from":"/guides/va/explainer"},
     {"to":"/guides/old/va/how-to-va","from":"/guides/va/how-to-va"},
     {"to":"/guides/old/va/how-va-work","from":"/guides/va/how-va-work"},
-
+    
+    {"to":"/docs/api/","from":"/api-v6/get-quote"},
+    {"to":"/docs/api/","from":"/api-v6/post-swap"},
+    {"to":"/docs/api/","from":"/api-v6/post-swap-instructions"},
+    {"to":"/docs/api/","from":"/api-v6/get-program-id-to-label"},
+    {"to":"/docs/api/","from":"/api-v6/tokens"},
     {"to":"/docs","from":"/docs/old/"},
     {"to":"/docs","from":"/docs/old/additional-topics/audits"},
     {"to":"/docs","from":"/docs/old/additional-topics/builder-tips"},
