@@ -33,7 +33,19 @@
 .theme-doc-sidebar-menu .menu__list-item-collapsible .menu__link {
   color: black !important;
   font-weight: 700 !important;
+  background: none !important;
+}
 
+.theme-doc-sidebar-menu .menu__list-item-collapsible:hover {
+  color: black !important;
+  font-weight: 700 !important;
+  background: none !important;
+}
+
+.theme-doc-sidebar-menu .menu__link:hover {
+  background: none !important;
+  color: rgb(0, 180, 90);
+  font-weight: 700 !important;
 }
 
 .sidebar-line-break {
@@ -43,4 +55,13 @@
 
 :root {
   --doc-sidebar-width: 280px !important
+}
+
+.sidebar-reach-out-link {
+  color: var(--ifm-menu-color);
+  margin-left: 0.75rem;
+}
+
+.sidebar-subcategory > .menu__list-item-collapsible > .menu__link {
+  font-weight: 400 !important;
 }

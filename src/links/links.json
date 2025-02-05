@@ -1,0 +1,104 @@
+{
+  "instant": [
+    {
+      "text": "Quickstart",
+      "link": "/guides/spot/instant/0-quickstart"
+    },
+    {
+      "text": "How swap works",
+      "link": "/guides/spot/instant/1-how-swap-works"
+    },
+    {
+      "text": "Interface",
+      "link": "/guides/spot/instant/2-interface"
+    },
+    {
+      "text": "Security",
+      "link": "/guides/spot/instant/3-security"
+    },
+    {
+      "text": "Faq",
+      "link": "/guides/spot/instant/4-faq"
+    },
+    {
+      "text": "How to swap",
+      "link": "/guides/spot/instant/100-how-to-swap"
+    },
+    {
+      "text": "How to swap safely",
+      "link": "/guides/spot/instant/102-how-to-swap-safely"
+    },
+    {
+      "text": "How to configure swap settings",
+      "link": "/guides/spot/instant/103-how-to-configure-swap-settings"
+    },
+    {
+      "text": "How to get your token on jupiter",
+      "link": "/guides/spot/instant/104-how-to-get-your-token-on-jupiter"
+    }
+  ],
+  "trigger": [
+    {
+      "text": "Quickstart",
+      "link": "/guides/spot/trigger/0-quickstart"
+    },
+    {
+      "text": "How trigger order works",
+      "link": "/guides/spot/trigger/1-how-trigger-order-works"
+    },
+    {
+      "text": "Interface",
+      "link": "/guides/spot/trigger/2-interface"
+    },
+    {
+      "text": "Faq",
+      "link": "/guides/spot/trigger/4-faq"
+    },
+    {
+      "text": "How to create trigger order",
+      "link": "/guides/spot/trigger/100-how-to-create-trigger-order"
+    },
+    {
+      "text": "How to manage trigger orders",
+      "link": "/guides/spot/trigger/101-how-to-manage-trigger-orders"
+    }
+  ],
+  "recurring": [
+    {
+      "text": "Quickstart",
+      "link": "/guides/spot/recurring/0-quickstart"
+    },
+    {
+      "text": "How recurring order works",
+      "link": "/guides/spot/recurring/1-how-recurring-order-works"
+    },
+    {
+      "text": "Interface",
+      "link": "/guides/spot/recurring/2-interface"
+    },
+    {
+      "text": "Security",
+      "link": "/guides/spot/recurring/3-security"
+    },
+    {
+      "text": "Faq",
+      "link": "/guides/spot/recurring/5-faq"
+    },
+    {
+      "text": "How to create recurring order",
+      "link": "/guides/spot/recurring/100-how-to-create-recurring-order"
+    },
+    {
+      "text": "How to manage recurring order",
+      "link": "/guides/spot/recurring/101-how-to-manage-recurring-order"
+    },
+    {
+      "text": "How to use recurring order price range",
+      "link": "/guides/spot/recurring/102-how-to-use-recurring-order-price-range"
+    },
+    {
+      "text": "How to optimize recurring order",
+      "link": "/guides/spot/recurring/103-how-to-optimize-recurring-order"
+    }
+  ]
+}

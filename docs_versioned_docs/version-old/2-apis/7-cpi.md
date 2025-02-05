@@ -13,12 +13,6 @@ title: Jupiter Swap via CPI
 
 To integrate your program with Jupiter Swap you can take two approaches. One is [Flash Filling](/docs/old/APIs/flash-fill) or you can utilize Cross Program Invocation (CPI). 
 
-:::note CPI is recommended
-As of January 2025, Jupiter Swap via CPI is recommended for most users.
-
-The `Loosen CPI restriction` feature has been deployed on Solana, you can find more information [here](https://github.com/solana-labs/solana/issues/26641).
-:::
-
 :::danger CPI Limitations
 As of August 2023, taking the CPI approach has some tradeoffs. Due to Solana's transaction limit of 1232 bytes, swaps via CPI will likely fail at runtime since Jupiter routes may involve multiple DEXes in order to reduce price impact. You could set a limit to the number of accounts used for swaps via Jupiter's swap API to fit it within your needs. However, limiting the accounts will likely incur greater price impact.
 
@@ -26,7 +20,7 @@ _Note: when using Jupiter's API, you can set [maxAccounts](/docs/old/APIs/swap-a
 :::
 
 :::info Use Flash-Fill
-An alternative method is to use the [flash-fill](/docs/old/APIs/flash-fill) approach. The flash-fill approach takes advantage of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables) to allow for more accounts per transaction while keeping within the 1232 bytes limit.
+Instead, we recommend taking the [flash-fill](/docs/old/APIs/flash-fill) approach. The flash-fill approach takes advantage of [Versioned Transaction](https://docs.solana.com/developing/versioned-transactions) in combination with [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables) to allow for more accounts per transaction while keeping within the 1232 bytes limit.
 :::
 
 ## Example
@@ -65,7 +59,7 @@ use jupiter_cpi;
 let signer_seeds: &[&[&[u8]]] = &[...];
 
 // pass accounts to context one-by-one and construct accounts here.
-// Or in practice, it may be easier to use `remaining_accounts` https://book.anchor-lang.com/anchor_in_depth/the_program_module.html
+// Or in practise, it may be easier to use `remaining_accounts` https://book.anchor-lang.com/anchor_in_depth/the_program_module.html
 let accounts = jupiter_cpi::cpi::accounts::SharedAccountsRoute {
     token_program: ,
     program_authority: ,
