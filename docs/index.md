@@ -59,4 +59,4 @@ Please reach out to us
 
 - If you need have increasing demand and growth in your app.
 - If you have questions or need support.
-- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subsribe to updates.
+- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subscribe to updates.
