@@ -241,7 +241,7 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/Mint"
-  /price/v2/ids:
+  /price/v2:
     get:
       tags:
       - Price
