@@ -413,18 +413,18 @@ components:
           description: The user public key
           type: string
         wrapAndUnwrapSol:
-          description: "Default: true\n- To automatically wrap/unwrap SOL in the transaction\nIf false, it will use wSOL token account\n- Parameter be ignored if `destinationTokenAccount` is set because the `destinationTokenAccount` may belong to a different user that we have no authority to close."
+          description: "Default: true\n- To automatically wrap/unwrap SOL in the transaction\nIf false, it will use wSOL token account\n- Parameter be ignored if `destinationTokenAccount` is set because the `destinationTokenAccount` may belong to a different user that we have no authority to close"
           type: boolean
           default: true
         useSharedAccounts:
-          description: "Default: true\n- This enables the usage of shared program accounts\n- If true, no intermediate token accounts or open orders accounts need to be created for user\n- If you are using `destinationTokenAccount`, you must set this to `true`. If this is not set, this will be set to `false` in the case that the route plan is just through one simple AMM that isn't Openbook or Serum. Otherwise, it will be set to `true`"
+          description: "Default: true\n- This enables the usage of shared program accounts, this is essential as complex routing will require multiple intermediate token accounts which the user might not have\n- If true, you do not need to handle the creation of intermediate token accounts for the user."
           type: boolean
           default: true
         feeAccount:
           description: "- The referral account's token account of specific mints depending on `SwapMode` to collect fees\n- See [Add Fees](/docs/swap-api/add-fees-to-swap) guide for more details"
           type: string
         trackingAccount:
-          description: "- Specify any public key that belongs to you to track the transactions\n- Useful for integrators to get all the swap transactions from this public key\n- Query the data using a block explorer like Solscan/SolanaFM or query like Dune/Flipside."
+          description: "- Specify any public key that belongs to you to track the transactions\n- Useful for integrators to get all the swap transactions from this public key\n- Query the data using a block explorer like Solscan/SolanaFM or query like Dune/Flipside"
           type: string
         prioritizationFeeLamports:
           description: "- To specify a level or amount of additional fees to prioritize the transaction\n- It can be used for both priority fee and jito tip"
