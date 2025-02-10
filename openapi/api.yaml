@@ -33,7 +33,7 @@ paths:
       tags:
         - Swap
       summary: quote
-      description: Retrieve a quote to be used in `POST /swap`.
+      description: "Retrieve a quote to be used in `POST /swap`.\n\nRefer to [Swap API doc](/docs/swap-api/get-quote) for more information."
       parameters:
         - $ref: '#/components/parameters/InputMintParameter'
         - $ref: '#/components/parameters/OutputMintParameter'
@@ -59,7 +59,7 @@ paths:
       tags:
         - Swap
       summary: swap
-      description: Returns a transaction that you can use from the quote you get from `/quote`.
+      description: "Returns a transaction that you can use from the quote you get from `/quote`.\n\nRefer to [Swap API doc](/docs/swap-api/build-swap-transaction) for more information."
       requestBody:
         required: true
         content:
@@ -78,7 +78,7 @@ paths:
       tags:
         - Swap
       summary: swap-instructions
-      description: Returns instructions that you can use from the quote you get from `/quote`.
+      description: "Returns instructions that you can use from the quote you get from `/quote`.\n\nRefer to [Swap API doc](/docs/swap-api/build-swap-transaction#build-your-own-transaction-with-instructions) for more information."
       requestBody:
         required: true
         content:
@@ -112,7 +112,7 @@ paths:
       tags:
       - Token
       summary: token information
-      description: Returns the specified mint addresse's token information and metadata
+      description: "Returns the specified mint addresse's token information and metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
       parameters:
       - name: address
         in: path
@@ -133,7 +133,7 @@ paths:
       tags:
       - Token
       summary: mints in market
-      description: Returns the mints involved in a market
+      description: "Returns the mints involved in a market.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
       parameters:
       - name: address
         in: path
@@ -156,7 +156,7 @@ paths:
       tags:
       - Token
       summary: tradable
-      description: Returns a list of all mints tradable via Jupiter routing
+      description: "Returns a list of all mints tradable via Jupiter routing.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
       responses:
         '200':
           description: List of mints which are tradable
@@ -193,7 +193,7 @@ paths:
       tags:
       - Token
       summary: new
-      description: Returns new tokens with metadata, created at timestamp and markets
+      description: "Returns new tokens with metadata, created at timestamp and markets.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
       parameters:
       - name: limit
         in: query
@@ -231,7 +231,7 @@ paths:
       tags:
       - Token
       summary: all
-      description: Returns all tokens with all metadata
+      description: "Returns all tokens with all metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
       responses:
         '200':
           description: List of tokens which are tradable
@@ -246,7 +246,7 @@ paths:
       tags:
       - Price
       summary: price
-      description: Returns prices of specified tokens
+      description: "Returns prices of specified tokens.\n\nRefer to [Price API doc](/docs/utility/price-api) for more information."
       parameters:
       - name: ids
         in: query
@@ -265,7 +265,7 @@ paths:
           - string
       - name: showExtraInfo
         in: query
-        description: "- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter"
+        description: "To use, pass in `=true`\n- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter"
         required: false
         schema:
           type:
