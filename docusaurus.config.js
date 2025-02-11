@@ -4,7 +4,6 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const redirects = require('./redirects.json');
-const { UnfoldHorizontal } = require("lucide-react");
 require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -115,6 +114,8 @@ const config = {
             require.resolve("./src/css/custom.css"),
             require.resolve("./src/css/navbar.css"),
             require.resolve("./src/css/sidebar.css"),
+            require.resolve("./src/css/searchbar.css"),
+            require.resolve("./src/css/apepro.css"),
           ],
         },
         proxy: {
@@ -132,10 +133,23 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
         id: "guides",
+        lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'Latest',
+            path: '',
+            badge: false,
+          },
+          old: {
+            label: 'Old',
+            path: 'old',
+            banner: 'unmaintained',
+          }
+        },
         path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
-        sidebarCollapsed: true,
+        sidebarCollapsed: false,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
     ],
@@ -188,7 +202,9 @@ const config = {
         },
         items: [
           { to: 'guides', label: 'Guides', position: 'left' },
-          { to: 'docs/index', label: 'Docs', position: 'left' },
+          { to: 'docs', label: 'Docs', position: 'left' },
+          { to: 'https://jup.com', label: 'Jupiverse', position: 'left' },
+          { type: 'search', position: 'right' },
         ],
       },
       algolia: {

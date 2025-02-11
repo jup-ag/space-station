@@ -25,7 +25,7 @@ Our top priority is securing the best prices and the best token selection for ou
 Given the amount of integration work involved:
 
 - A DEX must have enough liquidity to be useful for trading and to attract volume, as of 1 January 2025, minimum DEX TVL is $500,000.
-- Each market/pool must have a [minimum liquidity](../guides/general/get-your-token-on-jupiter) to show up on Jupiter, as of 1 January 2025, minimum market liquidity is $500.
+- Each market/pool must have a [minimum liquidity](../guides/spot/instant/how-to-get-your-token-on-jupiter) to show up on Jupiter, as of 1 January 2025, minimum market liquidity is $500.
 
 ### Markets API
 - This API should track all markets/pools that is listed or delisted, this will allow us to automatically track new markets as you add them to your DEX.

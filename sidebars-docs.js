@@ -136,7 +136,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'perp-api/index',
+          id: 'perp-api/perp-api',
         },
       ],
     },

@@ -1,49 +1,57 @@
 ---
-sidebar_label: "Overview"
-title: Guides Overview
+sidebar_label: "Welcome to Station"
+title: Welcome to Station
 sidebar_position: 1
-description: Learn about Jupiter and how to use Jupiter with these beginner friendly guides.
+description: Learn about Jupiter and how to use the products.
 ---
 
 <head>
-    <title>Jupiter Guides: Welcome Catdets!</title>
+    <title>Guides</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-
-![Cats](../guides/img/cat_banner.png)
-
-## Getting Started
-Hello, curious cat! We're so glad you're here to learn more about Jupiter and our products. These guides were created to get new cats like yourself up to speed and to explain the inner workings of Jupiter products. 
-
-Here's a list of all our official links. Please always double check the URL matches these! 
-
-| Platform | Purpose | Official Link |
-| -------- | ------- | ------------- |
-| Website  | Experience all Jupiter products for yourself | [https://jup.ag](https://jup.ag)|
-| Discord  | Engage with the community and us by sharing feedback and ideas | [https://discord.gg/jup](https://discord.gg/jup)|
-| Twitter  | Follow [@JupiterExchange] to stay up-to-date with all updates | [https://twitter.com/JupiterExchange](https://twitter.com/JupiterExchange)|
-| Documentation | Read all about Jupiter products, for both users and devs | [https://station.jup.ag/](https://station.jup.ag/)|
-| YouTube | Tune in to Planetary Calls and watch tutorials and guides relating to Jupiter and Solana DeFi | [https://www.youtube.com/@JUPecosystem](https://www.youtube.com/@JUPecosystem)|
-| Reddit  | Join our Reddit community to chat with fellow Catdets on all things Jupiter and DeFi | [https://www.reddit.com/r/jupiterexchange/](https://www.reddit.com/r/jupiterexchange/)|
-| Jupresearch  | Participate in forum discussion regarding Jupiter initiatives, ecosystem projects, and broader decentralised meta | [https://www.jupresear.ch/](https://www.jupresear.ch/)|
-| Launchpad  | Discover and participate in token launches by LFG Launchpad | [https://lfg.jup.ag/](https://lfg.jup.ag/)|
-| Governance | Vote with your staked JUP on DAO proposals and earn Active Staker Rewards | [https://vote.jup.ag/](https://vote.jup.ag/)|
-| J.U.P DAO  | Be a part of Jupiter United Planet or Jupiverse and contribute to governance and voting | [https://www.jup.eco/](https://www.jup.eco/)|
-| Token List  | Understand how token verification works on Jupiter and get your token verified| [https://catdetlist.jup.ag/](https://catdetlist.jup.ag/)|
-| Edge  | Test out the latest product changes before they are live on the main website | [https://edge.jup.ag/](https://edge.jup.ag/)|
-| Ape Pro  | Ape into new tokens in a seamless, fast, yet secure manner with secure vault model | [https://ape.pro/](https://ape.pro/)|
-| Welcome to Solana  | Join us to welcome you to Solana every step of the way | [https://welcome.jup.ag/](https://welcome.jup.ag/)|
-
+Jupiter’s Station is your gateway to accessing and managing various financial tools on the Solana blockchain. It serves as a unified platform that simplifies trading, portfolio management, and access to Solana’s vibrant ecosystem of decentralized applications. The Station is designed for both seasoned crypto users and newcomers alike, offering a seamless and intuitive experience.
 
 ---
 
-## Navigating this Guide
-- **Spot:** Read detailed walkthroughs on all Spot features: Swap, Limit Order, Dollar Cost Averaging (DCA), Value Averaging (VA). Deep dive into how each of them work individually and together to provide the best trading experience for you! 
-- **Perpetual Exchange:** Learn about the [Jupiter Perpetuals Exchange](/guides/perpetual-exchange/overview) and the [JLP Pool](/guides/jlp/jlp) and its role in securing liquidity for the Perpetuals Exchange. 
-- **Ape:** Discover how the vault model, auto-retry, and removal of wallet signature enables fast and secure trades. 
-- **JupSOL:**  Check out [JupSOL](/guides/jupsol/jupsol) to learn about the official Jupiter LST which supports the Jupiter Validator!
-- **Onboard:** If you're coming to Solana for the first time, we care to provide a seamless experience for you. Read our guide on Bridge, Onramp, and CEX transferring.    
-- **General Guides:** Discover general guides relating to the Solana ecosystem such as personal security, using a block explorer to verify swaps, actions & blinks, token guide for creators, the Jupiter Media Kit, and FAQs about the Jupiter Platform.
+:::tip Navigating Station
+To navigate Station, you can use the navigation bar at the top of the page to find the product you are looking for. Within each product section, you can find the breakdown of the product features and guides in the sidebar.
+:::
 
-Welcome to the community, J4J (JUP 4 JUP)!
+:::info Contribute to Station
+If you're not a developer, you can open an issue on the [Station GitHub repository](https://github.com/jup-ag/space-station/issues/) and provide your feedback!
+
+If you're a developer, you can make a PR directly and we will review it.
+
+We would love to hear your feedback, suggestions and see your contributions!
+:::
+
+## Onboarding Solana
+
+New here? Get started immediately with our [onboarding guides](/guides/onboard)!
+
+## Products
+
+### Spot
+
+Spot trading allows you to swap between tokens instantly. It’s the foundation of DeFi trading and enables users to access the best rates for token swaps. Jupiter Spot simplifies the process of trading on blockchains by optimising and estimating settings in the background, providing the best experience for users.
+
+Check out [Spot guides](/guides/spot), or launch [Spot](https://jup.ag/).
+
+### Ape Pro
+
+Ape Pro is tailored for advanced traders and provides enhanced analytics and charting tools, real-time insights for high-volume or frequent trading, and exclusive features to optimize trading strategies.
+
+Check out [Ape Pro guides](/guides/apepro/quickstart), or launch [Ape Pro](https://ape.pro/).
+
+### Perps
+
+Perpetual trading enables users to trade futures contracts with no expiration date. It offers leveraged trading for higher exposure to market movements, risk management tools to hedge against market volatility, and access to a variety of perpetual pairs on Solana.
+
+Check out [Perps guides](/guides/perps/quickstart), or launch [Perps](https://jup.ag/perps).
+
+## Developers
+
+For developers, we have a dedicated section to get you started with the Jupiter APIs and tool kits to build world class applications.
+
+Check out the [Developer Documentation](/docs) to get started.

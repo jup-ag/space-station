@@ -49,6 +49,7 @@ Each `Custody` account contains the following data:
 | `targetRatioBps`   | **Type:** `u64`<br /><br />The target weightage (in basis points) for the custody in the JLP pool. |
 | `assets`           | **Type:** [`Assets`](#assets)<br /><br />Contains data used to calculate PNL, AUM, and core business logic for the program. |
 | `fundingRateState` | **Type:** [`FundingRateState`](#fundingratestate)<br /><br />Contains data used to calculate borrow fees for open positions. |
+| `jumpRateState`    | **Type:** [`JumpRateState`](#jumpratestate)<br /><br />Contains data used to calculate borrow fees for open positions. |
 
 ### `PricingParams`
 
@@ -76,4 +77,13 @@ Each `Custody` account contains the following data:
 | --- | --- |
 | `cumulativeInterestRate` | **Type:** `u128`<br /><br />Traders are required to pay hourly borrow fees for opening leveraged positions. This fee is calculated based on two primary factors: the size of the trader's position and the current utilization of the pool for the custody.<br /><br />To calculate borrow fees more efficiently, each custody account contains a value called `cumulativeInterestRate`.<br /><br />Correspondingly, each position account stores a `cumulativeInterestSnapshot` which captures the value of `cumulativeInterestRate` at the time of the position's last update. Whenever there's a change in either the borrowed assets or the total assets within a custody, the `cumulativeInterestRate` for the custody is updated.<br /><br />The difference between the custody's `cumulativeInterestRate` and the position's `cumulativeInterestSnapshot` is then used to calculate the position's borrow fees. |
 | `lastUpdate` | **Type:** `i64`<br /><br />The UNIX timestamp for when the custody's borrow fee data was last updated. |
-| `hourlyFundingDbps` | **Type:** `u64`<br /><br />A constant used to calculate the hourly borrow fees for the custody. The Jupiter Perpetuals exchange works with Gauntlet and Chaos Labs to update and fine tune the `hourlyFundingDbps` to respond to traders' feedback and market conditions. |
+| `hourlyFundingDbps` | **Type:** `u64`<br /><br />**NOTE: This will be deprecated in the near future.** A constant used to calculate the hourly borrow fees for the custody. The Jupiter Perpetuals exchange works with Gauntlet and Chaos Labs to update and fine tune the `hourlyFundingDbps` to respond to traders' feedback and market conditions. |
+
+### `JumpRateState`
+
+| Field | Description |
+| --- | --- |
+| `minRateBps` | **Type:** `u64`<br /><br />The lowest borrow rate, applied at 0% utilization. |
+| `maxRateBps` | **Type:** `u64`<br /><br />The highest borrow rate, applied at 100% utilization. |
+| `targetRateBps` | **Type:** `u64`<br /><br />The borrow rate when utilization reaches its target level. |
+| `targetUtilizationRate` | **Type:** `u64`<br /><br />The optimal utilization level for the custody. |
