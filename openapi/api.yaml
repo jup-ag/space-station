@@ -448,10 +448,6 @@ components:
           description: "Default: false\n- Request a legacy transaction rather than the default versioned transaction\n- Used together with `asLegacyTransaction` in /quote, otherwise the transaction might be too large"
           type: boolean
           default: false
-        useTokenLedger:
-          description: "Default: false\n- This is useful when the instruction before the swap has a transfer that increases the input token amount\n- Then, the swap will use the difference between the token ledger token amount and post token amount\n- Will be deprecated soon"
-          type: boolean
-          default: false
         destinationTokenAccount:
           description: "- Public key of a token account that will be used to receive the token out of the swap\n- If not provided, the signer's ATA will be used\n- If provided, we assume that the token account is already initialized"
           type: string
