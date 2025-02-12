@@ -94,7 +94,7 @@ The Perps Keepers and Liquidators work independently from each other.
 If you attempt to create a Limit Order to save an existing position from liquidation, it will be dependent on whichever transaction is processed first.
 
 - If the Limit Order is processed first = the position might be saved from liquidation
-- If the Liquidation is processed first = the position will be liquidated and your limit order will still be active (please do take note)
+- If the Liquidation is processed first = the position will be liquidated and your limit order will still be active (please do take note, it means that a new position may be immediately opened)
 :::
 
 :::caution Limitation on Limit Orders
