@@ -21,13 +21,55 @@ export default function NavbarMobilePrimaryMenu(): JSX.Element {
 
   return (
     <ul className="menu__list">
-      {navbarItems.map((item, i) => (
-        <li key={i} className={clsx('menu__list-item')}>
-          <a href={item.to} className={clsx('menu__link')}>
-            {item.label}
-          </a>
-        </li>
-      ))}
+      {navbarItems.map((item) => {
+        if (item.items) {
+          const isActive = location.pathname.startsWith(item.to) || 
+                          item.items.some(subItem => location.pathname.startsWith(subItem.to));
+
+          return (
+            <li key={item.label} className={clsx('menu__list-item')}>
+              <a
+                href={item.to}
+                className={clsx(
+                  'menu__link',
+                  isActive && 'menu__link--active'
+                )}
+              >
+                {item.label}
+              </a>
+              <ul className="menu__list menu__list--nested">
+                {item.items.map((subItem) => (
+                  <li key={subItem.to} className="menu__list-item">
+                    <a
+                      href={subItem.to}
+                      className={clsx(
+                        'menu__link',
+                        location.pathname.startsWith(subItem.to) && 'menu__link--active'
+                      )}
+                    >
+                      {subItem.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        }
+
+        return (
+          <li key={item.to} className="menu__list-item">
+            <a
+              href={item.to}
+              className={clsx(
+                'menu__link',
+                location.pathname.startsWith(item.to) && 'menu__link--active'
+              )}
+            >
+              {item.label}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 }
