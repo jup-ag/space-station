@@ -80,9 +80,21 @@ Limit Orders operate independently from your existing positions.
 - They stay active even if you close or get liquidated on an existing position.
 
 :::caution Liquidation Price on Order Form
-The liquidation price on the order form for a Limit Order will be the simulated liquidation price based on the position requested at the time when you fill in the order form.
+The liquidation price on the order form for a Limit Order will be the **simulated liquidation price** based on the position requested at the time when you fill in the order form.
 
-It means that, regardless of existing position or not, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.
+- If you have an existing position = liquidation price includes existing position + current requested order
+- If you have no existing position = liquidation price based on current requested order
+
+**However, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.**
+:::
+
+:::caution Independent Liquidator
+The Perps Keepers and Liquidators work independently from each other.
+
+If you attempt to create a Limit Order to save an existing position from liquidation, it will be dependent on whichever transaction is processed first.
+
+- If the Limit Order is processed first = the position might be saved from liquidation
+- If the Liquidation is processed first = the position will be liquidated and your limit order will still be active (please do take note)
 :::
 
 :::caution Limitation on Limit Orders
