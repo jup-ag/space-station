@@ -69,6 +69,37 @@ Profits and collateral withdrawals are paid out to traders in the stablecoin use
 
 For example, a trader with a profitable short SOL position with USDC as the underlying collateral will receive USDC when they close the position or withdraw collateral.
 
+### Limit Orders
+
+Limit Orders operate independently from your existing positions.
+
+- They remain active until either triggered at your specified price unless manually cancelled.
+- If triggered, they will either:
+  - Open a new position if you have no existing position.
+  - Increase and combine with your existing position in that market.
+- They stay active even if you close or get liquidated on an existing position.
+
+:::caution Liquidation Price on Order Form
+The liquidation price on the order form for a Limit Order will be the simulated liquidation price based on the position requested at the time when you fill in the order form.
+
+It means that, regardless of existing position or not, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.
+:::
+
+:::caution Limitation on Limit Orders
+- The Perps V2 Beta does not support multiple limit orders **on the same pair and side**, please cancel the existing limit order before creating a new one.
+- When the selected market's utilisation is above 80%, new limit orders cannot be created.
+:::
+
+#### Limit Price
+
+When creating a Limit Order, you can set your desired entry price either above or below the current market price.
+
+| Position Type | Limit Price Rules | Example |
+|--------------|-------------------|----------------------------|
+| Long | Max: 1% less than market<br/>Min: 50% of market price | Market: 100<br/>Max: 98<br/>Min: 50 |
+| Short | Max: 1% more than market<br/>Min: 200% of market price | Market: 100<br/>Max: 102<br/>Min: 200 |
+
+
 ### Take-Profit / Stop-Loss Orders
 
 An active Associate Token Account (ATA) is needed for TP/SL to be triggered and executed:
