@@ -79,13 +79,12 @@ Limit Orders operate independently from your existing positions.
   - Increase and combine with your existing position in that market.
 - They stay active even if you close or get liquidated on an existing position.
 
-:::caution Independent Liquidator
-The Perps Keepers and Liquidators work independently from each other.
+:::caution Placing LO near Liquidation Price
+Jupiter Perps does not enforce First-in, First-out (FIFO), meaning execution order is not strictly based on price priority. Instead, it depends on which transaction - your Limit Order (LO) or the liquidation transaction - gets processed first.
 
-If you attempt to create a Limit Order to save an existing position from liquidation, it will be dependent on whichever transaction is processed first.
-
-- If the Limit Order is processed first = the position might be saved from liquidation
-- If the Liquidation is processed first = the position will be liquidated and your limit order will still be active (please do take note, it means that a new position may be immediately opened)
+If you create a Limit Order at a price near your liquidation level, expecting it to save your existing position, the outcome is uncertain:
+- If the Limit Order executes first = the position may be saved from liquidation
+- If the Liquidation executes first = the existing position will be liquidated, but the Limit Order will remain active, potentially opening a new position immediately.
 :::
 
 :::caution Liquidation Price on Order Form
