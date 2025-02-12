@@ -79,15 +79,6 @@ Limit Orders operate independently from your existing positions.
   - Increase and combine with your existing position in that market.
 - They stay active even if you close or get liquidated on an existing position.
 
-:::caution Liquidation Price on Order Form
-The liquidation price on the order form for a Limit Order will be the **simulated liquidation price** based on the position requested at the time when you fill in the order form.
-
-- If you have an existing position = liquidation price includes existing position + current requested order
-- If you have no existing position = liquidation price based on current requested order
-
-**However, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.**
-:::
-
 :::caution Independent Liquidator
 The Perps Keepers and Liquidators work independently from each other.
 
@@ -97,7 +88,16 @@ If you attempt to create a Limit Order to save an existing position from liquida
 - If the Liquidation is processed first = the position will be liquidated and your limit order will still be active (please do take note, it means that a new position may be immediately opened)
 :::
 
-:::caution Limitation on Limit Orders
+:::caution Liquidation Price on Order Form
+The liquidation price on the order form for a Limit Order will be the **simulated liquidation price** based on the position requested at the time when you fill in the order form.
+
+- If you have an existing position = liquidation price includes existing position + current requested order
+- If you have no existing position = liquidation price based on current requested order
+
+**However, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.**
+:::
+
+:::info Limitation on Limit Orders
 - The Perps V2 Beta does not support multiple limit orders **on the same pair and side**, please cancel the existing limit order before creating a new one.
 - When the selected market's utilisation is above 80%, new limit orders cannot be created.
 :::
