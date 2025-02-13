@@ -413,7 +413,7 @@ components:
           description: The user public key
           type: string
         wrapAndUnwrapSol:
-          description: "Default: true\n- To automatically wrap/unwrap SOL in the transaction\nIf false, it will use wSOL token account\n- Parameter be ignored if `destinationTokenAccount` is set because the `destinationTokenAccount` may belong to a different user that we have no authority to close"
+          description: "Default: true\n- To automatically wrap/unwrap SOL in the transaction\n- If false, it will use wSOL token account\n- Parameter will be ignored if `destinationTokenAccount` is set because the `destinationTokenAccount` may belong to a different user that we have no authority to close"
           type: boolean
           default: true
         useSharedAccounts:
@@ -421,34 +421,31 @@ components:
           type: boolean
           default: true
         feeAccount:
-          description: "- The referral account's token account of specific mints depending on `SwapMode` to collect fees\n- See [Add Fees](/docs/swap-api/add-fees-to-swap) guide for more details"
+          description: "- An Associated Token Address (ATA) of specific mints depending on `SwapMode` to collect fees\n- You no longer need the Referral Program\n- See [Add Fees](/docs/swap-api/add-fees-to-swap) guide for more details"
           type: string
         trackingAccount:
           description: "- Specify any public key that belongs to you to track the transactions\n- Useful for integrators to get all the swap transactions from this public key\n- Query the data using a block explorer like Solscan/SolanaFM or query like Dune/Flipside"
           type: string
         prioritizationFeeLamports:
-          description: "- To specify a level or amount of additional fees to prioritize the transaction\n- It can be used for both priority fee and jito tip"
-          type: integer
+          description: "- To specify a level or amount of additional fees to prioritize the transaction\n- It can be used for EITHER priority fee OR Jito tip\n- If you want to include both, you will need to use `/swap-instructions` to add both at the same time"
+          type: object
           properties:
             priorityLevelWithMaxLamports:
+              type: object
               properties:
                 prorityLevel:
                   description: Either `medium`, `high` or `veryHigh`
                   type: string
                 maxLamports:
                   description: Maximum lamports to cap the priority fee estimation, to prevent overpaying
-            jitoTipLamports:
-              properties:
-                jitoTipLamports:
-                  description: "- Exact amount of tip to use in a tip instruction\n- Estimate how much to set using Jito tip endpoint, [see their docs](https://docs.jito.wtf/)"
                   type: integer
+            jitoTipLamports:
+              type: integer
+              description: "- Exact amount of tip to use in a tip instruction\n- Estimate how much to set using Jito tip percentiles endpoint\n- It has to be used together with a connection to a Jito RPC\n- [See their docs](https://docs.jito.wtf/)"
+            
             
         asLegacyTransaction:
           description: "Default: false\n- Request a legacy transaction rather than the default versioned transaction\n- Used together with `asLegacyTransaction` in /quote, otherwise the transaction might be too large"
-          type: boolean
-          default: false
-        useTokenLedger:
-          description: "Default: false\n- This is useful when the instruction before the swap has a transfer that increases the input token amount\n- Then, the swap will use the difference between the token ledger token amount and post token amount"
           type: boolean
           default: false
         destinationTokenAccount:
@@ -461,10 +458,10 @@ components:
           description: "Default: false\n- When enabled, it will not do any additional RPC calls to check on user's accounts\n- Enable it only when you already setup all the accounts needed for the trasaction, like wrapping or unwrapping sol, or destination account is already created"
           type: boolean
         dynamicSlippage:
-          description: "Default: false\n- When enabled, it will use a set of categories and math to calculate a dynamic slippage threshold to use\n- See [dynamic slippage notes](/docs/swap-api/send-swap-transaction#how-jupiter-estimates-slippage)"
+          description: "Default: false\n- When enabled, it estimate slippage and apply it in the swap transaction directly, overwriting the `slippageBps` parameter in the quote response.\n- [See notes for more information](/docs/swap-api/send-swap-transaction#how-jupiter-estimates-slippage)"
           type: boolean
         computeUnitPriceMicroLamports:
-          description: "- To specify a compute unit price to calculate priority fee\n- `computeUnitLimit (1400000) * computeUnitPriceMicroLamports`\n- If `auto` is used, Jupiter will automatically set a priority fee and it will be capped at 5,000,000 lamports / 0.005 SOL\n- We recommend using `prioritizationFeeLamports` and `dynamicComputeUnitLimit` instead of passing in a compute unit price"
+          description: "- To specify a compute unit price to calculate priority fee\n- `computeUnitLimit (1400000) * computeUnitPriceMicroLamports`\n- **We recommend using `prioritizationFeeLamports` and `dynamicComputeUnitLimit` instead of passing in a compute unit price**"
           type: integer
         quoteResponse:
           $ref: '#/components/schemas/QuoteResponse'
@@ -475,23 +472,9 @@ components:
         swapTransaction:
           type: string
         lastValidBlockHeight:
-          type: number
+          type: integer
         prioritizationFeeLamports:
-          type: number
-        dynamicSlippageReport:
-          type: object
-          properties:
-            slippageBps:
-              type: integer
-              format: int32
-            otherAmount:
-              type: integer
-              format: int32
-            simulatedIncurredSlippageBps:
-              type: integer
-              format: int32
-            amplificationRatio:
-              type: string
+          type: integer
 
       required:
         - swapTransaction
@@ -500,9 +483,6 @@ components:
     SwapInstructionsResponse:
       type: object
       properties:
-        tokenLedgerInstruction:
-          description: If you are using `useTokenLedger = true`.
-          $ref: '#/components/schemas/Instruction'
         otherInstructions:
           description: "If you set `{\"prioritizationFeeLamports\": {\"jitoTipLamports\": 5000}}`, you will see a custom tip instruction to Jito here."
           $ref: '#/components/schemas/Instruction'
@@ -757,7 +737,7 @@ components:
           - ExactOut
     DexesParameter:
       name: dexes
-      description: "Default: Include ALL DEXes\n- If a DEX is indicated, the route will **only use** that DEX\n- Multiple DEXes can be pass in by comma separating them\n- [Full list of DEXes here](https://api.jup.ag/swap/v1/program-id-to-label)"
+      description: "Default: Include ALL DEXes\n- For example: `dexes=Raydium,Orca+V2,Meteora+DLMM`\n- If a DEX is indicated, the route will **only use** that DEX\n- Multiple DEXes can be pass in by comma separating them\n- [Full list of DEXes here](https://api.jup.ag/swap/v1/program-id-to-label)"
       in: query
       schema:
         type: array
@@ -765,7 +745,7 @@ components:
           type: string
     ExcludeDexesParameter:
       name: excludeDexes
-      description: "Default: Exclude NONE of the DEXes\n- If a DEX is indicated, the route will **not use** that DEX\n- Multiple DEXes can be pass in by comma separating them\n- [Full list of DEXes here](https://api.jup.ag/swap/v1/program-id-to-label)"
+      description: "Default: Exclude NONE of the DEXes\n- For example: `dexes=Raydium,Orca+V2,Meteora+DLMM`\n- If a DEX is indicated, the route will **not use** that DEX\n- Multiple DEXes can be pass in by comma separating them\n- [Full list of DEXes here](https://api.jup.ag/swap/v1/program-id-to-label)"
       in: query
       schema:
         type: array
@@ -791,7 +771,7 @@ components:
         type: boolean
     MaxAccountsParameter:
       name: maxAccounts
-      description: "- Rough estimate of the max accounts to be used for the quote\n- Useful if composing with your own accounts or to be more precise in resource accounting resulting in better routes\n- Jupiter Frontend uses a maxAccounts of 64"
+      description: "Recommended: 64\n- Rough estimate of the max accounts to be used for the quote\n- Useful if composing with your own accounts or to be more precise in resource accounting resulting in better routes\n- Jupiter Frontend uses a maxAccounts of 64"
       in: query
       schema:
         type: integer
