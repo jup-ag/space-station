@@ -180,14 +180,16 @@ const swapTransaction = await (
 
 ### How Jupiter Estimates Slippage?
 
-You can pass in `dynamicSlippage` to Swap API where our backend will estimate the a dynamic slippage to be used for this specific quote and transaction for you.
+Apart from the static `slippageBps` parameter, Jupiter has iterated on different designs to estimate slippage better.
 
-When `true` is passed in, it allows our backend to simulate slippage closer to execution and calculate an optimal value based on the token category, heuristics.
+You can pass in `dynamicSlippage=true` to Swap API where our backend will estimate a slippage value to be used for the specific quote and transaction for you.
+
+Our backend will simulate slippage closer to execution and calculate an optimal value based on the token category, historical swap's slippage data and other heuristics.
 
 :::note
-To understand Dynamic Slippage better, you can read here:
-- [Jupresearch](https://www.jupresear.ch/t/dynamic-slippage/21946#p-37444-introducing-dynamic-slippage-1)
-- [Dynamic Slippage Config](https://github.com/jup-ag/dynamic-slippage-config)
+To understand Dynamic Slippage better, you can reference this repository to understand some of the configs used.
+
+[Dynamic Slippage Config](https://github.com/jup-ag/dynamic-slippage-config)
 :::
 
 ```jsx
@@ -204,21 +206,6 @@ const swapTransaction = await (
     })
   })
 ).json();
-```
-
-The Swap API response will return the serialized transaction which will be using the dynamic slippage value and a `dynamicSlippageReport` for visibility/error catching.
-
-```json
-{
-    "swapTransaction": "...",
-    "dynamicSlippageReport": {
-        "slippageBps": 12, // The final optimized slippage bps used in the serialized transaction
-        "otherAmount": 8759842, // The incurred out amount observed from simulating the transaction        
-        "simulatedIncurredSlippageBps": -8, // The simulated incurred slippage during optimization (negative integer refers to the loss in bps while positive refers to the gain)
-        "amplificationRatio": "1.5" // An amplifcation ratio we use to add a buffer to the estimated slippage
-    },
-    "simulationError": null
-}
 ```
 
 ### How Jupiter Broadcast Transactions?
