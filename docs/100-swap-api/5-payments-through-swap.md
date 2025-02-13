@@ -117,7 +117,7 @@ From the this quote, you should get part of the response like this, where `amoun
 
 The merchant then retrieves the serialized swap transaction, but the merchant need to specify the `destinationTokenAccount` in the parameters — this will build the swap transaction to swap but send to the [merchant's specified token account which we defined earlier](#set-up-destinationtokenaccount).
 
-The `destinationTokenAccount` should be the merchant’s token account to receive the payment in. Also do note that `customerAccount` should be accounted for. **You can refer to the [Build Swap Transaction](./2-build-swap-transaction.mdx) guide for other parameters to be passed in.**
+The `destinationTokenAccount` should be the merchant’s token account to receive the payment in. Also do note that `customerAccount` should be accounted for. **You can refer to the [Build Swap Transaction](./2-build-swap-transaction.md) guide for other parameters to be passed in.**
 
 ```jsx
 const swapResponse = await (

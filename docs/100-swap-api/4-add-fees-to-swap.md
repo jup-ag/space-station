@@ -136,7 +136,7 @@ const [feeAccount] = PublicKey.findProgramAddressSync(
 );
 ```
 
-Using the above, we will now know the `feeAccount` to be passed in as the parameter in Swap API. You can refer to the [Build Swap Transaction](2-build-swap-transaction.mdx) guide to add any parameters where necessary to help transaction sending, etc.
+Using the above, we will now know the `feeAccount` to be passed in as the parameter in Swap API. You can refer to the [Build Swap Transaction](2-build-swap-transaction.md) guide to add any parameters where necessary to help transaction sending, etc.
 
 ```jsx
 const swapResponse = await (

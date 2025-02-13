@@ -17,7 +17,7 @@ By using Jupiter Swap API, you can enable Dynamic Slippage, Priority Fee estimat
 
 ## Let’s Get Started
 
-In this guide, we will pick up from where [**Get Quote**](./1-get-quote.md) and [**Build Swap Transaction**](./2-build-swap-transaction.mdx) guide has left off.
+In this guide, we will pick up from where [**Get Quote**](./1-get-quote.md) and [**Build Swap Transaction**](./2-build-swap-transaction.md) guide has left off.
 
 If you have not set up your environment to use the necessary libraries, the RPC connection to the network and successfully get a quote from the Quote API, please start at [get started](../1-get-started.md) or [get quote](./1-get-quote.md).
 

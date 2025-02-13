@@ -240,53 +240,49 @@ Solana transactions are limited to 1232 bytes, Jupiter is using Address Lookup T
     <summary>
         <div>
             <div>
-                <b>CPI and Flash Fill references</b>
+                <b>CPI References</b>
             </div>
         </div>
     </summary>
-    <Tabs>
-        <TabItem value="cross-program-invocation" label="Cross Program Invocation" default>
-            <strong>A CPI transaction will be composed of these instructions:</strong>
-            <ol>
-                <li>Borrow enough SOL from the program to open a wSOL account that the program owns.</li>
-                <li>Swap X token from the user to wSOL on Jupiter via CPI.</li>
-                <li>Close the wSOL account and send it to the program.</li>
-                <li>The program then transfers the SOL back to the user.</li>
-            </ol>
-            <strong>Links and resources:</strong>
-            <ul>
-                <li><a href="https://github.com/jup-ag/sol-swap-cpi">Github repo</a></li>
-                    <ul>
-                        <li><a href="https://github.com/jup-ag/sol-swap-cpi/blob/main/programs/swap-to-sol/src/lib.rs">Program code</a></li>
-                        <li><a href="https://github.com/jup-ag/sol-swap-cpi/blob/main/cli/swap-to-sol.ts">Client code</a></li>
-                    </ul>
-                <li><a href="https://solscan.io/tx/GX1rh9y15mn2jqkQ5mosPqkg8YYFWQZqvihR95aRpPQeEMZhhPqWzMUbN1iCqYkubqyB2fLW3UGR4j5w28srrtm">Example transaction</a></li>
-            </ul>
-            <details>
-                <summary>
-                    <div>
-                        <div>
-                            <b>To ease integration via CPI, you may add the following crate <a href="https://github.com/jup-ag/jupiter-cpi">jupiter-cpi</a> to your program.</b>
-                        </div>
-                    </div>
-                </summary>
-                In cargo.toml<br />
-                <pre>
-                    <code className="toml">
-{`[dependencies]
+
+**A CPI transaction will be composed of these instructions:**
+1. Borrow enough SOL from the program to open a wSOL account that the program owns.
+2. Swap X token from the user to wSOL on Jupiter via CPI.
+3. Close the wSOL account and send it to the program.
+4. The program then transfers the SOL back to the user.
+
+**Links and Resources:**
+- https://github.com/jup-ag/jupiter-cpi-swap-example
+- https://github.com/jup-ag/sol-swap-cpi
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>To ease integration via CPI, you may add the following crate <a href="https://github.com/jup-ag/jupiter-cpi">jupiter-cpi</a> to your program.</b>
+            </div>
+        </div>
+    </summary>
+
+In cargo.toml<br />
+
+```toml
+[dependencies]
 jupiter-cpi = { git = "https://github.com/jup-ag/jupiter-cpi", rev = "5eb8977" }
-... other dependencies
-`}
-                    </code>
-                </pre>
-                In your code<br />
-                <pre>
-                    <code className="rust">
-{`use jupiter_cpi;\n
-...\n
-let signer_seeds: &[&[&[u8]]] = &[...];\n
-// Pass accounts to context one-by-one and construct accounts here.
-// Or in practise, it may be easier to use remaining_accounts https://book.anchor-lang.com/anchor_in_depth/the_program_module.html\n
+```
+
+In your code
+
+```rust
+use jupiter_cpi;
+...
+
+let signer_seeds: &[&[&[u8]]] = &[...];
+
+// Pass accounts to context one-by-one and construct accounts here
+// Or in practise, it may be easier to use remaining_accounts
+// https://book.anchor-lang.com/anchor_in_depth/the_program_module.html
+
 let accounts = jupiter_cpi::cpi::accounts::SharedAccountsRoute {
     token_program: ,
     program_authority: ,
@@ -299,12 +295,13 @@ let accounts = jupiter_cpi::cpi::accounts::SharedAccountsRoute {
     destination_mint: ,
     platform_fee_account: ,
     token_2022_program: ,
-};\n
+};
 let cpi_ctx = CpiContext::new_with_signer(
     ctx.accounts.jup.to_account_info(),
     accounts,
     signer_seeds,
-);\n
+);
+
 jupiter_cpi::cpi::shared_accounts_route(
     cpi_ctx,
     id,
@@ -313,32 +310,33 @@ jupiter_cpi::cpi::shared_accounts_route(
     quoted_out_amount,
     slippage_bps,
     platform_fee_bps,
-)?;\n
+);
+
 ...
-`}
-                    </code>
-                </pre>
-            </details>
-        </TabItem>
-        
-        <TabItem value="flash-fill" label="Flash Fill" default>
-            <strong>A Flash Fill transaction will be composed of these instructions:</strong>
-            <ol>
-                <li>Borrow enough SOL for opening the wSOL account from this program.</li>
-                <li>Create the wSOL account for the borrower.</li>
-                <li>Swap X token to wSOL.</li>
-                <li>Close the wSOL account and send it to the borrower.</li>
-                <li>Repay the SOL for opening the wSOL account back to this program.</li>
-            </ol>
-            <strong>Links and resources:</strong>
-            <ul>
-                <li><a href="https://github.com/jup-ag/sol-swap-flash-fill">Github repo</a></li>
-                    <ul>
-                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/programs/flash-fill/src/lib.rs">Program code</a></li>
-                        <li><a href="https://github.com/jup-ag/sol-swap-flash-fill/blob/main/cli/flash-fill.ts">Client code</a></li>
-                    </ul>
-                <li><a href="https://solscan.io/tx/4psWiUFGdRhKqi1UXSWrpoM3RCJWAXpz6CTpsd5fZwjr8nEpLiZVuiyaERj95hUNnm6dhfxircLgAqCbHV3wCVpT">Example transaction</a></li>
-            </ul>
-        </TabItem>
-    </Tabs>
+```
+
+</details>
+
+</details>
+
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>Flash Fill References</b>
+            </div>
+        </div>
+    </summary>
+
+**A Flash Fill transaction will be composed of these instructions:**
+
+1. Borrow enough SOL for opening the wSOL account from this program.
+2. Create the wSOL account for the borrower.
+3. Swap X token to wSOL.
+4. Close the wSOL account and send it to the borrower.
+5. Repay the SOL for opening the wSOL account back to this program.
+
+**Links and resources:**
+- https://github.com/jup-ag/sol-swap-flash-fill
+
 </details>
