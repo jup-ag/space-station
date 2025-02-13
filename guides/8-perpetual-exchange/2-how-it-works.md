@@ -69,6 +69,48 @@ Profits and collateral withdrawals are paid out to traders in the stablecoin use
 
 For example, a trader with a profitable short SOL position with USDC as the underlying collateral will receive USDC when they close the position or withdraw collateral.
 
+### Limit Orders
+
+Limit Orders operate independently from your existing positions.
+
+- They remain active until either triggered at your specified price unless manually cancelled.
+- If triggered, they will either:
+  - Open a new position if you have no existing position.
+  - Increase and combine with your existing position in that market.
+- They stay active even if you close or get liquidated on an existing position.
+
+:::caution Placing LO near Liquidation Price
+Jupiter Perps does not enforce First-in, First-out (FIFO), meaning execution order is not strictly based on price priority. Instead, it depends on which transaction - your Limit Order (LO) or the liquidation transaction - gets processed first.
+
+If you create a Limit Order at a price near your liquidation level, expecting it to save your existing position, the outcome is uncertain:
+- If the Limit Order executes first = the position may be saved from liquidation
+- If the Liquidation executes first = the existing position will be liquidated, but the Limit Order will remain active, potentially opening a new position immediately.
+:::
+
+:::caution Liquidation Price on Order Form
+The liquidation price on the order form for a Limit Order will be the **simulated liquidation price** based on the position requested at the time when you fill in the order form.
+
+- If you have an existing position = liquidation price includes existing position + current requested order
+- If you have no existing position = liquidation price based on current requested order
+
+**However, the liquidation price on the order form does not represent the liquidation price when the limit order is triggered and the position is opened.**
+:::
+
+:::info Limitation on Limit Orders
+- The Perps V2 Beta does not support multiple limit orders **on the same pair and side**, please cancel the existing limit order before creating a new one.
+- When the selected market's utilisation is above 80%, new limit orders cannot be created.
+:::
+
+#### Limit Price
+
+When creating a Limit Order, you can set your desired entry price either above or below the current market price.
+
+| Position Type | Limit Price Rules | Example |
+|--------------|-------------------|----------------------------|
+| Long | Max: 1% less than market<br/>Min: 50% of market price | Market: 100<br/>Max: 98<br/>Min: 50 |
+| Short | Max: 1% more than market<br/>Min: 200% of market price | Market: 100<br/>Max: 102<br/>Min: 200 |
+
+
 ### Take-Profit / Stop-Loss Orders
 
 An active Associate Token Account (ATA) is needed for TP/SL to be triggered and executed:
