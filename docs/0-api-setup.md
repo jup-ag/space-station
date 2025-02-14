@@ -21,6 +21,10 @@ headers: {
 },
 ```
 
+:::info Free Plan
+Do note that you **do not** need an API Key to use the free plan. Simply just call the endpoints without the API Key.
+:::
+
 ## 1. Open Portal
 
 Navigate to https://portal.jup.ag
@@ -35,14 +39,10 @@ To enter the portal, simply connect via email account. This allows us to keep tr
 
 To decide on a suitable plan by gauging requests required by your project size and user needs.
 
-:::note Free Plan
-Do note that you **do not** need an API Key to use the free plan. Simply just call the endpoints without the API Key.
-:::
-
-:::note Change of plans
+:::info Change of plans
 You can always change your plans later.
 
-Please reach out to the team for any plans change requests.
+Please reach out to the team for any plans change request as it is currently done manually.
 :::
 
 ![Plans](../static/portal/plans.png)
@@ -56,8 +56,13 @@ Before you set up your keys, you will need to make the payment upfront via Helio
 3. Connect wallet to pay via Solana blockchain.
 4. Click the **Subscribe** button to proceed.
 
-:::info
-If you have any issues with the payment, [please reach out here](https://t.me/Yankee0x).
+:::info Plan Renewal
+The payment is currently done on a monthly basis.
+
+- 7 days before the plan expires, you will see a banner in the dashboard.
+- You can renew your plan latest 14 days after the plan expires before your API Key is disabled.
+- The plan will be renewed for the same plan as the previous plan.
+- If you have any issues with the payment, [please reach out here](https://t.me/Yankee0x).
 :::
 
 :::note other payment methods
