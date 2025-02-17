@@ -61,6 +61,8 @@ If you want to store your private key in the project directly, you can do it via
 // index.js
 import dotenv from 'dotenv';
 
+require('dotenv').config();
+
 const wallet = new Wallet(Keypair.fromSecretKey(bs58.decode(process.env.PRIVATE_KEY || '')));
 
 console.log(wallet.publicKey.toBase58());
