@@ -433,7 +433,7 @@ components:
             priorityLevelWithMaxLamports:
               type: object
               properties:
-                prorityLevel:
+                priorityLevel:
                   description: Either `medium`, `high` or `veryHigh`
                   type: string
                 maxLamports:
