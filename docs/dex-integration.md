@@ -22,7 +22,8 @@ Our top priority is securing the best prices and the best token selection for ou
 
 As Solana grows and more DEXes are built, we have to be more cautious in the DEXes we integrate, we look into a variety of factors.
 
-- **Code health**: This is important as it will help with integration and ensure maintainability in the future.
+- **Code health**: It will help with integration and ensure maintainability in the future.
+- **Security Audit**: This is important to ensure users' funds are secure and the program is not malicious.
 - **Traction**: We look at the traction of the DEX to ensure it has market demand and is well-used.
 - **Team and backers**: This is a good indicator of the quality of the DEX if they are backed by or built by reputable or verifiable entities.
 
@@ -34,10 +35,6 @@ As Solana grows and more DEXes are built, we have to be more cautious in the DEX
 ### Rust SDK
 - [Your SDK should implement the following interface](#).
 - We are soon migrating to a Rust SDK and so are asking all integrated DEXes to create a Rust SDK version or give access to the code for us to include.
-
-### Security Audit
-
-- If you're not using Solana's audited SPL token swap (https://github.com/solana-labs/solana-program-library/tree/master/token-swap), we ask that you get your code audited.
 
 ## AMM Interface
 
