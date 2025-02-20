@@ -23,7 +23,7 @@ Our top priority is securing the best prices and the best token selection for ou
 As Solana grows and more DEXes are built, we have to be more cautious in the DEXes we integrate, we look into a variety of factors.
 
 - **Code health**: It will help with integration and ensure maintainability in the future.
-- **Security Audit**: This is important to ensure users' funds are secure and the program is not malicious.
+- **Security audit**: This is important to ensure users' funds are secure and the program is not malicious.
 - **Traction**: We look at the traction of the DEX to ensure it has market demand and is well-used.
 - **Team and backers**: This is a good indicator of the quality of the DEX if they are backed by or built by reputable or verifiable entities.
 
