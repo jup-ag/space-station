@@ -67,6 +67,10 @@ const sidebars = {
           type: 'doc',
           id: 'swap-api/send-swap-transaction',
         },
+        {
+          type: 'doc',
+          id: 'swap-api/program-errors',
+        },
       ],
     },
     {
