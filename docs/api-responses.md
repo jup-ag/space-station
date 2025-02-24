@@ -20,6 +20,7 @@ For more information on error codes from programs, see the [Swap API - Program E
 | --- | --- | --- |
 | 200 | Good | Success! |
 | 400 | Bad Request | Likely a problem with the request, check the request parameters, syntax, etc. |
+| 401 | Unauthorized | Likely a problem with the API key, check if the API key is correct. |
 | 404 | Not Found | Likely a broken or invalid endpoint. |
 | 429 | Rate Limited | You are being rate limited. Either slow down requests, reduce bursts, or upgrade your plan. |
 | 500 | Internal Server Error | Please contact [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support). |
