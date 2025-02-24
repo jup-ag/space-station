@@ -134,4 +134,4 @@ Finally, you can calculate your generated revenue share by multiplying the resul
 revenue share you generate = $35,000 x 0.025% = $8.75
 ```
 
-Every Monday, at ~ UTC 18:00, the Estimated APY figure is updated with the above calculation, by using the previous week's fees and estimating an APR and APY for users.
+Every 7 days, at ~ UTC 18:00, the Estimated APY figure is updated with the above calculation, by using the previous week's fees and estimating an APR and APY for users.
