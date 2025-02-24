@@ -2,6 +2,7 @@
 sidebar_label: "API Responses"
 description: "API responses for the Jupiter API."
 title: "API Responses"
+displayed_sidebar: docs
 ---
 
 <head>
