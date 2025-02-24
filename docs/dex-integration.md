@@ -20,12 +20,14 @@ Our top priority is securing the best prices and the best token selection for ou
 
 ## Integration Prerequisites
 
-### Minimum DEX TVL
+As Solana grows and more DEXes are built, we have to be more cautious in the DEXes we integrate, we look into a variety of factors.
 
-Given the amount of integration work involved:
+- **Code health**: It will help with integration and ensure maintainability in the future.
+- **Security audit**: This is important to ensure users' funds are secure and the program is not malicious.
+- **Traction**: We look at the traction of the DEX to ensure it has market demand and is well-used.
+- **Team and backers**: This is a good indicator of the quality of the DEX if they are backed by or built by reputable or verifiable entities.
 
-- A DEX must have enough liquidity to be useful for trading and to attract volume, as of 1 January 2025, minimum DEX TVL is $500,000.
-- Each market/pool must have a [minimum liquidity](../guides/general/get-your-token-on-jupiter) to show up on Jupiter, as of 1 January 2025, minimum market liquidity is $500.
+## Integration Guidelines
 
 ### Markets API
 - This API should track all markets/pools that is listed or delisted, this will allow us to automatically track new markets as you add them to your DEX.
@@ -33,10 +35,6 @@ Given the amount of integration work involved:
 ### Rust SDK
 - [Your SDK should implement the following interface](#).
 - We are soon migrating to a Rust SDK and so are asking all integrated DEXes to create a Rust SDK version or give access to the code for us to include.
-
-### Security Audit
-
-- If you're not using Solana's audited SPL token swap (https://github.com/solana-labs/solana-program-library/tree/master/token-swap), we ask that you get your code audited.
 
 ## AMM Interface
 
