@@ -13,7 +13,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'dex-integration',
+      id: 'api-responses',
     },
     {
       type: 'html',
