@@ -128,7 +128,7 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
-  /tokens/v1/market/{mareket_address}/mints:
+  /tokens/v1/market/{market_address}/mints:
     get:
       tags:
       - Token
@@ -141,7 +141,7 @@ paths:
         required: true
         schema:
           type: string
-        example: RhSZfkW5SwYxyFdrktQ9hV4ScR7by3rcTk1a5drFpZy
+        example: JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
       responses:
         '200':
           description: Returns the mints involved in a market
