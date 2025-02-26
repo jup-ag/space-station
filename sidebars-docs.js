@@ -13,7 +13,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'dex-integration',
+      id: 'api-responses',
     },
     {
       type: 'html',
@@ -119,6 +119,26 @@ const sidebars = {
         {
           type: 'doc',
           id: 'swap-api/dca-sdk',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'swap-api/program-errors',
+        },
+        {
+          type: 'doc',
+          id: 'api-responses',
         },
       ],
     },
