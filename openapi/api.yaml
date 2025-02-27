@@ -21,6 +21,8 @@ servers:
   - url: https://api.jup.ag/
 
 tags:
+  - name: Ultra
+    description: Endpoints related to Ultra API for Swap
   - name: Swap
     description: Endpoints related to Quote and Swap API
   - name: Token
@@ -28,6 +30,307 @@ tags:
   - name: Price
     description: Endpoints related to Price
 paths:
+  /ultra/v1/order:
+    get:
+      tags:
+        - Ultra
+      summary: order
+      description: "Retrieve a swap order to be used in `POST /ultra/v1/execute`.\n\nRefer to [Ultra API doc](/docs/ultra-api/get-order) for more information."
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  environment:
+                    type: string
+                    enum:
+                      - canary
+                      - production
+                  inputMint:
+                    type: string
+                  outputMint:
+                    type: string
+                  inAmount:
+                    type: string
+                  outAmount:
+                    type: string
+                  otherAmountThreshold:
+                    type: string
+                  swapMode:
+                    type: string
+                  slippageBps:
+                    type: number
+                  priceImpactPct:
+                    type: string
+                  routePlan:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        swapInfo:
+                          type: object
+                          properties:
+                            ammKey:
+                              type: string
+                            label:
+                              type: string
+                            inputMint:
+                              type: string
+                            outputMint:
+                              type: string
+                            inAmount:
+                              type: string
+                            outAmount:
+                              type: string
+                            feeAmount:
+                              type: string
+                            feeMint:
+                              type: string
+                          required:
+                            - ammKey
+                            - label
+                            - inputMint
+                            - outputMint
+                            - inAmount
+                            - outAmount
+                            - feeAmount
+                            - feeMint
+                        percent:
+                          type: number
+                      required:
+                        - swapInfo
+                        - percent
+                  contextSlot:
+                    type: number
+                  feeBps:
+                    type: number
+                  prioritizationType:
+                    type: string
+                    enum:
+                      - None
+                      - ComputeBudget
+                      - Jito
+                  prioritizationFeeLamports:
+                    type: number
+                  swapType:
+                    type: string
+                    enum:
+                      - aggregator
+                      - rfq
+                  transaction:
+                    type:
+                      - string
+                      - 'null'
+                  gasless:
+                    type: boolean
+                  requestId:
+                    type: string
+                  totalTime:
+                    type: number
+                  taker:
+                    type:
+                      - string
+                      - 'null'
+                  quoteId:
+                    type: string
+                  maker:
+                    type: string
+                  expireAt:
+                    type: string
+                  lastValidBlockHeight:
+                    type: number
+                  platformFee:
+                    type: object
+                    properties:
+                      amount:
+                        type: string
+                      feeBps:
+                        type: number
+                    required:
+                      - amount
+                      - feeBps
+                  dynamicSlippageReport:
+                    type: object
+                    properties:
+                      amplificationRatio:
+                        type:
+                          - string
+                          - 'null'
+                      otherAmount:
+                        type: number
+                      simulatedIncurredSlippageBps:
+                        type: number
+                      slippageBps:
+                        type: number
+                      categoryName:
+                        type: string
+                      heuristicMaxSlippageBps:
+                        type: number
+                    required:
+                      - amplificationRatio
+                      - otherAmount
+                      - simulatedIncurredSlippageBps
+                      - slippageBps
+                      - categoryName
+                      - heuristicMaxSlippageBps
+                required:
+                  - inputMint
+                  - outputMint
+                  - inAmount
+                  - outAmount
+                  - otherAmountThreshold
+                  - swapMode
+                  - slippageBps
+                  - priceImpactPct
+                  - routePlan
+                  - feeBps
+                  - prioritizationType
+                  - prioritizationFeeLamports
+                  - swapType
+                  - transaction
+                  - gasless
+                  - requestId
+                  - totalTime
+                  - taker
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+      parameters:
+        - in: query
+          name: inputMint
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: outputMint
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: amount
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: taker
+          schema:
+            type: string
+          required: false
+  /ultra/v1/execute:
+    post:
+      tags:
+        - Ultra
+      summary: execute
+      description: "Execute a swap order and get the execution status.\n\nRefer to [Ultra API doc](/docs/ultra-api/execute-order) for more information."
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - Success
+                      - Failed
+                  signature:
+                    type: string
+                  slot:
+                    type: string
+                  error:
+                    type: string
+                  code:
+                    type: number
+                  inputAmountResult:
+                    type: string
+                  outputAmountResult:
+                    type: string
+                  swapEvents:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        inputMint:
+                          type: string
+                        inputAmount:
+                          type: string
+                        outputMint:
+                          type: string
+                        outputAmount:
+                          type: string
+                      required:
+                        - inputMint
+                        - inputAmount
+                        - outputMint
+                        - outputAmount
+                required:
+                  - status
+                  - code
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  code:
+                    type: number
+                required:
+                  - error
+                  - code
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  code:
+                    type: number
+                required:
+                  - error
+                  - code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                signedTransaction:
+                  type: string
+                requestId:
+                  type: string
+              required:
+                - signedTransaction
+                - requestId
   /swap/v1/quote:
     get:
       tags:
