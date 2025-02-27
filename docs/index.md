@@ -18,7 +18,7 @@ _Last updated: 1 January 2025_
 
 - API will now be served through new hostnames.
 - API will now be served through API keys.
-- API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](./api-setup) to get started).
+- API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](/docs/api-setup) to get started).
 
 | Service Types          | Description                                              |
 | ---------------------- | -------------------------------------------------------- |
