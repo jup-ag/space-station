@@ -44,6 +44,10 @@ const sidebars = {
       id: 'privacy-policy',
     },
     {
+      type: 'doc',
+      id: 'support-guidelines',
+    },
+    {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
