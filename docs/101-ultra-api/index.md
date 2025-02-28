@@ -17,6 +17,7 @@ The Ultra API is a new Swap API that allows you to request for swap orders and e
 - Execute swap order seamlessly in a single API call.
 - Handle the complexities of RPC connections, transaction landing, slippage protection and more.
 - Provide world class customer support to your users, please refer to the [Support Guidelines](/docs/support-guidelines) for more information.
+- Ultra API takes 0.1% (or 0.05% depending on the tokens) of the swap amount as a fee.
 
 ## How to swap with Ultra API
 
