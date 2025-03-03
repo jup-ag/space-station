@@ -44,11 +44,39 @@ const sidebars = {
       id: 'privacy-policy',
     },
     {
+      type: 'doc',
+      id: 'support-guidelines',
+    },
+    {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
   swap: [
+    {
+      type: 'category',
+      label: 'Ultra API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'ultra-api/index',
+        },
+        {
+          type: 'doc',
+          id: 'ultra-api/get-order',
+        },
+        {
+          type: 'doc',
+          id: 'ultra-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
     {
       type: 'category',
       label: 'Swap API',
