@@ -9,15 +9,14 @@ title: "About Ultra API"
     <meta name="twitter:card" content="summary" />
 </head>
 
-The Ultra API is a new Swap API that allows you to request for swap orders and execute them seamlessly.
+The Ultra API is built on top of the Swap API, with additional features to support seamless integration and execution of swap orders with Jupiter Swap.
 
 ## Features
 
 - Request for swap orders from both Jupiter DEX Routing Engine and Jupiter Z (RFQ).
 - Execute swap order seamlessly in a single API call.
-- Handle the complexities of RPC connections, transaction landing, slippage protection and more.
+- We handle the complexities of RPC connections, transaction landing, slippage protection and more.
 - Provide world class customer support to your users, please refer to the [Support Guidelines](/docs/support-guidelines) for more information.
-- Ultra API takes 0.1% (or 0.05% depending on the tokens) of the swap amount as a fee.
 
 ## How to swap with Ultra API
 
@@ -27,3 +26,17 @@ You can do it in just 2 steps:
 2. Post request to `/ultra/v1/order/execute` to execute the swap order and get the execution status.
 
 **Get started now with [Ultra API](/docs/ultra-api/get-order)**
+
+## FAQ
+
+**What is the fee for using Ultra API?**
+
+Ultra API takes 0.1% (or 0.05% depending on the tokens) of the swap amount as a fee.
+
+**What is the rate limit for Ultra API?**
+
+Currently, Ultra API has a rate limit of 120 requests per minute.
+
+**Can integrators take fees using Ultra API?**
+
+Currently no, we are working on it.
