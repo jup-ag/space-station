@@ -39,6 +39,10 @@ Ultra API takes 0.1% (or 0.05% depending on the tokens) of the swap amount as a 
 
 Currently, Ultra API has a rate limit of 120 requests per minute.
 
+:::info Portal API Keys
+Portal API Keys are not supported for Ultra API.
+:::
+
 **Can integrators take fees using Ultra API?**
 
 Currently no, we are working on it.
