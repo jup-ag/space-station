@@ -118,20 +118,29 @@ if (executeResponse.status === "Success") {
 
 The following is a list of error codes that can be returned by the `/execute` endpoint.
 
+### Ultra Endpoint Codes
+
 | Code | Description | Debugging |
 |------|-------------|-----------|
-| **Ultra Endpoint Codes** | | |
 | 0 | Success | - |
 | -1 | Missing cached order | `requestId` not found in cache, likely expired or not found |
 | -2 | Invalid signed transaction | `signedTransaction` is invalid, likely failed to sign the transaction correctly |
 | -3 | Invalid message bytes | `signedTransaction` is invalid, likely due to incorrect usage of `transaction` field in the order response |
-| **Aggregator Swap Type Codes** | | |
+
+### Aggregator Swap Type Codes
+
+| Code | Description | Debugging |
+|------|-------------|-----------|
 | -1000 | Failed to land | Transaction failed to land on the network |
 | -1001 | Unknown error | - |
 | -1002 | Invalid transaction | - |
 | -1003 | Transaction not fully signed | - |
 | -1004 | Invalid block height | - |
-| **RFQ Swap Type Codes** | | |
+
+### RFQ Swap Type Codes
+
+| Code | Description | Debugging |
+|------|-------------|-----------|
 | -2000 | Failed to land | - |
 | -2001 | Unknown error | - |
 | -2002 | Invalid payload | - |
