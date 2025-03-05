@@ -9,19 +9,19 @@ title: "Create Order"
     <meta name="twitter:card" content="summary" />
 </head>
 
-In this guide, we will walkthrough integrating our Limit Order (LO) program through our Limit Order API. LO can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
+In this guide, we will walkthrough integrating our Trigger Order program through our Trigger API. Trigger Order can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
 
-Before you get started, you might want to understand how our LO product works in this guide and get yourself set up in [Get Started](../1-get-started.md) guide with the necessary libraries and RPC connection.
+Before you get started, you might want to understand how our Trigger Order product works in this guide and get yourself set up in [Get Started](../1-get-started.md) guide with the necessary libraries and RPC connection.
 
 ## Let’s Get Started
 
-The root URL of the LO API is as such.
+The root URL of the Trigger API is as such.
 
 ```markdown
-https://api.jup.ag/limit/v2
+https://api.jup.ag/trigger/v1
 ```
 
-## Create Limit Order Transaction
+## Create Trigger Order Transaction
 
 This is a POST request to `/createOrder` endpoint. Similar to Swap API, you pass in the necessary parameters and our backend will create the Limit Order transaction for you to sign and send to the network seamlessly.
 

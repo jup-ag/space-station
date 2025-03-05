@@ -1,5 +1,5 @@
 [
-    {"to":"/docs/trigger-api/index","from":"/docs/swap-api/limit-order-api"},
+    {"to":"/docs/trigger-api","from":"/docs/swap-api/limit-order-api"},
 
     {"to":"/docs/old/additional-topics/audits","from":"/docs/additional-topics/audits"},
     {"to":"/docs/old/additional-topics/builder-tips","from":"/docs/additional-topics/builder-tips"},
