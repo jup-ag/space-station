@@ -1,5 +1,4 @@
 ---
-sidebar_label: "About Trigger API"
 description: "Start using Jupiter Trigger API to create, execute, cancel and view orders."
 title: "About Trigger API"
 ---

@@ -136,6 +136,23 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Spot Products',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          label: 'Trigger API',
+          id: 'trigger-api/index',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
       label: 'Debugging',
       collapsible: false,
       collapsed: false,
@@ -164,6 +181,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
+          label: 'About Trigger API',
           id: 'trigger-api/index',
         },
         {
