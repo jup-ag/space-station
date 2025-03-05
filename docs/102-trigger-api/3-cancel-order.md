@@ -9,6 +9,12 @@ title: "Cancel Order"
     <meta name="twitter:card" content="summary" />
 </head>
 
+The root URL of the Trigger API's cancel order endpoint is as such.
+
+```
+https://api.jup.ag/trigger/v1/cancelOrder
+```
+
 If you want to cancel order(s), you need to do these steps:
 
 1. Get a list of the order accounts you want to cancel via `/openOrders` endpoint.
@@ -22,12 +28,6 @@ If you want to cancel order(s), you need to do these steps:
 :::warning
 If no orders are specified, the API will return the transaction to cancel **ALL** open orders, batched in groups of 5 orders.
 :::
-
-The root URL of the Trigger API's cancel order endpoint is as such.
-
-```
-https://api.jup.ag/trigger/v1/cancelOrder
-```
 
 ## Cancel Order
 

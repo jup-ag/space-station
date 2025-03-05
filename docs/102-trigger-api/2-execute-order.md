@@ -9,13 +9,13 @@ title: "Execute Order"
     <meta name="twitter:card" content="summary" />
 </head>
 
-After getting the order transaction, you can sign and send to the network yourself or use the Trigger API's `/execute` endpoint to do it for you.
-
 The root URL of the Trigger API's execute endpoint is as such.
 
 ```
 https://api.jup.ag/trigger/v1/execute
 ```
+
+After getting the order transaction, you can sign and send to the network yourself or use the Trigger API's `/execute` endpoint to do it for you.
 
 ## Sign Transaction
 

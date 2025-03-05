@@ -9,23 +9,19 @@ title: "Create Order"
     <meta name="twitter:card" content="summary" />
 </head>
 
-In this guide, we will walkthrough integrating our Trigger Order program through our Trigger API. Trigger Order can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
-
-Before you get started, you might want to understand how our Trigger Order product works in this guide and get yourself set up in [Get Started](../1-get-started.md) guide with the necessary libraries and RPC connection.
-
 :::warning New Paths
  Please use the `/trigger/v1` path as `/limit/v2` path is being deprecated in favor of the new path.
 
 Currently, the `/limit/v2` path is still available via redirect, but if you have redirect disabled, you will need to update your API calls to use the `/trigger/v1` path immediately.
 :::
 
-## Let’s Get Started
+The root URL of the Trigger API's create order endpoint is as such.
 
-The root URL of the Trigger API is as such.
-
-```markdown
-https://api.jup.ag/trigger/v1
 ```
+https://api.jup.ag/trigger/v1/createOrder
+```
+
+In this guide, we will walkthrough integrating our Trigger Order program through our Trigger API. Trigger Order can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
 
 ## Create Order
 
