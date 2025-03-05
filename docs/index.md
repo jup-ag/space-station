@@ -48,6 +48,16 @@ _Last updated: 1 January 2025_
 | `https://tokens.jup.ag/tokens?tags=:tags`   | `https://api.jup.ag/tokens/v1/tagged/:tag`    |
 | `https://tokens.jup.ag/tokens_with_markets` | `https://api.jup.ag/tokens/v1/mints/tradable` |
 
+#### Trigger
+
+| Old Hostnames                               | New Hostnames                                 |
+| ------------------------------------------- | --------------------------------------------- |
+| `https://api.jup.ag/limit/v2/createOrder`   | `https://api.jup.ag/trigger/v1/createOrder`   |
+| `https://api.jup.ag/limit/v2/executeOrder`  | `https://api.jup.ag/trigger/v1/executeOrder`  |
+| `https://api.jup.ag/limit/v2/cancelOrder`   | `https://api.jup.ag/trigger/v1/cancelOrder`   |
+| `https://api.jup.ag/limit/v2/openOrders`    | `https://api.jup.ag/trigger/v1/openOrders`    |
+| `https://api.jup.ag/limit/v2/orderHistory`  | `https://api.jup.ag/trigger/v1/orderHistory`  |
+
 ## What's Old?
 
 - Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
