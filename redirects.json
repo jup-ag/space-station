@@ -1,4 +1,6 @@
 [
+    {"to":"/docs/old/trigger-api/index","from":"/docs/swap-api/limit-order-api"},
+
     {"to":"/docs/old/additional-topics/audits","from":"/docs/additional-topics/audits"},
     {"to":"/docs/old/additional-topics/builder-tips","from":"/docs/additional-topics/builder-tips"},
     {"to":"/docs/old/additional-topics/composing-with-versioned-transaction","from":"/docs/additional-topics/composing-with-versioned-transaction"},

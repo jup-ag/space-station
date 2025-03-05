@@ -1,11 +1,11 @@
 ---
-sidebar_label: "Limit Order API"
-description: "Use the Jupiter Limit Order API to create/cancel orders or view open/historical orders."
-title: "Limit Order API"
+sidebar_label: "Create Order"
+description: "Use the Jupiter Trigger API to create orders."
+title: "Create Order"
 ---
 
 <head>
-    <title>Limit Order API</title>
+    <title>Create Order</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
