@@ -22,7 +22,7 @@ This is a GET request to `/orderHistory` endpoint. The response is paginated for
 ```jsx
 const orderHistoryResponse = await (
     await fetch(
-        'https://api.jup.ag/limit/v2/orderHistory?wallet=ReplaceWithWallet'
+        'https://api.jup.ag/trigger/v1/orderHistory?wallet=ReplaceWithWallet'
     )
 ).json();
 ```

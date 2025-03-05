@@ -28,9 +28,9 @@ The current format will be deprecated in the future.
 ## Open Orders
 
 ```jsx
-const openOrderResponse = await (
+const openOrdersResponse = await (
     await fetch(
-        'https://api.jup.ag/limit/v2/openOrders?wallet=ReplaceWithWallet'
+        'https://api.jup.ag/trigger/v1/openOrders?wallet=ReplaceWithWallet'
     )
 ).json();
 ```

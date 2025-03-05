@@ -33,7 +33,7 @@ If no orders are specified, the API will return the transaction to cancel **ALL*
 
 ```jsx
 const cancelOrderResponse = await (
-    await fetch('https://api.jup.ag/limit/v2/cancelOrders', {
+    await fetch('https://api.jup.ag/trigger/v1/cancelOrders', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',

@@ -21,8 +21,6 @@ The root URL of the Trigger API's create order endpoint is as such.
 https://api.jup.ag/trigger/v1/createOrder
 ```
 
-In this guide, we will walkthrough integrating our Trigger Order program through our Trigger API. Trigger Order can be useful if you are building a trading bot, integrating into existing apps or for buying into tokens.
-
 ## Create Order
 
 This is a POST request to `/createOrder` endpoint, where you pass in the necessary parameters and our backend will create the transaction for you to sign and send to the network seamlessly.
