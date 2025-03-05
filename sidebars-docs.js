@@ -143,7 +143,7 @@ const sidebars = {
         {
           type: 'doc',
           label: 'Trigger API',
-          id: 'trigger-api/index',
+          id: 'trigger-api/create-order',
         },
       ],
     },
@@ -181,11 +181,7 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          label: 'About Trigger API',
-          id: 'trigger-api/index',
-        },
-        {
-          type: 'doc',
+          label: 'Create Order',
           id: 'trigger-api/create-order',
         },
         {

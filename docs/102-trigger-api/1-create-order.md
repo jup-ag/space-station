@@ -1,5 +1,4 @@
 ---
-sidebar_label: "Create Order"
 description: "Use the Jupiter Trigger API to create orders."
 title: "Create Order"
 ---
