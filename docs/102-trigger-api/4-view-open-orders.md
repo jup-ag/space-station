@@ -17,10 +17,12 @@ https://api.jup.ag/trigger/v1/openOrders
 
 This is a GET request to `/openOrders` endpoint. Underneath it, we are proxying the [getProgramAccounts](https://solana.com/docs/rpc/http/getprogramaccounts) RPC method and returning all order accounts associated to the specified wallet account.
 
+The response is paginated for every 10 orders and you can view different pages using the `page` parameter. The `hasMoreData` boolean will indicate if you have more data in the next page.
+
 :::warning Change of Response Format
 The `/openOrders` endpoint does not provide the same data format as `orderHistory` endpoint.
 
-We have added a query parameter `responseV2=1` to the endpoint to return the data in the same format as `orderHistory` endpoint. However, the `/openOrders` endpoint is not paginated.
+We have added a query parameter `responseV2=1` to the endpoint to return the data in the same format as `orderHistory` endpoint.
 
 The current format will be deprecated in the future.
 :::
