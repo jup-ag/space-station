@@ -76,6 +76,12 @@ if (executeResponse.status === "Success") {
 }
 ```
 
+:::warning
+Do note that the Recurring API currently does not support requesting data on open orders or order history.
+
+Hence, you will need to keep track of the order account in order to use the `cancelOrder` or `depositOrder` endpoints.
+:::
+
 **Example response of successful order:**
 
 ```json

@@ -19,6 +19,12 @@ The `/depositOrder` endpoint is used to deposit funds into a smart recurring ord
 
 ## Deposit Order
 
+If you want to deposit funds into a smart recurring order, you need to do these steps:
+
+1. Keep track of the order account that an account has opened.
+2. Use the order account to make a post request to the `/depositOrder` endpoint to get the transaction to deposit the order.
+3. Sign then send the transaction to the network either via `/execute` endpoint or by yourself.
+
 ```jsx
 const depositOrderResponse = await (
     await fetch('https://api.jup.ag/recurring/v1/smartDeposit', {

@@ -19,7 +19,7 @@ https://api.jup.ag/recurring/v1/cancelOrder
 
 If you want to cancel an order, you need to do these steps:
 
-1. Store/keep track of the order account that an account has opened.
+1. Keep track of the order account that an account has opened.
 2. Use the order account to make a post request to the `/cancelOrder` endpoint to get the transaction to cancel the order.
 3. Sign then send the transaction to the network either via `/execute` endpoint or by yourself.
 
