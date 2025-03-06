@@ -16,6 +16,10 @@
     text-decoration: none;
 }
 
+.navbar__title.mobile-hidden {
+    color: black;
+}
+
 .navbar__brand:hover {
     color: black;
 }
@@ -26,7 +30,7 @@
 
 .navbar__item.navbar__link.navbar__link--active {
     margin-right: 16px;
-    font-weight: 900;
+    font-weight: 00;
     color: black !important;
 }
 
@@ -95,4 +99,118 @@
 .navbar__items--right .navbar__item {
     display: block;
     padding: 0;
+}
+
+.dropdown--hoverable {
+    position: relative;
+}
+
+.navbar__item.dropdown .navbar__link:not([href]) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: rgb(48 66 86 / 0.4);
+    position: relative;
+}
+
+.dropdown--hoverable .dropdown__menu {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    background: white;
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: var(--ifm-border-radius);
+    box-shadow: var(--ifm-dropdown-shadow);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.dropdown--hoverable:hover .dropdown__menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown__link {
+    display: block;
+    padding: 0.75rem 2rem;
+    color: rgb(48 66 86 / 0.4);
+    text-decoration: none;
+    height: 48px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown__link:hover {
+    color: black;
+    font-weight: 900;
+    background: none;
+}
+
+.dropdown__link--active:hover {
+    color: black;
+    font-weight: 900;
+    background-color: ghostwhite;
+}
+
+.dropdown__link.dropdown__link--active {
+    color: black;
+    font-weight: 900;
+    background-color: ghostwhite;
+}
+
+.navbar__link-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: rgb(48 66 86 / 0.4);
+    position: relative;
+}
+
+.navbar__link-wrapper .navbar__link {
+    color: rgb(48 66 86 / 0.4);
+    font-weight: 600;
+    padding-right: 1.5rem; /* Make room for dropdown trigger */
+}
+
+.navbar__link:hover, .navbar__link--active {
+    color: black !important;
+    font-weight: 900 !important;
+}
+
+.dropdown__trigger {
+    position: absolute;
+    right: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    pointer-events: none; /* This ensures hover works properly */
+}
+
+.dropdown__trigger::after {
+    content: '▾';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* Mobile navbar sidebar menu styles */
+.menu__list--nested .menu__link {
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+
+.menu__list--nested .menu__link--active {
+    font-weight: 900;
+    color: black;
+}
+
+.menu__link--active {
+    font-weight: 900;
+    color: black;
 }

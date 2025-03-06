@@ -1,9 +1,18 @@
 export const navbarConfigs = {
     '/docs': [
       { to: '/docs/', label: 'API Setup', position: 'left' },
-      { to: '/docs/ultra-api/', label: 'Ultra API', position: 'left' },
-      { to: '/docs/swap-api/get-quote', label: 'Swap API', position: 'left' },
-      { to: '/docs/perp-api/', label: 'Perp API', position: 'left' },
+      {
+        to: '/docs/swap-api/get-quote',
+        label: 'APIs',
+        position: 'left',
+        items: [
+          { to: '/docs/ultra-api/', label: 'Ultra API', position: 'left' },
+          { to: '/docs/swap-api/get-quote', label: 'Swap API', position: 'left' },
+          { to: '/docs/trigger-api/create-order', label: 'Trigger API', position: 'left' },
+          { to: '/docs/recurring-api/create-order', label: 'Recurring API', position: 'left' },
+          { to: '/docs/perp-api/', label: 'Perp API', position: 'left' },
+        ]
+      },
       { to: '/docs/tool-kits/swap-terminal', label: 'Tool Kits', position: 'left' },
       { to: '/docs/utility/price-api', label: 'Utility', position: 'left' },
       { to: '/docs/api', label: 'API Reference', position: 'left' },

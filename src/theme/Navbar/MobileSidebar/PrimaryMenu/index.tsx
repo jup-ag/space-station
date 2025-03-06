@@ -56,13 +56,20 @@ export default function NavbarMobilePrimaryMenu(): JSX.Element {
           );
         }
 
+        const isActive = (location.pathname === item.to || 
+                         (location.pathname.startsWith(item.to + '/') && 
+                          location.pathname.split('/').length === item.to.split('/').length)) ||
+                         (item.to === '/docs/' && 
+                          location.pathname.startsWith('/docs/') && 
+                          location.pathname.split('/').length === 3);
+
         return (
           <li key={item.to} className="menu__list-item">
             <a
               href={item.to}
               className={clsx(
                 'menu__link',
-                location.pathname.startsWith(item.to) && 'menu__link--active'
+                isActive && 'menu__link--active'
               )}
             >
               {item.label}

@@ -70,7 +70,14 @@ function CustomNavbarContent() {
               className={clsx(
                 'navbar__item',
                 'navbar__link',
-                location.pathname.startsWith(item.to) && 'navbar__link--active'
+                ((location.pathname === item.to || 
+                  (location.pathname.startsWith(item.to + '/') && 
+                   location.pathname.split('/').length === item.to.split('/').length)) ||
+                 // Special case for API Setup: make it active for direct /docs/* pages
+                 (item.to === '/docs/' && 
+                  location.pathname.startsWith('/docs/') && 
+                  location.pathname.split('/').length === 3)) && 
+                'navbar__link--active'
               )}
               href={item.to}
             >
