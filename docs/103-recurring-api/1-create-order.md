@@ -28,6 +28,22 @@ The `createOrder` endpoint is used to create both types of orders based on the p
 
 Pass in the **`recurring`** object in the `params` field.
 
+:::note
+Some notes to help you understand the parameters.
+
+- The amount to be spent per cycle is calculated based on your input amount and the total number of orders.
+```
+Amount to be spent per cycle = inAmount / totalOrders
+e.g. 100 USDC / 10 orders = 10 USDC per order
+```
+
+- The total time to complete is definite as the amount to be spent per cycle is fixed.
+```
+Total time to complete = totalOrders * cycleFrequency
+e.g. 10 orders * 86_400 seconds = 864_000 seconds = 10 days
+```
+:::
+
 ```jsx
 const createOrderResponse = await (
     await fetch('https://api.jup.ag/recurring/v1/createOrder', {
@@ -42,7 +58,7 @@ const createOrderResponse = await (
             params: {
                 recurring: {
                     inAmount: 200000000, // Raw amount of input token to deposit now (before decimals)
-                    inAmountPerCycle: 100000000, // Raw amount of input token to deposit per cycle (before decimals)
+                    totalOrders: 10, // Total number of orders to execute
                     cycleFrequency: 300, // Cycle frequency in unix seconds
                     minPrice: null, // Minimum price or null
                     maxPrice: null, // Maximum price or null
@@ -57,6 +73,14 @@ const createOrderResponse = await (
 ### Smart Recurring Order
 
 Pass in the **`smartRecurring`** object in the `params` field.
+
+:::note
+Some notes to help you understand the parameters.
+
+- smartRecurring orders are opened indefinitely until the user closes them.
+- Once low on funds, the order will not be closed and can continue to execute if the user deposits more into the order. Refer to the [Deposit Order](/docs/recurring-api/deposit-order) endpoint to deposit more funds into the order.
+- The total time to complete is not definite as the amount to be spent per cycle is variable based on the USDC value of the input token.
+:::
 
 ```jsx
 const createSmartOrderResponse = await (
