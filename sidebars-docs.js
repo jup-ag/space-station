@@ -269,7 +269,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'recurring-api/deposit-smart-order',
+          id: 'recurring-api/deposit-order',
         },
       ],
     },
