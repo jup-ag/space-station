@@ -1,33 +1,39 @@
 ---
-sidebar_label: "Deposit Order"
-description: "Use the Jupiter Recurring API to deposit orders."
-title: "Deposit Order"
+sidebar_label: "Deposit Price Order"
+description: "Use the Jupiter Recurring API to deposit price-based orders."
+title: "Deposit Price Order"
 ---
 
 <head>
-    <title>Deposit Order</title>
+    <title>Deposit Price Order</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-The root URL of the Recurring API's execute endpoint is as such.
+The root URL of the Recurring API's deposit to a price-based order endpoint is as such.
 
 ```
-https://api.jup.ag/recurring/v1/depositOrder
+https://api.jup.ag/recurring/v1/priceDeposit
 ```
 
-The `/depositOrder` endpoint is used to deposit funds into a smart recurring order. As the smart recurring order is opened indefinitely until the user closes them, the user can deposit more funds into the order to continue executing.
+:::info
+As the price-based order is opened indefinitely until the user closes them, the user can deposit more funds into the order to continue executing.
+:::
 
 ## Deposit Order
 
-If you want to deposit funds into a smart recurring order, you need to do these steps:
+If you want to deposit funds into a price-based order, you need to do these steps:
 
-1. Keep track of the order account that an account has opened.
-2. Use the order account to make a post request to the `/depositOrder` endpoint to get the transaction to deposit the order.
+1. Get a list of the order accounts you want to deposit via `/getRecurringOrders` endpoint.
+2. Choose the order account to deposit by making a post request to the `/priceDeposit` endpoint to get the transaction to deposit into the order.
 3. Sign then send the transaction to the network either via `/execute` endpoint or by yourself.
 
+:::info Get Recurring Orders
+[Refer to the `/getRecurringOrders` section](/docs/recurring-api/get-recurring-orders) to prepare the order account you want to deposit into.
+:::
+
 ```jsx
-const depositOrderResponse = await (
-    await fetch('https://api.jup.ag/recurring/v1/smartDeposit', {
+const priceDepositResponse = await (
+    await fetch('https://api.jup.ag/recurring/v1/priceDeposit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

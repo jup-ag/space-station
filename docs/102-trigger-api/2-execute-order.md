@@ -62,10 +62,8 @@ After making the post request to the `/execute` endpoint, you will receive a res
 ```jsx
 if (executeResponse.status === "Success") {
     console.log('Order executed successfully:', JSON.stringify(executeResponse, null, 2));
-    console.log(`https://solscan.io/tx/${executeResponse.signature}`);
 } else {
     console.error('Order execution failed:', JSON.stringify(executeResponse, null, 2));
-    console.log(`https://solscan.io/tx/${executeResponse.signature}`);
 }
 ```
 
