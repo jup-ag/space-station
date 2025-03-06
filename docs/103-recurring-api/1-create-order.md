@@ -19,14 +19,14 @@ https://api.jup.ag/recurring/v1/createOrder
 This is a POST request to `/createOrder` endpoint, where you pass in the necessary parameters and our backend will create the transaction for you to sign and send to the network seamlessly.
 
 :::info
-The Recurring API supports both Recurring and Smart Recurring strategies.
+The Recurring API supports both Time-based and Price-based strategies.
 
 The `createOrder` endpoint is used to create both types of orders based on the parameters you pass in.
 :::
 
-### Recurring Order
+### Time-based Order
 
-Pass in the **`recurring`** object in the `params` field.
+Pass in the **`time`** object in the `params` field.
 
 :::note
 Some notes to help you understand the parameters.
@@ -56,9 +56,9 @@ const createOrderResponse = await (
             inputMint: "So11111111111111111111111111111111111111112",
             outputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
             params: {
-                recurring: {
+                time: {
                     inAmount: 200000000, // Raw amount of input token to deposit now (before decimals)
-                    totalOrders: 10, // Total number of orders to execute
+                    numberOfOrders: 10, // Total number of orders to execute
                     cycleFrequency: 300, // Cycle frequency in unix seconds
                     minPrice: null, // Minimum price or null
                     maxPrice: null, // Maximum price or null
@@ -70,20 +70,21 @@ const createOrderResponse = await (
 ).json();
 ```
 
-### Smart Recurring Order
+### Price-based Order
 
-Pass in the **`smartRecurring`** object in the `params` field.
+Pass in the **`price`** object in the `params` field.
 
 :::note
 Some notes to help you understand the parameters.
 
-- smartRecurring orders are opened indefinitely until the user closes them.
-- Once low on funds, the order will not be closed and can continue to execute if the user deposits more into the order. Refer to the [Deposit Order](/docs/recurring-api/deposit-order) endpoint to deposit more funds into the order.
-- The total time to complete is not definite as the amount to be spent per cycle is variable based on the USDC value of the input token.
+- Price-based orders are opened indefinitely until the user closes them.
+- Once low on funds, the order will not be closed and can continue to execute if the user deposits more into the order. Refer to the [Deposit Price Order](/docs/recurring-api/deposit-price-order) endpoint to deposit more funds into the order.
+- Alternatively, the user can also withdraw funds from the order without closing it. Refer to the [Withdraw Price Order](/docs/recurring-api/withdraw-price-order) endpoint to withdraw funds from the order.
+- The total time to use up all funds is not definite as the amount to be spent per cycle is variable based on the USDC value of the input token.
 :::
 
 ```jsx
-const createSmartOrderResponse = await (
+const createOrderResponse = await (
     await fetch('https://api.jup.ag/recurring/v1/createOrder', {
         method: 'POST',
         headers: {
@@ -94,7 +95,7 @@ const createSmartOrderResponse = await (
             inputMint: "So11111111111111111111111111111111111111112",
             outputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
             params: {
-                smartRecurring: {
+                price: {
                     depositAmount: 200000000, // Raw amount of input token to deposit now (before decimals)
                     incrementUsdcValue: 1000000, // Raw amount of USDC value to increment per cycle (before decimals)
                     orderInterval: 300, // Cycle frequency in unix seconds

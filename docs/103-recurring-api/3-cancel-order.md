@@ -17,11 +17,15 @@ https://api.jup.ag/recurring/v1/cancelOrder
 
 ## Cancel Order
 
-If you want to cancel an order, you need to do these steps:
+If you want to cancel order(s), you need to do these steps:
 
-1. Keep track of the order account that an account has opened.
-2. Use the order account to make a post request to the `/cancelOrder` endpoint to get the transaction to cancel the order.
+1. Get a list of the order accounts you want to cancel via `/getRecurringOrders` endpoint.
+2. Choose the order account to cancel by making a post request to the `/cancelOrder` endpoint to get the transaction to cancel the order.
 3. Sign then send the transaction to the network either via `/execute` endpoint or by yourself.
+
+:::info Get Recurring Orders
+[Refer to the `/getRecurringOrders` section](/docs/recurring-api/get-recurring-orders) to prepare the list of order accounts you want to cancel.
+:::
 
 ```jsx
 const cancelOrderResponse = await (
@@ -31,9 +35,9 @@ const cancelOrderResponse = await (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            order: "5T3NGmbD8R59UWEaRaDq79r7fDxDUNidze3CVT94vrUb",
             user: wallet.publicKey.toBase58(),
-            params: "recurring"
+            order: "5T3NGmbD8R59UWEaRaDq79r7fDxDUNidze3CVT94vrUb",
+            params: "time" // pass in either "time" or "price" based on the type of order
         }),
     })
 ).json();

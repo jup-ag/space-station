@@ -269,7 +269,15 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'recurring-api/deposit-order',
+          id: 'recurring-api/deposit-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/withdraw-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/get-recurring-orders',
         },
       ],
     },

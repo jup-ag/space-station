@@ -39,12 +39,12 @@ const signedTransaction = Buffer.from(transaction.serialize()).toString('base64'
 
 ## Execute Order
 
-By making a post request to the /execute endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
+By making a post request to the `/execute` endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
 
 :::info
 Do note that you need both the signed transaction and the order id to execute the order.
 
-The order id is returned in the `createOrder` response.
+The order id is returned in the [`createOrder` response](/docs/recurring-api/create-order).
 :::
 
 ```jsx
@@ -69,18 +69,10 @@ After making the post request to the `/execute` endpoint, you will receive a res
 ```jsx
 if (executeResponse.status === "Success") {
     console.log('Order executed successfully:', JSON.stringify(executeResponse, null, 2));
-    console.log(`https://solscan.io/tx/${executeResponse.signature}`);
 } else {
     console.error('Order execution failed:', JSON.stringify(executeResponse, null, 2));
-    console.log(`https://solscan.io/tx/${executeResponse.signature}`);
 }
 ```
-
-:::warning
-Do note that the Recurring API currently does not support requesting data on open orders or order history.
-
-Hence, you will need to keep track of the order account in order to use the `cancelOrder` or `depositOrder` endpoints.
-:::
 
 **Example response of successful order:**
 
