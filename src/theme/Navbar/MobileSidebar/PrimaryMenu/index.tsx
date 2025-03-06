@@ -1,82 +1,81 @@
 import React from 'react';
 import { useLocation } from '@docusaurus/router';
-import clsx from 'clsx';
+import { useThemeConfig } from '@docusaurus/theme-common';
 import { navbarConfigs } from '../../../../constant';
+import clsx from 'clsx';
 
-function getNavbarItems(locationPath: string) {
-  const defaultItems = navbarConfigs['/']; // Default items for the root
-  return Object.keys(navbarConfigs).reduce((acc, path) => {
-    if (path === '/' && locationPath === '/') {
+// Import the isPathActive function from the parent component
+import { isPathActive } from '../index';
+
+export default function NavbarMobileSidebarPrimaryMenu(): JSX.Element {
+  const location = useLocation();
+  
+  // Determine which navbar config to use based on the current path
+  const navbarItems = Object.keys(navbarConfigs).reduce((acc, path) => {
+    if (path === '/' && location.pathname === '/') {
       return navbarConfigs[path];
-    } else if (locationPath.startsWith(path) && path !== '/') {
+    } else if (location.pathname.startsWith(path) && path !== '/') {
       return navbarConfigs[path];
     }
     return acc;
-  }, defaultItems);
-}
-
-export default function NavbarMobilePrimaryMenu(): JSX.Element {
-  const location = useLocation();
-  const navbarItems = getNavbarItems(location.pathname);
+  }, []);
 
   return (
-    <ul className="menu__list">
-      {navbarItems.map((item) => {
-        if (item.items) {
-          const isActive = location.pathname.startsWith(item.to) || 
-                          item.items.some(subItem => location.pathname.startsWith(subItem.to));
+    <div className="menu">
+      <ul className="menu__list">
+        {navbarItems.length > 0 ? (
+          navbarItems.map((item) => {
+            if (item.items) {
+              return (
+                <li key={item.label} className="menu__list-item">
+                  <a
+                    href={item.to}
+                    className={clsx(
+                      'menu__link',
+                      (isPathActive(item.to, location, navbarItems) || 
+                       item.items?.some(subItem => isPathActive(subItem.to, location, navbarItems))) && 
+                      'menu__link--active'
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                  <ul className="menu__list">
+                    {item.items.map((subItem) => (
+                      <li key={subItem.to} className="menu__list-item">
+                        <a
+                          className={clsx(
+                            'menu__link',
+                            isPathActive(subItem.to, location, navbarItems) && 'menu__link--active'
+                          )}
+                          href={subItem.to}
+                        >
+                          {subItem.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
 
-          return (
-            <li key={item.label} className={clsx('menu__list-item')}>
-              <a
-                href={item.to}
-                className={clsx(
-                  'menu__link',
-                  isActive && 'menu__link--active'
-                )}
-              >
-                {item.label}
-              </a>
-              <ul className="menu__list menu__list--nested">
-                {item.items.map((subItem) => (
-                  <li key={subItem.to} className="menu__list-item">
-                    <a
-                      href={subItem.to}
-                      className={clsx(
-                        'menu__link',
-                        location.pathname.startsWith(subItem.to) && 'menu__link--active'
-                      )}
-                    >
-                      {subItem.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          );
-        }
-
-        const isActive = (location.pathname === item.to || 
-                         (location.pathname.startsWith(item.to + '/') && 
-                          location.pathname.split('/').length === item.to.split('/').length)) ||
-                         (item.to === '/docs/' && 
-                          location.pathname.startsWith('/docs/') && 
-                          location.pathname.split('/').length === 3);
-
-        return (
-          <li key={item.to} className="menu__list-item">
-            <a
-              href={item.to}
-              className={clsx(
-                'menu__link',
-                isActive && 'menu__link--active'
-              )}
-            >
-              {item.label}
-            </a>
-          </li>
-        );
-      })}
-    </ul>
+            return (
+              <li key={item.to} className="menu__list-item">
+                <a
+                  className={clsx(
+                    'menu__link',
+                    isPathActive(item.to, location, navbarItems) && 'menu__link--active'
+                  )}
+                  href={item.to}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        ) : (
+          <li className="menu__list-item">No items to display</li>
+        )}
+      </ul>
+    </div>
   );
 }
