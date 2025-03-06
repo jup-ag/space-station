@@ -72,7 +72,7 @@ const createSmartOrderResponse = await (
             params: {
                 smartRecurring: {
                     depositAmount: 200000000, // Raw amount of input token to deposit now (before decimals)
-                    incrementUsdcValue: 1, // USDC value to increment per cycle
+                    incrementUsdcValue: 1000000, // Raw amount of USDC value to increment per cycle (before decimals)
                     orderInterval: 300, // Cycle frequency in unix seconds
                     startAt: null, // Unix timestamp of start time or null - null starts immediately
                 },
@@ -94,9 +94,21 @@ The response from the `createOrder` endpoint is as follows.
 Do note that both recurring and smart recurring orders will return the same response structure.
 :::
 
+**Successful Example Response**
+
 ```json
 {
   "id": "1d1f3586-eb72-4337-8c7e-1bbb9870ee4b",
   "tx": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgNRL7cu4ZNuxh1wI9W7GVURyr3A06dH348HDpIQzcAJ4o8bJlCl2Wc6MzpcvkV0INcJ7u23GV89soNJ/8i5QPLuk+NOvCjbAbTzOyNoSWuhO5fYq+hNGrGQ2JdDy82Gw0bv28tkzlck1LrvR2ACB/vAL7AIssgVYeCOBbHfYskycnT/icRrhr4nbjk0DzDqAkM4ntju8NXHrILEpE0TUKNKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZGb+UhFzL/7K26csOb57yM5bvF9xJrLEObOkAAAAAGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpjJclj04kifG7PRApFI4NgwtaE5na/xCEBI572Nvp+FmwdagGY3nKb+NwN/8MKNVUpuTWNtnoUYz+brrpP1I2/rUn1F1kDj7BX2FdWw4jpUqWuD8Lggv3BjXyQ0rGQMwExvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWG7njQ5EK9zaEM059+IQanso4m+YzpvFchLCtBxOCdR5QcGAAUCGSwAAAYACQNADQMAAAAAAAkGAAMABwUIAQEFAgADDAIAAAAAwusLAAAAAAgBAwERCw0EAAAHDAMBAgUICQoLK453K22iNAuxgF7IZwAAAAAAwusLAAAAAADh9QUAAAAALAEAAAAAAAAAAAAIBAMAAAABCQ=="
+}
+```
+
+**Failed Example Response**
+
+```json
+{
+  "code": 400,
+  "message": "Order is valued at 2.99 USDC, minimum is 100.00 USDC",
+  "status": "Bad Request"
 }
 ```
