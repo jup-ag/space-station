@@ -370,28 +370,6 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
-  other: [
-    {
-      type: 'category',
-      label: 'Utility',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'utility/price-api',
-        },
-        {
-          type: 'doc',
-          id: 'utility/token-api',
-        },
-      ],
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-  ],
 };
 
 module.exports = sidebars;

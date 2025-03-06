@@ -10,11 +10,12 @@ export const navbarConfigs = {
           { to: '/docs/swap-api/get-quote', label: 'Swap API', position: 'left' },
           { to: '/docs/trigger-api/create-order', label: 'Trigger API', position: 'left' },
           { to: '/docs/recurring-api/create-order', label: 'Recurring API', position: 'left' },
+          { to: '/docs/token-api/', label: 'Token API', position: 'left' },
+          { to: '/docs/price-api/', label: 'Price API', position: 'left' },
           { to: '/docs/perp-api/', label: 'Perp API', position: 'left' },
         ]
       },
       { to: '/docs/tool-kits/swap-terminal', label: 'Tool Kits', position: 'left' },
-      { to: '/docs/utility/price-api', label: 'Utility', position: 'left' },
       { to: '/docs/api', label: 'API Reference', position: 'left' },
     ],
     '/guides': [
