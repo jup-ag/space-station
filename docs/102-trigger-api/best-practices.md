@@ -9,7 +9,7 @@ title: "Best Practices"
     <meta name="twitter:card" content="summary" />
 </head>
 
-Some best practices when using the Trigger Order program.
+Some best practices when using the Trigger API.
 
 | Item | Recommendation |
 | --- | --- |

@@ -273,6 +273,22 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/best-practices',
+        },
+      ],
+    },
   ],
   perp: [
     {
