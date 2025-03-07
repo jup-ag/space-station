@@ -1,0 +1,73 @@
+---
+id: new
+title: "new"
+description: "Returns new tokens with metadata, created at timestamp and markets."
+sidebar_label: "new"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVUtvGjEQ/iuWT61EdiGteuAWtVXVKmmqPNQDQcTsDqxh13bs2SQU8d874yU8Ak24tCoHwI+Z+b5vHp5LVOMguz15ZadgZL8lcwiZ1w61NbIrLwBrb4Iw8CCQrwTxoLEQFaDKFaqWyDwohFwoFKgrCKgqJ5TJRaX8FDAkN+bGXMAIPDkQvRhHnPz4KnKb9d+k9B3SGnWpcZbGCEfK6bdiZL2orAehDf2tFONJZEs65RUFB8+o59LQgmCWutJIp5ox39XgZ/I5k8I+ECQzEx4y6/PAaGyNrkYKIbAA8e3y/DuZebirtYdcdkeqDNCSISugUrI7lzhzwGJpgzAGT5dNXZasWoORwtDRh/dy0ZLwSEKUDK7TpvUKqh2NAryCldE09wgb4eS1h1CXKGgvEdeBBCfUmTWT2mRsFdNyY26jErdMzqkxkKW39biIHjhfifgEI0WOIv/236B7THT77Dc4awIE9nTcbvPPNstTHZBobtVWobNCKEo7eqqvYQlNuV2en1J0ootgkD0p50qdxapIJ4HdzXeAS+W9YnE1QhU29u1wAhluce/JiqhwjKacB4oXT1U+qF2+3o2JJJ1m1dCWMXeZrkg7+js19sEMlpXPQjlvHXjUjQwbztdoAnptxnJDVI51xM3Ewq68ry3W+djMw7tjvj7yAL9goGosrKee2szjKlKTxsVzvK8rt/SwINPSju2g9vrlAPsUPJh6TMlu8ObgUIpN2+1xsszfXnKoMdbyGQX6SQX4kRNHtXZFyE5MfrYUbBE/kWVhqYrkOHa2U1jQohlnIb3vpFTiXDHg758GV+1LHkqILnTTlEZeMqldosZpbB4eehHZEsdqapIXdtE0UCdpJ+2d4XEZG1FsbCZM19mANP/Y63ISNaC2jOfrHvv/Rv8yTQiPmLpS0fwkWlHH+VLynmyAskodLgJiSGoWRJ0P5/OhCnDty8WCt5vZy8nIdeBZs56BfxTl4FdkL9gpzDYeq3tV1nwnvg6HQ/iXj8MLLFbv2JpGnxdeMw+SlZuvAJXToGKNG6uTLAO3abUzyNnLqp++fL6iJvsNwqP7+Q==
+sidebar_class_name: "get api-method"
+info_path: docs/token-api/token-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"new"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tokens/v1/new"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns new tokens with metadata, created at timestamp and markets.
+
+Refer to [Token API doc](/docs/utility/token-api) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","description":"how many records to output in the JSON","required":false,"schema":{"type":["integer","null"],"format":"int64"},"example":"10"},{"name":"offset","in":"query","description":"the offset into the result set. Used in conjunction with\n`limit` to page through the data. Defaults to 0","required":false,"schema":{"type":["integer","null"],"format":"int64"},"example":"20"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of new tokens which are tradable with SOL","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","required":["mint","created_at","metadata_updated_at","name","symbol","decimals","known_markets"],"properties":{"created_at":{"type":"string","format":"date-time"},"decimals":{"type":"integer","format":"int32"},"freeze_authority":{"type":["string","null"]},"known_markets":{"type":"array","items":{"type":"string"}},"logo_uri":{"type":["string","null"]},"metadata_updated_at":{"type":"string","format":"date-time"},"mint":{"type":"string"},"mint_authority":{"type":["string","null"]},"name":{"type":"string"},"symbol":{"type":"string"}},"title":"MintWithCreationTimeAndMarkets"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

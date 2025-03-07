@@ -1,0 +1,71 @@
+---
+id: tagged
+title: "tagged"
+description: "Returns a list of mints with specified tag(s) along with their metadata"
+sidebar_label: "tagged"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v2zAM/SuCTh3gxW13863AhqGHAUPXnoIiUGzGVitLqkRnzQz/95FW4qRNFuywnawP8vGReqR7iaqOspjLe/cMVj5msoJYBu1ROysLeQfYBRuFEkZHFG4lWm0xip8aGxE9lHqloRKEchE/CGWcrdMdNqCDaAFVpVDJTHoVFG0hcLheWtoQPjkuGJkMNMfzChv5nsTNFNxZEI5gXQCOGTNRurZVIgLDI1Qzcd9AMteRSYjOEgj7ImcYJ3YxIcwoWoCXTgeoZIGhg0zGsoFWyaKXuPHMMmLQtpZDJuFVtd7szkrMDHEfHhkjemcjRHa7vrzkz9ssJmLHXEYmotZreoJMls4iWGQE5b3RpWKE/CkyTH/Mzi2foMQ3ecylqiqiFOl0rDQltWmXzoy1LXWrDF+Nj08BA3DtFopB4JWCRwoYWQ0+OA8BdcprB3qqMgcgR9eZXLnQ8o0kNcBH1ESJfCqlzWaxdqZjMey85tJ27RICc++MYRp7d9ctTfLdpbGPRsqEevSb7Ono03V6uCmtoqf9KgD8goXqsHFB4+Yw/MQ6hSdr42r3cHd73og7428B2fZdsY7M/lS11DonnoBeqlWWpLOowEBNPudJbCVxCiqNhelChaA23KMIbTwHOrCvxrFDvlGOt7Y0XUUmn7ukZBLSMIxmNAwaR1qVNeA4H6jzC5mn1sjXVzlxqKHKe/oOLGAI69306ALRlg2ij0WeK69nT52fqTofe1HblRtJbomMs03cfL8lFIZI/Xg1u5xdHs2aH2N/i4PD2VhaF5Fqy6j7yUXs3vv3++79h7Nz+wpIIs69UTQpidJYg35bt7lMdeMMr1JnJ3YFrVhKDSXAZn2/VBEeghkGPn7pIJBU57Rcq6AVNxcXuNKR1/Q8K+oxOJPlxd126nwQ/3tOnyzDTqGW9blWpuMdLZ9hc/h/GVjwDaiK5gMnmK5vyhI8HjgeDVzW06TUr1/uSb2/AZ7jeX0=
+sidebar_class_name: "get api-method"
+info_path: docs/token-api/token-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"tagged"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tokens/v1/tagged/{tag}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of mints with specified tag(s) along with their metadata
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"tag_list","in":"path","description":"A list of one or more tags, comma separated. The list is the union of tokens with these tags.","required":true,"schema":{"type":"string"},"example":"strict,lst"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The list of tokens with the tags given","content":{"application/json":{"schema":{"type":"object","required":["address","name","symbol","decimals","tags","created_at","extensions"],"properties":{"address":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"daily_volume":{"type":["number","null"],"format":"double"},"decimals":{"type":"integer","format":"int32"},"extensions":{},"freeze_authority":{"type":["string","null"]},"logoURI":{"type":["string","null"]},"mint_authority":{"type":["string","null"]},"minted_at":{"type":["string","null"],"format":"date-time"},"name":{"type":"string"},"permanent_delegate":{"type":["string","null"]},"symbol":{"type":"string"},"tags":{"type":"array","items":{"type":["string","null"]}}},"title":"MintIncludingDuplicates"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

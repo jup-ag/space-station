@@ -1,0 +1,73 @@
+---
+id: mints-in-market
+title: "mints in market"
+description: "Returns the mints involved in a market."
+sidebar_label: "mints in market"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVd9P2zAQ/lciP4FUmsIeNuUNbWODCYQKncQKqtzk2pgmtrEv3boo//vunP6Cdmzay/qQOLbv8+fvvrvWAuXUi2Qobs0MtHjoiAx86pRFZbRIRB+wctpHmENUKo0+UnpuijlkNIhkVEo3A+ze63vdhwm4CE00DFjR6fV5lJn04SCmp48rVIXCRYy8eCStOowmxkWlcUBQNCwln9kVHWGlkyUgOGZWC00fREVmmQPvaV0xMysxFy/pXgY60Warg6dKOchEgq6CjvBpDqUUSS1wYRnVo1N6KpqOgB+ytAXPXQyuF+q7u7s487PBtfos3+Yz6L/7OsBTODM3d+MvkH278h/m769E88CHeGu0B8+4J70ev/5FRuKbGo2gkRGktYVKgyjxo2eYepe+dE4uWBKE0m/Nm/EjpPhMgOGWgkFSUmNRjk0RVExVKQteCoYgIg4kQjaSDAI/iJQnIp4dYp2x4FC1912B7pN0C2RnuSPanNNMRpuOUBElismkKhYjEqfirK+ihkJX5Rgcc6+Kgmlswk01LtrY1TU2p5HYMA1x6/009eakzfj6WklN3xMH8BNGssLcOPLq9vFr1u3xtLswUzPon7++iZP9t4C894VYO9t+p1pbI3tSQJkqpSZLjTIoYEoxr5NYWmIfVNsq/mS9XdCGYxWG0rqkO4om/OjCQLqQM8U0eD9UdCLaDuHj+XHclkVct+/R0mpNHEqI/QtuvuoSlSPWIke0Polj6i/dx8p25TQOJcodJnBc8li3KEJhiLZMj7u9bm+nqdyEvhBtTXaDssYjScuoyw61quxNOT8DqjfV/X/66jJxSL6PbSGpjdI1gm71UvyhaMVnVY7psb5I8jwFonVraAc56cCRdT2WHgauaBqefqrAkeGHNJxLpySXKOcpU57HlPYJVSq8otFBf9m7DqOdvr73KitjarblXBYVf9FwBout/4+GbZ6DzKgrMKF29TRNweJW3E77ZRutHfvp4y3Z+BdN+H4y
+sidebar_class_name: "get api-method"
+info_path: docs/token-api/token-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"mints in market"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tokens/v1/market/{market_address}/mints"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the mints involved in a market.
+
+Refer to [Token API doc](/docs/utility/token-api) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"address","in":"path","description":"Market address","required":true,"schema":{"type":"string"},"example":"JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns the mints involved in a market","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","required":["address","name","symbol","decimals","tags","created_at","extensions"],"properties":{"address":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"daily_volume":{"type":["number","null"],"format":"double"},"decimals":{"type":"integer","format":"int32"},"extensions":{},"freeze_authority":{"type":["string","null"]},"logoURI":{"type":["string","null"]},"mint_authority":{"type":["string","null"]},"minted_at":{"type":["string","null"],"format":"date-time"},"name":{"type":"string"},"permanent_delegate":{"type":["string","null"]},"symbol":{"type":"string"},"tags":{"type":"array","items":{"type":["string","null"]}}},"title":"Mint"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

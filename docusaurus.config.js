@@ -79,15 +79,9 @@ const config = {
     //   }),
     // ],
     [
-      "docusaurus-preset-openapi",
-      /** @type {import('docusaurus-preset-openapi').Options} */
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        api: {
-          path: "openapi/api.yaml",
-          routeBasePath: "docs/api",
-          sidebarCollapsible: false,
-          sidebarCollapsed: false,
-        },
         docs: {
           id: 'docs',
           lastVersion: 'current',
@@ -108,7 +102,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
-          // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         theme: {
           customCss: [
@@ -117,12 +111,6 @@ const config = {
             require.resolve("./src/css/sidebar.css"),
             require.resolve("./src/css/searchbar.css"),
           ],
-        },
-        proxy: {
-          "/proxy": {
-            target: "http://localhost:8091",
-            pathRewrite: { "^/proxy": "" },
-          },
         },
       }),
     ],
@@ -139,6 +127,43 @@ const config = {
         sidebarCollapsed: true,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
+    ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'docs',
+        config: {
+          ultra: {
+            specPath: "openapi/ultra.yaml",
+            outputDir: "docs/ultra-api",
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+          swap: {
+            specPath: "openapi/swap.yaml",
+            outputDir: "docs/swap-api",
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+          token: {
+            specPath: "openapi/token.yaml",
+            outputDir: "docs/token-api",
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+          price: {
+            specPath: "openapi/price.yaml",
+            outputDir: "docs/price-api",
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
     ],
     [
       "@docusaurus/plugin-client-redirects",
@@ -209,6 +234,7 @@ const config = {
       },
     }
   ),
+  themes: ['docusaurus-theme-openapi-docs'],
 };
 
 module.exports = config;

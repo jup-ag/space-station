@@ -1,0 +1,305 @@
+openapi: 3.0.3
+info:
+  title: Token API
+  version: 1.0.0
+  description: Sample description.
+
+servers:
+  - url: https://api.jup.ag/
+
+tags:
+  - name: Token
+    description: Endpoints related to Tokens
+
+paths:
+  /tokens/v1/token/{mint_address}:
+    get:
+      tags:
+      - Token
+      summary: token information
+      description: "Returns the specified mint addresse's token information and metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      parameters:
+      - name: address
+        in: path
+        description: The token's mint address
+        required: true
+        schema:
+          type: string
+        example: So11111111111111111111111111111111111111112
+      responses:
+        '200':
+          description: More information about a particular token
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/MintIncludingDuplicates"
+  /tokens/v1/market/{market_address}/mints:
+    get:
+      tags:
+      - Token
+      summary: mints in market
+      description: "Returns the mints involved in a market.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      parameters:
+      - name: address
+        in: path
+        description: Market address
+        required: true
+        schema:
+          type: string
+        example: JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
+      responses:
+        '200':
+          description: Returns the mints involved in a market
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/Mint"
+  /tokens/v1/mints/tradable:
+    get:
+      tags:
+      - Token
+      summary: tradable
+      description: "Returns a list of all mints tradable via Jupiter routing.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      responses:
+        '200':
+          description: List of mints which are tradable
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /tokens/v1/tagged/{tag}:
+    get:
+      tags:
+      - Token
+      summary: tagged
+      description: Returns a list of mints with specified tag(s) along with their metadata
+      parameters:
+      - name: tag_list
+        in: path
+        description: A list of one or more tags, comma separated. The list is the
+          union of tokens with these tags.
+        required: true
+        schema:
+          type: string
+        example: strict,lst
+      responses:
+        '200':
+          description: The list of tokens with the tags given
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/MintIncludingDuplicates"
+  /tokens/v1/new:
+    get:
+      tags:
+      - Token
+      summary: new
+      description: "Returns new tokens with metadata, created at timestamp and markets.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      parameters:
+      - name: limit
+        in: query
+        description: how many records to output in the JSON
+        required: false
+        schema:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        example: '10'
+      - name: offset
+        in: query
+        description: |-
+          the offset into the result set. Used in conjunction with
+          `limit` to page through the data. Defaults to 0
+        required: false
+        schema:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        example: '20'
+      responses:
+        '200':
+          description: List of new tokens which are tradable with SOL
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/MintWithCreationTimeAndMarkets"
+  /tokens/v1/all:
+    get:
+      tags:
+      - Token
+      summary: all
+      description: "Returns all tokens with all metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      responses:
+        '200':
+          description: List of tokens which are tradable
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/Mint"
+
+components:
+  schemas:
+    Mint:
+      type: object
+      required:
+      - address
+      - name
+      - symbol
+      - decimals
+      - tags
+      - created_at
+      - extensions
+      properties:
+        address:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        daily_volume:
+          type:
+          - number
+          - 'null'
+          format: double
+        decimals:
+          type: integer
+          format: int32
+        extensions: {}
+        freeze_authority:
+          type:
+          - string
+          - 'null'
+        logoURI:
+          type:
+          - string
+          - 'null'
+        mint_authority:
+          type:
+          - string
+          - 'null'
+        minted_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        name:
+          type: string
+        permanent_delegate:
+          type:
+          - string
+          - 'null'
+        symbol:
+          type: string
+        tags:
+          type: array
+          items:
+            type:
+            - string
+            - 'null'
+    MintIncludingDuplicates:
+      type: object
+      required:
+      - address
+      - name
+      - symbol
+      - decimals
+      - tags
+      - created_at
+      - extensions
+      properties:
+        address:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        daily_volume:
+          type:
+          - number
+          - 'null'
+          format: double
+        decimals:
+          type: integer
+          format: int32
+        extensions: {}
+        freeze_authority:
+          type:
+          - string
+          - 'null'
+        logoURI:
+          type:
+          - string
+          - 'null'
+        mint_authority:
+          type:
+          - string
+          - 'null'
+        minted_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        name:
+          type: string
+        permanent_delegate:
+          type:
+          - string
+          - 'null'
+        symbol:
+          type: string
+        tags:
+          type: array
+          items:
+            type:
+            - string
+            - 'null'
+    MintWithCreationTimeAndMarkets:
+      type: object
+      required:
+      - mint
+      - created_at
+      - metadata_updated_at
+      - name
+      - symbol
+      - decimals
+      - known_markets
+      properties:
+        created_at:
+          type: string
+          format: date-time
+        decimals:
+          type: integer
+          format: int32
+        freeze_authority:
+          type:
+          - string
+          - 'null'
+        known_markets:
+          type: array
+          items:
+            type: string
+        logo_uri:
+          type:
+          - string
+          - 'null'
+        metadata_updated_at:
+          type: string
+          format: date-time
+        mint:
+          type: string
+        mint_authority:
+          type:
+          - string
+          - 'null'
+        name:
+          type: string
+        symbol:
+          type: string

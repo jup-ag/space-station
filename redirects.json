@@ -40,11 +40,7 @@
     {"to":"/docs/old/projects-and-dexes/rust-integration","from":"/docs/projects-and-dexes/rust-integration"},
     {"to":"/docs/old/token-api-standard","from":"/docs/token-api-standard"},
     {"to":"/docs/old/token-list/token-list-api","from":"/docs/token-list/token-list-api"},
-    {"to":"/docs/api/","from":"/api-v6/get-quote"},
-    {"to":"/docs/api/","from":"/api-v6/post-swap"},
-    {"to":"/docs/api/","from":"/api-v6/post-swap-instructions"},
-    {"to":"/docs/api/","from":"/api-v6/get-program-id-to-label"},
-    {"to":"/docs/api/","from":"/api-v6/tokens"},
+
     {
         "to": "/guides/swap/how-swap-works",
         "from": "/guides/jupiter-swap/how-swap-works/metropolis-features"

@@ -1,0 +1,73 @@
+---
+id: execute
+title: "execute"
+description: "Execute a swap order and get the execution status."
+sidebar_label: "execute"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1P20AQ/SurPbVSiKFqL7lBRSUOVRGBU8hhYk+SpfbudnccQFb+e2fWRnGCgVbiQA6OvfPmzfdsowlWUU9m+qakAHo+0gXGPBhPxlk90ecPmNeEClS8B69cKDAosIVaISlao8IEYLCKBFTH8a29tVe4ZBg5NUu06vTyQhUun3/K+BmzWg6PwJus1cajxPtZLV1QlQuojOXXCoR3rEc6YPTORmRPG/3l+Fj+9v2c1nmOMS7rUj2BWS93ltCSwMH70uSJMbuLotPomK+xAnmjR4/M4hZ3mBMr+uA8BjKtxTayHi5SMHbFOLR1JdnrzPPJDzAlFnq+HeloVpYVAz7XFGnpaFCAIbgwKMld0edi2wsMIjDW13RaudrSFUZO76C6q+lfYFLo8w2nrR8xhACPHJ4hrOLbGUsO/TR22ELP3VccfVG9H8cAYCv98qc2gcvApdm5sm94z8wB6Xx7yNK1QFcDkTPg61AnnkGhRBMjvV8H/ndPHLjf6u97/23I+wt2N1goVcSw4RneKX7QODoAZ/vMFY/C8F5Dz9OLxXUAGyFvszPgdmf7oni7EZ8T9tW7olRIa8dw7V3qHw+05q92ZWabk6eNyaK2QrK8G12HklFrIh8nWcabdXxX+zGsMr3llS6hX+2SdP4AlS/xhSB3y60X297wLl0K1pBw6KncC7zgWUHcaTlOxsfjY314mUyTXdU7HAujhFpByq+FSjh3Qe4R9Gr7QS6mruKED5T5EoyVeFIxmq50M51IJTsncmF0kXFV1lJhljfNAiLehHK7lWPOeeA+nvHrBoKBhWR5JvfJGoGdSfX+jQzR39tsHF2LFwIv67SrD7t+O3rSOOVrytOr2HmvCS9/Ta8ZvOgmq0ozqgPcS3fwc6Jlc6bqpJlJZ40uwa5qWAm25ZTfXwYd7+g=
+sidebar_class_name: "post api-method"
+info_path: docs/ultra-api/swap-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"execute"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/ultra/v1/execute"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Execute a swap order and get the execution status.
+
+Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"signedTransaction":{"type":"string"},"requestId":{"type":"string"}},"required":["signedTransaction","requestId"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["Success","Failed"]},"signature":{"type":"string"},"slot":{"type":"string"},"error":{"type":"string"},"code":{"type":"number"},"inputAmountResult":{"type":"string"},"outputAmountResult":{"type":"string"},"swapEvents":{"type":"array","items":{"type":"object","properties":{"inputMint":{"type":"string"},"inputAmount":{"type":"string"},"outputMint":{"type":"string"},"outputAmount":{"type":"string"}},"required":["inputMint","inputAmount","outputMint","outputAmount"]}}},"required":["status","code"]}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"}},"required":["error","code"]}}}},"500":{"description":"Internal server error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"}},"required":["error","code"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -370,6 +370,52 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
+  api: [
+    {
+      type: "category",
+      label: "Ultra",
+      link: {
+        type: "generated-index",
+        title: "Ultra API",
+        description: "Description",
+        slug: "/api/ultra-api"
+      },
+      items: require("./docs/ultra-api/sidebar.js")
+    },
+    {
+      type: "category",
+      label: "Swap",
+      link: {
+        type: "generated-index",
+        title: "Swap API",
+        description: "Description",
+        slug: "/api/swap-api"
+      },
+      items: require("./docs/swap-api/sidebar.js")
+    },
+    {
+      type: "category",
+      label: "Token",
+      link: {
+        type: "generated-index",
+        title: "Token API",
+        description: "Description",
+        slug: "/api/token-api"
+      },
+      items: require("./docs/token-api/sidebar.js")
+    },
+    {
+      type: "category",
+      label: "Price",
+      link: {
+        type: "generated-index",
+        title: "Price API",
+        description: "Description",
+        slug: "/api/price-api"
+      },
+      items: require("./docs/price-api/sidebar.js")
+    },
+  ],
 };
 
 module.exports = sidebars;

@@ -28,7 +28,7 @@ Liquidity providers (LPs) ensure there is sufficient liquidity, allowing traders
 Anyone can become a Liquidity Provider by contributing assets or tokens to the Jupiter Liquidity Provider Pool (JLP Pool).
  - JLP tokens represent your share of the pool.
  - Any asset traded on JUP can be used to buy into JLP.
- - There are fees associated with buying into the JLP pool (see [Target Ratio and Fees](../jlp/How-JLP-Works#target-ratio-and-fees)).
+ - There are fees associated with buying into the JLP pool (see Target Ratio and Fees).
 
 More details on how to get the token in [How To Get JLP](../jlp/How-To-Get-JLP).
 

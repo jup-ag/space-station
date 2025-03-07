@@ -1,0 +1,73 @@
+---
+id: order
+title: "order"
+description: "Retrieve a swap order to be used in `POST /ultra/v1/execute`."
+sidebar_label: "order"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV0tz2zYQ/iscnpIZR7Q77cU3u9OH2jr1SEovjmYCkSsKNgjAeKhWNPrv3QUpiZQgyp00k14kkvv69onFOnWstOn1Q/pBOMPS6UVagM0N144rmV6nI3CGwxISlti/mU6UKcAkTiUzSLyFIuEy+XT/53iSZJ40ZMurDF4g9w4+DT7Kj3IE81rgIVhIbu6HSaHy6ZsMf20t9I5pnpXg3gXtb5O5MkmlDKByfKwYYRmkF6kBq5W0gIDX6XeXl/TXhTv2eQ7Wzr1ItswolyvpQDpiZ1oLngeN2aMlmXVq8wVUjJ7cSgNqUbNHyB0KaqM0GMdriyCX3ChZNaoaZosBkiUyg/QVRTJnkplVLV34PCCbbi5SLrV3dzwmjFTlXR+Zy5tK+dOyfVS3AFPTJwuMykKJIspICb5TBcSJgmvNSrjVtkVHl2dgiK4Nz2FYaZa7+zwOxCBOuBdMtqjMGEax4g4qez4FBHGIRXGek1XV77CK4hBsBuJElL9NiuYA/dQTRimo8Oy5gYIqr/F562Hbnw76FtY2sjaOvVUqXYxr3q36beIPEOzys5eZEk/owBc3FiqmJBjrKSxluOOfQ9NOAvl0871Xkjr+R1Whs3DrCxwr+P4bd6r2pKPtZ4A/WKWVcXHb5M45i6wsDZTMKUMTav4czOBQk5bVvb+TfdgLSy9EYCyZFTiwWgZmSgnAHmkiC9YN4+3qlGNiwiuIQnfsCR96bT975eCE8qor3qLAi8Zs38RLVTDr/mKCF7dC5U+/Ai8X8YRrwRzNdszAa3q5rzfihXPUGvuyJgHyv1hJVvF83Ey2EVAhvAYNHiHz5hAZ0W9/mFvzN15kvPIYDSiGMvcG8Y7PjNpzoxiRQanM6j2rIpWLDAvwhlvH8zv20m/sKIpHrnf9O+NNF/sB0tO4poc4/u1cix6BrQPvENfBYdY+unYVFJ1MfQOmNU66A2I/Bdot327wbTtjICgU38dWn1tWJI30f7jyGKNiY+AgHzVbg+6HGLohwjGSicSCWeJCWEt8Q5w0g5jBukNctACvsXZQEOMXdjcZeqdTaEdYWpvNzoYzHjYXcWWdSv1ibbuJ9sWa6tp6paI5ExY2eE/AyC0UfkjrE1Yzt8CX/S0g7PKkNSS8DrE3uHelC+e0vc4y3PoHj14PWJmlpJFvFzvuBJkf04UD7wuohDTUhXQ1uBxcpofXlDFNJkhaHwfhlFHWVfW+uc1Bg6ojvt6X4f/rwtPkgVanDE9MHraCEMR1E/CHNCikEF3RoAvuYSwX6DlR1+sZs/DBiM2GPteZp1QU3LKZ2GW0JyJvRk3y3yanID3Rpt1pliUTnvhSKrqvYKvTS1/b2K7V+g3VzNtu2vNO6cVwYsbQT8MBzChPlIda6Aavrbpt4WgYdlrul58mONv+AWbld0g=
+sidebar_class_name: "get api-method"
+info_path: docs/ultra-api/swap-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"order"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/ultra/v1/order"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve a swap order to be used in `POST /ultra/v1/execute`.
+
+Refer to [Ultra API doc](/docs/ultra-api/get-order) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"inputMint","schema":{"type":"string"},"required":true},{"in":"query","name":"outputMint","schema":{"type":"string"},"required":true},{"in":"query","name":"amount","schema":{"type":"string"},"required":true},{"in":"query","name":"taker","schema":{"type":"string"},"required":false}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"environment":{"type":"string","enum":["canary","production"]},"inputMint":{"type":"string"},"outputMint":{"type":"string"},"inAmount":{"type":"string"},"outAmount":{"type":"string"},"otherAmountThreshold":{"type":"string"},"swapMode":{"type":"string"},"slippageBps":{"type":"number"},"priceImpactPct":{"type":"string"},"routePlan":{"type":"array","items":{"type":"object","properties":{"swapInfo":{"type":"object","properties":{"ammKey":{"type":"string"},"label":{"type":"string"},"inputMint":{"type":"string"},"outputMint":{"type":"string"},"inAmount":{"type":"string"},"outAmount":{"type":"string"},"feeAmount":{"type":"string"},"feeMint":{"type":"string"}},"required":["ammKey","label","inputMint","outputMint","inAmount","outAmount","feeAmount","feeMint"]},"percent":{"type":"number"}},"required":["swapInfo","percent"]}},"contextSlot":{"type":"number"},"feeBps":{"type":"number"},"prioritizationType":{"type":"string","enum":["None","ComputeBudget","Jito"]},"prioritizationFeeLamports":{"type":"number"},"swapType":{"type":"string","enum":["aggregator","rfq"]},"transaction":{"type":["string","null"]},"gasless":{"type":"boolean"},"requestId":{"type":"string"},"totalTime":{"type":"number"},"taker":{"type":["string","null"]},"quoteId":{"type":"string"},"maker":{"type":"string"},"expireAt":{"type":"string"},"lastValidBlockHeight":{"type":"number"},"platformFee":{"type":"object","properties":{"amount":{"type":"string"},"feeBps":{"type":"number"}},"required":["amount","feeBps"]},"dynamicSlippageReport":{"type":"object","properties":{"amplificationRatio":{"type":["string","null"]},"otherAmount":{"type":"number"},"simulatedIncurredSlippageBps":{"type":"number"},"slippageBps":{"type":"number"},"categoryName":{"type":"string"},"heuristicMaxSlippageBps":{"type":"number"}},"required":["amplificationRatio","otherAmount","simulatedIncurredSlippageBps","slippageBps","categoryName","heuristicMaxSlippageBps"]}},"required":["inputMint","outputMint","inAmount","outAmount","otherAmountThreshold","swapMode","slippageBps","priceImpactPct","routePlan","feeBps","prioritizationType","prioritizationFeeLamports","swapType","transaction","gasless","requestId","totalTime","taker"]}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}},"500":{"description":"Internal server error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
