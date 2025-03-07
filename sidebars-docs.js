@@ -142,11 +142,13 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'swap-api/limit-order-api',
+          label: 'Trigger API',
+          id: 'trigger-api/create-order',
         },
         {
           type: 'doc',
-          id: 'swap-api/dca-sdk',
+          label: 'Recurring API',
+          id: 'recurring-api/create-order',
         },
       ],
     },
@@ -173,6 +175,127 @@ const sidebars = {
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
+    },
+  ],
+  trigger: [
+    {
+      type: 'category',
+      label: 'Trigger API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          label: 'Create Order',
+          id: 'trigger-api/create-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Order Management',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/cancel-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/view-open-orders',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/view-order-history',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/best-practices',
+        },
+      ],
+    },
+  ],
+  recurring: [
+    {
+      type: 'category',
+      label: 'Recurring API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/create-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Order Management',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/cancel-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/deposit-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/withdraw-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/get-recurring-orders',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/best-practices',
+        },
+      ],
     },
   ],
   perp: [
@@ -239,28 +362,6 @@ const sidebars = {
         {
           type: 'doc',
           id: 'tool-kits/unified-wallet-kit',
-        },
-      ],
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-  ],
-  other: [
-    {
-      type: 'category',
-      label: 'Utility',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'utility/price-api',
-        },
-        {
-          type: 'doc',
-          id: 'utility/token-api',
         },
       ],
     },
