@@ -42,7 +42,7 @@ const priceWithdrawResponse = await (
             order: "2A9BWzLCpsvRuAbruATYYXaaMDRkSYPPZoAey67ywYqx",
             user: wallet.publicKey.toBase58(),
             inputOrOutput: "In", // either "In" for input mint or "Out" for output mint
-            amount: 100000000
+            withdrawAmount: 100000000
         }),
     })
 ).json();
