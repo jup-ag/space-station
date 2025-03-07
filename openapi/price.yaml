@@ -1,15 +1,16 @@
 openapi: 3.0.3
 info:
-  title: Price API
+  title: Quickstart
   version: 1.0.0
-  description: Sample description.
+  description: |
+    | Link |
+    | --- |
+    | [Get Price](/docs/price-api#get-price-only-price) |
+    | [Get Price (vsToken)](/docs/price-api#price-vstoken) |
+    | [Get Price (with Extra Info)](/docs/price-api#get-price-with-extra-info) |
 
 servers:
-  - url: https://api.jup.ag/
-
-tags:
-  - name: Price
-    description: Endpoints related to Price
+  - url: https://api.jup.ag
 
 paths:
   /price/v2:
@@ -17,7 +18,7 @@ paths:
       tags:
       - Price
       summary: price
-      description: "Returns prices of specified tokens.\n\nRefer to [Price API doc](/docs/utility/price-api) for more information."
+      description: "Returns prices of specified tokens.\n\nRefer to [Price API doc](/docs/price-api) for more information."
       parameters:
       - name: ids
         in: query

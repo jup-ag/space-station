@@ -25,7 +25,7 @@ In this guide, we will be using the Solana web3.js package.
 If you have not set up your environment to use the necessary libraries and the connection to the Solana network, please head over to [get started](../1-get-started.md).
 
 :::tip API Reference
-To fully utilize the Quote API, check out the [Quote API Reference](/docs/api/swap-api).
+To fully utilize the Quote API, check out the [Quote API Reference](/docs/api/swap-api/quote.api.mdx).
 :::
 
 ## Quote API

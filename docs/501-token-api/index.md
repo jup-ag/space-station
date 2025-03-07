@@ -17,7 +17,7 @@ Through the Token API, you can query by tags, mints, markets to get a list of to
 - [Background and History](https://www.jupresear.ch/t/ecosystem-master-token-list/19786)
 - [Token API and Standard](https://www.jupresear.ch/t/introducing-the-ecosystem-token-api-and-standard/20601)
 - [How to get your token verified](https://www.jupresear.ch/t/get-your-token-a-community-tag-beta/18963)
-- [API Reference](/docs/api/token-information)
+- [API Reference](/docs/api/token-api/quickstart.info.mdx)
 :::
 
 ## Let's Get Started
@@ -190,7 +190,7 @@ The `/new` endpoint will return a large sized payload as response, you can utili
 - `offset`: Refers to how many counts of data to offset into the result set.
     - Used in conjunction with `limit` to page through the data.
 
-Refer to the [API Reference](/docs/api/all) for more information.
+Refer to the [API Reference](/docs/api/token-api/new.api.mdx) for more information.
 :::
 
 ```jsx

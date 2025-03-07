@@ -1,15 +1,16 @@
 openapi: 3.0.3
 info:
-  title: Swap API
+  title: Quickstart
   version: 1.0.0
-  description: Sample description.
+  description: |
+    | Link |
+    | --- |
+    | [Get Quote](/docs/swap-api/get-quote) |
+    | [Build Swap Transaction](/docs/swap-api/build-swap-transaction) |
+    | [Send Swap Transaction](/docs/swap-api/send-swap-transaction) |
 
 servers:
-  - url: https://api.jup.ag/
-
-tags:
-  - name: Swap
-    description: Endpoints related to Quote and Swap API
+  - url: https://api.jup.ag
 
 paths:
   /swap/v1/quote:

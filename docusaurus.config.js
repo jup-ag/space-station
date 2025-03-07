@@ -136,31 +136,19 @@ const config = {
         config: {
           ultra: {
             specPath: "openapi/ultra.yaml",
-            outputDir: "docs/ultra-api",
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-            },
+            outputDir: "docs/api/ultra-api",
           },
           swap: {
             specPath: "openapi/swap.yaml",
-            outputDir: "docs/swap-api",
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-            },
+            outputDir: "docs/api/swap-api",
           },
           token: {
             specPath: "openapi/token.yaml",
-            outputDir: "docs/token-api",
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-            },
+            outputDir: "docs/api/token-api",
           },
           price: {
             specPath: "openapi/price.yaml",
-            outputDir: "docs/price-api",
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-            },
+            outputDir: "docs/api/price-api",
           },
         },
       },

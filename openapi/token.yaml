@@ -1,15 +1,19 @@
 openapi: 3.0.3
 info:
-  title: Token API
+  title: Quickstart
   version: 1.0.0
-  description: Sample description.
+  description: |
+    | Link |
+    | --- |
+    | [Get Token Information](/docs/token-api#get-token-information) |
+    | [Get Mints in Market](/docs/token-api#get-tokens-in-market) |
+    | [Get Tradable Mints](/docs/token-api#get-all-tradable-tokens) |
+    | [Get Tokens by Tag](/docs/token-api#get-tagged-tokens) |
+    | [Get New Tokens](/docs/token-api#get-new-tokens) |
+    | [Get All Tokens](/docs/token-api#get-all-tokens) |
 
 servers:
-  - url: https://api.jup.ag/
-
-tags:
-  - name: Token
-    description: Endpoints related to Tokens
+  - url: https://api.jup.ag
 
 paths:
   /tokens/v1/token/{mint_address}:
@@ -17,7 +21,7 @@ paths:
       tags:
       - Token
       summary: token information
-      description: "Returns the specified mint addresse's token information and metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      description: "Returns the specified mint addresse's token information and metadata.\n\nRefer to [Token API doc](/docs/token-api) for more information."
       parameters:
       - name: address
         in: path
@@ -38,7 +42,7 @@ paths:
       tags:
       - Token
       summary: mints in market
-      description: "Returns the mints involved in a market.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      description: "Returns the mints involved in a market.\n\nRefer to [Token API doc](/docs/token-api) for more information."
       parameters:
       - name: address
         in: path
@@ -61,7 +65,7 @@ paths:
       tags:
       - Token
       summary: tradable
-      description: "Returns a list of all mints tradable via Jupiter routing.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      description: "Returns a list of all mints tradable via Jupiter routing.\n\nRefer to [Token API doc](/docs/token-api) for more information."
       responses:
         '200':
           description: List of mints which are tradable
@@ -98,7 +102,7 @@ paths:
       tags:
       - Token
       summary: new
-      description: "Returns new tokens with metadata, created at timestamp and markets.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      description: "Returns new tokens with metadata, created at timestamp and markets.\n\nRefer to [Token API doc](/docs/token-api) for more information."
       parameters:
       - name: limit
         in: query
@@ -136,7 +140,7 @@ paths:
       tags:
       - Token
       summary: all
-      description: "Returns all tokens with all metadata.\n\nRefer to [Token API doc](/docs/utility/token-api) for more information."
+      description: "Returns all tokens with all metadata.\n\nRefer to [Token API doc](/docs/token-api) for more information."
       responses:
         '200':
           description: List of tokens which are tradable

@@ -1,15 +1,15 @@
 openapi: 3.0.3
 info:
-  title: Swap API
+  title: Quickstart
   version: 1.0.0
-  description: Sample description.
+  description: |
+    | Link |
+    | --- |
+    | [Get Order](/docs/ultra-api/get-order) |
+    | [Execute Order](/docs/ultra-api/execute-order) |
 
 servers:
-  - url: https://api.jup.ag/
-
-tags:
-  - name: Ultra
-    description: Endpoints related to Ultra API for Swap
+  - url: https://api.jup.ag
 
 paths:
   /ultra/v1/order:
