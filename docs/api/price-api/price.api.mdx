@@ -1,0 +1,73 @@
+---
+id: price
+title: "price"
+description: "Returns prices of specified tokens."
+sidebar_label: "price"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVk1PG0EM/SvW9JJI2QQ4RuoBKEJUSKV8nACJYdfJTrM7s4xnA1HIf689my4B0hQqtVJVDmg+PPbz87M3cxX0mNTwUp14k6K67qkMKfWmCsZZNVSnGGpvCSq5JnAjoApTMzKYQXATtNS/slf2FEfo+QAuox/YPTmCzKXXnQH/p0F8nejKdGHkPJTOIxjLy1JLnL7qqUp7XWJAL2jmyvKGw5uM+M4Ikrsa/Uy9xJfAeY4NEiiNDaCzzCNRB6kreMYYGuwd3jtGmsC+K0sNhBIxyFuoNBHjgbIugqkK5Cge72rjMVPD4GvsKUpzLLUazlWYVSiEUfDGjtX1oqfwQZfybKjO3PYb/3bUotemOaVzyeBXqe6uSVTwp67kZDgVpmJZKD3WxlKQfPdmkOFIc2699paNM7SOHTEFGdzO4OLskxgfjaCtBBiCmvj63oQczr4cPwvcW/EQ2Wujy4atn7E40gVtpnGFDsrd/cFD8PqINbKZlHMnEHttCW8+Sr1uJJVDLn1UWoZBm4KA6jQHTVcWIIELax4gmBIpcPGas716tsxAVPq5roywUGgKQPe6Am0zuKtdwMb8DIviPfb7zo4Mk8b2cpNhxbSutEEUp7bWBckJbpaquGn4DzmXo63Ne8nlxuZ3uWNrxT0RGy7kvGl6czDd4SNCP/3RgLUv+DYPoaLhYMCt2/9WV309VuJKQMc4JkTZf61NOmEivTgWF01xtvtb/a1XJXuEY2Mn8HhlHyFJkmZxKdWKs+PVzPjAeJNm52wxa5bdl8+gs6Sr+9pBs5pS7J41LyO/UXAgilvj4QmC2CYotomwEL1xK6vKUSi1FVaWKo72L7Ofq9TZgDb8zdnayEEFhj2oCh4MAjgWeL6UwWWLloXABc45Gzmdz2814YUvFgs5bnpQ5JEZ0rfFivh+mmXndKnTLvypYb02vwnO2g/IVBe1WMSZ+3bo/+DE3UDF00fmN+n4j2ftBlpffqyeyL2WjTfCLveM/FBoR/DhwblaLL4D42BB/Q==
+sidebar_class_name: "get api-method"
+info_path: docs/api/price-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"price"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/price/v2"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns prices of specified tokens.
+
+Refer to [Price API doc](/docs/price-api) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"ids","in":"query","description":"- The token mint address(es) to get price(s) on\n- Comma separate to pass in multiple","required":true,"schema":{"type":["string"]},"example":"So11111111111111111111111111111111111111112"},{"name":"vsToken","in":"query","description":"- A token mint address to compare the prices against\n- By default, prices are denominated by USD\n- If parameter is used with SOL mint address, denominates in the price in SOL","required":false,"schema":{"type":["string"]}},{"name":"showExtraInfo","in":"query","description":"To use, pass in `=true`\n- Get more details such as\n  - Unix timestamp\n  - Buy price for Jupiter last swap and quote\n  - Sell price for Jupiter last swap and quote\n  - Confidence and depth information\n- Cannot use `vsToken` with this parameter","required":false,"schema":{"type":["string"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

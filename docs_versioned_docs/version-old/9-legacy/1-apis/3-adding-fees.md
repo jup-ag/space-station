@@ -23,7 +23,7 @@ Jupiter doesn't take any fees.
 
 With the Jupiter API, you can just add in the `feeBps` parameter to the Quote API:
 
-[# 5. Get the routes for a swap](/docs/old/legacy/apis/adding-fees#adding-your-own-platform-fee-to-jupiter-swap)
+# 5. Get the routes for a swap
 
 
 **Jupiter SDK**

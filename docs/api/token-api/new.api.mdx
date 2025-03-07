@@ -1,0 +1,73 @@
+---
+id: new
+title: "new"
+description: "Returns new tokens with metadata, created at timestamp and markets."
+sidebar_label: "new"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1z2zYQ/SsY9FLP6MtOpwfdPG0nk47z0USZHGSPApErEhYJIMDSjiLrv2cXoEXaUhxf2qkOEkFy3763+7DQVqIqgpzO5cyuwcirgcwhZF471NbIqXwP2HgThIFbgfxKELcaS1EDqlyhGojMg0LIhUKBuoaAqnZCmVzUyq8Bw+jSXJr3sAJPAGIe84jzd69EbrOrX8f0HcYReaicPhEr60VtPQht6LJWzGMkB9IprygpeGa7lYYWRK/StUZ6qpnrlwb8Rj5WUNpbomI2wkNmfR6YhW3QNUgpBJYg/v7w9g2FefjSaA+5nK5UFWAgQ1ZCreR0K3HjgIukDUIBnl42TVVxtRJHSkOPfv9N7gYSvlIBKiZ3OqH1nqpdrQL8hCuzSe8RN+LJaw+hqVDQvZH4GKjQxDqz5roxGUfFdlyaz7ESn1mcUwVQpLdNUUYE7tNI/AkrRUBR/+TfkHtGcq8YNzhrAgRGOptM+OehygsdkGQ+8FSps1Ioajt68tWygmSzD28vKDvJRTDISMq5SmfRFePrwHDbA+JSea+4uBqhDr37dnkNGT7QPpc1SeEcycYLxYt7dy8al3d3YyOpTpt6aavYu0zXVDu6XBt7axat47lQzlsHHnUqQw+8YxPQa1PIXlE515A3ERd2j95FdP3o9+HFGb++8gDfYKEaLK3XuOn3cZ8ptXH3mO/PK9ci7Ci0soVdNF4/neBYBZ8tPbbkMHl68FyJadsdAWn7d1Qcaoxefk2JPpEB/+DGkddmxOzc5K/bgu3iJ6osLblIFnFnO4UlLdI4C+Ob0zFZnB0D/uZ+cDW+4qGE6MJ0PKaRN7pu3EgVce/wzIvEWhr/NDpb00T1jM4QaQOdjiajycHwuBMX2qzF3aW5E8PhMF3MX9IsSTP3VTdQD+buLyRgmFa9uXvSw+CKBJ49qQZPIASCGCZr9QFm9xs7Ih2PV1U1vB8ALdjJYx1BLDdipoofMFBFAfmR2Dc0bFL88UDq1JGo86p6MioS7qLYXs4GpPOG29hO/mSCB83adjPt/3PEttsB4SuOXaV0lBP9um2tPZeJILvxlDcbKSPbliSZH263SxXgo692O76dzjg2fa4Dt7Q7a35YjGef1kfJrmHT+1Nwo6qG34mn8PMp/JeH8BMq9v8XOhlXvPCadVBZeciVoHI6ELjGKeo8y8D1ow4OTEbZz62Xf81omH0Hqud5Jg==
+sidebar_class_name: "get api-method"
+info_path: docs/api/token-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"new"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tokens/v1/new"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns new tokens with metadata, created at timestamp and markets.
+
+Refer to [Token API doc](/docs/token-api) for more information.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","description":"how many records to output in the JSON","required":false,"schema":{"type":["integer","null"],"format":"int64"},"example":"10"},{"name":"offset","in":"query","description":"the offset into the result set. Used in conjunction with\n`limit` to page through the data. Defaults to 0","required":false,"schema":{"type":["integer","null"],"format":"int64"},"example":"20"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of new tokens which are tradable with SOL","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","required":["mint","created_at","metadata_updated_at","name","symbol","decimals","known_markets"],"properties":{"created_at":{"type":"string","format":"date-time"},"decimals":{"type":"integer","format":"int32"},"freeze_authority":{"type":["string","null"]},"known_markets":{"type":"array","items":{"type":"string"}},"logo_uri":{"type":["string","null"]},"metadata_updated_at":{"type":"string","format":"date-time"},"mint":{"type":"string"},"mint_authority":{"type":["string","null"]},"name":{"type":"string"},"symbol":{"type":"string"}},"title":"MintWithCreationTimeAndMarkets"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

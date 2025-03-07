@@ -340,5 +340,5 @@ async function sendTransaction(swapTransaction, swapUserKeypair, lastValidBlockH
 ```
 
 :::tip
-If you want to add your own fees, check out: [Adding Your Own Fees](/docs/old/APIs/adding-fees)
+If you want to add your own fees, check out: Adding Your Own Fees
 :::
