@@ -39,7 +39,7 @@ const signedTransaction = Buffer.from(transaction.serialize()).toString('base64'
 
 ## Execute Order
 
-By making a post request to the /execute endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
+By making a post request to the `/execute` endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
 
 ```jsx
 const executeResponse = await (
@@ -49,7 +49,8 @@ const executeResponse = await (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            tx: signedTransaction,
+            signedTransaction: signedTransaction,
+            requestId: "370100dd-1a85-421b-9278-27f0961ae5f4",
         }),
     })
 ).json();
@@ -71,7 +72,8 @@ if (executeResponse.status === "Success") {
 
 ```json
 {
-  "signature": "..."
+  "signature": "...",
+  "status": "Success"
 }
 ```
 
@@ -81,7 +83,8 @@ if (executeResponse.status === "Success") {
 {
   "error": "custom program error code: 1",
   "code": 500,
-  "signature": "..."
+  "signature": "...",
+  "status": "Failed"
 }
 ```
 
