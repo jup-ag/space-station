@@ -74,6 +74,8 @@ If no orders are specified, the API will return the transaction to cancel **ALL*
 :::
 
 :::tip
+Orders are batched in groups of 5, if you have 6 orders to cancel, you will receive 2 transactions.
+
 Do note that you will receive a list of transactions, so you will need to access each transaction in it to sign and send individually.
 
 If using `/execute` endpoint, you should pass in the same `requestId` for the different transactions.
