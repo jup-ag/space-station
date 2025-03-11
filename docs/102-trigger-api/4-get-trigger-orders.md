@@ -34,7 +34,7 @@ You can optionally pass in the input and output token mint addresses to filter t
 ```jsx
 const openOrdersResponse = await (
     await fetch(
-        'https://api.jup.ag/trigger/v1/getTriggerOrders?user=replaceWithPublicKey&orderStatus=active'
+        'https://api.jup.ag/trigger/v1/getTriggerOrders?user=devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4&orderStatus=active'
     )
 ).json();
 ```
@@ -44,40 +44,29 @@ const openOrdersResponse = await (
 ```json
 {
   "user": "devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4",
-  "orderStatus": "history",
+  "orderStatus": "active",
   "orders": [
     {
       "userPubkey": "devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4",
-      "orderKey": "Fzf4A8PqCsbZd2yvCmcfrfuvLfQXPHfAYnGHAQYKTUWS",
-      "inputMint": "JCeoBX79HfatfaY6xvuNycHf86hwgkCCWDpEycVHtime",
-      "outputMint": "So11111111111111111111111111111111111111112",
-      "makingAmount": "0.108901",
-      "takingAmount": "0.039966667",
-      "remainingMakingAmount": "0",
-      "remainingTakingAmount": "0",
+      "orderKey": "AqFhgzxT1P8vRxyBHrH1gfCHseiDyWjA7uwe7sddJ3BF",
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "makingAmount": "0.05",
+      "takingAmount": "100",
+      "remainingMakingAmount": "0.05",
+      "remainingTakingAmount": "100",
+      "rawMakingAmount": "50000000",
+      "rawTakingAmount": "100000000",
+      "rawRemainingMakingAmount": "50000000",
+      "rawRemainingTakingAmount": "100000000",
       "expiredAt": null,
-      "createdAt": "2025-03-02T09:08:29Z",
-      "updatedAt": "2025-03-02T09:11:05Z",
-      "status": "Completed",
-      "openTx": "4CmWvToF68j9mrMun19Z8TxVupjgmT8XcQsCzMb6nLoXcKrbPQdx1PHN9Hqm3kW9sCNaArK4vL3HniGSzugRrw7B",
-      "closeTx": "5bAw3Nrasz6ctSDVvvPW1w189GxCmcPt2Mb6akGMGgf4YCHzkCh7DMHiztYtSPzhMiP2zHdrqyEU3AnGB1FTXGSz",
+      "createdAt": "2025-03-10T14:40:08Z",
+      "updatedAt": "2025-03-10T14:40:08Z",
+      "status": "Open",
+      "openTx": "SHov1egf8UZtcyrDnjRPy3Ccwtz4xR8UT37FjwyM1KN4LdRFBEfHytaniKqEwtMBknXjRQRDhTGg9SUDtNMbakw",
+      "closeTx": "",
       "programVersion": "j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X",
-      "trades": [
-        {
-          "orderKey": "Fzf4A8PqCsbZd2yvCmcfrfUvLfQXPHfAYnGHAQYKTUWS",
-          "keeper": "j1oeQoPeuEDmjvyMwBmCWexzCQup77kbKKxV59CnYbd",
-          "inputMint": "JCeoBX79HfatfaY6xvuNyCHf86hwgkCCWDpEycVHtime",
-          "outputMint": "So11111111111111111111111111111111111111112",
-          "inputAmount": "0.108901",
-          "outputAmount": "0.039966667",
-          "feeMint": "GNSHYrJmjwYXnWLy3esF5VjWa1AKMhzAru1pTeQDY8w3",
-          "feeAmount": "0.000039966",
-          "txId": "5bAw3Nrasz6ctSDVvvPW1w189GxCmcPt2Mb6akGMGgf4YcHzkCh7DMHiztYtSPzhMiP2zHdrqyEU3AnGB1FTXGSz",
-          "confirmedAt": "2025-03-02T09:11:05Z",
-          "action": "Fill",
-          "productMeta": null
-        }
-      ]
+      "trades": []
     }
   ],
   "totalPages": 1,
@@ -92,7 +81,7 @@ To get the order history, you can pass in the `orderStatus` parameter as `histor
 ```jsx
 const orderHistoryResponse = await (
     await fetch(
-        'https://api.jup.ag/trigger/v1/getTriggerOrders?user=replaceWithPublicKey&orderStatus=history'
+        'https://api.jup.ag/trigger/v1/getTriggerOrders?user=ErJKdNoarixqGGQTHbBtvHtg2nkcCqcKtYjGbVKUxY7D&orderStatus=history'
     )
 ).json();
 ```
