@@ -93,7 +93,7 @@ After making the post request to the `/execute` endpoint, you will receive a res
 If you want to handle the transaction, you can sign and send the transaction to the network yourself.
 
 ```jsx
-const transactionBase64 = createOrderResponse.tx
+const transactionBase64 = createOrderResponse.transaction
 const transaction = VersionedTransaction.deserialize(Buffer.from(transactionBase64, 'base64'));
 
 transaction.sign([wallet.payer]);
