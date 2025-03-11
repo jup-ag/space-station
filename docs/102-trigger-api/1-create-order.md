@@ -106,7 +106,7 @@ Now that you have the order transaction, you can sign and send to the network. T
 ```json
 {
   "error": "invalid create order request",
-  "cause": "input mint making amount must be at least 100 USD, received: 50",
+  "cause": "input mint making amount must be at least 5 USD, received: 2",
   "code": 400
 }
 ```
