@@ -109,7 +109,7 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
-    color: rgb(69, 69, 69);
+    color: rgb(48 66 86 / 0.4);
     position: relative;
 }
 
@@ -168,8 +168,12 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
-    color: rgb(69, 69, 69);
+    color: rgb(48 66 86 / 0.4);
     position: relative;
+}
+
+.navbar__link-wrapper:hover {
+    color: rgb(69, 69, 69);
 }
 
 .navbar__link-wrapper .navbar__link {
