@@ -21,19 +21,19 @@ This is a GET request to `/getRecurringOrders` endpoint. The response is paginat
 
 :::note
 - orderStatus can be either `active` or `history`
-- type can be either `time` or `price`
+- recurringType can be either `time` or `price`
 - includeFailedTx can be either `true` or `false`
 :::
 
 ```jsx
 const getRecurringOrders = await (
     await fetch(
-        `https://api.jup.ag/recurring/v1/getRecurringOrders?user=InsertWalletPublicKey&includeFailedTx=false&orderStatus=active&type=time&page=1`
+        `https://api.jup.ag/recurring/v1/getRecurringOrders?user=InsertWalletPublicKey&includeFailedTx=false&orderStatus=active&recurringType=time&page=1`
     )
 ).json();
 ```
 
-## Order History Response
+## Get Recurring Orders Response
 
 ```json
 {
