@@ -60,10 +60,6 @@ const executeResponse = await (
 
 After making the post request to the `/execute` endpoint, you will receive a response with the status of the order.
 
-```jsx
-console.log(JSON.stringify(executeOrderResponse, null, 2));
-```
-
 **Example response of successful order:**
 
 ```json
@@ -89,19 +85,14 @@ console.log(JSON.stringify(executeOrderResponse, null, 2));
 If you want to handle the transaction, you can sign and send the transaction to the network yourself.
 
 ```jsx
-const transactionBase64 = createOrderResponse.tx
+const transactionBase64 = createOrderResponse.transaction
 const transaction = VersionedTransaction.deserialize(Buffer.from(transactionBase64, 'base64'));
 
 transaction.sign([wallet.payer]);
 
 const transactionBinary = transaction.serialize();
 
-console.log(transaction);
-console.log(transactionBinary);
-
 const blockhashInfo = await connection.getLatestBlockhashAndContext({ commitment: "finalized" });
-
-console.log(blockhashInfo);
 
 const signature = await connection.sendRawTransaction(transactionBinary, {
     maxRetries: 1,
