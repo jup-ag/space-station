@@ -9,9 +9,14 @@ title: "Create Order"
 </head>
 
 :::warning New Paths
- Please use the `/trigger/v1` path as `/limit/v2` path is being deprecated in favor of the new path.
+The `/limit/v2` path will be deprecated soon, please update your API calls to use the `/trigger/v1` path immediately.
 
-Currently, the `/limit/v2` path is still available via redirect, but if you have redirect disabled, you will need to update your API calls to use the `/trigger/v1` path immediately.
+When updating to the new path, please refer to the documentation as there are some breaking changes.
+- `/execute` endpoint is introduced.
+- `/createOrder` endpoint now includes an additional `requestId` parameter to be used with the `/execute` endpoint.
+- `/cancelOrder` endpoint only builds the transaction for 1 order, while `/cancelOrders` endpoint builds the transaction for multiple orders.
+- The `tx` field in the responses are now `transaction` or `transactions`.
+- `/getTriggerOrders` endpoint is introduced to get either active or historical orders (based on the query parameters) in a new format.
 :::
 
 The root URL of the Trigger API's create order endpoint is as such.
@@ -55,7 +60,7 @@ const createOrderResponse = await (
     await fetch('https://api.jup.ag/trigger/v1/createOrder', {
         method: 'POST',
         headers: {
-        'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
             inputMint: inputMint.toString(),
@@ -91,8 +96,8 @@ Now that you have the order transaction, you can sign and send to the network. T
 ```json
 {
   "order": "CFG9Bmppz7eZbna96UizACJPYT3UgVgps3KkMNNo6P4k",
-  "tx": "AQAAAAAAAAAAAAAAAAAAAAAA......AgAKCAkBAQsPAAADBAEMCwcKCQkIBg0LIoVuSq9wn/WfdskdmHlfUulAQg8AAAAAAICpAwAAAAAAAAAJAwEAAAEJAA==",
-  "lastValidBlockHeight": 301627959
+  "transaction": "AQAAAAAAAAAAAAAAAAAAAAAA......AgAKCAkBAQsPAAADBAEMCwcKCQkIBg0LIoVuSq9wn/WfdskdmHlfUulAQg8AAAAAAICpAwAAAAAAAAAJAwEAAAEJAA==",
+  "requestId": "370100dd-1a85-421b-9278-27f0961ae5f4"
 }
 ```
 

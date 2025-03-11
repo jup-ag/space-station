@@ -211,11 +211,7 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'trigger-api/view-open-orders',
-        },
-        {
-          type: 'doc',
-          id: 'trigger-api/view-order-history',
+          id: 'trigger-api/get-trigger-orders',
         },
       ],
     },

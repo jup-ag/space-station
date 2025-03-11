@@ -39,7 +39,7 @@ const signedTransaction = Buffer.from(transaction.serialize()).toString('base64'
 
 ## Execute Order
 
-By making a post request to the /execute endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
+By making a post request to the `/execute` endpoint, Jupiter executes the order transaction on behalf of you/your users. This includes handling of transaction handling, priority fees, RPC connection, etc.
 
 ```jsx
 const executeResponse = await (
@@ -49,7 +49,8 @@ const executeResponse = await (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            tx: signedTransaction,
+            signedTransaction: signedTransaction,
+            requestId: "370100dd-1a85-421b-9278-27f0961ae5f4",
         }),
     })
 ).json();
@@ -59,19 +60,12 @@ const executeResponse = await (
 
 After making the post request to the `/execute` endpoint, you will receive a response with the status of the order.
 
-```jsx
-if (executeResponse.status === "Success") {
-    console.log('Order executed successfully:', JSON.stringify(executeResponse, null, 2));
-} else {
-    console.error('Order execution failed:', JSON.stringify(executeResponse, null, 2));
-}
-```
-
 **Example response of successful order:**
 
 ```json
 {
-  "signature": "..."
+  "signature": "...",
+  "status": "Success"
 }
 ```
 
@@ -81,7 +75,8 @@ if (executeResponse.status === "Success") {
 {
   "error": "custom program error code: 1",
   "code": 500,
-  "signature": "..."
+  "signature": "...",
+  "status": "Failed"
 }
 ```
 
@@ -90,19 +85,14 @@ if (executeResponse.status === "Success") {
 If you want to handle the transaction, you can sign and send the transaction to the network yourself.
 
 ```jsx
-const transactionBase64 = createOrderResponse.tx
+const transactionBase64 = createOrderResponse.transaction
 const transaction = VersionedTransaction.deserialize(Buffer.from(transactionBase64, 'base64'));
 
 transaction.sign([wallet.payer]);
 
 const transactionBinary = transaction.serialize();
 
-console.log(transaction);
-console.log(transactionBinary);
-
 const blockhashInfo = await connection.getLatestBlockhashAndContext({ commitment: "finalized" });
-
-console.log(blockhashInfo);
 
 const signature = await connection.sendRawTransaction(transactionBinary, {
     maxRetries: 1,

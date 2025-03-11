@@ -17,32 +17,31 @@ https://api.jup.ag/trigger/v1/cancelOrder
 
 If you want to cancel order(s), you need to do these steps:
 
-1. Get a list of the order accounts you want to cancel via `/openOrders` endpoint.
-2. Use the list of order accounts to make a post request to the `/cancelOrders` endpoint to get the transaction to cancel one or multiple orders.
+1. Get a list of the order accounts you want to cancel via `/getTriggerOrders` endpoint.
+2. Use the list of order accounts to make a post request to the `/cancelOrder` endpoint to get the transaction to cancel one or multiple orders.
 3. Sign then send the transaction to the network either via `/execute` endpoint or by yourself.
 
-:::info Get Open Orders
-[Refer to the `/openOrders` section](/docs/trigger-api/view-open-orders) to prepare the list of order accounts you want to cancel.
+:::info Get Trigger Orders
+[Refer to the `/getTriggerOrders` section](/docs/trigger-api/get-trigger-orders) to prepare the list of order accounts you want to cancel.
 :::
 
-:::warning
-If no orders are specified, the API will return the transaction to cancel **ALL** open orders, batched in groups of 5 orders.
+:::note
+To cancel multiple orders, you can use the [`/cancelOrders` endpoint](#cancel-orders) to pass in a list of order accounts and it will build the transaction for multiple cancellations.
 :::
 
 ## Cancel Order
 
 ```jsx
 const cancelOrderResponse = await (
-    await fetch('https://api.jup.ag/trigger/v1/cancelOrders', {
+    await fetch('https://api.jup.ag/trigger/v1/cancelOrder', {
         method: 'POST',
         headers: {
-        'Content-Type': 'application/json',
-        // 'x-api-key': '' // enter api key here
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
             maker: "5dMXLJ8GYQxcHe2fjpttVkEpRrxcajRXZqJHCiCbWS4H",
             computeUnitPrice: "auto",
-            orders: orderAccounts, // a list of order accounts, if non are passed in, it will attempt to cancel ALL
+            order: "3g2jF8txqXPp6GUStwtXMrWydeYWxU4qoBA8UDLoTnK7",
         })
     })
 ).json();
@@ -54,10 +53,8 @@ const cancelOrderResponse = await (
 
 ```json
 {
-  "txs": [
-    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAUQCWPK8t5w2W1nIsonBw2T/TCNCKkrgBQia9/YVlLEcjNZdb/xAd3nnPdCRScMgavewVDB8wNnaYNgU3l08jNDwAGlTrhKyBAqbImPOFvPVVvi8/Lu2Oy5STSv15YZLOzWYIxgY1+NPQrg/it0uaGFE4OREOh/ZcD0LJpeneXjy12NHqMQaDsZbTYy6+9gmqUKxUJbAYzIkNlvjRi6IhE3kpjoZMCiaeKbX6CsA5bjRtxcLRxYJtzfcFx8A5e/aJo7wuVnV8uBf7OIEIWzxldTxJnx1a7qLrsIYWoF1rfb6ZjKCBkXaQHHKe8TjDdzNadZ9fQ+M5eNL/PoKR0MaCcgp+PLuFoHIfXz0uFbiRdu4X9cHyb4h/uIikooeVs9401z8Jfvt5FRWahhXg878F/ddj9unATV53Aq9rDAZDn7rx4MNssRliHvzwJXI46yIuPypgAn1XRqJ6lSsm5azWJJ55J/bIfsQxAFl9kuyA4eD8LlLIu//HUPgwdmBFfuM7LhAwZGb+UhFzL/7K26csOb57yM5bvF9xJrLEObOkAAAAAKw0qWwWZxWmDBIz7KJYoN8wseyFjgdFxzahJiZmNLIgabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKlDJD7vWxB9gSxw35TGlHsZdI2k67JDJlsy7AQAVamvJQcMAAUCwEsDAAwACQMuPAAAAAAAAA0JAAAICg0ODwsNCF+B7fAIMd+EDQkAAAYEDQ4PCw0IX4Ht8Agx34QNCQAABwENDg8LDQhfge3wCDHfhA0JAAAJBQ0ODwsNCF+B7fAIMd+EDQkAAAMCDQ4PCw0IX4Ht8Agx34Q=",
-    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAUICWPK8t5w2W1nIsonBw2T/TCNCKkrgBQia9/YVlLEcjNSVgmRSs266bQT4r+K2Sr0z7wdBYGo1mOBq5cjrOYuSuqGpUJmbPxOpbMZZA9oHs4zfIIrBpEMn42VUCLrCDdAkn9sh+xDEAWX2S7IDh4PwuUsi7/8dQ+DB2YEV+4zsuEDBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAArDSpbBZnFaYMEjPsolig3zCx7IWOB0XHNqEmJmY0siBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEG3fbh12Whk9nL4UbO63msHLSF7V9bN5E6jPWFfv8AqUMkPu9bEH2BLHDflMaUexl0jaTrskMmWzLsBABVqa8lAwQABQLAqAAABAAJAy48AAAAAAAABQkAAAIBBQYHAwUIX4Ht8Agx34Q="
-  ]
+  "transaction": "AQAAAAAAAAAAAAAAAAAAAAAA......QYHAwUIX4Ht8Agx34Q=",
+  "requestId": "370100dd-1a85-421b-9278-27f0961ae5f4",
 }
 ```
 
@@ -70,12 +67,49 @@ const cancelOrderResponse = await (
 }
 ```
 
-## Execute Cancel Order
+## Cancel Orders
 
-To sign then send the transaction to the network to execute the cancellation, you can use the `/execute` endpoint or by yourself.
-
-Refer to the [Execute Order](/docs/trigger-api/execute-order) section for more details.
+:::warning
+If no orders are specified, the API will return the transaction to cancel **ALL** open orders, batched in groups of 5 orders.
+:::
 
 :::tip
-Do note that you will receive an array of transactions, so you will need to access each transaction in the array and sign and send each transaction individually.
+Orders are batched in groups of 5, if you have 6 orders to cancel, you will receive 2 transactions.
+
+Do note that you will receive a list of transactions, so you will need to access each transaction in it to sign and send individually.
+
+If using `/execute` endpoint, you should pass in the same `requestId` for the different transactions.
 :::
+
+```jsx
+const cancelOrdersResponse = await (
+    await fetch('https://api.jup.ag/trigger/v1/cancelOrders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            maker: "5dMXLJ8GYQxcHe2fjpttVkEpRrxcajRXZqJHCiCbWS4H",
+            computeUnitPrice: "auto",
+            orders: [
+                "6fe8ByaiFHisjnYnH5qdpyiNtkn89mMBQUemRkVmKhro",
+                "9jwzPKHxcrSozdrTYzPnTqy7psRvNGxaYUAiiyxwZKjj"
+            ]
+        })
+    })
+).json();
+```
+
+## Cancel Orders Response
+
+**Success Example Response**
+
+```json
+{
+  "transactions": [
+    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......DHfhA0JAAAJBQ0ODwsNCF+B7fAIMd+EDQkAAAMCDQ4PCw0IX4Ht8Agx34Q=",
+    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......a8lAwQABQLAqAAABAAJAy48AAAAAAAABQkAAAIBBQYHAwUIX4Ht8Agx34Q="
+  ],
+  "requestId": "370100dd-1a85-421b-9278-27f0961ae5f4",
+}
+```

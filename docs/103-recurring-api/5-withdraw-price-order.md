@@ -31,6 +31,10 @@ If you want to withdraw funds from a price-based order, you need to do these ste
 [Refer to the `/getRecurringOrders` section](/docs/recurring-api/get-recurring-orders) to prepare order account you want to withdraw from.
 :::
 
+:::caution
+If you do not pass in `amount`, the transaction will be built to withdraw the full amount of the order.
+:::
+
 ```jsx
 const priceWithdrawResponse = await (
     await fetch('https://api.jup.ag/recurring/v1/priceWithdraw', {
@@ -39,10 +43,10 @@ const priceWithdrawResponse = await (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            order: "2A9BWzLCpsvRuAbruATYYXaaMDRkSYPPZoAey67ywYqx",
+            order: "EpTsCUnKComCd8FDNZn3kVrQBQo2uEn5rRzYk9ocqFPH",
             user: wallet.publicKey.toBase58(),
-            inputOrOutput: "In", // either "In" for input mint or "Out" for output mint
-            withdrawAmount: 100000000
+            inputOrOutput: "In", // either "In" or "Out" mint, note that price-based orders auto withdraws the output tokens to the user's wallet every time the order is executed
+            amount: 1000000
         }),
     })
 ).json();
@@ -54,8 +58,8 @@ const priceWithdrawResponse = await (
 
 ```json
 {
-  "id": "401c150e-0965-4f89-8bfc-5355586c53ba",
-  "tx": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgORL7cu4ZNuxh1wI9W7GVURyr3A06dH348HDpIQzcAJ4oRMyo0n0Vy3vNzz/Qmrb8jFY+GzZO5RPfaIch6Q9v2Y3dUeDGIufeWFDvFYjcKVm9e/kPQ8ZFXM+X1qUqo7Q8ohRcUCxw4krKqIk/fKDwX/8s6GniHJu0WiAifD5WyTsOkvVaT2pp+oK8Z3cUnWQ6Agw7EKyqyC1PkHdAiwc6JQb9vLZM5XJNS670dgAgf7wC+wCLLIFWHgjgWx32LJMnJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKkHNtIX+MwRgQakd3fYovqoEXuKqaHTmdCmjuWoQiMib4yXJY9OJInxuz0QKRSODYMLWhOZ2v8QhASOe9jb6fhZxvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWHbZsKfr6NrDjI7Q7M2CqAquH41g9AMbtaLYPfmHMqbN6PocGljko8R7PU2T1HDF14HrUiT+5NKOH4s9duJBvTtAwcABQKERAAABwAJA0ANAwAAAAAACg4AAAEIDAQFAgMGCQsNCgq3EkaclG2hIgAA"
+  "requestId": "cb1c0e03-8e4a-4f85-ac36-e353c7981f5b",
+  "transaction": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAcNRL7cu4ZNuxh1wI9W7GVURyr3A06dH348HDpIQzcAJ4oHNtIX+MwRgQakd3fYovqoEXuKqaHTmdCmjuWoQiMiby7TSszpu+tgf+jdiEM5n3uMiCD/N3AS0uVWTp10QrcFd1R4MYi595YUO8ViNwpWb17+Q9DxkVcz5fWpSqjtDyjKhKdx27tkl2VPxhBBJcKx9gSuUqMJnrF2JWtuKPpRPM1Qmt8G5sH80c9QL+SQJRbRoHSG7z7KaEAztDAAXRb0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKmMlyWPTiSJ8bs9ECkUjg2DC1oTmdr/EIQEjnvY2+n4Wcb6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11h22bCn6+jaw4yO0OzNgqgKrh+NYPQDG7Wi2D35hzKmzcjGx2VRtfxzpYauPv7ArfDDH2VHlwLKs45O0rZTboL4wMHAAUCnqwAAAcACQNADQMAAAAAAAEOAAAFCwgCAwEEBgkKDAEStxJGnJRtoSIBQEIPAAAAAAAA"
 }
 ```
 
