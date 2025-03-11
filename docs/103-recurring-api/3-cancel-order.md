@@ -27,6 +27,10 @@ If you want to cancel order(s), you need to do these steps:
 [Refer to the `/getRecurringOrders` section](/docs/recurring-api/get-recurring-orders) to prepare the list of order accounts you want to cancel.
 :::
 
+:::note
+The `/cancelOrder` endpoint only supports 1 cancellation per transaction.
+:::
+
 ```jsx
 const cancelOrderResponse = await (
     await fetch('https://api.jup.ag/recurring/v1/cancelOrder', {
@@ -35,9 +39,9 @@ const cancelOrderResponse = await (
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+            order: "4DWzP4TdTsuwvYMaMWrRqzya4UTFKFoVjfUWNWh8zhzd",
             user: wallet.publicKey.toBase58(),
-            order: "5T3NGmbD8R59UWEaRaDq79r7fDxDUNidze3CVT94vrUb",
-            params: "time" // pass in either "time" or "price" based on the type of order
+            recurringType: "time",
         }),
     })
 ).json();
@@ -49,8 +53,8 @@ const cancelOrderResponse = await (
 
 ```json
 {
-  "id": "406575dd-eaf6-44b7-97a9-ae6cc50fd11b",
-  "tx": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgORL7cu4ZNuxh1wI9W7GVURyr3A06dH348HDpIQzcAJ4pCGoZcAjkAUAd6xDlaLrZsPlKhZWTBUVe1+PNWNzCsHHdUeDGIufeWFDvFYjcKVm9e/kPQ8ZFXM+X1qUqo7Q8ojdVRqwNsrYI0EjYt7W9Ri9KVEgYBhD4Gk8ZmkJmQy06/by2TOVyTUuu9HYAIH+8AvsAiyyBVh4I4Fsd9iyTJycb9++681I/aqLQGU3mOLCTo/n/aEEBzspC9pe7iUa7qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKmMlyWPTiSJ8bs9ECkUjg2DC1oTmdr/EIQEjnvY2+n4WbB1qAZjecpv43A3/wwo1VSm5NY22ehRjP5uuuk/Ujb+tSfUXWQOPsFfYV1bDiOlSpa4PwuCC/cGNfJDSsZAzATG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYVHlAnuRq2PiJat/evBaWH0uarok3ropi97M2igHfLt0AwcABQJWWgEABwAJA0ANAwAAAAAADA0AAQgNBQMEAgYJCgsMCBYHIWKotyLz"
+  "requestId": "36779346-ae51-41e9-97ce-8613c8c50553",
+  "transaction": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgORL7cu4ZNuxh1wI9W7GVURyr3A06dH348HDpIQzcAJ4oZOZHXAukWalAX/odOiV55UZa1ePBg8d2tRKQyqCjV6C/H8IQcrfZR4QeOJFykenP3QJznc6vNpqe2D57HTD7Gd1R4MYi595YUO8ViNwpWb17+Q9DxkVcz5fWpSqjtDyiji2RfCl7yoUfzkV42QPexQNFjBK5/+pJhV8QuWShN6r9vLZM5XJNS670dgAgf7wC+wCLLIFWHgjgWx32LJMnJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBkZv5SEXMv/srbpyw5vnvIzlu8X3EmssQ5s6QAAAAAabiFf+q4GE+2h/Y0YYwDXaxDncGus7VZig8AAAAAABBt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKmMlyWPTiSJ8bs9ECkUjg2DC1oTmdr/EIQEjnvY2+n4WbB1qAZjecpv43A3/wwo1VSm5NY22ehRjP5uuuk/Ujb+tSfUXWQOPsFfYV1bDiOlSpa4PwuCC/cGNfJDSsZAzATG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYVCj/auTzJLgPke1v9c3puAy81rBYgsabmuLUTEQsZyVAwcABQL9WQEABwAJA0ANAwAAAAAADA0AAg0IAQQDBQYJCgsMCBYHIWKotyLz"
 }
 ```
 
