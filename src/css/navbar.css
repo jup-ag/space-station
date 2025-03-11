@@ -172,10 +172,6 @@
     position: relative;
 }
 
-.navbar__link-wrapper:hover {
-    color: rgb(69, 69, 69);
-}
-
 .navbar__link-wrapper .navbar__link {
     color: rgb(48 66 86 / 0.4);
     font-weight: 600;
