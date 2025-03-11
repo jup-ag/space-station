@@ -33,6 +33,10 @@ To get the active orders, you can pass in the `orderStatus` parameter as `active
 You can optionally pass in the input and output token mint addresses to filter the open orders.
 :::
 
+:::note
+Please take note, depending on the `recurringType`, the response will be different.
+:::
+
 ```jsx
 const openOrdersResponse = await (
     await fetch(
