@@ -1,0 +1,76 @@
+---
+id: execute
+title: "execute"
+description: ":::note"
+sidebar_label: "execute"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVltv2zYU/isEnzbAjuLObTO/5bqmaNHWcYEOToBS0rFMRyIVXpwYqv77DkkplhP1gqEr0GJ5cCjy3Ph9h+RX0RR0onhpuBR0QieTiZAGLsWQTMEoDmsgZglEwY0Fbc5TwkRKNM+EnzaKCc0S5+xcTu8gsSZ4OBtIuxbeNQPjl8GbulltmLE6ZFyAIkaS+UzxLMPx4dtzksrk6rcIf3VkwvSQlTwKAWAoVQrqd7KQihRSAeEChwULJeF2LgUd0Kb8I5lu6KTyn1xBSidGWRjQRAoDwrglVpY5T7x7tNIOk4rqZAkFcyOzKQFRkvEKEoNxSyVLUIaDbsN6kDqmGmsWGZru4nwmLYLBRQOuLqXQQOSCfIwSBczAG7etjwR3hTNMJJCHGVoPaIB2tkX26/lm/Ywg1g2OtK4HHVzmnc30JbwaUMNN7jI2AaYdiOs6RAvb8tg82d93/3arusC4SL7yO/dNY5MEtF7YvFsm/W4M6Tbh1xH71tocH76D+0KCsIUD8yL44swZ4zkCfPUQ7m1l9/EQY7hjRZnDg9LpHwfHprTZ9EjGm9Xo5evrF6s/bfEOxycHN89iPVolr6fJ7fMzvinHRx/WY7scxyfj2ealfrbQN38fn5ws3pVI2e3h8xerV4ej01IlB3bqz0q7m/ui60DnuI/BI5a2dwOJHfXfjSpQSqrHmNYuQdrlDyGOQfkFZnUPs82J+be8d8geEL7AG0yAwhPqDsY9P/8lJd/UYZ/rqwBjA9puRzUIUy7WLOfpoxPnUEbSOx3RJGka4mlfQ5wj+UqwnGwT/98OP1U7WMHiHNzTgNQtuCp6G+Opb4wffid1OxC3VoBZStwYLaX2PcPMEr9aceA8Qa1Boeu8olbluLg0ptSTKEIRsbey5R7LWl0RrUe0RlBcb3aes9MtRp0Xfot5z3Pc6TWnRzxTzXPZShv/nDuBgxFchcFvtLe/t9+jFlQBKt+QayFvUUdp8ooX3GxjXKLW+YST4pp8cqPhcBgG82OvJoJln4wKaqNVUcGnlXGfdXqgvZpMXqV8IZNf3/X5C9XgDiC6zxM147D99u7a+zt0He8F8zeJYEVHjjzEsNpeRL+qyG3uAgN3Jipzxj1Avuer5mDM79HBLl+6I4NTVRUzDe9VXtduGiFQKJLnOFwzxd1d4L4w1BIYVuFP0jWgCT0OiA5nLrEzz60r4NE1Xw9aj0NUFKX5ou1V51S/fXMxQ+O4ke2Fv3moYrdO0uPvhOJAeoaDAHdzFc2ZyCzLnG2I6f7+AZpwgzg=
+sidebar_class_name: "post api-method"
+info_path: docs/api/trigger-api/trigger-order-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"execute"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/execute"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+:::note
+- Retrieve the requestId and sign the transaction
+- Execute the signed transaction and get the execution status
+- Refer to [Trigger API doc](/docs/trigger-api/execute-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"requestId":{"type":"string","description":"Found in the response of `/createOrder` or `/cancelOrder`"},"signedTransaction":{"type":"string","description":"The signed transaction to execute"}},"required":["requestId","signedTransaction"],"title":"executeRequestBody"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Signature of the successful transaction","content":{"application/json":{"schema":{"type":"object","properties":{"signature":{"type":"string","description":"Signature of the successful transaction"},"status":{"type":"string","enum":["Success","Failed"]}},"required":["signature","status"],"example":{"signature":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n","status":"Success"}}}}},"400":{"description":"Bad request body","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"},"cause":{"type":"string"},"signature":{"type":"string","description":"Signature of the transaction, if generated","example":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n"},"status":{"type":"string","enum":["Failed"]}},"required":["error","code"],"example":{"error":"invalid transaction","code":400,"status":"Failed"}}}}},"500":{"description":"Internal error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"},"cause":{"type":"string"},"signature":{"type":"string","description":"Signature of the transaction, if generated","example":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n"},"status":{"type":"string","enum":["Failed"]}},"required":["error","code"],"example":{"error":"unable to confirm transaction","code":500,"signature":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n","status":"Failed"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

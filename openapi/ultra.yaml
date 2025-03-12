@@ -9,15 +9,17 @@ info:
     | [Execute Order](/docs/ultra-api/execute-order) |
 
 servers:
-  - url: https://api.jup.ag
+  - url: https://api.jup.ag/ultra/v1
 
 paths:
-  /ultra/v1/order:
+  /order:
     get:
-      tags:
-        - Ultra
       summary: order
-      description: "Retrieve a swap order to be used in `POST /ultra/v1/execute`.\n\nRefer to [Ultra API doc](/docs/ultra-api/get-order) for more information."
+      description: |
+        :::note
+        - Request for a base64-encoded unsigned swap transaction to be used in `POST /ultra/v1/execute`
+        - Refer to [Ultra API doc](/docs/ultra-api/get-order) for more information
+        :::
       responses:
         '200':
           description: Successful response
@@ -26,11 +28,6 @@ paths:
               schema:
                 type: object
                 properties:
-                  environment:
-                    type: string
-                    enum:
-                      - canary
-                      - production
                   inputMint:
                     type: string
                   outputMint:
@@ -103,12 +100,14 @@ paths:
                       - aggregator
                       - rfq
                   transaction:
+                    description: "Unsigned base-64 encoded transaction to be signed and used in `/execute`"
                     type:
                       - string
                       - 'null'
                   gasless:
                     type: boolean
                   requestId:
+                    description: "Required to make a request to `/execute`"
                     type: string
                   totalTime:
                     type: number
@@ -217,15 +216,19 @@ paths:
           required: true
         - in: query
           name: taker
+          description: "The account address of the user"
           schema:
             type: string
           required: false
-  /ultra/v1/execute:
+  /execute:
     post:
-      tags:
-        - Ultra
       summary: execute
-      description: "Execute a swap order and get the execution status.\n\nRefer to [Ultra API doc](/docs/ultra-api/execute-order) for more information."
+      description: |
+        :::note
+        - Retrieve the requestId and sign the transaction
+        - Execute the signed transaction and get the execution status
+        - Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information
+        :::
       responses:
         '200':
           description: Successful response
@@ -308,8 +311,10 @@ paths:
               properties:
                 signedTransaction:
                   type: string
+                  description: "The signed transaction to execute"
                 requestId:
                   type: string
+                  description: "Found in response of `/order`"
               required:
                 - signedTransaction
                 - requestId

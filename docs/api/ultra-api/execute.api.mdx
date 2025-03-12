@@ -1,11 +1,11 @@
 ---
 id: execute
 title: "execute"
-description: "Execute a swap order and get the execution status."
+description: ":::note"
 sidebar_label: "execute"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVUtPGzEQ/iuWT62UZEPVXnKDilZIraBATyGHye6QGHZt148AWvLfO+PdKJuwQCtxIIfEsb+Z+eZdywALLydT+bsMDuRsIAv0uVM2KKPlRB7fYx4DChD+DqwwrkAnQBdigUGEJQpMAAILHyBEP7rSV/ocrwkWjJgmteLw7EQUJp99yOjbZ5Evh2BV1kjjMOn9KK6NE5VxKJSmYwWsdyQH0qG3RnskprX8NB7zzy7Pi5jn6P11LMUGTHK50QF1YDhYW6o8acxuPMvU0udLrIBP4cEiaTHzG8wDCVpnLLqgGouNZx2cD07pBeFQx4qj15qnm2+gSizkbD2QXi00CTp8KsmvpQm9D+iccb0vuSm6usj2HB0/KG1jOKxM1OEcPYW3V9zE8C8wTvTxisLW9RicgwdyTwWs/OsRS4R+Kt1voUP3BaLPinf96AGsuV7+ROUoDZSaLZVdwztm9pTO1vta2hJoc8DvBPjcV4lHUAiWRB/ergL/uyb26Dfyu+y/9LE/IbpOQyk8uhX18FbwnfrRAijaR6Z4YA1v1fTUvVhcOtAe8iY6PbRb2yfF64X4VGFXvE1KhWFpCC6tSfVjISzpXzMys9XBZmLSU5MhHt61jK4k1DIE6ydZRpN1dBPtCIgETXT2/Hwbo+N7qGyJz/i4nW0d13Z699okX1VgHfJXVPktdYdjtsyn0XIwGo/Gcn+bPIofSt+Kxyv9KIbDYXOYfqdVcsoL4Ol+oC2z2Q0NdrOPnsHv7ROSYc4cywpSAjVUzHobxR2CneJ5J5uvLamA9yGzJajkT8p23dbGVCalHP0D3kitZ5T3JZcQvdf1HDz+duV6zdeUVUeNMqXjCpyCOedxygtriUBkUkHdIkHk1yYaw0tmwfAypmWw31brwUbikPagDS9iZ50qPzu9uCTwvG3dKg0B6eCO64++J5JHc8pOasp0V8sS9CLCgrGNTv78BbIXErM=
+api: eJzdVU1PGzEQ/SuWT62UsKFqL3uDCqpIraCQnkIknN1JYti1jT8CaMl/74x3QzbJAq3EoWoOiWO/+Xp+nql4Di6z0nipFU95mqZKe7hSfXYB3kpYAvMLYBbuAjg/zJlQOXNyruK2t0I5kZExmZw8QBZ8bUEYyNuIaDoHH48hQmnXeeGDqyPOwDKv2fhXgXbs6HzIcp1NPiT47ZJAm31hZFIbQ1/bHOxHNtOWldoCkwqXpajTwVKuFO9xC85o5cDxtOKfBgP62S76MmQZODcLBVuD0S7TyoPyBBfGFDKLfpMbRzYVd9kCSkEr/2gAvejpDWQeDY3VBqyXdcS6vBbOIa1qjjhQoeTpeB0ed06FLCDnk1WPE31oaGHfkk4L7TsPwFptO08ynbd9YewpWDqQygR/VOqg/AU4JLnTXAf/JzB3L8zJEmlrVyysFY9YnvRQurcZiwn9kKo7QivdVxJ90bxdRwdgRXq5C9LiNeDVbFLZDrwVZsfpZLXrpZFAcwd0joDPXUo8Fvn6qb2fAv9aEzvp1/bb2X/pyn6I6VolCubALvElbwz/0ToaALJ9rPNH8vBejz42v9Gm93W9/23yRt09E7th0+34Jtth/ra/UxRjjh3xuaUxPWPXSWyZ13vc7CfcDtZcegl+oRHOjY76NMIv8N+6HeNOffFIwbjiwRZ4uPDeuDRJsG0f3ARzIOZ1H0+Wh3w16XFi9mJzBycPojQFvMDhptYWEVu9YaYjM9KTD/4zyOwWX5+lbCmx2svhweBgsEfYE/su1S17ulJPrN/v14vxN5xXZ8TZ/hTCUbaeQDV2Pf5ewO9MLbShnInLUkSBKFFS1hs6txJsifN/HNONmj08+MQUQkZyooaqRmjjZ2ZQNwuSIG5V1VQ4+GWL1Yq2sXyLD3mMy6WwUkxJB2MaqAsQmEVU5i0ghH+t2eyPKDDBixCH1e6zX/XWFkc4p41/FTtpvZLzs8sRgqdNayljk+JW3JN+8TvlNDri7camEfcqXgg1D2JO2NonfX4DNHZj3A==
 sidebar_class_name: "post api-method"
 info_path: docs/api/ultra-api/quickstart
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"post"}
-  path={"/ultra/v1/execute"}
+  path={"/execute"}
   context={"endpoint"}
 >
   
@@ -36,9 +36,12 @@ import Heading from "@theme/Heading";
 
 
 
-Execute a swap order and get the execution status.
+:::note
+- Retrieve the requestId and sign the transaction
+- Execute the signed transaction and get the execution status
+- Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information
+:::
 
-Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information.
 
 <Heading
   id={"request"}
@@ -56,7 +59,7 @@ Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"signedTransaction":{"type":"string"},"requestId":{"type":"string"}},"required":["signedTransaction","requestId"]}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"signedTransaction":{"type":"string","description":"The signed transaction to execute"},"requestId":{"type":"string","description":"Found in response of `/order`"}},"required":["signedTransaction","requestId"]}}}}}
 >
   
 </RequestSchema>

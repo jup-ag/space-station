@@ -1,0 +1,755 @@
+openapi: 3.0.0
+info:
+  title: Recurring Order API
+  version: 0.1.0
+  description: |
+    | Link |
+    | --- |
+    | [Create Order](/docs/recurring-api/create-order) |
+    | [Execute Order](/docs/recurring-api/execute-order) |
+    | [Cancel Order](/docs/recurring-api/cancel-order) |
+    | [Price Deposit](/docs/recurring-api/deposit-price-order) |
+    | [Price Withdraw](/docs/recurring-api/withdraw-price-order) |
+    | [Get Recurring Orders](/docs/recurring-api/get-recurring-orders) |
+
+servers:
+  - url: https://api.jup.ag/recurring/v1
+
+paths:
+  /cancelOrder:
+    post:
+      summary: cancelOrder
+      description: |
+        :::note
+        - Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
+        - Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
+        ---
+        - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+        :::
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CloseRecurring'
+        required: true
+      responses:
+        '200':
+          description: Recurring order closed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecurringResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /createOrder:
+    post:
+      summary: createOrder
+      description: |
+        :::note
+        - Request for a base64-encoded unsigned recurring order creation transaction to be used in `POST /recurring/v1/execute`
+        - Refer to [Recurring API doc](/docs/recurring-api/create-order) for more information
+
+        - Pass in the correct recurring type in the `params` field, can be `time` or `price`
+        :::
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateRecurring'
+        required: true
+      responses:
+        '200':
+          description: Recurring order created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecurringResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /execute:
+    post:
+      summary: execute
+      description: |
+        :::note
+        - Retrieve the requestId and sign the transaction
+        - Execute the signed transaction and get the execution status
+        - Refer to [Recurring API doc](/docs/recurring-api/execute-order) for more information
+        :::
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExecuteRecurring'
+        required: true
+      responses:
+        '200':
+          description: Transaction executed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecuteRecurringResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /getRecurringOrders:
+    get:
+      summary: getRecurringOrders
+      description: |
+        :::note
+        - Request for the active or historical orders associated to the provided account
+        - Refer to [Recurring API doc](/docs/recurring-api/get-recurring-orders) for more information
+        ---
+        - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+        - Do note that each recurring type's data format is different, make sure you handle both accordingly
+        :::
+      parameters:
+        - name: recurringType
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/RecurringOrderType'
+        - name: orderStatus
+          in: path
+          required: true
+          schema:
+            $ref: '#/components/schemas/OrderState'
+        - name: user
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: path
+          required: true
+          schema:
+            type:
+              - integer
+              - 'null'
+            format: int64
+            minimum: 0
+        - name: includeFailedTx
+          in: path
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successfully retrieved recurring orders
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRecurringOrderResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /priceDeposit:
+    post:
+      summary: priceDeposit
+      description: |
+        :::note
+        - Request for a base64-encoded unsigned price-based recurring order deposit transaction to be used in `POST /recurring/v1/execute`
+        - Refer to [Recurring API doc](/docs/recurring-api/deposit-price-order) for more information
+        :::
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositPriceRecurring'
+        required: true
+      responses:
+        '200':
+          description: Deposit transaction created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecurringResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /priceWithdraw:
+    post:
+      summary: priceWithdraw
+      description: |
+        :::note
+        - Request for a base64-encoded unsigned price-based recurring order withdrawal transaction to be used in `POST /recurring/v1/execute`
+        - Refer to [Recurring API doc](/docs/recurring-api/withdraw-price-order) for more information
+        ---
+        - Recurring orders auto withdraws the output mint amount after each time the order is executed
+        - Withdrawal does not close the order, you will need to close the order manually
+        :::
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawPriceRecurring'
+        required: true
+      responses:
+        '200':
+          description: Withdraw transaction created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecurringResponse'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    CloseRecurring:
+      type: object
+      required:
+        - user
+        - order
+        - recurringType
+      properties:
+        order:
+          type: string
+          description: "Base-58 account which is the Recurring Order account"
+        recurringType:
+          $ref: '#/components/schemas/CloseRecurringType'
+        user:
+          type: string
+    CloseRecurringType:
+      type: string
+      enum:
+        - time
+        - price
+    CreateRecurring:
+      type: object
+      required:
+        - user
+        - inputMint
+        - outputMint
+        - params
+      properties:
+        inputMint:
+          type: string
+        outputMint:
+          type: string
+        params:
+          $ref: '#/components/schemas/RecurringType'
+        user:
+          type: string
+      example:
+        user: "devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4"
+        inputMint: "So11111111111111111111111111111111111111112"
+        outputMint: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+        params:
+          time:
+            inAmount: 1000000000
+            numberOfOrders: 10
+            interval: 86400
+    DepositPriceRecurring:
+      type: object
+      required:
+        - user
+        - order
+        - amount
+      properties:
+        amount:
+          type: integer
+          format: int64
+          minimum: 0
+        order:
+          type: string
+          description: "Base-58 account which is the Recurring Order account"
+        user:
+          type: string
+    ExecuteRecurring:
+      type: object
+      required:
+        - requestId
+        - signedTransaction
+      properties:
+        requestId:
+          type: string
+        signedTransaction:
+          type: string
+    ExecuteRecurringResponse:
+      type: object
+      required:
+        - signature
+        - status
+      properties:
+        error:
+          type:
+            - string
+            - 'null'
+        order:
+          type:
+            - string
+            - 'null'
+          description: "Base-58 account which is the Recurring Order account"
+        signature:
+          type: string
+        status:
+          type: string
+          enum:
+            - Success
+            - Failed
+    GetRecurringOrderParams:
+      type: object
+      required:
+        - recurringType
+        - orderStatus
+        - user
+        - includeFailedTx
+      properties:
+        includeFailedTx:
+          type: boolean
+        orderStatus:
+          $ref: '#/components/schemas/OrderState'
+        page:
+          type:
+            - integer
+            - 'null'
+          format: int64
+          minimum: 0
+        recurringType:
+          $ref: '#/components/schemas/RecurringOrderType'
+        user:
+          type: string
+    GetRecurringOrderResponse:
+      oneOf:
+        - type: object
+          required:
+            - user
+            - order_status
+            - time
+          properties:
+            order_status:
+              $ref: '#/components/schemas/OrderState'
+            time:
+              $ref: '#/components/schemas/PaginatedTimeData'
+            user:
+              type: string
+        - type: object
+          required:
+            - user
+            - order_status
+            - price
+          properties:
+            order_status:
+              $ref: '#/components/schemas/OrderState'
+            price:
+              $ref: '#/components/schemas/PaginatedPriceData'
+            user:
+              type: string
+    OpenIxArgsWithoutIdx:
+      type: object
+      required:
+        - interval
+        - depositAmount
+        - incrementUsdcValue
+      properties:
+        depositAmount:
+          type: integer
+          format: int64
+          minimum: 0
+        incrementUsdcValue:
+          type: integer
+          format: int64
+          minimum: 0
+        interval:
+          type: integer
+          format: int64
+          description: In unix seconds
+        startAt:
+          type:
+            - integer
+            - 'null'
+          format: int64
+          description: In unix timestamp
+    OrderHistoryResponse:
+      type: object
+      required:
+        - orderKey
+        - keeper
+        - inputMint
+        - outputMint
+        - inputAmount
+        - outputAmount
+        - rawInputAmount
+        - rawOutputAmount
+        - feeMint
+        - feeAmount
+        - rawFeeAmount
+        - txId
+        - confirmedAt
+        - action
+      properties:
+        action:
+          type: string
+        confirmedAt:
+          type: string
+          format: date-time
+        feeAmount:
+          type: string
+        feeMint:
+          type: string
+        inputAmount:
+          type: string
+        inputMint:
+          type: string
+        keeper:
+          type: string
+        orderKey:
+          type: string
+        outputAmount:
+          type: string
+        outputMint:
+          type: string
+        productMeta:
+          description: |
+            Extra metadata for sub-products which will never be queried
+
+            with filters.
+
+
+            See structs `DbOrderHistoryValueAverageMeta` and
+            `DbOrderHistoryPerpetualMeta`
+
+            to craft the JSONB object.
+        rawFeeAmount:
+          type: string
+        rawInputAmount:
+          type: string
+        rawOutputAmount:
+          type: string
+        txId:
+          type: string
+    OrderState:
+      type: string
+      enum:
+        - active
+        - history
+    PaginatedPriceData:
+      type: object
+      required:
+        - orders
+        - totalPages
+        - page
+      properties:
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/PriceRecurringResponse'
+        page:
+          type: integer
+          format: int64
+          minimum: 0
+        totalPages:
+          type: integer
+          format: int64
+          minimum: 0
+    PaginatedTimeData:
+      type: object
+      required:
+        - orders
+        - totalPages
+        - page
+      properties:
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/TimeRecurringResponse'
+        page:
+          type: integer
+          format: int64
+          minimum: 0
+        totalPages:
+          type: integer
+          format: int64
+          minimum: 0
+    PriceRecurringResponse:
+      type: object
+      required:
+        - userPubkey
+        - orderKey
+        - inputMint
+        - outputMint
+        - inDeposited
+        - inWithdrawn
+        - inUsed
+        - outReceived
+        - outWithdrawn
+        - orderInterval
+        - incrementalUsdValue
+        - supposedUsdValue
+        - rawInDeposited
+        - rawInWithdrawn
+        - rawInUsed
+        - rawOutReceived
+        - rawOutWithdrawn
+        - rawIncrementalUsdValue
+        - rawSupposedUsdValue
+        - status
+        - closedBy
+        - openTx
+        - closeTx
+        - createdAt
+        - startAt
+        - updatedAt
+        - trades
+      properties:
+        closeTx:
+          type: string
+        closedBy:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        inDeposited:
+          type: string
+        inUsed:
+          type: string
+          description: Amount used to fulfill orders
+        inWithdrawn:
+          type: string
+        incrementalUsdValue:
+          type: string
+        inputMint:
+          type: string
+        openTx:
+          type: string
+        orderInterval:
+          type: string
+        orderKey:
+          type: string
+        outReceived:
+          type: string
+          description: Amount received in escrow without auto-withdraw enabled
+        outWithdrawn:
+          type: string
+          description: |
+            Amount withdrawn from escrow account with/without auto-withdraw
+            enabled
+        outputMint:
+          type: string
+        rawInDeposited:
+          type: string
+        rawInUsed:
+          type: string
+          description: Amount used to fulfill orders
+        rawInWithdrawn:
+          type: string
+        rawIncrementalUsdValue:
+          type: string
+        rawOutReceived:
+          type: string
+          description: Amount received in escrow without auto-withdraw enabled
+        rawOutWithdrawn:
+          type: string
+          description: |
+            Amount withdrawn from escrow account with/without auto-withdraw
+            enabled
+        rawSupposedUsdValue:
+          type: string
+        startAt:
+          type: string
+          format: date-time
+        status:
+          type: string
+        supposedUsdValue:
+          type: string
+        trades:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderHistoryResponse'
+        updatedAt:
+          type: string
+          format: date-time
+        userPubkey:
+          type: string
+    RecurringOrderType:
+      type: string
+      enum:
+        - time
+        - price
+    RecurringResponse:
+      type: object
+      required:
+        - requestId
+        - transaction
+      properties:
+        requestId:
+          type: string
+          description: "Required to make a request to `/execute`"
+        transaction:
+          type: string
+          description: "Unsigned base-64 encoded transaction"
+    RecurringType:
+      oneOf:
+        - type: object
+          required:
+            - time
+          properties:
+            time:
+              $ref: '#/components/schemas/TimeRecurringCreationParams'
+        - type: object
+          required:
+            - price
+          properties:
+            price:
+              $ref: '#/components/schemas/OpenIxArgsWithoutIdx'
+    TimeRecurringCreationParams:
+      type: object
+      required:
+        - inAmount
+        - numberOfOrders
+        - interval
+      properties:
+        inAmount:
+          type: integer
+          format: int64
+          minimum: 0
+        interval:
+          type: integer
+          format: int64
+          description: In unix seconds
+        maxPrice:
+          type:
+            - integer
+            - 'null'
+          format: int64
+          minimum: 0
+        minPrice:
+          type:
+            - integer
+            - 'null'
+          format: int64
+          minimum: 0
+        numberOfOrders:
+          type: integer
+          format: int64
+          minimum: 0
+        startAt:
+          type:
+            - integer
+            - 'null'
+          format: int64
+          description: In unix timestamp
+    TimeRecurringResponse:
+      type: object
+      required:
+        - userPubkey
+        - orderKey
+        - inputMint
+        - outputMint
+        - inDeposited
+        - inWithdrawn
+        - rawInDeposited
+        - rawInWithdrawn
+        - cycleFrequency
+        - outWithdrawn
+        - inAmountPerCycle
+        - minOutAmount
+        - maxOutAmount
+        - inUsed
+        - outReceived
+        - rawOutWithdrawn
+        - rawInAmountPerCycle
+        - rawMinOutAmount
+        - rawMaxOutAmount
+        - rawInUsed
+        - rawOutReceived
+        - openTx
+        - closeTx
+        - userClosed
+        - createdAt
+        - updatedAt
+        - trades
+      properties:
+        closeTx:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        cycleFrequency:
+          type: string
+        inAmountPerCycle:
+          type: string
+        inDeposited:
+          type: string
+        inUsed:
+          type: string
+        inWithdrawn:
+          type: string
+        inputMint:
+          type: string
+        maxOutAmount:
+          type: string
+        minOutAmount:
+          type: string
+        openTx:
+          type: string
+        orderKey:
+          type: string
+        outReceived:
+          type: string
+        outWithdrawn:
+          type: string
+        outputMint:
+          type: string
+        rawInAmountPerCycle:
+          type: string
+        rawInDeposited:
+          type: string
+        rawInUsed:
+          type: string
+        rawInWithdrawn:
+          type: string
+        rawMaxOutAmount:
+          type: string
+        rawMinOutAmount:
+          type: string
+        rawOutReceived:
+          type: string
+        rawOutWithdrawn:
+          type: string
+        trades:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderHistoryResponse'
+        updatedAt:
+          type: string
+          format: date-time
+        userClosed:
+          type: boolean
+        userPubkey:
+          type: string
+    WithdrawPriceRecurring:
+      type: object
+      required:
+        - user
+        - order
+        - inputOrOutput
+      properties:
+        amount:
+          type:
+            - integer
+            - 'null'
+          description: "If no `amount` is provided, it will withdraw the entire amount"
+          format: int64
+          minimum: 0
+        inputOrOutput:
+          $ref: '#/components/schemas/Withdrawal'
+        order:
+          type: string
+          description: "Base-58 account which is the Recurring Order account"
+        user:
+          type: string
+    Withdrawal:
+      type: string
+      enum:
+        - In
+        - Out
+

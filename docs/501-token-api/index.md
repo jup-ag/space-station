@@ -102,7 +102,7 @@ Using this endpoint, you can get a list of all token mints that are tradable on 
 
 ```jsx
 const allTradableResponse = await (
-    await fetch('https://api.jup.ag/tokens/v1/mints/all')
+    await fetch('https://api.jup.ag/tokens/v1/mints/tradable')
 ).json();
 
 console.log(allTradableResponse);

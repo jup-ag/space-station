@@ -142,6 +142,14 @@ const config = {
             specPath: "openapi/swap.yaml",
             outputDir: "docs/api/swap-api",
           },
+          trigger: {
+            specPath: "openapi/trigger.yaml",
+            outputDir: "docs/api/trigger-api",
+          },
+          recurring: {
+            specPath: "openapi/recurring.yaml",
+            outputDir: "docs/api/recurring-api",
+          },
           token: {
             specPath: "openapi/token.yaml",
             outputDir: "docs/api/token-api",
@@ -220,6 +228,28 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ["rust"],
       },
+      languageTabs: [
+        {
+          highlight: "bash",
+          language: "curl",
+          logoClass: "curl",
+        },
+        {
+          highlight: "javascript",
+          language: "nodejs",
+          logoClass: "nodejs",
+        },
+        {
+          highlight: "python",
+          language: "python",
+          logoClass: "python",
+        },
+        {
+          highlight: "rust",
+          language: "rust",
+          logoClass: "rust",
+        },
+      ],
     }
   ),
   themes: ['docusaurus-theme-openapi-docs'],
