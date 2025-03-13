@@ -331,6 +331,63 @@ paths:
               required:
                 - signedTransaction
                 - requestId
+  '/balances/{address}':
+      get:
+        tags:
+          - Ultra
+        summary: balances
+        description: "Retrieve the token balances of an account.\n\nRefer to [Ultra API doc](/docs/ultra-api/get-balances) for more information."
+        responses:
+          '200':
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    properties:
+                      amount:
+                        type: string
+                      uiAmount:
+                        type: number
+                      slot:
+                        type: number
+                      isFrozen:
+                        type: boolean
+                    required:
+                      - amount
+                      - uiAmount
+                      - slot
+                      - isFrozen
+          '400':
+            description: Bad request
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                  required:
+                    - error
+          '500':
+            description: Internal server error
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                  required:
+                    - error
+        parameters:
+          - schema:
+              type: string
+            in: path
+            name: address
+            required: true
   /swap/v1/quote:
     get:
       tags:
