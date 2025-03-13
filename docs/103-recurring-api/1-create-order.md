@@ -97,10 +97,10 @@ const createOrderResponse = await (
             outputMint: "So11111111111111111111111111111111111111112",
             params: {
                 price: {
-                    depositAmount: 110000000, // Replace with actual in amount
-                    incrementUsdcValue: 10000000, // Replace with actual in amount per cycle
-                    interval: 86400, // Replace with actual cycle frequency in seconds
-                    startAt: null, // Replace with actual minimum price or null
+                    depositAmount: 110000000, // Raw amount of input token to deposit now (before decimals)
+                    incrementUsdcValue: 10000000, // Raw amount of USDC to increment per cycle (before decimals)
+                    interval: 86400, // Time between each cycle in unix seconds
+                    startAt: null, // Unix timestamp of start time or null - null starts immediately
                 },
             },
         }),
