@@ -322,10 +322,10 @@ components:
         - type: object
           required:
             - user
-            - order_status
+            - orderStatus
             - time
           properties:
-            order_status:
+            orderStatus:
               $ref: '#/components/schemas/OrderState'
             time:
               $ref: '#/components/schemas/PaginatedTimeData'
@@ -334,10 +334,10 @@ components:
         - type: object
           required:
             - user
-            - order_status
+            - orderStatus
             - price
           properties:
-            order_status:
+            orderStatus:
               $ref: '#/components/schemas/OrderState'
             price:
               $ref: '#/components/schemas/PaginatedPriceData'
