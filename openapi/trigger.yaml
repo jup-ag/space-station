@@ -526,8 +526,9 @@ paths:
     get:
       summary: getTriggerOrders
       description: |
+        Request for the active or historical orders associated to the provided account
+
         :::note
-        - Request for the active or historical orders associated to the provided account
         - Refer to [Trigger API doc](/docs/trigger-api/get-trigger-orders) for more information
         :::
       parameters:
