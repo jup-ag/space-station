@@ -18,10 +18,12 @@ servers:
 paths:
   /tokens/v1/token/{mint_address}:
     get:
-      tags:
-      - Token
       summary: token information
-      description: "Returns the specified mint addresse's token information and metadata.\n\nRefer to [Token API doc](/docs/token-api) for more information."
+      description: |
+        :::note
+        Returns the specified mint address's token information and metadata.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       parameters:
       - name: address
         in: path
@@ -32,25 +34,27 @@ paths:
         example: So11111111111111111111111111111111111111112
       responses:
         '200':
-          description: More information about a particular token
+          description: Returns metadata about a particular token
           content:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
   /tokens/v1/market/{market_address}/mints:
     get:
-      tags:
-      - Token
       summary: mints in market
-      description: "Returns the mints involved in a market.\n\nRefer to [Token API doc](/docs/token-api) for more information."
+      description: |
+        :::note
+        Returns the mints involved in a market.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       parameters:
       - name: address
         in: path
-        description: Market address
+        description: A market/pool address
         required: true
         schema:
           type: string
-        example: JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
+        example: BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh
       responses:
         '200':
           description: Returns the mints involved in a market
@@ -59,16 +63,18 @@ paths:
               schema:
                 type: array
                 items:
-                  "$ref": "#/components/schemas/Mint"
+                  type: string
   /tokens/v1/mints/tradable:
     get:
-      tags:
-      - Token
       summary: tradable
-      description: "Returns a list of all mints tradable via Jupiter routing.\n\nRefer to [Token API doc](/docs/token-api) for more information."
+      description: |
+        :::note
+        Returns a list of all mints tradable via Jupiter routing.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       responses:
         '200':
-          description: List of mints which are tradable
+          description: List of mints which are tradable via Jupiter routing
           content:
             application/json:
               schema:
@@ -77,10 +83,12 @@ paths:
                   type: string
   /tokens/v1/tagged/{tag}:
     get:
-      tags:
-      - Token
       summary: tagged
-      description: Returns a list of mints with specified tag(s) along with their metadata
+      description: |
+        :::note
+        Returns a list of mints with specified tag(s) along with their metadata.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       parameters:
       - name: tag_list
         in: path
@@ -89,7 +97,7 @@ paths:
         required: true
         schema:
           type: string
-        example: strict,lst
+        example: lst,token-2022
       responses:
         '200':
           description: The list of tokens with the tags given
@@ -99,14 +107,16 @@ paths:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
   /tokens/v1/new:
     get:
-      tags:
-      - Token
       summary: new
-      description: "Returns new tokens with metadata, created at timestamp and markets.\n\nRefer to [Token API doc](/docs/token-api) for more information."
+      description: |
+        :::note
+        Returns new tokens with metadata, created at timestamp and markets.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       parameters:
       - name: limit
         in: query
-        description: how many records to output in the JSON
+        description: How many records to output in the result
         required: false
         schema:
           type:
@@ -117,14 +127,14 @@ paths:
       - name: offset
         in: query
         description: |-
-          the offset into the result set. Used in conjunction with
-          `limit` to page through the data. Defaults to 0
+          The offset into the result set. Used in conjunction with
+          `limit` to page through the data.
         required: false
         schema:
-          type:
-          - integer
-          - 'null'
+          type: integer
           format: int64
+          nullable: true
+          default: 0
         example: '20'
       responses:
         '200':
@@ -137,13 +147,15 @@ paths:
                   "$ref": "#/components/schemas/MintWithCreationTimeAndMarkets"
   /tokens/v1/all:
     get:
-      tags:
-      - Token
       summary: all
-      description: "Returns all tokens with all metadata.\n\nRefer to [Token API doc](/docs/token-api) for more information."
+      description: |
+        :::note
+        Returns all tokens with all metadata.
+        Refer to [Token API doc](/docs/token-api) for more information.
+        :::
       responses:
         '200':
-          description: List of tokens which are tradable
+          description: List of all tokens with all metadata
           content:
             application/json:
               schema:

@@ -1,11 +1,11 @@
 ---
 id: mints-in-market
 title: "mints in market"
-description: "Returns the mints involved in a market."
+description: ":::note"
 sidebar_label: "mints in market"
 hide_title: true
 hide_table_of_contents: true
-api: eJy9VVtv0zAU/iuWeWFS22zwAOrbxHXAplFWJOimyk3OUq+OHWynW8n63znHTttsLQXxQB9S387n79w+19yL3PH+iF+YGWh+1eEZuNTK0kujeZ8PwFdWO+anwAqpvWNSz42aQ4YDJlgh7Ax871Jf6gFcg2XesFHAYsfnJywz6dXTBL8u8bTYFaU8YNfGssJYQAgcFoLu6vEOL4UVBXiwxKjmGidIQWSZBedwXxKjUvgpf0zzNNBgm6MWflTSQsb73lbQ4S6dQiF4v+Z+URKq81bqnC87HO5EUSpa+zA8X8hb++3DWzcbnsv34sV0BoOXX4f+GN6aL98mHyH7fuZez1+d8eUVXeJKox04wn12eEh//xI+5Jsa7UF7QhBlqWQagpLcOIKpt+kLa8WCQuKhcK11M7mB1D8IwKgVwRBSjMaimBgVopjKQijaCoWARCwID9lYEAjcISmHRBxVRmlNCdbL6O8KdFdIWyBb2x0ec44rGR7qeomU0CYTUi3GGJyKsr6yGnFdFROwxL1SimhszE01UdF25cbmNgw25MFufR6Xnj+LGV+71a9xfm0BfsJYVH5qrPSL9vVr1vF6PK1MboaDk/2HKNl/C0hnHwVr69jvohZ7ZEcKMFOF0FhS4wwU5Gizn0RTErugokT8qfS2QZdkK31orVP0kS/DDx0GjAtWJs9D7YeO7vOoEC6ZHyWxLZI6/o+bUlsmoYWofsHOVypRWWTNp96Xrp8kqC+9m6rsiTx0KAlMoNjQ+FzJdOa8sHQvQcQ2Peod9g63ROWefZJ6xu4v9T3rdrtxMHqHOhMF7mSjXlsi9wRd68ZZS+QOWhinjRywqF17EBxCdGMo2gAXVmQCGyAi7bYXSnV9c64BO3jsh2OTBbsQ+W8YiDyHbIftGdw29rsNNdzusDpWaq9VILyxCpVsnMdSpjQ2L8JKSTfy+SBx9UZN/+/71TSIR31JSiVkoB/qs26KfMSjc1R9R/hZO9B/WOo8qkKQ3Sn6T5Z1PREOhlYtl7T8owKLwjLC4VxYSRkO/ZBJR2Nsr2tURNgTm6eD5o04YFvv505XVgKgqf3nQlU0w+EMFq13eklyMgWRofoSobh7nKZQ+pbd1jNH/bpWhndvLlAufgFmyvtQ
+api: eJzFVN9P2zAQ/lcs74VKbVMm7WF5KxMwNJg26H6wgqZrck3cOraxnUAU+r/PdgJt14L2tjwkZ8f3+e67766hKZpEM2WZFDSmcRwLafFGXKIttTDE5kgKJqwhTFSSV5g6gwApQC/RDv3BOWpiJZlO5BIFGX85I6lMbg8i9zaR9ZsDUKxH5lKTQmp0AM4swF/pANyVN4L2qQINBVrUhsbThgq3cAFBmmo0xv1nPj4FNnf2dtDjLppIScnJ2kPjXck0pjS2usQ+NUmOBdC4obZWHtxYzURGV32KD1Ao7veOvl/O6vPFYn51lMiaXZ+UD7Ps07X4UbITOHn/4ernMbyr0qtf7z/mdHXrbzFKCoPGA78djfxnO75/49IFnEhhUViPAEpxlgSOooXxMM1u/KA11J4ai4XZk1d4+tSxmkvHAs3CLYHDmLalMVF1GHX0Ne33d8fgKgrBOg+DunqqS6m5c86tVSaOIlfY4aJUQ8gCF76yIQ5mA5lfS5YsjQXt7/UQLSGHw9FwtFPGR3LOxJI83ohHMhgMWmN6ipa0yjpby2ZHXW9caoN2taGu3gbGRUc8uQhJvoJgHMSgpWITYKIhhRnHFmm/P3A+sN25Dqz3dx6GzGoygeyFCCDLMN3j+xnvO//9jgLv93iNOX/VKwS89vKtoKSxBQTBdT34pNm1ULcK16x1+z/nR6d9iw9uEHBgIZmg1qaT/JS2qXotHrrXczrxtvD9r6B8p+jcseE9m2YGBr9pvlr57bsSde32nVmBZr7eoTtSZrztmm0O3OArTB1cdtOpR16aX3szemp94Ru/Al76lTOXWG+My9WtO5ojpKhDXO3fcZKgsht+O1PGN/HzuDg9nrgZ8gdCyiHF
 sidebar_class_name: "get api-method"
 info_path: docs/api/token-api/quickstart
 custom_edit_url: null
@@ -36,9 +36,11 @@ import Heading from "@theme/Heading";
 
 
 
+:::note
 Returns the mints involved in a market.
-
 Refer to [Token API doc](/docs/token-api) for more information.
+:::
+
 
 <Heading
   id={"request"}
@@ -49,7 +51,7 @@ Refer to [Token API doc](/docs/token-api) for more information.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"address","in":"path","description":"Market address","required":true,"schema":{"type":"string"},"example":"JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"}]}
+  parameters={[{"name":"address","in":"path","description":"A market/pool address","required":true,"schema":{"type":"string"},"example":"BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh"}]}
 >
   
 </ParamsDetails>
@@ -64,7 +66,7 @@ Refer to [Token API doc](/docs/token-api) for more information.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Returns the mints involved in a market","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","required":["address","name","symbol","decimals","tags","created_at","extensions"],"properties":{"address":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"daily_volume":{"type":["number","null"],"format":"double"},"decimals":{"type":"integer","format":"int32"},"extensions":{},"freeze_authority":{"type":["string","null"]},"logoURI":{"type":["string","null"]},"mint_authority":{"type":["string","null"]},"minted_at":{"type":["string","null"],"format":"date-time"},"name":{"type":"string"},"permanent_delegate":{"type":["string","null"]},"symbol":{"type":"string"},"tags":{"type":"array","items":{"type":["string","null"]}}},"title":"Mint"}}}}}}}
+  responses={{"200":{"description":"Returns the mints involved in a market","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}}}}
 >
   
 </StatusCodes>
