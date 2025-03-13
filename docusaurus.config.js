@@ -209,7 +209,7 @@ const config = {
       },
       announcementBar: {
         id: 'zendesk-migration',
-        content: 'We are migrating our User Guides from Station to our new Support System. Please visit <a target="_blank" rel="noopener noreferrer" href="https://jupiverse.zendesk.com/hc/en-us">https://jupiverse.zendesk.com/hc/en-us</a> for the latest guides.',
+        content: 'We are migrating our User Guides from Station to our new Support System. Please visit <a target="_blank" rel="noopener noreferrer" href="Jupiter Helpdesk">https://jupiverse.zendesk.com/hc/en-us</a> for the latest guides.',
         backgroundColor: '#FFA500',
         textColor: '#000000',
         isCloseable: false,
