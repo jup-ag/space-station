@@ -20,11 +20,11 @@ paths:
     post:
       summary: cancelOrder
       description: |
+        Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
+
         :::note
-        - Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
-        - Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
-        ---
         - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+        - Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
         :::
       requestBody:
         content:
@@ -47,11 +47,11 @@ paths:
     post:
       summary: createOrder
       description: |
+        Request for a base64-encoded unsigned recurring order creation transaction to be used in `POST /recurring/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned recurring order creation transaction to be used in `POST /recurring/v1/execute`
-        - Refer to [Recurring API doc](/docs/recurring-api/create-order) for more information
-
         - Pass in the correct recurring type in the `params` field, can be `time` or `price`
+        - Refer to [Recurring API doc](/docs/recurring-api/create-order) for more information
         :::
       requestBody:
         content:
@@ -74,9 +74,11 @@ paths:
     post:
       summary: execute
       description: |
+        Execute the signed transaction and get the execution status
+        
         :::note
-        - Retrieve the requestId and sign the transaction
-        - Execute the signed transaction and get the execution status
+        - Do note that the `requestId` is found in the response of `/createOrder` or `/cancelOrder`
+        - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
         - Refer to [Recurring API doc](/docs/recurring-api/execute-order) for more information
         :::
       requestBody:
@@ -100,12 +102,12 @@ paths:
     get:
       summary: getRecurringOrders
       description: |
+        Request for the active or historical orders associated to the provided account
+
         :::note
-        - Request for the active or historical orders associated to the provided account
-        - Refer to [Recurring API doc](/docs/recurring-api/get-recurring-orders) for more information
-        ---
         - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
         - Do note that each recurring type's data format is different, make sure you handle both accordingly
+        - Refer to [Recurring API doc](/docs/recurring-api/get-recurring-orders) for more information
         :::
       parameters:
         - name: recurringType
@@ -152,8 +154,9 @@ paths:
     post:
       summary: priceDeposit
       description: |
+        Request for a base64-encoded unsigned price-based recurring order deposit transaction to be used in `POST /recurring/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned price-based recurring order deposit transaction to be used in `POST /recurring/v1/execute`
         - Refer to [Recurring API doc](/docs/recurring-api/deposit-price-order) for more information
         :::
       requestBody:
@@ -177,12 +180,12 @@ paths:
     post:
       summary: priceWithdraw
       description: |
+        Request for a base64-encoded unsigned price-based recurring order withdrawal transaction to be used in `POST /recurring/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned price-based recurring order withdrawal transaction to be used in `POST /recurring/v1/execute`
-        - Refer to [Recurring API doc](/docs/recurring-api/withdraw-price-order) for more information
-        ---
         - Recurring orders auto withdraws the output mint amount after each time the order is executed
         - Withdrawal does not close the order, you will need to close the order manually
+        - Refer to [Recurring API doc](/docs/recurring-api/withdraw-price-order) for more information
         :::
       requestBody:
         content:

@@ -1,11 +1,11 @@
 ---
 id: cancel-order
 title: "cancelOrder"
-description: ":::note"
+description: "Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`"
 sidebar_label: "cancelOrder"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1PGzEQ/SuWT62UZUMFqMoNKKqQKoFSUA8hUhzvJGvYtbe2lw+F/PfO2JtkNwlw4VgkgmPPmxm/NzNmwTNw0qrKK6P5gA8GA2083OmEDeFvDc6zmbFMsKlwcHKUgJYmg4zV2qm5xoUFWVur9JwZm4FlUmgJRSHIH/NWaCdkXBs2BVY7xCjNJtdXv29Yukanj4cpPOM3D5MYfIbOEDMargOcXl+yzMjxlxQ/3QabiEqlMW4Skvgaci6NBQyFyzJkg26ThHxP1siblwomTLmYFkbLgG7PfI6/eMbMbPuCPboh3WTiVYlgDDSprJKUNpJ3p3mP28jcmcle+GDBpdEetKelqKpCyZBOeu+I8QV3ModS0IpCogZmeg/SN36UhYwPRhwztLgVcghHrSvwcY9X1lRgvQJHnqLZxqXzZIu4rtpnKGpy/J0JKU2tPXvKlcyJDyJgQ/xVULYx4svt6HvCgK5Lypo44pQcEkRZeuULMjwvjINhxwu6DXfc8bZcvoXDo2WbJW9rCBuuMtpFJr71+/Sne+/hdtGS24y5WkpwblYXxQtm/Sm6NbVwmeF+qx12JdsYfijbsPFPFVuKB8D2bNC0M1k3EnHajvmh49tVV1O3JydHbNXubS9tPdZEDhvOSRI8P9rH+pnIVnlSZsf7bC6RcqtFwbAUHlEZsNbYELIEnxskh1fGEcmV8Dl+axr/qumLCENCRwte2wINcu8rN0hTHBIH93V1IOadqcOXqARJOtw07cWzKKsCWo20IWyr9FcVHkt3XbI9ToMnEL7NVNNNOMwQRrnGix8e9A/6O4K8sl9KP7DXO/3KcHrFxejcgsApFRy9MQ2DxWoaRtRFrIr3YE3hdHHngeB3o3Vmb0RdU8uzH4BqKb8flsXDJEyHfeg/yueZFU/74U/N6T78T/Db88vt9zIHn2x2ghMXvJCIVGqlCI2jRUkydqutI1Zr0P9/Rj/jGW1mlYdnn1aFUEGS0NSLpvtHHT2wkXOaDbi9WBDRt7ZYLmkbFbD4FI9w+SisElNqydEY3eUgQoPjuHiAF3phooZJaG8yL2pKYucBWPZWiFN8NCr/ru24Nb5IMTSeNv8clFgHuIt1TMMFPwecnvlQU/FdoL0FL4Se12JOttEn/fwDVn5v5A==
+api: eJztVk1PGzEQ/SuWT62UZUMFqMoNKKqQKoFSUA9JpDjeSdawa29tLxCF/PfO2Jtk8wEc2mORCM545nn83syYBc/ASasqr4zmPd6H3zU4z6bGMsEmwsHZSQJamgwyVmunZhoXFmRtrdIzZmwGlkmhJRSFIBDmrdBOyLg2bAKsdhijNBvf3vy8Y+k6On06TuEFv3kYD/VQ93o9bTwMdcLGa6e7eQVjplxEQcAMyIn5HH9xj5npbj4dSogOHntVYjDeZVxZJemUhPVhiikj0KC/Dju/vWaZkaNPKX66TYaJqFQab5cE6M+BmdJYwAvhsgx3DqkPNe9wG/m7MNmc9xZcGu1Be1qKqiqUDO7pgyOyF9zJHEpBK7oJ0m8mDyB9g6MsZLw34Hhxi6ZwfthqMcNHHV5ZU4H1ChwhRbcNpPPki3HbQl+gtMnpVyakNLX27DlXMieaidcNMTdB38aJL3dPP3AM6LqkrIl6Tskh75SlV74gx8vCOOhvoSBsuOMe2nL5VhxuLdsseVtDMLjKaBeZ+NLt0p/dAt8pXYLNmKulBOemdVHMMet/oltTC9cZ2ltNsS/ZxvFD2foNPtVvKR4Bm7SJJst43U7EafvMD4HvV71NPZ+cnbBV07dR2nqsiew3nJMkuH9yiPULka3ypMxOD/lcI+VWi4JhKTyhMmCtseHIEnxukBxeGUckV8Ln+K1pzJumL2IYEjpY8NoW6JB7X7lemmITHz3U1ZGYbc0evkQlSNL+pmmvXkRZFdBqpA1hO6W/qvBYuuuS7XAaDIHwXaaabsJhg2GUa7z48VH3qLsnyCv7ofQjex3qV5YkSVwMLi0IHH4B6I1pFTxW0ypGXcWqeC+sKZztuMtA8Lunbc3GGHVLLc++Aaql/OGwLG4mYTociv6lfJ5Z8Xw4/LnZPRT/Hfzu/HKHUWbgk40lgLiAQiJSqZUiNI4WJcm4XW1bYrUG/f8X9C9f0GZMeXjxaVUIFdQI/bxoGn+wJQX2cE5jAc2LBdF9b4vlksyog8VXeIDLJ2GVmFA3DkYIl4MIvY2T4hHm9LhE+ZLQ2eRe1JTE3uxfdlYR5/heVP5d31FrcpFu6Dxp/i8osRrQiiVMcwU/e5xe+FBO8Ukg24IXQs9qMSPfiEk/fwCYGG48
 sidebar_class_name: "post api-method"
 info_path: docs/api/recurring-api/recurring-order-api
 custom_edit_url: null
@@ -36,11 +36,11 @@ import Heading from "@theme/Heading";
 
 
 
+Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
+
 :::note
-- Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
-- Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
----
 - `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+- Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
 :::
 
 

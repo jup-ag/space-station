@@ -20,9 +20,10 @@ paths:
     get:
       summary: token information
       description: |
-        :::note
         Returns the specified mint address's token information and metadata.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-token-information) for more information.
         :::
       parameters:
       - name: address
@@ -43,9 +44,10 @@ paths:
     get:
       summary: mints in market
       description: |
-        :::note
         Returns the mints involved in a market.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-tokens-in-market) for more information.
         :::
       parameters:
       - name: address
@@ -68,9 +70,10 @@ paths:
     get:
       summary: tradable
       description: |
-        :::note
         Returns a list of all mints tradable via Jupiter routing.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-all-tradable-tokens) for more information.
         :::
       responses:
         '200':
@@ -85,9 +88,10 @@ paths:
     get:
       summary: tagged
       description: |
-        :::note
         Returns a list of mints with specified tag(s) along with their metadata.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-tagged-tokens) for more information.
         :::
       parameters:
       - name: tag_list
@@ -109,9 +113,10 @@ paths:
     get:
       summary: new
       description: |
-        :::note
         Returns new tokens with metadata, created at timestamp and markets.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-new-tokens) for more information.
         :::
       parameters:
       - name: limit
@@ -149,9 +154,10 @@ paths:
     get:
       summary: all
       description: |
-        :::note
         Returns all tokens with all metadata.
-        Refer to [Token API doc](/docs/token-api) for more information.
+        
+        :::note
+        - Refer to [Token API doc](/docs/token-api#get-all-tokens) for more information.
         :::
       responses:
         '200':

@@ -17,9 +17,10 @@ paths:
     get:
       summary: price
       description: |
-        :::note
         Returns prices of specified tokens.
-        Refer to [Price API doc](/docs/price-api) for more information.
+
+        :::note
+        - Refer to [Price API doc](/docs/price-api) for more information.
         :::
       parameters:
       - name: ids

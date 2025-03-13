@@ -23,8 +23,9 @@ paths:
     post:
       summary: cancelOrders
       description: |
+        Request for a base64-encoded unsigned trigger order cancellation transaction(s) to be used in `POST /trigger/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned trigger order cancellation transaction(s) to be used in `POST /trigger/v1/execute`
         - Refer to [Trigger API doc](/docs/trigger-api/cancel-order) for more information
         :::
       requestBody:
@@ -58,9 +59,12 @@ paths:
       responses:
         '200':
           description: |
-            Returns the base64-encoded unsigned transaction(s) of all open orders
-            associated to the provided "maker" if no orders were specified,
-            batching 5 cancel order instructions in 1 transaction.
+            Returns the base64-encoded unsigned transaction(s) of all open orders associated to the provided "maker"
+            
+            :::note
+            - If no orders were specified, batching 5 cancel order instructions in 1 transaction.
+            - Refer to [Trigger API doc](/docs/trigger-api/cancel-order) for more information
+            :::
           content:
             application/json:
               schema:
@@ -144,8 +148,9 @@ paths:
     post:
       summary: createOrder
       description: |
+        Request for a base64-encoded unsigned trigger order creation transaction to be used in `POST /trigger/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned trigger order creation transaction to be used in `POST /trigger/v1/execute`
         - Refer to [Trigger API doc](/docs/trigger-api/create-order) for more information
         :::
       requestBody:
@@ -302,8 +307,9 @@ paths:
     post:
       summary: cancelOrder
       description: |
+        Request for a base64-encoded unsigned trigger order cancellation transaction to be used in `POST /trigger/v1/execute`
+        
         :::note
-        - Request for a base64-encoded unsigned trigger order cancellation transaction to be used in `POST /trigger/v1/execute`
         - Refer to [Trigger API doc](/docs/trigger-api/cancel-order) for more information
         :::
       requestBody:
@@ -410,9 +416,10 @@ paths:
     post:
       summary: execute
       description: |
+        Execute the signed transaction and get the execution status
+        
         :::note
-        - Retrieve the requestId and sign the transaction
-        - Execute the signed transaction and get the execution status
+        - Do note that the `requestId` is found in the response of `/createOrder` or `/cancelOrder`
         - Refer to [Trigger API doc](/docs/trigger-api/execute-order) for more information
         :::
       requestBody:
