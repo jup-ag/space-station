@@ -40,7 +40,7 @@ title: Adding Your Own Fee To Jupiter Swap
 
 ![cat_flying](./cat_flying_money.png)
 
-:::caution No need to use referral program
+:::warning No need to use referral program
 As of January 2025, you do not need to use the Referral program to add fees to your Jupiter Swap.
 
 You can simply pass in **any** token account to the `feeAccount` parameter in `/swap` endpoint to indicate which mint and token account to send the fees to. (You still need to add `platformFeeBps` in `/quote`)
