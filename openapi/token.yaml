@@ -13,10 +13,10 @@ info:
     | [Get All Tokens](/docs/token-api#get-all-tokens) |
 
 servers:
-  - url: https://api.jup.ag
+  - url: https://api.jup.ag/tokens/v1
 
 paths:
-  /tokens/v1/token/{mint_address}:
+  /token/{mint_address}:
     get:
       summary: token information
       description: |
@@ -39,7 +39,7 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
-  /tokens/v1/market/{market_address}/mints:
+  /market/{market_address}/mints:
     get:
       summary: mints in market
       description: |
@@ -64,7 +64,7 @@ paths:
                 type: array
                 items:
                   type: string
-  /tokens/v1/mints/tradable:
+  /mints/tradable:
     get:
       summary: tradable
       description: |
@@ -81,7 +81,7 @@ paths:
                 type: array
                 items:
                   type: string
-  /tokens/v1/tagged/{tag}:
+  /tagged/{tag}:
     get:
       summary: tagged
       description: |
@@ -105,7 +105,7 @@ paths:
             application/json:
               schema:
                 "$ref": "#/components/schemas/MintIncludingDuplicates"
-  /tokens/v1/new:
+  /new:
     get:
       summary: new
       description: |
@@ -145,7 +145,7 @@ paths:
                 type: array
                 items:
                   "$ref": "#/components/schemas/MintWithCreationTimeAndMarkets"
-  /tokens/v1/all:
+  /all:
     get:
       summary: all
       description: |

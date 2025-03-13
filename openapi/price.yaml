@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Quickstart
-  version: 1.0.0
+  version: 2.0.0
   description: |
     | Link |
     | --- |
@@ -10,13 +10,11 @@ info:
     | [Get Price (with Extra Info)](/docs/price-api#get-price-with-extra-info) |
 
 servers:
-  - url: https://api.jup.ag
+  - url: https://api.jup.ag/price/v2
 
 paths:
-  /price/v2:
+  /:
     get:
-      tags:
-      - Price
       summary: price
       description: |
         :::note
