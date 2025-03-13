@@ -50,7 +50,7 @@ const openOrdersResponse = await (
 ```json
 {
   "user": "5dMXLJ8GYQxcHe2fjpttVkEpRrxcajRXZqJHCiCbWS4H",
-  "order_status": "active",
+  "orderStatus": "active",
   "time": {
     "orders": [
       {
@@ -124,7 +124,7 @@ const orderHistoryResponse = await (
 ```json
 {
   "user": "5dMXLJ8GYQxcHe2fjpttVkEpRrxcajRXZqJHCiCbWS4H",
-  "order_status": "history",
+  "orderStatus": "history",
   "price": {
     "orders": [
       {
