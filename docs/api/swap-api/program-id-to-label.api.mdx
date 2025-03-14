@@ -1,11 +1,11 @@
 ---
 id: program-id-to-label
 title: "program-id-to-label"
-description: "Returns a hash, which key is the program id and value is the label. This is used to help map error from transaction by identifying the fault program id. With that, we can use the `excludeDexes` or `dexes` parameter."
+description: "Returns a hash, which key is the program id and value is the label."
 sidebar_label: "program-id-to-label"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdU8tuGzEM/BVCpxbw7to95tYiRS49NE2KHtwAoSXaUiJLisR1Ymzy76XWdh6NDz3XWMB6DDnkcDQoxlVRJ3N1cY9JXU2UoaKzS+xiUCfqB3GfQwEEi8VO4N46beGWtuAKsCVIOa4yrsEZwGBgg76nw53HBfkWLq3s5esLGeAIlnyCNSagnGOGZY5r4IyhoK6ssJDkhgK75daF1Zhpib3nV1wt/HJs5QpZaiLQGGr6EXtND9r3hk7pgco1CMO12S0TSjQx5VZNVKaSYigkzQ/q03Ra/972fko72gNSgnQMLJVVLKbkncaK7W5KDRhU0ZbWWFe8TSQp4uKGNEsgGuMqFP33HBNldjviPa5wllbV0/ibKCnSRiPnK6rBCdnKpisyom4z6/Y6NM40HJtRZUEVyhvKdZaD6rOXAMucyknXYXLtTZ9aFAaZsAvLOHI79pX8vHf6tjDmylVT7NqftdN2qv42xCN8c+EWHn+HR2iaZreYnxHDeR+Zrj50JuoyltoIbycdNHf15uMe+qV33kB1G1y+DP1d3KLCmnH7yhuHJBcU/iFHEdTxFEpETrHwGse5BbGF9HZc1zf9Dy8W+I/fxt6VTA/cJY9u1Gv01LA341xVXatfZtWgR4QTo1lRuEKHYYGFfmb/9FSP73rKWzmX5Qazw0V14fxKKCyhoTw6WGSUCj5rTWm0ZdVODt69umro5+dy9vVS3tAfBGWwWg==
+api: eJzlU01PGzEQ/Ssjn1opmw09cmtFxaWHUugpIDGxJ7ETxzb2bCBa+O8d7yZ8FA69N1op3tk373men3vFuCrqdK4u7zGpm4kyVHR2iV0M6lT9Iu5yKIBgsdgJ3FunLWxoD64AW4KU4yrjFpwBDAZ26Ds6fvO4ID+9DldWCvJ0hQxwBEs+wRYTUM4xwzLHLXDGUFBXWVgIu6HAbrl3YTVQLbHz/ErsyKpR4DQyuwA6hnUXRpZ7x3bovaUH7TtDZ/RA5RZE8daMy4TCRkxZ6NREZSophkLiR6++zGb1760dZzRu5IiUJpFk2WvFYkreaazYdl1qQ6+KtrTFuuJ9IqGIizVplkY0xlUo+p85JsrsRuEDrnCW4dXT8Jso2aaNRuorqs0J2cpLW+TU2t1Je3Cmcabh2AzGC6pQ3lGux9urLntpsMypnLYtJjddd2mKoiCH7sIyDtqOfRW/6JzeFMZctSrFOP7JdDadqb8z8gg/XNjA43V4hKZpxsX8nBguush086k1UZdhq43otjJBc1e/fD5Av3XOG6gBhKuXGLzrW1RYM7y+SsuR5JLCP3AUQX1MocTkFAtvcTi3IMGQ2T729c38/UsE/q/rcggq0wO3yaMbLBxi1h/yOVfV6hqhk5rZD7yU7FkxvUL7foGFfmf/9FTLdx3lvdRlucPscFGDOb8RCUtoKA+hFmdlB1+1pjQktdophXcXsWb8+Qadf7+Sa/UH13bAbA==
 sidebar_class_name: "get api-method"
 info_path: docs/api/swap-api/quickstart
 custom_edit_url: null
@@ -36,7 +36,10 @@ import Heading from "@theme/Heading";
 
 
 
-Returns a hash, which key is the program id and value is the label. This is used to help map error from transaction by identifying the fault program id. With that, we can use the `excludeDexes` or `dexes` parameter.
+Returns a hash, which key is the program id and value is the label.
+This is used to help map error from transaction by identifying the fault program id.
+This can be used in conjunction with the `excludeDexes` or `dexes` parameter.
+
 
 <ParamsDetails
   parameters={undefined}
