@@ -1,0 +1,76 @@
+---
+id: cancel-orders
+title: "cancelOrders"
+description: "Request for a base64-encoded unsigned trigger order cancellation transaction(s) to be used in `POST /trigger/v1/execute`"
+sidebar_label: "cancelOrders"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: docs/api/trigger-api/trigger-order-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"cancelOrders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/cancelOrders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Request for a base64-encoded unsigned trigger order cancellation transaction(s) to be used in `POST /trigger/v1/execute`
+
+:::note
+- Refer to [Trigger API doc](/docs/trigger-api/cancel-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"maker":{"type":"string"},"computeUnitPrice":{"type":"string","default":"auto","description":"In microlamports, defaults to 95th percentile of priority fees\n"},"orders":{"type":"array","items":{"type":"string"},"description":"Array of orders to cancel, if none is provided, the API will generate cancel instructions for all open orders belonging to the maker\n"}},"required":["maker"],"title":"cancelOrdersRequestBody","example":{"maker":"devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4","orders":["6fe8ByaiFHisjnYnH5qdpyiNtkn89mMBQUemRkVmKhro","9jwzPKHxcrSozdrTYzPnTqy7psRvNGxaYUAiiyxwZKjj"],"computeUnitPrice":"auto"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns the base64-encoded unsigned transaction(s) of all open orders associated to the provided \"maker\"\n\n:::note\n- If no orders were specified, batching 5 cancel order instructions in 1 transaction.\n- Refer to [Trigger API doc](/docs/trigger-api/cancel-order) for more information\n:::\n","content":{"application/json":{"schema":{"type":"object","properties":{"requestId":{"type":"string","description":"Required to make a request to `/execute`"},"transactions":{"type":"array","items":{"type":"string"},"description":"Array of unsigned base-64 encoded transaction(s)"}},"required":["requestId","transactions"],"example":{"requestId":"f7d5dd40-a416-4dae-8367-7dc10cab6554","transactions":["AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAkOCWPK8t5w2W1nIsonBw2T/TCNCKkrgBQia9/YVlLEcjM9zTXA2aZIqK0k40U/eCZ0Zu1176lxIuHLsY6UyQjTdash6wigo20Auc3RVYRWME9FjnpbdgdRKYjLJLe0lVi47IZO5XCZ/U0AirZsOIWLoumtNiLomxcYL6d2R2rSxzkNgnQl2IV0spQPT+7K7zraa8oytEZyZ4HSFpxmV2v3WgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEImJzcxhjwZ2dKxnfimarbEo/iDZzNgo5QjJ8b+bMOuSf2yH7EMQBZfZLsgOHg/C5SyLv/x1D4MHZgRX7jOy4YyXJY9OJInxuz0QKRSODYMLWhOZ2v8QhASOe9jb6fhZAwZGb+UhFzL/7K26csOb57yM5bvF9xJrLEObOkAAAADG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYQrDSpbBZnFaYMEjPsolig3zCx7IWOB0XHNqEmJmY0siBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEG3fbh12Whk9nL4UbO63msHLSF7V9bN5E6jPWFfv8AqXeleaIpvDk6bHUITYxyjNU3ParFA70LbecfV6NupbbBCAkABQKgAwIACQAJAy48AAAAAAAACAYABAAMBQ0BAQUCAAQMAgAAAIDw+gIAAAAADQEEAREIBgABAAoFDQEBCw8AAAIDBAYLDAoNDQUIBwsihW5Kr3Cf9Z9OyUY1qj0LZYDw+gIAAAAAAOH1BQAAAAAAAA0DBAAAAQk=\n","AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAkOCWPK8t5w2W1nIsonBw2T/TCNCKkrgBQia9/YVlLEcjM9zTXA2aZIqK0k40U/eCZ0Zu1176lxIuHLsY6UyQjTdash6wigo20Auc3RVYRWME9FjnpbdgdRKYjLJLe0lVi47IZO5XCZ/U0AirZsOIWLoumtNiLomxcYL6d2R2rSxzkNgnQl2IV0spQPT+7K7zraa8oytEZyZ4HSFpxmV2v3WgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEImJzcxhjwZ2dKxnfimarbEo/iDZzNgo5QjJ8b+bMOuSf2yH7EMQBZfZLsgOHg/C5SyLv/x1D4MHZgRX7jOy4YyXJY9OJInxuz0QKRSODYMLWhOZ2v8QhASOe9jb6fhZAwZGb+UhFzL/7K26csOb57yM5bvF9xJrLEObOkAAAADG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYQrDSpbBZnFaYMEjPsolig3zCx7IWOB0XHNqEmJmY0siBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAEG3fbh12Whk9nL4UbO63msHLSF7V9bN5E6jPWFfv8AqXeleaIpvDk6bHUITYxyjNU3ParFA70LbecfV6NupbbBCAkABQKgAwIACQAJAy48AAAAAAAACAYABAAMBQ0BAQUCAAQMAgAAAIDw+gIAAAAADQEEAREIBgABAAoFDQEBCw8AAAIDBAYLDAoNDQUIBwsihW5Kr3Cf9Z9OyUY1qj0LZYDw+gIAAAAAAOH1BQAAAAAAAA0DBAAAAQk=\n"]}}}}},"400":{"description":"Bad request body","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"},"cause":{"type":"string"},"signature":{"type":"string","description":"Signature of the transaction, if generated","example":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n"},"status":{"type":"string","enum":["Failed"]}},"required":["error","code"],"example":{"error":"invalid maker pubkey","code":400}}}}},"500":{"description":"Internal error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"},"cause":{"type":"string"},"signature":{"type":"string","description":"Signature of the transaction, if generated","example":"38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR\n"},"status":{"type":"string","enum":["Failed"]}},"required":["error","code"],"example":{"error":"something went wrong while generating cancel instructions","code":500}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

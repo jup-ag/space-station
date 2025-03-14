@@ -15,7 +15,7 @@ Jupiter is one of the most widely integrated protocols, so a lot of work is invo
 
 Our top priority is securing the best prices and the best token selection for our users, so we will focus on DEXes that will bring the most benefits to them.
 
-:::caution We do not charge fees for integration.
+:::warning We do not charge fees for integration.
 :::
 
 ## Integration Prerequisites

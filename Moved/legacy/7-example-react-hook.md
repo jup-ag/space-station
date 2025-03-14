@@ -178,7 +178,7 @@ Tab
 
 Once you have acquired all the meaningful information from the Jupiter instance, it is time we perform a swap with the exchange() function.
 
-:::caution
+:::warning
 You would need a `wallet` and `connection` instance to perform a swap, the easiest way to interface with your wallet (Phantom, Sollet, Solflare...) would be the use of [@solana/wallet-adapter-react library](https://github.com/solana-labs/wallet-adapter), visit the [documentation](https://github.com/solana-labs/wallet-adapter/blob/master/APP.md) for more info.
 :::
 

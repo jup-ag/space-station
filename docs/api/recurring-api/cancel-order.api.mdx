@@ -1,0 +1,77 @@
+---
+id: cancel-order
+title: "cancelOrder"
+description: "Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`"
+sidebar_label: "cancelOrder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1PGzEQ/SuWT62UZUMFqMoNKKqQKoFSUA9JpDjeSdawa29tLxCF/PfO2Jtk8wEc2mORCM545nn83syYBc/ASasqr4zmPd6H3zU4z6bGMsEmwsHZSQJamgwyVmunZhoXFmRtrdIzZmwGlkmhJRSFIBDmrdBOyLg2bAKsdhijNBvf3vy8Y+k6On06TuEFv3kYD/VQ93o9bTwMdcLGa6e7eQVjplxEQcAMyIn5HH9xj5npbj4dSogOHntVYjDeZVxZJemUhPVhiikj0KC/Dju/vWaZkaNPKX66TYaJqFQab5cE6M+BmdJYwAvhsgx3DqkPNe9wG/m7MNmc9xZcGu1Be1qKqiqUDO7pgyOyF9zJHEpBK7oJ0m8mDyB9g6MsZLw34Hhxi6ZwfthqMcNHHV5ZU4H1ChwhRbcNpPPki3HbQl+gtMnpVyakNLX27DlXMieaidcNMTdB38aJL3dPP3AM6LqkrIl6Tskh75SlV74gx8vCOOhvoSBsuOMe2nL5VhxuLdsseVtDMLjKaBeZ+NLt0p/dAt8pXYLNmKulBOemdVHMMet/oltTC9cZ2ltNsS/ZxvFD2foNPtVvKR4Bm7SJJst43U7EafvMD4HvV71NPZ+cnbBV07dR2nqsiew3nJMkuH9yiPULka3ypMxOD/lcI+VWi4JhKTyhMmCtseHIEnxukBxeGUckV8Ln+K1pzJumL2IYEjpY8NoW6JB7X7lemmITHz3U1ZGYbc0evkQlSNL+pmmvXkRZFdBqpA1hO6W/qvBYuuuS7XAaDIHwXaaabsJhg2GUa7z48VH3qLsnyCv7ofQjex3qV5YkSVwMLi0IHH4B6I1pFTxW0ypGXcWqeC+sKZztuMtA8Lunbc3GGHVLLc++Aaql/OGwLG4mYTociv6lfJ5Z8Xw4/LnZPRT/Hfzu/HKHUWbgk40lgLiAQiJSqZUiNI4WJcm4XW1bYrUG/f8X9C9f0GZMeXjxaVUIFdQI/bxoGn+wJQX2cE5jAc2LBdF9b4vlksyog8VXeIDLJ2GVmFA3DkYIl4MIvY2T4hHm9LhE+ZLQ2eRe1JTE3uxfdlYR5/heVP5d31FrcpFu6Dxp/i8osRrQiiVMcwU/e5xe+FBO8Ukg24IXQs9qMSPfiEk/fwCYGG48
+sidebar_class_name: "post api-method"
+info_path: docs/api/recurring-api/recurring-order-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"cancelOrder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/cancelOrder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Request for a base64-encoded unsigned recurring order cancellation transaction to be used in `POST /recurring/v1/execute`
+
+:::note
+- `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+- Refer to [Recurring API doc](/docs/recurring-api/cancel-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","required":["user","order","recurringType"],"properties":{"order":{"type":"string","description":"Base-58 account which is the Recurring Order account"},"recurringType":{"type":"string","enum":["time","price"],"title":"CloseRecurringType"},"user":{"type":"string"}},"title":"CloseRecurring"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Recurring order closed successfully","content":{"application/json":{"schema":{"type":"object","required":["requestId","transaction"],"properties":{"requestId":{"type":"string","description":"Required to make a request to `/execute`"},"transaction":{"type":"string","description":"Unsigned base-64 encoded transaction"}},"title":"RecurringResponse"}}}},"400":{"description":"Bad request"},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

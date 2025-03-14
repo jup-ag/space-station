@@ -1,0 +1,77 @@
+---
+id: execute
+title: "execute"
+description: "Execute the signed transaction and get the execution status"
+sidebar_label: "execute"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVVFv2jAQ/iuWnzYJCJ22l7y1WzshbWrX0idAwiQHuE1s13Zoq5T/vjsnlABpu0l9mDQewNjf3X3+7nxX8hRcYqXxUise89MHSAoPzC+BOblQkDJvhXIiIQATKmUL8OEYApR2nRe+cGM1VnEcK+1hrLrsm2a0RKio8FMLdwU4P0inTDo21wU6kyqcWXBGKwdMz9k00jYFOyUnlzAHy7xmo+sMebDjiwFLdTL5EOG3iwra7Aojo4oMdIPpR3RuWa4toH9c5oJoBnZjxTt8E83xuOSf+n362ZXhqkgScG5eZM/U0C7RyoPyBBfGZDIJfqMbRzYld8kSckEr/2gAvejZDSQeDY3VBqyXVcRKrgbOeSvVAnGgipzHo0143DkTMoOUT9YdTulAQwuHlnSaad96ANZq23qS6LTpC2PPwNKBVKbwxzkmyF+CQ5FbzXXh/wTm7oU5XaFszRsLa8UjXk96yN3bigVCP6Vqj9Cg+wrRF82b92gBrKle7gppMQ2Ymi2V3cA7YfacTtb7XuoSqHNA5wj43FaJJyJl9cN5vwr865rYo1/Z77L/0sZ+gHStEhlzYFf4kreG/+g9agCqfaLTR/LwXo8+NNPhtpe2vf9d8YbtPRi7Yd3t+JbtIH3b39mm47Z12wNtDgk3g9VJz8EvNcK50aE+jfBL/Ldpx7hTJR4lGJW8sBkeLr03Lo4ibNu9m8L0xKLq49HqiK8nHU7KXm5zcPogcpPBCxpu79oQYqc3zHVQRnrywX8VMrnF12eJLRGrvBz1+r3+gWBP7IdUt+xprJ5Yt9utFqPvOP/OSbPDKYSjcTOBKuxmnL6A35taaEOcSctchAJRIifWWzl3CDaK8/8Y3HV9e3jwkcmEDHKFqirr0hs9a4WVtKSixK2ynAkH1zZbr2kbL2PxaY9wuRJWihlVxohG7BIEsgi1egsI4V8rfbtDCkzwrAjja78RrDsbi2Oc3Ma/ip003s3F+dUQwbO62eShbXEr7qmi8TvmNExCvkMbCXslz4RaFGJB2MonfX4DiXRwZg==
+sidebar_class_name: "post api-method"
+info_path: docs/api/ultra-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"execute"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/execute"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Execute the signed transaction and get the execution status
+
+:::note
+- Do note that the `requestId` is found in the response of `/order`
+- Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"signedTransaction":{"type":"string","description":"The signed transaction to execute"},"requestId":{"type":"string","description":"Found in response of `/order`"}},"required":["signedTransaction","requestId"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["Success","Failed"]},"signature":{"type":"string"},"slot":{"type":"string"},"error":{"type":"string"},"code":{"type":"number"},"inputAmountResult":{"type":"string"},"outputAmountResult":{"type":"string"},"swapEvents":{"type":"array","items":{"type":"object","properties":{"inputMint":{"type":"string"},"inputAmount":{"type":"string"},"outputMint":{"type":"string"},"outputAmount":{"type":"string"}},"required":["inputMint","inputAmount","outputMint","outputAmount"]}}},"required":["status","code"]}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"}},"required":["error","code"]}}}},"500":{"description":"Internal server error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"code":{"type":"number"}},"required":["error","code"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

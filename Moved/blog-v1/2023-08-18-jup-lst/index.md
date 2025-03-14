@@ -13,7 +13,7 @@ This integration coincides with the formal launch of Sanctum and its reserve poo
 
 ## Key Features of the Sanctum
 
-- **Instant Unstaking:** Leveraging Sanctum’s SOL reserve pool, users can instant unstake LSTs. Unlike traditional LST <--> SOL pools that fragment liquidity, Sanctum services every staked pool with one SOL pool, enabling every stake pool token to be accessible across DeFi.
+- **Instant Unstaking:** Leveraging Sanctum’s SOL reserve pool, users can instant unstake LSTs. Unlike traditional LST-SOL pools that fragment liquidity, Sanctum services every staked pool with one SOL pool, enabling every stake pool token to be accessible across DeFi.
 
 - **Improved Validators Experience:** Validators can easily launch stake-pools-of-one by tapping into Sanctum's shared liquidity. This reduces concerns about sourcing liquidity and unlocks a substantial portion of staked SOL for use in Solana's DeFi ecosystem.
 

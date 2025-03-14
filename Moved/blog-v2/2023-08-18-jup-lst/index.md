@@ -13,7 +13,7 @@ This integration coincides with the formal launch of Sanctum and its reserve poo
 
 ## Key Features of the Sanctum
 
-- **Instant Unstaking:** Leveraging Sanctum’s SOL reserve pool, users can instant unstake LSTs. Unlike traditional LST <--> SOL pools that fragment liquidity, Sanctum services every staked pool with one SOL pool, enabling every stake pool token to be accessible across DeFi.
+- **Instant Unstaking:** Leveraging Sanctum’s SOL reserve pool, users can instant unstake LSTs. Unlike traditional LST-SOL pools that fragment liquidity, Sanctum services every staked pool with one SOL pool, enabling every stake pool token to be accessible across DeFi.
 
 - **Improved Validators Experience:** Validators can easily launch stake-pools-of-one by tapping into Sanctum's shared liquidity. This reduces concerns about sourcing liquidity and unlocks a substantial portion of staked SOL for use in Solana's DeFi ecosystem.
 
@@ -31,4 +31,4 @@ LSTs have always held great potential for use by both users and DeFi protocols a
 
 With this launch and integration, many of these problems are mitigated. Liquidators can now efficiently liquidate both small and large xSOL positions, leveraging Jupiter’s liquidity routes that include the Sanctum SOL reserve pool and other integrated liquidity sources instantly, with optimal prices and minimized price impact and slippage.
 
-This unlocks LST adoption, introducing more tradable assets to Solana that can significantly increase TVL, unlock $9B in staked DeFi capital, and most importantly, enable protocols to maximize their capital efficiency and yield without typical cooldown or liquidity constraints. This pivotal step is a game-changer, and we eagerly anticipate the innovative products to be built upon this foundation.
+This unlocks LST adoption, introducing more tradable assets to Solana that can significantly increase TVL, unlock 9B in staked DeFi capital, and most importantly, enable protocols to maximize their capital efficiency and yield without typical cooldown or liquidity constraints. This pivotal step is a game-changer, and we eagerly anticipate the innovative products to be built upon this foundation.

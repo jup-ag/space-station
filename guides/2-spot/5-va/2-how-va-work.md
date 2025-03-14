@@ -17,7 +17,7 @@ slug: /va/how-va-work
 - The first order takes place immediately after your VA position has been created and the remaining orders will take place regularly at your selected time interval.
 - As an example, if you choose to use 1,000 USDC to VA into $SOL, at an increment value of 100 USD per buy, daily over 10 days, the very first order of 100 USDC -> SOL will be executed right after the VA has been successfully created, and the order will continue to execute at your interval and each buy will be 100 USD worth of $SOL.
 
-:::caution
+:::warning
 To minimize the predictability of your VA strategy, orders are filled within a randomized padding of +/- 30 seconds from your VA creation time.
 :::
 

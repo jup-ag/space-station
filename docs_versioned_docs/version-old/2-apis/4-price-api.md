@@ -44,7 +44,7 @@ This endpoint is no longer maintained. Use [Pricing API V2](/docs/old/apis/price
 
 Utilizing the powerful Jupiter Price API makes getting precise and real-time pricing for all SPL tokens simple. With the ability to fetch prices for up to 100 tokens, you'll never need another price API again!
 
-The Jupiter Price API comes with the option to specify another token as the base unit ([see "vsToken"](#vstoken)).
+The Jupiter Price API comes with the option to specify another token as the base unit see "vsToken".
 
 :::info
 We support fetching the prices for up to 100 tokens in one call right now to manage performance. If you have a use case that is not supported yet, let us know in `#developer-support` in our discord: [discord.gg/jup](https://discord.gg/jup)

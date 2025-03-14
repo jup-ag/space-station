@@ -1,0 +1,78 @@
+---
+id: execute
+title: "execute"
+description: "Execute the signed transaction and get the execution status"
+sidebar_label: "execute"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVU1v2zAM/SuCThsQ1+mwAkNu/dpQYECLrMMOToAoMhOrtSVPkvuBNP99pOTEaWLktN0WoKlCkU8kH/W04jk4aVXtldF8xK9fQDYemC+AObXUkDNvhXZCkgMTOmdL8GEbgitZnRe+cRM90aPRSBsPE52wK8Noia4i+s8s/G7A+Zt8xpRjC9MgmNJhz4KrjXbAzILNUmlBeLi1OdgZM5YsQksoo4XAEUs21iq9vH+tIeA1jnI1LIf2WPzDPULcOiMYIgwYwrE5ZuRVBfGE2ioJAXoMC7AElI23Yed3Nyw3cvohxW+XbvESUas09gGSgP0R67KsMhawNFxWgjoUGjPRfMDbHlyY/JWPVlwa7UF7Woq6LpUM7umDIzJW3MkCKkErKgXpMfMHkL7FURZyPsr4tq9oj5zdd5Tx6YDX1tRgvQJHUJ17h+s8lcPXfQCHXujmlS+hm5dtq3BzvZudtw0EQ+Q3JPBpOKR/7wdv58R2spBO10gJzi2asnzF4v5Kt6hAHFcL1K0wuIctAmuN7YCyTeUDrjEVPsWKAttHXAZ79V0IB8nZFyakxMH37LlQsqC5pUHtJi2M+MZpw0dMt5etWMDB1oCDbipK60dsIVq+ClViC6bH6Bu3PBGN6Pa5j6kLkbN2hiiFsz6fGyTKalEyB/YJC4oNJcgKfGGQCF4bR9TUwhf4a3OLiJQQgkVlK97YEjcL72s3SlO8bScPTX0ilt0VTJ9O+Rq7TUMw7i7X9Yuo6hL25r1rT8+Y77SVrm5oatumfX5QDxCDsoyRpyfDkyHfp/yNfVf6kb1N9BtLkiQusssgbhGoX1Ci/G30JEZtdPlI2J4OtacF4Tx6WvB4H3VHasiuADlSvj8sj5tJEM6+6F/KF7kVz/3hz+1uX/w3fGD2Ou76UfApSjpLAHEBhUikAatEUAYtKqKxm7F3RO3I8P/37x+/f61MeXjxaV0KFZgKt3zVSkG2pQlvdUEigabVao76+dOW6zWZsY8W388Ml0/CKjGnW5qRLBcggi6jdjwCuvDLSG1CfaI7K8qGEjh4P9aDTcQ5Cmbtj/pOd3Ts7vbHPTrP2xe9MjnF4GjTu4PfI44LE0YtPr9kW/FS6GUjluQbMenzB5g6YxQ=
+sidebar_class_name: "post api-method"
+info_path: docs/api/recurring-api/recurring-order-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"execute"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/execute"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Execute the signed transaction and get the execution status
+
+:::note
+- Do note that the `requestId` is found in the response of `/createOrder` or `/cancelOrder`
+- `recurringType` is used to denote the type of recurring order, can be `time` or `price`
+- Refer to [Recurring API doc](/docs/recurring-api/execute-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","required":["requestId","signedTransaction"],"properties":{"requestId":{"type":"string"},"signedTransaction":{"type":"string"}},"title":"ExecuteRecurring"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Transaction executed successfully","content":{"application/json":{"schema":{"type":"object","required":["signature","status"],"properties":{"error":{"type":["string","null"]},"order":{"type":["string","null"],"description":"Base-58 account which is the Recurring Order account"},"signature":{"type":"string"},"status":{"type":"string","enum":["Success","Failed"]}},"title":"ExecuteRecurringResponse"}}}},"400":{"description":"Bad request"},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      
