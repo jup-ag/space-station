@@ -39,6 +39,15 @@ const JupiterTopics = () => {
           Ecosystem Token List
         </a> */}
       </div>
+	<div className="flex justify-center mt-4 w-full justify-center gap-2 text-sm xl:text-base font-bold whitespace-nowrap flex-wrap px-2 lg:px-0">
+  	<a
+      		href="https://www.juphorizon.com"
+     		 target="_blank"
+      		className="w-[calc(50%-0.25rem)] md:w-[calc(50%-0.25rem)] p-3 lg:px-5 lg:py-4 rounded-2xl bg-lime-200/[.03] hover:bg-lime-200/10 text-center !text-lime-200 hover:!no-underline"
+ 	 >
+   	 JupHorizon
+ 	 </a>
+	</div>
     </div>
   );
 };
