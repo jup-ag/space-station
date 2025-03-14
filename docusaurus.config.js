@@ -110,6 +110,7 @@ const config = {
             require.resolve("./src/css/navbar.css"),
             require.resolve("./src/css/sidebar.css"),
             require.resolve("./src/css/searchbar.css"),
+            require.resolve("./src/css/openapi.css"),
           ],
         },
       }),
