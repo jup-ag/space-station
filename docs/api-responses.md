@@ -23,7 +23,7 @@ For more information on error codes from programs, see the [Swap API - Program E
 | 401 | Unauthorized | Likely a problem with the API key, check if the API key is correct. |
 | 404 | Not Found | Likely a broken or invalid endpoint. |
 | 429 | Rate Limited | You are being rate limited. Either slow down requests, reduce bursts, or upgrade your plan. |
-| 500 | Internal Server Error | Please contact [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support). |
-| 502 | Bad Gateway | Please contact [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support). |
-| 503 | Service Unavailable | Please contact [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support). |
-| 504 | Gateway Timeout | Try disabling any proxies, VPNs, firewalls or other network restrictions and try again. If issue persists, please contact [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support). |
+| 500 | Internal Server Error | Please reach out in [Discord](https://discord.gg/jup). |
+| 502 | Bad Gateway | Please reach out in [Discord](https://discord.gg/jup). |
+| 503 | Service Unavailable | Please reach out in [Discord](https://discord.gg/jup). |
+| 504 | Gateway Timeout | Please reach out in [Discord](https://discord.gg/jup). |
