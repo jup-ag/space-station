@@ -178,6 +178,11 @@ paths:
                       description: Amount of output mint to receive
                     expiredAt:
                       type: string
+                    slippageBps:
+                      type: string
+                      description: |
+                        Amount of slippage the order can be executed with
+                      default: 0
                     feeBps:
                       type: string
                       description: |
@@ -194,10 +199,6 @@ paths:
                   description: |
                     - A token account (via the Referral Program) that will receive the fees
                     - Refer to [Referral Program Github](https://github.com/TeamRaccoons/referral/tree/main) for more information
-                  type: string
-                inputTokenProgram:
-                  type: string
-                outputTokenProgram:
                   type: string
                 wrapAndUnwrapSol:
                   type: boolean
@@ -547,6 +548,16 @@ paths:
         - schema:
             type: string
             enum:
+              - 'true'
+              - 'false'
+            description: 'Whether to include failed transactions, expects ''true'' or ''false'''
+          required: false
+          description: 'Whether to include failed transactions, expects ''true'' or ''false'''
+          name: includeFailedTx
+          in: query
+        - schema:
+            type: string
+            enum:
               - active
               - history
             description: The status of the orders to return
@@ -604,6 +615,16 @@ paths:
                           type: string
                         remainingTakingAmount:
                           type: string
+                        rawMakingAmount:
+                          type: string
+                        rawTakingAmount:
+                          type: string
+                        rawRemainingMakingAmount:
+                          type: string
+                        rawRemainingTakingAmount:
+                          type: string
+                        slippageBps:
+                          type: string
                         expiredAt:
                           type: string
                           nullable: true
@@ -639,9 +660,15 @@ paths:
                                 type: string
                               outputAmount:
                                 type: string
+                              rawInputAmount:
+                                type: string
+                              rawOutputAmount:
+                                type: string
                               feeMint:
                                 type: string
                               feeAmount:
+                                type: string
+                              rawFeeAmount:
                                 type: string
                               txId:
                                 type: string
@@ -658,8 +685,11 @@ paths:
                               - outputMint
                               - inputAmount
                               - outputAmount
+                              - rawInputAmount
+                              - rawOutputAmount
                               - feeMint
                               - feeAmount
+                              - rawFeeAmount
                               - txId
                               - confirmedAt
                               - action
@@ -672,6 +702,11 @@ paths:
                         - takingAmount
                         - remainingMakingAmount
                         - remainingTakingAmount
+                        - rawMakingAmount
+                        - rawTakingAmount
+                        - rawRemainingMakingAmount
+                        - rawRemainingTakingAmount
+                        - slippageBps
                         - expiredAt
                         - createdAt
                         - updatedAt
@@ -696,34 +731,42 @@ paths:
                   orderStatus: history
                   orders:
                     - userPubkey: devjnEpxbJUhJ39FSsFz7YPerr5bdxN8VWUXvfbFUK4
-                      orderKey: Fzf4A8PqCsbZd2yvCmcfrfuvLfQXPHfAYnGHAQYKTUWS
-                      inputMint: JCeoBX79HfatfaY6xvuNycHf86hwgkCCWDpEycVHtime
-                      outputMint: So11111111111111111111111111111111111111112
-                      makingAmount: '0.108901'
-                      takingAmount: '0.039966667'
+                      orderKey: 99uWTWukow8k7dqcpbYoHxTAWGvn1YkT1VMmnEeTjuDr
+                      inputMint: So11111111111111111111111111111111111111112
+                      outputMint: HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC
+                      makingAmount: '0.05'
+                      takingAmount: '32.071840924'
                       remainingMakingAmount: '0'
                       remainingTakingAmount: '0'
+                      rawMakingAmount: '50000000'
+                      rawTakingAmount: '32071840924'
+                      rawRemainingMakingAmount: '0'
+                      rawRemainingTakingAmount: '0'
+                      slippageBps: '0'
                       expiredAt: null
-                      createdAt: '2025-03-02T09:08:29Z'
-                      updatedAt: '2025-03-02T09:11:05Z'
+                      createdAt: '2025-03-17T08:07:25Z'
+                      updatedAt: '2025-03-17T08:09:37Z'
                       status: Completed
                       openTx: |
-                        4CmWvToF68j9mrMun19Z8TxVupjgmT8XcQsCzMb6nLoXcKrbPQdx1PHN9Hqm3kW9sCNaArK4vL3HniGSzugRrw7B
+                        466G3XxE4NzxCj136SXe4BSjXzCVBQdvn6RsHMNGN2DGCS9PSceJSACqEWCxx22hsCXcEskvEFdm44wsHCF1auvL
                       closeTx: |
-                        5bAw3Nrasz6ctSDVvvPW1w189GxCmcPt2Mb6akGMGgf4YCHzkCh7DMHiztYtSPzhMiP2zHdrqyEU3AnGB1FTXGSz
+                        3PDo3pMJLqvAfNXwYjY7BSP57ZNQ5DgYDeK6xYszUVMneHzAZBQzsBSskym8uveMoLC4G8N8DjPaLBY726ZsBZvT
                       programVersion: j1o2qRpjcyUwEvwtcfhEQefh773ZgjxcVRry7LDqg5X
                       trades:
-                        - orderKey: Fzf4A8PqCsbZd2yvCmcfrfUvLfQXPHfAYnGHAQYKTUWS
-                          keeper: j1oeQoPeuEDmjvyMwBmCWexzCQup77kbKKxV59CnYbd
-                          inputMint: JCeoBX79HfatfaY6xvuNyCHf86hwgkCCWDpEycVHtime
-                          outputMint: So11111111111111111111111111111111111111112
-                          inputAmount: '0.108901'
-                          outputAmount: '0.039966667'
-                          feeMint: GNSHYrJmjwYXnWLy3esF5VjWa1AKMhzAru1pTeQDY8w3
-                          feeAmount: '0.000039966'
+                        - orderKey: 99uWTWukow8k7dqcpbYoHxTAWGvn1YkT1VMmnEeTjuDr
+                          keeper: j1oAbxxiDUWvoHxEDhWE7THLjEkDQW2cSHYn2vttxTF
+                          inputMint: So11111111111111111111111111111111111111112
+                          outputMint: HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC
+                          inputAmount: '0.05'
+                          outputAmount: '32.071840924'
+                          rawInputAmount: '50000000'
+                          rawOutputAmount: '32071840924'
+                          feeMint: DtL4JtjXwsJQndqXyd6ytJSmWDLWLESoXc7MkYNRQF9J
+                          feeAmount: '0'
+                          rawFeeAmount: '0'
                           txId: |
-                            5bAw3Nrasz6ctSDVvvPW1w189GxCmcPt2Mb6akGMGgf4YcHzkCh7DMHiztYtSPzhMiP2zHdrqyEU3AnGB1FTXGSz
-                          confirmedAt: '2025-03-02T09:11:05Z'
+                            3PDo3pMJLqvAfNXwYjY7BSP57ZNQ5DgYDeK6xYszUVMneHzAZBQzsBSskym8uveMoLC4G8N8DjPaLBY726ZsBZvT
+                          confirmedAt: '2025-03-17T08:09:37Z'
                           action: Fill
                           productMeta: null
                   totalPages: 1
