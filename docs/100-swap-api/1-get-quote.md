@@ -116,10 +116,42 @@ All Jupiter swaps are using Versioned Transactions and Address Lookup Tables. Ho
 
 By using the Quote API in your app, you can add a fee to charge your users. You can refer to the `platformFeeBps` parameter and to add it to your quote and in conjuction, add `feeAccount` (it can be any valid token account) to your swap request.
 
-### Direct Routes and Max Accounts
+### Direct Routes
 
-These 2 parameters can be useful for those who are building your own programs or apps. `onlyDirectRoutes` essentially restricts the routing to only go through 1 market; whereas `maxAccounts` can provide you with flexibility to utilize other accounts in your transaction.
+In some cases, you may want to restrict the routing to only go through 1 market. You can use the `onlyDirectRoutes` parameter to achieve this. This will ensure routing will only go through 1 market.
+
+:::note
+- If there are no direct routes, there will be no quote.
+- If there is only 1 market but it is illiquid, it will still return the route with the illiquid market.
+:::
 
 :::warning unfavorable trades
-Please be aware that using these 2 parameters can often yield unfavorable trades or outcomes.
+Please be aware that using `onlyDirectRoutes` can often yield unfavorable trades or outcomes.
+:::
+
+### Max Accounts
+
+In some cases, you may want to add more accounts to the transaction for specific use cases, but it might exceed the transaction size limit. You can use the `maxAccounts` parameter to limit the number of accounts in the transaction.
+
+:::note
+- We recommend setting `maxAccounts` to 64
+- Keep `maxAccounts` as large as possible
+- `maxAccounts` is only an estimation and the actual number of accounts may vary
+- Example: If `maxAccounts` is set to 9, the computed routes may drop DEXes/AMMs like Meteora DLMM that require more than 9 accounts.
+:::
+
+List of DEXes and their required accounts:
+
+| DEX | Required Accounts |
+| --- | --- |
+| Meteora DLMM | 47 |
+| Meteora | 45 |
+| Sanctum | 80 |
+| Raydium | 45 |
+| Raydium CLMM | 45 |
+| Raydium CPMM | 37 |
+| Pumpfun AMM | 42 |
+
+:::warning unfavorable trades
+Please be aware that the misuse of `maxAccounts` can yield unfavorable trades or outcomes.
 :::

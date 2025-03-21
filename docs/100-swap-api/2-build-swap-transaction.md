@@ -126,6 +126,12 @@ Now, you are able to get a quote and use our Swap API to build the swap transact
 
 If you prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
 
+:::note
+In some cases, you may add more accounts to the transaction, which may exceed the transaction size limits. To work around this, you can use the `maxAccounts` parameter in `/quote` endpoint to limit the number of accounts in the transaction.
+
+[Refer to the GET /quote's `maxAccounts` guide for more details.](/docs/swap-api/get-quote#max-accounts)
+:::
+
 <details>
     <summary>
         <div>
@@ -215,32 +221,6 @@ const messageV0 = new TransactionMessage({
 }).compileToV0Message(addressLookupTableAccounts);
 const transaction = new VersionedTransaction(messageV0);
 ```
-</details>
-
-<details>
-    <summary>
-        <div>
-            <div>
-                <b>Using maxAccounts to work with transaction size limits</b>
-            </div>
-        </div>
-    </summary>
-
-In some cases, you may add more accounts to the transaction, which may exceed the transaction size limits. To work around this, you can use the `maxAccounts` parameter in `/quote` endpoint to limit the number of accounts in the transaction.
-
-:::note
-Do note that `maxAccounts` is only an estimation and the actual number of accounts may vary.
-:::
-
-List of DEXes and their required accounts:
-
-| DEX | Required Accounts |
-| --- | --- |
-| Meteora DLMM | 10 |
-| Meteora | 10 |
-| Orca | 10 |
-| Raydium | 10 |
-
 </details>
 
 ### Build Your Own Transaction With Flash Fill Or CPI
