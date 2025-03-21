@@ -126,6 +126,12 @@ Now, you are able to get a quote and use our Swap API to build the swap transact
 
 If you prefer to compose with instructions instead of the provided transaction that is returned from the `/swap` endpoint (like the above example). You can post to `/swap-instructions` instead, it takes the same parameters as the `/swap` endpoint but returns you the instructions rather than the serialized transaction.
 
+:::note
+In some cases, you may add more accounts to the transaction, which may exceed the transaction size limits. To work around this, you can use the `maxAccounts` parameter in `/quote` endpoint to limit the number of accounts in the transaction.
+
+[Refer to the GET /quote's `maxAccounts` guide for more details.](/docs/swap-api/get-quote#max-accounts)
+:::
+
 <details>
     <summary>
         <div>
