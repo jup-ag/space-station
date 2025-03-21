@@ -137,7 +137,7 @@ In some cases, you may want to add more accounts to the transaction for specific
 - We recommend setting `maxAccounts` to 64
 - Keep `maxAccounts` as large as possible
 - `maxAccounts` is only an estimation and the actual number of accounts may vary
-- Example: If `maxAccounts` is set to 9, the computed routes may drop DEXes/AMMs like Meteora DLMM that require more than 9 accounts.
+- Example: If `maxAccounts` is set to 46, the computed routes may drop DEXes/AMMs like Meteora DLMM that require more than 46 accounts.
 :::
 
 List of DEXes and their required accounts:
