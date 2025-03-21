@@ -25,13 +25,10 @@ The Referral Program is an open source program by Jupiter to provide referral fe
 
 By default, there are **zero** protocol fees on Jupiter Swap. Integrators have the option to introduce a platform fee denoted in basis points, e.g. **20 bps** for **0.2%** of the token input or output.
 
-:::note
-If you use our APIs heavily and consider taking fees, [please reach out to us](https://t.me/Yankee0x).
-:::
-
 ### Important Notes
 
-- This is useful if you are an end user application such as wallets, payments, merchants, etc.
+- **Input mint or the output mint** on the swap for ExactIn.
+- **Input mint ONLY** on the swap for ExactOut.
 - It does not support Token2022 tokens.
 - Referral Program is no longer required.
 
