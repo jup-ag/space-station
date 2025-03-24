@@ -140,7 +140,14 @@ In some cases, you may want to add more accounts to the transaction for specific
 - Example: If `maxAccounts` is set to 46, the computed routes may drop DEXes/AMMs like Meteora DLMM that require more than 46 accounts.
 :::
 
-List of DEXes and their required accounts:
+<details>
+    <summary>
+        <div>
+            <div>
+                <b>List of DEXes and their required accounts</b>
+            </div>
+        </div>
+    </summary>
 
 | DEX | Required Accounts |
 | --- | --- |
@@ -151,6 +158,8 @@ List of DEXes and their required accounts:
 | Raydium CLMM | 45 |
 | Raydium CPMM | 37 |
 | Pumpfun AMM | 42 |
+
+</details>
 
 :::warning unfavorable trades
 Please be aware that the misuse of `maxAccounts` can yield unfavorable trades or outcomes.
