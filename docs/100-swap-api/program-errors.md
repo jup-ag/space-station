@@ -28,7 +28,7 @@ https://solscan.io/account/JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4#anchorPro
 :::
 
 :::info Abnormal Error Rates
-If you face high or consistent amounts of errors, please reach out to [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support).
+If you face high or consistent amounts of errors, please reach out to [Jupiter Discord](https://discord.gg/jup).
 :::
 
 | Error Code | Error Name | Debug |
@@ -40,7 +40,7 @@ If you face high or consistent amounts of errors, please reach out to [Jupiter S
 
 ## DEX Program Errors
 
-In the swap transaction, the DEX in the routing may return errors. You can find some of their IDLs and/or error codes in an explorer. If they do not support public IDLs or open source code, you can reference the common errors below or if you need additional help, please reach out to [Jupiter Support](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support).
+In the swap transaction, the DEX in the routing may return errors. You can find some of their IDLs and/or error codes in an explorer. If they do not support public IDLs or open source code, you can reference the common errors below or if you need additional help, please reach out to [Jupiter Discord](https://discord.gg/jup).
 
 | Error | Description |
 | --- | --- |
