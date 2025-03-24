@@ -14,7 +14,8 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 
 ## What's New?
 
-_Last updated: 1 January 2025_
+:::caution API Gateway: New Hostnames and API Keys
+*Last updated: January 2025*
 
 - API will now be served through new hostnames.
 - API will now be served through API keys.
@@ -25,6 +26,10 @@ _Last updated: 1 January 2025_
 | Free with no API key   | Decreased rate limits to only accommodate for testing.   |
 | Paid plan with API key | Fixed rate limits, self served through an API dashboard. |
 
+<details>
+    <summary>
+        Hostname Changes
+    </summary>
 #### Swap
 
 | Old Hostnames                                     | New Hostnames                                    |
@@ -47,11 +52,25 @@ _Last updated: 1 January 2025_
 | `https://tokens.jup.ag/token/:mint`         | `https://api.jup.ag/tokens/v1/token/:mint`    |
 | `https://tokens.jup.ag/tokens?tags=:tags`   | `https://api.jup.ag/tokens/v1/tagged/:tag`    |
 | `https://tokens.jup.ag/tokens_with_markets` | `https://api.jup.ag/tokens/v1/mints/tradable` |
-
-#### Trigger
-
-:::caution _Last updated: March 2025_
+</details>
 :::
+
+:::caution Trigger API: New Hostname and Breaking Changes
+*Last updated: March 2025*
+
+- The `/limit/v2` path will be deprecated soon, please update your API calls to use the `/trigger/v1` path immediately.
+- `/execute` endpoint is introduced.
+- `/createOrder` endpoint now includes an additional `requestId` parameter to be used with the `/execute` endpoint.
+- `/cancelOrder` endpoint only builds the transaction for 1 order, while `/cancelOrders` endpoint builds the transaction for multiple orders.
+- The `tx` field in the responses are now `transaction` or `transactions`.
+- `/getTriggerOrders` endpoint is introduces a new format to get either active or historical orders (based on the query parameters).
+- [Please refer to the documentation for usage](/docs/trigger-api/create-order).
+
+<details>
+    <summary>
+        Hostname Changes
+    </summary>
+#### Trigger
 
 | Old Hostnames                               | New Hostnames                                 |
 | ------------------------------------------- | --------------------------------------------- |
@@ -59,6 +78,8 @@ _Last updated: 1 January 2025_
 | `https://api.jup.ag/limit/v2/executeOrder`  | `https://api.jup.ag/trigger/v1/executeOrder`  |
 | `https://api.jup.ag/limit/v2/cancelOrder`   | `https://api.jup.ag/trigger/v1/cancelOrder`<br />`https://api.jup.ag/trigger/v1/cancelOrders` |
 | `https://api.jup.ag/limit/v2/openOrders`<br />`https://api.jup.ag/limit/v2/orderHistory`    | `https://api.jup.ag/trigger/v1/getTriggerOrders` |
+</details>
+:::
 
 ## What's Old?
 
