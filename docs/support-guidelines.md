@@ -18,8 +18,10 @@ There are currently 2 ways to get technical support:
 1. [Public Developer Support Channel in Discord](https://discord.com/channels/897540204506775583/910250162402779146)
 2. [Portal Enquiry](https://jupiverse.zendesk.com/hc/en-us/requests/new?ticket_form_id=18069133114012&tf_18541841140892=api_or_developer_support)
 
-:::info
-We recommend using the Discord channel for your technical questions, as it is a public channel, more people can help you and it promotes discovery/discussion.
+:::warning
+Please use the Discord channel for your technical questions, as it is a public channel, more people can help you and it promotes discovery/discussion.
+
+If you open a ticket via the link that **does not relate** to Portal Enquiries, we will redirect you to the Discord channel.
 :::
 
 ## Customer Support
