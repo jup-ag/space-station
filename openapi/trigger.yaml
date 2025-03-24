@@ -448,6 +448,8 @@ paths:
               schema:
                 type: object
                 properties:
+                  code:
+                    type: number
                   signature:
                     type: string
                     description: Signature of the successful transaction
@@ -459,6 +461,7 @@ paths:
                 required:
                   - signature
                   - status
+                  - code
                 example:
                   signature: |
                     38CtpugRBobyj1JMkHj9umQyj1D8q6bs1jcMRcw7Fiyp4BXv4uh4bD4TyJs6fsqYCDDfQpeRewA7HjLA1Eprc8uR
