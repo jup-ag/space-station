@@ -71,6 +71,10 @@ const sidebars = {
           type: 'doc',
           id: 'ultra-api/execute-order',
         },
+        {
+          type: 'doc',
+          id: 'ultra-api/get-balances',
+        },
       ],
     },
     {
