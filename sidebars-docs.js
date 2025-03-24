@@ -146,11 +146,8 @@ const sidebars = {
       items: [
         {
           type: 'doc',
-          id: 'swap-api/limit-order-api',
-        },
-        {
-          type: 'doc',
-          id: 'swap-api/dca-sdk',
+          label: 'Trigger API',
+          id: 'trigger-api/create-order',
         },
       ],
     },
@@ -177,6 +174,61 @@ const sidebars = {
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
+    },
+  ],
+  trigger: [
+    {
+      type: 'category',
+      label: 'Trigger API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          label: 'Create Order',
+          id: 'trigger-api/create-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Order Management',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/cancel-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/get-trigger-orders',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/best-practices',
+        },
+      ],
     },
   ],
   perp: [
