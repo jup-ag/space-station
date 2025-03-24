@@ -50,13 +50,15 @@ _Last updated: 1 January 2025_
 
 #### Trigger
 
+:::caution _Last updated: March 2025_
+:::
+
 | Old Hostnames                               | New Hostnames                                 |
 | ------------------------------------------- | --------------------------------------------- |
 | `https://api.jup.ag/limit/v2/createOrder`   | `https://api.jup.ag/trigger/v1/createOrder`   |
 | `https://api.jup.ag/limit/v2/executeOrder`  | `https://api.jup.ag/trigger/v1/executeOrder`  |
-| `https://api.jup.ag/limit/v2/cancelOrder`   | `https://api.jup.ag/trigger/v1/cancelOrder`   |
-| `https://api.jup.ag/limit/v2/openOrders`    | `https://api.jup.ag/trigger/v1/openOrders`    |
-| `https://api.jup.ag/limit/v2/orderHistory`  | `https://api.jup.ag/trigger/v1/orderHistory`  |
+| `https://api.jup.ag/limit/v2/cancelOrder`   | `https://api.jup.ag/trigger/v1/cancelOrder`<br />`https://api.jup.ag/trigger/v1/cancelOrders` |
+| `https://api.jup.ag/limit/v2/openOrders`<br />`https://api.jup.ag/limit/v2/orderHistory`    | `https://api.jup.ag/trigger/v1/getTriggerOrders` |
 
 ## What's Old?
 
