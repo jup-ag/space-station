@@ -1,0 +1,76 @@
+---
+id: balances
+title: "balances"
+description: "Request for token balances of an account"
+sidebar_label: "balances"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFU8Fu2zAM/RVBpxWI43TYLr51wDYUGLCuw05JDorMJEpsSqWoYlvifx8VN6gTeKcd5oMtie89PpPiQdcQLbnAzqOu9CM8JYis1p4U+z2gWpnGoIWo/FoZVMZan5AXuMCqqtAzLLBQj7CGTFDzHw2TUXcP96r2dvmmlHcsUz4sTHDlBrg4K96csrSeQDmUZWuyiZPuAvVEE8TgMULU1UG/nc3y59Lt92RFJ65To85g4VmPDMgZbkJonD3plruYOQcd7RZak1f8K4Co+NUOLAvR1LXLUNM8kA9A7Prc17hwETVtLsgAF5kcbnQ30cndXQcxtSugHIyNHw+4+In8b8BBcOV9AwZ11+WyPCVHUOtqfs49yPSiO1BZdvmZ6HdjFfxgakV9z/+lcpcVASJPIwW5Mt/Dlr2792Pu7sUOSTtUBHqWC9Yz/qNPiQRDpgXxJRLzkVyv3Xf5F4LhrSRG4chObphc1KiHCZgSdMuJFtGtl72WGclWM7HS5XlayuqV3JejN5CoEdiWOcSqLGXGprsUpmbTD135fKuzeB6wk0nHTTbyLTm7j2wop8pafcFvp7PpTE4u23BUXxzu1XGBR1UURb+YfwZWX6kGGp9yn0M3L9iPP8Emhr/hoQ8PONKEP+6+mrk=
+sidebar_class_name: "get api-method"
+info_path: docs/api/ultra-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"balances"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/balances/:address"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Request for token balances of an account
+
+:::note
+- Refer to [Ultra API doc](/docs/ultra-api/get-balances) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"schema":{"type":"string"},"in":"path","name":"address","required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"object","properties":{"amount":{"type":"string"},"uiAmount":{"type":"number"},"slot":{"type":"number"},"isFrozen":{"type":"boolean"}},"required":["amount","uiAmount","slot","isFrozen"]}}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}},"500":{"description":"Internal server error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

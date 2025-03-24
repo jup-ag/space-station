@@ -33,25 +33,9 @@ This is a POST request to `/createOrder` endpoint, where you pass in the necessa
 Do note that there are a few optional parameters that you can use, such as:
 
 - Setting an expiry date on the order.
-- Adding fees through our referral program, please ensure that your `referralAccount` has the necessary `referralTokenAccount`s of the output mint of the limit order for it to work, you can learn more about creating them dynamically in the [Add Fees To Swap](../100-swap-api/4-add-fees-to-swap.md) guide.
-
-This is another parameter that is optional but it is important to check if you support all tokens.
-
-- Specifying the token program if input or output mint is a Token2022 token.
+- Adding slippage to the order. This is useful if you or your users want to execute the order with higher slippage which might yield better chances of being filled.
+- Adding fees through our referral program, please ensure that your `feeAccount` has the necessary `referralTokenAccount`s of the output mint of the limit order for it to work, you can learn more about creating them dynamically in the [Add Fees To Swap](../100-swap-api/4-add-fees-to-swap.md) guide.
 :::
-
-#### Define the mints and programs of these mints.
-
-```jsx
-const inputMint = new PublicKey("So11111111111111111111111111111111111111112");
-const outputMint = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
-
-const inputMintTokenProgram = (await connection.getAccountInfo(inputMint)).owner.toString();
-const outputMintTokenProgram = (await connection.getAccountInfo(outputMint)).owner.toString();
-
-console.log(inputMintTokenProgram);
-console.log(outputMintTokenProgram);
-```
 
 #### Create a POST request to the `/createOrder` endpoint.
 
@@ -71,12 +55,11 @@ const createOrderResponse = await (
                 makingAmount: "1000000",
                 takingAmount: "300000",
                 // expiredAt: "", // In unix seconds (e.g. Date.now()/1_000) or optional
+                // slippageBps: "", // Optional, by nature, trigger orders execute with 0 slippage
                 // feeBps: "", // Requires referral account or optional
             },
             computeUnitPrice: "auto",
-            // referral: "", // Optional but if specified it is the referral token account of the output mint
-            inputTokenProgram: inputMintTokenProgram, // Default to token program if empty or specify e.g. token2022 program
-            outputTokenProgram: outputMintTokenProgram, // same as above
+            // feeAccount: "", // Optional but if specified it is the referral token account of the output mint
             // wrapAndUnwrapSol: true, // Default true or optional
         })
     })

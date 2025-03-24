@@ -1,0 +1,76 @@
+---
+id: token-information
+title: "token information"
+description: "Returns the specified mint address's token information and metadata."
+sidebar_label: "token information"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU1z0zAQ/SsacYDO1Elbbr51BobpDDBQwinpdBR746iRJaOPQHD939mVnMY0JtMrOcSyte/th3afWl6CK6xsvDSa5/wWfLDaMb8G5hoo5EpCyWqpPRNlacG517hpNqCZ1Ctja0FAJjQagRel8GKy0Aud57k2HhY6Y7ewAosYNp9F3PWXG1aa4u7NFP/dNJJlopGvKvBZehtQnzFcstpYGDqcRA8Lzc95I6xA12Adz+ct1/iCefTB4r6ktBrh17j+O9cZ5hj9YUrDDNHQwo8gLZQ89zbAOXfFGmrB85b7XUP8zlupK96dc/gl6kbRt2/m8oW/K97dkRPXGO3AEe/VxQU9xk9jX1omliZgnAyT9rIIStiUAYZcGO1BeyIRTaNkEQs1fXDE1B5nYJYPUPi/cp0PyhbriInv6qVRsXSFrIWiLS8qehQWhIfyXhAJ/ELnDh06jpk11jSAEabU9qRj1RuQHG2f83Te+AWTh8xLDAkxpZBqd781KtBR71FzrkO9BEuxB6UojAPchKVK2H0aB2948lBF3JM9fnp7lQ73Ka28xfeVBfgN9yL4tbHS74bun6JO7tFamcp8v705bUSd91JCsn1WrCOzf1UtDcbIEeBJ1UJj69yXoKBCzOkg+pYYo4qdcdgQ1oodjaCH2p0i7QgrfZyiT5jjjS5UKNHkXUidjI3UddEMR2FtsFc5qkWcfhzsnCcVmbapmKnfOmpfsNu9MgSLQfO1943Lp1MUnMlDaCaiSlg33V7GqSSVibH28XwNstg4jwOHfESWRvNycjG5OJKUR/ZR6g17XOhHlmVZWsw/gGdJ+24OEvZi/TtwUGkcyiD7JOwG/AkGhxRZHa2GBDOLMoKTkJjG8UKpzPd2PdnZ8zwcW+7YTFT/iEBUFZQj2M/ws8ePAzX8HEFdK3USFQM+oGJLG+exp+kY+/vg6Mp6fnTtQUD/w0uwHziPejVtlJCxCrHh235E5nx/UeTDISG9WGO1yKBtl8LBd6u6jj7/CGBRj+a43AorqR/iHJXS0RpncIVCCifq+Oa2v1rO2Im7djT2vYJo0o+tUIHecLmB3eB270iP1iBKlG8KLe1eFwU0foA7ug9pzp+E5MP7GYrLH8EjH1M=
+sidebar_class_name: "get api-method"
+info_path: docs/api/token-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"token information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/token/{mint_address}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the specified mint address's token information and metadata.
+
+:::note
+- Refer to [Token API doc](/docs/token-api#get-token-information) for more information.
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"address","in":"path","description":"The token's mint address","required":true,"schema":{"type":"string"},"example":"So11111111111111111111111111111111111111112"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns metadata about a particular token","content":{"application/json":{"schema":{"type":"object","required":["address","name","symbol","decimals","tags","created_at","extensions"],"properties":{"address":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"daily_volume":{"type":["number","null"],"format":"double"},"decimals":{"type":"integer","format":"int32"},"extensions":{},"freeze_authority":{"type":["string","null"]},"logoURI":{"type":["string","null"]},"mint_authority":{"type":["string","null"]},"minted_at":{"type":["string","null"],"format":"date-time"},"name":{"type":"string"},"permanent_delegate":{"type":["string","null"]},"symbol":{"type":"string"},"tags":{"type":"array","items":{"type":["string","null"]}}},"title":"MintIncludingDuplicates"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

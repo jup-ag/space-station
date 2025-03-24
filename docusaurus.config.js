@@ -1,10 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 const redirects = require('./redirects.json');
-const { UnfoldHorizontal } = require("lucide-react");
 require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
@@ -79,15 +79,9 @@ const config = {
     //   }),
     // ],
     [
-      "docusaurus-preset-openapi",
-      /** @type {import('docusaurus-preset-openapi').Options} */
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        api: {
-          path: "openapi/api.yaml",
-          routeBasePath: "docs/api",
-          sidebarCollapsible: false,
-          sidebarCollapsed: false,
-        },
         docs: {
           id: 'docs',
           lastVersion: 'current',
@@ -108,7 +102,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/jup-ag/space-station/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
-          // docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
         theme: {
           customCss: [
@@ -116,13 +110,8 @@ const config = {
             require.resolve("./src/css/navbar.css"),
             require.resolve("./src/css/sidebar.css"),
             require.resolve("./src/css/searchbar.css"),
+            require.resolve("./src/css/openapi.css"),
           ],
-        },
-        proxy: {
-          "/proxy": {
-            target: "http://localhost:8091",
-            pathRewrite: { "^/proxy": "" },
-          },
         },
       }),
     ],
@@ -139,6 +128,39 @@ const config = {
         sidebarCollapsed: true,
         editUrl: "https://github.com/jup-ag/space-station/tree/main/",
       }),
+    ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'docs',
+        config: {
+          ultra: {
+            specPath: "openapi/ultra.yaml",
+            outputDir: "docs/api/ultra-api",
+          },
+          swap: {
+            specPath: "openapi/swap.yaml",
+            outputDir: "docs/api/swap-api",
+          },
+          trigger: {
+            specPath: "openapi/trigger.yaml",
+            outputDir: "docs/api/trigger-api",
+          },
+          recurring: {
+            specPath: "openapi/recurring.yaml",
+            outputDir: "docs/api/recurring-api",
+          },
+          token: {
+            specPath: "openapi/token.yaml",
+            outputDir: "docs/api/token-api",
+          },
+          price: {
+            specPath: "openapi/price.yaml",
+            outputDir: "docs/api/price-api",
+          },
+        },
+      },
     ],
     [
       "@docusaurus/plugin-client-redirects",
@@ -203,9 +225,9 @@ const config = {
         searchPagePath: false,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ["rust"],
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        additionalLanguages: ["bash","json","rust"],
       },
       announcementBar: {
         id: 'zendesk-migration',
@@ -213,9 +235,32 @@ const config = {
         backgroundColor: '#FFA500',
         textColor: '#000000',
         isCloseable: false,
-      }
+      },
+      languageTabs: [
+        {
+          highlight: "bash",
+          language: "curl",
+          logoClass: "curl",
+        },
+        {
+          highlight: "javascript",
+          language: "nodejs",
+          logoClass: "nodejs",
+        },
+        {
+          highlight: "python",
+          language: "python",
+          logoClass: "python",
+        },
+        {
+          highlight: "rust",
+          language: "rust",
+          logoClass: "rust",
+        },
+      ],
     }
   ),
+  themes: ['docusaurus-theme-openapi-docs'],
 };
 
 module.exports = config;

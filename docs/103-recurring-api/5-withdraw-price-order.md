@@ -31,7 +31,7 @@ If you want to withdraw funds from a price-based order, you need to do these ste
 [Refer to the `/getRecurringOrders` section](/docs/recurring-api/get-recurring-orders) to prepare order account you want to withdraw from.
 :::
 
-:::caution
+:::warning
 If you do not pass in `amount`, the transaction will be built to withdraw the full amount of the order.
 :::
 

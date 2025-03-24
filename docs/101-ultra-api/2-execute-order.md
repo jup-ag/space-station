@@ -16,7 +16,7 @@ https://api.jup.ag/ultra/v1/execute
 ```
 
 :::tip API Reference
-To fully utilize the Ultra API, check out the [Ultra API Reference](/docs/api/execute).
+To fully utilize the Ultra API, check out the [Ultra API Reference](/docs/api/ultra-api/execute.api.mdx).
 :::
 
 ## Sign Transaction

@@ -1,0 +1,76 @@
+---
+id: tagged
+title: "tagged"
+description: "Returns a list of mints with specified tag(s) along with their metadata."
+sidebar_label: "tagged"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVk1v4zYQ/SsEe0kAy/a6N90CtFgEaIo28J7shUFLY4kxRWrJkbOu4v/eGdJfib3GXnroJabImTfzhjOP6WUJofC6Re2szOUzYOdtEEoYHVC4lWi0xSBeNdYitFDolYZSoKruwr1QxtkqnWEN2osGUJUK1XBu5zbPc+sQ5jYTz7ACL9CJ2dStwYqHvx5F6YqvdyP6G0bIm5lq9S8VYEbgFZRZ3KQgK0e4zoPQlpaN4kyHEX1u5UC2yisKCz7IfNZLSx/EgzAWzIAMNPNqFda0fk/24UjSWRCHMOQaBqJwTaNEAIZHKIdiWkMy14HJis4SCPumPI9VCAlhSNE8fOu0h1Lm6DsYyFDU0CiZ9xK3LWcZ0Gtbyd1AwnfVtIb3TMBBqsdkPJnI3VfGCa2zAQK7TsZj/nnP5JjcZT4xG1HpDXC1CmcRLDKCaluji1jO0UtgmP4yQ7d8gQLfcZlJVZaUUqDdWG0itm2WzsT6FrpRho84LAf0wPVbKAaB7xQ8UMAgiVbrXQsedeJ1AL1WnTOQi+OBTF1BO9R5kKGmlMinVNpsFxtnOm6Ig9dM2q5ZgufcO2M4jZO765Ym+R5onKLRFEAV/Y72tPXrJF3ekVbe0/fKA/wDC9Vh7bzG7Xn4Y9YpPFkbV7kvz4+3jXgKfxaQbT8U68LsR1VL43PlCuimGmWpdRYlGKjI53YS+5a4BhU743SgvFdbnlOEJtwC3bGvxjglT8Tx0RamK8nkty51MjXSbhfNSBBqR70qSU+iRtD053KUlGXU0++O2xb85qAbnadkZY3Yhnw0IikavnTtUFVJm8Jo8ymOImtQzHGfx9+dLtYBlecwDJbm8dNwPBxf6M2b+EPbtXib2zeRZVlazD4DiqSKjyeB+4Eyxq8zHbw/w3iKQq2teFJ+DXgDIRBE1kSrc4CpJ+2mCUhI1/2VMRnu7Y4K/YFHEMutmKrqp9T95PsnvO79rztaeL3i9WDMTa+Y8MkrtrILSL3M13h6LSinj/fVn9Tyf/gu7qcLSZxGrVE6Uo9d3u/nYXbindOKRaGm0vBB3y9VgC/e7Ha8/a0DT6Izo+VGec2XH4em1IHXNGgrUku4Ub+75/37cS/+61f3KvGD1lhWmo0yHX/Rcg3b8/8WdixdNaiSlJ4JpuOHooAWzxwvnk6WhqPmfP59Sjr0L1sUPQ4=
+sidebar_class_name: "get api-method"
+info_path: docs/api/token-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"tagged"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tagged/{tag}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of mints with specified tag(s) along with their metadata.
+
+:::note
+- Refer to [Token API doc](/docs/token-api#get-tagged-tokens) for more information.
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"tag_list","in":"path","description":"A list of one or more tags, comma separated. The list is the union of tokens with these tags.","required":true,"schema":{"type":"string"},"example":"lst,token-2022"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The list of tokens with the tags given","content":{"application/json":{"schema":{"type":"object","required":["address","name","symbol","decimals","tags","created_at","extensions"],"properties":{"address":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"daily_volume":{"type":["number","null"],"format":"double"},"decimals":{"type":"integer","format":"int32"},"extensions":{},"freeze_authority":{"type":["string","null"]},"logoURI":{"type":["string","null"]},"mint_authority":{"type":["string","null"]},"minted_at":{"type":["string","null"],"format":"date-time"},"name":{"type":"string"},"permanent_delegate":{"type":["string","null"]},"symbol":{"type":"string"},"tags":{"type":"array","items":{"type":["string","null"]}}},"title":"MintIncludingDuplicates"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

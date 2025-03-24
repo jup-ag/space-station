@@ -1,6 +1,8 @@
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const apiSidebars = require('./sidebars-api');
+
 const sidebars = {
   docs: [
     {
@@ -52,7 +54,7 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
-  swap: [
+  ultra: [
     {
       type: 'category',
       label: 'Ultra API',
@@ -81,6 +83,8 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
+  ],
+  swap: [
     {
       type: 'category',
       label: 'Swap API',
@@ -128,32 +132,6 @@ const sidebars = {
           id: 'tool-kits/swap-terminal',
           label: 'Integrate Swap Terminal',
         },
-        {
-          type: 'doc',
-          id: 'dex-integration',
-        },
-      ],
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'category',
-      label: 'Spot Products',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          label: 'Trigger API',
-          id: 'trigger-api/create-order',
-        },
-        {
-          type: 'doc',
-          label: 'Recurring API',
-          id: 'recurring-api/create-order',
-        },
       ],
     },
     {
@@ -179,6 +157,123 @@ const sidebars = {
     {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
+    },
+  ],
+  trigger: [
+    {
+      type: 'category',
+      label: 'Trigger API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          label: 'Create Order',
+          id: 'trigger-api/create-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Order Management',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/cancel-order',
+        },
+        {
+          type: 'doc',
+          id: 'trigger-api/get-trigger-orders',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'trigger-api/best-practices',
+        },
+      ],
+    },
+  ],
+  recurring: [
+    {
+      type: 'category',
+      label: 'Recurring API',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/create-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/execute-order',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Order Management',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/cancel-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/deposit-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/withdraw-price-order',
+        },
+        {
+          type: 'doc',
+          id: 'recurring-api/get-recurring-orders',
+        },
+      ],
+    },
+    {
+      type: 'html',
+      value: '<div class="sidebar-line-break"></div>',
+    },
+    {
+      type: 'category',
+      label: 'Debugging',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'recurring-api/best-practices',
+        },
+      ],
     },
   ],
   trigger: [
@@ -370,6 +465,7 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
+  ...apiSidebars,
 };
 
 module.exports = sidebars;

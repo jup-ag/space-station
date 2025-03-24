@@ -1,0 +1,66 @@
+---
+id: program-id-to-label
+title: "program-id-to-label"
+description: "Returns a hash, which key is the program id and value is the label."
+sidebar_label: "program-id-to-label"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlU01PGzEQ/Ssjn1opmw09cmtFxaWHUugpIDGxJ7ETxzb2bCBa+O8d7yZ8FA69N1op3tk373men3vFuCrqdK4u7zGpm4kyVHR2iV0M6lT9Iu5yKIBgsdgJ3FunLWxoD64AW4KU4yrjFpwBDAZ26Ds6fvO4ID+9DldWCvJ0hQxwBEs+wRYTUM4xwzLHLXDGUFBXWVgIu6HAbrl3YTVQLbHz/ErsyKpR4DQyuwA6hnUXRpZ7x3bovaUH7TtDZ/RA5RZE8daMy4TCRkxZ6NREZSophkLiR6++zGb1760dZzRu5IiUJpFk2WvFYkreaazYdl1qQ6+KtrTFuuJ9IqGIizVplkY0xlUo+p85JsrsRuEDrnCW4dXT8Jso2aaNRuorqs0J2cpLW+TU2t1Je3Cmcabh2AzGC6pQ3lGux9urLntpsMypnLYtJjddd2mKoiCH7sIyDtqOfRW/6JzeFMZctSrFOP7JdDadqb8z8gg/XNjA43V4hKZpxsX8nBguush086k1UZdhq43otjJBc1e/fD5Av3XOG6gBhKuXGLzrW1RYM7y+SsuR5JLCP3AUQX1MocTkFAtvcTi3IMGQ2T729c38/UsE/q/rcggq0wO3yaMbLBxi1h/yOVfV6hqhk5rZD7yU7FkxvUL7foGFfmf/9FTLdx3lvdRlucPscFGDOb8RCUtoKA+hFmdlB1+1pjQktdophXcXsWb8+Qadf7+Sa/UH13bAbA==
+sidebar_class_name: "get api-method"
+info_path: docs/api/swap-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"program-id-to-label"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/swap/v1/program-id-to-label"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a hash, which key is the program id and value is the label.
+This is used to help map error from transaction by identifying the fault program id.
+This can be used in conjunction with the `excludeDexes` or `dexes` parameter.
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default response","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"string"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

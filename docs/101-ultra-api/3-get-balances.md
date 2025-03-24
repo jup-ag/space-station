@@ -16,7 +16,7 @@ https://api.jup.ag/ultra/v1/balances
 ```
 
 :::tip API Reference
-To fully utilize the Ultra API, check out the [Ultra API Reference](/docs/api/balances).
+To fully utilize the Ultra API, check out the [Ultra API Reference](/docs/api/ultra-api/balances.api.mdx).
 :::
 
 ## Get Balances

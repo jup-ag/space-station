@@ -1,0 +1,76 @@
+---
+id: order
+title: "order"
+description: "Request for a base64-encoded unsigned swap transaction to be used in `POST /ultra/v1/execute`"
+sidebar_label: "order"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV1tT20YU/is7ekpmMCYdmge/QSdJ3YaEgumL8UzWq2NpYbUr9kKhhv/ec3SxJVuWSdNMpi8ga8/lO7fvrJZRDE5YmXtpdDSKLuAugPNsYSzjbM4dvD0egBYmhpgF7WSi8cH9xXPmLdeOC1Jk3rA5sODwTGr25fzz5YQNg0KR4f2bITyACB6+XOtrPRqNtPFwrQfsAhZgSXV6RZLs5HzMYiNmr4b415XqA57LYQJ+YGwM9nWBKzMW0A0+Zpy8F0avdXQQWXC50Q5cNFpGPx0d0b92fJdBCHBuERSrhVFPGO1BexLnea6kKOwObxzpLCMnUsg4PfnHHNCKmd+A8KiYW5OD9bL0KHUe/JksDVWizlupk+j5IDLB9x1LfZKZsFu379SnYMvzSYphpUbFnYJUtzMsZfehknnOEzjNXeNch2wOls5zKwWMsxxLfi66gVjECeeK68Ypt5Y/Yqqkh8ztzyFBHGNt90vyLPsdHjtxKD4HtSPLP6ZEC4D+0x1OKak4ktICVnRax1xH2Iynhb6BtYmsiWPtdUbFBSughaAu/AaCVX3WOjOSKUbowV8q02WkcNbTWMZKL/8upm5SHG8m4iACVCAAn4ymkf3FZBgsnIYY2QF//ya9KSNpWXsP8JFnubG+2zeFs88jTxILCffGEsUs7go3DfbbZpmrmiiJQAdvj1nNoNucWQlyHa/pc0WY6K8ENV2j0kGpAkHCnUIqayCfG6MAh68qGfL4ON4Gd1FVkwBk/BaQ5ytpetPhvNGo3niuJjKDzmR6tGbXJ12g7wKS/7ibnbK2euMEHnJEfNI9PIo7/ydXMj5VRtz+CjJJu1swV9zT0sCeeAm79E1rdytvDet60EiB4o8fNc+kuKy49gKoNV+CBrfSotpLF/S3P82NjdDd9jILmA2Ix1oEi3gv95D/vuWAyCAx9vETzzpmCQVSCFY6L8UZf+h3tpXFrdDb8e2Jpo19A+luXLNNHF/LtJ1LubGCN3FtrNfmMl11UCdX9lFeg+DalLWmjyZXNAe8HmdMBKXiuOs2dcrjmjv+u1sUWGu6aGCjHqVYhe7nLnRjhGM1V8yBvcebZqnxA3ESB3GLfYe40MSUboyoiPmztNN1MTutRtvC0rhrrXx4G+D5oNtYq1O/2dqK0b7ZUtlbBxsVm6S4jYQgJ4zHMU6NY2bBcJJoOdqXOl5w5eB5hhsFfGrwRVTeEXLuU/wxLL4lyFjRF2UlgsULY5R6n7vRcIhfHYc3IT/kyeorJiKDsr6ZSq/I+x9BilvnuSXzZKuM483h0eHRVnRP7KPUt+zpWj+xwWBQPkw/gGefCVDvd08p+65czbvkq83d0CnWnnE+K6/kdVNU8bfgLddz8T//Cqw6g66jQ9z5sshCUd9l1QLTKgVY0RSzQy+WSwrzyqrnZ3pdtis1Riwdn6tVW/Vk7VV9s3rNdqG4pQ+W1oTfcxVILqJJ+Q6+WgTwvZ2t+OFfOto//z3Oa0pZ+57RDyvJOZZyVtxCONWd6loqnQgBeRPx1kZo8ciHdxMk+H8ALTf+/g==
+sidebar_class_name: "get api-method"
+info_path: docs/api/ultra-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"order"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/order"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Request for a base64-encoded unsigned swap transaction to be used in `POST /ultra/v1/execute`
+
+:::note
+- Refer to [Ultra API doc](/docs/ultra-api/get-order) for more information
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"inputMint","schema":{"type":"string"},"required":true},{"in":"query","name":"outputMint","schema":{"type":"string"},"required":true},{"in":"query","name":"amount","schema":{"type":"string"},"required":true},{"in":"query","name":"taker","description":"The account address of the user","schema":{"type":"string"},"required":false}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful response","content":{"application/json":{"schema":{"type":"object","properties":{"inputMint":{"type":"string"},"outputMint":{"type":"string"},"inAmount":{"type":"string"},"outAmount":{"type":"string"},"otherAmountThreshold":{"type":"string"},"swapMode":{"type":"string"},"slippageBps":{"type":"number"},"priceImpactPct":{"type":"string"},"routePlan":{"type":"array","items":{"type":"object","properties":{"swapInfo":{"type":"object","properties":{"ammKey":{"type":"string"},"label":{"type":"string"},"inputMint":{"type":"string"},"outputMint":{"type":"string"},"inAmount":{"type":"string"},"outAmount":{"type":"string"},"feeAmount":{"type":"string"},"feeMint":{"type":"string"}},"required":["ammKey","label","inputMint","outputMint","inAmount","outAmount","feeAmount","feeMint"]},"percent":{"type":"number"}},"required":["swapInfo","percent"]}},"contextSlot":{"type":"number"},"feeBps":{"type":"number"},"prioritizationType":{"type":"string","enum":["None","ComputeBudget","Jito"]},"prioritizationFeeLamports":{"type":"number"},"swapType":{"type":"string","enum":["aggregator","rfq"]},"transaction":{"description":"Unsigned base-64 encoded transaction to be signed and used in `/execute`","type":["string","null"]},"gasless":{"type":"boolean"},"requestId":{"description":"Required to make a request to `/execute`","type":"string"},"totalTime":{"type":"number"},"taker":{"type":["string","null"]},"quoteId":{"type":"string"},"maker":{"type":"string"},"expireAt":{"type":"string"},"lastValidBlockHeight":{"type":"number"},"platformFee":{"type":"object","properties":{"amount":{"type":"string"},"feeBps":{"type":"number"}},"required":["amount","feeBps"]},"dynamicSlippageReport":{"type":"object","properties":{"amplificationRatio":{"type":["string","null"]},"otherAmount":{"type":"number"},"simulatedIncurredSlippageBps":{"type":"number"},"slippageBps":{"type":"number"},"categoryName":{"type":"string"},"heuristicMaxSlippageBps":{"type":"number"}},"required":["amplificationRatio","otherAmount","simulatedIncurredSlippageBps","slippageBps","categoryName","heuristicMaxSlippageBps"]}},"required":["inputMint","outputMint","inAmount","outAmount","otherAmountThreshold","swapMode","slippageBps","priceImpactPct","routePlan","feeBps","prioritizationType","prioritizationFeeLamports","swapType","transaction","gasless","requestId","totalTime","taker"]}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}},"500":{"description":"Internal server error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"}},"required":["error"]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

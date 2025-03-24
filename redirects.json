@@ -1,9 +1,27 @@
 [
-    {"to":"/docs/price-api/","from":"/docs/utility/price-api"},
-    {"to":"/docs/token-api/","from":"/docs/utility/token-api"},
+
+    {"to":"/docs/token-api","from":"/docs/utility/token-api"},
+    {"to":"/docs/price-api","from":"/docs/utility/price-api"},
+    
     {"to":"/docs/recurring-api/create-order","from":"/docs/swap-api/dca-sdk"},
     {"to":"/docs/trigger-api/create-order","from":"/docs/swap-api/limit-order-api"},
     {"to":"/docs/swap-api/get-quote","from":"/docs/swap-api"},
+
+    {"to":"/docs/api/ultra-api/order","from":"/docs/api/order"},
+    {"to":"/docs/api/ultra-api/execute","from":"/docs/api/execute"},
+    {"to":"/docs/api/swap-api/quote","from":"/docs/api/quote"},
+    {"to":"/docs/api/swap-api/swap","from":"/docs/api/swap"},
+    {"to":"/docs/api/swap-api/swap-instructions","from":"/docs/api/swap-instructions"},
+    {"to":"/docs/api/swap-api/program-id-to-label","from":"/docs/api/program-id-to-label"},
+
+    {"to":"/docs/api/token-api/token-information","from":"/docs/api/token-information"},
+    {"to":"/docs/api/token-api/mints-in-market","from":"/docs/api/mints-in-market"},
+    {"to":"/docs/api/token-api/tradable","from":"/docs/api/tradable"},
+    {"to":"/docs/api/token-api/tagged","from":"/docs/api/tagged"},
+    {"to":"/docs/api/token-api/new","from":"/docs/api/new"},
+    {"to":"/docs/api/token-api/all","from":"/docs/api/all"},
+
+    {"to":"/docs/api/price-api/price","from":"/docs/api/price"},
 
     {"to":"/docs/old/additional-topics/audits","from":"/docs/additional-topics/audits"},
     {"to":"/docs/old/additional-topics/builder-tips","from":"/docs/additional-topics/builder-tips"},
@@ -40,11 +58,7 @@
     {"to":"/docs/old/projects-and-dexes/rust-integration","from":"/docs/projects-and-dexes/rust-integration"},
     {"to":"/docs/old/token-api-standard","from":"/docs/token-api-standard"},
     {"to":"/docs/old/token-list/token-list-api","from":"/docs/token-list/token-list-api"},
-    {"to":"/docs/api/","from":"/api-v6/get-quote"},
-    {"to":"/docs/api/","from":"/api-v6/post-swap"},
-    {"to":"/docs/api/","from":"/api-v6/post-swap-instructions"},
-    {"to":"/docs/api/","from":"/api-v6/get-program-id-to-label"},
-    {"to":"/docs/api/","from":"/api-v6/tokens"},
+
     {
         "to": "/guides/swap/how-swap-works",
         "from": "/guides/jupiter-swap/how-swap-works/metropolis-features"
