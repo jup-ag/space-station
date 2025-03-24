@@ -54,7 +54,7 @@ const sidebars = {
       value: '<div class="sidebar-line-break"></div>',
     },
   ],
-  swap: [
+  ultra: [
     {
       type: 'category',
       label: 'Ultra API',
@@ -79,6 +79,8 @@ const sidebars = {
       type: 'html',
       value: '<div class="sidebar-line-break"></div>',
     },
+  ],
+  swap: [
     {
       type: 'category',
       label: 'Swap API',
@@ -125,32 +127,6 @@ const sidebars = {
           type: 'doc',
           id: 'tool-kits/swap-terminal',
           label: 'Integrate Swap Terminal',
-        },
-        {
-          type: 'doc',
-          id: 'dex-integration',
-        },
-      ],
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'category',
-      label: 'Spot Products',
-      collapsible: false,
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          label: 'Trigger API',
-          id: 'trigger-api/create-order',
-        },
-        {
-          type: 'doc',
-          label: 'Recurring API',
-          id: 'recurring-api/create-order',
         },
       ],
     },
