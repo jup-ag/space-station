@@ -160,7 +160,7 @@ Notes:
 | Jupiter Perps |  |  |
 | Meteora DLMM | 47 | 19 |
 | Meteora | 45 | 18 |
-| Moonshoot | 37 | 15 |
+| Moonshot | 37 | 15 |
 | Obric | 30 | 12 |
 | Orca Whirlpool | 30 | 12 |
 | Pumpfun AMM | 42 | 17 |
