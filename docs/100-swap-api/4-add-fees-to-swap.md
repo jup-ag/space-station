@@ -29,6 +29,7 @@ By default, there are **zero** protocol fees on Jupiter Swap. Integrators have t
 
 - **Input mint or the output mint** on the swap for ExactIn.
 - **Input mint ONLY** on the swap for ExactOut.
+- Example, if you swap JUP to USDC, you cannot take fees in SOL, it has to be part of the swap.
 - It does not support Token2022 tokens.
 - Referral Program is no longer required.
 
@@ -36,7 +37,7 @@ By default, there are **zero** protocol fees on Jupiter Swap. Integrators have t
     <summary>
         <div>
             <div>
-                <b>Via Referral Program (No longer required)</b>
+                <b>Via Referral Program (No longer required for Swap API)</b>
             </div>
         </div>
     </summary>
