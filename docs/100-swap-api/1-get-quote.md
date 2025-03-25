@@ -110,7 +110,7 @@ Now, you are able to get a quote, next steps is to submit a transaction to execu
 
 ### Legacy Transactions
 
-All Jupiter swaps are using Versioned Transactions and Address Lookup Tables. However, not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to set the `asLegacyTransaction` parameter to `true`.
+All Jupiter swaps are using Versioned Transactions and [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables). However, not all wallets support Versioned Transactions yet, so if you detect a wallet that does not support versioned transactions, you will need to set the `asLegacyTransaction` parameter to `true`.
 
 ### Adding Fees
 
@@ -149,15 +149,28 @@ In some cases, you may want to add more accounts to the transaction for specific
         </div>
     </summary>
 
-| DEX | Required Accounts |
-| --- | --- |
-| Meteora DLMM | 47 |
-| Meteora | 45 |
-| Sanctum | 80 |
-| Raydium | 45 |
-| Raydium CLMM | 45 |
-| Raydium CPMM | 37 |
-| Pumpfun AMM | 42 |
+Notes:
+- Values in the table are only estimations and the actual number of accounts may vary.
+- Min accounts occur when we already create the necessary [ALTs](https://docs.solana.com/developing/lookup-tables) for a specific pool resulting in less accounts needed in routing.
+  - Only applies to simple routing pools which are pools that are instantly routed (most AMMs) and they only subject to our market crawler to check for liquidity on the 14th day.
+- Sanctum and Sanctum Infinity are unique, and their accounts are dynamic.
+
+| DEX | Max | Min |
+| --- | --- | --- |
+| Jupiter Perps |  |  |
+| Meteora DLMM | 47 | 19 |
+| Meteora | 45 | 18 |
+| Moonshoot | 37 | 15 |
+| Obric | 30 | 12 |
+| Orca Whirlpool | 30 | 12 |
+| Pumpfun AMM | 42 | 17 |
+| Pumpfun Bonding Curve | 40 | 16 |
+| Raydium | 45 | 18 |
+| Raydium CLMM | 45 | 19 |
+| Raydium CPMM | 37 | 14 |
+| Sanctum | 80 | 80 |
+| Sanctum Infinity | 80 | 80 |
+| Solfi | 22 | 9 |
 
 </details>
 
