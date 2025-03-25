@@ -1,0 +1,76 @@
+---
+id: mints-in-market
+title: "mints in market"
+description: "Returns the mints involved in a market."
+sidebar_label: "mints in market"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVN9P2zAQ/lcs74VKTVMm7YG8lQkYGkxbYT9Yi6Zrck3cOraxnUAV+r/PdgIto6BpT8tDcnZ85+++++4amqFJNVOWSUETOkZbaWGILZCUTFhDmKglrzFzBgFSgl6iHUzFVCRJIqTFqYjIGOeoiZVkcimXKMjo8ynJZHq9F7u3ia3fjECxNznaKKxMxETUBuuRudSklBrdFc4swWMZhAumgvapAg0lWtSGJpOGCrdwSCHLNBrj/jMPXIEtnP00m1GHN1ZScrLx0HhTMY0ZTayusE9NWmAJNGmoXSkf3FjNRE7XfYp3UCru9w6/jWers8VifnGYyhW7Oq7uZvnHK/G9YsdwfPD+4scRvKuzi58HHwq6vva3GCWFQeMDvx0O/edf2HaAUyksCusjgFKcpYGjeGF8mOY5ftAaVp4ai6XZkVd4+tSxWkjHAs3DLYHDhMYdaU37/dXxto4DRHfOoK4fqlFp7lwKa5VJ4tjVeLCo1ADytugmrvcDF76yAQezgcwvFUuXxoL29/pgLSH7g+Fg+KyM9+SMiSW5n4p7EkVRa0xO0JJWbqcb2bwiuWhLXb2tGOcd8eQ8pPu3ot0CoSGDGcc20m5/4Dyy3bkuWO/PPAyZrcgl5C8ggDzHbIfvJ7zt/Hc7Crzd4TXi/FWvAHjj5VtBSWNLCILrevBBsxuhPilcs9HtfzlYuqaweOcmBAcWsgyCbrpemNDHzJKn3eB22nZw4i4cMf5s08zA4FfN12u/fVOhXrl9Z9agmS99aJmMGW+7vpsDN/gKaXvjblD1yEujbGcOD1NA+BlQA6/8yplLXG1NzvW1O1ogZKgDrvbvKE1R2S2/ZwPH9/Pj5Dg5unTj5Dfi/i+K
+sidebar_class_name: "get api-method"
+info_path: docs/api/token-api/quickstart
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"mints in market"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/market/{market_address}/mints"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the mints involved in a market.
+
+:::note
+- Refer to [Token API doc](/docs/token-api#get-tokens-in-market) for more information.
+:::
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"address","in":"path","description":"A market/pool address","required":true,"schema":{"type":"string"},"example":"BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Returns the mints involved in a market","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

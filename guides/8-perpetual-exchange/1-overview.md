@@ -31,7 +31,7 @@ You can find various metrics on Jupiter Perpetuals on the following dashboards:
 ![Perp1](../img/perps/perps-1.png)
 
 1. **Perpetual Trading Tab:** This is where all the trading action happens. You can trade long or short on the three main blue-chip markets we offer: SOL, ETH, and WBTC, with leverage of up to 100x.
-2. **Earn Tab:** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities. (For information on the earn tab and the liquidity used by perpetuals, head over to [JLP](/guides/jlp/jlp)).
+2. **Earn Tab:** This is where passive users can participate. Users can join the liquidity pool and earn passive fees generated from trading activities. (For information on the earn tab and the liquidity used by perpetuals, head over to [JLP](/guides/jlp)).
 3. **Perp Market Selector:** Currently, we only support the three main blue-chip markets: SOL, ETH, and BTC.
 4. **Price Stats:** Here, you can find a quick overview of the current real-time stats, including the current index price, 24-hour price movement, 24-hour highs, and 24-hour lows.
 5. **Long/Short Selector:** Choose whether you want to go 'Long' or 'Short' on the respective market.

@@ -81,7 +81,7 @@ Yes, please wait while the payment gateway confirm the payment and return us a s
 
 Click on the **"+ Generate Key"** button to generate an API Key.
 
-:::caution Generating multiple keys
+:::warning Generating multiple keys
 The rate limits are imposed on a **PER ACCOUNT** basis, not per API Key.
 
 If you need more requests, you can upgrade the plan, or create a completely new account and subscribe to a plan, (this means you will have 2 separate accounts, each has its own plans).

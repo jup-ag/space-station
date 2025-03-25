@@ -1,0 +1,382 @@
+openapi: 3.0.3
+info:
+  title: Quickstart
+  version: 1.0.0
+  description: |
+    | Link |
+    | --- |
+    | [Get Order](/docs/ultra-api/get-order) |
+    | [Execute Order](/docs/ultra-api/execute-order) |
+
+servers:
+  - url: https://api.jup.ag/ultra/v1
+
+paths:
+  /order:
+    get:
+      summary: order
+      description: |
+        Request for a base64-encoded unsigned swap transaction to be used in `POST /ultra/v1/execute`
+        
+        :::note
+        - Refer to [Ultra API doc](/docs/ultra-api/get-order) for more information
+        :::
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  inputMint:
+                    type: string
+                  outputMint:
+                    type: string
+                  inAmount:
+                    type: string
+                  outAmount:
+                    type: string
+                  otherAmountThreshold:
+                    type: string
+                  swapMode:
+                    type: string
+                  slippageBps:
+                    type: number
+                  priceImpactPct:
+                    type: string
+                  routePlan:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        swapInfo:
+                          type: object
+                          properties:
+                            ammKey:
+                              type: string
+                            label:
+                              type: string
+                            inputMint:
+                              type: string
+                            outputMint:
+                              type: string
+                            inAmount:
+                              type: string
+                            outAmount:
+                              type: string
+                            feeAmount:
+                              type: string
+                            feeMint:
+                              type: string
+                          required:
+                            - ammKey
+                            - label
+                            - inputMint
+                            - outputMint
+                            - inAmount
+                            - outAmount
+                            - feeAmount
+                            - feeMint
+                        percent:
+                          type: number
+                      required:
+                        - swapInfo
+                        - percent
+                  contextSlot:
+                    type: number
+                  feeBps:
+                    type: number
+                  prioritizationType:
+                    type: string
+                    enum:
+                      - None
+                      - ComputeBudget
+                      - Jito
+                  prioritizationFeeLamports:
+                    type: number
+                  swapType:
+                    type: string
+                    enum:
+                      - aggregator
+                      - rfq
+                  transaction:
+                    description: "Unsigned base-64 encoded transaction to be signed and used in `/execute`"
+                    type:
+                      - string
+                      - 'null'
+                  gasless:
+                    type: boolean
+                  requestId:
+                    description: "Required to make a request to `/execute`"
+                    type: string
+                  totalTime:
+                    type: number
+                  taker:
+                    type:
+                      - string
+                      - 'null'
+                  quoteId:
+                    type: string
+                  maker:
+                    type: string
+                  expireAt:
+                    type: string
+                  lastValidBlockHeight:
+                    type: number
+                  platformFee:
+                    type: object
+                    properties:
+                      amount:
+                        type: string
+                      feeBps:
+                        type: number
+                    required:
+                      - amount
+                      - feeBps
+                  dynamicSlippageReport:
+                    type: object
+                    properties:
+                      amplificationRatio:
+                        type:
+                          - string
+                          - 'null'
+                      otherAmount:
+                        type: number
+                      simulatedIncurredSlippageBps:
+                        type: number
+                      slippageBps:
+                        type: number
+                      categoryName:
+                        type: string
+                      heuristicMaxSlippageBps:
+                        type: number
+                    required:
+                      - amplificationRatio
+                      - otherAmount
+                      - simulatedIncurredSlippageBps
+                      - slippageBps
+                      - categoryName
+                      - heuristicMaxSlippageBps
+                required:
+                  - inputMint
+                  - outputMint
+                  - inAmount
+                  - outAmount
+                  - otherAmountThreshold
+                  - swapMode
+                  - slippageBps
+                  - priceImpactPct
+                  - routePlan
+                  - feeBps
+                  - prioritizationType
+                  - prioritizationFeeLamports
+                  - swapType
+                  - transaction
+                  - gasless
+                  - requestId
+                  - totalTime
+                  - taker
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                  - error
+      parameters:
+        - in: query
+          name: inputMint
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: outputMint
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: amount
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: taker
+          description: "The account address of the user"
+          schema:
+            type: string
+          required: false
+  /execute:
+    post:
+      summary: execute
+      description: |
+        Execute the signed transaction and get the execution status
+        
+        :::note
+        - Do note that the `requestId` is found in the response of `/order`
+        - Refer to [Ultra API doc](/docs/ultra-api/execute-order) for more information
+        :::
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - Success
+                      - Failed
+                  signature:
+                    type: string
+                  slot:
+                    type: string
+                  error:
+                    type: string
+                  code:
+                    type: number
+                  inputAmountResult:
+                    type: string
+                  outputAmountResult:
+                    type: string
+                  swapEvents:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        inputMint:
+                          type: string
+                        inputAmount:
+                          type: string
+                        outputMint:
+                          type: string
+                        outputAmount:
+                          type: string
+                      required:
+                        - inputMint
+                        - inputAmount
+                        - outputMint
+                        - outputAmount
+                required:
+                  - status
+                  - code
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  code:
+                    type: number
+                required:
+                  - error
+                  - code
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  code:
+                    type: number
+                required:
+                  - error
+                  - code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                signedTransaction:
+                  type: string
+                  description: "The signed transaction to execute"
+                requestId:
+                  type: string
+                  description: "Found in response of `/order`"
+              required:
+                - signedTransaction
+                - requestId
+  /balances/:address:
+      get:
+        summary: balances
+        description: |
+          Request for token balances of an account
+          
+          :::note
+          - Refer to [Ultra API doc](/docs/ultra-api/get-balances) for more information
+          :::
+        responses:
+          '200':
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    properties:
+                      amount:
+                        type: string
+                      uiAmount:
+                        type: number
+                      slot:
+                        type: number
+                      isFrozen:
+                        type: boolean
+                    required:
+                      - amount
+                      - uiAmount
+                      - slot
+                      - isFrozen
+          '400':
+            description: Bad request
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                  required:
+                    - error
+          '500':
+            description: Internal server error
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
+                  required:
+                    - error
+        parameters:
+          - schema:
+              type: string
+            in: path
+            name: address
+            required: true

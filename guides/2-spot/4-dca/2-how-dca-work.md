@@ -17,7 +17,7 @@ slug: /dca/how-dca-work
 - The first order takes place immediately after your DCA position has been created and the remaining orders will take place regularly at your selected time interval.
 - As an example, if you choose to use 1,000 $USDC to DCA into $SOL, daily over 10 days, the very first order of 100 $USDC -> $SOL will be executed right after the DCA has been successfully created, and there will be 9 more remaining orders of 100 $USDC -> $SOL to be executed daily.
 
-:::caution
+:::warning
 To minimize the predictability of your DCA strategy, orders are filled within a randomized padding of +/- 30 seconds from your DCA creation time.
 :::
 

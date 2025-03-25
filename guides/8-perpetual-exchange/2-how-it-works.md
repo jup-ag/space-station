@@ -79,7 +79,7 @@ Limit Orders operate independently from your existing positions.
   - Increase and combine with your existing position in that market.
 - They stay active even if you close or get liquidated on an existing position.
 
-:::caution Placing LO near Liquidation Price
+:::warning Placing LO near Liquidation Price
 Jupiter Perps does not enforce First-in, First-out (FIFO), meaning execution order is not strictly based on price priority. Instead, it depends on which transaction - your Limit Order (LO) or the liquidation transaction - gets processed first.
 
 If you create a Limit Order at a price near your liquidation level, expecting it to save your existing position, the outcome is uncertain:
@@ -87,7 +87,7 @@ If you create a Limit Order at a price near your liquidation level, expecting it
 - If the Liquidation executes first = the existing position will be liquidated, but the Limit Order will remain active, potentially opening a new position immediately.
 :::
 
-:::caution Liquidation Price on Order Form
+:::warning Liquidation Price on Order Form
 The liquidation price on the order form for a Limit Order will be the **simulated liquidation price** based on the position requested at the time when you fill in the order form.
 
 - If you have an existing position = liquidation price includes existing position + current requested order

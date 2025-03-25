@@ -10,7 +10,7 @@ title: "V4 Swap API"
 </head>
 
 :::tip
-We recommend checking out our [v6 API](/docs/old/APIs/swap-api) for more reliability, performance and better pricing.
+We recommend checking out our v6 API for more reliability, performance and better pricing.
 :::
 
 We offer an API and an SDK, but, we recommend that integrators use our API. The API offers several benefits:
