@@ -210,9 +210,7 @@ const config = {
           height: 28,
         },
         items: [
-          { to: 'guides', label: 'Guides', position: 'left' },
           { to: 'docs/index', label: 'Docs', position: 'left' },
-          { type: 'search', position: 'right' },
         ],
       },
       algolia: {
