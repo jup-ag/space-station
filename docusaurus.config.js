@@ -9,7 +9,7 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Jupiter Station",
+  title: "Jupiter Developer Docs",
   staticDirectories: ["static"],
   tagline: "The Key Liquidity Aggregator and Swap Infrastructure for Solana",
   favicon: "img/favicon.ico",
@@ -17,7 +17,7 @@ const config = {
     // Put your custom environment here
   },
   // Set the production url of your site here
-  url: "https://station.jup.ag",
+  url: "https://dev.jup.ag",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -25,7 +25,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Raccoons", // Usually your GitHub org/user name.
-  projectName: "Jupiter Space Station", // Usually your repo name.
+  projectName: "Jupiter Developer Docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -61,7 +61,7 @@ const config = {
     //       // Please change this to your repo.
     //       // Remove this to remove the "edit this page" links.
     //       sidebarCollapsed: false,
-    //       editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+    //       editUrl: "https://github.com/jup-ag/docs/tree/main/",
     //     },
 
     //     blog: {
@@ -100,7 +100,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars-docs.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+          editUrl: "https://github.com/jup-ag/docs/tree/main/",
           // docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi-docs
         },
@@ -126,7 +126,7 @@ const config = {
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         sidebarCollapsed: true,
-        editUrl: "https://github.com/jup-ag/space-station/tree/main/",
+        editUrl: "https://github.com/jup-ag/docs/tree/main/",
       }),
     ],
     [
@@ -185,11 +185,11 @@ const config = {
         {
           property: "description",
           content:
-            "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
+            "Jupiter Developer Docs provides comprehensive documentation, tool kits and references for developing with the Jupiter API.",
         },
         {
           property: "og:image",
-          content: "https://og.jup.ag/api/jupiter-station",
+          content: "https://og.jup.ag/api/jupiter-docs",
         },
         {
           name: "theme-color",
@@ -231,7 +231,7 @@ const config = {
       },
       announcementBar: {
         id: 'zendesk-migration',
-        content: 'We are migrating our User Guides from Station to our new Support System. Please visit <a target="_blank" rel="noopener noreferrer" href="https://jupiverse.zendesk.com/hc/en-us">Jupiter Helpdesk</a> for the latest guides.',
+        content: 'Welcome to Jupiter Developer Docs!\nWe have migrated our user guides to our new Support System.\nPlease visit <a target="_blank" rel="noopener noreferrer" href="https://jupiverse.zendesk.com/hc/en-us">Jupiter Helpdesk</a> for the latest guides.',
         backgroundColor: '#FFA500',
         textColor: '#000000',
         isCloseable: false,

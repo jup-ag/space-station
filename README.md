@@ -1,10 +1,10 @@
-# Jupiter Space Station
+# Jupiter Developer Docs
 
-Welcome to the space station — home for cats curious about Jupiter.
+Welcome to the Jupiter Developer Docs — it provides comprehensive documentation, tool kits and references for developing with the Jupiter API.
 
 ### Setting up in local machine
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 To install:
 ```

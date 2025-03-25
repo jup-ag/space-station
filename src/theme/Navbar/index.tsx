@@ -168,7 +168,7 @@ export default function Navbar(): JSX.Element {
           <img src="/img/jupiter-logo.svg" alt="Jupiter Logo" className="themedImage..." height="28" width="28" />
         </a>
         <a href="/" className="navbar__title mobile-hidden">
-          <span>Jupiter Station</span>
+          <span>Jupiter Dev</span>
         </a>
       </div>
       <CustomNavbarContent />
