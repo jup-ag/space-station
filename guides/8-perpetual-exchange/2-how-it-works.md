@@ -282,53 +282,43 @@ Large trades on the Jupiter Perpetuals exchange inherently **incur no price impa
 1. Large, profitable trades can negatively impact the liquidity pool's reserves.
 2. The platform becomes vulnerable to order manipulation.
 
-To address these risks, Jupiter Perpetuals implements a price impact fee. This fee is designed to simulate trading conditions in traditional exchanges, where larger orders typically experience more price slippage due to limited liquidity at each price level.
+To address these risks, Jupiter Perpetuals implements a dynamic price impact fee. This fee is designed to simulate trading conditions in traditional exchanges, where larger orders typically experience more price slippage due to limited liquidity at each price level.
 
-![Price Impact Fee Graph](price-impact-fee-graph.png)
+The price impact fee is calculated dynamically based on how much a trade shifts the open interest imbalance:
+
+1. For each market, we track the open interest imbalance (total size of long positions minus the total size of short positions).
+2. We measure the change in this imbalance from one minute ago. We refer to this as the **delta imbalance**.
+3. The price impact fee increases when the delta imbalance is higher (and decreases when it's lower). The calculation is:
+
+```
+Price Impact Fee = Base Fee + Factor × |Delta Imbalance| ^ Exponent
+```
+
+4. The **Factor** and **Exponent** parameters are adjusted periodically based on our metrics and discussions with our risk partners.
+
+This price impact fee applies to both opening and closing positions, but not to liquidations.
+
+The graphs below show a simulation of the total price impact fee (in dollar value and percentage) for a fixed set of parameters:
+
+![Price Impact Fee Graph ($)](price-impact-fee-graph-dollars.jpeg)
+![Price Impact Fee Graph (%)](price-impact-fee-graph-percentage.png)
+
+:::info
+The max price impact fee percentage is set in the custody account in [`jump_rate_state.max_fee_bps`](guides/8-perpetual-exchange/3-onchain-accounts.md#custody-account), which means you will be charged this maximum percentage instead of having the price impact fee scale infinitely.
+:::
 
 **Benefits of the price impact fee:**
 
 1. Trader incentives:
-   * Encourages traders to consider trade size when placing orders.
-   * Larger trades incur higher price impact fees.
-   * Splitting orders exposes traders to potential price changes between oracle updates.
+   * During sharp price movements, traders taking numerous one-sided positions will incur higher costs for opening their positions. This compensates for the undesirable delta imposed on the JLP.
+   * Traders will not benefit from splitting positions across different trades or addresses, as positions must be opened quickly before their alpha decays.
 2. Fair compensation for JLP holders:
    * The liquidity pool receives reasonable trading fees regardless of whether traders open large trades or split them up.
-3. Market integrity:
+3. Orderbook simulation:
    * The fee structure mimics traditional order book dynamics, helping to prevent price manipulation.
 
-This tiered fee structure ensures that costs are more proportional to the potential market impact of each trade, creating a fairer trading environment for both traders and liquidity providers.
-
-To calculate the price impact fee for an open or close trade:
-
-```
-USDC_DECIMALS = 10^6  // 1_000_000
-BPS_POWER = 10^4      // 10_000
-
-Calculate Price Impact Fee:
-
-// 1. Get the trade impact fee scalar from the custody account's `pricing.tradeImpactFeeScalar` constant
-// https://station.jup.ag/guides/perpetual-exchange/onchain-accounts#custody-account
-   tradeImpactFeeScalar = custody.pricing.tradeImpactFeeScalar
-
-// 2. Convert trade size to USDC decimal format
-   tradeSizeUsd = tradeSizeUsd * USDC_DECIMALS
-
-// 3. Scale to BPS format for fee calculation
-   tradeSizeUsdBps = tradeSizeUsd * BPS_POWER
-
-// 4. Calculate price impact fee percentage in BPS
-   priceImpactFeeBps = tradeSizeUsdBps / tradeImpactFeeScalar
-
-// 5. Calculate final price impact fee in USD
-   priceImpactFeeUsd = (tradeSizeUsd * priceImpactFeeBps / BPS_POWER) / USDC_DECIMALS
-```
 :::info
-This [code snippet](https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing/blob/main/src/examples/get-price-impact-fee.ts) contains an example on calculating price impact fees programmatically.
-:::
-
-:::info
-Jupiter works with experts like [Gauntlet](https://www.gauntlet.xyz/) to optimize the price impact fee and analyze its impact on the exchange. Consult [Gauntlet's proposal and analysis on the price impact fee here](https://www.jupresear.ch/t/gauntlet-comprehensive-analysis-jupiter-perpetuals-price-impact-structure-implementation-and-proposed-adjustments/19127) for additional information on calculating the price impact fee and other useful information.
+Jupiter works with experts like [Chaos Labs](https://chaoslabs.xyz) to optimize the price impact fee and analyze its impact on the exchange. Consult [Chaos Labs' proposal and analysis on the dynamic price impact fee here](https://www.jupresear.ch/t/chaos-labs-price-impact-mechanism-proposal/25407) for additional information on calculating the price impact fee and other useful information.
 :::
 
 ### Borrow Fee
@@ -360,7 +350,7 @@ The dual slope model uses four parameters to calculate the borrow rate:
 * **Target utilization**: The optimal utilization level for the custody
 
 :::info
-Jupiter works with partners like Chaos Labs and Gauntlet to set and optimize the parameters above. The parameters may be adjusted over time as market conditions change.
+Jupiter works with partners like Chaos Labs to set and optimize the parameters above. The parameters may be adjusted over time as market conditions change.
 :::
 
 :::info
