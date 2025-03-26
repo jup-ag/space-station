@@ -11,7 +11,7 @@ require("dotenv").config();
 const config = {
   title: "Jupiter Developer Docs",
   staticDirectories: ["static"],
-  tagline: "The Key Liquidity Aggregator and Swap Infrastructure for Solana",
+  tagline: "Build with the most comprehensive APIs and no-code tool kits powered by Jupiter",
   favicon: "img/favicon.ico",
   customFields: {
     // Put your custom environment here
@@ -228,13 +228,6 @@ const config = {
         theme: lightTheme,
         darkTheme: darkTheme,
         additionalLanguages: ["bash","json","rust"],
-      },
-      announcementBar: {
-        id: 'zendesk-migration',
-        content: 'Welcome to Jupiter Developer Docs!\nWe have migrated our user guides to our new Support System.\nPlease visit <a target="_blank" rel="noopener noreferrer" href="https://jupiverse.zendesk.com/hc/en-us">Jupiter Helpdesk</a> for the latest guides.',
-        backgroundColor: '#FFA500',
-        textColor: '#000000',
-        isCloseable: false,
       },
       languageTabs: [
         {
