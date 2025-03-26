@@ -2,41 +2,31 @@ import React from "react";
 import Layout from "@theme/Layout";
 import { cn } from "../utils";
 import SearchBar from '@theme/SearchBar';
-import { API_CARDS, TOOL_KIT_CARDS } from '../constant';
-
-const JupiterSearch = () => {
-  return (
-    <div className="mt-8 mb-8 max-w-3xl mx-auto w-full px-4">
-      <div className={`relative w-full homeSearchContainer`}>
-        <SearchBar />
-      </div>
-    </div>
-  );
-};
+import { API_CARDS, TOOL_KIT_CARDS, DRWG_CARDS } from '../constant';
 
 const JupiterExplore = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div className="w-full max-w-7xl mx-auto px-4 py-8 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div className="bg-white shadow-md p-8 rounded-2xl flex flex-col h-full">
           <div className="flex-1">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Get Started</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Integrate APIs</h2>
             <p className="text-gray-600 text-base py-2">
               Integrate with Jupiter APIs to bring Solana DeFi to you and your users.
             </p>
           </div>
           <div className="mt-8 flex gap-4">
             <a 
-              href="https://station.jup.ag/docs/" 
+              href="/docs/" 
               className="flex-1 bg-[#66A2E8] !text-white font-semibold py-3 px-1 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline"
             >
-              Setup
+              Get Started
             </a>
             <a 
-              href="https://station.jup.ag/docs/ultra-api/" 
+              href="/docs/api-setup/" 
               className="flex-1 bg-[#66A2E8] !text-white font-semibold py-3 px-1 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline"
             >
-              Integrate API
+              Setup API Key
             </a>
           </div>
         </div>
@@ -48,7 +38,7 @@ const JupiterExplore = () => {
             </p>
           </div>
           <a 
-            href="https://station.jup.ag/docs/dex-integration"
+            href="/docs/dex-integration"
             className="mt-8 bg-[#66A2E8] !text-white font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline"
           >
             DEX Integration
@@ -62,7 +52,7 @@ const JupiterExplore = () => {
             </p>
           </div>
           <a 
-            href="https://station.jup.ag/docs/tool-kits/swap-terminal" 
+            href="/docs/tool-kits/swap-terminal" 
             className="mt-8 bg-[#66A2E8] !text-white font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline"
           >
             Explore Tool Kits
@@ -107,6 +97,35 @@ const JupiterToolKit = () => {
     <div className="w-full max-w-7xl mx-auto px-4 pb-16 md:pb-24">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {TOOL_KIT_CARDS.map((card, index) => (
+          <div key={index} className="bg-white shadow-md rounded-xl p-6 flex flex-col">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">{card.title}</h3>
+            <div className="flex gap-3 text-gray-600">
+              {card.links.map((link, linkIndex) => (
+                <a 
+                  key={linkIndex}
+                  href={link.href}
+                  {...(!link.href.startsWith('/') ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  } : {})}
+                  className="pr-2 !text-gray-600 hover:!text-[#66A2E8] transition-colors"
+                >
+                  {link.text}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const DRWG = () => {
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 pb-16 md:pb-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {DRWG_CARDS.map((card, index) => (
           <div key={index} className="bg-white shadow-md rounded-xl p-6 flex flex-col">
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">{card.title}</h3>
             <div className="flex gap-3 text-gray-600">
@@ -229,20 +248,22 @@ const Content = () => {
 
       <div className="w-full flex flex-col">
         <div className="bg-gray-50 w-full flex flex-col justify-center items-center text-center py-12 md:py-24 px-5">
-          <div
-            className={cn(
-              "font-bold max-md:max-w-full text-6xl xl:text-7xl leading-[1] py-2",
-              "bg-gradient-to-r from-[#00BEF0] via-[#8DE3A3] to-[#C7F284] text-transparent bg-clip-text",
-            )}
-          >
-            Jupiter Developer Docs
+          <div className="relative">
+            <div
+              className={cn(
+                "font-bold max-md:max-w-full text-6xl xl:text-7xl leading-[1] py-2",
+                "bg-gradient-to-r from-[#00BEF0] via-[#8DE3A3] to-[#C7F284] text-transparent bg-clip-text",
+              )}
+            >
+              Jupiter Developer Docs
+            </div>
+            <div className="absolute -top-2 right-8 md:-right-10 bg-[#66A2E8] text-white text-sm px-2 py-1 rounded-md transform rotate-12">
+              Beta
+            </div>
+            <JupiterExplore />
           </div>
-          <div className="text-base xl:text-[20px] text-gray-500 w-full max-w-3xl text-wrap px-4 mt-4 xl:mt-8">
-            Build world class apps with Jupiter
-          </div>
-          <JupiterSearch />
         </div>
-        <JupiterExplore />
+        <div className="py-12"></div>
         <div className="w-full max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Browse by API</h2>
         </div>
@@ -251,6 +272,10 @@ const Content = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">Browse by tool kits</h2>
         </div>
         <JupiterToolKit />
+        <div className="w-full max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">Developed by DevRel Working Group</h2>
+        </div>
+        <DRWG />
         <div className="w-full max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">We'd love to hear from you!</h2>
         </div>

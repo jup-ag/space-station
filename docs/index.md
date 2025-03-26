@@ -1,16 +1,44 @@
 ---
 sidebar_position: 1
-sidebar_label: "⚠️ New API Usage"
+sidebar_label: "Get Started"
 description: "Introduction to Jupiter APIs"
-title: "New API Usage"
+title: "Welcome!"
 ---
 
 <head>
-    <title>API Usage</title>
+    <title>Get Started</title>
     <meta name="twitter:card" content="summary" />
 </head>
 
-Since beginning of 2025, Jupiter have introduced new hostnames and the usage of our APIs through API keys to facilitate better infrastructure and developer support.
+Welcome to Jupiter Developer Documentation! You'll find detailed API guides, schemas, and powerful tool kits built by the team and DevRel Working Group to help you build with Jupiter.
+
+## Get Started
+
+**For new developers or new to blockchain development**: We recommend you to start with the [Environment Setup](/docs/environment-setup) and [Development Basics](/docs/development-basics) guides.
+
+**For existing developers**: Please refer to the [What's New?](#whats-new) section for the latest API updates and breaking changes.
+
+**For routing integrations**: Please refer to the [DEX Integration](/docs/dex-integration) guide to complete the prerequisites before we look into integrating.
+
+**Quick Links** to APIs and Tool Kits:
+
+- [Ultra API](/docs/ultra-api/)
+- [Swap API](/docs/swap-api/get-quote)
+- [Trigger API](/docs/trigger-api/create-order)
+- [Recurring API](/docs/recurring-api/create-order)
+- [Token API](/docs/token-api/)
+- [Price API](/docs/price-api/)
+- [Swap Terminal](/docs/tool-kits/swap-terminal)
+- [Unified Wallet Kit](/docs/tool-kits/unified-wallet-kit)
+
+
+**Reach out to us** on [Discord](https://discord.gg/jup) for developer support
+
+- If you have any feedback.
+- If you have technical questions.
+- If you need API Portal support.
+- Refer to these channels to receive updates: [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854)
+
 
 ## What's New?
 
@@ -20,6 +48,8 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 - API will now be served through new hostnames.
 - API will now be served through API keys.
 - API Keys will be distributed via https://portal.jup.ag (Refer to [API Setup](/docs/api-setup) to get started).
+- Old hostnames will be slowly phased out.
+- Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
 
 | Service Types          | Description                                              |
 | ---------------------- | -------------------------------------------------------- |
@@ -80,16 +110,3 @@ Since beginning of 2025, Jupiter have introduced new hostnames and the usage of 
 | `https://api.jup.ag/limit/v2/openOrders`<br />`https://api.jup.ag/limit/v2/orderHistory`    | `https://api.jup.ag/trigger/v1/getTriggerOrders` |
 </details>
 :::
-
-## What's Old?
-
-- Old hostnames will be fully deprecated in the next 6 months on **1 June 2025**.
-- Old hostnames during this period will have reduced rate limits to facilitate migration to the new API.
-
-## Help us help you
-
-Please reach out to us
-
-- If you need have increasing demand and growth in your app.
-- If you have questions or need support.
-- Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subscribe to updates.

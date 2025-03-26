@@ -1,8 +1,7 @@
 export const navbarConfigs = {
     '/docs': [
-      { to: '/docs/', label: 'Overview', position: 'left' },
       {
-        to: '/docs/swap-api/get-quote',
+        to: '/docs/',
         label: 'APIs',
         position: 'left',
         items: [
@@ -18,11 +17,11 @@ export const navbarConfigs = {
       { to: '/docs/dex-integration', label: 'DEX Integration', position: 'left' },
       { to: '/docs/tool-kits/swap-terminal', label: 'Tool Kits', position: 'left' },
       { to: '/docs/api', label: 'API Reference', position: 'left' },
+      { to: '/docs/misc/sdk-api-license-agreement', label: 'Misc', position: 'left' },
     ],
     '/': [
-      { to: '/docs/', label: 'Overview', position: 'left' },
       {
-        to: '/docs/swap-api/get-quote',
+        to: '/docs/',
         label: 'APIs',
         position: 'left',
         items: [
@@ -38,6 +37,7 @@ export const navbarConfigs = {
       { to: '/docs/dex-integration', label: 'DEX Integration', position: 'left' },
       { to: '/docs/tool-kits/swap-terminal', label: 'Tool Kits', position: 'left' },
       { to: '/docs/api', label: 'API Reference', position: 'left' },
+      { to: '/docs/misc/sdk-api-license-agreement', label: 'Misc', position: 'left' },
     ],
 };
 
@@ -103,17 +103,27 @@ export const TOOL_KIT_CARDS = [
     ]
   },
   {
-    title: "Jupiverse Kit",
-    links: [
-      { text: "Playground", href: "https://www.jupiversekit.xyz/" },
-      { text: "GitHub", href: "https://github.com/dannweeeee/jupiverse-kit" },
-    ]
-  },
-  {
     title: "NPM Package",
     links: [
       { text: "NPM", href: "https://www.npmjs.com/package/@jup-ag/api" },
       { text: "Example", href: "https://github.com/jup-ag/jupiter-quote-api-node/tree/main/example" }
+    ]
+  },
+];
+
+export const DRWG_CARDS = [
+  {
+    title: "Example Scripts",
+    links: [
+      { text: "Typescript", href: "https://github.com/Jupiter-DevRel/typescript-examples" },
+      { text: "Python", href: "https://github.com/Jupiter-DevRel/python-examples" },
+    ]
+  },
+  {
+    title: "Jupiverse Kit",
+    links: [
+      { text: "Playground", href: "https://www.jupiversekit.xyz/" },
+      { text: "GitHub", href: "https://github.com/dannweeeee/jupiverse-kit" },
     ]
   },
 ];

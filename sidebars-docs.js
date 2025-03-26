@@ -6,52 +6,78 @@ const apiSidebars = require('./sidebars-api');
 const sidebars = {
   docs: [
     {
-      type: 'doc',
-      id: 'index',
+      type: 'category',
+      label: 'Development',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'index',
+        },
+        {
+          type: 'doc',
+          id: 'environment-setup',
+        },
+        {
+          type: 'doc',
+          id: 'development-basics',
+        },
+        {
+          type: 'html',
+          value: '<div class="sidebar-line-break"></div>',
+        },
+      ],
     },
     {
-      type: 'doc',
-      id: 'api-setup',
+      type: 'category',
+      label: 'Portal',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'api-setup',
+        },
+        {
+          type: 'doc',
+          id: 'api-responses',
+        },
+        {
+          type: 'html',
+          value: '<div class="sidebar-line-break"></div>',
+        },
+      ],
     },
+  ],
+  misc: [
     {
-      type: 'doc',
-      id: 'api-responses',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'doc',
-      id: 'get-started',
-    },
-    {
-      type: 'doc',
-      id: 'development-basics',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
-    },
-    {
-      type: 'doc',
-      id: 'sdk-api-license-agreement',
-    },
-    {
-      type: 'doc',
-      id: 'terms-of-use',
-    },
-    {
-      type: 'doc',
-      id: 'privacy-policy',
-    },
-    {
-      type: 'doc',
-      id: 'support-guidelines',
-    },
-    {
-      type: 'html',
-      value: '<div class="sidebar-line-break"></div>',
+      type: 'category',
+      label: 'Legal & Guidelines',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'misc/sdk-api-license-agreement',
+        },
+        {
+          type: 'doc',
+          id: 'misc/terms-of-use',
+        },
+        {
+          type: 'doc',
+          id: 'misc/privacy-policy',
+        },
+        {
+          type: 'doc',
+          id: 'misc/support-guidelines',
+        },
+        {
+          type: 'html',
+          value: '<div class="sidebar-line-break"></div>',
+        },
+      ],
     },
   ],
   ultra: [

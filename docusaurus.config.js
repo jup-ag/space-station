@@ -211,6 +211,7 @@ const config = {
         },
         items: [
           { to: 'docs/index', label: 'Docs', position: 'left' },
+          { type: 'search', position: 'right' },
         ],
       },
       algolia: {

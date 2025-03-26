@@ -1,4 +1,4 @@
-.homeSearchContainer .DocSearch-Button {
+/* .homeSearchContainer .DocSearch-Button {
     width: 80% !important;
     height: 60px !important;
     border-radius: 9999px !important;
@@ -25,7 +25,7 @@
 .homeSearchContainer .DocSearch-Button-Keys {
     font-size: 16px !important;
     margin-right: 0.5rem;
-}
+} */
 
 .DocSearch-Button-Key,
 .DocSearch-Commands-Key {
