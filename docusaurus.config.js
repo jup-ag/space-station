@@ -9,7 +9,7 @@ require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Jupiter Station",
+  title: "Jupiter Developer",
   staticDirectories: ["static"],
   tagline: "The Key Liquidity Aggregator and Swap Infrastructure for Solana",
   favicon: "img/favicon.ico",
@@ -17,7 +17,7 @@ const config = {
     // Put your custom environment here
   },
   // Set the production url of your site here
-  url: "https://station.jup.ag",
+  url: "https://dev.jup.ag",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -185,11 +185,11 @@ const config = {
         {
           property: "description",
           content:
-            "Jupiter Station is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
+            "Jupiter Developer is the place for all things related to Jupiter. Here you can access comprehensive documentation, explore statistics and analytics, ecosystem partners that are integrating with Jupiter and read our latest updates.",
         },
         {
           property: "og:image",
-          content: "/img/dev-meta.png",
+          content: "img/dev-meta.png",
         },
         {
           name: "theme-color",
