@@ -6,16 +6,29 @@ import { API_CARDS, TOOL_KIT_CARDS, DRWG_CARDS } from "../constant";
 
 const JupiterExplore = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-6 md:py-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div className="w-full max-w-4xl mx-auto px-4 py-6 md:py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="bg-white shadow-md p-6 rounded-2xl flex flex-col h-full">
           <div className="flex-1">
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
               Integrate APIs
             </h2>
-            <p className="text-gray-600 text-sm py-1">
-              Integrate with Jupiter APIs to bring Solana DeFi to you and your
-              users.
+            <p className="text-gray-600 text-sm text-left py-1">
+              Develop with the most comprehensive set of APIs offering a full
+              range of Jupiter Products like{" "}
+              <a href="/docs/ultra-api/" className="underline text-gray-800">
+                Ultra
+              </a>
+              , <a href="/docs/swap-api/get-quote" className="underline text-gray-800">
+                Swap
+              </a>
+              , <a href="/docs/trigger-api/create-order" className="underline text-gray-800">
+                Trigger
+              </a>
+              , <a href="/docs/recurring-api/create-order" className="underline text-gray-800">
+                Recurring
+              </a>
+              , and more.
             </p>
           </div>
           <div className="mt-6 flex gap-3">
@@ -36,11 +49,28 @@ const JupiterExplore = () => {
         <div className="bg-white shadow-md p-6 rounded-2xl flex flex-col h-full">
           <div className="flex-1">
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              Tool Kits
+            </h2>
+            <p className="text-gray-600 text-sm text-left py-1">
+              For those looking for no-code solutions, we provide a customizable
+              Swap Terminal kit for you to develop faster and smoother.
+            </p>
+          </div>
+          <a
+            href="/docs/tool-kits/swap-terminal"
+            className="mt-6 bg-[#66A2E8] !text-white font-semibold py-2 px-3 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline text-sm"
+          >
+            Explore Tool Kits
+          </a>
+        </div>
+        <div className="bg-white shadow-md p-6 rounded-2xl flex flex-col h-full">
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
               Get Routed
             </h2>
-            <p className="text-gray-600 text-sm py-1">
-              Integrate your DEX in our routing engine to take part in our
-              aggregation.
+            <p className="text-gray-600 text-sm text-left py-1">
+              If you are a DEX or AMM, and have an interest to be part of our
+              routing engine, refer to the routing integration guides.
             </p>
           </div>
           <a
@@ -53,17 +83,21 @@ const JupiterExplore = () => {
         <div className="bg-white shadow-md p-6 rounded-2xl flex flex-col h-full">
           <div className="flex-1">
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              Tool Kits
+              Expansive Ecosystem
             </h2>
-            <p className="text-gray-600 text-sm py-1">
-              Find more tools and resources to help build faster and better.
+            <p className="text-gray-600 text-sm text-left py-1">
+              Explore our ecosystem of projects and protocols that are part of
+              our routing engine, or utilize Jupiter's developer tools to build
+              their applications.
             </p>
           </div>
           <a
-            href="/docs/tool-kits/swap-terminal"
+            href="/ecosystem"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 bg-[#66A2E8] !text-white font-semibold py-2 px-3 rounded-lg text-center hover:bg-[#66A2E8]/90 transition-colors !no-underline text-sm"
           >
-            Explore Tool Kits
+            Explore Ecosystem
           </a>
         </div>
       </div>
@@ -376,7 +410,7 @@ const Content = () => {
               )}
             >
               Jupiter Developer Docs
-              <span className="inline-block ml-2 bg-[#66A2E8] text-white text-xs px-2 py-1 rounded-md transform rotate-12 align-top relative -top-1">
+              <span className="inline-block ml-2 bg-[#66A2E8] text-white text-[10px] px-1.5 py-0.5 rounded-md transform align-top relative top-4 md:top-2">
                 Beta
               </span>
             </div>
@@ -389,8 +423,8 @@ const Content = () => {
             Browse by API
           </h2>
           <p className="text-gray-600 text-base mb-6">
-            Powerful endpoints to integrate Jupiter's liquidity into your
-            applications
+            Most comprehensive set of endpoints to integrate Jupiter Products
+            into your applications
           </p>
         </div>
         <JupiterAPI />
@@ -422,15 +456,6 @@ const Content = () => {
           </p>
         </div>
         <JupiterCommunity />
-        <div className="w-full max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-            Partners
-          </h2>
-          <p className="text-gray-600 text-base mb-6">
-            People that use our products
-          </p>
-        </div>
-        {/* <JupiterPartners /> */}
       </div>
       <JupiterFooter />
     </div>
