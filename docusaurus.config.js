@@ -189,7 +189,7 @@ const config = {
         },
         {
           property: "og:image",
-          content: "https://og.jup.ag/api/jupiter-docs",
+          content: "img/dev-meta.png",
         },
         {
           name: "theme-color",
@@ -210,7 +210,6 @@ const config = {
           height: 28,
         },
         items: [
-          { to: 'guides', label: 'Guides', position: 'left' },
           { to: 'docs/index', label: 'Docs', position: 'left' },
           { type: 'search', position: 'right' },
         ],
@@ -227,7 +226,7 @@ const config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ["bash","json","rust"],
+        additionalLanguages: ["bash", "json", "rust"],
       },
       languageTabs: [
         {
@@ -252,7 +251,7 @@ const config = {
         },
       ],
     }
-  ),
+    ),
   themes: ['docusaurus-theme-openapi-docs'],
 };
 
