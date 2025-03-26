@@ -189,7 +189,7 @@ const config = {
         },
         {
           property: "og:image",
-          content: "https://og.jup.ag/api/jupiter-station",
+          content: "/assets/dev-meta.png",
         },
         {
           name: "theme-color",
@@ -226,7 +226,7 @@ const config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ["bash","json","rust"],
+        additionalLanguages: ["bash", "json", "rust"],
       },
       announcementBar: {
         id: 'zendesk-migration',
@@ -258,7 +258,7 @@ const config = {
         },
       ],
     }
-  ),
+    ),
   themes: ['docusaurus-theme-openapi-docs'],
 };
 
