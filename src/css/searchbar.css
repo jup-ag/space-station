@@ -84,18 +84,21 @@
     border-bottom: 1px solid #e5e7eb !important;
 }
 
-.DocSearch-Hit[aria-selected=false] a {
-    background-color: white !important;
+.DocSearch-Hit[aria-selected=false] a:hover,
+.DocSearch-Hit[aria-selected=true] a:hover {
+    background-color: #f3f4f6 !important;
     box-shadow: none !important;
     color: black !important;
     border-bottom: 1px solid #e5e7eb !important;
 }
 
+.DocSearch-Hit[aria-selected=false] a,
 .DocSearch-Hit[aria-selected=true] a {
     background-color: white !important;
     box-shadow: none !important;
     color: black !important;
     border-bottom: 1px solid #e5e7eb !important;
+    transition: background-color 0.2s ease !important;
 }
 
 .DocSearch-Hit-title {
