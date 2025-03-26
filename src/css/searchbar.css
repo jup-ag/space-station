@@ -101,7 +101,19 @@
     transition: background-color 0.2s ease !important;
 }
 
-.DocSearch-Hit-title {
+/* Override the above rule */
+.DocSearch-Modal .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-title,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=false] .DocSearch-Hit-title,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-path,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=false] .DocSearch-Hit-path,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-action-button,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=false] .DocSearch-Hit-action-button,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=true] .DocSearch-Hit-icon,
+.DocSearch-Modal .DocSearch-Hit[aria-selected=false] .DocSearch-Hit-icon {
+    color: black !important;
+}
+
+.DocSearch-Hit-title:hover {
     color: black !important;
 }
 
