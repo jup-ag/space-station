@@ -39,7 +39,7 @@ To interact with the Jupiter Swap Aggregator Program, there are a few ways to do
 | Method | Description |
 | --- | --- |
 | Swap API | Simply call the Quote API to get a quote based on Jupiter’s routing engine and call the Swap API to get a serialized transaction to send to the network. |
-| Flash Fill method | If you are building your own on-chain program, we recommend this method — an alternative method from CPI, using Versioned Transaction and Address Lookup Tables, thus reducing the size of each account (a limitation of using CPI method). |
+| Flash Fill method | If you are building your own on-chain program, we recommend this method — an alternative method from CPI, using Versioned Transaction and [Address Lookup Tables](https://docs.solana.com/developing/lookup-tables), thus reducing the size of each account (a limitation of using CPI method). |
 | Cross Program Invocation (CPI) | https://solana.com/docs/core/cpi |
 
 ## Building Transactions
