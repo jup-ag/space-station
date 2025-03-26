@@ -189,7 +189,7 @@ const config = {
         },
         {
           property: "og:image",
-          content: "/assets/dev-meta.png",
+          content: "https://dev.jup.ag/dev-meta.png",
         },
         {
           name: "theme-color",
