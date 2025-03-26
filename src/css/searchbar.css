@@ -43,81 +43,95 @@
 }
 
 .DocSearch-Search-Icon {
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: #1c1e21 !important;
     width: 16px !important;
     height: 16px !important;
-    margin-left: 1rem;
+    position: absolute !important;
+    left: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    pointer-events: none !important;
 }
 
 .DocSearch-Modal {
-    background: #131C25 !important;
+    background: white !important;
     border-radius: 16px !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
 }
 
 .DocSearch-Form {
-    background: rgba(199, 242, 132, 0.05) !important;
+    background: #f3f4f6 !important;
     box-shadow: none !important;
+    position: relative !important;
+    padding: 1rem !important;
+    border-radius: 16px !important;
 }
 
 .DocSearch-Input {
-    color: white !important;
+    color: black !important;
     font-size: 16px !important;
+    background: #f3f4f6 !important;
+    padding: 0.5rem 1rem 0.5rem 2.5rem !important;
+    width: 100% !important;
 }
 
 .DocSearch-Hit-source {
     padding: 8px 16px 8px 16px !important;
-    color: rgba(199, 242, 132, 0.9) !important;
+    color: #1c1e21 !important;
     font-size: 16px !important;
     font-weight: 600 !important;
-    background: #131C25 !important;
+    background: white !important;
+    border-bottom: 1px solid #e5e7eb !important;
 }
 
 .DocSearch-Hit[aria-selected=false] a {
-    background-color: rgba(199, 242, 132, 0.05) !important;
+    background-color: white !important;
     box-shadow: none !important;
     color: black !important;
+    border-bottom: 1px solid #e5e7eb !important;
 }
 
 .DocSearch-Hit[aria-selected=true] a {
-    background-color: #1A3742 !important;
+    background-color: #f3f4f6 !important;
     box-shadow: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
 }
 
 .DocSearch-Hit-title {
-    color: white !important;
+    color: black !important;
 }
 
 .DocSearch-Hit-title mark {
-    color: rgba(199, 242, 132, 1) !important;
+    color: rgb(0, 180, 90) !important;
     background: none !important;
     text-decoration: underline;
-    text-decoration-color: rgba(199, 242, 132, 0.4);
+    text-decoration-color: rgba(0, 180, 90, 0.4);
 }
 
 .DocSearch-Hit-path mark {
-    color: rgba(199, 242, 132, 0.6) !important;
+    color: rgb(0, 180, 90) !important;
 }
 
 .DocSearch-Hit-icon {
-    color: rgba(199, 242, 132, 0.6) !important;
+    color: #1c1e21 !important;
 }
 
 .DocSearch-Hit-action {
-    color: rgba(199, 242, 132, 0.4) !important;
+    color: #1c1e21 !important;
 }
 
 .DocSearch-Hit-Tree {
-    color: rgba(199, 242, 132, 0.4) !important;
+    color: #1c1e21 !important;
 }
 
 .DocSearch-Footer {
-    background: #131C25 !important;
+    background: white !important;
     border-radius: 0 0 16px 16px !important;
+    border-top: 1px solid #e5e7eb !important;
 }
 
 .DocSearch-Dropdown {
-    scrollbar-color: rgba(199, 242, 132, 0.4) rgba(199, 242, 132, 0) !important;
+    scrollbar-color: #1c1e21 rgba(0, 0, 0, 0) !important;
     margin-top: 0.5rem;
 }
 
@@ -127,14 +141,14 @@
 }
 
 .DocSearch-Reset {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #1c1e21 !important;
 }
 
 /* Show cancel button only on mobile screens */
 @media (max-width: 768px) {
     .DocSearch-Cancel {
         font-size: 14px !important;
-        color: rgba(199, 242, 132, 0.6) !important;
+        color: rgb(0, 180, 90) !important;
         position: relative !important;
         height: 20px !important;
         margin-top: 1rem !important;
@@ -147,7 +161,8 @@
     }
 
     .DocSearch-Cancel:hover {
-        color: rgba(199, 242, 132, 1) !important;
+        color: rgb(0, 180, 90) !important;
+        opacity: 0.8 !important;
     }
 
     .DocSearch-Cancel::before,
@@ -162,12 +177,17 @@
     height: 36px !important;
     padding: 0 !important;
     border-radius: 50% !important;
-    background: rgb(255, 255, 255) !important;
+    background: white !important;
     border: 1px solid #1c1e21 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-shadow: none !important;
+}
+
+.navbarSearchContainer .DocSearch-Container {
+    background: white !important;
+    color: #1c1e21 !important;
 }
 
 .navbarSearchContainer .DocSearch-Button-Placeholder,
@@ -181,6 +201,11 @@
     height: 16px !important;
     color: #1c1e21 !important;
     stroke-width: 2px !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    pointer-events: none !important;
 }
 
 /* Hover state for both button and icon */
