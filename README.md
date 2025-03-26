@@ -11,13 +11,9 @@ To install:
 pnpm install
 ```
 
-To build and start local development:
+To build and start local development (preview at http://localhost:3000):
 ```
 pnpm build && pnpm start
 ```
 
-## Send us a PR to improve our documentation!
-
-Here are some things you can help with:
-- Write a user guide about a product feature or something you think people should know.
-- Update developer docs if you noticed something that's missing or that could help other folks.
+To contribute to the documentation, please refer to the [contribute-readme.md](contribute-readme.md) file.
